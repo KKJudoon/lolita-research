@@ -317,6 +317,8 @@ def render_detail(item):
 
     posters = item.get("posters", [])
     poster_html = "".join(f'<a class="bare" href="../{esc(p)}" target="_blank"><img src="../{esc(p)}" loading="lazy"/></a>' for p in posters)
+    posters_source = item.get("posters_source", "")
+    posters_source_html = f'<div class="posters-source">📷 图源说明：{esc(posters_source)}</div>' if posters_source else ''
 
     hot_posts = item.get("hot_posts", {}).get("xiaohongshu", [])
     hot_posts_html = ""
@@ -412,6 +414,7 @@ def render_detail(item):
   .poster-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }}
   .poster-grid img {{ width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }}
   .poster-grid img:hover {{ transform: scale(1.02); }}
+  .posters-source {{ font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }}
   .info-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }}
   .info {{ background: #faf7ed; padding: 12px 16px; border-radius: 6px; }}
   .info h3 {{ margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }}
@@ -495,6 +498,7 @@ def render_detail(item):
     </header>
     <p class="summary">{summary}</p>
     <div class="poster-grid">{poster_html}</div>
+    {posters_source_html}
     <div class="info-grid">
       <section class="info"><h3>上新</h3>{release_html}</section>
       <section class="info"><h3>价格</h3>{price_html}</section>
