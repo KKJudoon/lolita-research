@@ -316,7 +316,7 @@ def render_detail(item):
     ])
 
     posters = item.get("posters", [])
-    poster_html = "".join(f'<a class="bare" href="../{esc(p)}" target="_blank"><img src="../{esc(p)}" loading="lazy"/></a>' for p in posters)
+    poster_html = "".join(f'<img src="../{esc(p)}" loading="lazy" class="lb-img" data-src="../{esc(p)}"/>' for p in posters)
     posters_source = item.get("posters_source", "")
     posters_source_html = f'<div class="posters-source">📷 图源说明：{esc(posters_source)}</div>' if posters_source else ''
 
@@ -361,16 +361,19 @@ def render_detail(item):
         prompt_html = ""
         if insp.get("for_image_gen_prompt"):
             prompt_html = f'<details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">{esc(insp["for_image_gen_prompt"])}</div></details>'
+        n_elements = len(insp.get("elements", []))
         insp_html = f'''
-        <section class="inspiration">
-          <h3>设计灵感 / 元素拆解 <span class="insp-badge {badge_class}">{esc(badge_text)}</span></h3>
-          <div class="insp-note">{esc(insp.get("source_note",""))}</div>
-          {f'<div class="insp-theme"><b>主题：</b>{esc(insp.get("theme",""))}</div>' if insp.get("theme") else ""}
-          {official_quote_html}
-          <div class="elements">{elements_html}</div>
-          {thinking_html}
-          {prompt_html}
-        </section>
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge {badge_class}">{esc(badge_text)}</span> <span class="insp-count">展开看 {n_elements} 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note">{esc(insp.get("source_note",""))}</div>
+            {f'<div class="insp-theme"><b>主题：</b>{esc(insp.get("theme",""))}</div>' if insp.get("theme") else ""}
+            {official_quote_html}
+            <div class="elements">{elements_html}</div>
+            {thinking_html}
+            {prompt_html}
+          </div>
+        </details>
         '''
 
     syn = item.get("synthesis", {})
@@ -414,7 +417,26 @@ def render_detail(item):
   .poster-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }}
   .poster-grid img {{ width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }}
   .poster-grid img:hover {{ transform: scale(1.02); }}
+  .poster-grid img {{ cursor: zoom-in; }}
   .posters-source {{ font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }}
+  .lb-overlay {{ position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }}
+  .lb-overlay.open {{ display: flex; }}
+  .lb-overlay img {{ max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }}
+  .lb-close, .lb-prev, .lb-next {{ position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }}
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover {{ background: rgba(255,255,255,0.3); }}
+  .lb-close {{ top: 16px; right: 16px; }}
+  .lb-prev {{ left: 16px; top: 50%; transform: translateY(-50%); }}
+  .lb-next {{ right: 16px; top: 50%; transform: translateY(-50%); }}
+  .lb-counter {{ position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }}
+  details.inspiration {{ background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }}
+  details.inspiration > summary {{ list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }}
+  details.inspiration > summary::-webkit-details-marker {{ display: none; }}
+  details.inspiration > summary::before {{ content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }}
+  details.inspiration[open] > summary {{ border-radius: 8px 8px 0 0; }}
+  details.inspiration[open] > summary::before {{ content: "▾ "; }}
+  details.inspiration > summary h3 {{ margin: 0; font-size: 16px; }}
+  .insp-count {{ color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }}
+  .insp-body {{ padding: 16px 18px; }}
   .info-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }}
   .info {{ background: #faf7ed; padding: 12px 16px; border-radius: 6px; }}
   .info h3 {{ margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }}
@@ -513,6 +535,50 @@ def render_detail(item):
     {hot_posts_html}
     {syn_html}
   </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {{
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {{
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }}
+      window.closeLB = function(e) {{
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      }};
+      window.navLB = function(e, d) {{
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      }};
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {{
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({{target:{{id:'lightbox'}}}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      }});
+    }})();
+  </script>
 </body>
 </html>'''
     return doc

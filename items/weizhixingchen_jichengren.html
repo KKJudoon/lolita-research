@@ -26,7 +26,26 @@
   .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
   .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
   .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
   .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
   .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
   .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
   .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
@@ -109,7 +128,7 @@
       <div class="tags"><span class="tag">王子lo</span> <span class="tag">军lo</span> <span class="tag">白菜价（¥369）</span> <span class="tag">三件套（衬衫+马甲+短裤）</span> <span class="tag">酒红+金线刺绣</span> <span class="tag">现货款</span> <span class="tag">cos 友好</span> <span class="tag">中性 / 正太风</span></div>
     </header>
     <p class="summary">白菜王子系军lo 三件套：白色泡泡袖立领衬衫 + 酒红色金线刺绣马甲（对襟）+ 酒红色金边条纹短裤。整体定位『正太/中性/cos 二次元』，¥369 全套现货售价进入 lolita 圈『白菜价』范畴（圈内对 ¥&lt;500 lo 的称呼）。设计稿层次中等，主打日常穿+二次元角色 cosplay 双场景。</p>
-    <div class="poster-grid"><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg" loading="lazy"/></a><a class="bare" href="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg" target="_blank"><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg" loading="lazy"/></a></div>
+    <div class="poster-grid"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg"/></div>
     <div class="posters-source">📷 图源说明：官方海报。9 张来自品牌官号微博 PeZ5fc8qO（2025-02-19 上架日自发，正式 lookbook）；4 张来自微博图透 post P4lyQ8CIS（@Lolita洋装上新 转发的官方图透原稿，2024-12-11）。原 8 张 XHS 集赞返图（来自 678643d4 品牌官号好评汇总帖）已替换——那些是买家返图，不是官方模特照。</div>
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2024-12-11（图透海报）→ 2025-02-19（现货上架）→ 持续在售（淘宝至 2026-04 仍 400+）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 → 截单 → 出货 → **现货补货**（已于 2025-02 转入现货销售）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2024-12-11（@Lolita洋装上新 转发图透）</span></div><div class="row note">微博海报『Time：王见huo』疑为『见货』口误（即下单见货 = 现货销售）。这是该款的运营关键差异：与终焉/龙曜的『截单 → 工厂 → 几个月后出货』不同，继承人现货已发售，下单即拿。是该 brand 主推『白菜+现货』的策略一部分。</div></section>
@@ -122,15 +141,17 @@
       <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">未知星辰的来信</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5fbd1a0d00000000010075ef" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5fbd1a0d00000000010075ef</a></span></div><div class="row note">XHS 是该品牌的核心阵地，运营**极活跃**（@HAOPING 评论原话『好活跃的官号』）。多帖累积：561 likes 好评汇总 / 546 likes 银色王子装 / 513 likes 单肩披风穿法。还有专门的『未知星辰种草号』副号做种草内容（301 likes）。**集赞返图模式**驱动流量分发：买家发图 @ 品牌官号 → 品牌汇总『非常好评价 爱来自王子系』收到 561 likes。</div></div>
     </div>
     
-        <section class="inspiration">
-          <h3>设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span></h3>
-          <div class="insp-note">官方未发布设计声明。以下基于实物图 + 款名『继承人』（heir to throne）+ 兄弟款『神权使者』分析。</div>
-          <div class="insp-theme"><b>主题：</b>维多利亚男童正装 + 王位继承人 / 神权使者主题</div>
-          
-          <div class="elements"><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">白色泡泡袖立领衬衫</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚晚期男童正装（sailor suit / Eton suit）</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红色金线刺绣对襟马甲</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚男童 waistcoat + 王室纹章金线</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红色金边条纹短裤</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚男童短裤（knickerbockers）+ 军礼裤金边</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">胸前金属链 + 胸针 / 流苏挂坠</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚怀表链（pocket watch chain）/ 男童领章</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红 + 金 配色（继承人）</div><div class="el-src"><b>来源：</b>AI 推断：王室御用色 burgundy 酒红 + 黄金 = 哈布斯堡 / 英国王室</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">兄弟款『神权使者』绿色对照</div><div class="el-src"><b>来源：</b>AI 推断：神权 = 教廷 / 主教绿（与继承人 = 王室红）形成『世俗王权 vs 宗教神权』叙事对照</div><div class="el-purpose"><b>设计目的：</b>双款故事感增加叙事厚度</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">款名『继承人 Inheritor』</div><div class="el-src"><b>来源：</b>AI 推断：暗示 heir to throne 王位继承人 / 家族继承人主题</div></div></div>
-          <div class="thinking"><b>设计思路：</b>白菜价位段（¥369）做维多利亚男童正装 + 王室继承主题——元素简化（衬衫 + 马甲 + 短裤三件套）但视觉签名齐全（酒红 / 金线 / 胸链）。命名延伸双款故事（继承人 ↔ 神权使者）增加叙事感，让基础款也有概念支撑。**适合二次元手游男角色 cos**（已被买家用于战双帕弥什常羽 cos）—— 这是该款最强差异化定位（vs 标准王子系做礼服感）。</div>
-          <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Affordable Victorian boys&#x27; royal heir lolita prince ensemble: white puff-sleeve high-collar blouse, wine-red velvet waistcoat with gold thread embroidery, wine-red knickerbockers with gold-edged stripes, pocket watch chain across chest, color palette burgundy + gold (Habsburg / British royal), Eton/Victorian boyswear meets military prince aesthetic, suitable for cosplay of game young male royals</div></details>
-        </section>
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 7 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note">官方未发布设计声明。以下基于实物图 + 款名『继承人』（heir to throne）+ 兄弟款『神权使者』分析。</div>
+            <div class="insp-theme"><b>主题：</b>维多利亚男童正装 + 王位继承人 / 神权使者主题</div>
+            
+            <div class="elements"><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">白色泡泡袖立领衬衫</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚晚期男童正装（sailor suit / Eton suit）</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红色金线刺绣对襟马甲</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚男童 waistcoat + 王室纹章金线</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红色金边条纹短裤</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚男童短裤（knickerbockers）+ 军礼裤金边</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">胸前金属链 + 胸针 / 流苏挂坠</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚怀表链（pocket watch chain）/ 男童领章</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">酒红 + 金 配色（继承人）</div><div class="el-src"><b>来源：</b>AI 推断：王室御用色 burgundy 酒红 + 黄金 = 哈布斯堡 / 英国王室</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">兄弟款『神权使者』绿色对照</div><div class="el-src"><b>来源：</b>AI 推断：神权 = 教廷 / 主教绿（与继承人 = 王室红）形成『世俗王权 vs 宗教神权』叙事对照</div><div class="el-purpose"><b>设计目的：</b>双款故事感增加叙事厚度</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">款名『继承人 Inheritor』</div><div class="el-src"><b>来源：</b>AI 推断：暗示 heir to throne 王位继承人 / 家族继承人主题</div></div></div>
+            <div class="thinking"><b>设计思路：</b>白菜价位段（¥369）做维多利亚男童正装 + 王室继承主题——元素简化（衬衫 + 马甲 + 短裤三件套）但视觉签名齐全（酒红 / 金线 / 胸链）。命名延伸双款故事（继承人 ↔ 神权使者）增加叙事感，让基础款也有概念支撑。**适合二次元手游男角色 cos**（已被买家用于战双帕弥什常羽 cos）—— 这是该款最强差异化定位（vs 标准王子系做礼服感）。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Affordable Victorian boys&#x27; royal heir lolita prince ensemble: white puff-sleeve high-collar blouse, wine-red velvet waistcoat with gold thread embroidery, wine-red knickerbockers with gold-edged stripes, pocket watch chain across chest, color palette burgundy + gold (Habsburg / British royal), Eton/Victorian boyswear meets military prince aesthetic, suitable for cosplay of game young male royals</div></details>
+          </div>
+        </details>
         
     <section class="hot-posts"><h3>小红书相关热门帖（5）</h3>
     <article class="post">
@@ -195,5 +216,49 @@
         </section>
         
   </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
 </body>
 </html>

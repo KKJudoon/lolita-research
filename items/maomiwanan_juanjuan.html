@@ -26,7 +26,26 @@
   .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
   .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
   .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
   .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
   .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
   .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
   .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
@@ -109,7 +128,7 @@
       <div class="tags"><span class="tag">军lo</span> <span class="tag">金线刺绣</span> <span class="tag">王子lo</span> <span class="tag">深色调</span> <span class="tag">中价段（368）</span> <span class="tag">羽毛军帽</span> <span class="tag">权杖/剑配件</span> <span class="tag">OP/JSK 未明确</span></div>
     </header>
     <p class="summary">深绿+金线刺绣的军lo设计稿：黑金羽毛军帽、深绿长袖大衣、金色绶带（拼音 Maomiwanan）、王冠刺绣腰封、不规则尖角下摆带十字刺绣。设计稿配长剑/权杖。整体甜酷军lo路线，规模档次明显低于樱洛芙终焉圣骸（¥368 vs ¥520-648）。</p>
-    <div class="poster-grid"><a class="bare" href="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" target="_blank"><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" loading="lazy"/></a><a class="bare" href="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_3.jpg" target="_blank"><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_3.jpg" loading="lazy"/></a><a class="bare" href="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_4.jpg" target="_blank"><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_4.jpg" loading="lazy"/></a><a class="bare" href="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_1.jpg" target="_blank"><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_1.jpg" loading="lazy"/></a></div>
+    <div class="poster-grid"><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" loading="lazy" class="lb-img" data-src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg"/><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_3.jpg" loading="lazy" class="lb-img" data-src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_3.jpg"/><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_4.jpg" loading="lazy" class="lb-img" data-src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_4.jpg"/><img src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_1.jpg" loading="lazy" class="lb-img" data-src="../images/猫咪晚安_卷卷/69d1e7fe000000002200c408_1.jpg"/></div>
     <div class="posters-source">📷 图源说明：品牌官号 小红书 颜色投票帖（69d1e7fe000000002200c408）中的试样图。该帖发布者『猫咪晚安洛丽塔原创』是品牌官号，图本身是品牌方贴出来给社区投票挑色用的官方试样照（非买家返图）。属于『品牌官号自发 XHS 模特/试样图』——SKILL.md 阶段 5 优先级 #3 来源。猫咪晚安在微博渠道弱，所以 XHS 品牌官号 post 是该款的官方海报最佳来源。</div>
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">未定（试样图 2026-03-05；投票加色帖 2026-04-05）</span></div><div class="row"><span class="k">类型</span><span class="v">试样阶段 → 社区 颜色 投票 → 即将开订（截至 2026-04-26 仍未开淘宝意向金链）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-03-05（小红书试样样衣）/ 2026-04-05（投票加色稿）</span></div><div class="row note">运营节奏与樱洛芙等大牌不同——先做样、发图、收 社区 颜色建议，再决定开订配色。这种『先 投票 后开订』模式给买家参与感，但 品牌控制力较弱。</div></section>
@@ -122,15 +141,17 @@
       <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">猫咪晚安洛丽塔原创</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/67f63e40000000000d00bc6d" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/67f63e40000000000d00bc6d</a></span></div><div class="row note">品牌在 小红书 主推（稿图、试样、投票 都从这里开始）。小红书 是该品牌主战场，而非淘宝。</div></div>
     </div>
     
-        <section class="inspiration">
-          <h3>设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span></h3>
-          <div class="insp-note">官方未公开设计声明，社区在 vote 加色阶段。以下基于设计稿元素分析。</div>
-          <div class="insp-theme"><b>主题：</b>帝国王权军官 + 圣骑士仪仗</div>
-          
-          <div class="elements"><div class="el"><div class="el-name">羽毛黑金军帽 + 金星徽</div><div class="el-src"><b>来源：</b>19 世纪欧洲掷弹兵帽（Bearskin）/ 骠骑兵（Hussar）仪仗帽</div><div class="el-purpose"><b>设计目的：</b>军lo 标准帽型</div></div><div class="el"><div class="el-name">金线 Maomiwanan 拼音绶带</div><div class="el-src"><b>来源：</b>嘉德礼服腰带（Garter Sash）的现代演绎；用品牌拼音替代王徽</div><div class="el-purpose"><b>设计目的：</b>品牌 IP 嵌入仪仗符号</div></div><div class="el"><div class="el-name">王冠刺绣腰封</div><div class="el-src"><b>来源：</b>皇室纹章 / 加冕仪式（Crown of state）</div><div class="el-purpose"><b>设计目的：</b>主权 + 神圣感</div></div><div class="el"><div class="el-name">权杖 / 长剑配件</div><div class="el-src"><b>来源：</b>圣骑士授勋仪式 / 王权象征 (sceptre + sword)</div><div class="el-purpose"><b>设计目的：</b>王子军lo 的标志配件</div></div><div class="el"><div class="el-name">深绿主色 + 金线</div><div class="el-src"><b>来源：</b>维多利亚军服 / 19 世纪欧洲仪仗常用色（与终焉黑金 / 红黑形成差异化定位）</div><div class="el-purpose"><b>设计目的：</b>在白菜价位段做出 brand 差异化色</div></div><div class="el"><div class="el-name">不规则下摆 + 十字刺绣</div><div class="el-src"><b>来源：</b>哥特尖塔 + 军礼裤金边</div><div class="el-purpose"><b>设计目的：</b>立体感 + 仪式感</div></div></div>
-          <div class="thinking"><b>设计思路：</b>白菜价位段（¥368）做帝国军官仪仗感——元素简化但齐全（军帽 / 绶带 / 王冠 / 剑），覆盖王子军lo 的核心视觉签名。运营策略上让 community 投票决定加色（黑红 / 黑蓝 / 绿色 / 白蓝 / 白金）也是把『定位决定权』半交给买家——降低生产风险。</div>
-          <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Affordable military prince lolita ensemble: deep green velvet long coat with gold thread embroidery, plumed black-gold officer cap with gold star, gold sash with brand insignia, crown-embroidered waist corset, pommel sword/sceptre prop, asymmetric hem with gold-edged cross embroidery, Victorian-era European military court ceremony aesthetic</div></details>
-        </section>
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 6 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note">官方未公开设计声明，社区在 vote 加色阶段。以下基于设计稿元素分析。</div>
+            <div class="insp-theme"><b>主题：</b>帝国王权军官 + 圣骑士仪仗</div>
+            
+            <div class="elements"><div class="el"><div class="el-name">羽毛黑金军帽 + 金星徽</div><div class="el-src"><b>来源：</b>19 世纪欧洲掷弹兵帽（Bearskin）/ 骠骑兵（Hussar）仪仗帽</div><div class="el-purpose"><b>设计目的：</b>军lo 标准帽型</div></div><div class="el"><div class="el-name">金线 Maomiwanan 拼音绶带</div><div class="el-src"><b>来源：</b>嘉德礼服腰带（Garter Sash）的现代演绎；用品牌拼音替代王徽</div><div class="el-purpose"><b>设计目的：</b>品牌 IP 嵌入仪仗符号</div></div><div class="el"><div class="el-name">王冠刺绣腰封</div><div class="el-src"><b>来源：</b>皇室纹章 / 加冕仪式（Crown of state）</div><div class="el-purpose"><b>设计目的：</b>主权 + 神圣感</div></div><div class="el"><div class="el-name">权杖 / 长剑配件</div><div class="el-src"><b>来源：</b>圣骑士授勋仪式 / 王权象征 (sceptre + sword)</div><div class="el-purpose"><b>设计目的：</b>王子军lo 的标志配件</div></div><div class="el"><div class="el-name">深绿主色 + 金线</div><div class="el-src"><b>来源：</b>维多利亚军服 / 19 世纪欧洲仪仗常用色（与终焉黑金 / 红黑形成差异化定位）</div><div class="el-purpose"><b>设计目的：</b>在白菜价位段做出 brand 差异化色</div></div><div class="el"><div class="el-name">不规则下摆 + 十字刺绣</div><div class="el-src"><b>来源：</b>哥特尖塔 + 军礼裤金边</div><div class="el-purpose"><b>设计目的：</b>立体感 + 仪式感</div></div></div>
+            <div class="thinking"><b>设计思路：</b>白菜价位段（¥368）做帝国军官仪仗感——元素简化但齐全（军帽 / 绶带 / 王冠 / 剑），覆盖王子军lo 的核心视觉签名。运营策略上让 community 投票决定加色（黑红 / 黑蓝 / 绿色 / 白蓝 / 白金）也是把『定位决定权』半交给买家——降低生产风险。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Affordable military prince lolita ensemble: deep green velvet long coat with gold thread embroidery, plumed black-gold officer cap with gold star, gold sash with brand insignia, crown-embroidered waist corset, pommel sword/sceptre prop, asymmetric hem with gold-edged cross embroidery, Victorian-era European military court ceremony aesthetic</div></details>
+          </div>
+        </details>
         
     <section class="hot-posts"><h3>小红书相关热门帖（3）</h3>
     <article class="post">
@@ -175,5 +196,49 @@
         </section>
         
   </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
 </body>
 </html>

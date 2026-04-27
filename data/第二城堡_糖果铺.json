@@ -83,11 +83,14 @@
       "note": "微博渠道有完整曝光：品牌官号自发 + Lolita洋装上新 转发同步。两边内容一致，但官号自传图的图片 ID 前缀『006qvmxFgy』比汇总号转发『006xCKgBgy』更原始。"
     },
     "xiaohongshu": {
-      "official_account": "未知（搜 第二城堡 / CastleToo 都无明确品牌官号）",
-      "official_url": null,
+      "official_account": "第二城堡CastleToo",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5ff760ae0000000001008f11",
+      "official_user_id": "5ff760ae0000000001008f11",
+      "official_share_url": "https://xhslink.com/m/4NdBIhozf7h",
+      "fans_metric": "297.9K 赞与收藏（用户给出，2026-04 quote）",
       "designer_account": null,
       "designer_url": null,
-      "note": "第二城堡在 XHS 渠道无明确品牌官号——重营销在微博。XHS 上的内容主要是买家穿搭 + KOL 拔草点评，而不是品牌方自发。"
+      "note": "之前调研用『第二城堡 糖果铺』复合关键词在 type=54 用户搜索没匹配上，**用户手动给出官号链接才发现**——后续 XHS 用户搜索要单独用品牌纯名（『第二城堡』或『CastleToo』），而不是复合『品牌+款名』。此教训已记入 SKILL.md。"
     }
   },
   "hot_posts": {

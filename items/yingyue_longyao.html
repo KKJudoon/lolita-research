@@ -26,7 +26,26 @@
   .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
   .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
   .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
   .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
   .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
   .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
   .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
@@ -109,7 +128,7 @@
       <div class="tags"><span class="tag">军lo</span> <span class="tag">中华风</span> <span class="tag">汉洋折衷</span> <span class="tag">金线刺绣</span> <span class="tag">斗篷</span> <span class="tag">立领衬衫</span> <span class="tag">中性帅气</span> <span class="tag">双 SKU 配色</span></div>
     </header>
     <p class="summary">汉洋折衷军lo——中式（立领衬衫 / 锦缎腰封 / 龙纹刺绣 / 流苏挂坠）+ 西式（披风斗篷 / 不对称下摆 / 燕尾外套）的融合。XHS 用户原话『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处』。两个 SKU 配色：龙曜.赤曦（红黑金）/ 龙曜.玄溟（蓝白金，实物图蓝缎+白衬衫）。</p>
-    <div class="poster-grid"><a class="bare" href="../images/映月_龙曜/taobao_official_sku_2.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_2.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/taobao_official_sku_3.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_3.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/taobao_official_sku_4.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_4.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/taobao_official_sku_5.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_5.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/taobao_official_sku_6.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_6.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/taobao_official_sku_7.jpg" target="_blank"><img src="../images/映月_龙曜/taobao_official_sku_7.jpg" loading="lazy"/></a></div>
+    <div class="poster-grid"><img src="../images/映月_龙曜/taobao_official_sku_2.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_2.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_3.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_3.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_4.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_4.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_5.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_5.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_6.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_6.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_7.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_7.jpg"/></div>
     <div class="posters-source">📷 图源说明：官方淘宝 SKU 模特图（6 张）。从淘宝商品页 ID=1032462582002（映月旗舰店 seller_id 249591567）切换大图模式 / 颜色分类区抓取，是品牌官方上架时拍摄的模特上身图（含赤曦红 / 玄溟蓝 双色）。原 6 张 XHS 帖图来自『可露小欣』（小博主集赞营销转发，非官方）已替换。注：映月在微博几乎缺位，所以官方 lookbook 海报来源仅有 taobao detail。如需补充更高规格的设计稿，可手动从 XHS 圈内 KOL『初柒顾』69ba23ef 帖里下载（当前因 XHS 风控暂时屏蔽）。</div>
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款（截止 2026-04-15）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-03-18</span></div><div class="row note">运营节奏与樱洛芙类大牌相比偏小工作室——主力宣传在 XHS 集赞营销+小博主转发，没看到 weibo 官方上新海报。</div></section>
@@ -122,15 +141,17 @@
       <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">映月原创设计</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/60b3ee44000000000100b903" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/60b3ee44000000000100b903</a></span></div><div class="row note">XHS 是该品牌的核心阵地。除龙曜外可见近期帖：『积攒活动来啦！』（125 likes 2025-11）、『取名，在线等！』（239 likes 2025-10，可能是其他款的命名 vote）、『意向金🍑↑啦』（37 likes 2025-11）。运营手段以集赞活动为主。</div></div>
     </div>
     
-        <section class="inspiration">
-          <h3>设计灵感 / 元素拆解 <span class="insp-badge insp-kol">KOL 描述 + AI 推断</span></h3>
-          <div class="insp-note">官方未明确发布，但 KOL 初柒顾（1665 likes 帖）描述设计意图比较清楚。元素来源逐项拆解 = AI 推断。</div>
-          <div class="insp-theme"><b>主题：</b>汉洋折衷军lo —— 中式 + 西式融合</div>
-          <blockquote class="quote">KOL 描述：『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处...肩章龙纹刺绣，立领衬衫+金属挂链，腰封+不对称裙摆 (XHS sheji 帖)』</blockquote>
-          <div class="elements"><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">立领衬衫 + 西式宽袖</div><div class="el-src"><b>来源：</b>AI 推断：中式立领（民国军装 / 旗袍领）+ 西式宽袖泡泡袖</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">金线龙纹肩章刺绣</div><div class="el-src"><b>来源：</b>AI 推断：中华图腾龙纹（皇家瑞兽）+ 西方军服肩章（epaulette）形式</div><div class="el-purpose"><b>设计目的：</b>汉洋折衷的最强签名元素</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">锦缎腰封 + 流苏挂坠</div><div class="el-src"><b>来源：</b>AI 推断：中式宫廷腰带（玉带 / 革带）+ 西式军装腰带 + 唐宋 ornament 流苏</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">不对称尖角下摆 + 米色刺绣裙片</div><div class="el-src"><b>来源：</b>AI 推断：中国深衣前襟改良 + 西式燕尾 / 不对称下摆</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">披风斗篷（玄溟款蓝缎）</div><div class="el-src"><b>来源：</b>AI 推断：西式骑士斗篷 + 中式氅衣（类似旗装外套）</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">玄溟款（蓝白金）/ 赤曦款（红黑金）</div><div class="el-src"><b>来源：</b>AI 推断：玄溟 = 玄武深海色（北方水德）；赤曦 = 朝阳赤色（东方木德）。中式五行 / 二十八宿命名传统</div><div class="el-purpose"><b>设计目的：</b>命名故事增加文化厚度</div></div></div>
-          <div class="thinking"><b>设计思路：</b>明确做『汉洋折衷』融合——把西式军lo 的版型骨架（披风 + 不对称下摆 + 燕尾）嵌入中式视觉签名（立领 + 龙纹 + 锦缎 + 流苏）。命名走中国神话 / 五行 / 星宿系统（玄武 / 朝阳）。**这是 2026 年 lolita 圈中华风+军lo 的典型设计思路**：用西式骨架承载中式装饰，避免做成单纯汉服。</div>
-          <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Han-Western fusion (汉洋折衷) military lolita: high mandarin collar with white puffy-sleeve shirt, gold dragon-motif epaulette embroidery, brocade waist sash with gold flat tassel pendants, asymmetric pointed hem with Chinese cloud embroidery on beige inner panel, silk satin cape (deep blue 玄溟 / wine-red 赤曦), Tang-Song Chinese ornament details, color palette inspired by 玄武深海 (water/north black-blue-gold) or 朝阳赤色 (sun/east red-black-gold)</div></details>
-        </section>
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-kol">KOL 描述 + AI 推断</span> <span class="insp-count">展开看 6 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note">官方未明确发布，但 KOL 初柒顾（1665 likes 帖）描述设计意图比较清楚。元素来源逐项拆解 = AI 推断。</div>
+            <div class="insp-theme"><b>主题：</b>汉洋折衷军lo —— 中式 + 西式融合</div>
+            <blockquote class="quote">KOL 描述：『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处...肩章龙纹刺绣，立领衬衫+金属挂链，腰封+不对称裙摆 (XHS sheji 帖)』</blockquote>
+            <div class="elements"><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">立领衬衫 + 西式宽袖</div><div class="el-src"><b>来源：</b>AI 推断：中式立领（民国军装 / 旗袍领）+ 西式宽袖泡泡袖</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">金线龙纹肩章刺绣</div><div class="el-src"><b>来源：</b>AI 推断：中华图腾龙纹（皇家瑞兽）+ 西方军服肩章（epaulette）形式</div><div class="el-purpose"><b>设计目的：</b>汉洋折衷的最强签名元素</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">锦缎腰封 + 流苏挂坠</div><div class="el-src"><b>来源：</b>AI 推断：中式宫廷腰带（玉带 / 革带）+ 西式军装腰带 + 唐宋 ornament 流苏</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">不对称尖角下摆 + 米色刺绣裙片</div><div class="el-src"><b>来源：</b>AI 推断：中国深衣前襟改良 + 西式燕尾 / 不对称下摆</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">披风斗篷（玄溟款蓝缎）</div><div class="el-src"><b>来源：</b>AI 推断：西式骑士斗篷 + 中式氅衣（类似旗装外套）</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">玄溟款（蓝白金）/ 赤曦款（红黑金）</div><div class="el-src"><b>来源：</b>AI 推断：玄溟 = 玄武深海色（北方水德）；赤曦 = 朝阳赤色（东方木德）。中式五行 / 二十八宿命名传统</div><div class="el-purpose"><b>设计目的：</b>命名故事增加文化厚度</div></div></div>
+            <div class="thinking"><b>设计思路：</b>明确做『汉洋折衷』融合——把西式军lo 的版型骨架（披风 + 不对称下摆 + 燕尾）嵌入中式视觉签名（立领 + 龙纹 + 锦缎 + 流苏）。命名走中国神话 / 五行 / 星宿系统（玄武 / 朝阳）。**这是 2026 年 lolita 圈中华风+军lo 的典型设计思路**：用西式骨架承载中式装饰，避免做成单纯汉服。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Han-Western fusion (汉洋折衷) military lolita: high mandarin collar with white puffy-sleeve shirt, gold dragon-motif epaulette embroidery, brocade waist sash with gold flat tassel pendants, asymmetric pointed hem with Chinese cloud embroidery on beige inner panel, silk satin cape (deep blue 玄溟 / wine-red 赤曦), Tang-Song Chinese ornament details, color palette inspired by 玄武深海 (water/north black-blue-gold) or 朝阳赤色 (sun/east red-black-gold)</div></details>
+          </div>
+        </details>
         
     <section class="hot-posts"><h3>小红书相关热门帖（4）</h3>
     <article class="post">
@@ -185,5 +206,49 @@
         </section>
         
   </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
 </body>
 </html>

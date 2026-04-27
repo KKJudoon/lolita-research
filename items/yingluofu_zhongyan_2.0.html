@@ -26,7 +26,26 @@
   .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
   .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
   .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
   .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
   .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
   .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
   .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
@@ -109,7 +128,7 @@
       <div class="tags"><span class="tag">军lo</span> <span class="tag">暗黑系</span> <span class="tag">金线刺绣</span> <span class="tag">不规则下摆</span> <span class="tag">OP（无 JSK）</span> <span class="tag">整套含披风</span> <span class="tag">骑士感</span> <span class="tag">王子lo</span></div>
     </header>
     <p class="summary">黑金 + 红黑 + 蓝黑 3 色（白金原计划但因工艺取消）；胸前肋骨状金线刺绣，月牙腰封，下摆不规则尖角带十字/月相符号刺绣；属甜酷暗黑军lo路线，蓝黑骑士感更强。</p>
-    <div class="poster-grid"><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg" loading="lazy"/></a></div>
+    <div class="poster-grid"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg"/><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg"/><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg"/><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg"/></div>
     <div class="posters-source">📷 图源说明：微博官方上新海报。4 张图原始 weibo image ID 前缀『006xCKgBgy』属樱洛芙原创设计微博官号上传，通过 @Lolita洋装上新（5993650397，第三方上新汇总号）2025-09 转发的 post QbzR9m6Dl 定位到原图 URL。汇总号本身不二次拍摄/二次加工，转发的 image URL 直接指向品牌官号原始图，所以图本身是官方海报原稿。调研时透过汇总号查 因为汇总号比较容易聚合 lolita 上新；后续可手动从 樱洛芙重生版微博 找品牌方自发 post 看是否有更全图集。</div>
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2025-10-18 ~ 2025-11-18</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款</span></div><div class="row"><span class="k">海报首发</span><span class="v">2025-10-29</span></div><div class="row note">为 1.0 翻新版本（淘宝标 2.0），原 1.0 此前已发售并仍在二手流转</div></section>
@@ -122,15 +141,17 @@
       <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">樱洛芙Lolita</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930</a></span></div><div class="row"><span class="k">画师账号</span><span class="v">叁狐</span></div><div class="row"><span class="k">画师主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/600bd79c00000000010043a0" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/600bd79c00000000010043a0</a></span></div><div class="row note">品牌方账号活跃；画师叁狐另有独立账号，n01 帖里本人确认是该款画稿绘制者（画师，非品牌方服装设计师）</div></div>
     </div>
     
-        <section class="inspiration">
-          <h3>设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span></h3>
-          <div class="insp-note">官方/品牌方未公开发布设计声明。以下基于设计稿视觉元素 + 款名『终焉圣骸』(末世/saint&#x27;s relics) 推断分析。</div>
-          <div class="insp-theme"><b>主题：</b>末世神圣审判 + 暗黑宗教骑士</div>
-          
-          <div class="elements"><div class="el"><div class="el-name">黑金羽毛军帽 + 金星徽</div><div class="el-src"><b>来源：</b>19 世纪欧洲军官仪仗帽（骠骑兵 Hussar / 掷弹兵 Bearskin）+ 星徽 = 军衔/勋章传统</div><div class="el-purpose"><b>设计目的：</b>确立『仪式军装』基调</div></div><div class="el"><div class="el-name">胸前肋骨状金线刺绣</div><div class="el-src"><b>来源：</b>解剖学骷髅元素 + saint&#x27;s relics（圣骸 = 圣物遗骨）</div><div class="el-purpose"><b>设计目的：</b>暗黑哥特 × 神圣感叠加，是该款最强签名识别元素</div></div><div class="el"><div class="el-name">月牙腰封 + 月相符号下摆</div><div class="el-src"><b>来源：</b>塔罗 / 神秘学；月亮 = 反复轮回 / 末日预言</div><div class="el-purpose"><b>设计目的：</b>强化神秘宗教审判主题</div></div><div class="el"><div class="el-name">不规则尖角下摆 + 十字刺绣</div><div class="el-src"><b>来源：</b>哥特建筑尖塔 + 宗教十字</div><div class="el-purpose"><b>设计目的：</b>立体感 + 宗教仪式感</div></div><div class="el"><div class="el-name">黑金 / 红黑 / 蓝黑 / 白金（已砍）配色</div><div class="el-src"><b>来源：</b>教皇紫红 / 骑士勋章金 / 暗夜哥特黑</div><div class="el-purpose"><b>设计目的：</b>贵气 + 暗黑双调</div></div></div>
-          <div class="thinking"><b>设计思路：</b>把『军lo』外壳套在哥特宗教审判主题之上——是军装的形式 + 末日宗教的精神内核。不是一般军lo（仪仗 / 嘉德 / 拿破仑），是阴森审判型。这种『主题先行，元素服务主题』的设计思路让该款在视觉上极有辨识度（vs 标准军lo 的同质化）。</div>
-          <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Saint&#x27;s relics gothic military lolita: skeleton ribcage embroidery in gold thread on chest, crescent moon waist sash with tarot/lunar phase symbols, asymmetric pointed hem with cross/moon embroidery, plumed hussar hat with gold star, color palette of black-gold / wine-red-black / blue-black, Victorian gothic ecclesiastical judgment aesthetic</div></details>
-        </section>
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 5 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note">官方/品牌方未公开发布设计声明。以下基于设计稿视觉元素 + 款名『终焉圣骸』(末世/saint&#x27;s relics) 推断分析。</div>
+            <div class="insp-theme"><b>主题：</b>末世神圣审判 + 暗黑宗教骑士</div>
+            
+            <div class="elements"><div class="el"><div class="el-name">黑金羽毛军帽 + 金星徽</div><div class="el-src"><b>来源：</b>19 世纪欧洲军官仪仗帽（骠骑兵 Hussar / 掷弹兵 Bearskin）+ 星徽 = 军衔/勋章传统</div><div class="el-purpose"><b>设计目的：</b>确立『仪式军装』基调</div></div><div class="el"><div class="el-name">胸前肋骨状金线刺绣</div><div class="el-src"><b>来源：</b>解剖学骷髅元素 + saint&#x27;s relics（圣骸 = 圣物遗骨）</div><div class="el-purpose"><b>设计目的：</b>暗黑哥特 × 神圣感叠加，是该款最强签名识别元素</div></div><div class="el"><div class="el-name">月牙腰封 + 月相符号下摆</div><div class="el-src"><b>来源：</b>塔罗 / 神秘学；月亮 = 反复轮回 / 末日预言</div><div class="el-purpose"><b>设计目的：</b>强化神秘宗教审判主题</div></div><div class="el"><div class="el-name">不规则尖角下摆 + 十字刺绣</div><div class="el-src"><b>来源：</b>哥特建筑尖塔 + 宗教十字</div><div class="el-purpose"><b>设计目的：</b>立体感 + 宗教仪式感</div></div><div class="el"><div class="el-name">黑金 / 红黑 / 蓝黑 / 白金（已砍）配色</div><div class="el-src"><b>来源：</b>教皇紫红 / 骑士勋章金 / 暗夜哥特黑</div><div class="el-purpose"><b>设计目的：</b>贵气 + 暗黑双调</div></div></div>
+            <div class="thinking"><b>设计思路：</b>把『军lo』外壳套在哥特宗教审判主题之上——是军装的形式 + 末日宗教的精神内核。不是一般军lo（仪仗 / 嘉德 / 拿破仑），是阴森审判型。这种『主题先行，元素服务主题』的设计思路让该款在视觉上极有辨识度（vs 标准军lo 的同质化）。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Saint&#x27;s relics gothic military lolita: skeleton ribcage embroidery in gold thread on chest, crescent moon waist sash with tarot/lunar phase symbols, asymmetric pointed hem with cross/moon embroidery, plumed hussar hat with gold star, color palette of black-gold / wine-red-black / blue-black, Victorian gothic ecclesiastical judgment aesthetic</div></details>
+          </div>
+        </details>
         
     <section class="hot-posts"><h3>小红书相关热门帖（6）</h3>
     <article class="post">
@@ -205,5 +226,49 @@
         </section>
         
   </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
 </body>
 </html>
