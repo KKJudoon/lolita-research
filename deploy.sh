@@ -6,6 +6,9 @@ cd "$(dirname "$0")"
 if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
   git add .
   git commit -m "Update site: $(date '+%Y-%m-%d %H:%M:%S')"
+fi
+
+if [ "$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)" != "0" ]; then
   git push
   echo "Deployed to GitHub Pages."
   echo "Site: https://kkjudoon.github.io/lolita-research/"
