@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>红与黑 4.0（PC 原创设计王子系长马甲套装） · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
+  .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .inspiration { margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }
+  .inspiration h3 { margin: 0 0 8px 0; }
+  .insp-badge { font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }
+  .insp-badge.insp-official { background: #d4f4d4; color: #2c7a2c; }
+  .insp-badge.insp-kol { background: #fde8b0; color: #6a4a1a; }
+  .insp-badge.insp-ai { background: #fde0d0; color: #a04020; }
+  .insp-note { font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }
+  .insp-theme { font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }
+  .quote { margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }
+  .elements { display: grid; gap: 10px; margin: 12px 0; }
+  .el { background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .el-name { font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }
+  .el-src { color: #444; }
+  .el-src b { color: #888; font-weight: normal; }
+  .el-purpose { color: #555; font-size: 12px; margin-top: 4px; }
+  .el-purpose b { color: #888; font-weight: normal; }
+  .el-note { color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }
+  .el-mark { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  .el-mark.official { background: #d4f4d4; color: #2c7a2c; }
+  .el-mark.ai { background: #fde0d0; color: #a04020; }
+  .thinking { margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .thinking b { color: #5a4a2a; }
+  .ai-prompt { margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+  .ai-prompt summary { cursor: pointer; color: #5a4a2a; font-weight: 600; }
+  .prompt-text { margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="pc_hongyuhei_4.0">
+    <header>
+      <h2>红与黑 4.0（PC 原创设计王子系长马甲套装） <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：PC 原创设计（PrincessChronicles）　/　服装设计：PC 原创设计（圈内王子系五大原创品牌之一，看家代表款『猎兔』）</div>
+      <div class="designer-note">未公开。PC 自营画稿/版型，无外包画师署名。</div>
+      <div class="tags"><span class="tag">王子lo</span> <span class="tag">暗黑</span> <span class="tag">中世纪</span> <span class="tag">修身长马甲</span> <span class="tag">黑红配色</span> <span class="tag">看家重团款（4.0 = 第四代）</span> <span class="tag">复古</span> <span class="tag">中性</span></div>
+    </header>
+    <p class="summary">PC 原创设计的看家王子系款『红与黑』第 4 代复刻——白衬衫 + 修身长马甲 + 短裤的中世纪暗黑王子三件套。系列首发可追溯到 2019-2020 年（微博『正常腰LOLITA资讯』2019-08『国牌 PrincessChronicles 红与黑外套』+ 狂気玄 2020-01『红与黑+风衣外套版型太好了』），到 2024-12 推 4.0 是第四次重团/迭代，证明该款式是品牌验证多年的看家产品。圈内对 PC 版型口碑极佳——『修身显瘦，超乎意料的帅气与优雅』是该系列长期标签。属王子系五大原创头部款。</p>
+    <div class="poster-grid"><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_1.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_1.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_2.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_2.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_3.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_3.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_4.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_4.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_5.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_5.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_6.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_6.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_7.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_7.jpg"/><img src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_8.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_8.jpg"/><img src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_1.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_1.jpg"/><img src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_2.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_2.jpg"/><img src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_3.jpg" loading="lazy" class="lb-img" data-src="../images/PC_红与黑4.0/weibo_teaser_P44Wf9QNl_3.jpg"/></div>
+    <div class="posters-source">📷 图源说明：微博 PC 官号自发海报。8 张来自完整 lookbook（Pb1Aqp4Ek, 2025-01-24）+ 3 张图透（P44Wf9QNl, 2024-12-09）。</div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2024-11-29 汇总号转发图透 → 2024-12-09 PC官号自发图透 → 2025-01-06 截单（『1.6↑』标记）→ 2025-07 出货</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 → 截单 → 工厂出货</span></div><div class="row"><span class="k">海报首发</span><span class="v">2024-11-29</span></div><div class="row note">PC 看家王子线 4.0 重团：从图透到截单约 1 个月（11-29 → 1-06），从截单到出货约 6 个月（1-06 → 7月发）。淘宝当前 ¥109-249 区间是 SKU 单件挂牌（衬衫 / 短裤 / 长马甲 各独立销售）。</div></section>
+      <section class="info"><h3>价格</h3><div class="row note">三件单卖 SKU：衬衫 / 短裤 / 长马甲 各独立挂牌价格。¥109 推测为衬衫，¥249 推测为长马甲。整套价格无微博海报正文交叉验证（PC 海报多为视觉图透，价格信息少披露）。整套估算 ¥500+ 进入中端价位，与同梯队（终焉圣骸 op=520 / 龙曜 ¥523）相当。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">颜色分类（淘宝 SKU 仅列『颜色分类』，主推黑红双色调，可能含红黑 / 黑黑两种主色）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">princess Chronicles</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=857920989550" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=857920989550</a></span></div><div class="row"><span class="k">店铺评价</span><span class="v">4.7 / 好评率 99%</span></div><div class="row"><span class="k">当前标题</span><span class="v">【PC原创设计】红与黑4.0 复古暗黑lolita中世纪帅气修身长马甲</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥109（detail 主价）/ ¥109-249（区间）</span></div><div class="row"><span class="k">销量</span><span class="v">千人加购（detail SKU 显示『千人加购』）</span></div><div class="row"><span class="k">销量备注</span><span class="v">PC 是圈内王子系五大原创品牌之一（lolita-domain-knowledge 收录），整体销量稳。但红与黑 4.0 团已截 2025-01，淘宝当前是补单/再贩链接，具体付款数未单独披露。</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">PrincessChronicles</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/u/5198480015" target="_blank" rel="noopener">https://weibo.com/u/5198480015</a></span></div><div class="row"><span class="k">备用账号 1</span><span class="v">PC原创设计（@-tag 形式同步）</span></div><div class="row"><span class="k">上新海报帖</span><span class="v"><a href="https://weibo.com/5993650397/P2xeouRNb" target="_blank" rel="noopener">https://weibo.com/5993650397/P2xeouRNb</a></span></div><div class="row"><span class="k">帖子来源</span><span class="v">Lolita洋装上新</span></div><div class="row note">PC 微博节奏完整：图透 → 视频 → 截单预告 → 完整 lookbook 五段式覆盖，是品牌看家款的标准营销节奏。比其他款（如祷告者完全无微博节奏 / 龙曜微博缺位）专业得多。</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">PrincessChronicles</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/600d15a80000000001003fef" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/600d15a80000000001003fef</a></span></div><div class="row note">PC XHS 官号活跃（最近更新 2025-12-29），自发『红与黑4.0』post 2025-01-03（188 likes）作为 XHS 端的官方上新发声。但圈内对该款的真人成片帖较少——主要 KOL 流量集中在 PC 其他款（猎兔 / 兔子剧场 / 秘密早报 等）。</div></div>
+    </div>
+    
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 5 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note"></div>
+            <div class="insp-theme"><b>主题：</b>中世纪暗黑王子（黑红配色 × 长马甲 × 复古修身）—— 灵感来自 16-17 世纪欧洲贵族男装的 doublet（紧身上衣）+ jerkin（无袖外套）+ trunk hose（短裤）三件套，PC 原创把这套廓形翻译到 lolita 王子装语境里</div>
+            <blockquote class="quote">KOL 描述：『狂気玄 微博 2020-01『红与黑+风衣外套版型太好了！修身显瘦，超乎意料的帅气与优雅！下摆的形状超好看』』</blockquote>
+            <div class="elements"><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>原型为 16 世纪欧洲贵族男装无袖紧身外套 jerkin / 长版 doublet，特征是修身收腰 + 下摆 A 字形展开。PC 原创把传统厚重面料替换成 lolita 友好的轻量料并加 lolita 版型剪裁</div><div class="el-purpose"><b>设计目的：</b>整款的视觉锚点——长马甲是『中世纪』signal 的最关键单品，区分于现代王子装的短马甲款（如糖果铺）</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>灵感来自维多利亚 / 文艺复兴的男士衬衫，特点是 ruffled collar / cuffs 和宽松袖型</div><div class="el-purpose"><b>设计目的：</b>做底层亮色，与外层黑红马甲形成强对比，强化『中世纪贵族』视觉语境</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>原型为 16-17 世纪欧洲贵族男装的 trunk hose（蓬起短裤）或 breeches（齐膝长短裤），lolita 版本通常简化成修身齐膝裤型</div><div class="el-purpose"><b>设计目的：</b>完成『三件套』中世纪男装结构，给中性王子感腿型差异化（区别于长裤的现代感）</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>灵感来自欧洲中世纪贵族 + 哥特建筑的色彩谱：深红（葡萄酒红/勃艮第红）+ 黑色 = 权力 + 神秘。也是该系列名『红与黑』的字面来源（呼应斯丹达尔同名小说『红与黑』中的牧师袍黑色 + 军装红色对位）</div><div class="el-purpose"><b>设计目的：</b>整套的色彩定位 + 系列 IP 锚点。黑红是该系列代代不变的核心 DNA，4.0 仍延续</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>源自欧洲中世纪贵族服饰的 frogging（盘扣装饰）+ embroidered trim（刺绣镶边）+ lacing（系带闭合）等工艺元素</div><div class="el-purpose"><b>设计目的：</b>做工艺识别度——PC 原创以『版型 + 装饰细节』双重见长，不是只靠廓形</div></div></div>
+            <div class="thinking"><b>设计思路：</b>红与黑系列是 PC 原创对『中世纪暗黑王子』主题的长周期持续打磨——每一代（1.0 → 4.0）保留 DNA（黑红 + 长马甲 + 三件套）但调整面料 / 剪裁 / 装饰细节做迭代升级。这种『系列化复刻 + 渐进迭代』的策略让品牌资产复利累积，比一次性新款的市场风险低，也是 PC 进入『五大原创头部』的主要策略之一。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">A young person wearing a Renaissance-meets-Lolita ouji (prince-style) dark coordinate: white poet shirt with ruffled high collar and slightly puffed sleeves, layered with a fitted long jerkin-style waistcoat in deep wine-red and black, with subtle gold or silver embroidered trim and front lacing, paired with knee-length fitted breeches/trunk hose in matching black or dark red. Aesthetic: &#x27;16th-17th century European nobleman silhouette translated to Lolita ouji prince fashion&#x27; — austere, refined, gender-neutral. Color palette: deep burgundy/wine red, black, with white shirt as the only bright accent. Background: candlelit medieval interior with stone arches, oil paintings, heavy drapery. Mood: poised, aristocratic, contemplative. Style references: Renaissance court portraiture, Tudor menswear, gothic ouji Lolita. Avoid: bright candy colors, military trim, sweet bows, modern minimalism.</div></details>
+          </div>
+        </details>
+        
+    <section class="hot-posts"><h3>小红书相关热门帖（2）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌官号 XHS 上新</span>
+        <span class="post-meta">@PrincessChronicles（品牌官号） · 2025-01-03 · ❤ 188 · 💬 1</span>
+      </div>
+      <div class="post-title">红与黑4.0</div>
+      <div class="post-summary">tag 体系：#原创设计 #小众品牌 #lolita王子系 #马甲lolita #lolita短裤。188 likes / 24 收藏。品牌官号在 XHS 主动定位『马甲 + 短裤 + 王子系』，配合截单时间『1.6↑』。该款 XHS 官方种草内容较薄（4.0 团截单后官号没继续推），更多依靠多年累积的『PC 版型口碑』自然流量。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6777c33f000000000b016d90?xsec_token=ABMAEaKdb3hWLJUF4pk4x8FbqONM7Vshezoe1PRU9mGAE=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌官号 历史款回顾</span>
+        <span class="post-meta">@PrincessChronicles（品牌官号） · 2025-05-03 · ❤ 53 · 💬 </span>
+      </div>
+      <div class="post-title">红与黑1.0</div>
+      <div class="post-summary">PC 在 2025-05 回顾发布 1.0 老款照片——证明红与黑系列的 IP 周期已运营 5+ 年（2019-2025），4.0 是第四代。系列有持续延续性是 lolita 看家款的稀缺特征。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/68157f89000000000d015086?xsec_token=ABOk_fP1ZBdGmLod2Xco-TBCS93L2uPbILYGwf4eTa7Fk=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">PC 王子系五大原创头部品牌</span> <span class="kw">看家款第 4 代重团（5+ 年 IP）</span> <span class="kw">版型口碑（圈内『修身显瘦帅气』标签）</span> <span class="kw">完整微博营销节奏（图透→视频→截单→lookbook）</span> <span class="kw">黑红配色 × 中世纪暗黑王子</span> <span class="kw">店铺好评率 99%</span> <span class="kw">发货 8 天偏慢</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>**圈内王子系五大原创品牌之一**——lolita-domain-knowledge style-genres.md 直接收录 PC 为头部品牌，看家代表款『猎兔』+『红与黑』系列，IP 资产坚实</li><li>**看家系列第 4 代**——『红与黑』系列从 2019-2020 至 2024-12 已运营 5+ 年，4.0 = 第四次重团迭代，圈内对版型 / 工艺已多轮验证</li><li>**圈内版型口碑长期累积**——多帖（狂気玄 2020 / 言葉-kotoha 2021）反复称『版型超好』『修身显瘦帅气』，是 PC 品牌的核心差异化资产</li><li>**完整微博营销节奏**——图透 → 视频 → 截单预告 → 完整 lookbook 五段式覆盖（共 5 个品牌官号自发 post），节奏专业。对比祷告者『无微博节奏』、龙曜『微博缺位』，PC 的运营是行业范本</li><li>**淘宝店铺信任度高**：4.7 评分 / 99% 好评率 / 98% 客服满意度，三项都在同期偏上</li><li>**官方海报量大且高清**：品牌官号自发 11 张 300-500 KB 高清海报（8 张完整 lookbook + 3 张图透），是该研究里最完整的官方源之一</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**XHS 圈内真人成片帖少**——KOL 流量集中在 PC 其他款（猎兔 / 兔子剧场 等），红与黑 4.0 单款的 XHS 高赞穿搭少，新买家可参考的圈内体感不多</li><li>**发货周期 8 天偏慢**（同期对比第二城堡 3 天 / 未知星辰 2 天），需要买家有耐心</li><li>**当前淘宝 link 是补单 / 再贩链接**——4.0 团已截单 2025-01，原版团购窗口已关。当前下单可能是补码 / 散件 / 二次开团，工艺批次不一致风险</li><li>**整套价格不透明**——三件单卖（¥109-249），整套价无官方明文。圈内默认参考前代估算 ¥500+，但无确切交叉验证</li><li>**色号信息单薄**——淘宝 SKU 只列『颜色分类』，无色卡明细；微博 lookbook 海报需视觉判断（推测黑红 / 黑黑双主色），具体颜色细节需问客服</li><li>**款式偏中性硬朗**——长马甲 + 短裤 + 中世纪暗黑配色对身材 / 气质有要求，不像糖果铺甜系王子那种『正太可爱』的低门槛</li></ul></div>
+          </div>
+          <div class="verdict">目标客户：**已认准 PC 版型口碑、想入手系列经典款**的中级以上 lolita 玩家；**做款研究价值极高**——这是『五大原创头部品牌完整营销节奏 + 看家款长周期 IP 运营』的范本。最大优势：圈内品牌资产 + 5 年 IP 延续 + 微博营销节奏完整。最大短板：XHS 真人成片单薄 + 发货 8 天偏慢 + 当前已是补单链接（团购窗口已闭）。**对自家做款的核心启发**：① 看家款的『迭代复刻』模式（1.0/2.0/3.0/4.0）让品牌资产复利积累，比单款单卖更有长期价值；② 微博完整营销节奏（图透-视频-截单-lookbook 五段式）是 lolita 上新的标准模板，糖果铺 / 终焉等都可对照；③ XHS 官号自发『品牌+款名』tag 体系（『#lolita王子系 #马甲lolita』）是品牌方在 XHS 的主动 SEO 行为，可学。</div>
+        </section>
+        
+  </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
+</body>
+</html>
