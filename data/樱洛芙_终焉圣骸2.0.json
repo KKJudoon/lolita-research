@@ -4,8 +4,17 @@
   "brand": "樱洛芙Lolita",
   "designer": "樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）",
   "illustrator": "叁狐",
-  "illustrator_note": "原画/设计稿由叁狐绘制（XHS @叁狐 帖子里本人确认『是我画的』），授权给樱洛芙出品。授权模式（买断 vs 分成）外人无法判断。圈内默认画师不等于服装设计师——版型/工艺/工厂锅在品牌方。",
-  "style_tags": ["军lo", "暗黑系", "金线刺绣", "不规则下摆", "OP（无 JSK）", "整套含披风", "骑士感", "王子lo"],
+  "illustrator_note": "原画/设计稿由叁狐绘制（小红书 @叁狐 帖子里本人确认『是我画的』），授权给樱洛芙出品。授权模式（买断 vs 分成）外人无法判断。圈内默认画师不等于服装设计师——版型/工艺/工厂锅在品牌方。",
+  "style_tags": [
+    "军lo",
+    "暗黑系",
+    "金线刺绣",
+    "不规则下摆",
+    "OP（无 JSK）",
+    "整套含披风",
+    "骑士感",
+    "王子lo"
+  ],
   "style_summary": "黑金 + 红黑 + 蓝黑 3 色（白金原计划但因工艺取消）；胸前肋骨状金线刺绣，月牙腰封，下摆不规则尖角带十字/月相符号刺绣；属甜酷暗黑军lo路线，蓝黑骑士感更强。",
   "release": {
     "type": "意向金 + 截单全款",
@@ -20,8 +29,14 @@
     "deposit_link_intent": 5,
     "note": "OP=单件 OP 连衣裙；full_set=全套（含披风/胸章/绶带等附件）。**该款没有 JSK 版本**——官方海报只列 op + fs 两选。淘宝意向金链接 ¥5 抵 ¥30。"
   },
-  "colors": ["蓝黑", "红黑", "黑金"],
-  "colors_dropped": ["白金（因工艺问题取消）"],
+  "colors": [
+    "蓝黑",
+    "红黑",
+    "黑金"
+  ],
+  "colors_dropped": [
+    "白金（因工艺问题取消）"
+  ],
   "shops": {
     "taobao": {
       "url": "https://item.taobao.com/item.htm?id=1037713255465",
@@ -126,11 +141,19 @@
     ]
   },
   "synthesis": {
-    "keywords": ["军lo破圈", "蓝黑骑士感", "黑金最稳", "红黑褪色担忧", "白金被砍", "意向金月增 5×", "叁狐画稿"],
+    "keywords": [
+      "军lo破圈",
+      "蓝黑骑士感",
+      "黑金最稳",
+      "红黑褪色担忧",
+      "白金被砍",
+      "意向金月增 5×",
+      "叁狐画稿"
+    ],
     "highlights_positive": [
       "设计稿出圈快——10月底海报发出，4月份热度持续",
       "意向金销量 4w+，一月内 5×增长",
-      "画师叁狐有 IP 加持，本人 XHS 也活跃（画师不等于服装设计师；服装制作锅在品牌方）",
+      "画师叁狐有 IP 加持，本人 小红书 也活跃（画师不等于服装设计师；服装制作锅在品牌方）",
       "真人模特上身效果硬，配 @叔青成 摄影流出爆款",
       "进入 lolita 上新博主月度 top 1，圈内权威认可"
     ],
@@ -151,7 +174,7 @@
   ],
   "verified": true,
   "verified_at": "2026-04-26",
-  "verified_by": "Claude (cross-checked taobao官方店 + weibo上新帖 + 8 篇 xhs 热门笔记 + 设计师本人确认)",
+  "verified_by": "Claude (cross-checked taobao官方店 + weibo上新帖 + 8 篇 小红书 热门笔记 + 设计师本人确认)",
   "raw_sources": {
     "taobao_search": "data/raw/taobao_zhongyan.json",
     "taobao_detail": "data/raw/taobao_detail.json",
