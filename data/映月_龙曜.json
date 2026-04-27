@@ -5,8 +5,20 @@
   "designer": "映月原创设计（品牌方负责打版/打布样/工厂/工艺）",
   "illustrator": null,
   "illustrator_note": "未公开。XHS 上找不到画师署名。可能是品牌内部画师或买断稿件，难以从公开信息确认。",
-  "name_variants": ["龙曜", "龙耀（同音异体字，圈内常混用）"],
-  "style_tags": ["军lo", "中华风", "汉洋折衷", "金线刺绣", "斗篷", "立领衬衫", "中性帅气", "双 SKU 配色"],
+  "name_variants": [
+    "龙曜",
+    "龙耀（同音异体字，圈内常混用）"
+  ],
+  "style_tags": [
+    "军lo",
+    "中华风",
+    "汉洋折衷",
+    "金线刺绣",
+    "斗篷",
+    "立领衬衫",
+    "中性帅气",
+    "双 SKU 配色"
+  ],
   "style_summary": "汉洋折衷军lo——中式（立领衬衫 / 锦缎腰封 / 龙纹刺绣 / 流苏挂坠）+ 西式（披风斗篷 / 不对称下摆 / 燕尾外套）的融合。XHS 用户原话『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处』。两个 SKU 配色：龙曜.赤曦（红黑金）/ 龙曜.玄溟（蓝白金，实物图蓝缎+白衬衫）。",
   "release": {
     "type": "意向金 + 截单全款（截止 2026-04-15）",
@@ -48,7 +60,13 @@
       "sales_trend": "2026-03 上新到 04 月底约 1.5 个月累计 700+",
       "location": null,
       "related_skus": [
-        {"id": "1032242451535", "title": "龙曜 拆分", "price": "¥60", "sales": "44人付款", "note": "配件单卖（衬衫/斗篷等单件加购）"}
+        {
+          "id": "1032242451535",
+          "title": "龙曜 拆分",
+          "price": "¥60",
+          "sales": "44人付款",
+          "note": "配件单卖（衬衫/斗篷等单件加购）"
+        }
       ]
     },
     "weibo": {
@@ -113,7 +131,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["汉洋折衷", "中华风军lo", "金线刺绣", "立领衬衫+斗篷套装", "¥498-583 价位段", "集赞营销分发", "XHS 主战场无微博"],
+    "keywords": [
+      "汉洋折衷",
+      "中华风军lo",
+      "金线刺绣",
+      "立领衬衫+斗篷套装",
+      "¥498-583 价位段",
+      "集赞营销分发",
+      "XHS 主战场无微博"
+    ],
     "highlights_positive": [
       "**价格透明度高**——KOL 帖 1665 likes 正文明文公开 4 档价格（小/大全套 × 意向/非意向），意向金可退 ¥30，比骨龙『官方至今未公开』强很多",
       "**汉洋折衷设计**填补市场空白——中华风+军lo 双标签，与樱洛芙终焉圣骸（纯军lo）/ 骨龙（哥特）区分定位",
@@ -172,5 +198,47 @@
     "xhs_brand": "data/raw/longyao_yingyue_brand.json",
     "weibo_search_negative": "data/raw/longyao_weibo.json",
     "xhs_notes": "data/raw/longyao_notes/"
+  },
+  "design_inspiration": {
+    "source_type": "kol_quote_with_ai_analysis",
+    "source_note": "官方未明确发布，但 KOL 初柒顾（1665 likes 帖）描述设计意图比较清楚。元素来源逐项拆解 = AI 推断。",
+    "kol_quote": "黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处...肩章龙纹刺绣，立领衬衫+金属挂链，腰封+不对称裙摆 (XHS sheji 帖)",
+    "theme": "汉洋折衷军lo —— 中式 + 西式融合",
+    "elements": [
+      {
+        "element": "立领衬衫 + 西式宽袖",
+        "source_lineage": "AI 推断：中式立领（民国军装 / 旗袍领）+ 西式宽袖泡泡袖",
+        "ai_inferred": true
+      },
+      {
+        "element": "金线龙纹肩章刺绣",
+        "source_lineage": "AI 推断：中华图腾龙纹（皇家瑞兽）+ 西方军服肩章（epaulette）形式",
+        "ai_inferred": true,
+        "purpose": "汉洋折衷的最强签名元素"
+      },
+      {
+        "element": "锦缎腰封 + 流苏挂坠",
+        "source_lineage": "AI 推断：中式宫廷腰带（玉带 / 革带）+ 西式军装腰带 + 唐宋 ornament 流苏",
+        "ai_inferred": true
+      },
+      {
+        "element": "不对称尖角下摆 + 米色刺绣裙片",
+        "source_lineage": "AI 推断：中国深衣前襟改良 + 西式燕尾 / 不对称下摆",
+        "ai_inferred": true
+      },
+      {
+        "element": "披风斗篷（玄溟款蓝缎）",
+        "source_lineage": "AI 推断：西式骑士斗篷 + 中式氅衣（类似旗装外套）",
+        "ai_inferred": true
+      },
+      {
+        "element": "玄溟款（蓝白金）/ 赤曦款（红黑金）",
+        "source_lineage": "AI 推断：玄溟 = 玄武深海色（北方水德）；赤曦 = 朝阳赤色（东方木德）。中式五行 / 二十八宿命名传统",
+        "ai_inferred": true,
+        "purpose": "命名故事增加文化厚度"
+      }
+    ],
+    "design_thinking": "明确做『汉洋折衷』融合——把西式军lo 的版型骨架（披风 + 不对称下摆 + 燕尾）嵌入中式视觉签名（立领 + 龙纹 + 锦缎 + 流苏）。命名走中国神话 / 五行 / 星宿系统（玄武 / 朝阳）。**这是 2026 年 lolita 圈中华风+军lo 的典型设计思路**：用西式骨架承载中式装饰，避免做成单纯汉服。",
+    "for_image_gen_prompt": "Han-Western fusion (汉洋折衷) military lolita: high mandarin collar with white puffy-sleeve shirt, gold dragon-motif epaulette embroidery, brocade waist sash with gold flat tassel pendants, asymmetric pointed hem with Chinese cloud embroidery on beige inner panel, silk satin cape (deep blue 玄溟 / wine-red 赤曦), Tang-Song Chinese ornament details, color palette inspired by 玄武深海 (water/north black-blue-gold) or 朝阳赤色 (sun/east red-black-gold)"
   }
 }

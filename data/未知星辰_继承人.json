@@ -6,7 +6,16 @@
   "illustrator": null,
   "illustrator_note": "未公开。XHS / 微博均无画师署名。可能是品牌内部画师或买断稿件。",
   "sister_set_warning": "该款是双 SKU 系列『继承人(红) + 神权使者(绿)』，同 brand 同设计配色变体（淘宝两个 item id：继承人 868385609180 / 神权使者 868666300494）。本条记录的是『继承人』红色款。",
-  "style_tags": ["王子lo", "军lo", "白菜价（¥369）", "三件套（衬衫+马甲+短裤）", "酒红+金线刺绣", "现货款", "cos 友好", "中性 / 正太风"],
+  "style_tags": [
+    "王子lo",
+    "军lo",
+    "白菜价（¥369）",
+    "三件套（衬衫+马甲+短裤）",
+    "酒红+金线刺绣",
+    "现货款",
+    "cos 友好",
+    "中性 / 正太风"
+  ],
   "style_summary": "白菜王子系军lo 三件套：白色泡泡袖立领衬衫 + 酒红色金线刺绣马甲（对襟）+ 酒红色金边条纹短裤。整体定位『正太/中性/cos 二次元』，¥369 全套现货售价进入 lolita 圈『白菜价』范畴（圈内对 ¥<500 lo 的称呼）。设计稿层次中等，主打日常穿+二次元角色 cosplay 双场景。",
   "release": {
     "type": "意向金 → 截单 → 出货 → **现货补货**（已于 2025-02 转入现货销售）",
@@ -48,8 +57,20 @@
       "sales_trend": "2025-02 现货上架到 2026-04 累计 400+",
       "location": null,
       "related_skus": [
-        {"id": "868666300494", "title": "现货未知星辰原创神权使者王子装", "price": "¥361", "sales": "300+人付款", "note": "继承人的绿色姐妹款"},
-        {"id": "709049139593", "title": "现货未知星辰原创兔叽侦探lolita衬衫马甲背带裤正太王子装", "price": "¥68.6", "sales": "600+人付款", "note": "同品牌另一款（兔叽侦探），更平价"}
+        {
+          "id": "868666300494",
+          "title": "现货未知星辰原创神权使者王子装",
+          "price": "¥361",
+          "sales": "300+人付款",
+          "note": "继承人的绿色姐妹款"
+        },
+        {
+          "id": "709049139593",
+          "title": "现货未知星辰原创兔叽侦探lolita衬衫马甲背带裤正太王子装",
+          "price": "¥68.6",
+          "sales": "600+人付款",
+          "note": "同品牌另一款（兔叽侦探），更平价"
+        }
       ]
     },
     "weibo": {
@@ -136,7 +157,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["白菜王子系", "¥369 现货", "三件套（衬衫+马甲+短裤）", "cos 友好", "兄弟款双色（继承人红/神权使者绿）", "现货发货", "集赞返图营销活跃"],
+    "keywords": [
+      "白菜王子系",
+      "¥369 现货",
+      "三件套（衬衫+马甲+短裤）",
+      "cos 友好",
+      "兄弟款双色（继承人红/神权使者绿）",
+      "现货发货",
+      "集赞返图营销活跃"
+    ],
     "highlights_positive": [
       "**白菜价定位**——¥369 是 lolita 圈白菜段（<¥500），降低王子系入坑门槛",
       "**现货销售**——下单即发，不用等几个月（vs 终焉/龙曜的『截单 → 出货』模式），适合急用 cos / 拍照",
@@ -202,5 +231,50 @@
     "xhs_search_price": "data/raw/wzxc_xhs_price.json",
     "xhs_search_wangzi": "data/raw/wzxc_xhs_wangzi.json",
     "xhs_notes": "data/raw/wzxc_notes/"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "官方未发布设计声明。以下基于实物图 + 款名『继承人』（heir to throne）+ 兄弟款『神权使者』分析。",
+    "theme": "维多利亚男童正装 + 王位继承人 / 神权使者主题",
+    "elements": [
+      {
+        "element": "白色泡泡袖立领衬衫",
+        "source_lineage": "AI 推断：维多利亚晚期男童正装（sailor suit / Eton suit）",
+        "ai_inferred": true
+      },
+      {
+        "element": "酒红色金线刺绣对襟马甲",
+        "source_lineage": "AI 推断：维多利亚男童 waistcoat + 王室纹章金线",
+        "ai_inferred": true
+      },
+      {
+        "element": "酒红色金边条纹短裤",
+        "source_lineage": "AI 推断：维多利亚男童短裤（knickerbockers）+ 军礼裤金边",
+        "ai_inferred": true
+      },
+      {
+        "element": "胸前金属链 + 胸针 / 流苏挂坠",
+        "source_lineage": "AI 推断：维多利亚怀表链（pocket watch chain）/ 男童领章",
+        "ai_inferred": true
+      },
+      {
+        "element": "酒红 + 金 配色（继承人）",
+        "source_lineage": "AI 推断：王室御用色 burgundy 酒红 + 黄金 = 哈布斯堡 / 英国王室",
+        "ai_inferred": true
+      },
+      {
+        "element": "兄弟款『神权使者』绿色对照",
+        "source_lineage": "AI 推断：神权 = 教廷 / 主教绿（与继承人 = 王室红）形成『世俗王权 vs 宗教神权』叙事对照",
+        "ai_inferred": true,
+        "purpose": "双款故事感增加叙事厚度"
+      },
+      {
+        "element": "款名『继承人 Inheritor』",
+        "source_lineage": "AI 推断：暗示 heir to throne 王位继承人 / 家族继承人主题",
+        "ai_inferred": true
+      }
+    ],
+    "design_thinking": "白菜价位段（¥369）做维多利亚男童正装 + 王室继承主题——元素简化（衬衫 + 马甲 + 短裤三件套）但视觉签名齐全（酒红 / 金线 / 胸链）。命名延伸双款故事（继承人 ↔ 神权使者）增加叙事感，让基础款也有概念支撑。**适合二次元手游男角色 cos**（已被买家用于战双帕弥什常羽 cos）—— 这是该款最强差异化定位（vs 标准王子系做礼服感）。",
+    "for_image_gen_prompt": "Affordable Victorian boys' royal heir lolita prince ensemble: white puff-sleeve high-collar blouse, wine-red velvet waistcoat with gold thread embroidery, wine-red knickerbockers with gold-edged stripes, pocket watch chain across chest, color palette burgundy + gold (Habsburg / British royal), Eton/Victorian boyswear meets military prince aesthetic, suitable for cosplay of game young male royals"
   }
 }

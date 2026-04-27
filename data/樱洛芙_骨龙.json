@@ -6,7 +6,15 @@
   "illustrator": null,
   "illustrator_note": "未公开。骨龙海报水印是品牌账号 _重生版，没有在帖里署名画师。",
   "name_ambiguity_warning": "圈内有同名款『骨龙』也属 Alicegirl 工作室（XHS hashtag #alicegirl原创工作室 #AG骨龙系列），是不同品牌的同名款（典型菀菀类卿现象）。本条记录的是樱洛芙骨龙，不是 alicegirl 骨龙。",
-  "style_tags": ["哥特", "暗黑系", "JSK", "蝙蝠装饰", "兜帽斗篷", "骨头/骨龙图腾", "玫瑰刺绣"],
+  "style_tags": [
+    "哥特",
+    "暗黑系",
+    "JSK",
+    "蝙蝠装饰",
+    "兜帽斗篷",
+    "骨头/骨龙图腾",
+    "玫瑰刺绣"
+  ],
   "style_summary": "黑红主色（样衣已确定）的暗黑哥特 JSK：兜帽斗篷、蝙蝠胸饰、骨龙/骨头/十字符号刺绣下摆、紧身束腰 + 多层蕾丝裙。设计稿层次丰富，符合『哥特暗黑指数高』的圈内调侃公式（十字+蕾丝+暗色对比）。同 brand 终焉圣骸（军lo）一脉相承的繁复刺绣工艺。",
   "release": {
     "type": "意向金 + 截单全款",
@@ -49,8 +57,20 @@
       "sales_trend": "1万+ 持续累积（2026-01 海报后到 2026-04 已四个月）",
       "location": "湖北武汉",
       "related_skus": [
-        {"id": "1009636833648", "title": "【意向金】樱洛芙神契使者骨龙暗黑哥特jsk连衣裙Lolita原创设计", "shop": "樱洛芙Lolita原创设计", "sales": "200+人付款", "note": "骨龙的衍生/二代款『神契使者骨龙』，在 _重生版 副店"},
-        {"id": "1008176311113", "title": "【意向金】樱洛芙骨龙暗黑lo裙jsk连衣裙Lolita原创设计", "shop": "樱洛芙原创Lolita二店", "sales": "100+人付款", "note": "二店复刻意向金链"}
+        {
+          "id": "1009636833648",
+          "title": "【意向金】樱洛芙神契使者骨龙暗黑哥特jsk连衣裙Lolita原创设计",
+          "shop": "樱洛芙Lolita原创设计",
+          "sales": "200+人付款",
+          "note": "骨龙的衍生/二代款『神契使者骨龙』，在 _重生版 副店"
+        },
+        {
+          "id": "1008176311113",
+          "title": "【意向金】樱洛芙骨龙暗黑lo裙jsk连衣裙Lolita原创设计",
+          "shop": "樱洛芙原创Lolita二店",
+          "sales": "100+人付款",
+          "note": "二店复刻意向金链"
+        }
       ]
     },
     "weibo": {
@@ -114,7 +134,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["暗黑哥特 JSK", "8 色 SKU", "黑红色样衣已确定", "废土色千人加购", "意向金 1万+", "同名款警告（vs alicegirl 骨龙）", "同 brand 内被终焉圣骸分流热度"],
+    "keywords": [
+      "暗黑哥特 JSK",
+      "8 色 SKU",
+      "黑红色样衣已确定",
+      "废土色千人加购",
+      "意向金 1万+",
+      "同名款警告（vs alicegirl 骨龙）",
+      "同 brand 内被终焉圣骸分流热度"
+    ],
     "highlights_positive": [
       "意向金 1万+ 是樱洛芙哥特线的代表款（与军lo 终焉圣骸构成 brand 双 IP 矩阵）",
       "8 色 SKU 选择丰富——黑红/黑绀/黑灰/白红/紫色/废土/墨绿/白色，跨经典哥特到中性偏甜",
@@ -160,5 +188,44 @@
     "xhs_search_main": "data/raw/gulong_xhs.json",
     "xhs_search_geji": "data/raw/gulong_xhs2.json",
     "xhs_notes_dir": "data/raw/gulong_notes/"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "官方海报未公开设计声明，仅 1月17/21日两条 weibo 上新+加色公告。以下基于设计稿+款名『骨龙』分析。",
+    "theme": "西方奇幻 bone dragon + 维多利亚哥特暗黑",
+    "elements": [
+      {
+        "element": "兜帽斗篷（背面）",
+        "source_lineage": "中世纪斗篷 / Grim Reaper（死神拟人）/ 哥特小说人物",
+        "purpose": "暗黑神秘感主导"
+      },
+      {
+        "element": "蝙蝠胸饰",
+        "source_lineage": "哥特小说 (Bram Stoker Dracula) / 吸血鬼 / 万圣节符号",
+        "purpose": "签名识别元素"
+      },
+      {
+        "element": "玫瑰刺绣 + 蕾丝",
+        "source_lineage": "维多利亚哥特装饰传统 + '死亡之花' 母题（玫瑰 = 美丽与凋亡）",
+        "purpose": "繁复美感 + 暗黑诗意"
+      },
+      {
+        "element": "骨头 / 骨龙图腾下摆 + 十字符号",
+        "source_lineage": "Western fantasy 龙骨（D&D / 魔兽 / 中世纪 bestiary 怪物图鉴）+ 哥特教堂尖塔 / 十字",
+        "purpose": "款名直译——bone dragon 视觉具象化"
+      },
+      {
+        "element": "紧身束腰 + 多层蕾丝裙",
+        "source_lineage": "维多利亚晚期女装紧身胸衣 (corset) + 现代 lolita JSK 改良",
+        "purpose": "经典哥特三件套核心"
+      },
+      {
+        "element": "8 色 SKU（黑红 / 黑紫 / 黑绿 / 黑灰 / 白红 / 白色 / 废土 / 紫）",
+        "source_lineage": "黑红 = 经典哥特、黑紫 = 神秘学 / 暗夜、废土色 = 末世废墟（千人加购热门色）",
+        "purpose": "覆盖哥特细分受众的不同审美偏好"
+      }
+    ],
+    "design_thinking": "『骨龙』= bone dragon，西方奇幻 + 哥特小说交叉。把维多利亚哥特装饰主题搬到 lolita JSK 上，斗篷 + 紧身束腰 + 蕾丝下摆是经典哥特三件套，蝙蝠胸饰 + 玫瑰刺绣 + 骨头下摆 三个签名识别元素同时存在。同 brand 终焉圣骸（军lo）形成『暗黑双 IP』——骨龙服务哥特粉，终焉服务军lo粉。",
+    "for_image_gen_prompt": "Gothic bone dragon JSK lolita: hooded cape with embroidered cross at hem, bat-shaped chest brooch, rose embroidery and lace details, asymmetric pointed hem with bone/cross motifs, fitted corset bodice, multi-layer lace skirt, color palette wine-red+black or black-purple or wasteland brown, Victorian gothic Dracula aesthetic"
   }
 }

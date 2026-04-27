@@ -47,6 +47,31 @@
   .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
   .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
   .post-link { font-size: 11px; margin-top: 4px; }
+  .inspiration { margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }
+  .inspiration h3 { margin: 0 0 8px 0; }
+  .insp-badge { font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }
+  .insp-badge.insp-official { background: #d4f4d4; color: #2c7a2c; }
+  .insp-badge.insp-kol { background: #fde8b0; color: #6a4a1a; }
+  .insp-badge.insp-ai { background: #fde0d0; color: #a04020; }
+  .insp-note { font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }
+  .insp-theme { font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }
+  .quote { margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }
+  .elements { display: grid; gap: 10px; margin: 12px 0; }
+  .el { background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .el-name { font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }
+  .el-src { color: #444; }
+  .el-src b { color: #888; font-weight: normal; }
+  .el-purpose { color: #555; font-size: 12px; margin-top: 4px; }
+  .el-purpose b { color: #888; font-weight: normal; }
+  .el-note { color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }
+  .el-mark { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  .el-mark.official { background: #d4f4d4; color: #2c7a2c; }
+  .el-mark.ai { background: #fde0d0; color: #a04020; }
+  .thinking { margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .thinking b { color: #5a4a2a; }
+  .ai-prompt { margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+  .ai-prompt summary { cursor: pointer; color: #5a4a2a; font-weight: 600; }
+  .prompt-text { margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }
   .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
   .synthesis h3 { margin: 0 0 12px 0; }
   .kw-row { margin-bottom: 12px; }
@@ -94,6 +119,17 @@
       <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">YourHighness永恒银河</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/n/YourHighness永恒银河" target="_blank" rel="noopener">https://weibo.com/n/YourHighness永恒银河</a></span></div><div class="row"><span class="k">上新海报帖</span><span class="v"><a href="https://weibo.com/2876088432/OxAghtxvd" target="_blank" rel="noopener">https://weibo.com/2876088432/OxAghtxvd</a></span></div><div class="row"><span class="k">帖子来源</span><span class="v">Lolita洋装上新</span></div><div class="row"><span class="k">帖子日期</span><span class="v">2024-09-18</span></div><div class="row note">微博只见图透帖（无正式价格公布）—— 价格信息只在小红书情报帖里写。这是该 brand 的运营模式：XHS 主战场，weibo 弱</div></div>
       <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">YourHighness永恒银河</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5ca6647c000000001202ad42" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5ca6647c000000001202ad42</a></span></div><div class="row note">**XHS 是 YourHighness 的主战场**——该品牌官号自己发『初版调试』(6784) + 『情报更新』(3272) + 『黎明之战』(2748) 等多帖累积，比樱洛芙『品牌方静默 + 第三方汇总号转发』模式更主动 KOL 化。但同时引来更多圈内挂避雷帖（见 hot_posts.bilei）。</div></div>
     </div>
+    
+        <section class="inspiration">
+          <h3>设计灵感 / 元素拆解 <span class="insp-badge insp-official">官方公开</span></h3>
+          <div class="insp-note">**官方明文公开**——XHS qingbao 情报帖（YourHighness 官号自发，3272 likes）+ weibo 上新海报正文均明确写出。</div>
+          <div class="insp-theme"><b>主题：</b>嘉德礼服（西方骑士勋章）+ 夏尔斗篷（黑执事二次元）双源致敬</div>
+          <blockquote class="quote">官方原话：『斗篷参考嘉德礼服和夏尔斗篷，两者做了改良，修改了版型（XHS qingbao 帖原文）；ps：斗篷参考嘉德礼服和夏尔斗篷（weibo upgrade post 原文）』</blockquote>
+          <div class="elements"><div class="el"><span class="el-mark official">官方</span><div class="el-name">5 米大斗篷</div><div class="el-src"><b>来源：</b>**官方明确**：嘉德礼服（Order of the Garter，英国皇家骑士勋章礼服）+ 夏尔斗篷（《黑执事》Ciel Phantomhive 角色斗篷）</div><div class="el-purpose"><b>设计目的：</b>西式骑士仪典 + 二次元融合的核心载体</div></div><div class="el"><span class="el-mark official">官方</span><div class="el-name">红绶带 + 蝴蝶结配件</div><div class="el-src"><b>来源：</b>嘉德礼服 Sash（红绶带是嘉德标准色）</div><div class="el-purpose"><b>设计目的：</b>勋章礼服仪式感</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">燕尾外套</div><div class="el-src"><b>来源：</b>AI 推断：19 世纪欧洲晚礼服 / 王子礼服 (tailcoat)</div><div class="el-purpose"><b>设计目的：</b>搭配斗篷的内衬礼服</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">金线刺绣肩章 + 帽徽（双头鹰 / 太阳光辉）</div><div class="el-src"><b>来源：</b>AI 推断：双头鹰 = 哈布斯堡 / 俄罗斯帝国徽（Double-headed eagle）/ 太阳光辉 = 路易十四『Sun King』图腾</div><div class="el-note">圈内 huangdi 帖评论原话『帽徽应该是想做太阳光辉造型，领口又是双头鹰饰品』</div></div><div class="el"><span class="el-mark ai">AI 推断</span><div class="el-name">珍珠链 + 金属胸针</div><div class="el-src"><b>来源：</b>AI 推断：维多利亚晚期男装勋章链 / 怀表链 / 王室胸饰</div><div class="el-purpose"><b>设计目的：</b>勋章重叠堆砌</div></div></div>
+          <div class="thinking"><b>设计思路：</b>明确做西方骑士勋章礼服 + 二次元《黑执事》角色斗篷的致敬款。元素堆砌到位（5米斗篷 + 绶带 + 珍珠链 + 金属胸针 + 蝴蝶结 + 燕尾外套），但被圈内吐槽『过于追求华丽，diy 材料感』+『连抄都不会抄』——设计稿好看，但成衣工艺与原物匹配度差，元素拼凑感强。**这是 cos /拍照向重套款的典型设计思路**：堆元素 &gt; 服装版型完整性。</div>
+          <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">Royal European prince military lolita ensemble inspired by Order of the Garter and Ciel Phantomhive cape: navy blue 5-meter long cape, red sash with bow embellishment, gold-embroidered shoulder epaulettes with double-headed eagle / sun-king motif, plumed cap, white frilled high-collar shirt, tailcoat with gold trim, pearl chain across chest, full Victorian-era ceremonial knight aesthetic</div></details>
+        </section>
+        
     <section class="hot-posts"><h3>小红书相关热门帖（5）</h3>
     <article class="post">
       <div class="post-head">

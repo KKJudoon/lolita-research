@@ -159,5 +159,44 @@
     "xhs_brand_other_posts": "data/raw/maomi_xhs_more.json",
     "taobao_brand_store": "data/raw/maomi_taobao.json",
     "weibo_search_negative": "data/raw/maomi_weibo.json"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "官方未公开设计声明，社区在 vote 加色阶段。以下基于设计稿元素分析。",
+    "theme": "帝国王权军官 + 圣骑士仪仗",
+    "elements": [
+      {
+        "element": "羽毛黑金军帽 + 金星徽",
+        "source_lineage": "19 世纪欧洲掷弹兵帽（Bearskin）/ 骠骑兵（Hussar）仪仗帽",
+        "purpose": "军lo 标准帽型"
+      },
+      {
+        "element": "金线 Maomiwanan 拼音绶带",
+        "source_lineage": "嘉德礼服腰带（Garter Sash）的现代演绎；用品牌拼音替代王徽",
+        "purpose": "品牌 IP 嵌入仪仗符号"
+      },
+      {
+        "element": "王冠刺绣腰封",
+        "source_lineage": "皇室纹章 / 加冕仪式（Crown of state）",
+        "purpose": "主权 + 神圣感"
+      },
+      {
+        "element": "权杖 / 长剑配件",
+        "source_lineage": "圣骑士授勋仪式 / 王权象征 (sceptre + sword)",
+        "purpose": "王子军lo 的标志配件"
+      },
+      {
+        "element": "深绿主色 + 金线",
+        "source_lineage": "维多利亚军服 / 19 世纪欧洲仪仗常用色（与终焉黑金 / 红黑形成差异化定位）",
+        "purpose": "在白菜价位段做出 brand 差异化色"
+      },
+      {
+        "element": "不规则下摆 + 十字刺绣",
+        "source_lineage": "哥特尖塔 + 军礼裤金边",
+        "purpose": "立体感 + 仪式感"
+      }
+    ],
+    "design_thinking": "白菜价位段（¥368）做帝国军官仪仗感——元素简化但齐全（军帽 / 绶带 / 王冠 / 剑），覆盖王子军lo 的核心视觉签名。运营策略上让 community 投票决定加色（黑红 / 黑蓝 / 绿色 / 白蓝 / 白金）也是把『定位决定权』半交给买家——降低生产风险。",
+    "for_image_gen_prompt": "Affordable military prince lolita ensemble: deep green velvet long coat with gold thread embroidery, plumed black-gold officer cap with gold star, gold sash with brand insignia, crown-embroidered waist corset, pommel sword/sceptre prop, asymmetric hem with gold-edged cross embroidery, Victorian-era European military court ceremony aesthetic"
   }
 }

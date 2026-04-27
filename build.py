@@ -324,6 +324,53 @@ def render_detail(item):
         rendered = "".join(render_hot_post(p) for p in hot_posts)
         hot_posts_html = f'<section class="hot-posts"><h3>小红书相关热门帖（{len(hot_posts)}）</h3>{rendered}</section>'
 
+    insp = item.get("design_inspiration", {})
+    insp_html = ""
+    if insp:
+        st = insp.get("source_type", "")
+        badge_text = {
+            "official": "官方公开",
+            "kol_quote": "圈内 KOL 描述",
+            "kol_quote_with_ai_analysis": "KOL 描述 + AI 推断",
+            "ai_analyzed": "AI 分析（非官方）"
+        }.get(st, st)
+        badge_class = "insp-official" if st == "official" else ("insp-kol" if "kol" in st else "insp-ai")
+        elements_html = ""
+        for el in insp.get("elements", []):
+            inner = []
+            inner.append(f'<div class="el-name">{esc(el.get("element",""))}</div>')
+            inner.append(f'<div class="el-src"><b>来源：</b>{esc(el.get("source_lineage",""))}</div>')
+            if el.get("purpose"):
+                inner.append(f'<div class="el-purpose"><b>设计目的：</b>{esc(el.get("purpose",""))}</div>')
+            if el.get("note"):
+                inner.append(f'<div class="el-note">{esc(el.get("note",""))}</div>')
+            mark = ""
+            if el.get("official"):
+                mark = '<span class="el-mark official">官方</span>'
+            elif el.get("ai_inferred"):
+                mark = '<span class="el-mark ai">AI 推断</span>'
+            elements_html += f'<div class="el">{mark}{"".join(inner)}</div>'
+        official_quote_html = ""
+        if insp.get("official_quote"):
+            official_quote_html = f'<blockquote class="quote">官方原话：『{esc(insp["official_quote"])}』</blockquote>'
+        elif insp.get("kol_quote"):
+            official_quote_html = f'<blockquote class="quote">KOL 描述：『{esc(insp["kol_quote"])}』</blockquote>'
+        thinking_html = f'<div class="thinking"><b>设计思路：</b>{esc(insp.get("design_thinking",""))}</div>' if insp.get("design_thinking") else ""
+        prompt_html = ""
+        if insp.get("for_image_gen_prompt"):
+            prompt_html = f'<details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">{esc(insp["for_image_gen_prompt"])}</div></details>'
+        insp_html = f'''
+        <section class="inspiration">
+          <h3>设计灵感 / 元素拆解 <span class="insp-badge {badge_class}">{esc(badge_text)}</span></h3>
+          <div class="insp-note">{esc(insp.get("source_note",""))}</div>
+          {f'<div class="insp-theme"><b>主题：</b>{esc(insp.get("theme",""))}</div>' if insp.get("theme") else ""}
+          {official_quote_html}
+          <div class="elements">{elements_html}</div>
+          {thinking_html}
+          {prompt_html}
+        </section>
+        '''
+
     syn = item.get("synthesis", {})
     syn_html = ""
     if syn:
@@ -386,6 +433,31 @@ def render_detail(item):
   .post-title {{ font-weight: 600; font-size: 14px; margin: 4px 0; }}
   .post-summary {{ color: #444; line-height: 1.7; font-size: 13px; }}
   .post-link {{ font-size: 11px; margin-top: 4px; }}
+  .inspiration {{ margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }}
+  .inspiration h3 {{ margin: 0 0 8px 0; }}
+  .insp-badge {{ font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }}
+  .insp-badge.insp-official {{ background: #d4f4d4; color: #2c7a2c; }}
+  .insp-badge.insp-kol {{ background: #fde8b0; color: #6a4a1a; }}
+  .insp-badge.insp-ai {{ background: #fde0d0; color: #a04020; }}
+  .insp-note {{ font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }}
+  .insp-theme {{ font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }}
+  .quote {{ margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }}
+  .elements {{ display: grid; gap: 10px; margin: 12px 0; }}
+  .el {{ background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }}
+  .el-name {{ font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }}
+  .el-src {{ color: #444; }}
+  .el-src b {{ color: #888; font-weight: normal; }}
+  .el-purpose {{ color: #555; font-size: 12px; margin-top: 4px; }}
+  .el-purpose b {{ color: #888; font-weight: normal; }}
+  .el-note {{ color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }}
+  .el-mark {{ display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }}
+  .el-mark.official {{ background: #d4f4d4; color: #2c7a2c; }}
+  .el-mark.ai {{ background: #fde0d0; color: #a04020; }}
+  .thinking {{ margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }}
+  .thinking b {{ color: #5a4a2a; }}
+  .ai-prompt {{ margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }}
+  .ai-prompt summary {{ cursor: pointer; color: #5a4a2a; font-weight: 600; }}
+  .prompt-text {{ margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }}
   .synthesis {{ margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }}
   .synthesis h3 {{ margin: 0 0 12px 0; }}
   .kw-row {{ margin-bottom: 12px; }}
@@ -433,6 +505,7 @@ def render_detail(item):
       {weibo_html}
       {xhs_html}
     </div>
+    {insp_html}
     {hot_posts_html}
     {syn_html}
   </article>

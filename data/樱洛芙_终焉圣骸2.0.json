@@ -186,5 +186,39 @@
     "xhs_brand_search": "data/raw/xhs_brand.json",
     "xhs_user_tab": "data/raw/xhs_user_search.json",
     "xhs_notes_dir": "data/raw/xhs_notes/"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "官方/品牌方未公开发布设计声明。以下基于设计稿视觉元素 + 款名『终焉圣骸』(末世/saint's relics) 推断分析。",
+    "theme": "末世神圣审判 + 暗黑宗教骑士",
+    "elements": [
+      {
+        "element": "黑金羽毛军帽 + 金星徽",
+        "source_lineage": "19 世纪欧洲军官仪仗帽（骠骑兵 Hussar / 掷弹兵 Bearskin）+ 星徽 = 军衔/勋章传统",
+        "purpose": "确立『仪式军装』基调"
+      },
+      {
+        "element": "胸前肋骨状金线刺绣",
+        "source_lineage": "解剖学骷髅元素 + saint's relics（圣骸 = 圣物遗骨）",
+        "purpose": "暗黑哥特 × 神圣感叠加，是该款最强签名识别元素"
+      },
+      {
+        "element": "月牙腰封 + 月相符号下摆",
+        "source_lineage": "塔罗 / 神秘学；月亮 = 反复轮回 / 末日预言",
+        "purpose": "强化神秘宗教审判主题"
+      },
+      {
+        "element": "不规则尖角下摆 + 十字刺绣",
+        "source_lineage": "哥特建筑尖塔 + 宗教十字",
+        "purpose": "立体感 + 宗教仪式感"
+      },
+      {
+        "element": "黑金 / 红黑 / 蓝黑 / 白金（已砍）配色",
+        "source_lineage": "教皇紫红 / 骑士勋章金 / 暗夜哥特黑",
+        "purpose": "贵气 + 暗黑双调"
+      }
+    ],
+    "design_thinking": "把『军lo』外壳套在哥特宗教审判主题之上——是军装的形式 + 末日宗教的精神内核。不是一般军lo（仪仗 / 嘉德 / 拿破仑），是阴森审判型。这种『主题先行，元素服务主题』的设计思路让该款在视觉上极有辨识度（vs 标准军lo 的同质化）。",
+    "for_image_gen_prompt": "Saint's relics gothic military lolita: skeleton ribcage embroidery in gold thread on chest, crescent moon waist sash with tarot/lunar phase symbols, asymmetric pointed hem with cross/moon embroidery, plumed hussar hat with gold star, color palette of black-gold / wine-red-black / blue-black, Victorian gothic ecclesiastical judgment aesthetic"
   }
 }
