@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>龙曜 · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="yingyue_longyao">
+    <header>
+      <h2>龙曜 <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：映月原创设计　/　服装设计：映月原创设计（品牌方负责打版/打布样/工厂/工艺）</div>
+      <div class="designer-note">未公开。XHS 上找不到画师署名。可能是品牌内部画师或买断稿件，难以从公开信息确认。</div>
+      <div class="tags"><span class="tag">军lo</span> <span class="tag">中华风</span> <span class="tag">汉洋折衷</span> <span class="tag">金线刺绣</span> <span class="tag">斗篷</span> <span class="tag">立领衬衫</span> <span class="tag">中性帅气</span> <span class="tag">双 SKU 配色</span></div>
+    </header>
+    <p class="summary">汉洋折衷军lo——中式（立领衬衫 / 锦缎腰封 / 龙纹刺绣 / 流苏挂坠）+ 西式（披风斗篷 / 不对称下摆 / 燕尾外套）的融合。XHS 用户原话『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处』。两个 SKU 配色：龙曜.赤曦（红黑金）/ 龙曜.玄溟（蓝白金，实物图蓝缎+白衬衫）。</p>
+    <div class="poster-grid"><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_1.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_1.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_2.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_2.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_3.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_3.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_4.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_4.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_5.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_5.jpg" loading="lazy"/></a><a class="bare" href="../images/映月_龙曜/69ba0a00000000001a0235a6_6.jpg" target="_blank"><img src="../images/映月_龙曜/69ba0a00000000001a0235a6_6.jpg" loading="lazy"/></a></div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款（截止 2026-04-15）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-03-18</span></div><div class="row note">运营节奏与樱洛芙类大牌相比偏小工作室——主力宣传在 XHS 集赞营销+小博主转发，没看到 weibo 官方上新海报。</div></section>
+      <section class="info"><h3>价格</h3><div class="row note">**价格信息来自 XHS 初柒顾 1665 likes 帖正文**（2026-03-18，sheji 帖），不是淘宝意向金链或微博海报——印证『价格优先 XHS』规则。淘宝挂牌 ¥523 对应非意向金小全套。意向金截止 2026-04-15。意向金可退（¥30 余额返还），买的早 = 直接省 ¥30。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">龙曜.赤曦（红黑金，名取自朝阳）</span> <span class="color-chip">龙曜.玄溟（蓝白金，实物深蓝缎，名取自玄武深海，标『千人加购』）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">映月原创设计</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://shop313755428.taobao.com/" target="_blank" rel="noopener">https://shop313755428.taobao.com/</a></span></div><div class="row"><span class="k">店铺备注</span><span class="v">映月原创设计 淘宝店主页（已 browser 验证）</span></div><div class="row"><span class="k">店铺评价</span><span class="v">4.9 评分 / 90 天新增 10 条好评 / 客服满意度 97%（评分高但样本量小）</span></div><div class="row"><span class="k">当前标题</span><span class="v">龙曜 汉洋折衷lolita中华风春季中性翻领衬衣刺绣斗篷军lo套装女</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥523</span></div><div class="row"><span class="k">销量</span><span class="v">700+人付款</span></div><div class="row"><span class="k">销量趋势</span><span class="v">2026-03 上新到 04 月底约 1.5 个月累计 700+</span></div><div class="row"><span class="k">销量备注</span><span class="v">全款链 700+。同店『龙曜 拆分』¥60 配件 44+ 付款（少量买家单买拆分配件）。整体销量比樱洛芙终焉圣骸 4w+ 低 2 个量级，比 YourHighness 骑士精神 300+ 略高。</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row note">搜『映月原创设计 龙曜』+ 『龙曜 lolita 上新』在微博均**无相关结果**——映月在微博渠道几乎没有曝光。这是该 brand 的运营特征：**XHS 集赞营销为主，weibo 缺位**。</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">映月原创设计</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/60b3ee44000000000100b903" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/60b3ee44000000000100b903</a></span></div><div class="row note">XHS 是该品牌的核心阵地。除龙曜外可见近期帖：『积攒活动来啦！』（125 likes 2025-11）、『取名，在线等！』（239 likes 2025-10，可能是其他款的命名 vote）、『意向金🍑↑啦』（37 likes 2025-11）。运营手段以集赞活动为主。</div></div>
+    </div>
+    <section class="hot-posts"><h3>小红书相关热门帖（4）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">圈内 KOL 设计稿安利 + 价格透明</span>
+        <span class="post-meta">@初柒顾（🚫🚗） · 2026-03-18 · ❤ 1665 · 💬 </span>
+      </div>
+      <div class="post-title">来，看设计稿！这套我先穿！</div>
+      <div class="post-summary">1665 likes 是龙曜全网最热单帖。**该款全部价格信息的唯一公开来源**——正文明文：意向金价 ¥498 小全套 / ¥558 大全套，非意向金 ¥523/¥583，意向金可退 ¥30，2026-04-15 截单。设计描述细致：黑底金线刺绣+酒红内衬斗篷，肩章龙纹+立领衬衫+金属挂链+腰封+不对称裙摆+裤裙可选。评论里有人问『裤子和裙子是什么样子的』（生产前细节图未出）+ 大量『dd / 蹲蹲 / 助力』集赞回复。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69ba23ef000000002800ba25?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdDqJzH-C6FMDB5kbShh08-A=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">小博主集赞营销转发</span>
+        <span class="post-meta">@可露小欣 · 2026-03-18 · ❤ 99 · 💬 </span>
+      </div>
+      <div class="post-title">重磅上新 军lo龙耀</div>
+      <div class="post-summary">@映月原创设计 @ 标双账号（重复 @ 是为了集赞计数）。评论几乎全是『dd』『互』『dd第一第三棉花娃娃』『dd就行不用评』等求互赞——典型的**集赞活动帖**：用户帮品牌发求赞贴，满 30 赞后获得品牌福利或助力。这里 6 条实物图正是从这帖下载来的（龙曜.玄溟款蓝白金实拍）。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69ba0a00000000001a0235a6?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdJ24Ii_T9KzhWIG5FesYCZU=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">用户集赞参与帖</span>
+        <span class="post-meta">@游霄 · 2026-03-18 · ❤ 62 · 💬 </span>
+      </div>
+      <div class="post-title">映月龙曜</div>
+      <div class="post-summary">用户原话『等了好久的军lo终于出样了！@映月原创设计 需要30个👍，路过的宝宝们帮帮忙』——印证集赞门槛 = 30 赞。评论全是 dd / 互赞模板回复（这条已经凑够 30）。这种帖证明品牌方以**集赞机制驱动 XHS 流量分发**。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69ba2cea0000000021005910?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdP85GXPIXvvCdvgdhz9XWb4=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">命名混淆警告</span>
+        <span class="post-meta">@(警告) · — · ❤ — · 💬 </span>
+      </div>
+      <div class="post-title">（说明：龙曜 / 龙耀 同音异体字混用）</div>
+      <div class="post-summary">圈内有人写『龙曜』有人写『龙耀』——映月官方写法是**『龙曜』**（淘宝商品名 + 1665 likes 大帖均用此）。XHS 搜索时两种写法都要试，不能漏掉。同名款问题：未发现其他 brand 同名款，相对安全。</div>
+      
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">汉洋折衷</span> <span class="kw">中华风军lo</span> <span class="kw">金线刺绣</span> <span class="kw">立领衬衫+斗篷套装</span> <span class="kw">¥498-583 价位段</span> <span class="kw">集赞营销分发</span> <span class="kw">XHS 主战场无微博</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>**价格透明度高**——KOL 帖 1665 likes 正文明文公开 4 档价格（小/大全套 × 意向/非意向），意向金可退 ¥30，比骨龙『官方至今未公开』强很多</li><li>**汉洋折衷设计**填补市场空白——中华风+军lo 双标签，与樱洛芙终焉圣骸（纯军lo）/ 骨龙（哥特）区分定位</li><li>两个 SKU 配色（赤曦/玄溟）命名考究（朝阳 vs 玄武深海），中式美学一致</li><li>实物图蓝缎+白衬衫+金线肩饰呈现度好，刺绣层次到位</li><li>可选裤/裙（性别中性 / 风格自由切换）</li><li>意向金机制对买家友好（早买省 ¥30）</li><li>淘宝店评分 4.9（虽然样本量小）</li><li>出现在 4 月份 lolita 上新点评博主榜单（『取名字好难滴叶叶子』第 4 位）</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**销量小（700+）**——比樱洛芙终焉圣骸 4w+ 低 2 个量级，破圈力弱</li><li>**weibo 渠道几乎缺位**——多平台营销弱，只能靠 XHS 集赞推</li><li>**集赞营销可疑度**——大量 dd / 互赞帖看似热度，实际是品牌发动的『模板化求赞』，不是自然圈内讨论。难判断真实喜欢度 vs 福利驱动</li><li>**画师 / 设计师未署名**——透明度比樱洛芙（叁狐画稿）低</li><li>**淘宝店样本量小**（90 天新增仅 10 条好评）——品牌历史短，工艺稳定性未经长期验证</li><li>**真人成片缺失**——XHS 上没看到买家真人上身高赞帖，只有设计稿+店家展架实物图</li><li>上新海报只在 XHS 一个圈层流转，没有微博 / 第三方汇总号扩散</li></ul></div>
+          </div>
+          <div class="verdict">短评：中华风军lo 的代表（汉洋折衷设计稿好看 + 价格透明 ¥498-583），是中小工作室款的典型——价格友好、设计有差异化（中华风+军lo），但销量低（700+）、weibo 缺位、画师未署名、真人成片缺失。买家画像：欣赏中华风+军lo 跨界、能接受小工作室的品牌信用风险、对集赞营销不反感、预算中端（¥500 左右）。同期对照：比樱洛芙终焉圣骸便宜 18%（¥523 vs ¥648）但销量只有 1.75%，且营销渠道窄。</div>
+        </section>
+        
+  </article>
+</body>
+</html>

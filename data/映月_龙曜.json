@@ -1,0 +1,176 @@
+{
+  "id": "yingyue_longyao",
+  "name": "龙曜",
+  "brand": "映月原创设计",
+  "designer": "映月原创设计（品牌方负责打版/打布样/工厂/工艺）",
+  "illustrator": null,
+  "illustrator_note": "未公开。XHS 上找不到画师署名。可能是品牌内部画师或买断稿件，难以从公开信息确认。",
+  "name_variants": ["龙曜", "龙耀（同音异体字，圈内常混用）"],
+  "style_tags": ["军lo", "中华风", "汉洋折衷", "金线刺绣", "斗篷", "立领衬衫", "中性帅气", "双 SKU 配色"],
+  "style_summary": "汉洋折衷军lo——中式（立领衬衫 / 锦缎腰封 / 龙纹刺绣 / 流苏挂坠）+ 西式（披风斗篷 / 不对称下摆 / 燕尾外套）的融合。XHS 用户原话『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处』。两个 SKU 配色：龙曜.赤曦（红黑金）/ 龙曜.玄溟（蓝白金，实物图蓝缎+白衬衫）。",
+  "release": {
+    "type": "意向金 + 截单全款（截止 2026-04-15）",
+    "date_range": "2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货",
+    "poster_first_seen": "2026-03-18",
+    "note": "运营节奏与樱洛芙类大牌相比偏小工作室——主力宣传在 XHS 集赞营销+小博主转发，没看到 weibo 官方上新海报。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "deposit_link_intent": null,
+    "price_breakdown": {
+      "意向金价 · 小全套": "¥498",
+      "意向金价 · 大全套": "¥558",
+      "非意向金 · 小全套": "¥523（淘宝挂牌）",
+      "非意向金 · 大全套": "¥583",
+      "意向金抵扣 / 退款": "买意向金后收到货还能退 ¥30，相当于多优惠"
+    },
+    "note": "**价格信息来自 XHS 初柒顾 1665 likes 帖正文**（2026-03-18，sheji 帖），不是淘宝意向金链或微博海报——印证『价格优先 XHS』规则。淘宝挂牌 ¥523 对应非意向金小全套。意向金截止 2026-04-15。意向金可退（¥30 余额返还），买的早 = 直接省 ¥30。"
+  },
+  "colors": [
+    "龙曜.赤曦（红黑金，名取自朝阳）",
+    "龙曜.玄溟（蓝白金，实物深蓝缎，名取自玄武深海，标『千人加购』）"
+  ],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://shop313755428.taobao.com/",
+      "url_note": "映月原创设计 淘宝店主页（已 browser 验证）",
+      "item_url": "https://item.taobao.com/item.htm?id=1032462582002",
+      "item_id": "1032462582002",
+      "shop_name": "映月原创设计",
+      "shop_rating": "4.9 评分 / 90 天新增 10 条好评 / 客服满意度 97%（评分高但样本量小）",
+      "list_title": "龙曜 汉洋折衷lolita中华风春季中性翻领衬衣刺绣斗篷军lo套装女",
+      "list_price": "¥523",
+      "sales": "700+人付款",
+      "sales_note": "全款链 700+。同店『龙曜 拆分』¥60 配件 44+ 付款（少量买家单买拆分配件）。整体销量比樱洛芙终焉圣骸 4w+ 低 2 个量级，比 YourHighness 骑士精神 300+ 略高。",
+      "sales_trend": "2026-03 上新到 04 月底约 1.5 个月累计 700+",
+      "location": null,
+      "related_skus": [
+        {"id": "1032242451535", "title": "龙曜 拆分", "price": "¥60", "sales": "44人付款", "note": "配件单卖（衬衫/斗篷等单件加购）"}
+      ]
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "note": "搜『映月原创设计 龙曜』+ 『龙曜 lolita 上新』在微博均**无相关结果**——映月在微博渠道几乎没有曝光。这是该 brand 的运营特征：**XHS 集赞营销为主，weibo 缺位**。"
+    },
+    "xiaohongshu": {
+      "official_account": "映月原创设计",
+      "official_url": "https://www.xiaohongshu.com/user/profile/60b3ee44000000000100b903",
+      "illustrator_account": null,
+      "illustrator_url": null,
+      "note": "XHS 是该品牌的核心阵地。除龙曜外可见近期帖：『积攒活动来啦！』（125 likes 2025-11）、『取名，在线等！』（239 likes 2025-10，可能是其他款的命名 vote）、『意向金🍑↑啦』（37 likes 2025-11）。运营手段以集赞活动为主。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "初柒顾（🚫🚗）",
+        "date": "2026-03-18",
+        "likes": "1665",
+        "comments": null,
+        "title": "来，看设计稿！这套我先穿！",
+        "url": "https://www.xiaohongshu.com/explore/69ba23ef000000002800ba25?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdDqJzH-C6FMDB5kbShh08-A=&xsec_source=pc_user",
+        "type": "圈内 KOL 设计稿安利 + 价格透明",
+        "summary": "1665 likes 是龙曜全网最热单帖。**该款全部价格信息的唯一公开来源**——正文明文：意向金价 ¥498 小全套 / ¥558 大全套，非意向金 ¥523/¥583，意向金可退 ¥30，2026-04-15 截单。设计描述细致：黑底金线刺绣+酒红内衬斗篷，肩章龙纹+立领衬衫+金属挂链+腰封+不对称裙摆+裤裙可选。评论里有人问『裤子和裙子是什么样子的』（生产前细节图未出）+ 大量『dd / 蹲蹲 / 助力』集赞回复。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "可露小欣",
+        "date": "2026-03-18",
+        "likes": "99",
+        "comments": null,
+        "title": "重磅上新 军lo龙耀",
+        "url": "https://www.xiaohongshu.com/explore/69ba0a00000000001a0235a6?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdJ24Ii_T9KzhWIG5FesYCZU=&xsec_source=pc_user",
+        "type": "小博主集赞营销转发",
+        "summary": "@映月原创设计 @ 标双账号（重复 @ 是为了集赞计数）。评论几乎全是『dd』『互』『dd第一第三棉花娃娃』『dd就行不用评』等求互赞——典型的**集赞活动帖**：用户帮品牌发求赞贴，满 30 赞后获得品牌福利或助力。这里 6 条实物图正是从这帖下载来的（龙曜.玄溟款蓝白金实拍）。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "游霄",
+        "date": "2026-03-18",
+        "likes": "62",
+        "comments": null,
+        "title": "映月龙曜",
+        "url": "https://www.xiaohongshu.com/explore/69ba2cea0000000021005910?xsec_token=ABZE1bCy3dEF4MA9vMR_lKdP85GXPIXvvCdvgdhz9XWb4=&xsec_source=pc_user",
+        "type": "用户集赞参与帖",
+        "summary": "用户原话『等了好久的军lo终于出样了！@映月原创设计 需要30个👍，路过的宝宝们帮帮忙』——印证集赞门槛 = 30 赞。评论全是 dd / 互赞模板回复（这条已经凑够 30）。这种帖证明品牌方以**集赞机制驱动 XHS 流量分发**。"
+      },
+      {
+        "rank_in_search": null,
+        "author": "(警告)",
+        "date": "—",
+        "likes": "—",
+        "comments": null,
+        "title": "（说明：龙曜 / 龙耀 同音异体字混用）",
+        "url": null,
+        "type": "命名混淆警告",
+        "summary": "圈内有人写『龙曜』有人写『龙耀』——映月官方写法是**『龙曜』**（淘宝商品名 + 1665 likes 大帖均用此）。XHS 搜索时两种写法都要试，不能漏掉。同名款问题：未发现其他 brand 同名款，相对安全。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["汉洋折衷", "中华风军lo", "金线刺绣", "立领衬衫+斗篷套装", "¥498-583 价位段", "集赞营销分发", "XHS 主战场无微博"],
+    "highlights_positive": [
+      "**价格透明度高**——KOL 帖 1665 likes 正文明文公开 4 档价格（小/大全套 × 意向/非意向），意向金可退 ¥30，比骨龙『官方至今未公开』强很多",
+      "**汉洋折衷设计**填补市场空白——中华风+军lo 双标签，与樱洛芙终焉圣骸（纯军lo）/ 骨龙（哥特）区分定位",
+      "两个 SKU 配色（赤曦/玄溟）命名考究（朝阳 vs 玄武深海），中式美学一致",
+      "实物图蓝缎+白衬衫+金线肩饰呈现度好，刺绣层次到位",
+      "可选裤/裙（性别中性 / 风格自由切换）",
+      "意向金机制对买家友好（早买省 ¥30）",
+      "淘宝店评分 4.9（虽然样本量小）",
+      "出现在 4 月份 lolita 上新点评博主榜单（『取名字好难滴叶叶子』第 4 位）"
+    ],
+    "highlights_negative": [
+      "**销量小（700+）**——比樱洛芙终焉圣骸 4w+ 低 2 个量级，破圈力弱",
+      "**weibo 渠道几乎缺位**——多平台营销弱，只能靠 XHS 集赞推",
+      "**集赞营销可疑度**——大量 dd / 互赞帖看似热度，实际是品牌发动的『模板化求赞』，不是自然圈内讨论。难判断真实喜欢度 vs 福利驱动",
+      "**画师 / 设计师未署名**——透明度比樱洛芙（叁狐画稿）低",
+      "**淘宝店样本量小**（90 天新增仅 10 条好评）——品牌历史短，工艺稳定性未经长期验证",
+      "**真人成片缺失**——XHS 上没看到买家真人上身高赞帖，只有设计稿+店家展架实物图",
+      "上新海报只在 XHS 一个圈层流转，没有微博 / 第三方汇总号扩散"
+    ],
+    "verdict_short": "短评：中华风军lo 的代表（汉洋折衷设计稿好看 + 价格透明 ¥498-583），是中小工作室款的典型——价格友好、设计有差异化（中华风+军lo），但销量低（700+）、weibo 缺位、画师未署名、真人成片缺失。买家画像：欣赏中华风+军lo 跨界、能接受小工作室的品牌信用风险、对集赞营销不反感、预算中端（¥500 左右）。同期对照：比樱洛芙终焉圣骸便宜 18%（¥523 vs ¥648）但销量只有 1.75%，且营销渠道窄。"
+  },
+  "industry_comparison": {
+    "vs_yingluofu_zhongyan_2.0": {
+      "price_full_set_small": "龙曜小全套 ¥523 vs 终焉 op ¥520（接近）",
+      "price_full_set_big": "龙曜大全套 ¥583 vs 终焉 fs ¥648（龙曜便宜 ¥65）",
+      "sales": "龙曜 700+ vs 终焉 4w+（龙曜 = 终焉 1.75%）",
+      "channel_strength": "龙曜 XHS only（集赞驱动）vs 终焉 三平台齐打 + 真人成片矩阵",
+      "designer_transparency": "龙曜 画师未署名 vs 终焉 叁狐画师确认 IP 加持",
+      "sub_genre": "龙曜 汉洋折衷（中华+军lo） vs 终焉 纯军lo + 西式哥特元素",
+      "industry_position": "龙曜 = 中小工作室差异化中价款 vs 终焉 = 中型原创品牌爆款"
+    },
+    "vs_maomiwanan_juanjuan": {
+      "price": "龙曜 ¥523/¥583 vs 卷卷 ¥368（龙曜贵 42%-58%）",
+      "design_iteration": "龙曜 海报定 2 色直接开订 vs 卷卷 community vote 加色",
+      "channel": "都 XHS 主战场，但龙曜走集赞 / 卷卷走 vote 投票",
+      "sub_genre": "龙曜 中华+军lo vs 卷卷 纯军lo（深绿+金）"
+    }
+  },
+  "posters": [
+    "images/映月_龙曜/69ba0a00000000001a0235a6_1.jpg",
+    "images/映月_龙曜/69ba0a00000000001a0235a6_2.jpg",
+    "images/映月_龙曜/69ba0a00000000001a0235a6_3.jpg",
+    "images/映月_龙曜/69ba0a00000000001a0235a6_4.jpg",
+    "images/映月_龙曜/69ba0a00000000001a0235a6_5.jpg",
+    "images/映月_龙曜/69ba0a00000000001a0235a6_6.jpg"
+  ],
+  "verified": true,
+  "verified_at": "2026-04-27",
+  "verified_by": "Claude (cross-checked 淘宝商品页 SKU 2 色 + 映月 XHS 品牌官号 + 4 个相关 XHS 帖含 1665 likes 价格帖 + 微博无映月官号确认)",
+  "raw_sources": {
+    "taobao_search": "data/raw/longyao_taobao.json",
+    "taobao_detail": "data/raw/longyao_taobao_detail.json",
+    "xhs_search": "data/raw/longyao_xhs.json",
+    "xhs_search_price": "data/raw/longyao_xhs_price.json",
+    "xhs_search_jun": "data/raw/longyao_xhs_jun.json",
+    "xhs_brand": "data/raw/longyao_yingyue_brand.json",
+    "weibo_search_negative": "data/raw/longyao_weibo.json",
+    "xhs_notes": "data/raw/longyao_notes/"
+  }
+}
