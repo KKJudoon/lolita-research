@@ -1,0 +1,164 @@
+{
+  "id": "yingluofu_gulong",
+  "name": "骨龙（暗黑哥特 JSK）",
+  "brand": "樱洛芙Lolita",
+  "designer": "樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）",
+  "illustrator": null,
+  "illustrator_note": "未公开。骨龙海报水印是品牌账号 _重生版，没有在帖里署名画师。",
+  "name_ambiguity_warning": "圈内有同名款『骨龙』也属 Alicegirl 工作室（XHS hashtag #alicegirl原创工作室 #AG骨龙系列），是不同品牌的同名款（典型菀菀类卿现象）。本条记录的是樱洛芙骨龙，不是 alicegirl 骨龙。",
+  "style_tags": ["哥特", "暗黑系", "JSK", "蝙蝠装饰", "兜帽斗篷", "骨头/骨龙图腾", "玫瑰刺绣"],
+  "style_summary": "黑红主色（样衣已确定）的暗黑哥特 JSK：兜帽斗篷、蝙蝠胸饰、骨龙/骨头/十字符号刺绣下摆、紧身束腰 + 多层蕾丝裙。设计稿层次丰富，符合『哥特暗黑指数高』的圈内调侃公式（十字+蕾丝+暗色对比）。同 brand 终焉圣骸（军lo）一脉相承的繁复刺绣工艺。",
+  "release": {
+    "type": "意向金 + 截单全款",
+    "date_range": "2026-01-17（首次海报上新）→ 2026-01-21（新增黑紫黑绿）→ 仍在收意向金（截单时间未明）",
+    "poster_first_seen": "2026-01-17",
+    "note": "1月17日发『新色图透』海报；1月21日宣布新增黑紫色💜和黑绿色💚，共6色；淘宝意向金链当前实际显示8 SKU（含白红、墨绿额外加色）。海报和淘宝 SKU 数量略对不上——属正常迭代过程。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "deposit_link_intent": 5,
+    "list_price_at_research": "¥5（淘宝挂牌价，意向金抵 ¥30）",
+    "note": "全款 OP / 整套价**官方未公开**——意向金链只显示 ¥5 抵 ¥30，正式开订时会另开全款链接。同 brand 终焉圣骸 OP=520 / 整套=648 可作粗略参考，但骨龙是 JSK（不是 OP+整套）所以价格结构可能完全不同。"
+  },
+  "colors": [
+    "黑红色骨龙（样衣已确定）",
+    "黑绀色骨龙（样衣制作中）",
+    "黑灰色骨龙（样衣制作中）",
+    "白红骨龙（样衣制作中）",
+    "紫色骨龙（样衣制作中）",
+    "废土色骨龙（千人加购）",
+    "墨绿色骨龙（样衣制作中）",
+    "白色骨龙（样衣制作中）"
+  ],
+  "colors_note": "淘宝意向金链显示 8 个颜色 SKU。仅『黑红色骨龙』样衣已确定（最早可发货），其他 7 色在打样阶段。废土色被标『千人加购』显示是次热门色（仅次于黑红）。注意：1月21日微博公告说『6色可选』，但淘宝实际 8 色——意味着开订时间窗内陆续加色。",
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=968203147040",
+      "url_note": "意向金链商品页（樱洛芙官方店）",
+      "shop_url": "https://shop431852059.taobao.com/",
+      "shop_url_note": "樱洛芙lolita官方店主页（已 browser 验证）",
+      "item_id": "968203147040",
+      "shop_name": "樱洛芙lolita官方店",
+      "shop_rating": "4.8 评分 / 88VIP 好评率 98% / 平均 7 天内发货 / 客服满意度 97%",
+      "list_title": "【意向金5r抵30r】樱洛芙骨龙暗黑哥特jsk连衣裙Lolita原创设计",
+      "list_price": "¥5（意向金）",
+      "sales": "1万+人付款",
+      "sales_note": "意向金链销量；约为终焉圣骸 4w+ 的 1/4，反映同 brand 内『哥特款 vs 军lo款』在 2026-04 当前的热度对比（军lo 显著破圈，哥特相对稳态）",
+      "sales_trend": "1万+ 持续累积（2026-01 海报后到 2026-04 已四个月）",
+      "location": "湖北武汉",
+      "related_skus": [
+        {"id": "1009636833648", "title": "【意向金】樱洛芙神契使者骨龙暗黑哥特jsk连衣裙Lolita原创设计", "shop": "樱洛芙Lolita原创设计", "sales": "200+人付款", "note": "骨龙的衍生/二代款『神契使者骨龙』，在 _重生版 副店"},
+        {"id": "1008176311113", "title": "【意向金】樱洛芙骨龙暗黑lo裙jsk连衣裙Lolita原创设计", "shop": "樱洛芙原创Lolita二店", "sales": "100+人付款", "note": "二店复刻意向金链"}
+      ]
+    },
+    "weibo": {
+      "official_account": "樱洛芙Lolita原创设计_重生版",
+      "official_url": "https://weibo.com/n/樱洛芙Lolita原创设计_重生版",
+      "alt_account": "Lolita樱洛芙原创",
+      "alt_url": "https://weibo.com/u/7062861749",
+      "alt_account_2": "樱洛芙Lolita原创设计",
+      "alt_url_2": "https://weibo.com/u/3113658095",
+      "upgrade_post_url": "https://weibo.com/5993650397/QnyMJ8Jqi",
+      "upgrade_post_account": "Lolita洋装上新",
+      "upgrade_post_account_uid": "5993650397",
+      "color_announce_post_url": "https://weibo.com/3113658095/Qo7dkkIPY",
+      "color_announce_post_account": "樱洛芙Lolita原创设计",
+      "post_date": "2026-01-17（图透）/ 2026-01-21（新增 2 色）",
+      "note": "微博渠道营销节奏：1月17日 @Lolita洋装上新 第三方汇总号转发图透 → 1月21日品牌官号自发新增颜色公告。骨龙没有像终焉圣骸那样高频的真人穿搭照微博曝光（哥特款穿搭门槛高，KOL 出片场景少）"
+    },
+    "xiaohongshu": {
+      "official_account": "樱洛芙Lolita",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930",
+      "illustrator_account": null,
+      "illustrator_url": null,
+      "note": "樱洛芙骨龙在 XHS 单帖热度普遍偏低（最高 40+ 赞），与终焉圣骸（多个千赞 + 万赞）形成强对比。原因：哥特风受众小、上身成片难、不在『破圈型款』范畴。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": null,
+        "author": "Min（）",
+        "date": "2026-04-04",
+        "likes": "40",
+        "comments": null,
+        "title": "樱洛芙新品求助！！！",
+        "url": "https://www.xiaohongshu.com/search_result/69ce10f4000000001b0030ee?xsec_token=ABnp7CrFNG8TBO9qYzIH-dphUxbRbfPq2nvKcgUbUYMaA=&xsec_source=",
+        "type": "买家纠结帖（同 brand 内对比终焉）",
+        "summary": "原话『本来很草骨龙的，但是终焉圣骸复刻了，想着军lo的风格太难得了，可是又舍弃不了骨龙』—— 直接反映**同 brand 内军lo破圈分流哥特款的关注度**。评论里有人问『骨龙全套多少钱啊』（无人答 = 价格信息不透明）；有人评『轻花嫁系列也看上了』（樱洛芙同期 3 大款博弈：终焉/骨龙/轻花嫁）。"
+      },
+      {
+        "rank_in_search": null,
+        "author": "江上野凛",
+        "date": "2026-04-02",
+        "likes": "14",
+        "comments": null,
+        "title": "樱洛芙骨龙求种草/拔草",
+        "url": "https://www.xiaohongshu.com/search_result/69ce76c3000000001f007543?xsec_token=ABegiuvC72H8iDACLSVPGpkx4t-eJ3KjwkEH9-p9--c-E=&xsec_source=",
+        "type": "买家点评（设计细节槽点）",
+        "summary": "用户挑刺：『脖子那块红色地方感觉没有兜帽看着很丑很突兀』。评论里有人问『平胸穿撑不起来』（紧身束腰款的常见上身门槛）；建议买别的颜色（『纯黑色』）。这条短帖反映哥特款 JSK 上身效果对体型/颜色搭配敏感。"
+      },
+      {
+        "rank_in_search": null,
+        "author": "(同名款警告)",
+        "date": "—",
+        "likes": "—",
+        "comments": null,
+        "title": "(说明：圈内还有 Alicegirl 工作室同名『骨龙』款)",
+        "url": null,
+        "type": "菀菀类卿警告",
+        "summary": "桂盈 457 赞 repo 帖『骨龙 repo｜附三视图｜测评』评的是 **Alicegirl 工作室**的骨龙（hashtag #alicegirl原创工作室 #新中式），不是樱洛芙的。在 XHS 搜『骨龙』时容易混入。樱洛芙骨龙是哥特，alicegirl 骨龙是新中式——视觉风格完全不同。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["暗黑哥特 JSK", "8 色 SKU", "黑红色样衣已确定", "废土色千人加购", "意向金 1万+", "同名款警告（vs alicegirl 骨龙）", "同 brand 内被终焉圣骸分流热度"],
+    "highlights_positive": [
+      "意向金 1万+ 是樱洛芙哥特线的代表款（与军lo 终焉圣骸构成 brand 双 IP 矩阵）",
+      "8 色 SKU 选择丰富——黑红/黑绀/黑灰/白红/紫色/废土/墨绿/白色，跨经典哥特到中性偏甜",
+      "樱洛芙官方店店铺评分 4.8 + 7 天内发货——比中小工作室（猫咪晚安等）品牌信用强",
+      "废土色被标『千人加购』显示有用户群偏好非传统哥特配色，brand 已锁定潜力色",
+      "1月17日海报 → 1月21日加色 → 4月仍在收意向金，节奏稳",
+      "设计稿层次丰富：兜帽斗篷+蝙蝠胸饰+骨头下摆+玫瑰刺绣，元素堆叠到位"
+    ],
+    "highlights_negative": [
+      "**全款价格未公开**——海报和淘宝意向金链都只显示 ¥5 抵 ¥30，买家在 XHS 评论里问全套多少钱无人答（价格透明度比终焉圣骸 op=520/fs=648 差很多）",
+      "**圈内同名款警告**：Alicegirl 工作室也有『骨龙』（暗黑/新中式风），桂盈 457 赞高 repo 帖讲的是 alicegirl 不是樱洛芙——可能让买家混淆品牌",
+      "XHS 单帖热度低（最高 40 赞）——比同 brand 终焉圣骸（多帖千赞万赞）差 1-2 个量级，反映哥特款受众面窄",
+      "8 色 SKU 中**只 1 色（黑红）样衣已确定**，6 色样衣制作中——开订一年内可能持续砍色（参考终焉圣骸 2.0 砍白金的先例）",
+      "买家挑刺红色脖子设计『没有兜帽看着突兀』——成衣细节可能与设计稿有偏差",
+      "紧身束腰版型对体型敏感（平胸 / 高个等不适合），上身门槛比 OP 类高"
+    ],
+    "verdict_short": "短评：樱洛芙哥特线代表款，意向金 1 万+ 在 brand 内是终焉圣骸（4w+）之外的次热款。优势是配色丰富 + 品牌信用 + 设计层次足；短板在价格不透明、同名款混淆、单帖热度低、上身门槛高。买家画像：偏好哥特风、信任樱洛芙工艺、能接受 8 色中只确定 1 色的小风险（且不能在意 alicegirl 同名混淆）的姑娘。和终焉圣骸（军lo）属于同 brand 互补，但破圈力差很多——哥特款本来就不是当下 lolita 圈热点。"
+  },
+  "industry_comparison": {
+    "vs_yingluofu_zhongyan_2.0": {
+      "sub_genre": "骨龙=哥特 JSK / 终焉圣骸=军lo OP+整套",
+      "sales_at_2026_04": "骨龙 1w+ 意向金 vs 终焉 4w+（骨龙 = 终焉 25%）",
+      "release_age": "骨龙 2026-01 上新（已 4 个月）vs 终焉 2025-10 上新（已 6 个月，且是 1.0 翻新到 2.0）",
+      "color_count": "骨龙 8 色 SKU（1 已定 + 7 制作中）vs 终焉 4 色海报（实际开售 3 色，砍白金）",
+      "price_transparency": "骨龙 全款价**未公开** vs 终焉 海报明确 op=520 / fs=648",
+      "channel_strength": "骨龙 微博官号自发 + 第三方汇总号转 vs 终焉 三平台齐打 + 真人成片帖 + 上新点评 + 设计师本人",
+      "sub_genre_breakout_potential": "哥特受众面窄（圈内核心粉），破圈力弱 vs 军lo 圈内+圈外都火"
+    }
+  },
+  "posters": [
+    "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg",
+    "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg",
+    "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg"
+  ],
+  "verified": true,
+  "verified_at": "2026-04-27",
+  "verified_by": "Claude (cross-checked 淘宝商品页 SKU 8 色 + 微博上新两帖 + XHS 4 篇相关讨论 + 同名款 alicegirl 骨龙交叉确认)",
+  "raw_sources": {
+    "taobao_search": "data/raw/gulong_taobao.json",
+    "taobao_detail": "data/raw/gulong_taobao_detail.json",
+    "weibo_upgrade_post": "data/raw/gulong_weibo_upgrade.json",
+    "weibo_color_announce": "data/raw/gulong_weibo_color.json",
+    "xhs_search_main": "data/raw/gulong_xhs.json",
+    "xhs_search_geji": "data/raw/gulong_xhs2.json",
+    "xhs_notes_dir": "data/raw/gulong_notes/"
+  }
+}

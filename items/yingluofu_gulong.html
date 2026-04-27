@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>骨龙（暗黑哥特 JSK） · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="yingluofu_gulong">
+    <header>
+      <h2>骨龙（暗黑哥特 JSK） <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：樱洛芙Lolita　/　服装设计：樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）</div>
+      <div class="designer-note">未公开。骨龙海报水印是品牌账号 _重生版，没有在帖里署名画师。</div>
+      <div class="tags"><span class="tag">哥特</span> <span class="tag">暗黑系</span> <span class="tag">JSK</span> <span class="tag">蝙蝠装饰</span> <span class="tag">兜帽斗篷</span> <span class="tag">骨头/骨龙图腾</span> <span class="tag">玫瑰刺绣</span></div>
+    </header>
+    <p class="summary">黑红主色（样衣已确定）的暗黑哥特 JSK：兜帽斗篷、蝙蝠胸饰、骨龙/骨头/十字符号刺绣下摆、紧身束腰 + 多层蕾丝裙。设计稿层次丰富，符合『哥特暗黑指数高』的圈内调侃公式（十字+蕾丝+暗色对比）。同 brand 终焉圣骸（军lo）一脉相承的繁复刺绣工艺。</p>
+    <div class="poster-grid"><a class="bare" href="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" target="_blank"><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg" target="_blank"><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg" target="_blank"><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg" loading="lazy"/></a></div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2026-01-17（首次海报上新）→ 2026-01-21（新增黑紫黑绿）→ 仍在收意向金（截单时间未明）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-01-17</span></div><div class="row note">1月17日发『新色图透』海报；1月21日宣布新增黑紫色💜和黑绿色💚，共6色；淘宝意向金链当前实际显示8 SKU（含白红、墨绿额外加色）。海报和淘宝 SKU 数量略对不上——属正常迭代过程。</div></section>
+      <section class="info"><h3>价格</h3><div class="row"><span class="k">意向金</span><span class="v">¥5 抵 ¥30</span></div><div class="row note">全款 OP / 整套价**官方未公开**——意向金链只显示 ¥5 抵 ¥30，正式开订时会另开全款链接。同 brand 终焉圣骸 OP=520 / 整套=648 可作粗略参考，但骨龙是 JSK（不是 OP+整套）所以价格结构可能完全不同。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">黑红色骨龙（样衣已确定）</span> <span class="color-chip">黑绀色骨龙（样衣制作中）</span> <span class="color-chip">黑灰色骨龙（样衣制作中）</span> <span class="color-chip">白红骨龙（样衣制作中）</span> <span class="color-chip">紫色骨龙（样衣制作中）</span> <span class="color-chip">废土色骨龙（千人加购）</span> <span class="color-chip">墨绿色骨龙（样衣制作中）</span> <span class="color-chip">白色骨龙（样衣制作中）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">樱洛芙lolita官方店</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=968203147040" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=968203147040</a></span></div><div class="row"><span class="k">店铺备注</span><span class="v">意向金链商品页（樱洛芙官方店）</span></div><div class="row"><span class="k">店铺评价</span><span class="v">4.8 评分 / 88VIP 好评率 98% / 平均 7 天内发货 / 客服满意度 97%</span></div><div class="row"><span class="k">当前标题</span><span class="v">【意向金5r抵30r】樱洛芙骨龙暗黑哥特jsk连衣裙Lolita原创设计</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥5（意向金）</span></div><div class="row"><span class="k">销量</span><span class="v">1万+人付款</span></div><div class="row"><span class="k">销量趋势</span><span class="v">1万+ 持续累积（2026-01 海报后到 2026-04 已四个月）</span></div><div class="row"><span class="k">销量备注</span><span class="v">意向金链销量；约为终焉圣骸 4w+ 的 1/4，反映同 brand 内『哥特款 vs 军lo款』在 2026-04 当前的热度对比（军lo 显著破圈，哥特相对稳态）</span></div><div class="row"><span class="k">发货地</span><span class="v">湖北武汉</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">樱洛芙Lolita原创设计_重生版</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/n/樱洛芙Lolita原创设计_重生版" target="_blank" rel="noopener">https://weibo.com/n/樱洛芙Lolita原创设计_重生版</a></span></div><div class="row"><span class="k">备用账号 1</span><span class="v">Lolita樱洛芙原创</span></div><div class="row"><span class="k">备用主页 1</span><span class="v"><a href="https://weibo.com/u/7062861749" target="_blank" rel="noopener">https://weibo.com/u/7062861749</a></span></div><div class="row"><span class="k">备用账号 2</span><span class="v">樱洛芙Lolita原创设计</span></div><div class="row"><span class="k">备用主页 2</span><span class="v"><a href="https://weibo.com/u/3113658095" target="_blank" rel="noopener">https://weibo.com/u/3113658095</a></span></div><div class="row"><span class="k">上新海报帖</span><span class="v"><a href="https://weibo.com/5993650397/QnyMJ8Jqi" target="_blank" rel="noopener">https://weibo.com/5993650397/QnyMJ8Jqi</a></span></div><div class="row"><span class="k">帖子来源</span><span class="v">Lolita洋装上新</span></div><div class="row"><span class="k">帖子日期</span><span class="v">2026-01-17（图透）/ 2026-01-21（新增 2 色）</span></div><div class="row note">微博渠道营销节奏：1月17日 @Lolita洋装上新 第三方汇总号转发图透 → 1月21日品牌官号自发新增颜色公告。骨龙没有像终焉圣骸那样高频的真人穿搭照微博曝光（哥特款穿搭门槛高，KOL 出片场景少）</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">樱洛芙Lolita</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930</a></span></div><div class="row note">樱洛芙骨龙在 XHS 单帖热度普遍偏低（最高 40+ 赞），与终焉圣骸（多个千赞 + 万赞）形成强对比。原因：哥特风受众小、上身成片难、不在『破圈型款』范畴。</div></div>
+    </div>
+    <section class="hot-posts"><h3>小红书相关热门帖（3）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">买家纠结帖（同 brand 内对比终焉）</span>
+        <span class="post-meta">@Min（） · 2026-04-04 · ❤ 40 · 💬 </span>
+      </div>
+      <div class="post-title">樱洛芙新品求助！！！</div>
+      <div class="post-summary">原话『本来很草骨龙的，但是终焉圣骸复刻了，想着军lo的风格太难得了，可是又舍弃不了骨龙』—— 直接反映**同 brand 内军lo破圈分流哥特款的关注度**。评论里有人问『骨龙全套多少钱啊』（无人答 = 价格信息不透明）；有人评『轻花嫁系列也看上了』（樱洛芙同期 3 大款博弈：终焉/骨龙/轻花嫁）。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69ce10f4000000001b0030ee?xsec_token=ABnp7CrFNG8TBO9qYzIH-dphUxbRbfPq2nvKcgUbUYMaA=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">买家点评（设计细节槽点）</span>
+        <span class="post-meta">@江上野凛 · 2026-04-02 · ❤ 14 · 💬 </span>
+      </div>
+      <div class="post-title">樱洛芙骨龙求种草/拔草</div>
+      <div class="post-summary">用户挑刺：『脖子那块红色地方感觉没有兜帽看着很丑很突兀』。评论里有人问『平胸穿撑不起来』（紧身束腰款的常见上身门槛）；建议买别的颜色（『纯黑色』）。这条短帖反映哥特款 JSK 上身效果对体型/颜色搭配敏感。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69ce76c3000000001f007543?xsec_token=ABegiuvC72H8iDACLSVPGpkx4t-eJ3KjwkEH9-p9--c-E=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">菀菀类卿警告</span>
+        <span class="post-meta">@(同名款警告) · — · ❤ — · 💬 </span>
+      </div>
+      <div class="post-title">(说明：圈内还有 Alicegirl 工作室同名『骨龙』款)</div>
+      <div class="post-summary">桂盈 457 赞 repo 帖『骨龙 repo｜附三视图｜测评』评的是 **Alicegirl 工作室**的骨龙（hashtag #alicegirl原创工作室 #新中式），不是樱洛芙的。在 XHS 搜『骨龙』时容易混入。樱洛芙骨龙是哥特，alicegirl 骨龙是新中式——视觉风格完全不同。</div>
+      
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">暗黑哥特 JSK</span> <span class="kw">8 色 SKU</span> <span class="kw">黑红色样衣已确定</span> <span class="kw">废土色千人加购</span> <span class="kw">意向金 1万+</span> <span class="kw">同名款警告（vs alicegirl 骨龙）</span> <span class="kw">同 brand 内被终焉圣骸分流热度</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>意向金 1万+ 是樱洛芙哥特线的代表款（与军lo 终焉圣骸构成 brand 双 IP 矩阵）</li><li>8 色 SKU 选择丰富——黑红/黑绀/黑灰/白红/紫色/废土/墨绿/白色，跨经典哥特到中性偏甜</li><li>樱洛芙官方店店铺评分 4.8 + 7 天内发货——比中小工作室（猫咪晚安等）品牌信用强</li><li>废土色被标『千人加购』显示有用户群偏好非传统哥特配色，brand 已锁定潜力色</li><li>1月17日海报 → 1月21日加色 → 4月仍在收意向金，节奏稳</li><li>设计稿层次丰富：兜帽斗篷+蝙蝠胸饰+骨头下摆+玫瑰刺绣，元素堆叠到位</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**全款价格未公开**——海报和淘宝意向金链都只显示 ¥5 抵 ¥30，买家在 XHS 评论里问全套多少钱无人答（价格透明度比终焉圣骸 op=520/fs=648 差很多）</li><li>**圈内同名款警告**：Alicegirl 工作室也有『骨龙』（暗黑/新中式风），桂盈 457 赞高 repo 帖讲的是 alicegirl 不是樱洛芙——可能让买家混淆品牌</li><li>XHS 单帖热度低（最高 40 赞）——比同 brand 终焉圣骸（多帖千赞万赞）差 1-2 个量级，反映哥特款受众面窄</li><li>8 色 SKU 中**只 1 色（黑红）样衣已确定**，6 色样衣制作中——开订一年内可能持续砍色（参考终焉圣骸 2.0 砍白金的先例）</li><li>买家挑刺红色脖子设计『没有兜帽看着突兀』——成衣细节可能与设计稿有偏差</li><li>紧身束腰版型对体型敏感（平胸 / 高个等不适合），上身门槛比 OP 类高</li></ul></div>
+          </div>
+          <div class="verdict">短评：樱洛芙哥特线代表款，意向金 1 万+ 在 brand 内是终焉圣骸（4w+）之外的次热款。优势是配色丰富 + 品牌信用 + 设计层次足；短板在价格不透明、同名款混淆、单帖热度低、上身门槛高。买家画像：偏好哥特风、信任樱洛芙工艺、能接受 8 色中只确定 1 色的小风险（且不能在意 alicegirl 同名混淆）的姑娘。和终焉圣骸（军lo）属于同 brand 互补，但破圈力差很多——哥特款本来就不是当下 lolita 圈热点。</div>
+        </section>
+        
+  </article>
+</body>
+</html>
