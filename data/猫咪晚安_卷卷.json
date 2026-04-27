@@ -26,16 +26,18 @@
   "colors_voting_note": "评论区在收集颜色建议，brand 暂未公布最终配色；设计稿主图是深绿（XHS 帖配图）。",
   "shops": {
     "taobao": {
-      "url": "https://s.taobao.com/search?q=%E7%8C%AB%E5%92%AA%E6%99%9A%E5%AE%89%E6%B4%9B%E4%B8%BD%E5%A1%94%E5%8E%9F%E5%88%9B",
-      "url_note": "卷卷暂无独立淘宝链接，此为店铺所有商品的搜索入口（淘宝搜『猫咪晚安洛丽塔原创』）",
-      "shop_url_via_item": "https://item.taobao.com/item.htm?id=1024128056717",
-      "shop_url_via_item_note": "同店『十字圣焰高质军LO』¥69 商品页，可点进该商品后进入店铺主页",
+      "url": "https://shop248953400.taobao.com/",
+      "url_note": "品牌淘宝店主页（卷卷暂无独立商品链接，但同店有其他军lo + 大量主营款）",
+      "search_url": "https://s.taobao.com/search?q=%E7%8C%AB%E5%92%AA%E6%99%9A%E5%AE%89%E6%B4%9B%E4%B8%BD%E5%A1%94%E5%8E%9F%E5%88%9B",
+      "related_item_url": "https://item.taobao.com/item.htm?id=1024128056717",
+      "related_item_note": "同店『十字圣焰高质军LO』¥69（200+ 付款）— 该店唯一已上架的另一款军lo",
       "item_id": null,
       "shop_name": "猫咪晚安洛丽塔原创设计",
+      "shop_rating": "好评率 96% / 平均 13 天内发货 / 平均 21 小时退款",
       "list_title": null,
       "list_price": null,
       "sales": null,
-      "sales_note": "卷卷暂未上架独立淘宝链接（XHS 帖发布后才进入 vote 阶段）。同店『十字圣焰高质军LO』¥69（200+ 付款）显示该店军lo 品类销量级别约 ¥69 价位 200 单（远低于樱洛芙终焉圣骸 4w+ 意向金）。该店主营为 ¥29.9 棉布睡裙类 lo（主店畅销款 800+），军lo 是品类扩展。",
+      "sales_note": "卷卷暂未上架独立淘宝链接（XHS 帖发布后才进入 vote 阶段）。同店『十字圣焰高质军LO』¥69（200+ 付款）反映店铺军lo 价位 200 单级别（远低于樱洛芙终焉圣骸 4w+ 意向金）。该店主营为 ¥29.9 棉布睡裙类 lo（主店畅销款 800+），军lo 是品类扩展。",
       "sales_trend": "暂无（未开订）",
       "location": null
     },

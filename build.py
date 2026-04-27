@@ -8,6 +8,7 @@ import json
 import pathlib
 import html
 import datetime
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -19,11 +20,24 @@ def esc(s):
     return html.escape(str(s)) if s is not None else ""
 
 
+def normalize_xhs_url(u):
+    """XHS opencli returns /search_result/<id> URLs which redirect away when
+    opened directly (search route, not share route). Transform to /explore/<id>
+    which is the stable share form. Also fixes empty xsec_source."""
+    if not isinstance(u, str) or "/search_result/" not in u:
+        return u
+    out = u.replace("/search_result/", "/explore/", 1)
+    # Replace empty xsec_source= with xsec_source=pc_user
+    out = re.sub(r"xsec_source=(?=&|$)", "xsec_source=pc_user", out)
+    return out
+
+
 def kv_row(k, v, link=False, note=False):
     if v is None or v == "":
         return ""
     if link:
-        v_html = f'<a href="{esc(v)}" target="_blank" rel="noopener">{esc(v[:80])}</a>'
+        v_norm = normalize_xhs_url(v)
+        v_html = f'<a href="{esc(v_norm)}" target="_blank" rel="noopener">{esc(v_norm[:80])}</a>'
     else:
         v_html = esc(v)
     cls = "row note" if note else "row"
@@ -48,6 +62,8 @@ def shop_block(label, data, fields):
 
 
 def render_hot_post(p):
+    url = normalize_xhs_url(p.get("url", "") or "")
+    link_html = f'<div class="post-link"><a href="{esc(url)}" target="_blank" rel="noopener">查看原帖 →</a></div>' if url else ''
     return f'''
     <article class="post">
       <div class="post-head">
@@ -56,7 +72,7 @@ def render_hot_post(p):
       </div>
       <div class="post-title">{esc(p.get("title",""))}</div>
       <div class="post-summary">{esc(p.get("summary",""))}</div>
-      <div class="post-link"><a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">查看原帖 →</a></div>
+      {link_html}
     </article>
     '''
 
@@ -272,9 +288,12 @@ def render_detail(item):
 
     shops = item.get("shops", {})
     taobao_html = shop_block("淘宝", shops.get("taobao"), [
-        ("店铺", "shop_name"), ("商品链接", "url", True),
+        ("店铺", "shop_name"), ("店铺主页", "url", True),
         ("店铺备注", "url_note"),
-        ("同店入口", "shop_url_via_item", True),
+        ("店铺评价", "shop_rating"),
+        ("淘宝搜索", "search_url", True),
+        ("相关商品", "related_item_url", True),
+        ("相关商品备注", "related_item_note"),
         ("当前标题", "list_title"), ("挂牌价", "list_price"),
         ("销量", "sales"), ("销量趋势", "sales_trend"),
         ("销量备注", "sales_note"), ("发货地", "location"),
