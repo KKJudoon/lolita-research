@@ -1,0 +1,167 @@
+{
+  "id": "yingluofu_zhongyan_2.0",
+  "name": "终焉圣骸 2.0",
+  "brand": "樱洛芙Lolita",
+  "designer": "樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）",
+  "illustrator": "叁狐",
+  "illustrator_note": "原画/设计稿由叁狐绘制（XHS @叁狐 帖子里本人确认『是我画的』），授权给樱洛芙出品。授权模式（买断 vs 分成）外人无法判断。圈内默认画师不等于服装设计师——版型/工艺/工厂锅在品牌方。",
+  "style_tags": ["军lo", "暗黑系", "金线刺绣", "不规则下摆", "OP（无 JSK）", "整套含披风", "骑士感", "王子lo"],
+  "style_summary": "黑金 + 红黑 + 蓝黑 3 色（白金原计划但因工艺取消）；胸前肋骨状金线刺绣，月牙腰封，下摆不规则尖角带十字/月相符号刺绣；属甜酷暗黑军lo路线，蓝黑骑士感更强。",
+  "release": {
+    "type": "意向金 + 截单全款",
+    "date_range": "2025-10-18 ~ 2025-11-18",
+    "poster_first_seen": "2025-10-29",
+    "note": "为 1.0 翻新版本（淘宝标 2.0），原 1.0 此前已发售并仍在二手流转"
+  },
+  "price": {
+    "op": 520,
+    "full_set": 648,
+    "currency": "CNY",
+    "deposit_link_intent": 5,
+    "note": "OP=单件 OP 连衣裙；full_set=全套（含披风/胸章/绶带等附件）。**该款没有 JSK 版本**——官方海报只列 op + fs 两选。淘宝意向金链接 ¥5 抵 ¥30。"
+  },
+  "colors": ["蓝黑", "红黑", "黑金"],
+  "colors_dropped": ["白金（因工艺问题取消）"],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=1037713255465",
+      "item_id": "1037713255465",
+      "shop_name": "樱洛芙lolita官方店",
+      "list_title": "【意向金5r抵30r】终焉圣骸2.0军lo系列气质帅气樱洛芙原创Lolita",
+      "list_price": "¥5",
+      "sales": "4万+人付款",
+      "sales_note": "当前为意向金链接累计；正式款发货后另开全款链接，销量需合并看",
+      "sales_trend": "2026-04-04 mono 帖记录意向金 7k+，4-04 当日同一作者补 1w+，到 4-26 已 4w+；约 1 月内 5×",
+      "location": "湖北武汉"
+    },
+    "weibo": {
+      "official_account": "樱洛芙Lolita原创设计_重生版",
+      "official_url": "https://weibo.com/n/樱洛芙Lolita原创设计_重生版",
+      "alt_account": "Lolita樱洛芙原创",
+      "alt_url": "https://weibo.com/u/7062861749",
+      "alt_account_2": "樱洛芙Lolita原创设计",
+      "alt_url_2": "https://weibo.com/u/3113658095",
+      "upgrade_post_url": "https://weibo.com/5993650397/QbzR9m6Dl",
+      "upgrade_post_account": "Lolita洋装上新",
+      "upgrade_post_account_uid": "5993650397",
+      "post_date": "2025-10-30",
+      "note": "官方账号有两个 _重生版（新店）和 原创/原创设计（旧店）；@Lolita洋装上新 (UID 5993650397) 是 lolita 圈第三方上新汇总号，方便定位上新海报，不作热度判断依据"
+    },
+    "xiaohongshu": {
+      "official_account": "樱洛芙Lolita",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930",
+      "illustrator_account": "叁狐",
+      "illustrator_url": "https://www.xiaohongshu.com/user/profile/600bd79c00000000010043a0",
+      "note": "品牌方账号活跃；画师叁狐另有独立账号，n01 帖里本人确认是该款画稿绘制者（画师，非品牌方服装设计师）"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 5,
+        "author": "宇宙太",
+        "date": "2025-10-29",
+        "likes": "8338",
+        "comments": 99,
+        "title": "\"先让你跑三秒…\"",
+        "url": "https://www.xiaohongshu.com/search_result/69022543000000000700be75?xsec_token=AB65i1bAltugsgjxTs-_Y4wJSdKh4C9w6J7cPOBsD36ac=&xsec_source=",
+        "type": "真人成片种草",
+        "summary": "上新当天发的真人模特上身照，摄影 @叔青成 风格凌厉。8.3k 赞、99 评论是真人穿搭里最爆的一条。评论高频出现『种草姬』、被身高 158 的姑娘遗憾放弃，证明这套上身效果确实出色但版型偏向高个/帅气路线。"
+      },
+      {
+        "rank_in_search": 1,
+        "author": "叁狐",
+        "date": "2026-04-10",
+        "likes": "1083",
+        "comments": 25,
+        "title": "平平无奇的军lo罢了",
+        "url": "https://www.xiaohongshu.com/search_result/69d885eb000000001a026e09?xsec_token=ABIsLiFmv0ShROzOpU70gR6S1v0TShqZ6HNKKsZTjyxCA=&xsec_source=",
+        "type": "画师本人发稿",
+        "summary": "画师叁狐自己发出原画稿。评论一边倒夸奖『稿图一出来我就喜欢上了』，但有人吐槽『商家赚了好多，这款裙子这么爆』暗指画师未必拿到与销量匹配的报酬——这点取决于授权模式（买断 vs 分成），外人看不到。重要 ID：叁狐 = 终焉圣骸的画师（提供原画稿，非品牌方的服装设计师）。"
+      },
+      {
+        "rank_in_search": 7,
+        "author": "取名字好难滴叶叶子",
+        "date": "2026-04-26",
+        "likes": "431",
+        "comments": 14,
+        "title": "四月份上新点评(十二)",
+        "url": "https://www.xiaohongshu.com/search_result/69eb8d40000000003501c051?xsec_token=ABhQEbfI5hLJ7mitHv1V9nH9gdMQa48V_ruppDUD-kcoA=&xsec_source=",
+        "type": "媒体型博主上新清单",
+        "summary": "lolita 上新点评博主把樱洛芙『终焉圣骸 2.0』列为 4 月份上新的第 1 条。最关键的负面信息从评论里出：『1 没有白金了，说工艺不行又取消了』、『白金还是黑金好？好犹豫』——侧证白金色被官方取消。也有讽刺『说话真的很像直播间带货的』。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "艾珂丝歪",
+        "date": "2025-10-22",
+        "likes": "401",
+        "comments": 45,
+        "title": "求拔草或推荐（谢谢大家，已退定）",
+        "url": "https://www.xiaohongshu.com/search_result/68f35dd70000000003023cf1?xsec_token=ABaM6tO9HgtFPWv5aQnObQwxKrka4zQNfSWNDzJAFnn_E=&xsec_source=",
+        "type": "质量/褪色争议",
+        "summary": "用户买了红黑色意向金后看到『质量不太好和褪色问题』来求拔草。最后她退定了。评论『觉得哪里差口气』、推荐替代品『星巡夜骑士。白色。很好看』。**重要负面信号**：早期就有质量担忧，对红黑色尤甚。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "mono",
+        "date": "2026-04-04",
+        "likes": "101",
+        "comments": 43,
+        "title": "终焉这个火🔥意向金都1w➕了",
+        "url": "https://www.xiaohongshu.com/search_result/69ce3a75000000001d01f72c?xsec_token=ABegiuvC72H8iDACLSVPGpk1ZZHTSFlqeq-jLPqDUF290=&xsec_source=",
+        "type": "热度时间锚点 + 配色讨论",
+        "summary": "4-04 当天意向金 7k 涨到 1w+。评论里大量讨论配色取舍：『蓝黑骑士感更重』、『感觉没有人买军绿的』（说明军绿可能也没出/砍了）、『黑红还是黑蓝』。最后白金也补充上线讨论。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "啊川",
+        "date": "2026-04-19",
+        "likes": "10万+",
+        "comments": 3142,
+        "title": "甜lo就得配我们军lo",
+        "url": "https://www.xiaohongshu.com/search_result/69e4a432000000001a0213c8?xsec_token=ABQ2XUUd3LpNkZY0hmNpXYfm32Z6ut5wWycY4BHeJfT6s=&xsec_source=",
+        "type": "破圈百万级配对穿搭",
+        "summary": "甜 lo + 军 lo 情侣 / 双人穿搭破圈帖，10万+ 赞、3142 评论，是搜索结果里量级最大的（虽然不是单款专门讨论）。带了 #终焉圣骸 标签让该款获得圈外曝光。评论里有人调侃『甜lo配男的怎么看都不合适』、『矮攻不要』，反映军lo 风格在 lolita 圈子内『中性帅气感』的人设投射。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["军lo破圈", "蓝黑骑士感", "黑金最稳", "红黑褪色担忧", "白金被砍", "意向金月增 5×", "叁狐画稿"],
+    "highlights_positive": [
+      "设计稿出圈快——10月底海报发出，4月份热度持续",
+      "意向金销量 4w+，一月内 5×增长",
+      "画师叁狐有 IP 加持，本人 XHS 也活跃（画师不等于服装设计师；服装制作锅在品牌方）",
+      "真人模特上身效果硬，配 @叔青成 摄影流出爆款",
+      "进入 lolita 上新博主月度 top 1，圈内权威认可"
+    ],
+    "highlights_negative": [
+      "白金色因工艺问题取消（与原 4 色海报不符，购买体验落差）",
+      "红黑色早期就有褪色 + 质量差口气讨论",
+      "帽子被吐槽『廉价』（侧栏 zhongyan 搜索 272 赞专门吐槽）",
+      "上身要求高（158cm 用户遗憾放弃，版型偏帅气/高挑）",
+      "价格 OP520/全套648 在 lolita 圈中不算便宜，日常穿场景受限"
+    ],
+    "verdict_short": "短评：4 月份军lo热度的代表款，破圈靠设计稿+真人穿搭+第三方上新榜单加持；但官方在配色履行（白金砍）和质量稳定（红黑褪色）上有口碑短板，上身门槛偏高，适合想要『甜酷帅』方向的高个 lolita 玩家。"
+  },
+  "posters": [
+    "images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg",
+    "images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg",
+    "images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg",
+    "images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg"
+  ],
+  "verified": true,
+  "verified_at": "2026-04-26",
+  "verified_by": "Claude (cross-checked taobao官方店 + weibo上新帖 + 8 篇 xhs 热门笔记 + 设计师本人确认)",
+  "raw_sources": {
+    "taobao_search": "data/raw/taobao_zhongyan.json",
+    "taobao_detail": "data/raw/taobao_detail.json",
+    "weibo_upgrade_post_1": "data/raw/weibo_post1.json",
+    "weibo_upgrade_post_2": "data/raw/weibo_post2.json",
+    "weibo_official_search": "data/raw/weibo_official_search.json",
+    "weibo_alt_search": "data/raw/weibo_alt_search.json",
+    "xhs_search": "data/raw/xhs_zhongyan.json",
+    "xhs_brand_search": "data/raw/xhs_brand.json",
+    "xhs_user_tab": "data/raw/xhs_user_search.json",
+    "xhs_notes_dir": "data/raw/xhs_notes/"
+  }
+}

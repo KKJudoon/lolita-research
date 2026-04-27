@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>终焉圣骸 2.0 · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="yingluofu_zhongyan_2.0">
+    <header>
+      <h2>终焉圣骸 2.0 <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：樱洛芙Lolita　/　服装设计：樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）　/　画师：叁狐</div>
+      <div class="designer-note">原画/设计稿由叁狐绘制（XHS @叁狐 帖子里本人确认『是我画的』），授权给樱洛芙出品。授权模式（买断 vs 分成）外人无法判断。圈内默认画师不等于服装设计师——版型/工艺/工厂锅在品牌方。</div>
+      <div class="tags"><span class="tag">军lo</span> <span class="tag">暗黑系</span> <span class="tag">金线刺绣</span> <span class="tag">不规则下摆</span> <span class="tag">OP（无 JSK）</span> <span class="tag">整套含披风</span> <span class="tag">骑士感</span> <span class="tag">王子lo</span></div>
+    </header>
+    <p class="summary">黑金 + 红黑 + 蓝黑 3 色（白金原计划但因工艺取消）；胸前肋骨状金线刺绣，月牙腰封，下摆不规则尖角带十字/月相符号刺绣；属甜酷暗黑军lo路线，蓝黑骑士感更强。</p>
+    <div class="poster-grid"><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyu40sj30m80m8tal.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihz4vlzj30m80m8wgj.jpg" loading="lazy"/></a><a class="bare" href="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg" target="_blank"><img src="../images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv92fj30u01907a0.jpg" loading="lazy"/></a></div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2025-10-18 ~ 2025-11-18</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款</span></div><div class="row"><span class="k">海报首发</span><span class="v">2025-10-29</span></div><div class="row note">为 1.0 翻新版本（淘宝标 2.0），原 1.0 此前已发售并仍在二手流转</div></section>
+      <section class="info"><h3>价格</h3><div class="row"><span class="k">OP</span><span class="v">¥520</span></div><div class="row"><span class="k">整套</span><span class="v">¥648</span></div><div class="row"><span class="k">意向金</span><span class="v">¥5 抵 ¥30</span></div><div class="row note">OP=单件 OP 连衣裙；full_set=全套（含披风/胸章/绶带等附件）。**该款没有 JSK 版本**——官方海报只列 op + fs 两选。淘宝意向金链接 ¥5 抵 ¥30。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">蓝黑</span> <span class="color-chip">红黑</span> <span class="color-chip">黑金</span> <span class='color-dropped'>已取消: 白金（因工艺问题取消）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">樱洛芙lolita官方店</span></div><div class="row"><span class="k">商品链接</span><span class="v"><a href="https://item.taobao.com/item.htm?id=1037713255465" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=1037713255465</a></span></div><div class="row"><span class="k">当前标题</span><span class="v">【意向金5r抵30r】终焉圣骸2.0军lo系列气质帅气樱洛芙原创Lolita</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥5</span></div><div class="row"><span class="k">销量</span><span class="v">4万+人付款</span></div><div class="row"><span class="k">销量趋势</span><span class="v">2026-04-04 mono 帖记录意向金 7k+，4-04 当日同一作者补 1w+，到 4-26 已 4w+；约 1 月内 5×</span></div><div class="row"><span class="k">销量备注</span><span class="v">当前为意向金链接累计；正式款发货后另开全款链接，销量需合并看</span></div><div class="row"><span class="k">发货地</span><span class="v">湖北武汉</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">樱洛芙Lolita原创设计_重生版</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/n/樱洛芙Lolita原创设计_重生版" target="_blank" rel="noopener">https://weibo.com/n/樱洛芙Lolita原创设计_重生版</a></span></div><div class="row"><span class="k">备用账号 1</span><span class="v">Lolita樱洛芙原创</span></div><div class="row"><span class="k">备用主页 1</span><span class="v"><a href="https://weibo.com/u/7062861749" target="_blank" rel="noopener">https://weibo.com/u/7062861749</a></span></div><div class="row"><span class="k">备用账号 2</span><span class="v">樱洛芙Lolita原创设计</span></div><div class="row"><span class="k">备用主页 2</span><span class="v"><a href="https://weibo.com/u/3113658095" target="_blank" rel="noopener">https://weibo.com/u/3113658095</a></span></div><div class="row"><span class="k">上新海报帖</span><span class="v"><a href="https://weibo.com/5993650397/QbzR9m6Dl" target="_blank" rel="noopener">https://weibo.com/5993650397/QbzR9m6Dl</a></span></div><div class="row"><span class="k">帖子来源</span><span class="v">Lolita洋装上新</span></div><div class="row"><span class="k">帖子日期</span><span class="v">2025-10-30</span></div><div class="row note">官方账号有两个 _重生版（新店）和 原创/原创设计（旧店）；@Lolita洋装上新 (UID 5993650397) 是 lolita 圈第三方上新汇总号，方便定位上新海报，不作热度判断依据</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">樱洛芙Lolita</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5ebe31720000000001005930</a></span></div><div class="row"><span class="k">画师账号</span><span class="v">叁狐</span></div><div class="row"><span class="k">画师主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/600bd79c00000000010043a0" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/600bd79c00000000010043a0</a></span></div><div class="row note">品牌方账号活跃；画师叁狐另有独立账号，n01 帖里本人确认是该款画稿绘制者（画师，非品牌方服装设计师）</div></div>
+    </div>
+    <section class="hot-posts"><h3>小红书相关热门帖（6）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">真人成片种草</span>
+        <span class="post-meta">@宇宙太 · 2025-10-29 · ❤ 8338 · 💬 99</span>
+      </div>
+      <div class="post-title">&quot;先让你跑三秒…&quot;</div>
+      <div class="post-summary">上新当天发的真人模特上身照，摄影 @叔青成 风格凌厉。8.3k 赞、99 评论是真人穿搭里最爆的一条。评论高频出现『种草姬』、被身高 158 的姑娘遗憾放弃，证明这套上身效果确实出色但版型偏向高个/帅气路线。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/69022543000000000700be75?xsec_token=AB65i1bAltugsgjxTs-_Y4wJSdKh4C9w6J7cPOBsD36ac=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">画师本人发稿</span>
+        <span class="post-meta">@叁狐 · 2026-04-10 · ❤ 1083 · 💬 25</span>
+      </div>
+      <div class="post-title">平平无奇的军lo罢了</div>
+      <div class="post-summary">画师叁狐自己发出原画稿。评论一边倒夸奖『稿图一出来我就喜欢上了』，但有人吐槽『商家赚了好多，这款裙子这么爆』暗指画师未必拿到与销量匹配的报酬——这点取决于授权模式（买断 vs 分成），外人看不到。重要 ID：叁狐 = 终焉圣骸的画师（提供原画稿，非品牌方的服装设计师）。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/69d885eb000000001a026e09?xsec_token=ABIsLiFmv0ShROzOpU70gR6S1v0TShqZ6HNKKsZTjyxCA=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">媒体型博主上新清单</span>
+        <span class="post-meta">@取名字好难滴叶叶子 · 2026-04-26 · ❤ 431 · 💬 14</span>
+      </div>
+      <div class="post-title">四月份上新点评(十二)</div>
+      <div class="post-summary">lolita 上新点评博主把樱洛芙『终焉圣骸 2.0』列为 4 月份上新的第 1 条。最关键的负面信息从评论里出：『1 没有白金了，说工艺不行又取消了』、『白金还是黑金好？好犹豫』——侧证白金色被官方取消。也有讽刺『说话真的很像直播间带货的』。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/69eb8d40000000003501c051?xsec_token=ABhQEbfI5hLJ7mitHv1V9nH9gdMQa48V_ruppDUD-kcoA=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">质量/褪色争议</span>
+        <span class="post-meta">@艾珂丝歪 · 2025-10-22 · ❤ 401 · 💬 45</span>
+      </div>
+      <div class="post-title">求拔草或推荐（谢谢大家，已退定）</div>
+      <div class="post-summary">用户买了红黑色意向金后看到『质量不太好和褪色问题』来求拔草。最后她退定了。评论『觉得哪里差口气』、推荐替代品『星巡夜骑士。白色。很好看』。**重要负面信号**：早期就有质量担忧，对红黑色尤甚。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/68f35dd70000000003023cf1?xsec_token=ABaM6tO9HgtFPWv5aQnObQwxKrka4zQNfSWNDzJAFnn_E=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">热度时间锚点 + 配色讨论</span>
+        <span class="post-meta">@mono · 2026-04-04 · ❤ 101 · 💬 43</span>
+      </div>
+      <div class="post-title">终焉这个火🔥意向金都1w➕了</div>
+      <div class="post-summary">4-04 当天意向金 7k 涨到 1w+。评论里大量讨论配色取舍：『蓝黑骑士感更重』、『感觉没有人买军绿的』（说明军绿可能也没出/砍了）、『黑红还是黑蓝』。最后白金也补充上线讨论。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/69ce3a75000000001d01f72c?xsec_token=ABegiuvC72H8iDACLSVPGpk1ZZHTSFlqeq-jLPqDUF290=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">破圈百万级配对穿搭</span>
+        <span class="post-meta">@啊川 · 2026-04-19 · ❤ 10万+ · 💬 3142</span>
+      </div>
+      <div class="post-title">甜lo就得配我们军lo</div>
+      <div class="post-summary">甜 lo + 军 lo 情侣 / 双人穿搭破圈帖，10万+ 赞、3142 评论，是搜索结果里量级最大的（虽然不是单款专门讨论）。带了 #终焉圣骸 标签让该款获得圈外曝光。评论里有人调侃『甜lo配男的怎么看都不合适』、『矮攻不要』，反映军lo 风格在 lolita 圈子内『中性帅气感』的人设投射。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/search_result/69e4a432000000001a0213c8?xsec_token=ABQ2XUUd3LpNkZY0hmNpXYfm32Z6ut5wWycY4BHeJfT6s=&amp;xsec_source=" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">军lo破圈</span> <span class="kw">蓝黑骑士感</span> <span class="kw">黑金最稳</span> <span class="kw">红黑褪色担忧</span> <span class="kw">白金被砍</span> <span class="kw">意向金月增 5×</span> <span class="kw">叁狐画稿</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>设计稿出圈快——10月底海报发出，4月份热度持续</li><li>意向金销量 4w+，一月内 5×增长</li><li>画师叁狐有 IP 加持，本人 XHS 也活跃（画师不等于服装设计师；服装制作锅在品牌方）</li><li>真人模特上身效果硬，配 @叔青成 摄影流出爆款</li><li>进入 lolita 上新博主月度 top 1，圈内权威认可</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>白金色因工艺问题取消（与原 4 色海报不符，购买体验落差）</li><li>红黑色早期就有褪色 + 质量差口气讨论</li><li>帽子被吐槽『廉价』（侧栏 zhongyan 搜索 272 赞专门吐槽）</li><li>上身要求高（158cm 用户遗憾放弃，版型偏帅气/高挑）</li><li>价格 OP520/全套648 在 lolita 圈中不算便宜，日常穿场景受限</li></ul></div>
+          </div>
+          <div class="verdict">短评：4 月份军lo热度的代表款，破圈靠设计稿+真人穿搭+第三方上新榜单加持；但官方在配色履行（白金砍）和质量稳定（红黑褪色）上有口碑短板，上身门槛偏高，适合想要『甜酷帅』方向的高个 lolita 玩家。</div>
+        </section>
+        
+  </article>
+</body>
+</html>

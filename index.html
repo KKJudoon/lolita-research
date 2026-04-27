@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lolita 款式调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .summary-card {
+    display: flex; gap: 16px; padding: 16px; margin-bottom: 12px;
+    background: white; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    transition: transform 0.15s, box-shadow 0.15s;
+    color: #1a1a1a;
+  }
+  .summary-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-bottom: none; }
+  .thumb { flex-shrink: 0; width: 140px; height: 180px; border-radius: 8px; overflow: hidden; background: #eee; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .no-thumb { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 12px; }
+  .info { flex: 1; min-width: 0; }
+  .title { font-size: 18px; font-weight: 600; margin-bottom: 2px; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 10px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: #444; margin-bottom: 8px; }
+  .fact b { color: #888; font-weight: normal; margin-right: 4px; }
+  .kws { display: flex; flex-wrap: wrap; gap: 4px; }
+  .kw { background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+
+  /* tabs */
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 20px; }
+  .tab { background: white; border: 1px solid #c8a868; color: #5a4a2a; padding: 6px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; }
+
+  /* mobile: stack vertically */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .summary-card { flex-direction: column; gap: 10px; padding: 12px; }
+    .thumb { width: 100%; height: 220px; }
+    .title { font-size: 17px; }
+    .facts { gap: 6px 12px; font-size: 12px; }
+    .tab { font-size: 12px; padding: 5px 10px; }
+  }
+</style>
+</head>
+<body>
+  <h1>Lolita 款式调研</h1>
+  <div class="meta">最后更新 2026-04-27 12:11 · 共 2 款 · 点卡片看款式细节</div>
+  <div class="tabs"><button class="tab active" data-style="all">全部 (2)</button><button class="tab" data-style="军lo">军lo (2)</button></div>
+  <div id="cards">
+  
+    <a class="summary-card bare" data-style="军lo" href="items/yingluofu_zhongyan_2.0.html">
+      <div class="thumb"><img src="images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" alt="终焉圣骸 2.0" loading="lazy"/></div>
+      <div class="info">
+        <div class="title">终焉圣骸 2.0</div>
+        <div class="sub">樱洛芙Lolita · 樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）</div>
+        <div class="facts">
+          <span class="fact"><b>价格</b> OP ¥520 · 整套 ¥648</span>
+          <span class="fact"><b>上新</b> 2025-10-18 ~ 2025-11-18</span>
+          <span class="fact"><b>店铺</b> 樱洛芙lolita官方店</span>
+          <span class="fact"><b>销量</b> 4万+人付款</span>
+        </div>
+        <div class="kws"><span class="kw">军lo破圈</span><span class="kw">蓝黑骑士感</span><span class="kw">黑金最稳</span><span class="kw">红黑褪色担忧</span><span class="kw">白金被砍</span><span class="kw">意向金月增 5×</span></div>
+      </div>
+    </a>
+    
+
+    <a class="summary-card bare" data-style="军lo" href="items/maomiwanan_juanjuan.html">
+      <div class="thumb"><img src="images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" alt="卷卷（军LO）" loading="lazy"/></div>
+      <div class="info">
+        <div class="title">卷卷（军LO）</div>
+        <div class="sub">猫咪晚安洛丽塔原创设计 · 猫咪晚安洛丽塔原创设计（品牌方负责打版/打布样/工厂/工艺）</div>
+        <div class="facts">
+          <span class="fact"><b>价格</b> 整套 ¥368</span>
+          <span class="fact"><b>上新</b> 未定（试样图 2026-03-05；vote 加色帖 2026-04-05）</span>
+          <span class="fact"><b>店铺</b> 猫咪晚安洛丽塔原创设计</span>
+          <span class="fact"><b>销量</b> —</span>
+        </div>
+        <div class="kws"><span class="kw">¥368 中价段</span><span class="kw">community vote 加色</span><span class="kw">XHS 主战场</span><span class="kw">试样到 vote 一月节奏</span><span class="kw">品牌主营低价（¥29.9 起）</span><span class="kw">军lo 是品类扩展不是主线</span></div>
+      </div>
+    </a>
+    
+  </div>
+<script>
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".summary-card");
+  tabs.forEach(t => t.addEventListener("click", () => {
+    tabs.forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    const style = t.dataset.style;
+    cards.forEach(c => {
+      c.style.display = (style === "all" || c.dataset.style === style) ? "" : "none";
+    });
+  }));
+</script>
+</body>
+</html>
