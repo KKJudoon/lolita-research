@@ -46,7 +46,7 @@
       "url": "https://item.taobao.com/item.htm?id=868385609180",
       "url_note": "『继承人』红款现货商品页",
       "shop_url": "https://shop100155792.taobao.com/",
-      "shop_url_note": "未知星辰的来信 淘宝店主页（已 browser 验证：4.9 评分 / 88VIP 好评率 98% / 平均 2 天内发货 / 客服满意度 96%）",
+      "shop_url_note": "未知星辰的来信 淘宝店主页（4.9 评分 / 88VIP 好评率 98% / 平均 2 天内发货 / 客服满意度 96%）",
       "item_id": "868385609180",
       "shop_name": "未知星辰的来信",
       "shop_rating": null,
@@ -86,7 +86,7 @@
       "current_post_date": "2025-02-20",
       "earlier_tutou_post_url": "https://weibo.com/2876088432/P4lyQ8CIS",
       "earlier_tutou_post_date": "2024-12-11",
-      "note": "运营节奏：2024-12 图透海报（@Lolita洋装上新 转发） → 2025-02-19 现货上架（汇总号转发 set=369 价格）→ 2025-02-20 品牌官号自发『白菜lolita』关键帖。微博渠道有曝光但弱于 XHS。"
+      "note": "运营节奏：2024-12 图透海报 → 2025-02-19 现货上架 → 品牌官号 2025-02-20 自发『白菜lolita』关键帖。微博曝光弱于 XHS。"
     },
     "xiaohongshu": {
       "official_account": "未知星辰的来信",
@@ -108,7 +108,7 @@
         "title": "非常好评价 爱来自王子系",
         "url": "https://www.xiaohongshu.com/explore/678643d400000000010021ad?xsec_token=AB4qOGZvBOdrmgcTs6c6hFKJYjG2ynEp-ShLLLq4mq1oU=&xsec_source=pc_user",
         "type": "品牌官号好评汇总（集赞返图机制）",
-        "summary": "品牌官号汇总买家好评 + 返图。原话『都看的我心里暖暖的...电阻也跟设计师说以后选面料都要让宝宝们满意！！会努力做更好！还在犹豫的宝宝真的可以试试！！三张买到毛呢的一套~非常厚实！』。评论关键诉求：『求出绀色 想出啵酱』（买家想 cos 角色）、『求再贩补码』（码型卖完）、『好活跃的官号』（圈内对该 brand 的评价）。**这帖里的 8 张图是该款的主要实物 repo 来源**——本研究下载的海报就是从这里来。"
+        "summary": "品牌官号汇总买家好评 + 返图。原话『都看的我心里暖暖的...电阻也跟设计师说以后选面料都要让宝宝们满意！！会努力做更好！还在犹豫的宝宝真的可以试试！！三张买到毛呢的一套~非常厚实！』。评论关键诉求：『求出绀色 想出啵酱』（买家想 cos 角色）、『求再贩补码』（码型卖完）、『好活跃的官号』（圈内对该 brand 的评价）。**这帖里的 8 张图是该款的主要实物 repo 来源**——"
       },
       {
         "rank_in_search": null,
@@ -282,5 +282,5 @@
     "design_thinking": "白菜价位段（¥369）做维多利亚男童正装 + 王室继承主题——元素简化（衬衫 + 马甲 + 短裤三件套）但视觉签名齐全（酒红 / 金线 / 胸链）。命名延伸双款故事（继承人 ↔ 神权使者）增加叙事感，让基础款也有概念支撑。**适合二次元手游男角色 cos**（已被买家用于战双帕弥什常羽 cos）—— 这是该款最强差异化定位（vs 标准王子系做礼服感）。",
     "for_image_gen_prompt": "Affordable Victorian boys' royal heir lolita prince ensemble: white puff-sleeve high-collar blouse, wine-red velvet waistcoat with gold thread embroidery, wine-red knickerbockers with gold-edged stripes, pocket watch chain across chest, color palette burgundy + gold (Habsburg / British royal), Eton/Victorian boyswear meets military prince aesthetic, suitable for cosplay of game young male royals"
   },
-  "posters_source": "官方海报。9 张来自品牌官号微博 PeZ5fc8qO（2025-02-19 上架日自发，正式 lookbook）；4 张来自微博图透 post P4lyQ8CIS（@Lolita洋装上新 转发的官方图透原稿，2024-12-11）。原 8 张 XHS 集赞返图（来自 678643d4 品牌官号好评汇总帖）已替换——那些是买家返图，不是官方模特照。"
+  "posters_source": "微博官方海报。9 张来自品牌官号上架 post PeZ5fc8qO（2025-02-19）+ 4 张图透 post P4lyQ8CIS（2024-12-11）。"
 }

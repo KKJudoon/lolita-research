@@ -43,7 +43,7 @@
       "url": "https://item.taobao.com/item.htm?id=1030474963498",
       "url_note": "2026-04 当前在售定金卡链接",
       "shop_url": "https://shop107151903.taobao.com/",
-      "shop_url_note": "第二城堡CastleToo 淘宝店主页（已 browser 验证：4.8 评分 / 好评率 97% / 平均 3 天内发货 / 客服满意度 97%）",
+      "shop_url_note": "第二城堡CastleToo 淘宝店主页（4.8 评分 / 好评率 97% / 平均 3 天内发货 / 客服满意度 97%）",
       "item_id": "1030474963498",
       "earlier_item_id": "917187493014",
       "earlier_item_url": "https://item.taobao.com/item.htm?id=917187493014",
@@ -80,7 +80,7 @@
       "current_post_account": "第二城堡Lolita原创设计",
       "current_post_date": "2025-07-07",
       "current_post_note": "品牌官号自发图透抽奖帖（早于汇总号转发 2 天）—— 9 张原始官方海报来源",
-      "note": "微博渠道有完整曝光：品牌官号自发 + Lolita洋装上新 转发同步。两边内容一致，但官号自传图的图片 ID 前缀『006qvmxFgy』比汇总号转发『006xCKgBgy』更原始。"
+      "note": "微博渠道有完整曝光：品牌官号自发 + Lolita洋装上新 转发同步。"
     },
     "xiaohongshu": {
       "official_account": "第二城堡CastleToo",
@@ -231,7 +231,7 @@
     "images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_8.jpg",
     "images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_9.jpg"
   ],
-  "posters_source": "微博品牌官号自发上新海报。9 张图原始 weibo image ID 前缀『006qvmxFgy』属第二城堡Lolita原创设计微博官号（UID 5888456551）2025-07-07 自传 post PzUHHgfgS，是图透抽奖帖里的官方设计稿/海报原稿。比汇总号 @Lolita洋装上新 转发的 PAhpd7Ljd 早 2 天，所以是更原始的官方源。",
+  "posters_source": "微博品牌官号 PzUHHgfgS 上新海报，9 张。",
   "verified": true,
   "verified_at": "2026-04-27",
   "verified_by": "Claude (cross-checked: taobao detail + weibo brand-self post + weibo aggregator + 5 XHS notes incl. 1626/1376/8548/164/85 likes)",
@@ -239,8 +239,6 @@
     "taobao_short_link": "https://e.tb.cn/h.isHy3oyUJ7sNrq4?tk=uejx5jbkRA6",
     "weibo_brand_post": "https://weibo.com/5888456551/PzUHHgfgS",
     "weibo_aggregator_post": "https://weibo.com/5993650397/PAhpd7Ljd",
-    "xhs_search_query": "第二城堡 糖果铺",
-    "research_session_xhs_calls": 5,
-    "research_session_xhs_security_block": false
+    "xhs_search_query": "第二城堡 糖果铺"
   }
 }

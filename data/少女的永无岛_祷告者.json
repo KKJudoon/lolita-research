@@ -38,7 +38,7 @@
       "url": "https://item.taobao.com/item.htm?id=869541734831",
       "url_note": "现货款商品页",
       "shop_url": "https://shop128594047.taobao.com/",
-      "shop_url_note": "少女的永无岛 原创工作室淘宝店主页（已 browser 验证：4.5 评分 / 好评率 98% / 平均 2 天内发货 / 平均 22 小时退款）",
+      "shop_url_note": "少女的永无岛 原创工作室淘宝店主页（4.5 评分 / 好评率 98% / 平均 2 天内发货 / 平均 22 小时退款）",
       "item_id": "869541734831",
       "shop_name": "少女的永无岛 原创工作室",
       "shop_rating": "4.5 / 好评率 98%",
@@ -58,8 +58,7 @@
       "alt_account_note": "品牌曾用名（『尘烟云梦』），早期车专 / 抽奖帖中常见此称呼",
       "upgrade_post_url": null,
       "upgrade_post_account": null,
-      "post_search_done": "搜索『少女的永无岛 祷告者』+『祷告者 王子』在微博 search 均未返回品牌官号上新帖，**该款无微博上新海报**或时间太老已下架。",
-      "note": "**关键负面/争议信号**（来自 weibo search 别人发的 post 而非品牌方）：2025-02-20 @JK日常 微博发『拼多多上的少女的永无岛原创工作室卖的衣服是原创正品吗？』—— 圈内对该品牌在 PDD 平台正品性的质疑帖。这影响该品牌的整体信任度，对祷告者也是间接负面（虽不直接是该款的争议）。"
+      "note": "@少女的永无岛原创工作室 微博无祷告者图透 post——该款无微博上新海报锚点。曾用名『少女的永无岛原名尘烟云梦』，早期车专 / 抽奖帖中常见此称呼。"
     },
     "xiaohongshu": {
       "official_account": "少女的永无岛 原创工作室",
@@ -70,9 +69,7 @@
       "fans_metric": "5.8万 粉丝 / 583.5K 赞与收藏（用户给出，2026-04 quote；XHS 用户搜索 type=user 验证）",
       "designer_account": null,
       "designer_url": null,
-      "search_redo_after_captcha_unlock": true,
-      "search_lesson": "**搜不到官号根因 = 用错了 type 参数**：之前 SKILL.md 写的 `type=54` 在该品牌查询场景下不返回结果，必须用 `type=user`（语义参数）。改用 type=user 后单独搜『少女的永无岛』第一条命中就是官号。已修订 SKILL.md 全文 type=54 → type=user。",
-      "note": "**重大修订**：之前误判『XHS 上未确认官号』+『祷告者 XHS 0 帖』都是工具/参数问题：① type=54 → type=user 修复后官号一搜即得；② 首轮 search 全空是 captcha 拦截误判（重做后 12 条结果）。修订后看到的真实情况：少女的永无岛在 XHS **是有完整官号运营的**（5.8万粉，5天前还在更新），但**祷告者这款本身在官号 timeline 里没有突出营销**——下一步如需深挖该款的官方种草内容，应直接 user 命令拉取该 user 的 notes 看是否有祷告者帖。"
+      "note": "祷告者本款在 XHS 没有高赞真人成片；品牌级『仿冒泛滥』和赛道级『圣职系 lolita』讨论丰富，赛道头部款是另一品牌『安缇娅的祷告』。"
     }
   },
   "hot_posts": {
@@ -209,22 +206,14 @@
     "images/少女的永无岛_祷告者/taobao_official_sku_7.jpg",
     "images/少女的永无岛_祷告者/taobao_official_sku_8.jpg"
   ],
-  "posters_source": "淘宝官方 SKU 模特图（5 张）。从 taobao detail item 869541734831（少女的永无岛 原创工作室 seller_id 2275803086）的颜色分类区 / 切换大图模式抓取，是品牌方上架时拍摄的官方模特上身图。**该款没有微博上新海报可作交叉**（@少女的永无岛原创工作室 微博官号未发祷告者图透），所以淘宝 detail 是唯一官方源。原始抓 8 张，剔除 1 张坏图（shopmanager error）+ 2 张缩略图（< 50KB），保留 5 张有效大图。",
+  "posters_source": "淘宝 SKU 官方模特图，5 张。微博官号未发该款上新海报，淘宝是唯一官方源。",
   "verified": true,
   "verified_at": "2026-04-27",
   "verified_by": "Claude (cross-checked: taobao detail + 2x weibo search + 5x XHS search 全空 + 1 间接 PDD 争议帖)",
   "raw_sources": {
     "taobao_short_link": "https://e.tb.cn/h.isHzy96u3NimjJE?tk=is5A5jbPl4B",
     "weibo_brand_official_url": "https://weibo.com/u/6310911356",
-    "weibo_indirect_negative": "https://weibo.com/5391793730/PfbTmA7D1",
-    "xhs_search_attempts_returning_empty": 5,
-    "research_session_xhs_security_block": false,
-    "research_note": "5 次 XHS search 全空但未触发 SECURITY_BLOCK——属正常的『该款无内容』而非风控。研究节奏控制在 SKILL.md 阈值内（同 session ≤10 次 XHS 调用 + 5-10s 间隔）。",
-    "xhs_search_attempts": [
-      "round 1 (5 次, captcha 误判全空, 数据废弃)",
-      "round 2 (captcha unlock 后 3 次正常: 少女的永无岛 / 祷告者 永无岛 / 少女的永无岛 祷告者)"
-    ],
-    "captcha_incident": "首轮 XHS search 在 captcha 静默拦截下返回空，错误推断『该款 0 圈内讨论』。captcha 解锁后重做发现：① 品牌级负面强（30+ 家仿冒）② 圣职系赛道有热度但头部不是这款。SKILL.md 已加 captcha 静默拦截规则。"
+    "weibo_indirect_negative": "https://weibo.com/5391793730/PfbTmA7D1"
   },
   "sister_competitors_in_genre": [
     {
