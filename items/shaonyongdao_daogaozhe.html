@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>祷告者（少女的永无岛王子系套装） · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
+  .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .inspiration { margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }
+  .inspiration h3 { margin: 0 0 8px 0; }
+  .insp-badge { font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }
+  .insp-badge.insp-official { background: #d4f4d4; color: #2c7a2c; }
+  .insp-badge.insp-kol { background: #fde8b0; color: #6a4a1a; }
+  .insp-badge.insp-ai { background: #fde0d0; color: #a04020; }
+  .insp-note { font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }
+  .insp-theme { font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }
+  .quote { margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }
+  .elements { display: grid; gap: 10px; margin: 12px 0; }
+  .el { background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .el-name { font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }
+  .el-src { color: #444; }
+  .el-src b { color: #888; font-weight: normal; }
+  .el-purpose { color: #555; font-size: 12px; margin-top: 4px; }
+  .el-purpose b { color: #888; font-weight: normal; }
+  .el-note { color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }
+  .el-mark { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  .el-mark.official { background: #d4f4d4; color: #2c7a2c; }
+  .el-mark.ai { background: #fde0d0; color: #a04020; }
+  .thinking { margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .thinking b { color: #5a4a2a; }
+  .ai-prompt { margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+  .ai-prompt summary { cursor: pointer; color: #5a4a2a; font-weight: 600; }
+  .prompt-text { margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="shaonyongdao_daogaozhe">
+    <header>
+      <h2>祷告者（少女的永无岛王子系套装） <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：少女的永无岛 原创工作室　/　服装设计：少女的永无岛（品牌方负责设计/打版/工厂）</div>
+      <div class="designer-note">未公开。淘宝详情页未署名画师。该款无微博官方上新海报、无 XHS 讨论帖，所以也无圈内 KOL 透露设计师身份的信息。</div>
+      <div class="tags"><span class="tag">王子lo</span> <span class="tag">宗教 / 神职感</span> <span class="tag">现货款</span> <span class="tag">三件套（衬衫+长裤+外套）</span> <span class="tag">深色系</span> <span class="tag">圈内冷门款</span></div>
+    </header>
+    <p class="summary">深色调宗教/神职主题王子系三件套（衬衫+长裤+外套）。款名『祷告者』+ 神职 vibe 是该款的核心叙事——不同于军lo（战场骑士）或甜系王子（童话），祷告者走『教堂神职/虔信者』方向，整体偏沉静肃穆。**该款在圈内热度低**：XHS 用品牌名 / 款名 / lolita 关联词 4 次搜索均返回空结果，微博也无明确上新海报帖——属于品牌方的『不主推/老款长卖』式 SKU。淘宝累计销量未在搜索返回——是『靠老客户吃饭』的尾部款。</p>
+    <div class="poster-grid"><img src="../images/少女的永无岛_祷告者/taobao_official_sku_2.jpg" loading="lazy" class="lb-img" data-src="../images/少女的永无岛_祷告者/taobao_official_sku_2.jpg"/><img src="../images/少女的永无岛_祷告者/taobao_official_sku_3.jpg" loading="lazy" class="lb-img" data-src="../images/少女的永无岛_祷告者/taobao_official_sku_3.jpg"/><img src="../images/少女的永无岛_祷告者/taobao_official_sku_4.jpg" loading="lazy" class="lb-img" data-src="../images/少女的永无岛_祷告者/taobao_official_sku_4.jpg"/><img src="../images/少女的永无岛_祷告者/taobao_official_sku_7.jpg" loading="lazy" class="lb-img" data-src="../images/少女的永无岛_祷告者/taobao_official_sku_7.jpg"/><img src="../images/少女的永无岛_祷告者/taobao_official_sku_8.jpg" loading="lazy" class="lb-img" data-src="../images/少女的永无岛_祷告者/taobao_official_sku_8.jpg"/></div>
+    <div class="posters-source">📷 图源说明：淘宝官方 SKU 模特图（5 张）。从 taobao detail item 869541734831（少女的永无岛 原创工作室 seller_id 2275803086）的颜色分类区 / 切换大图模式抓取，是品牌方上架时拍摄的官方模特上身图。**该款没有微博上新海报可作交叉**（@少女的永无岛原创工作室 微博官号未发祷告者图透），所以淘宝 detail 是唯一官方源。原始抓 8 张，剔除 1 张坏图（shopmanager error）+ 2 张缩略图（&lt; 50KB），保留 5 张有效大图。</div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">未知（无微博上新海报锚点；淘宝 item_id 869541734831 的具体上架日未公开）</span></div><div class="row"><span class="k">类型</span><span class="v">现货（淘宝详情『7天无理由退货』+ 价格 ¥109-538 显示是现货销售而非意向金）</span></div><div class="row note">**该款无微博上新海报**——@少女的永无岛原创工作室（UID 6310911356）发『祷告者』关键词的 post 通过搜索未找到。淘宝商品详情显示『7 天无理由退货』+ 千人加购，是稳态现货销售。无『意向金 → 截单』流程意味着工艺早已稳定，但同时也说明品牌方不再为其做营销动作。</div></section>
+      <section class="info"><h3>价格</h3><div class="row note">价格信息**仅来自淘宝详情页 SKU 区间**（『¥109』标在 detail 主价位 + 『109-538』范围在分享链接 query 里）。**真实拆分价缺乏官方明文**——理论上 ¥109 = 单衬衫，¥538 = 全套（衬衫+长裤+外套）；但中间的 ¥200-400 区间可能是『衬衫+长裤』『衬衫+外套』等组合 SKU。**该款没有微博上新海报正文做交叉验证**（不像糖果铺有『衬衫=128；马甲+短裤=278』的明确切分），所以价格细节按淘宝 SKU 现场为准。圈内全套 ¥538 已超出『白菜段 ¥&lt;500』，进入中端价位。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">颜色分类（淘宝 SKU 仅显示『颜色分类』选项+『切换大图模式』，无明确色号清单）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">少女的永无岛 原创工作室</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=869541734831" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=869541734831</a></span></div><div class="row"><span class="k">店铺备注</span><span class="v">现货款商品页</span></div><div class="row"><span class="k">店铺评价</span><span class="v">4.5 / 好评率 98%</span></div><div class="row"><span class="k">当前标题</span><span class="v">少女的永无岛原创 祷告者 Lolita衬衫长裤外套套装王子系洛丽塔</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥109（detail 主价）/ ¥109-538（区间）</span></div><div class="row"><span class="k">销量</span><span class="v">千人加购（未明确付款数）</span></div><div class="row"><span class="k">销量备注</span><span class="v">淘宝 search 未返回该 item_id（祖告者老款不在销量 top 排名内）。同店『誓约王座』Lolita 王子装 ¥78.30 / 200+ 销量是同店其他款参考。</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">少女的永无岛原创工作室</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/u/6310911356" target="_blank" rel="noopener">https://weibo.com/u/6310911356</a></span></div><div class="row"><span class="k">备用账号 1</span><span class="v">少女的永无岛原名尘烟云梦</span></div><div class="row note">**关键负面/争议信号**（来自 weibo search 别人发的 post 而非品牌方）：2025-02-20 @JK日常 微博发『拼多多上的少女的永无岛原创工作室卖的衣服是原创正品吗？』—— 圈内对该品牌在 PDD 平台正品性的质疑帖。这影响该品牌的整体信任度，对祷告者也是间接负面（虽不直接是该款的争议）。</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">未确认（XHS 上未找到品牌官号；需用户手动给短链验证或品牌方主战场不在 XHS）</span></div><div class="row note">**真实情况：祷告者本身在 XHS 没有高赞真人成片**（多次搜均无明确该款的高赞穿搭帖），但**品牌级 + 赛道级讨论丰富**：① 品牌『少女的永无岛』有显著仿冒/山寨争议帖（最高 2368 likes 厂原话题、344 likes 称『一模一样不下三十家店』）② 圣职系赛道里头部款是另一品牌『安缇娅的祷告』（小蝴蝶 1506 likes 圣职系帖明确 tag）。所以祷告者真实定位是『有圈内 sub-genre 讨论但单款无热度』。</div></div>
+    </div>
+    
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 5 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note"></div>
+            <div class="insp-theme"><b>主题：</b>教堂神职 / 虔信祷告者主题的王子系套装—— 把传统中世纪教廷神职服（神父 / 修道士）的视觉符号（高领祭袍、袖口绑带、修身长裤、披风式外套）翻译成 lolita 王子装语境，定位『沉静肃穆的虔信者』vs 军lo 的『战场骑士』</div>
+            
+            <div class="elements"><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>原型为天主教 / 东正教 神父白色祭袍（alb / cassock）的高领设计，源自 4-5 世纪罗马帝国晚期的神职衣物传统；lolita 化时通常会加蕾丝袖口或 ruffled cuffs</div><div class="el-purpose"><b>设计目的：</b>建立神职感的关键单品——白色 + 高领 + 修身廓形是『神职』视觉的最强信号，也与其他王子系（甜系 / 军装）拉开差异</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>灵感来自中世纪修道士 / 神学院学生的深色羊毛长裤——拒绝浮华装饰、保持苦行 / 谦卑感</div><div class="el-purpose"><b>设计目的：</b>和上身白衬衫形成强对比（白纯洁 vs 黑虔信），强化『二元神职 vibe』</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>源自 cassock（神父长袍） / chasuble（祭披）—— 长款过膝、单/双排扣、收腰立领。中世纪到现代天主教神职人员的标志服</div><div class="el-purpose"><b>设计目的：</b>一秒认定『神职』身份的视觉单品；披风式版本可叠在衬衫+长裤外，让整套成为有层次的三件套</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>天主教祷告念珠 (rosary) 或东正教 prayer rope 的装饰元素——『祷告者』款名直接呼应这类符号</div><div class="el-purpose"><b>设计目的：</b>如果该款官方实际有这类配件（淘宝详情页未文字描述但 SKU 海报图待验证），是叙事关键道具</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>源自欧洲中世纪教堂内部的色彩谱——深木、暗石、彩绘玻璃滤过的暗色光影。区别于亮色军lo 和糖果色甜系王子</div><div class="el-purpose"><b>设计目的：</b>整套的色彩定位锚点—— 让款式视觉立即归类为『暗系 / 庄重』而非『甜 / 战斗』</div></div></div>
+            <div class="thinking"><b>设计思路：</b>祷告者是王子系赛道里『主题型』而非『硬装型』的款—— 它不靠肩章/绶带/勋章这种装饰积累，而是靠廓形 + 色调的克制 + 一个明确的角色叙事（神职/虔信者）建立识别度。这条路线在圈内人少营销少，但视觉记忆点其实清晰。**对自家做款的启发**：主题型王子装的优势是一句话讲完故事（『他是个祷告者』），但门槛是品牌必须持续输出叙事性海报 + KOL 内容来支撑——少女的永无岛恰恰没做这件事，导致款式『有故事但没传开』。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">A young person wearing a dark religious-themed Lolita ouji (prince-style) coordinate: white high-collar long-sleeve shirt with subtle lace cuffs, fitted dark navy or black trousers, layered with a long monastic-style dark coat or short cassock-cape with stand collar and front buttons. Aesthetic: &#x27;devout prayer-knight Lolita&#x27; — Catholic / Eastern Orthodox priest robe silhouette translated to ouji prince fashion, austere and reverent. Optional accessories: subtle silver cross pendant, prayer rope or rosary at waist. Color palette: deep navy, black, charcoal, with white shirt as the only bright element; avoid candy colors, avoid gold military trim, avoid bows or sweet decorative elements. Background: dim cathedral interior with stained-glass light, candle glow, stone arches. Mood: contemplative, hushed, solitary worshipper rather than soldier or sweet character. Style references: medieval monastic dress, gothic devotional art, restrained tailoring.</div></details>
+          </div>
+        </details>
+        
+    <section class="hot-posts"><h3>小红书相关热门帖（5）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌级负面 — 厂原/山寨话题</span>
+        <span class="post-meta">@玲玲玲姐 · 2025-02-11 · ❤ 2368 · 💬 71</span>
+      </div>
+      <div class="post-title">什么是厂原lolita？厂原是山吗？</div>
+      <div class="post-summary">圈内 2368 likes 高赞科普帖：厂原 lolita 是什么？厂原是不是山寨？这帖**搜『少女的永无岛』时排在第 8**——意味着该品牌经常被作为厂原话题的关联词。少女的永无岛在圈内 与『厂原 / 山寨边界争议』高度绑定，对正版价值是减分项。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/67aacfe00000000018009bc0?xsec_token=AB7sufUUEC62us9D9oHRyKhys9I5KE3fwodzmC7mVwDKE=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌级负面 — 仿冒泛滥实证</span>
+        <span class="post-meta">@啊不许烦! · 2024-06-03 · ❤ 344 · 💬 10</span>
+      </div>
+      <div class="post-title">重复的已经不想截了，这lo裙到底怎么回事</div>
+      <div class="post-summary">**最直接的负面证据**：作者『刚入坑还不太懂... 之前刷到少女的永无岛的小红书觉得很好看就买了，结果被推到一模一样的，但是店不一样，结果一拍照识图，估计不下三十家店』。344 likes / 87 收藏 / 10 评论。这是少女的永无岛**款式被广泛山寨/搬运**的真实买家口述—— 与微博 @JK日常 PDD 正品质疑帖（2025-02）互相印证，构成完整的『品牌设计被搬运』负面证据链。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/665de127000000001401a040?xsec_token=ABjlzzNCHmeRqq_TfysJ4LTx0hJT5WwZdKpdbYYpzOlDQ=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">圈内品牌横评</span>
+        <span class="post-meta">@茉香椰果 · 2025-10-16 · ❤ 7040 · 💬 133</span>
+      </div>
+      <div class="post-title">八年老lo娘来玩（含锐评致歉）</div>
+      <div class="post-summary">八年老lo娘做品牌锐评，7040 likes / 4002 收藏 / 133 评论的爆款。原话『无聊填了，怎么这么多我没听过的店... 挑了一下熟悉的多的页面写。尽量温和的评价了，误伤的话实在对不起』。**少女的永无岛在搜索结果中第 10 位说明该品牌被该清单提到**——但是『熟悉的多/温和评价』的语境，不是赞美也不是高度负面，属于『资深圈内人知道但不是头部』的中位评价。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/68f0e101000000000302059e?xsec_token=ABboHHAyNaBLARwmSS57_eTPgfo5ErkQim0zBzSAQGrWc=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">赛道级 — 圣职系lolita sub-genre 头部帖</span>
+        <span class="post-meta">@小蝴蝶 · 2026-03-14 · ❤ 1506 · 💬 32</span>
+      </div>
+      <div class="post-title">谁能拒绝有口袋且无撑穿也好看的圣职系lo!</div>
+      <div class="post-summary">**关键赛道发现**：圈内 1506 likes / 248 收藏。tag 体系：『#圣职系 #安缇娅的祷告 #修女 #暗黑系 #禁欲系 #哥特lolita』。圈内『圣职系 lolita』是公认 sub-genre（哥特/王子的交集），**头部款叫『安缇娅的祷告』（另一品牌 Antiya）**——少女的永无岛祷告者属同赛道但不是头部。tag 里『#祷告』的实际指向是 安缇娅 的款而非永无岛的祷告者。这意味着祷告者的款名定位 collision—— 用户搜『祷告』很可能搜到的不是这款。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69b50ba80000000022024eda?xsec_token=ABAnfRa78mS_3wJrBPpXzFvj4tdV62B1ytJCfaCYjD-n4=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">赛道级 — 神父主题真人成片</span>
+        <span class="post-meta">@拌饭辣椒酱 · 2025-04-30 · ❤ 499 · 💬 4</span>
+      </div>
+      <div class="post-title">✞听说教堂来了一位年轻的神父✞</div>
+      <div class="post-summary">499 likes / 187 收藏。tag『#圣职系 #王子系 #神父 #oc #中性风』完全确认『圣职系』是哥特lolita × 王子系的交叉 sub-genre。作者把这条 oc 路线穿成完整的人设。**未明确是哪个品牌**（未@品牌），是该赛道内 oc 玩家自己 mix 不同品牌单品搭出的神父人设——说明该垂类的玩家偏 mix 风格，对单品牌的忠诚度低，对祷告者作为『单品牌全套』的销售思路是不利信号。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6811a0fd000000002300e273?xsec_token=ABg1-005uh62MjREswjOew2YHIHzqU8I74hP28Ob3Mftg=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">圣职系lo赛道（公认 sub-genre）</span> <span class="kw">赛道竞品『安缇娅的祷告』更头部</span> <span class="kw">品牌仿冒泛滥（30+ 家店）</span> <span class="kw">厂原/山寨边界争议</span> <span class="kw">宗教/神职 vibe（祷告者）</span> <span class="kw">现货款 7 天无理由</span> <span class="kw">店铺 4.5 评分（同期偏低）</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>**圣职系是圈内公认 sub-genre**（圣职系 = 哥特lolita × 王子系 × 神父主题），整个赛道在 XHS 有 1.5K+ 高赞讨论帖（小蝴蝶 1506 / 拌饭辣椒酱 499 等多帖均 tag 圣职系）—— 赛道有热度</li><li>**现货款**——淘宝『7 天无理由退货』+ 现货销售意味着工艺已稳定，下单即拿</li><li>**主题在赛道里有差异化**——『祷告者 / 神职』方向区别于军lo 的战场骑士、甜系王子的童话推销员</li><li>淘宝官方模特图齐全（5 张）—— 可作为 GPT 生图参考的清晰底图</li><li>店铺好评率 98% + 平均 2 天内发货——基础响应时效不差</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**赛道里不是头部款**——圣职系 lolita 的头部 IP 是另一品牌『安缇娅的祷告』（小蝴蝶 1506 likes 帖明确 tag #安缇娅的祷告），『祷告者』作为款名在用户搜索时存在严重 collision，搜『祷告』搜到的多半不是这款</li><li>**品牌级仿冒泛滥**——XHS 344 likes 帖直接吐槽『少女的永无岛的款，识图发现不下 30 家店在卖』+ 微博 PDD 正品争议互相印证，品牌设计被广泛搬运是公开事实。这对原版的稀缺性 / 收藏价值是严重减分</li><li>**祷告者单款在 XHS 几乎无高赞真人成片**—— 三轮关键词组合（含品牌纯名 / 款名 / 款名+lolita / 款名+王子）均未返回明确该款的高赞穿搭帖。&#x27;圣职系&#x27;有热度但不是这款的热度</li><li>**店铺 4.5 评分偏低**（同期对比第二城堡 4.8 / 未知星辰 4.9）+ 『平均 22 小时退款』被店铺主动展示通常意味退款率不低</li><li>**品牌 PDD 正品争议**（@JK日常 2025-02 微博）+ XHS 厂原话题（玲玲玲姐 2368 likes）双重信号—— 圈内对该品牌『多平台扩张稀释原创』的怀疑长期存在</li><li>**价格不透明**——淘宝 SKU 切分『¥109-538』但无微博上新海报正文交叉验证，具体哪个组合多少钱要问客服</li><li>**款式可能已是『老 / 不再主推』**——无微博上新海报 + 现货模式（不再开新团），多重信号指向品牌方已不为该款做营销动作</li></ul></div>
+          </div>
+          <div class="verdict">目标客户：**已经认准了款式视觉、不需要圈内 KOL 验证就能直接下手**的用户（因为该款单独无热度，但赛道整体有讨论）。最大优势：现货 + 圣职系赛道在圈内是公认 sub-genre + 淘宝模特图齐全。最大短板：**赛道头部不是这款**（是『安缇娅的祷告』）+ 品牌仿冒泛滥（30+ 山寨店）+ 店铺 4.5 + PDD 仿货争议。**对调研用户的最有用价值**：① 学习圣职系 sub-genre 在圈内是怎么被讨论的（哥特lolita × 王子系 × 神父）—— 自家做款时这条赛道是值得切入的；② 看懂『有圈内赛道 vs 单款无热度』的差距—— 同样在圣职系赛道里，安缇娅做出 1506 likes 头部款，少女的永无岛祷告者却没拿到流量，根因是品牌方在 XHS 的内容运营严重缺位（无品牌官号/无 lookbook 帖/无真人成片）。</div>
+        </section>
+        
+  </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
+</body>
+</html>
