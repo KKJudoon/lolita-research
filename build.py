@@ -142,38 +142,42 @@ def render_summary_card(item):
 CANONICAL_STYLES = ["甜lo", "军lo", "古典", "哥特", "王子lo", "中华", "海军", "花嫁", "茶会"]
 
 
-def primary_style(item):
-    """Pick the most representative style from style_tags."""
+def styles_for_item(item):
+    """Return all canonical styles matched by this item's style_tags.
+    A card can belong to multiple tabs (e.g. 军lo+王子lo, 中华+军lo)."""
     tags = item.get("style_tags", []) or []
+    matched = []
     for s in CANONICAL_STYLES:
         if any(s in t for t in tags):
-            return s
-    return tags[0] if tags else "其他"
+            matched.append(s)
+    if not matched and tags:
+        matched.append(tags[0])
+    return matched or ["其他"]
 
 
 def write_index(items):
-    # Group by primary style
+    # Build groups (one item can appear in multiple groups)
     groups = {}
     for it in items:
-        s = primary_style(it)
-        groups.setdefault(s, []).append(it)
-    # Order: canonical first, then alpha
+        for s in styles_for_item(it):
+            groups.setdefault(s, []).append(it)
     ordered = [s for s in CANONICAL_STYLES if s in groups] + sorted([s for s in groups if s not in CANONICAL_STYLES])
 
-    # Tab buttons
-    tab_buttons = '<button class="tab active" data-style="all">全部 ({})</button>'.format(len(items))
+    # Tab buttons (count = unique items in that group)
+    tab_buttons = f'<button class="tab active" data-style="all">全部 ({len(items)})</button>'
     tab_buttons += "".join(
         f'<button class="tab" data-style="{esc(s)}">{esc(s)} ({len(groups[s])})</button>'
         for s in ordered
     )
 
-    # Cards (each tagged with data-style for filter)
+    # Cards: render once per item, attach all matched styles as space-separated data-styles
     cards_parts = []
-    for s in ordered:
-        for it in groups[s]:
-            card = render_summary_card(it)
-            card_with_attr = card.replace('<a class="summary-card bare"', f'<a class="summary-card bare" data-style="{esc(s)}"', 1)
-            cards_parts.append(card_with_attr)
+    for it in items:
+        styles = styles_for_item(it)
+        card = render_summary_card(it)
+        attr = " ".join(esc(s) for s in styles)
+        card_with_attr = card.replace('<a class="summary-card bare"', f'<a class="summary-card bare" data-styles="{attr}"', 1)
+        cards_parts.append(card_with_attr)
     cards_html = "\n".join(cards_parts)
 
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -235,7 +239,8 @@ def write_index(items):
     t.classList.add("active");
     const style = t.dataset.style;
     cards.forEach(c => {{
-      c.style.display = (style === "all" || c.dataset.style === style) ? "" : "none";
+      const styles = (c.dataset.styles || "").split(" ");
+      c.style.display = (style === "all" || styles.includes(style)) ? "" : "none";
     }});
   }}));
 </script>
