@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>骑士精神（王子系军lo / 大斗篷套装） · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="yourhighness_qishijingshen">
+    <header>
+      <h2>骑士精神（王子系军lo / 大斗篷套装） <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：YourHighness永恒银河　/　服装设计：YourHighness永恒银河（品牌方主导，画师/设计师未独立署名 — 看起来是 in-house 团队作品）</div>
+      <div class="designer-note">未公开。陈述参考来源：『斗篷参考嘉德礼服和夏尔斗篷』（官方上新海报正文 + qingbao 情报更新帖明文承认两者改良版）。</div>
+      <div class="tags"><span class="tag">军lo</span> <span class="tag">王子系</span> <span class="tag">斗篷套装</span> <span class="tag">欧式宫廷</span> <span class="tag">5米大斗篷</span> <span class="tag">金线刺绣</span> <span class="tag">复古</span></div>
+    </header>
+    <p class="summary">蓝色 5 米大斗篷 + 红绶带 + 金线绣花绶带 + 珍珠链 + 金属胸针 + 蝴蝶结 + 燕尾外套 + 腰带 + 全套金属小物。设计灵感明确取自英国嘉德礼服与黑执事 Ciel 斗篷的改良版。整体王子军lo 重套路线，气场强但配件繁多、上身重（用户 repo 说 6-7 斤）。</p>
+    <div class="poster-grid"><a class="bare" href="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" target="_blank"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" loading="lazy"/></a><a class="bare" href="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqxgd8j31jk2231kx.jpg" target="_blank"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqxgd8j31jk2231kx.jpg" loading="lazy"/></a><a class="bare" href="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraas9vh0j31jk223hdt.jpg" target="_blank"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraas9vh0j31jk223hdt.jpg" loading="lazy"/></a><a class="bare" href="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraat796wj31jk223hdt.jpg" target="_blank"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraat796wj31jk223hdt.jpg" loading="lazy"/></a><a class="bare" href="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraarfqizj31jk223npd.jpg" target="_blank"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraarfqizj31jk223npd.jpg" loading="lazy"/></a></div>
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2024-09-15（情报+价格公布）→ 2024-09-18（图透海报）→ 持续在售（淘宝至 2026-04 仍有 ¥98 SKU 链接）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款（截至 2024-09 上新，已发售并持续出货）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2024-09-18（@Lolita洋装上新 转发的图透海报）</span></div><div class="row note">上新已 1.5 年。淘宝 300+人付款是累计销量。当前店铺还在售，可能是补单 / 现货掉落 / 单件配件链。</div></section>
+      <section class="info"><h3>价格</h3><div class="row note">价格信息来自小红书 qingbao 情报帖（YourHighness 官号自发，3272 likes，2024-09-15）正文明文公布。**注意**：淘宝 ¥98 SKU 是斗篷外套单件意向金/补单链（item id 838292216852），不代表全款。圈内对该价格普遍认为偏贵：评论吐槽『单斗篷+小物就1300...抢钱不是这么抢的吧』、『啥面料就1k3 洗钱都没这么洗的』。同档对比：远高于樱洛芙终焉圣骸全套 ¥648。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">蓝色（主色，唯一颜色 — 海报+实物均为蓝大斗篷+红绶带配置）</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">YourHighness永恒银河</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=838292216852" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=838292216852</a></span></div><div class="row"><span class="k">店铺备注</span><span class="v">斗篷+蓝绶带+帽子的某 SKU 链（不是全套）</span></div><div class="row"><span class="k">当前标题</span><span class="v">骑士精神欧式军lo复古刺绣lolita王子系皇家宫廷斗篷外套</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥98</span></div><div class="row"><span class="k">销量</span><span class="v">300+人付款</span></div><div class="row"><span class="k">销量趋势</span><span class="v">1.5 年累计 300+</span></div><div class="row"><span class="k">销量备注</span><span class="v">淘宝累计 300+，远低于樱洛芙终焉圣骸 4w+ / 骨龙 1w+。注意 ¥98 链是斗篷外套相关 SKU（不是全套），全套对应价 ≈ ¥1700。</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">YourHighness永恒银河</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/n/YourHighness永恒银河" target="_blank" rel="noopener">https://weibo.com/n/YourHighness永恒银河</a></span></div><div class="row"><span class="k">上新海报帖</span><span class="v"><a href="https://weibo.com/2876088432/OxAghtxvd" target="_blank" rel="noopener">https://weibo.com/2876088432/OxAghtxvd</a></span></div><div class="row"><span class="k">帖子来源</span><span class="v">Lolita洋装上新</span></div><div class="row"><span class="k">帖子日期</span><span class="v">2024-09-18</span></div><div class="row note">微博只见图透帖（无正式价格公布）—— 价格信息只在小红书情报帖里写。这是该 brand 的运营模式：XHS 主战场，weibo 弱</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">YourHighness永恒银河</span></div><div class="row"><span class="k">品牌主页</span><span class="v"><a href="https://www.xiaohongshu.com/user/profile/5ca6647c000000001202ad42" target="_blank" rel="noopener">https://www.xiaohongshu.com/user/profile/5ca6647c000000001202ad42</a></span></div><div class="row note">**XHS 是 YourHighness 的主战场**——该品牌官号自己发『初版调试』(6784) + 『情报更新』(3272) + 『黎明之战』(2748) 等多帖累积，比樱洛芙『品牌方静默 + 第三方汇总号转发』模式更主动 KOL 化。但同时引来更多圈内挂避雷帖（见 hot_posts.bilei）。</div></div>
+    </div>
+    <section class="hot-posts"><h3>小红书相关热门帖（5）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌方初版调试发布</span>
+        <span class="post-meta">@YourHighness永恒银河（品牌官号） · 2024-08-2X · ❤ 6784 · 💬 </span>
+      </div>
+      <div class="post-title">骑士精神初版调试中</div>
+      <div class="post-summary">官号发初版调试图，6784 likes 是该款最热单帖。评论里圈内反应混杂：『可以搞 aph』『口水巾颜色有点不搭』『这完全就是奶次』『南大洲女王作战服』『加冕夏尔』—— 大量二次元角色 cosplay 联想说明定位被 OC/cosplay 圈吸收。也有评论『能不能换更挺括的布料』暗示初版面料质感偏软。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/66c6c744000000001d03b3c6?xsec_token=AB-4bzVDvIf0Q2lQO3DBXgSIQj5dWHyyl9D4P2CYI0TFw=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌方价格 + 工艺情报更新</span>
+        <span class="post-meta">@YourHighness永恒银河（品牌官号） · 2024-09-1X · ❤ 3272 · 💬 </span>
+      </div>
+      <div class="post-title">骑士精神情报更新</div>
+      <div class="post-summary">**这条是该款的价格唯一公开来源**：基础套 ¥1300+ / 裤裙 +200+ / 蓝绶带宝石 +100+ / 帽子 +100+。同时承认『斗篷参考嘉德礼服和夏尔斗篷两者做了改良』。但**评论区炸锅**：『单斗篷+小物就1300...抢钱不是这么抢的吧』『本来就照搬英国受礼礼服还这么贵 衬衫还是别的套装的 啥面料就1k3 洗钱都没这么洗的』『怎么连抄都不会抄…你家在 xhs 上已经被挂烂了』。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/66e5d176000000000c01ad11?xsec_token=AB6_rfFCy8wOOtKxEKL2fw8UxPoH4HBvookj99cFw_JNY=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">圈内大 V 安利</span>
+        <span class="post-meta">@yuancilang（用户） · 2024-09-14 · ❤ 4433 · 💬 </span>
+      </div>
+      <div class="post-title">我勒个lo圈皇帝穿搭…</div>
+      <div class="post-summary">用户 yuancilang 把骑士精神归为『lo圈皇帝穿搭』高赞推荐。但**评论形成强烈对冲**：『初看惊艳，再看稀烂』『硕大且廉价感十足的 diy 材料包配饰和小物』『帽子贴的那些装饰显得廉价』『元素堆砌有点乱，帽徽应该是想做太阳光辉造型，领口又是双头鹰饰品』—— 圈内同意设计稿好看，但对成衣工艺/堆砌评价低。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/66e2d3d5000000002603e742?xsec_token=ABUoxcHGFrQYbRiNb_HWf_q4JdCNzfvd0BVNLSMhbHke4=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">明确避雷帖 — 工艺与服务</span>
+        <span class="post-meta">@晨曦~R · 2025-05-11 · ❤ 358 · 💬 </span>
+      </div>
+      <div class="post-title">避雷YourHighness 永恒银河</div>
+      <div class="post-summary">**直接避雷帖**。具体槽点：(1) 布料『厚实且扎』；(2) 小物『胶枪粘的会掉』，珍珠『一半是掉的』；(3) 听其他买家说该家『另一款珠子掉色很难洗』；(4) 别上小物会换不了码（霸王条款）。评论附议：『她家真的巨巨巨差。质量不行不说了，买的几次还少发漏发』『从 PDD 下单给我发过来的小物。我去搜是厂货加价卖』『非常小，平常我买 m 之前买僵尸新娘 l 码根本穿不上』『s 码勒的我脖子疼巨扎，再也不会买了』。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/68204cc40000000023001c5a?xsec_token=ABRhlE0C0vnMFM3priaTFHjUwS_sZcka2iP4zqruOyrI4=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">真人 repo 收货反馈</span>
+        <span class="post-meta">@又活一天别骄傲 · 2025-08-29 · ❤ 53 · 💬 </span>
+      </div>
+      <div class="post-title">骑士精神收到了</div>
+      <div class="post-summary">买家试穿 repo：(1) **整套重 6-7 斤** —— 上身门槛高；(2) **五金配件难用** —— 别针/勾扣不顺手；(3) 上衣中间扣子少，**容易开**——版型/工艺缺陷；(4) **盒子摸起来都旧旧的** —— 包装不专业。评论附议：『他家衣服扎吗，看到好多说扎料子不好的』。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6794acfb000000001703a486?xsec_token=ABFk9PMYSph2jSQThsFEKR5Ky7YpCKzNRiUSXq1SxiU3c=&amp;xsec_source=pc_user" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">王子军lo 重套</span> <span class="kw">5米大斗篷</span> <span class="kw">嘉德礼服 + 夏尔斗篷致敬</span> <span class="kw">全套 ≈ ¥1700</span> <span class="kw">圈内挂烂工艺差</span> <span class="kw">在 PDD 走厂货</span> <span class="kw">上身 6-7 斤</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>设计稿层次最丰富的军lo之一（5米斗篷+绶带+珍珠链+金属胸针+蝴蝶结+燕尾外套）</li><li>明确公开设计灵感来源（嘉德礼服+夏尔斗篷），透明度高</li><li>YourHighness永恒银河自有 IP——XHS 多帖累积（6784+3272+4433+2748）</li><li>套装可拆双人套装（情侣/cosplay 用途扩展）</li><li>金属小物丰富，作为军lo / 王子 lo 整体造型完成度高</li><li>意向金可随时退（『不喜欢的宝意向💰可直接申请退』）—— 试错成本低</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**全套 ≈ ¥1700 价格虚高**——是樱洛芙终焉圣骸全套 ¥648 的 2.6 倍，圈内吐槽『抢钱不是这么抢的吧』『洗钱都没这么洗的』</li><li>**抄袭质疑**——圈内挂帖『连抄都不会抄…你家在 xhs 上已经被挂烂了』，承认参考嘉德礼服+夏尔斗篷但被认为是『照搬』</li><li>**工艺多维度差评**：布料厚实扎、小物胶枪粘易掉、珍珠掉、五金难用、扣子少容易开、6-7 斤超重</li><li>**服务差**：少发漏发、PDD 走厂货加价卖、码偏小（M 实际 = 僵尸新娘 L）</li><li>**码型不友好**——别小物即不可换码（消费者陷阱）</li><li>**圈内已避雷**——『她家是我唯一拉黑的店家』『再也不会买了』、避雷帖 358 likes 是同 brand 持续负面信号</li><li>销量 300+ 远低于同期军lo 热款（终焉 4w+ / 骨龙 1w+）—— 价格+口碑双拖累</li></ul></div>
+          </div>
+          <div class="verdict">短评：王子系军lo 高单价代表（全套 ≈ ¥1700），设计稿堆砌华丽（5米斗篷+珍珠+金属胸针）但**工艺与服务在圈内已被持续避雷**——抄袭质疑、布料扎、小物易掉、PDD 厂货加价、码偏小。买家画像极窄：愿意为『嘉德礼服 cosplay 感』+ 拍照华丽支付，能接受工艺粗糙、上身重 6-7 斤、不挑剔细节。**完全不推荐作为日常穿；适合二次元 OC / 角色扮演 / 摄影道具用途**。整体行业里属于『高 IP + 高定价 + 工艺低』的反面教材款。</div>
+        </section>
+        
+  </article>
+</body>
+</html>

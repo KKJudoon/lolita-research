@@ -1,0 +1,187 @@
+{
+  "id": "yourhighness_qishijingshen",
+  "name": "骑士精神（王子系军lo / 大斗篷套装）",
+  "brand": "YourHighness永恒银河",
+  "designer": "YourHighness永恒银河（品牌方主导，画师/设计师未独立署名 — 看起来是 in-house 团队作品）",
+  "illustrator": null,
+  "illustrator_note": "未公开。陈述参考来源：『斗篷参考嘉德礼服和夏尔斗篷』（官方上新海报正文 + qingbao 情报更新帖明文承认两者改良版）。",
+  "design_inspiration": [
+    "嘉德礼服 / Order of the Garter（英国皇家骑士勋章礼服）",
+    "夏尔斗篷（动漫《黑执事》Ciel Phantomhive 角色斗篷）"
+  ],
+  "style_tags": ["军lo", "王子系", "斗篷套装", "欧式宫廷", "5米大斗篷", "金线刺绣", "复古"],
+  "style_summary": "蓝色 5 米大斗篷 + 红绶带 + 金线绣花绶带 + 珍珠链 + 金属胸针 + 蝴蝶结 + 燕尾外套 + 腰带 + 全套金属小物。设计灵感明确取自英国嘉德礼服与黑执事 Ciel 斗篷的改良版。整体王子军lo 重套路线，气场强但配件繁多、上身重（用户 repo 说 6-7 斤）。",
+  "release": {
+    "type": "意向金 + 截单全款（截至 2024-09 上新，已发售并持续出货）",
+    "date_range": "2024-09-15（情报+价格公布）→ 2024-09-18（图透海报）→ 持续在售（淘宝至 2026-04 仍有 ¥98 SKU 链接）",
+    "poster_first_seen": "2024-09-18（@Lolita洋装上新 转发的图透海报）",
+    "note": "上新已 1.5 年。淘宝 300+人付款是累计销量。当前店铺还在售，可能是补单 / 现货掉落 / 单件配件链。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "deposit_link_intent": null,
+    "price_breakdown": {
+      "基础套（5米斗篷+红绶带+蝴蝶结+燕尾外套+腰带+全套金属小物）": "¥1300+",
+      "裤子 OR 裙子（单独加购，二选一）": "¥200+",
+      "蓝色绶带加宝石（选购）": "¥100+",
+      "帽子（选购）": "¥100+"
+    },
+    "full_set_estimate": "约 ¥1700+（含基础套 + 裤子 + 蓝绶带 + 帽子）",
+    "note": "价格信息来自小红书 qingbao 情报帖（YourHighness 官号自发，3272 likes，2024-09-15）正文明文公布。**注意**：淘宝 ¥98 SKU 是斗篷外套单件意向金/补单链（item id 838292216852），不代表全款。圈内对该价格普遍认为偏贵：评论吐槽『单斗篷+小物就1300...抢钱不是这么抢的吧』、『啥面料就1k3 洗钱都没这么洗的』。同档对比：远高于樱洛芙终焉圣骸全套 ¥648。"
+  },
+  "colors": ["蓝色（主色，唯一颜色 — 海报+实物均为蓝大斗篷+红绶带配置）"],
+  "colors_dropped": [],
+  "colors_voting": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=838292216852",
+      "url_note": "斗篷+蓝绶带+帽子的某 SKU 链（不是全套）",
+      "item_id": "838292216852",
+      "shop_name": "YourHighness永恒银河",
+      "shop_rating": null,
+      "list_title": "骑士精神欧式军lo复古刺绣lolita王子系皇家宫廷斗篷外套",
+      "list_price": "¥98",
+      "sales": "300+人付款",
+      "sales_note": "淘宝累计 300+，远低于樱洛芙终焉圣骸 4w+ / 骨龙 1w+。注意 ¥98 链是斗篷外套相关 SKU（不是全套），全套对应价 ≈ ¥1700。",
+      "sales_trend": "1.5 年累计 300+",
+      "location": null,
+      "related_skus": "未深查同店其他骑士精神配件链（裤子、帽子、绶带等可能有独立加购链）"
+    },
+    "weibo": {
+      "official_account": "YourHighness永恒银河",
+      "official_url": "https://weibo.com/n/YourHighness永恒银河",
+      "alt_account": null,
+      "alt_url": null,
+      "upgrade_post_url": "https://weibo.com/2876088432/OxAghtxvd",
+      "upgrade_post_account": "Lolita洋装上新",
+      "upgrade_post_account_uid": "5993650397",
+      "post_date": "2024-09-18",
+      "note": "微博只见图透帖（无正式价格公布）—— 价格信息只在小红书情报帖里写。这是该 brand 的运营模式：XHS 主战场，weibo 弱"
+    },
+    "xiaohongshu": {
+      "official_account": "YourHighness永恒银河",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5ca6647c000000001202ad42",
+      "illustrator_account": null,
+      "illustrator_url": null,
+      "note": "**XHS 是 YourHighness 的主战场**——该品牌官号自己发『初版调试』(6784) + 『情报更新』(3272) + 『黎明之战』(2748) 等多帖累积，比樱洛芙『品牌方静默 + 第三方汇总号转发』模式更主动 KOL 化。但同时引来更多圈内挂避雷帖（见 hot_posts.bilei）。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "YourHighness永恒银河（品牌官号）",
+        "date": "2024-08-2X",
+        "likes": "6784",
+        "comments": null,
+        "title": "骑士精神初版调试中",
+        "url": "https://www.xiaohongshu.com/search_result/66c6c744000000001d03b3c6?xsec_token=AB-4bzVDvIf0Q2lQO3DBXgSIQj5dWHyyl9D4P2CYI0TFw=&xsec_source=",
+        "type": "品牌方初版调试发布",
+        "summary": "官号发初版调试图，6784 likes 是该款最热单帖。评论里圈内反应混杂：『可以搞 aph』『口水巾颜色有点不搭』『这完全就是奶次』『南大洲女王作战服』『加冕夏尔』—— 大量二次元角色 cosplay 联想说明定位被 OC/cosplay 圈吸收。也有评论『能不能换更挺括的布料』暗示初版面料质感偏软。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "YourHighness永恒银河（品牌官号）",
+        "date": "2024-09-1X",
+        "likes": "3272",
+        "comments": null,
+        "title": "骑士精神情报更新",
+        "url": "https://www.xiaohongshu.com/search_result/66e5d176000000000c01ad11?xsec_token=AB6_rfFCy8wOOtKxEKL2fw8UxPoH4HBvookj99cFw_JNY=&xsec_source=",
+        "type": "品牌方价格 + 工艺情报更新",
+        "summary": "**这条是该款的价格唯一公开来源**：基础套 ¥1300+ / 裤裙 +200+ / 蓝绶带宝石 +100+ / 帽子 +100+。同时承认『斗篷参考嘉德礼服和夏尔斗篷两者做了改良』。但**评论区炸锅**：『单斗篷+小物就1300...抢钱不是这么抢的吧』『本来就照搬英国受礼礼服还这么贵 衬衫还是别的套装的 啥面料就1k3 洗钱都没这么洗的』『怎么连抄都不会抄…你家在 xhs 上已经被挂烂了』。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "yuancilang（用户）",
+        "date": "2024-09-14",
+        "likes": "4433",
+        "comments": null,
+        "title": "我勒个lo圈皇帝穿搭…",
+        "url": "https://www.xiaohongshu.com/search_result/66e2d3d5000000002603e742?xsec_token=ABUoxcHGFrQYbRiNb_HWf_q4JdCNzfvd0BVNLSMhbHke4=&xsec_source=",
+        "type": "圈内大 V 安利",
+        "summary": "用户 yuancilang 把骑士精神归为『lo圈皇帝穿搭』高赞推荐。但**评论形成强烈对冲**：『初看惊艳，再看稀烂』『硕大且廉价感十足的 diy 材料包配饰和小物』『帽子贴的那些装饰显得廉价』『元素堆砌有点乱，帽徽应该是想做太阳光辉造型，领口又是双头鹰饰品』—— 圈内同意设计稿好看，但对成衣工艺/堆砌评价低。"
+      },
+      {
+        "rank_in_search": null,
+        "author": "晨曦~R",
+        "date": "2025-05-11",
+        "likes": "358",
+        "comments": null,
+        "title": "避雷YourHighness 永恒银河",
+        "url": "https://www.xiaohongshu.com/search_result/68204cc40000000023001c5a?xsec_token=ABRhlE0C0vnMFM3priaTFHjUwS_sZcka2iP4zqruOyrI4=&xsec_source=",
+        "type": "明确避雷帖 — 工艺与服务",
+        "summary": "**直接避雷帖**。具体槽点：(1) 布料『厚实且扎』；(2) 小物『胶枪粘的会掉』，珍珠『一半是掉的』；(3) 听其他买家说该家『另一款珠子掉色很难洗』；(4) 别上小物会换不了码（霸王条款）。评论附议：『她家真的巨巨巨差。质量不行不说了，买的几次还少发漏发』『从 PDD 下单给我发过来的小物。我去搜是厂货加价卖』『非常小，平常我买 m 之前买僵尸新娘 l 码根本穿不上』『s 码勒的我脖子疼巨扎，再也不会买了』。"
+      },
+      {
+        "rank_in_search": null,
+        "author": "又活一天别骄傲",
+        "date": "2025-08-29",
+        "likes": "53",
+        "comments": null,
+        "title": "骑士精神收到了",
+        "url": "https://www.xiaohongshu.com/search_result/6794acfb000000001703a486?xsec_token=ABFk9PMYSph2jSQThsFEKR5Ky7YpCKzNRiUSXq1SxiU3c=&xsec_source=",
+        "type": "真人 repo 收货反馈",
+        "summary": "买家试穿 repo：(1) **整套重 6-7 斤** —— 上身门槛高；(2) **五金配件难用** —— 别针/勾扣不顺手；(3) 上衣中间扣子少，**容易开**——版型/工艺缺陷；(4) **盒子摸起来都旧旧的** —— 包装不专业。评论附议：『他家衣服扎吗，看到好多说扎料子不好的』。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["王子军lo 重套", "5米大斗篷", "嘉德礼服 + 夏尔斗篷致敬", "全套 ≈ ¥1700", "圈内挂烂工艺差", "在 PDD 走厂货", "上身 6-7 斤"],
+    "highlights_positive": [
+      "设计稿层次最丰富的军lo之一（5米斗篷+绶带+珍珠链+金属胸针+蝴蝶结+燕尾外套）",
+      "明确公开设计灵感来源（嘉德礼服+夏尔斗篷），透明度高",
+      "YourHighness永恒银河自有 IP——XHS 多帖累积（6784+3272+4433+2748）",
+      "套装可拆双人套装（情侣/cosplay 用途扩展）",
+      "金属小物丰富，作为军lo / 王子 lo 整体造型完成度高",
+      "意向金可随时退（『不喜欢的宝意向💰可直接申请退』）—— 试错成本低"
+    ],
+    "highlights_negative": [
+      "**全套 ≈ ¥1700 价格虚高**——是樱洛芙终焉圣骸全套 ¥648 的 2.6 倍，圈内吐槽『抢钱不是这么抢的吧』『洗钱都没这么洗的』",
+      "**抄袭质疑**——圈内挂帖『连抄都不会抄…你家在 xhs 上已经被挂烂了』，承认参考嘉德礼服+夏尔斗篷但被认为是『照搬』",
+      "**工艺多维度差评**：布料厚实扎、小物胶枪粘易掉、珍珠掉、五金难用、扣子少容易开、6-7 斤超重",
+      "**服务差**：少发漏发、PDD 走厂货加价卖、码偏小（M 实际 = 僵尸新娘 L）",
+      "**码型不友好**——别小物即不可换码（消费者陷阱）",
+      "**圈内已避雷**——『她家是我唯一拉黑的店家』『再也不会买了』、避雷帖 358 likes 是同 brand 持续负面信号",
+      "销量 300+ 远低于同期军lo 热款（终焉 4w+ / 骨龙 1w+）—— 价格+口碑双拖累"
+    ],
+    "verdict_short": "短评：王子系军lo 高单价代表（全套 ≈ ¥1700），设计稿堆砌华丽（5米斗篷+珍珠+金属胸针）但**工艺与服务在圈内已被持续避雷**——抄袭质疑、布料扎、小物易掉、PDD 厂货加价、码偏小。买家画像极窄：愿意为『嘉德礼服 cosplay 感』+ 拍照华丽支付，能接受工艺粗糙、上身重 6-7 斤、不挑剔细节。**完全不推荐作为日常穿；适合二次元 OC / 角色扮演 / 摄影道具用途**。整体行业里属于『高 IP + 高定价 + 工艺低』的反面教材款。"
+  },
+  "industry_comparison": {
+    "vs_yingluofu_zhongyan_2.0": {
+      "sub_genre": "骑士精神 王子军lo / 终焉圣骸 军lo",
+      "price_full_set": "骑士精神 ≈ ¥1700 vs 终焉 ¥648（骑士精神 = 终焉 2.6×）",
+      "sales": "骑士精神 300+ vs 终焉 4w+（骑士精神 = 终焉 0.75%）",
+      "release_age": "骑士精神 2024-09 上新已 1.5 年 vs 终焉 2025-10 上新 6 个月（且翻新到 2.0）",
+      "design_originality": "骑士精神 明确『嘉德礼服+夏尔斗篷致敬』被圈内质疑抄袭 vs 终焉 叁狐画师原创",
+      "quality_reputation": "骑士精神 圈内多帖避雷（工艺/服务多维度差） vs 终焉 红黑色褪色担忧但整体好评",
+      "operation_strength": "骑士精神 自营 IP + XHS 多帖累积但口碑反噬 vs 终焉 第三方汇总号 + 真人成片矩阵",
+      "industry_position": "骑士精神 = 高单价低口碑（避雷型款）vs 终焉 = 中高价中口碑（爆款）"
+    },
+    "vs_yingluofu_gulong": {
+      "price_visibility": "骑士精神 价格在 XHS 情报帖明文 vs 骨龙 至今未公开",
+      "sub_genre_overlap": "骑士精神 王子军lo（中性帅气）vs 骨龙 暗黑哥特 JSK（女性帅气）—— 不同细分",
+      "channel_strategy": "都 XHS 主战场但骑士精神更主动发情报 / 骨龙 主要是品牌官号被动响应"
+    }
+  },
+  "posters": [
+    "images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg",
+    "images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqxgd8j31jk2231kx.jpg",
+    "images/YourHighness_骑士精神/poster_006xCKgBgy1htraas9vh0j31jk223hdt.jpg",
+    "images/YourHighness_骑士精神/poster_006xCKgBgy1htraat796wj31jk223hdt.jpg",
+    "images/YourHighness_骑士精神/poster_006xCKgBgy1htraarfqizj31jk223npd.jpg"
+  ],
+  "verified": true,
+  "verified_at": "2026-04-27",
+  "verified_by": "Claude (cross-checked 淘宝商品页 SKU + 微博上新海报 + XHS 5 帖详情含品牌官号 2 帖+用户安利 1 帖+避雷 1 帖+真人 repo 1 帖)",
+  "raw_sources": {
+    "taobao_search": "data/raw/qsjs_taobao.json",
+    "taobao_detail": "data/raw/qsjs_taobao_detail.json",
+    "weibo_upgrade": "data/raw/qsjs_weibo_upgrade.json",
+    "weibo_search": "data/raw/qsjs_weibo.json",
+    "xhs_search": "data/raw/qsjs_xhs.json",
+    "xhs_search_fresh": "data/raw/qsjs_xhs_fresh.json",
+    "xhs_notes": "data/raw/qsjs_notes/"
+  }
+}
