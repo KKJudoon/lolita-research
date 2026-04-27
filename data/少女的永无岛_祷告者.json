@@ -62,13 +62,17 @@
       "note": "**关键负面/争议信号**（来自 weibo search 别人发的 post 而非品牌方）：2025-02-20 @JK日常 微博发『拼多多上的少女的永无岛原创工作室卖的衣服是原创正品吗？』—— 圈内对该品牌在 PDD 平台正品性的质疑帖。这影响该品牌的整体信任度，对祷告者也是间接负面（虽不直接是该款的争议）。"
     },
     "xiaohongshu": {
-      "official_account": "未确认（XHS 上未找到品牌官号；需用户手动给短链验证或品牌方主战场不在 XHS）",
-      "official_url": null,
+      "official_account": "少女的永无岛 原创工作室",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5fae6af0000000000100ab3a",
+      "official_user_id": "5fae6af0000000000100ab3a",
+      "official_red_id": "1097046342",
+      "official_share_url": "https://xhslink.com/m/5gpYmveVjEH",
+      "fans_metric": "5.8万 粉丝 / 583.5K 赞与收藏（用户给出，2026-04 quote；XHS 用户搜索 type=user 验证）",
       "designer_account": null,
       "designer_url": null,
       "search_redo_after_captcha_unlock": true,
-      "search_redo_findings": "首轮 5 次 search 全空是 captcha 拦截误判（详见 SKILL.md 静默风控段）。captcha 解锁 + cookie 行为评分恢复后，重做了 3 次 search（少女的永无岛 / 祷告者 永无岛 / 少女的永无岛 祷告者）+ 5 次 note，得出真实结论。",
-      "note": "**真实情况：祷告者本身在 XHS 没有高赞真人成片**（多次搜均无明确该款的高赞穿搭帖），但**品牌级 + 赛道级讨论丰富**：① 品牌『少女的永无岛』有显著仿冒/山寨争议帖（最高 2368 likes 厂原话题、344 likes 称『一模一样不下三十家店』）② 圣职系赛道里头部款是另一品牌『安缇娅的祷告』（小蝴蝶 1506 likes 圣职系帖明确 tag）。所以祷告者真实定位是『有圈内 sub-genre 讨论但单款无热度』。"
+      "search_lesson": "**搜不到官号根因 = 用错了 type 参数**：之前 SKILL.md 写的 `type=54` 在该品牌查询场景下不返回结果，必须用 `type=user`（语义参数）。改用 type=user 后单独搜『少女的永无岛』第一条命中就是官号。已修订 SKILL.md 全文 type=54 → type=user。",
+      "note": "**重大修订**：之前误判『XHS 上未确认官号』+『祷告者 XHS 0 帖』都是工具/参数问题：① type=54 → type=user 修复后官号一搜即得；② 首轮 search 全空是 captcha 拦截误判（重做后 12 条结果）。修订后看到的真实情况：少女的永无岛在 XHS **是有完整官号运营的**（5.8万粉，5天前还在更新），但**祷告者这款本身在官号 timeline 里没有突出营销**——下一步如需深挖该款的官方种草内容，应直接 user 命令拉取该 user 的 notes 看是否有祷告者帖。"
     }
   },
   "hot_posts": {
