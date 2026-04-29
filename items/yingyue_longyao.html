@@ -27,7 +27,9 @@
   .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
   .poster-grid img:hover { transform: scale(1.02); }
   .poster-grid img { cursor: zoom-in; }
-  .posters-source { font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }
+  .posters-source { font-size: 12px; color: #888; padding: 4px 0 12px; line-height: 1.6; }
+  .posters-source a { color: #6a5a30; text-decoration: none; }
+  .posters-source a:hover { color: #2c2418; text-decoration: underline; }
   .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
   .lb-overlay.open { display: flex; }
   .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
@@ -46,7 +48,7 @@
   details.inspiration > summary h3 { margin: 0; font-size: 16px; }
   .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
   .insp-body { padding: 16px 18px; }
-  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0; grid-auto-rows: max-content; }
   .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
   .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
   .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
@@ -55,7 +57,7 @@
   .row.note { color: #777; font-style: italic; font-size: 12px; }
   .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
   .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
-  .shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .shops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; grid-auto-rows: max-content; }
   .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
   .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
   .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
@@ -129,7 +131,7 @@
     </header>
     <p class="summary">汉洋折衷军lo——中式（立领衬衫 / 锦缎腰封 / 龙纹刺绣 / 流苏挂坠）+ 西式（披风斗篷 / 不对称下摆 / 燕尾外套）的融合。XHS 用户原话『黑底金线刺绣+酒红内衬斗篷，把中式贵气和西式优雅揉得恰到好处』。两个 SKU 配色：龙曜.赤曦（红黑金）/ 龙曜.玄溟（蓝白金，实物图蓝缎+白衬衫）。</p>
     <div class="poster-grid"><img src="../images/映月_龙曜/taobao_official_sku_2.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_2.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_3.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_3.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_4.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_4.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_5.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_5.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_6.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_6.jpg"/><img src="../images/映月_龙曜/taobao_official_sku_7.jpg" loading="lazy" class="lb-img" data-src="../images/映月_龙曜/taobao_official_sku_7.jpg"/></div>
-    <div class="posters-source">📷 图源说明：淘宝 SKU 官方模特图，6 张（含赤曦红 / 玄溟蓝双色）。映月微博缺位，淘宝 detail 是唯一官方源。</div>
+    <div class="posters-source">📷 来源：<a href="https://shop313755428.taobao.com/" target="_blank">淘宝商品页 ↗</a></div>
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款（截止 2026-04-15）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-03-18</span></div><div class="row note">运营节奏与樱洛芙类大牌相比偏小工作室——主力宣传在 XHS 集赞营销+小博主转发，没看到 weibo 官方上新海报。</div></section>
       <section class="info"><h3>价格</h3><div class="row note">**价格信息来自 XHS 初柒顾 1665 likes 帖正文**（2026-03-18，sheji 帖），不是淘宝意向金链或微博海报——印证『价格优先 XHS』规则。淘宝挂牌 ¥523 对应非意向金小全套。意向金截止 2026-04-15。意向金可退（¥30 余额返还），买的早 = 直接省 ¥30。</div></section>

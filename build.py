@@ -317,8 +317,24 @@ def render_detail(item):
 
     posters = item.get("posters", [])
     poster_html = "".join(f'<img src="../{esc(p)}" loading="lazy" class="lb-img" data-src="../{esc(p)}"/>' for p in posters)
-    posters_source = item.get("posters_source", "")
-    posters_source_html = f'<div class="posters-source">📷 图源说明：{esc(posters_source)}</div>' if posters_source else ''
+    poster_links = []
+    weibo = item.get("shops", {}).get("weibo", {})
+    if weibo.get("upgrade_post_url"):
+        poster_links.append((f"微博 上新海报", weibo["upgrade_post_url"]))
+    for bsp in weibo.get("brand_self_posts", [])[:3]:
+        if bsp.get("url"):
+            label = f"微博 {bsp.get('type','官号自发')}"
+            poster_links.append((label, bsp["url"]))
+    if not weibo.get("upgrade_post_url") and not weibo.get("brand_self_posts"):
+        if weibo.get("current_post_url"):
+            poster_links.append(("微博 官号海报", weibo["current_post_url"]))
+    taobao = item.get("shops", {}).get("taobao", {})
+    if "淘宝" in (item.get("posters_source") or "") and taobao.get("url"):
+        poster_links.append(("淘宝商品页", taobao["url"]))
+    posters_source_html = ""
+    if poster_links:
+        link_html = " · ".join(f'<a href="{esc(u)}" target="_blank">{esc(l)} ↗</a>' for l, u in poster_links)
+        posters_source_html = f'<div class="posters-source">📷 来源：{link_html}</div>'
 
     hot_posts = item.get("hot_posts", {}).get("xiaohongshu", [])
     hot_posts_html = ""
@@ -418,7 +434,9 @@ def render_detail(item):
   .poster-grid img {{ width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }}
   .poster-grid img:hover {{ transform: scale(1.02); }}
   .poster-grid img {{ cursor: zoom-in; }}
-  .posters-source {{ font-size: 12px; color: #777; background: #f8f4e8; border-left: 3px solid #c5a572; padding: 8px 12px; margin: 6px 0 16px; border-radius: 0 6px 6px 0; line-height: 1.6; }}
+  .posters-source {{ font-size: 12px; color: #888; padding: 4px 0 12px; line-height: 1.6; }}
+  .posters-source a {{ color: #6a5a30; text-decoration: none; }}
+  .posters-source a:hover {{ color: #2c2418; text-decoration: underline; }}
   .lb-overlay {{ position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }}
   .lb-overlay.open {{ display: flex; }}
   .lb-overlay img {{ max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }}
@@ -437,7 +455,7 @@ def render_detail(item):
   details.inspiration > summary h3 {{ margin: 0; font-size: 16px; }}
   .insp-count {{ color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }}
   .insp-body {{ padding: 16px 18px; }}
-  .info-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }}
+  .info-grid {{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0; grid-auto-rows: max-content; }}
   .info {{ background: #faf7ed; padding: 12px 16px; border-radius: 6px; }}
   .info h3 {{ margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }}
   .row {{ font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }}
@@ -446,7 +464,7 @@ def render_detail(item):
   .row.note {{ color: #777; font-style: italic; font-size: 12px; }}
   .color-chip {{ background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }}
   .color-dropped {{ background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }}
-  .shops {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }}
+  .shops {{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; grid-auto-rows: max-content; }}
   .shop-block {{ background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }}
   .shop-block h4 {{ margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }}
   .hot-posts {{ margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }}
