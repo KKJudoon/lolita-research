@@ -83,8 +83,19 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 王子lo, 暗黑, 复古 Lolita coordinate. Style: PC 原创设计的另一看家王子系款『人偶』——复古优雅暗黑可爱风格的衬衫+短裤套装。淘宝挂牌 ¥179 / 1000+ 付款（实际付款数据，非意向金），是 PC 系列在白菜段（<¥500）有真实成交规模的款。区别于同品牌『红与黑』中世纪暗黑王子线，『人偶』走偏可爱叙事路线。"
   },
-  "posters": [],
-  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "posters": [
+    "images/PC_人偶/weibo_official_1.jpg",
+    "images/PC_人偶/weibo_official_10.jpg",
+    "images/PC_人偶/weibo_official_2.jpg",
+    "images/PC_人偶/weibo_official_3.jpg",
+    "images/PC_人偶/weibo_official_4.jpg",
+    "images/PC_人偶/weibo_official_5.jpg",
+    "images/PC_人偶/weibo_official_6.jpg",
+    "images/PC_人偶/weibo_official_7.jpg",
+    "images/PC_人偶/weibo_official_8.jpg",
+    "images/PC_人偶/weibo_official_9.jpg"
+  ],
+  "posters_source": "微博 PC 原创设计官号自发『人偶~白月光版~』+『穿越2024人偶』2 个 post 抓图（官号 image ID 前缀 005FOi7Rgy）。",
   "popularity": {
     "scale_tier": "头部",
     "buzz_tier": "中位",

@@ -80,8 +80,17 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 王子lo, 长袖衬衫, 长款腰封 Lolita coordinate. Style: 少女的永无岛的王子装『誓约王座』——长袖衬衫+长款腰封套装。淘宝 ¥78.3 单 SKU / 500+ 付款，是品牌王子系销量头部款（同品牌祷告者千人加购 / 星辉骑士 400+ / 启示录 200+ / 誓约之剑 100+）。注意品牌仿冒泛滥（被识图 30+ 山店）影响保值。"
   },
-  "posters": [],
-  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "posters": [
+    "images/少女的永无岛_誓约王座/weibo_brand_1.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_2.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_3.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_4.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_5.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_6.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_7.jpg",
+    "images/少女的永无岛_誓约王座/weibo_brand_8.jpg"
+  ],
+  "posters_source": "微博少女的永无岛官号 timeline 图（非『誓约王座』专属，含品牌多款混合，作为 brand 视觉参考；该款专属海报待补）。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "未深查",

@@ -81,8 +81,19 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 军lo, 骑士, 礼服式 Lolita coordinate. Style: 沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特西幻军LO 骑士服』300+。"
   },
-  "posters": [],
-  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "posters": [
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_1.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_10.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_2.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_3.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_4.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_5.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_6.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_7.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_8.jpg",
+    "images/沉默火星_星巡夜骑士裙装/weibo_official_9.jpg"
+  ],
+  "posters_source": "微博 SilentMars 沉默火星官号『星巡夜骑士』上新 post + Lolita洋装上新转发图透（官号 image ID 前缀 0079OXQLgy）。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "未深查",
