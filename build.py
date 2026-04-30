@@ -20,6 +20,39 @@ def esc(s):
     return html.escape(str(s)) if s is not None else ""
 
 
+def _parse_sales_value(s):
+    """Parse taobao sales string to integer. '4万+人付款' → 40000; '100+人付款' → 100; '95人付款' → 95."""
+    if not s:
+        return 0
+    s = str(s)
+    if '看过' in s and '付款' not in s:
+        return 0
+    m = re.search(r'(\d+(?:\.\d+)?)\s*万', s)
+    if m:
+        return int(float(m.group(1)) * 10000)
+    m = re.search(r'(\d+)\s*\+', s)
+    if m:
+        return int(m.group(1))
+    if '千人加购' in s:
+        return 1000
+    if '百人加购' in s:
+        return 100
+    m = re.search(r'(\d+)', s)
+    if m:
+        return int(m.group(1))
+    return 0
+
+
+def _parse_research_ts(date_str):
+    """Parse verified_at ISO date to ms timestamp for client-side sort. Fallback 0."""
+    if not date_str:
+        return 0
+    try:
+        return int(datetime.datetime.strptime(date_str, "%Y-%m-%d").timestamp() * 1000)
+    except Exception:
+        return 0
+
+
 def normalize_xhs_url(u):
     """XHS opencli returns /search_result/<id> URLs which redirect away when
     opened directly (search route, not share route). Transform to /explore/<id>
@@ -115,6 +148,8 @@ def render_summary_card(item):
     taobao = item.get("shops", {}).get("taobao", {}) or {}
     shop = esc(taobao.get("shop_name", ""))
     sales = esc(taobao.get("sales", ""))
+    sales_value = _parse_sales_value(taobao.get("sales", ""))
+    research_ts = _parse_research_ts(item.get("verified_at"))
 
     keywords = item.get("synthesis", {}).get("keywords", []) or []
     kw_html = "".join(f'<span class="kw">{esc(k)}</span>' for k in keywords[:6])
@@ -122,7 +157,7 @@ def render_summary_card(item):
     detail_url = f"items/{iid}.html"
 
     return f'''
-    <a class="summary-card bare" href="{esc(detail_url)}">
+    <a class="summary-card bare" data-sales="{sales_value}" data-time="{research_ts}" href="{esc(detail_url)}">
       <div class="thumb">{thumb_html}</div>
       <div class="info">
         <div class="title">{name}</div>
@@ -206,15 +241,23 @@ def write_index(items):
   .fact b {{ color: #888; font-weight: normal; margin-right: 4px; }}
   .kws {{ display: flex; flex-wrap: wrap; gap: 4px; }}
   .kw {{ background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }}
-  .reports-bar {{ margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; }}
+  .reports-bar {{ margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }}
   .report-link {{ color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }}
   .report-link:hover {{ color: #c5a572; text-decoration: underline; }}
+  .reports-sep {{ color: #c5a572; font-weight: bold; }}
 
   /* tabs */
-  .tabs {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 20px; }}
+  .tabs {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 12px; }}
   .tab {{ background: white; border: 1px solid #c8a868; color: #5a4a2a; padding: 6px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; transition: all 0.15s; }}
   .tab:hover {{ background: #faf3e0; }}
   .tab.active {{ background: #c8a868; color: white; }}
+
+  /* sort */
+  .sort-bar {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 13px; }}
+  .sort-label {{ color: #888; }}
+  .sort {{ background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }}
+  .sort:hover {{ background: #f7eed5; }}
+  .sort.active {{ background: #6a5a30; color: white; border-color: #6a5a30; }}
 
   /* mobile: stack vertically */
   @media (max-width: 640px) {{
@@ -230,23 +273,54 @@ def write_index(items):
 <body>
   <h1>Lolita 款式调研</h1>
   <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点卡片看款式细节</div>
-  <div class="reports-bar"><a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2) →</a></div>
+  <div class="reports-bar">
+    <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
+    <span class="reports-sep">·</span>
+    <a href="reports/junlo_leaderboard.html" class="report-link">🏆 军lo + 王子系销量排行榜</a>
+  </div>
   <div class="tabs">{tab_buttons}</div>
+  <div class="sort-bar">
+    <span class="sort-label">排序：</span>
+    <button class="sort active" data-sort="time">最近调研 ↓</button>
+    <button class="sort" data-sort="sales">销量 ↓</button>
+  </div>
   <div id="cards">
   {cards_html}
   </div>
 <script>
   const tabs = document.querySelectorAll(".tab");
-  const cards = document.querySelectorAll(".summary-card");
-  tabs.forEach(t => t.addEventListener("click", () => {{
-    tabs.forEach(x => x.classList.remove("active"));
-    t.classList.add("active");
-    const style = t.dataset.style;
-    cards.forEach(c => {{
+  const sorts = document.querySelectorAll(".sort");
+  const cardsContainer = document.getElementById("cards");
+  const allCards = Array.from(cardsContainer.querySelectorAll(".summary-card"));
+
+  function applyFilter(style) {{
+    allCards.forEach(c => {{
       const styles = (c.dataset.styles || "").split(" ");
       c.style.display = (style === "all" || styles.includes(style)) ? "" : "none";
     }});
+  }}
+  function applySort(key) {{
+    const sorted = [...allCards].sort((a, b) => {{
+      const va = parseInt(a.dataset[key] || 0);
+      const vb = parseInt(b.dataset[key] || 0);
+      return vb - va;  // 倒序：销量大的 / 时间近的 在前
+    }});
+    sorted.forEach(c => cardsContainer.appendChild(c));
+  }}
+
+  tabs.forEach(t => t.addEventListener("click", () => {{
+    tabs.forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    applyFilter(t.dataset.style);
   }}));
+  sorts.forEach(s => s.addEventListener("click", () => {{
+    sorts.forEach(x => x.classList.remove("active"));
+    s.classList.add("active");
+    applySort(s.dataset.sort);
+  }}));
+
+  // 默认按调研时间排序
+  applySort("time");
 </script>
 </body>
 </html>'''

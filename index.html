@@ -31,15 +31,23 @@
   .fact b { color: #888; font-weight: normal; margin-right: 4px; }
   .kws { display: flex; flex-wrap: wrap; gap: 4px; }
   .kw { background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
-  .reports-bar { margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; }
+  .reports-bar { margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
   .report-link { color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }
   .report-link:hover { color: #c5a572; text-decoration: underline; }
+  .reports-sep { color: #c5a572; font-weight: bold; }
 
   /* tabs */
-  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 20px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 12px; }
   .tab { background: white; border: 1px solid #c8a868; color: #5a4a2a; padding: 6px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
   .tab:hover { background: #faf3e0; }
   .tab.active { background: #c8a868; color: white; }
+
+  /* sort */
+  .sort-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 13px; }
+  .sort-label { color: #888; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
 
   /* mobile: stack vertically */
   @media (max-width: 640px) {
@@ -54,12 +62,21 @@
 </head>
 <body>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 2026-04-30 12:00 · 共 11 款 · 点卡片看款式细节</div>
-  <div class="reports-bar"><a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2) →</a></div>
+  <div class="meta">最后更新 2026-04-30 13:01 · 共 11 款 · 点卡片看款式细节</div>
+  <div class="reports-bar">
+    <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
+    <span class="reports-sep">·</span>
+    <a href="reports/junlo_leaderboard.html" class="report-link">🏆 军lo + 王子系销量排行榜</a>
+  </div>
   <div class="tabs"><button class="tab active" data-style="all">全部 (11)</button><button class="tab" data-style="军lo">军lo (7)</button><button class="tab" data-style="哥特">哥特 (2)</button><button class="tab" data-style="王子lo">王子lo (6)</button><button class="tab" data-style="中华">中华 (1)</button></div>
+  <div class="sort-bar">
+    <span class="sort-label">排序：</span>
+    <button class="sort active" data-sort="time">最近调研 ↓</button>
+    <button class="sort" data-sort="sales">销量 ↓</button>
+  </div>
   <div id="cards">
   
-    <a class="summary-card bare" data-styles="军lo 哥特" href="items/alicegirl_poxiaozhe.html">
+    <a class="summary-card bare" data-styles="军lo 哥特" data-sales="95" data-time="1777392000000" href="items/alicegirl_poxiaozhe.html">
       <div class="thumb"><img src="images/Alicegirl_破晓者/weibo_official_QnSD0AD9g_1.jpg" alt="破晓者（Alicegirl 重工军lo 套装）" loading="lazy"/></div>
       <div class="info">
         <div class="title">破晓者（Alicegirl 重工军lo 套装）</div>
@@ -75,7 +92,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="王子lo" href="items/pc_hongyuhei_4.0.html">
+    <a class="summary-card bare" data-styles="王子lo" data-sales="1000" data-time="1777219200000" href="items/pc_hongyuhei_4.0.html">
       <div class="thumb"><img src="images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_1.jpg" alt="红与黑 4.0（PC 原创设计王子系长马甲套装）" loading="lazy"/></div>
       <div class="info">
         <div class="title">红与黑 4.0（PC 原创设计王子系长马甲套装）</div>
@@ -91,7 +108,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo" href="items/vancy_souchazhe.html">
+    <a class="summary-card bare" data-styles="军lo" data-sales="0" data-time="1777392000000" href="items/vancy_souchazhe.html">
       <div class="thumb"><img src="images/Vancy_搜查者/weibo_official_QCWanCjGU_1.jpg" alt="搜查者（Vancy 梵希军lo 三件套+枪套）" loading="lazy"/></div>
       <div class="info">
         <div class="title">搜查者（Vancy 梵希军lo 三件套+枪套）</div>
@@ -107,7 +124,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo" href="items/yourhighness_qishijingshen.html">
+    <a class="summary-card bare" data-styles="军lo" data-sales="300" data-time="1777219200000" href="items/yourhighness_qishijingshen.html">
       <div class="thumb"><img src="images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" alt="骑士精神（王子系军lo / 大斗篷套装）" loading="lazy"/></div>
       <div class="info">
         <div class="title">骑士精神（王子系军lo / 大斗篷套装）</div>
@@ -123,7 +140,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="王子lo" href="items/shaonyongdao_daogaozhe.html">
+    <a class="summary-card bare" data-styles="王子lo" data-sales="1000" data-time="1777219200000" href="items/shaonyongdao_daogaozhe.html">
       <div class="thumb"><img src="images/少女的永无岛_祷告者/taobao_official_sku_2.jpg" alt="祷告者（少女的永无岛王子系套装）" loading="lazy"/></div>
       <div class="info">
         <div class="title">祷告者（少女的永无岛王子系套装）</div>
@@ -139,7 +156,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo 中华" href="items/yingyue_longyao.html">
+    <a class="summary-card bare" data-styles="军lo 中华" data-sales="700" data-time="1777219200000" href="items/yingyue_longyao.html">
       <div class="thumb"><img src="images/映月_龙曜/taobao_official_sku_2.jpg" alt="龙曜" loading="lazy"/></div>
       <div class="info">
         <div class="title">龙曜</div>
@@ -155,7 +172,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" href="items/weizhixingchen_jichengren.html">
+    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="400" data-time="1777219200000" href="items/weizhixingchen_jichengren.html">
       <div class="thumb"><img src="images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" alt="继承人（王子系军lo · 红色款）" loading="lazy"/></div>
       <div class="info">
         <div class="title">继承人（王子系军lo · 红色款）</div>
@@ -171,7 +188,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" href="items/yingluofu_zhongyan_2.0.html">
+    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="40000" data-time="1777132800000" href="items/yingluofu_zhongyan_2.0.html">
       <div class="thumb"><img src="images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" alt="终焉圣骸 2.0" loading="lazy"/></div>
       <div class="info">
         <div class="title">终焉圣骸 2.0</div>
@@ -187,7 +204,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="哥特" href="items/yingluofu_gulong.html">
+    <a class="summary-card bare" data-styles="哥特" data-sales="10000" data-time="1777219200000" href="items/yingluofu_gulong.html">
       <div class="thumb"><img src="images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" alt="骨龙（暗黑哥特 JSK）" loading="lazy"/></div>
       <div class="info">
         <div class="title">骨龙（暗黑哥特 JSK）</div>
@@ -203,7 +220,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" href="items/maomiwanan_juanjuan.html">
+    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="0" data-time="1777132800000" href="items/maomiwanan_juanjuan.html">
       <div class="thumb"><img src="images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" alt="卷卷（军LO）" loading="lazy"/></div>
       <div class="info">
         <div class="title">卷卷（军LO）</div>
@@ -219,7 +236,7 @@
     </a>
     
 
-    <a class="summary-card bare" data-styles="王子lo" href="items/dierchengbao_tangguopu.html">
+    <a class="summary-card bare" data-styles="王子lo" data-sales="400" data-time="1777219200000" href="items/dierchengbao_tangguopu.html">
       <div class="thumb"><img src="images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_1.jpg" alt="糖果铺（第二城堡王子系 · 甜基佬套装）" loading="lazy"/></div>
       <div class="info">
         <div class="title">糖果铺（第二城堡王子系 · 甜基佬套装）</div>
@@ -237,16 +254,38 @@
   </div>
 <script>
   const tabs = document.querySelectorAll(".tab");
-  const cards = document.querySelectorAll(".summary-card");
-  tabs.forEach(t => t.addEventListener("click", () => {
-    tabs.forEach(x => x.classList.remove("active"));
-    t.classList.add("active");
-    const style = t.dataset.style;
-    cards.forEach(c => {
+  const sorts = document.querySelectorAll(".sort");
+  const cardsContainer = document.getElementById("cards");
+  const allCards = Array.from(cardsContainer.querySelectorAll(".summary-card"));
+
+  function applyFilter(style) {
+    allCards.forEach(c => {
       const styles = (c.dataset.styles || "").split(" ");
       c.style.display = (style === "all" || styles.includes(style)) ? "" : "none";
     });
+  }
+  function applySort(key) {
+    const sorted = [...allCards].sort((a, b) => {
+      const va = parseInt(a.dataset[key] || 0);
+      const vb = parseInt(b.dataset[key] || 0);
+      return vb - va;  // 倒序：销量大的 / 时间近的 在前
+    });
+    sorted.forEach(c => cardsContainer.appendChild(c));
+  }
+
+  tabs.forEach(t => t.addEventListener("click", () => {
+    tabs.forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    applyFilter(t.dataset.style);
   }));
+  sorts.forEach(s => s.addEventListener("click", () => {
+    sorts.forEach(x => x.classList.remove("active"));
+    s.classList.add("active");
+    applySort(s.dataset.sort);
+  }));
+
+  // 默认按调研时间排序
+  applySort("time");
 </script>
 </body>
 </html>
