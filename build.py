@@ -53,6 +53,61 @@ def _parse_research_ts(date_str):
         return 0
 
 
+def _extract_status(item):
+    """Return (label, priority). priority 高的在前；加购未上架=0 永远在最后。"""
+    sales = (item.get("shops", {}).get("taobao", {}) or {}).get("sales", "") or ""
+    sales_v = _parse_sales_value(sales)
+    rel = item.get("release", {}) or {}
+    rel_type = rel.get("type") or ""
+    rel_note = rel.get("note") or ""
+    blob = rel_type + rel_note
+
+    if "现货" in blob:
+        return ("现货", 5)
+    if sales_v >= 95 and "千人加购" not in sales:
+        return ("已开团", 4)
+    if "再贩" in blob or "再片反" in blob or "重团" in blob:
+        return ("再贩团", 3)
+    if "千人加购" in sales or sales_v == 1000:
+        return ("加购中", 2)
+    if not sales or sales == "—" or sales_v == 0:
+        return ("加购未上架", 0)
+    return ("调研中", 1)
+
+
+def _extract_release_dates(item):
+    """Return (publish_short, tuán_short) — 简化的发布 / 一团时间字符串."""
+    rel = item.get("release", {}) or {}
+    posters_first = rel.get("poster_first_seen") or ""
+    date_range = rel.get("date_range") or ""
+    pm = re.match(r'(\d{4}-\d{2})', posters_first)
+    publish_short = pm.group(1) if pm else (posters_first[:7] if posters_first else "")
+    tuan_short = ""
+    rng = re.search(r'(\d{4}-\d{1,2}-\d{1,2})\s*~\s*(\d{4}-\d{1,2}-\d{1,2})', date_range)
+    if rng:
+        tuan_short = rng.group(1)[:10]
+    else:
+        m2 = re.search(r'(\d{4}-\d{1,2}-\d{1,2})', date_range)
+        if m2:
+            tuan_short = m2.group(1)[:10]
+    return publish_short, tuan_short
+
+
+def _extract_main_prices(price):
+    """整套 + OP + JSK 主价（不展示定金/配饰）"""
+    if not price:
+        return "—"
+    parts = []
+    fs = price.get("full_set") or price.get("set_3pc_total")
+    if fs:
+        parts.append(f'整套 ¥{fs}')
+    if price.get("op"):
+        parts.append(f'OP ¥{price["op"]}')
+    if price.get("jsk"):
+        parts.append(f'JSK ¥{price["jsk"]}')
+    return " · ".join(parts) if parts else "—"
+
+
 def normalize_xhs_url(u):
     """XHS opencli returns /search_result/<id> URLs which redirect away when
     opened directly (search route, not share route). Transform to /explore/<id>
@@ -123,54 +178,52 @@ COMMON_CSS = '''
 
 
 # ---------------------------------------------------------------- index page
-def render_summary_card(item):
+def render_summary_row(item):
     iid = item.get("id", "")
     name = esc(item["name"])
     brand = esc(item.get("brand", ""))
-    designer = esc(item.get("designer", ""))
-    sub = brand + ((" · " + designer) if designer else "")
-
-    posters = item.get("posters", [])
-    thumb = posters[0] if posters else ""
-    thumb_html = f'<img src="{esc(thumb)}" alt="{name}" loading="lazy"/>' if thumb else '<div class="no-thumb">无图</div>'
-
-    rel = item.get("release", {})
-    release = esc(rel.get("date_range", ""))
-
-    price = item.get("price", {})
-    price_parts = []
-    if price.get("op") is not None:
-        price_parts.append(f'OP ¥{price["op"]}')
-    if price.get("full_set") is not None:
-        price_parts.append(f'整套 ¥{price["full_set"]}')
-    price_str = " · ".join(price_parts) if price_parts else "—"
 
     taobao = item.get("shops", {}).get("taobao", {}) or {}
-    shop = esc(taobao.get("shop_name", ""))
-    sales = esc(taobao.get("sales", ""))
-    sales_value = _parse_sales_value(taobao.get("sales", ""))
+    sales_raw = taobao.get("sales", "") or ""
+    sales_v = _parse_sales_value(sales_raw)
     research_ts = _parse_research_ts(item.get("verified_at"))
 
-    keywords = item.get("synthesis", {}).get("keywords", []) or []
-    kw_html = "".join(f'<span class="kw">{esc(k)}</span>' for k in keywords[:6])
+    status_label, status_priority = _extract_status(item)
+    publish_short, tuan_short = _extract_release_dates(item)
+    price_str = _extract_main_prices(item.get("price", {}) or {})
+
+    sales_display = sales_raw if sales_raw and sales_raw != "—" else "—"
+
+    style_tags = item.get("style_tags", []) or []
+    canonical = []
+    for s in CANONICAL_STYLES:
+        if any(s in t for t in style_tags):
+            canonical.append(s)
+    if not canonical and style_tags:
+        canonical = [style_tags[0]]
+    style_chips = "".join(f'<span class="chip">{esc(s)}</span>' for s in canonical[:3])
 
     detail_url = f"items/{iid}.html"
 
+    sales_tier = (
+        'top' if sales_v >= 10000 else
+        'high' if sales_v >= 1000 else
+        'mid' if sales_v >= 300 else
+        'low' if sales_v > 0 else
+        'none'
+    )
+    status_class = f'status-{status_priority}'
+
     return f'''
-    <a class="summary-card bare" data-sales="{sales_value}" data-time="{research_ts}" href="{esc(detail_url)}">
-      <div class="thumb">{thumb_html}</div>
-      <div class="info">
-        <div class="title">{name}</div>
-        <div class="sub">{sub}</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> {esc(price_str)}</span>
-          <span class="fact"><b>上新</b> {release or "—"}</span>
-          <span class="fact"><b>店铺</b> {shop or "—"}</span>
-          <span class="fact"><b>销量</b> {sales or "—"}</span>
-        </div>
-        <div class="kws">{kw_html}</div>
-      </div>
-    </a>
+    <tr data-sales="{sales_v}" data-time="{research_ts}" data-status-priority="{status_priority}" data-styles="{" ".join(esc(s) for s in canonical)}">
+      <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
+      <td class="col-name"><a class="bare" href="{esc(detail_url)}"><div class="title">{name}</div><div class="brand">{brand}</div></a></td>
+      <td class="col-price">{esc(price_str)}</td>
+      <td class="col-sales sales-{sales_tier}">{esc(sales_display)}</td>
+      <td class="col-publish">{esc(publish_short or "—")}</td>
+      <td class="col-tuan">{esc(tuan_short or "—")}</td>
+      <td class="col-style">{style_chips}</td>
+    </tr>
     '''
 
 
@@ -198,22 +251,13 @@ def write_index(items):
             groups.setdefault(s, []).append(it)
     ordered = [s for s in CANONICAL_STYLES if s in groups] + sorted([s for s in groups if s not in CANONICAL_STYLES])
 
-    # Tab buttons (count = unique items in that group)
     tab_buttons = f'<button class="tab active" data-style="all">全部 ({len(items)})</button>'
     tab_buttons += "".join(
         f'<button class="tab" data-style="{esc(s)}">{esc(s)} ({len(groups[s])})</button>'
         for s in ordered
     )
 
-    # Cards: render once per item, attach all matched styles as space-separated data-styles
-    cards_parts = []
-    for it in items:
-        styles = styles_for_item(it)
-        card = render_summary_card(it)
-        attr = " ".join(esc(s) for s in styles)
-        card_with_attr = card.replace('<a class="summary-card bare"', f'<a class="summary-card bare" data-styles="{attr}"', 1)
-        cards_parts.append(card_with_attr)
-    cards_html = "\n".join(cards_parts)
+    rows_html = "\n".join(render_summary_row(it) for it in items)
 
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     doc = f'''<!DOCTYPE html>
@@ -224,102 +268,148 @@ def write_index(items):
 <title>Lolita 款式调研</title>
 <style>
 {COMMON_CSS}
-  .summary-card {{
-    display: flex; gap: 16px; padding: 16px; margin-bottom: 12px;
-    background: white; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    transition: transform 0.15s, box-shadow 0.15s;
-    color: #1a1a1a;
-  }}
-  .summary-card:hover {{ transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-bottom: none; }}
-  .thumb {{ flex-shrink: 0; width: 140px; height: 180px; border-radius: 8px; overflow: hidden; background: #eee; }}
-  .thumb img {{ width: 100%; height: 100%; object-fit: cover; display: block; }}
-  .no-thumb {{ width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 12px; }}
-  .info {{ flex: 1; min-width: 0; }}
-  .title {{ font-size: 18px; font-weight: 600; margin-bottom: 2px; }}
-  .sub {{ color: #888; font-size: 13px; margin-bottom: 10px; }}
-  .facts {{ display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: #444; margin-bottom: 8px; }}
-  .fact b {{ color: #888; font-weight: normal; margin-right: 4px; }}
-  .kws {{ display: flex; flex-wrap: wrap; gap: 4px; }}
-  .kw {{ background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }}
+  body {{ max-width: 1280px; }}
   .reports-bar {{ margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }}
   .report-link {{ color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }}
   .report-link:hover {{ color: #c5a572; text-decoration: underline; }}
-  .reports-sep {{ color: #c5a572; font-weight: bold; }}
 
-  /* tabs */
-  .tabs {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 12px; }}
-  .tab {{ background: white; border: 1px solid #c8a868; color: #5a4a2a; padding: 6px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; transition: all 0.15s; }}
+  .toolbar {{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }}
+  .toolbar-section {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }}
+  .toolbar-label {{ color: #999; font-size: 12px; }}
+  .tab {{ background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }}
   .tab:hover {{ background: #faf3e0; }}
-  .tab.active {{ background: #c8a868; color: white; }}
-
-  /* sort */
-  .sort-bar {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 13px; }}
-  .sort-label {{ color: #888; }}
+  .tab.active {{ background: #c8a868; color: white; border-color: #c8a868; }}
   .sort {{ background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }}
   .sort:hover {{ background: #f7eed5; }}
   .sort.active {{ background: #6a5a30; color: white; border-color: #6a5a30; }}
+  .search-input {{ border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }}
+  .search-input:focus {{ border-color: #c5a572; }}
 
-  /* mobile: stack vertically */
-  @media (max-width: 640px) {{
+  table.research {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05); font-size: 13px; }}
+  table.research th {{ background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }}
+  table.research td {{ padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; }}
+  table.research tr:hover td {{ background: #fbf7e8; }}
+
+  .col-status {{ width: 78px; }}
+  .col-name {{ min-width: 220px; }}
+  .col-name a.bare {{ color: #2c2418; }}
+  .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; }}
+  .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; }}
+  .col-price {{ width: 200px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }}
+  .col-sales {{ width: 90px; white-space: nowrap; font-weight: 600; }}
+  .col-publish, .col-tuan {{ width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }}
+  .col-style {{ min-width: 110px; }}
+
+  .status {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; white-space: nowrap; font-weight: 500; }}
+  .status-5 {{ background: #d4f4d4; color: #2c7a2c; }}     /* 现货 */
+  .status-4 {{ background: #fde0e0; color: #a04020; }}     /* 已开团 */
+  .status-3 {{ background: #fff2c8; color: #8a6a30; }}     /* 再贩团 */
+  .status-2 {{ background: #e0e8f0; color: #506a8a; }}     /* 加购中 */
+  .status-1 {{ background: #efe9d9; color: #6a5a30; }}     /* 调研中 */
+  .status-0 {{ background: #f0eee8; color: #999; }}        /* 加购未上架 */
+
+  .sales-top {{ color: #b00020; }}
+  .sales-high {{ color: #c5a572; }}
+  .sales-mid {{ color: #5a4a2a; }}
+  .sales-low {{ color: #888; }}
+  .sales-none {{ color: #ccc; font-weight: 400; }}
+
+  .chip {{ display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }}
+
+  @media (max-width: 720px) {{
     body {{ padding: 12px 8px; }}
-    .summary-card {{ flex-direction: column; gap: 10px; padding: 12px; }}
-    .thumb {{ width: 100%; height: 220px; }}
-    .title {{ font-size: 17px; }}
-    .facts {{ gap: 6px 12px; font-size: 12px; }}
-    .tab {{ font-size: 12px; padding: 5px 10px; }}
+    table.research {{ font-size: 11px; display: block; overflow-x: auto; }}
+    table.research th, table.research td {{ padding: 6px 8px; }}
+    .col-publish, .col-tuan {{ display: none; }}
+    .col-name .brand {{ font-size: 10px; }}
   }}
 </style>
 </head>
 <body>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点卡片看款式细节</div>
+  <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点行查看详情</div>
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
-    <span class="reports-sep">·</span>
-    <a href="reports/junlo_leaderboard.html" class="report-link">🏆 军lo + 王子系销量排行榜</a>
   </div>
-  <div class="tabs">{tab_buttons}</div>
-  <div class="sort-bar">
-    <span class="sort-label">排序：</span>
-    <button class="sort active" data-sort="time">最近调研 ↓</button>
-    <button class="sort" data-sort="sales">销量 ↓</button>
+  <div class="toolbar">
+    <div class="toolbar-section">
+      <span class="toolbar-label">风格</span>
+      {tab_buttons}
+    </div>
+    <div class="toolbar-section">
+      <span class="toolbar-label">排序</span>
+      <button class="sort active" data-sort="time">最近调研 ↓</button>
+      <button class="sort" data-sort="sales">销量 ↓</button>
+    </div>
+    <div class="toolbar-section">
+      <input type="search" class="search-input" id="search" placeholder="搜索款名 / 品牌">
+    </div>
   </div>
-  <div id="cards">
-  {cards_html}
-  </div>
+  <table class="research">
+    <thead>
+      <tr>
+        <th>状态</th>
+        <th>款名 / 品牌</th>
+        <th>价格</th>
+        <th>销量</th>
+        <th>发布</th>
+        <th>一团</th>
+        <th>风格</th>
+      </tr>
+    </thead>
+    <tbody id="rows">
+{rows_html}
+    </tbody>
+  </table>
 <script>
   const tabs = document.querySelectorAll(".tab");
   const sorts = document.querySelectorAll(".sort");
-  const cardsContainer = document.getElementById("cards");
-  const allCards = Array.from(cardsContainer.querySelectorAll(".summary-card"));
+  const search = document.getElementById("search");
+  const tbody = document.getElementById("rows");
+  const allRows = Array.from(tbody.querySelectorAll("tr"));
 
-  function applyFilter(style) {{
-    allCards.forEach(c => {{
-      const styles = (c.dataset.styles || "").split(" ");
-      c.style.display = (style === "all" || styles.includes(style)) ? "" : "none";
+  let curStyle = "all";
+  let curQuery = "";
+
+  function applyFilter() {{
+    allRows.forEach(r => {{
+      const styles = (r.dataset.styles || "").split(" ");
+      const styleOk = curStyle === "all" || styles.includes(curStyle);
+      const text = r.textContent.toLowerCase();
+      const queryOk = !curQuery || text.includes(curQuery);
+      r.style.display = styleOk && queryOk ? "" : "none";
     }});
   }}
   function applySort(key) {{
-    const sorted = [...allCards].sort((a, b) => {{
+    const sorted = [...allRows].sort((a, b) => {{
+      const pa = parseInt(a.dataset.statusPriority || 0);
+      const pb = parseInt(b.dataset.statusPriority || 0);
+      // 加购未上架(0) 永远在最后，不论按什么排序
+      if (pa === 0 && pb !== 0) return 1;
+      if (pb === 0 && pa !== 0) return -1;
       const va = parseInt(a.dataset[key] || 0);
       const vb = parseInt(b.dataset[key] || 0);
-      return vb - va;  // 倒序：销量大的 / 时间近的 在前
+      return vb - va;
     }});
-    sorted.forEach(c => cardsContainer.appendChild(c));
+    sorted.forEach(r => tbody.appendChild(r));
   }}
 
   tabs.forEach(t => t.addEventListener("click", () => {{
     tabs.forEach(x => x.classList.remove("active"));
     t.classList.add("active");
-    applyFilter(t.dataset.style);
+    curStyle = t.dataset.style;
+    applyFilter();
   }}));
   sorts.forEach(s => s.addEventListener("click", () => {{
     sorts.forEach(x => x.classList.remove("active"));
     s.classList.add("active");
     applySort(s.dataset.sort);
   }}));
+  search.addEventListener("input", () => {{
+    curQuery = search.value.trim().toLowerCase();
+    applyFilter();
+  }});
 
-  // 默认按调研时间排序
   applySort("time");
 </script>
 </body>

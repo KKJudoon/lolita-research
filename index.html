@@ -14,277 +14,268 @@
   a:hover { color: #8a6a3a; }
   a.bare { border-bottom: none; }
 
-  .summary-card {
-    display: flex; gap: 16px; padding: 16px; margin-bottom: 12px;
-    background: white; border-radius: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-    transition: transform 0.15s, box-shadow 0.15s;
-    color: #1a1a1a;
-  }
-  .summary-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); border-bottom: none; }
-  .thumb { flex-shrink: 0; width: 140px; height: 180px; border-radius: 8px; overflow: hidden; background: #eee; }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .no-thumb { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 12px; }
-  .info { flex: 1; min-width: 0; }
-  .title { font-size: 18px; font-weight: 600; margin-bottom: 2px; }
-  .sub { color: #888; font-size: 13px; margin-bottom: 10px; }
-  .facts { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: #444; margin-bottom: 8px; }
-  .fact b { color: #888; font-weight: normal; margin-right: 4px; }
-  .kws { display: flex; flex-wrap: wrap; gap: 4px; }
-  .kw { background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  body { max-width: 1280px; }
   .reports-bar { margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
   .report-link { color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }
   .report-link:hover { color: #c5a572; text-decoration: underline; }
-  .reports-sep { color: #c5a572; font-weight: bold; }
 
-  /* tabs */
-  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 12px; }
-  .tab { background: white; border: 1px solid #c8a868; color: #5a4a2a; padding: 6px 14px; border-radius: 18px; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
   .tab:hover { background: #faf3e0; }
-  .tab.active { background: #c8a868; color: white; }
-
-  /* sort */
-  .sort-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 13px; }
-  .sort-label { color: #888; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
   .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
   .sort:hover { background: #f7eed5; }
   .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
 
-  /* mobile: stack vertically */
-  @media (max-width: 640px) {
+  table.research { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05); font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; }
+  table.research tr:hover td { background: #fbf7e8; }
+
+  .col-status { width: 78px; }
+  .col-name { min-width: 220px; }
+  .col-name a.bare { color: #2c2418; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; }
+  .col-price { width: 200px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-sales { width: 90px; white-space: nowrap; font-weight: 600; }
+  .col-publish, .col-tuan { width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }
+  .col-style { min-width: 110px; }
+
+  .status { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; white-space: nowrap; font-weight: 500; }
+  .status-5 { background: #d4f4d4; color: #2c7a2c; }     /* 现货 */
+  .status-4 { background: #fde0e0; color: #a04020; }     /* 已开团 */
+  .status-3 { background: #fff2c8; color: #8a6a30; }     /* 再贩团 */
+  .status-2 { background: #e0e8f0; color: #506a8a; }     /* 加购中 */
+  .status-1 { background: #efe9d9; color: #6a5a30; }     /* 调研中 */
+  .status-0 { background: #f0eee8; color: #999; }        /* 加购未上架 */
+
+  .sales-top { color: #b00020; }
+  .sales-high { color: #c5a572; }
+  .sales-mid { color: #5a4a2a; }
+  .sales-low { color: #888; }
+  .sales-none { color: #ccc; font-weight: 400; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+
+  @media (max-width: 720px) {
     body { padding: 12px 8px; }
-    .summary-card { flex-direction: column; gap: 10px; padding: 12px; }
-    .thumb { width: 100%; height: 220px; }
-    .title { font-size: 17px; }
-    .facts { gap: 6px 12px; font-size: 12px; }
-    .tab { font-size: 12px; padding: 5px 10px; }
+    table.research { font-size: 11px; display: block; overflow-x: auto; }
+    table.research th, table.research td { padding: 6px 8px; }
+    .col-publish, .col-tuan { display: none; }
+    .col-name .brand { font-size: 10px; }
   }
 </style>
 </head>
 <body>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 2026-04-30 13:01 · 共 11 款 · 点卡片看款式细节</div>
+  <div class="meta">最后更新 2026-04-29 22:31 · 共 11 款 · 点行查看详情</div>
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
-    <span class="reports-sep">·</span>
-    <a href="reports/junlo_leaderboard.html" class="report-link">🏆 军lo + 王子系销量排行榜</a>
   </div>
-  <div class="tabs"><button class="tab active" data-style="all">全部 (11)</button><button class="tab" data-style="军lo">军lo (7)</button><button class="tab" data-style="哥特">哥特 (2)</button><button class="tab" data-style="王子lo">王子lo (6)</button><button class="tab" data-style="中华">中华 (1)</button></div>
-  <div class="sort-bar">
-    <span class="sort-label">排序：</span>
-    <button class="sort active" data-sort="time">最近调研 ↓</button>
-    <button class="sort" data-sort="sales">销量 ↓</button>
+  <div class="toolbar">
+    <div class="toolbar-section">
+      <span class="toolbar-label">风格</span>
+      <button class="tab active" data-style="all">全部 (11)</button><button class="tab" data-style="军lo">军lo (7)</button><button class="tab" data-style="哥特">哥特 (2)</button><button class="tab" data-style="王子lo">王子lo (6)</button><button class="tab" data-style="中华">中华 (1)</button>
+    </div>
+    <div class="toolbar-section">
+      <span class="toolbar-label">排序</span>
+      <button class="sort active" data-sort="time">最近调研 ↓</button>
+      <button class="sort" data-sort="sales">销量 ↓</button>
+    </div>
+    <div class="toolbar-section">
+      <input type="search" class="search-input" id="search" placeholder="搜索款名 / 品牌">
+    </div>
   </div>
-  <div id="cards">
-  
-    <a class="summary-card bare" data-styles="军lo 哥特" data-sales="95" data-time="1777392000000" href="items/alicegirl_poxiaozhe.html">
-      <div class="thumb"><img src="images/Alicegirl_破晓者/weibo_official_QnSD0AD9g_1.jpg" alt="破晓者（Alicegirl 重工军lo 套装）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">破晓者（Alicegirl 重工军lo 套装）</div>
-        <div class="sub">Alicegirl 原创工作室 · Alicegirl 内部团队（官号原话『这款改了四版终于可以给老婆们看了』暗示有内部 design review 流程）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> OP ¥178 · 整套 ¥1018</span>
-          <span class="fact"><b>上新</b> 2026-01-10 官号自发图透 → 2026-01-13 汇总号转图透 → 2026-01-18 一团截单 → 2026-01-22~25 汇总号持续转发 → 2026-02-03 南京店二团</span>
-          <span class="fact"><b>店铺</b> Alice girl原创设计</span>
-          <span class="fact"><b>销量</b> 95人付款（jsk）</span>
-        </div>
-        <div class="kws"><span class="kw">重工配件六件可拆（jsk+衬衫+斗篷+绶带+胸章+op）</span><span class="kw">中端段全套 ¥1018</span><span class="kw">学院风军lo 标签（区别于樱洛芙骑士军lo / PC 中世纪军lo）</span><span class="kw">改 4 版品控（官号原话）</span><span class="kw">微博节奏完整 + 主店副店双号</span><span class="kw">XHS 流量薄（39 likes 自发帖）</span></div>
-      </div>
-    </a>
+  <table class="research">
+    <thead>
+      <tr>
+        <th>状态</th>
+        <th>款名 / 品牌</th>
+        <th>价格</th>
+        <th>销量</th>
+        <th>发布</th>
+        <th>一团</th>
+        <th>风格</th>
+      </tr>
+    </thead>
+    <tbody id="rows">
+
+    <tr data-sales="95" data-time="1777446000000" data-status-priority="4" data-styles="军lo 哥特">
+      <td class="col-status"><span class="status status-4">已开团</span></td>
+      <td class="col-name"><a class="bare" href="items/alicegirl_poxiaozhe.html"><div class="title">破晓者（Alicegirl 重工军lo 套装）</div><div class="brand">Alicegirl 原创工作室</div></a></td>
+      <td class="col-price">整套 ¥1018 · OP ¥178 · JSK ¥348</td>
+      <td class="col-sales sales-low">95人付款（jsk）</td>
+      <td class="col-publish">2026-01</td>
+      <td class="col-tuan">2026-01-10</td>
+      <td class="col-style"><span class="chip">军lo</span><span class="chip">哥特</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="王子lo" data-sales="1000" data-time="1777219200000" href="items/pc_hongyuhei_4.0.html">
-      <div class="thumb"><img src="images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_1.jpg" alt="红与黑 4.0（PC 原创设计王子系长马甲套装）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">红与黑 4.0（PC 原创设计王子系长马甲套装）</div>
-        <div class="sub">PC 原创设计（PrincessChronicles） · PC 原创设计（圈内王子系五大原创品牌之一，看家代表款『猎兔』）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> —</span>
-          <span class="fact"><b>上新</b> 2024-11-29 汇总号转发图透 → 2024-12-09 PC官号自发图透 → 2025-01-06 截单（『1.6↑』标记）→ 2025-07 出货</span>
-          <span class="fact"><b>店铺</b> princess Chronicles</span>
-          <span class="fact"><b>销量</b> 千人加购（detail SKU 显示『千人加购』）</span>
-        </div>
-        <div class="kws"><span class="kw">PC 王子系五大原创头部品牌</span><span class="kw">看家款第 4 代重团（5+ 年 IP）</span><span class="kw">版型口碑（圈内『修身显瘦帅气』标签）</span><span class="kw">完整微博营销节奏（图透→视频→截单→lookbook）</span><span class="kw">黑红配色 × 中世纪暗黑王子</span><span class="kw">店铺好评率 99%</span></div>
-      </div>
-    </a>
+    <tr data-sales="1000" data-time="1777273200000" data-status-priority="3" data-styles="王子lo">
+      <td class="col-status"><span class="status status-3">再贩团</span></td>
+      <td class="col-name"><a class="bare" href="items/pc_hongyuhei_4.0.html"><div class="title">红与黑 4.0（PC 原创设计王子系长马甲套装）</div><div class="brand">PC 原创设计（PrincessChronicles）</div></a></td>
+      <td class="col-price">—</td>
+      <td class="col-sales sales-high">千人加购（detail SKU 显示『千人加购』）</td>
+      <td class="col-publish">2024-11</td>
+      <td class="col-tuan">2024-11-29</td>
+      <td class="col-style"><span class="chip">王子lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo" data-sales="0" data-time="1777392000000" href="items/vancy_souchazhe.html">
-      <div class="thumb"><img src="images/Vancy_搜查者/weibo_official_QCWanCjGU_1.jpg" alt="搜查者（Vancy 梵希军lo 三件套+枪套）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">搜查者（Vancy 梵希军lo 三件套+枪套）</div>
-        <div class="sub">Vancy 梵希 · Vancy 梵希内部团队（圈内称『梵希』，主打工艺型小而美原创品牌）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> 整套 ¥510</span>
-          <span class="fact"><b>上新</b> 2021-08-27 首发开团 → ... → 2026-04-29 20:00 启动早古款再片反 → 2026-05-29 24:00 截单</span>
-          <span class="fact"><b>店铺</b> Vancy梵希</span>
-          <span class="fact"><b>销量</b> —</span>
-        </div>
-        <div class="kws"><span class="kw">5 年长寿看家款（2021→2026）</span><span class="kw">圈内工艺顶级口碑（『梵希yyds』）</span><span class="kw">三件套 + 枪套配件 ¥510 全套</span><span class="kw">军绿主推暗示 OG 军装风（区别于 黑红 / 暗黑）</span><span class="kw">慢营销 + 口碑型品牌</span><span class="kw">Vancy 整店销量低但维持 5+ 年</span></div>
-      </div>
-    </a>
+    <tr data-sales="0" data-time="1777446000000" data-status-priority="3" data-styles="军lo">
+      <td class="col-status"><span class="status status-3">再贩团</span></td>
+      <td class="col-name"><a class="bare" href="items/vancy_souchazhe.html"><div class="title">搜查者（Vancy 梵希军lo 三件套+枪套）</div><div class="brand">Vancy 梵希</div></a></td>
+      <td class="col-price">整套 ¥510</td>
+      <td class="col-sales sales-none">—</td>
+      <td class="col-publish">2021-08</td>
+      <td class="col-tuan">2021-08-27</td>
+      <td class="col-style"><span class="chip">军lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo" data-sales="300" data-time="1777219200000" href="items/yourhighness_qishijingshen.html">
-      <div class="thumb"><img src="images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" alt="骑士精神（王子系军lo / 大斗篷套装）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">骑士精神（王子系军lo / 大斗篷套装）</div>
-        <div class="sub">YourHighness永恒银河 · YourHighness永恒银河（品牌方主导，画师/设计师未独立署名 — 看起来是 in-house 团队作品）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> —</span>
-          <span class="fact"><b>上新</b> 2024-09-15（情报+价格公布）→ 2024-09-18（图透海报）→ 持续在售（淘宝至 2026-04 仍有 ¥98 SKU 链接）</span>
-          <span class="fact"><b>店铺</b> YourHighness永恒银河</span>
-          <span class="fact"><b>销量</b> 300+人付款</span>
-        </div>
-        <div class="kws"><span class="kw">王子军lo 重套</span><span class="kw">5米大斗篷</span><span class="kw">嘉德礼服 + 夏尔斗篷致敬</span><span class="kw">全套 ≈ ¥1700</span><span class="kw">圈内挂烂工艺差</span><span class="kw">在 PDD 走厂货</span></div>
-      </div>
-    </a>
+    <tr data-sales="300" data-time="1777273200000" data-status-priority="5" data-styles="军lo">
+      <td class="col-status"><span class="status status-5">现货</span></td>
+      <td class="col-name"><a class="bare" href="items/yourhighness_qishijingshen.html"><div class="title">骑士精神（王子系军lo / 大斗篷套装）</div><div class="brand">YourHighness永恒银河</div></a></td>
+      <td class="col-price">—</td>
+      <td class="col-sales sales-mid">300+人付款</td>
+      <td class="col-publish">2024-09</td>
+      <td class="col-tuan">2024-09-15</td>
+      <td class="col-style"><span class="chip">军lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="王子lo" data-sales="1000" data-time="1777219200000" href="items/shaonyongdao_daogaozhe.html">
-      <div class="thumb"><img src="images/少女的永无岛_祷告者/taobao_official_sku_2.jpg" alt="祷告者（少女的永无岛王子系套装）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">祷告者（少女的永无岛王子系套装）</div>
-        <div class="sub">少女的永无岛 原创工作室 · 少女的永无岛（品牌方负责设计/打版/工厂）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> —</span>
-          <span class="fact"><b>上新</b> 未知（无微博上新海报锚点；淘宝 item_id 869541734831 的具体上架日未公开）</span>
-          <span class="fact"><b>店铺</b> 少女的永无岛 原创工作室</span>
-          <span class="fact"><b>销量</b> 千人加购（未明确付款数）</span>
-        </div>
-        <div class="kws"><span class="kw">圣职系lo赛道（公认 sub-genre）</span><span class="kw">赛道竞品『安缇娅的祷告』更头部</span><span class="kw">品牌仿冒泛滥（30+ 家店）</span><span class="kw">厂原/山寨边界争议</span><span class="kw">宗教/神职 vibe（祷告者）</span><span class="kw">现货款 7 天无理由</span></div>
-      </div>
-    </a>
+    <tr data-sales="1000" data-time="1777273200000" data-status-priority="5" data-styles="王子lo">
+      <td class="col-status"><span class="status status-5">现货</span></td>
+      <td class="col-name"><a class="bare" href="items/shaonyongdao_daogaozhe.html"><div class="title">祷告者（少女的永无岛王子系套装）</div><div class="brand">少女的永无岛 原创工作室</div></a></td>
+      <td class="col-price">—</td>
+      <td class="col-sales sales-high">千人加购（未明确付款数）</td>
+      <td class="col-publish">—</td>
+      <td class="col-tuan">—</td>
+      <td class="col-style"><span class="chip">王子lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo 中华" data-sales="700" data-time="1777219200000" href="items/yingyue_longyao.html">
-      <div class="thumb"><img src="images/映月_龙曜/taobao_official_sku_2.jpg" alt="龙曜" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">龙曜</div>
-        <div class="sub">映月原创设计 · 映月原创设计（品牌方负责打版/打布样/工厂/工艺）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> —</span>
-          <span class="fact"><b>上新</b> 2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货</span>
-          <span class="fact"><b>店铺</b> 映月原创设计</span>
-          <span class="fact"><b>销量</b> 700+人付款</span>
-        </div>
-        <div class="kws"><span class="kw">汉洋折衷</span><span class="kw">中华风军lo</span><span class="kw">金线刺绣</span><span class="kw">立领衬衫+斗篷套装</span><span class="kw">¥498-583 价位段</span><span class="kw">集赞营销分发</span></div>
-      </div>
-    </a>
+    <tr data-sales="700" data-time="1777273200000" data-status-priority="4" data-styles="军lo 中华">
+      <td class="col-status"><span class="status status-4">已开团</span></td>
+      <td class="col-name"><a class="bare" href="items/yingyue_longyao.html"><div class="title">龙曜</div><div class="brand">映月原创设计</div></a></td>
+      <td class="col-price">—</td>
+      <td class="col-sales sales-mid">700+人付款</td>
+      <td class="col-publish">2026-03</td>
+      <td class="col-tuan">2026-03-18</td>
+      <td class="col-style"><span class="chip">军lo</span><span class="chip">中华</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="400" data-time="1777219200000" href="items/weizhixingchen_jichengren.html">
-      <div class="thumb"><img src="images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" alt="继承人（王子系军lo · 红色款）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">继承人（王子系军lo · 红色款）</div>
-        <div class="sub">未知星辰的来信 · 未知星辰的来信（品牌方负责打版/打布样/工厂/工艺）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> 整套 ¥369</span>
-          <span class="fact"><b>上新</b> 2024-12-11（图透海报）→ 2025-02-19（现货上架）→ 持续在售（淘宝至 2026-04 仍 400+）</span>
-          <span class="fact"><b>店铺</b> 未知星辰的来信</span>
-          <span class="fact"><b>销量</b> 400+人付款</span>
-        </div>
-        <div class="kws"><span class="kw">白菜王子系</span><span class="kw">¥369 现货</span><span class="kw">三件套（衬衫+马甲+短裤）</span><span class="kw">cos 友好</span><span class="kw">兄弟款双色（继承人红/神权使者绿）</span><span class="kw">现货发货</span></div>
-      </div>
-    </a>
+    <tr data-sales="400" data-time="1777273200000" data-status-priority="5" data-styles="军lo 王子lo">
+      <td class="col-status"><span class="status status-5">现货</span></td>
+      <td class="col-name"><a class="bare" href="items/weizhixingchen_jichengren.html"><div class="title">继承人（王子系军lo · 红色款）</div><div class="brand">未知星辰的来信</div></a></td>
+      <td class="col-price">整套 ¥369</td>
+      <td class="col-sales sales-mid">400+人付款</td>
+      <td class="col-publish">2024-12</td>
+      <td class="col-tuan">2024-12-11</td>
+      <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="40000" data-time="1777132800000" href="items/yingluofu_zhongyan_2.0.html">
-      <div class="thumb"><img src="images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" alt="终焉圣骸 2.0" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">终焉圣骸 2.0</div>
-        <div class="sub">樱洛芙Lolita · 樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> OP ¥520 · 整套 ¥648</span>
-          <span class="fact"><b>上新</b> 2025-10-18 ~ 2025-11-18</span>
-          <span class="fact"><b>店铺</b> 樱洛芙lolita官方店</span>
-          <span class="fact"><b>销量</b> 4万+人付款</span>
-        </div>
-        <div class="kws"><span class="kw">军lo破圈</span><span class="kw">蓝黑骑士感</span><span class="kw">黑金最稳</span><span class="kw">红黑褪色担忧</span><span class="kw">白金被砍</span><span class="kw">意向金月增 5×</span></div>
-      </div>
-    </a>
+    <tr data-sales="40000" data-time="1777186800000" data-status-priority="4" data-styles="军lo 王子lo">
+      <td class="col-status"><span class="status status-4">已开团</span></td>
+      <td class="col-name"><a class="bare" href="items/yingluofu_zhongyan_2.0.html"><div class="title">终焉圣骸 2.0</div><div class="brand">樱洛芙Lolita</div></a></td>
+      <td class="col-price">整套 ¥648 · OP ¥520</td>
+      <td class="col-sales sales-top">4万+人付款</td>
+      <td class="col-publish">2025-10</td>
+      <td class="col-tuan">2025-10-18</td>
+      <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="哥特" data-sales="10000" data-time="1777219200000" href="items/yingluofu_gulong.html">
-      <div class="thumb"><img src="images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" alt="骨龙（暗黑哥特 JSK）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">骨龙（暗黑哥特 JSK）</div>
-        <div class="sub">樱洛芙Lolita · 樱洛芙Lolita（品牌方负责打版/打布样/工厂/工艺）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> —</span>
-          <span class="fact"><b>上新</b> 2026-01-17（首次海报上新）→ 2026-01-21（新增黑紫黑绿）→ 仍在收意向金（截单时间未明）</span>
-          <span class="fact"><b>店铺</b> 樱洛芙lolita官方店</span>
-          <span class="fact"><b>销量</b> 1万+人付款</span>
-        </div>
-        <div class="kws"><span class="kw">暗黑哥特 JSK</span><span class="kw">8 色 SKU</span><span class="kw">黑红色样衣已确定</span><span class="kw">废土色千人加购</span><span class="kw">意向金 1万+</span><span class="kw">同名款警告（vs alicegirl 骨龙）</span></div>
-      </div>
-    </a>
+    <tr data-sales="10000" data-time="1777273200000" data-status-priority="4" data-styles="哥特">
+      <td class="col-status"><span class="status status-4">已开团</span></td>
+      <td class="col-name"><a class="bare" href="items/yingluofu_gulong.html"><div class="title">骨龙（暗黑哥特 JSK）</div><div class="brand">樱洛芙Lolita</div></a></td>
+      <td class="col-price">—</td>
+      <td class="col-sales sales-top">1万+人付款</td>
+      <td class="col-publish">2026-01</td>
+      <td class="col-tuan">2026-01-17</td>
+      <td class="col-style"><span class="chip">哥特</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="军lo 王子lo" data-sales="0" data-time="1777132800000" href="items/maomiwanan_juanjuan.html">
-      <div class="thumb"><img src="images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" alt="卷卷（军LO）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">卷卷（军LO）</div>
-        <div class="sub">猫咪晚安洛丽塔原创设计 · 猫咪晚安洛丽塔原创设计（品牌方负责打版/打布样/工厂/工艺）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> 整套 ¥368</span>
-          <span class="fact"><b>上新</b> 未定（试样图 2026-03-05；投票加色帖 2026-04-05）</span>
-          <span class="fact"><b>店铺</b> 猫咪晚安洛丽塔原创设计</span>
-          <span class="fact"><b>销量</b> —</span>
-        </div>
-        <div class="kws"><span class="kw">¥368 中价段</span><span class="kw">社区投票 加色</span><span class="kw">小红书 主战场</span><span class="kw">试样到 投票 一月节奏</span><span class="kw">品牌主营低价（¥29.9 起）</span><span class="kw">军lo 是品类扩展不是主线</span></div>
-      </div>
-    </a>
+    <tr data-sales="0" data-time="1777186800000" data-status-priority="0" data-styles="军lo 王子lo">
+      <td class="col-status"><span class="status status-0">加购未上架</span></td>
+      <td class="col-name"><a class="bare" href="items/maomiwanan_juanjuan.html"><div class="title">卷卷（军LO）</div><div class="brand">猫咪晚安洛丽塔原创设计</div></a></td>
+      <td class="col-price">整套 ¥368</td>
+      <td class="col-sales sales-none">—</td>
+      <td class="col-publish">2026-03</td>
+      <td class="col-tuan">2026-03-05</td>
+      <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
+    </tr>
     
 
-    <a class="summary-card bare" data-styles="王子lo" data-sales="400" data-time="1777219200000" href="items/dierchengbao_tangguopu.html">
-      <div class="thumb"><img src="images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_1.jpg" alt="糖果铺（第二城堡王子系 · 甜基佬套装）" loading="lazy"/></div>
-      <div class="info">
-        <div class="title">糖果铺（第二城堡王子系 · 甜基佬套装）</div>
-        <div class="sub">第二城堡 CastleToo · 第二城堡（品牌方负责设计/打版/工厂）</div>
-        <div class="facts">
-          <span class="fact"><b>价格</b> 整套 ¥406</span>
-          <span class="fact"><b>上新</b> 2025-07-01 ~ 2025-07-31（二团重团；老链接 917187493014 一团已截单 400+，新链接 1030474963498 是 2026 当前在售的定金卡）</span>
-          <span class="fact"><b>店铺</b> 第二城堡CastleToo</span>
-          <span class="fact"><b>销量</b> 400+人付款（老链接 917187493014）</span>
-        </div>
-        <div class="kws"><span class="kw">黑甜系王子（圈内稀缺组合）</span><span class="kw">三件套白菜价（全套 ¥406）</span><span class="kw">童话 oc 友好（糖果推销员人设）</span><span class="kw">重团款（『久违的小甜基』）</span><span class="kw">蝴蝶结 4 个配件</span><span class="kw">微博营销重于 XHS</span></div>
-      </div>
-    </a>
+    <tr data-sales="400" data-time="1777273200000" data-status-priority="4" data-styles="王子lo">
+      <td class="col-status"><span class="status status-4">已开团</span></td>
+      <td class="col-name"><a class="bare" href="items/dierchengbao_tangguopu.html"><div class="title">糖果铺（第二城堡王子系 · 甜基佬套装）</div><div class="brand">第二城堡 CastleToo</div></a></td>
+      <td class="col-price">整套 ¥406</td>
+      <td class="col-sales sales-mid">400+人付款（老链接 917187493014）</td>
+      <td class="col-publish">2025-07</td>
+      <td class="col-tuan">2025-07-01</td>
+      <td class="col-style"><span class="chip">王子lo</span></td>
+    </tr>
     
-  </div>
+    </tbody>
+  </table>
 <script>
   const tabs = document.querySelectorAll(".tab");
   const sorts = document.querySelectorAll(".sort");
-  const cardsContainer = document.getElementById("cards");
-  const allCards = Array.from(cardsContainer.querySelectorAll(".summary-card"));
+  const search = document.getElementById("search");
+  const tbody = document.getElementById("rows");
+  const allRows = Array.from(tbody.querySelectorAll("tr"));
 
-  function applyFilter(style) {
-    allCards.forEach(c => {
-      const styles = (c.dataset.styles || "").split(" ");
-      c.style.display = (style === "all" || styles.includes(style)) ? "" : "none";
+  let curStyle = "all";
+  let curQuery = "";
+
+  function applyFilter() {
+    allRows.forEach(r => {
+      const styles = (r.dataset.styles || "").split(" ");
+      const styleOk = curStyle === "all" || styles.includes(curStyle);
+      const text = r.textContent.toLowerCase();
+      const queryOk = !curQuery || text.includes(curQuery);
+      r.style.display = styleOk && queryOk ? "" : "none";
     });
   }
   function applySort(key) {
-    const sorted = [...allCards].sort((a, b) => {
+    const sorted = [...allRows].sort((a, b) => {
+      const pa = parseInt(a.dataset.statusPriority || 0);
+      const pb = parseInt(b.dataset.statusPriority || 0);
+      // 加购未上架(0) 永远在最后，不论按什么排序
+      if (pa === 0 && pb !== 0) return 1;
+      if (pb === 0 && pa !== 0) return -1;
       const va = parseInt(a.dataset[key] || 0);
       const vb = parseInt(b.dataset[key] || 0);
-      return vb - va;  // 倒序：销量大的 / 时间近的 在前
+      return vb - va;
     });
-    sorted.forEach(c => cardsContainer.appendChild(c));
+    sorted.forEach(r => tbody.appendChild(r));
   }
 
   tabs.forEach(t => t.addEventListener("click", () => {
     tabs.forEach(x => x.classList.remove("active"));
     t.classList.add("active");
-    applyFilter(t.dataset.style);
+    curStyle = t.dataset.style;
+    applyFilter();
   }));
   sorts.forEach(s => s.addEventListener("click", () => {
     sorts.forEach(x => x.classList.remove("active"));
     s.classList.add("active");
     applySort(s.dataset.sort);
   }));
+  search.addEventListener("input", () => {
+    curQuery = search.value.trim().toLowerCase();
+    applyFilter();
+  });
 
-  // 默认按调研时间排序
   applySort("time");
 </script>
 </body>
