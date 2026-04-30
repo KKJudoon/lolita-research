@@ -206,6 +206,9 @@ def write_index(items):
   .fact b {{ color: #888; font-weight: normal; margin-right: 4px; }}
   .kws {{ display: flex; flex-wrap: wrap; gap: 4px; }}
   .kw {{ background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }}
+  .reports-bar {{ margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; }}
+  .report-link {{ color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }}
+  .report-link:hover {{ color: #c5a572; text-decoration: underline; }}
 
   /* tabs */
   .tabs {{ display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 20px; }}
@@ -227,6 +230,7 @@ def write_index(items):
 <body>
   <h1>Lolita 款式调研</h1>
   <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点卡片看款式细节</div>
+  <div class="reports-bar"><a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2) →</a></div>
   <div class="tabs">{tab_buttons}</div>
   <div id="cards">
   {cards_html}
