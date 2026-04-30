@@ -82,8 +82,13 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 军lo, 王子系, viral 借势 Lolita coordinate. Style: YourHighness 永恒银河借 2026 Q2『少女暴君』viral 浪潮开的款。淘宝 ¥30 定金 / 400+ 付款（一个月达成，4-30 截团）。命名直接借势，但 YourHighness 圈内黑红常驻（抄袭质疑 + 价格虚高反面教材，参见 [骑士精神](items/yourhighne"
   },
-  "posters": [],
-  "posters_source": "图源待补——品牌微博渠道弱 / 借势新品微博无 post（基础调研阶段未抓图）。后续可走品牌客服 / 淘宝商品页 / XHS 官号补。",
+  "posters": [
+    "images/YourHighness_少女暴君黎明之战/xhs_yh_1.jpg",
+    "images/YourHighness_少女暴君黎明之战/xhs_yh_2.jpg",
+    "images/YourHighness_少女暴君黎明之战/xhs_yh_3.jpg",
+    "images/YourHighness_少女暴君黎明之战/xhs_yh_4.jpg"
+  ],
+  "posters_source": "XHS YourHighness 永恒银河官号 (user 5ca6647c) 4 张 cover：『4月30日截团🗡️』(直接对应款的截团时间) + 银翼-完全体 + 异域华章 + 4月28 晚8点。仅 cover 缩略，款专属完整 lookbook 待补。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "破圈",
