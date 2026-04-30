@@ -94,7 +94,7 @@ def _extract_release_dates(item):
 
 
 def _extract_main_prices(price):
-    """整套 + OP + JSK 主价（不展示定金/配饰）"""
+    """整套 + OP + JSK 主价（不展示定金/配饰）；fallback 到 estimate / breakdown / list."""
     if not price:
         return "—"
     parts = []
@@ -105,7 +105,27 @@ def _extract_main_prices(price):
         parts.append(f'OP ¥{price["op"]}')
     if price.get("jsk"):
         parts.append(f'JSK ¥{price["jsk"]}')
-    return " · ".join(parts) if parts else "—"
+    if parts:
+        return " · ".join(parts)
+    # fallback: full_set_estimate
+    fse = price.get("full_set_estimate")
+    if fse:
+        s = str(fse)
+        return s if s.startswith('¥') or s.startswith('约') else f'整套 ¥{s}'
+    # fallback: price_breakdown 取『非意向金 · 大全套』优先
+    pb = price.get("price_breakdown")
+    if pb and isinstance(pb, dict):
+        # 优先非意向金 + 大全套 / 全套 / 整套
+        for keyword in ['非意向金 · 大全套', '非意向金 · 小全套', '大全套', '小全套', '基础套', '整套', '全套']:
+            for k, v in pb.items():
+                if keyword in k:
+                    label = "整套" if "全套" in k or "整套" in k else k.split("·")[-1].strip() if "·" in k else "套"
+                    return f'{label} {v}'
+    # fallback: list_price_at_research（剔除意向金 / 定金 抵扣）
+    lpr = price.get("list_price_at_research") or ""
+    if lpr and "意向金" not in lpr and "定金" not in lpr:
+        return lpr
+    return "未公开"
 
 
 def normalize_xhs_url(u):
@@ -213,6 +233,24 @@ def render_summary_row(item):
     pop = item.get("popularity", {}) or {}
     composite = pop.get("composite_label", "调研中")
     pop_rank = POPULARITY_RANK.get(composite, 20)
+    evidence = pop.get("evidence", []) or []
+    scale_t = pop.get("scale_tier", "—")
+    buzz_t = pop.get("buzz_tier", "—")
+    auth_t = pop.get("authority_tier", "—")
+    resale_t = pop.get("resale_tier", "—")
+    evidence_json = html.escape(json.dumps({
+        "name": item.get("name", ""),
+        "label": composite,
+        "scale": scale_t,
+        "buzz": buzz_t,
+        "authority": auth_t,
+        "resale": resale_t,
+        "evidence": evidence,
+    }, ensure_ascii=False))
+
+    posters = item.get("posters", []) or []
+    thumb = posters[0] if posters else ""
+    thumb_html = f'<img src="{esc(thumb)}" loading="lazy" alt="" />' if thumb else '<div class="no-thumb">—</div>'
 
     style_tags = item.get("style_tags", []) or []
     canonical = []
@@ -236,10 +274,11 @@ def render_summary_row(item):
 
     return f'''
     <tr data-sales="{sales_v}" data-time="{research_ts}" data-pop="{pop_rank}" data-status-priority="{status_priority}" data-styles="{" ".join(esc(s) for s in canonical)}">
-      <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
+      <td class="col-thumb"><a class="bare" href="{esc(detail_url)}">{thumb_html}</a></td>
       <td class="col-name"><a class="bare" href="{esc(detail_url)}"><div class="title">{name}</div><div class="brand">{brand}</div></a></td>
+      <td class="col-pop"><button class="pop-btn {pop_class}" data-evidence="{evidence_json}">{esc(composite)} <span class="pop-info">ⓘ</span></button></td>
       <td class="col-price">{esc(price_str)}</td>
-      <td class="col-pop"><span class="pop-label {pop_class}">{esc(composite)}</span></td>
+      <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
       <td class="col-publish">{esc(publish_short or "—")}</td>
       <td class="col-tuan">{esc(tuan_short or "—")}</td>
       <td class="col-style">{style_chips}</td>
@@ -310,13 +349,19 @@ def write_index(items):
   table.research td {{ padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; }}
   table.research tr:hover td {{ background: #fbf7e8; }}
 
+  .col-thumb {{ width: 64px; padding: 4px 6px; }}
+  .col-thumb img {{ width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }}
+  .col-thumb .no-thumb {{ width: 50px; height: 64px; border-radius: 4px; background: #f0eee8; color: #ccc; display: flex; align-items: center; justify-content: center; font-size: 11px; }}
   .col-status {{ width: 78px; }}
-  .col-name {{ min-width: 220px; }}
+  .col-name {{ min-width: 200px; }}
   .col-name a.bare {{ color: #2c2418; }}
   .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; }}
   .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; }}
-  .col-price {{ width: 200px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }}
-  .col-pop {{ width: 130px; white-space: nowrap; }}
+  .col-price {{ width: 180px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }}
+  .col-pop {{ width: 150px; white-space: nowrap; }}
+  .pop-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; transition: filter 0.15s; }}
+  .pop-btn:hover {{ filter: brightness(1.1); }}
+  .pop-btn .pop-info {{ font-size: 10px; opacity: 0.7; }}
   .pop-label {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }}
   .pop-top {{ background: #b00020; color: white; }}
   .pop-high {{ background: #c5a572; color: white; }}
@@ -325,6 +370,23 @@ def write_index(items):
   .pop-none {{ background: #f0eee8; color: #ccc; }}
   .col-publish, .col-tuan {{ width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }}
   .col-style {{ min-width: 110px; }}
+
+  /* popularity modal */
+  .pop-modal {{ position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }}
+  .pop-modal.open {{ display: flex; }}
+  .pop-modal-card {{ background: white; border-radius: 12px; max-width: 560px; width: 100%; padding: 24px 26px; box-shadow: 0 12px 48px rgba(0,0,0,0.25); position: relative; max-height: 85vh; overflow-y: auto; }}
+  .pop-modal-close {{ position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 24px; cursor: pointer; color: #999; line-height: 1; }}
+  .pop-modal-close:hover {{ color: #2c2418; }}
+  .pop-modal-name {{ font-size: 18px; font-weight: 600; color: #2c2418; margin: 0 30px 6px 0; }}
+  .pop-modal-tag-row {{ margin: 4px 0 14px; }}
+  .pop-modal-dims {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 12px 0 16px; }}
+  .pop-modal-dim {{ background: #fbf7e8; padding: 8px 10px; border-radius: 6px; }}
+  .pop-modal-dim .dim-label {{ font-size: 11px; color: #888; }}
+  .pop-modal-dim .dim-value {{ font-size: 13px; font-weight: 600; color: #5a4a2a; margin-top: 2px; }}
+  .pop-modal-evlabel {{ font-size: 12px; color: #6a5a30; font-weight: 600; margin: 8px 0 6px; }}
+  .pop-modal-ev {{ margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.7; color: #444; }}
+  .pop-modal-ev li {{ margin-bottom: 4px; }}
+  @media (max-width: 600px) {{ .pop-modal-dims {{ grid-template-columns: repeat(2, 1fr); }} }}
 
   .status {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; white-space: nowrap; font-weight: 500; }}
   .status-5 {{ background: #d4f4d4; color: #2c7a2c; }}     /* 现货 */
@@ -374,10 +436,11 @@ def write_index(items):
   <table class="research">
     <thead>
       <tr>
-        <th>状态</th>
+        <th></th>
         <th>款名 / 品牌</th>
-        <th>价格</th>
         <th>畅销度</th>
+        <th>价格</th>
+        <th>状态</th>
         <th>发布</th>
         <th>一团</th>
         <th>风格</th>
@@ -387,6 +450,18 @@ def write_index(items):
 {rows_html}
     </tbody>
   </table>
+
+  <div id="pop-modal" class="pop-modal" onclick="closePopModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closePopModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="pop-modal-name"></div>
+      <div class="pop-modal-tag-row"><span id="pop-modal-label" class="pop-label"></span></div>
+      <div class="pop-modal-dims" id="pop-modal-dims"></div>
+      <div class="pop-modal-evlabel">销量与畅销度证据（4 维交叉）</div>
+      <ul class="pop-modal-ev" id="pop-modal-ev"></ul>
+    </div>
+  </div>
+
 <script>
   const tabs = document.querySelectorAll(".tab");
   const sorts = document.querySelectorAll(".sort");
@@ -437,6 +512,39 @@ def write_index(items):
   }});
 
   applySort("time");
+
+  // popularity click → modal with evidence
+  const popModal = document.getElementById("pop-modal");
+  const popModalName = document.getElementById("pop-modal-name");
+  const popModalLabel = document.getElementById("pop-modal-label");
+  const popModalDims = document.getElementById("pop-modal-dims");
+  const popModalEv = document.getElementById("pop-modal-ev");
+  document.querySelectorAll(".pop-btn").forEach(btn => {{
+    btn.addEventListener("click", (e) => {{
+      e.preventDefault();
+      e.stopPropagation();
+      let data;
+      try {{ data = JSON.parse(btn.dataset.evidence); }} catch (err) {{ return; }}
+      popModalName.textContent = data.name || "";
+      popModalLabel.textContent = data.label || "";
+      popModalLabel.className = "pop-label " + btn.className.replace("pop-btn ", "");
+      popModalDims.innerHTML = `
+        <div class="pop-modal-dim"><div class="dim-label">规模</div><div class="dim-value">${{data.scale}}</div></div>
+        <div class="pop-modal-dim"><div class="dim-label">传播</div><div class="dim-value">${{data.buzz}}</div></div>
+        <div class="pop-modal-dim"><div class="dim-label">权威</div><div class="dim-value">${{data.authority}}</div></div>
+        <div class="pop-modal-dim"><div class="dim-label">保值</div><div class="dim-value">${{data.resale}}</div></div>
+      `;
+      popModalEv.innerHTML = (data.evidence || []).map(x => `<li>${{x.replace(/&/g,"&amp;").replace(/</g,"&lt;")}}</li>`).join("");
+      popModal.classList.add("open");
+    }});
+  }});
+  window.closePopModal = function(e) {{
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    popModal.classList.remove("open");
+  }};
+  document.addEventListener("keydown", (e) => {{
+    if (e.key === "Escape" && popModal.classList.contains("open")) popModal.classList.remove("open");
+  }});
 </script>
 </body>
 </html>'''
