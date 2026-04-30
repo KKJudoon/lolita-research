@@ -106,6 +106,23 @@
   .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
   .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
   .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
 
   /* mobile */
   @media (max-width: 640px) {
@@ -132,6 +149,16 @@
     <p class="summary">甜系 × 王子系复合款（圈内俗称『小甜基』）：白色高领衬衫 + 红黑/白灰对襟马甲 + 同色调短裤 + 4 个蝴蝶结配件。整体走『童话糖果铺主题 + 王子装设计』的甜系王子路线，与军lo / 暗黑王子（如终焉、骑士精神）形成对照——不要硬朗骑士感，要 cute / 童话感的中性王子。XHS 评论里多次出现『OC 衣柜』『三坑少女』tag，说明该款被作为 oc 服与二次元 cosplay 的廉价替代来用。是用户调研甜美风产品线的代表参考之一。</p>
     <div class="poster-grid"><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_1.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_1.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_2.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_2.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_3.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_3.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_4.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_4.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_5.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_5.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_6.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_6.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_7.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_7.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_8.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_8.jpg"/><img src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_9.jpg" loading="lazy" class="lb-img" data-src="../images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_9.jpg"/></div>
     <div class="posters-source">📷 来源：<a href="https://weibo.com/5993650397/PAhpd7Ljd" target="_blank">微博 上新海报 ↗</a></div>
+    
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label pop-high">甜系王子主流</span></h3>
+          <div class="pop-dims"><div class="pop-dim"><div class="pop-dim-label">规模</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">真实付款规模量级</div></div><div class="pop-dim"><div class="pop-dim-label">传播</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">圈内自然传播深度</div></div><div class="pop-dim"><div class="pop-dim-label">权威</div><div class="pop-dim-value">知名</div><div class="pop-dim-desc">圈内权威背书</div></div><div class="pop-dim"><div class="pop-dim-label">保值</div><div class="pop-dim-value">中保值</div><div class="pop-dim-desc">二级市场长尾</div></div></div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence"><li>淘宝老链接 400+ 付款（『中位』500-3k 单档下沿）</li><li>无人区自助售卖机 2025-06 真人成片 1626 likes + 蓝空koko 2025-05 真人成片 1376 likes 累计 ~3k（『中位』传播）</li><li>圈内『小甜基』标签共识形成（甜系 × 王子复合赛道）</li><li>本款『久违的小甜基』暗示重团 + 命中 2026 Q2 viral 浪潮（但开团早于 viral 爆点）</li></ul>
+          </div>
+        </section>
+        
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2025-07-01 ~ 2025-07-31（二团重团；老链接 917187493014 一团已截单 400+，新链接 1030474963498 是 2026 当前在售的定金卡）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 → 截单 → 出货</span></div><div class="row"><span class="k">海报首发</span><span class="v">2025-07-07（@第二城堡Lolita原创设计 微博官号自发图透抽奖帖）</span></div><div class="row note">运营节奏：2025-07-07 品牌官号微博自发上新图透 + 转发抽奖（评论卷过 300/600/800 送假发/衣服）→ 2025-07-09 @Lolita洋装上新 转发二团海报正文（『久违的小甜基』暗示之前出过类似款本次重团）→ 老链接 917187493014 累计 400+ 销量 → 2026-04 新定金链接 1030474963498 仍在售。文案『久违的小甜基』是该款的关键叙事——是品牌看家王子线的常规重团而非首发新品。</div></section>
       <section class="info"><h3>价格</h3><div class="row"><span class="k">整套</span><span class="v">¥406</span></div><div class="row"><span class="k">意向金</span><span class="v">¥¥8（定金卡，需补款） 抵 ¥30</span></div><div class="row note">**全款价格来自微博 @Lolita洋装上新 二团海报正文**：『Price：衬衫=128；马甲+短裤=278』。即衬衫 ¥128 单卖 + 马甲短裤 ¥278 套卖，全套 ¥406。淘宝 ¥8 是定金抵扣，需后续补款全款。圈内『白菜价』标签——¥&lt;500 全套属白菜段（与未知星辰继承人 ¥369 / 兔叽侦探 ¥68.6 同档）。第二城堡定位『中端偏白菜』。</div></section>

@@ -106,6 +106,23 @@
   .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
   .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
   .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
 
   /* mobile */
   @media (max-width: 640px) {
@@ -132,6 +149,16 @@
     <p class="summary">黑红主色（样衣已确定）的暗黑哥特 JSK：兜帽斗篷、蝙蝠胸饰、骨龙/骨头/十字符号刺绣下摆、紧身束腰 + 多层蕾丝裙。设计稿层次丰富，符合『哥特暗黑指数高』的圈内调侃公式（十字+蕾丝+暗色对比）。同 brand 终焉圣骸（军lo）一脉相承的繁复刺绣工艺。</p>
     <div class="poster-grid"><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg"/><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg"/><img src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg" loading="lazy" class="lb-img" data-src="../images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg"/></div>
     <div class="posters-source">📷 来源：<a href="https://weibo.com/5993650397/QnyMJ8Jqi" target="_blank">微博 上新海报 ↗</a></div>
+    
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label pop-high">暗黑哥特主流</span></h3>
+          <div class="pop-dims"><div class="pop-dim"><div class="pop-dim-label">规模</div><div class="pop-dim-value">头部</div><div class="pop-dim-desc">真实付款规模量级</div></div><div class="pop-dim"><div class="pop-dim-label">传播</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">圈内自然传播深度</div></div><div class="pop-dim"><div class="pop-dim-label">权威</div><div class="pop-dim-value">普通</div><div class="pop-dim-desc">圈内权威背书</div></div><div class="pop-dim"><div class="pop-dim-label">保值</div><div class="pop-dim-value">中保值</div><div class="pop-dim-desc">二级市场长尾</div></div></div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence"><li>淘宝意向金 1w+ 付款 → 真实付款估 3-5k（『头部』3k-1w 单档）</li><li>孝红服装细节控 04-27 3737 likes 工艺测评帖（樱洛芙整体做工对照信号）</li><li>同名款冲突（Alicegirl 也有骨龙）增加搜索流量但分散品牌识别</li><li>樱洛芙整体在 brands-reference top，但骨龙单款未进 KOL 横评 → 权威『普通』</li></ul>
+          </div>
+        </section>
+        
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2026-01-17（首次海报上新）→ 2026-01-21（新增黑紫黑绿）→ 仍在收意向金（截单时间未明）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款</span></div><div class="row"><span class="k">海报首发</span><span class="v">2026-01-17</span></div><div class="row note">1月17日发『新色图透』海报；1月21日宣布新增黑紫色💜和黑绿色💚，共6色；淘宝意向金链当前实际显示8 SKU（含白红、墨绿额外加色）。海报和淘宝 SKU 数量略对不上——属正常迭代过程。</div></section>
       <section class="info"><h3>价格</h3><div class="row"><span class="k">意向金</span><span class="v">¥5 抵 ¥30</span></div><div class="row note">全款价**官方至今未公开**。已 cross-platform 搜索：(1) 微博海报正文（1月17日图透 / 1月21日加色公告）只列颜色不列价格；(2) 淘宝意向金链商品页只显示 ¥5 抵扣不显示全款；(3) 小红书搜 6 种关键词（樱洛芙 骨龙 价格 / 全款 / op价 / 多少钱 / op fs / jsk 多少）— 4 月 4 日 Min 帖买家原话『想问问骨龙全套多少钱啊』评论里 25 条均无价格答复。这是该款决策上的真实痛点。同 brand 终焉圣骸 OP=520 / 整套=648 可作粗略参考，但骨龙是 JSK 不是 OP+整套，价格结构可能完全不同。</div></section>

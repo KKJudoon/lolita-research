@@ -199,5 +199,18 @@
     "design_thinking": "白菜价位段（¥368）做帝国军官仪仗感——元素简化但齐全（军帽 / 绶带 / 王冠 / 剑），覆盖王子军lo 的核心视觉签名。运营策略上让 community 投票决定加色（黑红 / 黑蓝 / 绿色 / 白蓝 / 白金）也是把『定位决定权』半交给买家——降低生产风险。",
     "for_image_gen_prompt": "Affordable military prince lolita ensemble: deep green velvet long coat with gold thread embroidery, plumed black-gold officer cap with gold star, gold sash with brand insignia, crown-embroidered waist corset, pommel sword/sceptre prop, asymmetric hem with gold-edged cross embroidery, Victorian-era European military court ceremony aesthetic"
   },
-  "posters_source": "品牌官号 XHS 颜色投票帖（69d1e7fe）里的官方试样图，4 张。猫咪晚安微博缺位，XHS 是该款官方海报主源。"
+  "posters_source": "品牌官号 XHS 颜色投票帖（69d1e7fe）里的官方试样图，4 张。猫咪晚安微博缺位，XHS 是该款官方海报主源。",
+  "popularity": {
+    "scale_tier": "加购未上架",
+    "buzz_tier": "冷启动",
+    "authority_tier": "未提及",
+    "resale_tier": "不流通",
+    "composite_label": "加购未上架",
+    "evidence": [
+      "淘宝无独立 SKU（运营路径：试样图 → 投票 → 开订）",
+      "XHS 投票帖 2349 likes 但是品牌官号自发，剔除集赞营销 / 官号自发后无自然 KOL 真人成片",
+      "微博渠道几乎缺位 → 多渠道营销弱",
+      "未在任何 KOL 横评帖出现"
+    ]
+  }
 }

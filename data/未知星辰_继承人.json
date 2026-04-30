@@ -282,5 +282,18 @@
     "design_thinking": "白菜价位段（¥369）做维多利亚男童正装 + 王室继承主题——元素简化（衬衫 + 马甲 + 短裤三件套）但视觉签名齐全（酒红 / 金线 / 胸链）。命名延伸双款故事（继承人 ↔ 神权使者）增加叙事感，让基础款也有概念支撑。**适合二次元手游男角色 cos**（已被买家用于战双帕弥什常羽 cos）—— 这是该款最强差异化定位（vs 标准王子系做礼服感）。",
     "for_image_gen_prompt": "Affordable Victorian boys' royal heir lolita prince ensemble: white puff-sleeve high-collar blouse, wine-red velvet waistcoat with gold thread embroidery, wine-red knickerbockers with gold-edged stripes, pocket watch chain across chest, color palette burgundy + gold (Habsburg / British royal), Eton/Victorian boyswear meets military prince aesthetic, suitable for cosplay of game young male royals"
   },
-  "posters_source": "微博官方海报。9 张来自品牌官号上架 post PeZ5fc8qO（2025-02-19）+ 4 张图透 post P4lyQ8CIS（2024-12-11）。"
+  "posters_source": "微博官方海报。9 张来自品牌官号上架 post PeZ5fc8qO（2025-02-19）+ 4 张图透 post P4lyQ8CIS（2024-12-11）。",
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "白菜畅销",
+    "evidence": [
+      "淘宝 400+ 现货付款（最准——下单即发，无意向金水分）",
+      "圈内王子系科普 9619 likes 帖（明确未列入五大原创头部清单 → 腰部品牌定位）",
+      "白菜价 ¥369 全套（继承人红 / 神权使者绿双 SKU 系列）",
+      "同品牌 兔叽侦探 ¥68.6 衬衫 600+ 付款 → 整店白菜段稳定走量"
+    ]
+  }
 }

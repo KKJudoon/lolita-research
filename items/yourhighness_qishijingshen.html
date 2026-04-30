@@ -106,6 +106,23 @@
   .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
   .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
   .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
 
   /* mobile */
   @media (max-width: 640px) {
@@ -132,6 +149,16 @@
     <p class="summary">蓝色 5 米大斗篷 + 红绶带 + 金线绣花绶带 + 珍珠链 + 金属胸针 + 蝴蝶结 + 燕尾外套 + 腰带 + 全套金属小物。设计灵感明确取自英国嘉德礼服与黑执事 Ciel 斗篷的改良版。整体王子军lo 重套路线，气场强但配件繁多、上身重（用户 repo 说 6-7 斤）。</p>
     <div class="poster-grid"><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" loading="lazy" class="lb-img" data-src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg"/><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqxgd8j31jk2231kx.jpg" loading="lazy" class="lb-img" data-src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqxgd8j31jk2231kx.jpg"/><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraas9vh0j31jk223hdt.jpg" loading="lazy" class="lb-img" data-src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraas9vh0j31jk223hdt.jpg"/><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraat796wj31jk223hdt.jpg" loading="lazy" class="lb-img" data-src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraat796wj31jk223hdt.jpg"/><img src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraarfqizj31jk223npd.jpg" loading="lazy" class="lb-img" data-src="../images/YourHighness_骑士精神/poster_006xCKgBgy1htraarfqizj31jk223npd.jpg"/></div>
     <div class="posters-source">📷 来源：<a href="https://weibo.com/2876088432/OxAghtxvd" target="_blank">微博 上新海报 ↗</a></div>
+    
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label pop-low">反面教材</span></h3>
+          <div class="pop-dims"><div class="pop-dim"><div class="pop-dim-label">规模</div><div class="pop-dim-value">腰部</div><div class="pop-dim-desc">真实付款规模量级</div></div><div class="pop-dim"><div class="pop-dim-label">传播</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">圈内自然传播深度</div></div><div class="pop-dim"><div class="pop-dim-label">权威</div><div class="pop-dim-value">黑红常驻</div><div class="pop-dim-desc">圈内权威背书</div></div><div class="pop-dim"><div class="pop-dim-label">保值</div><div class="pop-dim-value">低保值</div><div class="pop-dim-desc">二级市场长尾</div></div></div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence"><li>淘宝 300+ 付款（『腰部』100-500 单档）</li><li>yuancilang 2024-09 4445 likes『lo圈皇帝穿搭』圈内点评（讽刺意味）</li><li>圈内挂烂记录：抄袭质疑（明承认参考嘉德礼服+夏尔斗篷被吐照搬）+ 6-7 斤超重 + PDD 厂货加价 + ¥1700 全套 = 终焉圣骸 ¥648 的 2.6 倍</li><li>高单价低口碑反面教材（lolita-domain-knowledge brands-reference 黑红常驻记录）</li></ul>
+          </div>
+        </section>
+        
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2024-09-15（情报+价格公布）→ 2024-09-18（图透海报）→ 持续在售（淘宝至 2026-04 仍有 ¥98 SKU 链接）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 + 截单全款（截至 2024-09 上新，已发售并持续出货）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2024-09-18（@Lolita洋装上新 转发的图透海报）</span></div><div class="row note">上新已 1.5 年。淘宝 300+人付款是累计销量。当前店铺还在售，可能是补单 / 现货掉落 / 单件配件链。</div></section>
       <section class="info"><h3>价格</h3><div class="row note">价格信息来自小红书 qingbao 情报帖（YourHighness 官号自发，3272 likes，2024-09-15）正文明文公布。**注意**：淘宝 ¥98 SKU 是斗篷外套单件意向金/补单链（item id 838292216852），不代表全款。圈内对该价格普遍认为偏贵：评论吐槽『单斗篷+小物就1300...抢钱不是这么抢的吧』、『啥面料就1k3 洗钱都没这么洗的』。同档对比：远高于樱洛芙终焉圣骸全套 ¥648。</div></section>

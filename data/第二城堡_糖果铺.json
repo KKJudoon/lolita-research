@@ -240,5 +240,18 @@
     "weibo_brand_post": "https://weibo.com/5888456551/PzUHHgfgS",
     "weibo_aggregator_post": "https://weibo.com/5993650397/PAhpd7Ljd",
     "xhs_search_query": "第二城堡 糖果铺"
+  },
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "中位",
+    "authority_tier": "知名",
+    "resale_tier": "中保值",
+    "composite_label": "甜系王子主流",
+    "evidence": [
+      "淘宝老链接 400+ 付款（『中位』500-3k 单档下沿）",
+      "无人区自助售卖机 2025-06 真人成片 1626 likes + 蓝空koko 2025-05 真人成片 1376 likes 累计 ~3k（『中位』传播）",
+      "圈内『小甜基』标签共识形成（甜系 × 王子复合赛道）",
+      "本款『久违的小甜基』暗示重团 + 命中 2026 Q2 viral 浪潮（但开团早于 viral 爆点）"
+    ]
   }
 }

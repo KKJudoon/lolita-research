@@ -241,5 +241,18 @@
     "design_thinking": "明确做『汉洋折衷』融合——把西式军lo 的版型骨架（披风 + 不对称下摆 + 燕尾）嵌入中式视觉签名（立领 + 龙纹 + 锦缎 + 流苏）。命名走中国神话 / 五行 / 星宿系统（玄武 / 朝阳）。**这是 2026 年 lolita 圈中华风+军lo 的典型设计思路**：用西式骨架承载中式装饰，避免做成单纯汉服。",
     "for_image_gen_prompt": "Han-Western fusion (汉洋折衷) military lolita: high mandarin collar with white puffy-sleeve shirt, gold dragon-motif epaulette embroidery, brocade waist sash with gold flat tassel pendants, asymmetric pointed hem with Chinese cloud embroidery on beige inner panel, silk satin cape (deep blue 玄溟 / wine-red 赤曦), Tang-Song Chinese ornament details, color palette inspired by 玄武深海 (water/north black-blue-gold) or 朝阳赤色 (sun/east red-black-gold)"
   },
-  "posters_source": "淘宝 SKU 官方模特图，6 张（含赤曦红 / 玄溟蓝双色）。映月微博缺位，淘宝 detail 是唯一官方源。"
+  "posters_source": "淘宝 SKU 官方模特图，6 张（含赤曦红 / 玄溟蓝双色）。映月微博缺位，淘宝 detail 是唯一官方源。",
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "中位",
+    "authority_tier": "知名",
+    "resale_tier": "中保值",
+    "composite_label": "中华细分主流",
+    "evidence": [
+      "淘宝 700+ 付款（『中位』500-3k 单档）",
+      "初柒顾 1665 likes KOL 设计帖明确公开 4 档价格 + 设计解读（中华军lo 赛道头部 KOL 帖）",
+      "叁狐 04-10 1086 likes『平平无奇的军lo罢了』提及军lo赛道（含龙曜同期对照）",
+      "汉洋折衷主题填补市场空白（中华+军lo 双标签独家覆盖）"
+    ]
+  }
 }

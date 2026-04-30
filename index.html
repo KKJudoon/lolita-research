@@ -42,7 +42,13 @@
   .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; }
   .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; }
   .col-price { width: 200px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .col-sales { width: 90px; white-space: nowrap; font-weight: 600; }
+  .col-pop { width: 130px; white-space: nowrap; }
+  .pop-label { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
   .col-publish, .col-tuan { width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }
   .col-style { min-width: 110px; }
 
@@ -73,7 +79,7 @@
 </head>
 <body>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 2026-04-29 22:31 · 共 11 款 · 点行查看详情</div>
+  <div class="meta">最后更新 2026-04-29 22:56 · 共 11 款 · 点行查看详情</div>
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
   </div>
@@ -85,7 +91,7 @@
     <div class="toolbar-section">
       <span class="toolbar-label">排序</span>
       <button class="sort active" data-sort="time">最近调研 ↓</button>
-      <button class="sort" data-sort="sales">销量 ↓</button>
+      <button class="sort" data-sort="pop">畅销度 ↓</button>
     </div>
     <div class="toolbar-section">
       <input type="search" class="search-input" id="search" placeholder="搜索款名 / 品牌">
@@ -97,7 +103,7 @@
         <th>状态</th>
         <th>款名 / 品牌</th>
         <th>价格</th>
-        <th>销量</th>
+        <th>畅销度</th>
         <th>发布</th>
         <th>一团</th>
         <th>风格</th>
@@ -105,121 +111,121 @@
     </thead>
     <tbody id="rows">
 
-    <tr data-sales="95" data-time="1777446000000" data-status-priority="4" data-styles="军lo 哥特">
+    <tr data-sales="95" data-time="1777446000000" data-pop="40" data-status-priority="4" data-styles="军lo 哥特">
       <td class="col-status"><span class="status status-4">已开团</span></td>
       <td class="col-name"><a class="bare" href="items/alicegirl_poxiaozhe.html"><div class="title">破晓者（Alicegirl 重工军lo 套装）</div><div class="brand">Alicegirl 原创工作室</div></a></td>
       <td class="col-price">整套 ¥1018 · OP ¥178 · JSK ¥348</td>
-      <td class="col-sales sales-low">95人付款（jsk）</td>
+      <td class="col-pop"><span class="pop-label pop-low">腰部</span></td>
       <td class="col-publish">2026-01</td>
       <td class="col-tuan">2026-01-10</td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">哥特</span></td>
     </tr>
     
 
-    <tr data-sales="1000" data-time="1777273200000" data-status-priority="3" data-styles="王子lo">
+    <tr data-sales="1000" data-time="1777273200000" data-pop="90" data-status-priority="3" data-styles="王子lo">
       <td class="col-status"><span class="status status-3">再贩团</span></td>
       <td class="col-name"><a class="bare" href="items/pc_hongyuhei_4.0.html"><div class="title">红与黑 4.0（PC 原创设计王子系长马甲套装）</div><div class="brand">PC 原创设计（PrincessChronicles）</div></a></td>
       <td class="col-price">—</td>
-      <td class="col-sales sales-high">千人加购（detail SKU 显示『千人加购』）</td>
+      <td class="col-pop"><span class="pop-label pop-top">头部 IP</span></td>
       <td class="col-publish">2024-11</td>
       <td class="col-tuan">2024-11-29</td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
 
-    <tr data-sales="0" data-time="1777446000000" data-status-priority="3" data-styles="军lo">
+    <tr data-sales="0" data-time="1777446000000" data-pop="80" data-status-priority="3" data-styles="军lo">
       <td class="col-status"><span class="status status-3">再贩团</span></td>
       <td class="col-name"><a class="bare" href="items/vancy_souchazhe.html"><div class="title">搜查者（Vancy 梵希军lo 三件套+枪套）</div><div class="brand">Vancy 梵希</div></a></td>
       <td class="col-price">整套 ¥510</td>
-      <td class="col-sales sales-none">—</td>
+      <td class="col-pop"><span class="pop-label pop-high">工艺型小众</span></td>
       <td class="col-publish">2021-08</td>
       <td class="col-tuan">2021-08-27</td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
 
-    <tr data-sales="300" data-time="1777273200000" data-status-priority="5" data-styles="军lo">
+    <tr data-sales="300" data-time="1777273200000" data-pop="30" data-status-priority="5" data-styles="军lo">
       <td class="col-status"><span class="status status-5">现货</span></td>
       <td class="col-name"><a class="bare" href="items/yourhighness_qishijingshen.html"><div class="title">骑士精神（王子系军lo / 大斗篷套装）</div><div class="brand">YourHighness永恒银河</div></a></td>
       <td class="col-price">—</td>
-      <td class="col-sales sales-mid">300+人付款</td>
+      <td class="col-pop"><span class="pop-label pop-low">反面教材</span></td>
       <td class="col-publish">2024-09</td>
       <td class="col-tuan">2024-09-15</td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
 
-    <tr data-sales="1000" data-time="1777273200000" data-status-priority="5" data-styles="王子lo">
+    <tr data-sales="1000" data-time="1777273200000" data-pop="40" data-status-priority="5" data-styles="王子lo">
       <td class="col-status"><span class="status status-5">现货</span></td>
       <td class="col-name"><a class="bare" href="items/shaonyongdao_daogaozhe.html"><div class="title">祷告者（少女的永无岛王子系套装）</div><div class="brand">少女的永无岛 原创工作室</div></a></td>
       <td class="col-price">—</td>
-      <td class="col-sales sales-high">千人加购（未明确付款数）</td>
+      <td class="col-pop"><span class="pop-label pop-low">仿冒受害腰部</span></td>
       <td class="col-publish">—</td>
       <td class="col-tuan">—</td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
 
-    <tr data-sales="700" data-time="1777273200000" data-status-priority="4" data-styles="军lo 中华">
+    <tr data-sales="700" data-time="1777273200000" data-pop="70" data-status-priority="4" data-styles="军lo 中华">
       <td class="col-status"><span class="status status-4">已开团</span></td>
       <td class="col-name"><a class="bare" href="items/yingyue_longyao.html"><div class="title">龙曜</div><div class="brand">映月原创设计</div></a></td>
       <td class="col-price">—</td>
-      <td class="col-sales sales-mid">700+人付款</td>
+      <td class="col-pop"><span class="pop-label pop-high">中华细分主流</span></td>
       <td class="col-publish">2026-03</td>
       <td class="col-tuan">2026-03-18</td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">中华</span></td>
     </tr>
     
 
-    <tr data-sales="400" data-time="1777273200000" data-status-priority="5" data-styles="军lo 王子lo">
+    <tr data-sales="400" data-time="1777273200000" data-pop="60" data-status-priority="5" data-styles="军lo 王子lo">
       <td class="col-status"><span class="status status-5">现货</span></td>
       <td class="col-name"><a class="bare" href="items/weizhixingchen_jichengren.html"><div class="title">继承人（王子系军lo · 红色款）</div><div class="brand">未知星辰的来信</div></a></td>
       <td class="col-price">整套 ¥369</td>
-      <td class="col-sales sales-mid">400+人付款</td>
+      <td class="col-pop"><span class="pop-label pop-mid">白菜畅销</span></td>
       <td class="col-publish">2024-12</td>
       <td class="col-tuan">2024-12-11</td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
 
-    <tr data-sales="40000" data-time="1777186800000" data-status-priority="4" data-styles="军lo 王子lo">
+    <tr data-sales="40000" data-time="1777186800000" data-pop="100" data-status-priority="4" data-styles="军lo 王子lo">
       <td class="col-status"><span class="status status-4">已开团</span></td>
       <td class="col-name"><a class="bare" href="items/yingluofu_zhongyan_2.0.html"><div class="title">终焉圣骸 2.0</div><div class="brand">樱洛芙Lolita</div></a></td>
       <td class="col-price">整套 ¥648 · OP ¥520</td>
-      <td class="col-sales sales-top">4万+人付款</td>
+      <td class="col-pop"><span class="pop-label pop-top">现象级爆款</span></td>
       <td class="col-publish">2025-10</td>
       <td class="col-tuan">2025-10-18</td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
 
-    <tr data-sales="10000" data-time="1777273200000" data-status-priority="4" data-styles="哥特">
+    <tr data-sales="10000" data-time="1777273200000" data-pop="70" data-status-priority="4" data-styles="哥特">
       <td class="col-status"><span class="status status-4">已开团</span></td>
       <td class="col-name"><a class="bare" href="items/yingluofu_gulong.html"><div class="title">骨龙（暗黑哥特 JSK）</div><div class="brand">樱洛芙Lolita</div></a></td>
       <td class="col-price">—</td>
-      <td class="col-sales sales-top">1万+人付款</td>
+      <td class="col-pop"><span class="pop-label pop-high">暗黑哥特主流</span></td>
       <td class="col-publish">2026-01</td>
       <td class="col-tuan">2026-01-17</td>
       <td class="col-style"><span class="chip">哥特</span></td>
     </tr>
     
 
-    <tr data-sales="0" data-time="1777186800000" data-status-priority="0" data-styles="军lo 王子lo">
+    <tr data-sales="0" data-time="1777186800000" data-pop="0" data-status-priority="0" data-styles="军lo 王子lo">
       <td class="col-status"><span class="status status-0">加购未上架</span></td>
       <td class="col-name"><a class="bare" href="items/maomiwanan_juanjuan.html"><div class="title">卷卷（军LO）</div><div class="brand">猫咪晚安洛丽塔原创设计</div></a></td>
       <td class="col-price">整套 ¥368</td>
-      <td class="col-sales sales-none">—</td>
+      <td class="col-pop"><span class="pop-label pop-none">加购未上架</span></td>
       <td class="col-publish">2026-03</td>
       <td class="col-tuan">2026-03-05</td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
 
-    <tr data-sales="400" data-time="1777273200000" data-status-priority="4" data-styles="王子lo">
+    <tr data-sales="400" data-time="1777273200000" data-pop="70" data-status-priority="4" data-styles="王子lo">
       <td class="col-status"><span class="status status-4">已开团</span></td>
       <td class="col-name"><a class="bare" href="items/dierchengbao_tangguopu.html"><div class="title">糖果铺（第二城堡王子系 · 甜基佬套装）</div><div class="brand">第二城堡 CastleToo</div></a></td>
       <td class="col-price">整套 ¥406</td>
-      <td class="col-sales sales-mid">400+人付款（老链接 917187493014）</td>
+      <td class="col-pop"><span class="pop-label pop-high">甜系王子主流</span></td>
       <td class="col-publish">2025-07</td>
       <td class="col-tuan">2025-07-01</td>
       <td class="col-style"><span class="chip">王子lo</span></td>

@@ -257,5 +257,19 @@
     "weibo_brand_self_post": "https://weibo.com/3868095717/QCWanCjGU",
     "xhs_brand_official_url": "https://www.xiaohongshu.com/user/profile/606d7f92000000000101e3c1",
     "taobao_search_query": "Vancy梵希"
+  },
+  "popularity": {
+    "scale_tier": "长尾",
+    "buzz_tier": "冷启动",
+    "authority_tier": "头部 IP",
+    "resale_tier": "高保值",
+    "composite_label": "工艺型小众",
+    "evidence": [
+      "淘宝本款无直挂（走微博团购 + 快团团 + 客服私单）→ 淘宝规模长尾，但同店探索者 2 套装 100+ 付款做参照",
+      "Vancy XHS 官号自发『搜查者｜军绿色』119 likes 是最高赞，剔除官号自发后无 KOL 真人成片 → 传播冷启动",
+      "**圈内『梵希 yyds』顶级口碑** 2022 KOL 君不见鹿原话流通到 2026 → 头部 IP（圈内权威 + 长尾 KOL 引用）",
+      "**5 年长寿款 IP**（2021-08 首发 → 2026-04 第 6 团再贩）= 高保值 IP 资产化典范",
+      "枪套配件『腿肯』+ 船帽 + 军绿主推差异化 = 工艺差异化锚点（工艺型而非流量型品牌）"
+    ]
   }
 }

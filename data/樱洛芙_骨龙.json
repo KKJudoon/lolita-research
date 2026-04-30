@@ -260,5 +260,18 @@
     "design_thinking": "『骨龙』= bone dragon，西方奇幻 + 哥特小说交叉。把维多利亚哥特装饰主题搬到 lolita JSK 上，斗篷 + 紧身束腰 + 蕾丝下摆是经典哥特三件套，蝙蝠胸饰 + 玫瑰刺绣 + 骨头下摆 三个签名识别元素同时存在。同 brand 终焉圣骸（军lo）形成『暗黑双 IP』——骨龙服务哥特粉，终焉服务军lo粉。",
     "for_image_gen_prompt": "Gothic bone dragon JSK lolita: hooded cape with embroidered cross at hem, bat-shaped chest brooch, rose embroidery and lace details, asymmetric pointed hem with bone/cross motifs, fitted corset bodice, multi-layer lace skirt, color palette wine-red+black or black-purple or wasteland brown, Victorian gothic Dracula aesthetic"
   },
-  "posters_source": "微博官方海报，3 张（樱洛芙官号原稿）。"
+  "posters_source": "微博官方海报，3 张（樱洛芙官号原稿）。",
+  "popularity": {
+    "scale_tier": "头部",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "暗黑哥特主流",
+    "evidence": [
+      "淘宝意向金 1w+ 付款 → 真实付款估 3-5k（『头部』3k-1w 单档）",
+      "孝红服装细节控 04-27 3737 likes 工艺测评帖（樱洛芙整体做工对照信号）",
+      "同名款冲突（Alicegirl 也有骨龙）增加搜索流量但分散品牌识别",
+      "樱洛芙整体在 brands-reference top，但骨龙单款未进 KOL 横评 → 权威『普通』"
+    ]
+  }
 }

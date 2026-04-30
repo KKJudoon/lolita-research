@@ -178,6 +178,24 @@ COMMON_CSS = '''
 
 
 # ---------------------------------------------------------------- index page
+# 综合畅销度标签 → 排序权重（高的在前）
+POPULARITY_RANK = {
+    "现象级爆款": 100,
+    "头部 IP": 90,
+    "工艺型小众": 80,
+    "暗黑哥特主流": 70,
+    "中华细分主流": 70,
+    "甜系王子主流": 70,
+    "白菜畅销": 60,
+    "viral 借势新品": 55,
+    "仿冒受害腰部": 40,
+    "腰部": 40,
+    "反面教材": 30,
+    "调研中": 20,
+    "加购未上架": 0,
+}
+
+
 def render_summary_row(item):
     iid = item.get("id", "")
     name = esc(item["name"])
@@ -192,7 +210,9 @@ def render_summary_row(item):
     publish_short, tuan_short = _extract_release_dates(item)
     price_str = _extract_main_prices(item.get("price", {}) or {})
 
-    sales_display = sales_raw if sales_raw and sales_raw != "—" else "—"
+    pop = item.get("popularity", {}) or {}
+    composite = pop.get("composite_label", "调研中")
+    pop_rank = POPULARITY_RANK.get(composite, 20)
 
     style_tags = item.get("style_tags", []) or []
     canonical = []
@@ -205,21 +225,21 @@ def render_summary_row(item):
 
     detail_url = f"items/{iid}.html"
 
-    sales_tier = (
-        'top' if sales_v >= 10000 else
-        'high' if sales_v >= 1000 else
-        'mid' if sales_v >= 300 else
-        'low' if sales_v > 0 else
-        'none'
+    pop_class = "pop-" + (
+        "top" if pop_rank >= 90 else
+        "high" if pop_rank >= 70 else
+        "mid" if pop_rank >= 50 else
+        "low" if pop_rank >= 30 else
+        "none"
     )
     status_class = f'status-{status_priority}'
 
     return f'''
-    <tr data-sales="{sales_v}" data-time="{research_ts}" data-status-priority="{status_priority}" data-styles="{" ".join(esc(s) for s in canonical)}">
+    <tr data-sales="{sales_v}" data-time="{research_ts}" data-pop="{pop_rank}" data-status-priority="{status_priority}" data-styles="{" ".join(esc(s) for s in canonical)}">
       <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
       <td class="col-name"><a class="bare" href="{esc(detail_url)}"><div class="title">{name}</div><div class="brand">{brand}</div></a></td>
       <td class="col-price">{esc(price_str)}</td>
-      <td class="col-sales sales-{sales_tier}">{esc(sales_display)}</td>
+      <td class="col-pop"><span class="pop-label {pop_class}">{esc(composite)}</span></td>
       <td class="col-publish">{esc(publish_short or "—")}</td>
       <td class="col-tuan">{esc(tuan_short or "—")}</td>
       <td class="col-style">{style_chips}</td>
@@ -296,7 +316,13 @@ def write_index(items):
   .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; }}
   .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; }}
   .col-price {{ width: 200px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }}
-  .col-sales {{ width: 90px; white-space: nowrap; font-weight: 600; }}
+  .col-pop {{ width: 130px; white-space: nowrap; }}
+  .pop-label {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }}
+  .pop-top {{ background: #b00020; color: white; }}
+  .pop-high {{ background: #c5a572; color: white; }}
+  .pop-mid {{ background: #efe9d9; color: #5a4a2a; }}
+  .pop-low {{ background: #f0eee8; color: #999; }}
+  .pop-none {{ background: #f0eee8; color: #ccc; }}
   .col-publish, .col-tuan {{ width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }}
   .col-style {{ min-width: 110px; }}
 
@@ -339,7 +365,7 @@ def write_index(items):
     <div class="toolbar-section">
       <span class="toolbar-label">排序</span>
       <button class="sort active" data-sort="time">最近调研 ↓</button>
-      <button class="sort" data-sort="sales">销量 ↓</button>
+      <button class="sort" data-sort="pop">畅销度 ↓</button>
     </div>
     <div class="toolbar-section">
       <input type="search" class="search-input" id="search" placeholder="搜索款名 / 品牌">
@@ -351,7 +377,7 @@ def write_index(items):
         <th>状态</th>
         <th>款名 / 品牌</th>
         <th>价格</th>
-        <th>销量</th>
+        <th>畅销度</th>
         <th>发布</th>
         <th>一团</th>
         <th>风格</th>
@@ -579,6 +605,41 @@ def render_detail(item):
         </section>
         '''
 
+    pop = item.get("popularity", {}) or {}
+    pop_html = ""
+    if pop:
+        composite = esc(pop.get("composite_label", ""))
+        ev_html = "".join(f"<li>{esc(e)}</li>" for e in pop.get("evidence", []))
+        tier_rows = []
+        tier_map = [
+            ("规模", "scale_tier", "真实付款规模量级"),
+            ("传播", "buzz_tier", "圈内自然传播深度"),
+            ("权威", "authority_tier", "圈内权威背书"),
+            ("保值", "resale_tier", "二级市场长尾"),
+        ]
+        for label, key, desc in tier_map:
+            v = pop.get(key, "—")
+            tier_rows.append(f'<div class="pop-dim"><div class="pop-dim-label">{label}</div><div class="pop-dim-value">{esc(v)}</div><div class="pop-dim-desc">{desc}</div></div>')
+        tiers_html = "".join(tier_rows)
+        pop_rank = POPULARITY_RANK.get(pop.get("composite_label", ""), 20)
+        pop_class = "pop-" + (
+            "top" if pop_rank >= 90 else
+            "high" if pop_rank >= 70 else
+            "mid" if pop_rank >= 50 else
+            "low" if pop_rank >= 30 else
+            "none"
+        )
+        pop_html = f'''
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label {pop_class}">{composite}</span></h3>
+          <div class="pop-dims">{tiers_html}</div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence">{ev_html}</ul>
+          </div>
+        </section>
+        '''
+
     verified_badge = '<span class="verified">✓ verified</span>' if item.get("verified") else '<span class="unverified">unverified</span>'
 
     doc = f'''<!DOCTYPE html>
@@ -681,6 +742,23 @@ def render_detail(item):
   .syn-neg h4 {{ color: #a04020; margin: 0 0 8px 0; }}
   .syn-block ul {{ margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }}
   .verdict {{ margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }}
+  .popularity-section {{ margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }}
+  .popularity-section > h3 {{ margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }}
+  .pop-label {{ display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }}
+  .pop-top {{ background: #b00020; color: white; }}
+  .pop-high {{ background: #c5a572; color: white; }}
+  .pop-mid {{ background: #efe9d9; color: #5a4a2a; }}
+  .pop-low {{ background: #f0eee8; color: #999; }}
+  .pop-none {{ background: #f0eee8; color: #ccc; }}
+  .pop-dims {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }}
+  .pop-dim {{ background: white; padding: 8px 10px; border-radius: 6px; }}
+  .pop-dim-label {{ font-size: 11px; color: #888; }}
+  .pop-dim-value {{ font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }}
+  .pop-dim-desc {{ font-size: 10px; color: #aaa; }}
+  .pop-evidence-block {{ margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }}
+  .pop-evidence-label {{ font-size: 11px; color: #777; margin-bottom: 4px; }}
+  .pop-evidence {{ margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }}
+  @media (max-width: 640px) {{ .pop-dims {{ grid-template-columns: repeat(2, 1fr); }} }}
 
   /* mobile */
   @media (max-width: 640px) {{
@@ -707,6 +785,7 @@ def render_detail(item):
     <p class="summary">{summary}</p>
     <div class="poster-grid">{poster_html}</div>
     {posters_source_html}
+    {pop_html}
     <div class="info-grid">
       <section class="info"><h3>上新</h3>{release_html}</section>
       <section class="info"><h3>价格</h3>{price_html}</section>

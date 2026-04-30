@@ -238,5 +238,18 @@
     "xhs_search_fresh": "data/raw/qsjs_xhs_fresh.json",
     "xhs_notes": "data/raw/qsjs_notes/"
   },
-  "posters_source": "微博官方海报，5 张（YourHighness 永恒银河官号原稿，覆盖『嘉德礼服 + 夏尔斗篷』全 lookbook）。"
+  "posters_source": "微博官方海报，5 张（YourHighness 永恒银河官号原稿，覆盖『嘉德礼服 + 夏尔斗篷』全 lookbook）。",
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "中位",
+    "authority_tier": "黑红常驻",
+    "resale_tier": "低保值",
+    "composite_label": "反面教材",
+    "evidence": [
+      "淘宝 300+ 付款（『腰部』100-500 单档）",
+      "yuancilang 2024-09 4445 likes『lo圈皇帝穿搭』圈内点评（讽刺意味）",
+      "圈内挂烂记录：抄袭质疑（明承认参考嘉德礼服+夏尔斗篷被吐照搬）+ 6-7 斤超重 + PDD 厂货加价 + ¥1700 全套 = 终焉圣骸 ¥648 的 2.6 倍",
+      "高单价低口碑反面教材（lolita-domain-knowledge brands-reference 黑红常驻记录）"
+    ]
+  }
 }

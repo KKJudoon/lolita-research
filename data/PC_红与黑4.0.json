@@ -247,5 +247,19 @@
     "taobao_short_link": "https://e.tb.cn/h.itXGMps3IMEg3yP?tk=kSCA5jbl8Vu",
     "weibo_brand_official_url": "https://weibo.com/u/5198480015",
     "xhs_brand_official_url": "https://www.xiaohongshu.com/user/profile/600d15a80000000001003fef"
+  },
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "中位",
+    "authority_tier": "头部 IP",
+    "resale_tier": "高保值",
+    "composite_label": "头部 IP",
+    "evidence": [
+      "淘宝『千人加购』→ 真实付款估 100-200（淘宝层面腰部），但 PC 主战场是微博团购 + 客服私单（淘宝数据被低估）→ 综合判中位",
+      "Duuu 04-06 真人成片 1002 likes（『#黑与红』tag 命中系列）+ 圈内 KOL 流量集中在 PC 其他款（猎兔 / 兔子剧场）→ 红与黑单款传播中位",
+      "**王子系五大原创之一**（lolita-domain-knowledge style-genres 9619 赞圈内科普帖明文）= 头部 IP",
+      "**红与黑系列 1.0 → 4.0 跨 5 年看家款**（2019-2024）= 高保值 IP 资产化典范",
+      "微博营销节奏完整：图透 → 视频 → 截单预告 → lookbook 五段式（5 个 brand_self_posts）"
+    ]
   }
 }

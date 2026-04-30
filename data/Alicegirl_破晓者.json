@@ -262,5 +262,19 @@
     "weibo_aggregator_post": "https://weibo.com/5993650397/QnSD0AD9g",
     "xhs_brand_official_url": "https://www.xiaohongshu.com/user/profile/5b8946e9a0a47600014ec9fb",
     "taobao_search_query": "Alicegirl 破晓者"
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "长尾",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "腰部",
+    "evidence": [
+      "拆 4 SKU 各 95-100+ 付款 → 取最低（jsk 95+）作为成套数估算（『腰部』100-500 单档）",
+      "Alicegirl XHS 官号自发『剑和玫瑰』2026-01 仅 39 likes 真人成片（极薄）",
+      "圈内 651 likes 拔草帖（Xxxxxz 2024-12『lo娘真好欺负』）但未明确是破晓者",
+      "Alicegirl 进入 brands-reference『原创设计师线』列表（普通），未进王子系五大",
+      "改 4 版品控信号：官号原话『这款改了四版终于可以给老婆们看了』"
+    ]
   }
 }

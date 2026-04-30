@@ -106,6 +106,23 @@
   .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
   .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
   .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
 
   /* mobile */
   @media (max-width: 640px) {
@@ -132,6 +149,16 @@
     <p class="summary">白菜王子系军lo 三件套：白色泡泡袖立领衬衫 + 酒红色金线刺绣马甲（对襟）+ 酒红色金边条纹短裤。整体定位『正太/中性/cos 二次元』，¥369 全套现货售价进入 lolita 圈『白菜价』范畴（圈内对 ¥&lt;500 lo 的称呼）。设计稿层次中等，主打日常穿+二次元角色 cosplay 双场景。</p>
     <div class="poster-grid"><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_2.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_3.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_4.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_5.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_6.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_7.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_8.jpg"/><img src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_official_PeZ5fc8qO_9.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_1.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_2.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_3.jpg"/><img src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg" loading="lazy" class="lb-img" data-src="../images/未知星辰_继承人/weibo_teaser_P4lyQ8CIS_4.jpg"/></div>
     <div class="posters-source">📷 来源：<a href="https://weibo.com/2876088432/PeZ5fc8qO" target="_blank">微博 上新海报 ↗</a></div>
+    
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label pop-mid">白菜畅销</span></h3>
+          <div class="pop-dims"><div class="pop-dim"><div class="pop-dim-label">规模</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">真实付款规模量级</div></div><div class="pop-dim"><div class="pop-dim-label">传播</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">圈内自然传播深度</div></div><div class="pop-dim"><div class="pop-dim-label">权威</div><div class="pop-dim-value">普通</div><div class="pop-dim-desc">圈内权威背书</div></div><div class="pop-dim"><div class="pop-dim-label">保值</div><div class="pop-dim-value">中保值</div><div class="pop-dim-desc">二级市场长尾</div></div></div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence"><li>淘宝 400+ 现货付款（最准——下单即发，无意向金水分）</li><li>圈内王子系科普 9619 likes 帖（明确未列入五大原创头部清单 → 腰部品牌定位）</li><li>白菜价 ¥369 全套（继承人红 / 神权使者绿双 SKU 系列）</li><li>同品牌 兔叽侦探 ¥68.6 衬衫 600+ 付款 → 整店白菜段稳定走量</li></ul>
+          </div>
+        </section>
+        
     <div class="info-grid">
       <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2024-12-11（图透海报）→ 2025-02-19（现货上架）→ 持续在售（淘宝至 2026-04 仍 400+）</span></div><div class="row"><span class="k">类型</span><span class="v">意向金 → 截单 → 出货 → **现货补货**（已于 2025-02 转入现货销售）</span></div><div class="row"><span class="k">海报首发</span><span class="v">2024-12-11（@Lolita洋装上新 转发图透）</span></div><div class="row note">微博海报『Time：王见huo』疑为『见货』口误（即下单见货 = 现货销售）。这是该款的运营关键差异：与终焉/龙曜的『截单 → 工厂 → 几个月后出货』不同，继承人现货已发售，下单即拿。是该 brand 主推『白菜+现货』的策略一部分。</div></section>
       <section class="info"><h3>价格</h3><div class="row"><span class="k">整套</span><span class="v">¥369</span></div><div class="row note">**价格信息综合 weibo 海报正文 + 品牌官号自发**。set=¥369 是 2025-02-20 上架原价（『白菜lolita』）。淘宝当前挂牌 ¥439 是 2026-04 时价，可能因复刻 / 补单 / 调价上调约 19%。买家实际成交价区间 ¥361-¥439 不等，看下单时间。圈内自称『白菜价』在 lolita 圈是 ¥&lt;500 全套的标签。</div></section>
