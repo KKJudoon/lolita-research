@@ -62,11 +62,31 @@
       "current_post_account": "PrincessChronicles",
       "current_post_date": "2025-01-24",
       "brand_self_posts": [
-        {"url": "https://weibo.com/5198480015/P44Wf9QNl", "date": "2024-12-09", "type": "最早图透"},
-        {"url": "https://weibo.com/5198480015/P74ZQ3osI", "date": "2024-12-29", "type": "视频"},
-        {"url": "https://weibo.com/5198480015/P8dgyi36e", "date": "2025-01-05", "type": "1.6↑ 截单预告 + 视频"},
-        {"url": "https://weibo.com/5198480015/P8ijmvVkr", "date": "2025-01-06", "type": "截单当日 LOLITA 超话"},
-        {"url": "https://weibo.com/5198480015/Pb1Aqp4Ek", "date": "2025-01-24", "type": "完整 lookbook（8 张海报）"}
+        {
+          "url": "https://weibo.com/5198480015/P44Wf9QNl",
+          "date": "2024-12-09",
+          "type": "最早图透"
+        },
+        {
+          "url": "https://weibo.com/5198480015/P74ZQ3osI",
+          "date": "2024-12-29",
+          "type": "视频"
+        },
+        {
+          "url": "https://weibo.com/5198480015/P8dgyi36e",
+          "date": "2025-01-05",
+          "type": "1.6↑ 截单预告 + 视频"
+        },
+        {
+          "url": "https://weibo.com/5198480015/P8ijmvVkr",
+          "date": "2025-01-06",
+          "type": "截单当日 LOLITA 超话"
+        },
+        {
+          "url": "https://weibo.com/5198480015/Pb1Aqp4Ek",
+          "date": "2025-01-24",
+          "type": "完整 lookbook（8 张海报）"
+        }
       ],
       "note": "PC 微博节奏完整：图透 → 视频 → 截单预告 → 完整 lookbook 五段式覆盖，是品牌看家款的标准营销节奏。比其他款（如祷告者完全无微博节奏 / 龙曜微博缺位）专业得多。"
     },
@@ -102,6 +122,38 @@
         "url": "https://www.xiaohongshu.com/explore/68157f89000000000d015086?xsec_token=ABOk_fP1ZBdGmLod2Xco-TBCS93L2uPbILYGwf4eTa7Fk=&xsec_source=pc_user",
         "type": "品牌官号 历史款回顾",
         "summary": "PC 在 2025-05 回顾发布 1.0 老款照片——证明红与黑系列的 IP 周期已运营 5+ 年（2019-2025），4.0 是第四代。系列有持续延续性是 lolita 看家款的稀缺特征。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "Duuu",
+        "date": "2026-04-06",
+        "likes": "1002",
+        "collects": "242",
+        "comments": "33",
+        "title": "好喜欢这个配色....",
+        "url": "https://www.xiaohongshu.com/explore/69d3841e0000000021038d88?xsec_token=ABEdqP6ShlroJnrqv3-vqFtw6vSCv7ZsUbcWSJLbn0ZM4=&xsec_source=pc_user",
+        "type": "高赞配色穿搭（疑似关联 PC 系列）",
+        "summary": "1002 likes / 242 收藏 / 33 评论。tag『#黑与红 #设定 #oc #人台 #小众』—— 与 PC 红与黑系列『黑红配色 + oc 人设』高度匹配但未明确 @PC 原创设计。是该色调赛道在 XHS 上的高赞代表帖之一，反映黑红配色军/王子线在 XHS 上有稳定流量。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "雪见南",
+        "date": "2024-04-12",
+        "likes": "249",
+        "title": "室内直出一下",
+        "url": "https://www.xiaohongshu.com/explore/6618f5b6000000001b00cf30?xsec_token=AB-jA9QLwyplflXYoXaQQkSId3J3lwelLEWYxtnIz45rs=&xsec_source=pc_user",
+        "type": "穿搭真人成片",
+        "summary": "249 likes / 2024-04 时间点的室内穿搭成片。搜『PC原创 红与黑』排第 5——是该系列在中赞段（200-500 likes）的代表穿搭。具体是哪一代未确认（红与黑系列 1.0~4.0 跨 5 年），但作为视觉参考价值仍在。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": "我妻泰隆",
+        "date": "2026-04-23",
+        "likes": "10",
+        "title": "个人更喜欢赤色烬零1.0玫瑰暗纹面料",
+        "url": "https://www.xiaohongshu.com/explore/69ea15f30000000013030803?xsec_token=ABiTmuYCnYM8q0D_P16lvxEpnw4q_uLXUO8uCzubrHUP8=&xsec_source=pc_user",
+        "type": "PC 系列内款对比",
+        "summary": "PC 系列同期『赤色烬零1.0』vs 红与黑 4.0 的 KOL 对比偏好（更喜欢前者的玫瑰暗纹面料）。10 likes 偏低但是『PC 系列内款式偏好分化』的真实信号：『赤色烬零』是 PC 另一个红色调王子线，与红与黑形成内部竞争。说明 PC 同期多线产品并行，红与黑 4.0 不是品牌唯一焦点。"
       }
     ],
     "weibo_brand_self": "PC 微博官号在 2024-12 至 2025-01 间发布 5 个红与黑 4.0 相关 post（图透 / 视频 / 截单预告 / 完整 lookbook），形成完整的上新节奏。详见 shops.weibo.brand_self_posts。"

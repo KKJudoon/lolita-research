@@ -1,0 +1,261 @@
+{
+  "id": "vancy_souchazhe",
+  "name": "搜查者（Vancy 梵希军lo 三件套+枪套）",
+  "brand": "Vancy 梵希",
+  "designer": "Vancy 梵希内部团队（圈内称『梵希』，主打工艺型小而美原创品牌）",
+  "illustrator": null,
+  "illustrator_note": "未公开。Vancy 自营画稿。",
+  "style_tags": [
+    "军lo",
+    "学院风军lo",
+    "看家长寿款（2021 首发 + 2026 再贩 IP 跨 5 年）",
+    "三件套 + 配件可拆（裙+帽+枪套）",
+    "军绿 / 黑色 双色",
+    "工艺口碑型品牌",
+    "小批量慢营销"
+  ],
+  "style_summary": "Vancy 梵希 2021-08 首发的看家军lo款，2026-04-29 启动『早古款再片反』团购窗口（4/29-5/29）。三件套结构：搜查者 裙子（含腰部硬挺设计）+ 船帽 + 背带枪套（PVC 假枪）。颜色军绿主推 + 黑色次推。圈内对 Vancy 工艺有顶级口碑——KOL 君不见鹿 2022 年原话『梵希真的 yyds，裁剪版型布料比商场衣服都好唯一缺点是上新慢』—— 慢营销 + 口碑驱动是该品牌核心策略。",
+  "release": {
+    "type": "意向金 → 截单全款 → 工厂出货",
+    "date_range": "2021-08-27 首发开团 → ... → 2026-04-29 20:00 启动早古款再片反 → 2026-05-29 24:00 截单",
+    "poster_first_seen": "2021-08-27（@Vancy梵希 微博官号 Kvq35hZBw 自发首发图透）",
+    "note": "5 年长寿 IP 跨 6 个团（首发 + 5 次复刻），是品牌看家系列。再贩 post 2026-04-28 22:11 自发 + 4-29 19:45 @Lolita洋装上新 转发，营销节奏紧凑。工期 100-200 个团下单后开始，具体视量定。"
+  },
+  "price": {
+    "op": null,
+    "full_set": 510,
+    "currency": "CNY",
+    "set_3pc_total": 510,
+    "set_3pc_deposit": 180,
+    "set_3pc_balance": 330,
+    "single_dress_total": 380,
+    "single_dress_deposit": 150,
+    "single_dress_balance": 230,
+    "leg_holster_total": 100,
+    "leg_holster_deposit": 40,
+    "leg_holster_balance": 60,
+    "boat_hat_total": 70,
+    "boat_hat_deposit": 30,
+    "boat_hat_balance": 40,
+    "note": "价格来自微博海报 P8 详情表（QCWanCjGU 第 8 张）。3 件全套 ¥510（裙 + 帽 + 枪套 = ¥510，比单买拆件 ¥380+¥70+¥100=¥550 省 ¥40）。整套含腿肯（背带枪套，PVC 假枪 + 皮带）属于完整 lookbook 价位，进入中下端段（与 卷卷 ¥368 / 继承人 ¥369 同档但配件更全）。"
+  },
+  "colors": [
+    "军绿（主推）",
+    "黑色（次推）"
+  ],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "url_note": "搜查者本款 2026-04 时点未上淘宝直挂——Vancy 走『微博团购 + 客服私单 + 快团团』通道，淘宝主要挂同店其他款（探索者 2 / 旧日影 / 远航者 2.0 等）",
+      "shop_url": null,
+      "shop_url_note": "Vancy梵希 淘宝店，广西南宁，店铺主推现货同系列款（探索者 2 套装 ¥180 100+ 付款）。整店销量普遍 0-100+ 范围，是工艺型小而美店铺的典型——重口碑而非冲流量",
+      "item_id": null,
+      "shop_name": "Vancy梵希",
+      "list_title": "—",
+      "list_price": "—",
+      "sales": "—",
+      "sales_note": "搜查者再贩走团购窗口（4-29 启动），到货后才会上淘宝/快团团。可参照同店 探索者 2 套装 100+ 付款作为同款型基准",
+      "location": "广西南宁",
+      "related_skus": [
+        {
+          "id": "917462293228",
+          "title": "探索者2 衬衫+马甲+格子长裙+帽 现货",
+          "price": "¥180",
+          "sales": "100+人付款",
+          "note": "Vancy 看家学院风系列同款延伸"
+        },
+        {
+          "id": "611611259580",
+          "title": "旧日影 衬衫",
+          "price": "¥298",
+          "sales": "4人付款"
+        },
+        {
+          "id": "668983717935",
+          "title": "远航者 2.0 海盗风长裙",
+          "price": "¥448",
+          "sales": "1人付款"
+        }
+      ]
+    },
+    "weibo": {
+      "official_account": "Vancy梵希",
+      "official_url": "https://weibo.com/u/3868095717",
+      "official_uid": "3868095717",
+      "alt_account": null,
+      "alt_url": null,
+      "upgrade_post_url": "https://weibo.com/5993650397/QD4DC42pI",
+      "upgrade_post_account": "Lolita洋装上新",
+      "upgrade_post_account_uid": "5993650397",
+      "upgrade_post_date": "2026-04-29",
+      "current_post_url": "https://weibo.com/3868095717/QCWanCjGU",
+      "current_post_account": "Vancy梵希",
+      "current_post_date": "2026-04-28",
+      "brand_self_posts": [
+        {
+          "url": "https://weibo.com/3868095717/Kvq35hZBw",
+          "date": "2021-08-27",
+          "type": "首发开团尾款 post"
+        },
+        {
+          "url": "https://weibo.com/3868095717/QCWanCjGU",
+          "date": "2026-04-28",
+          "type": "早古款再片反预约（含 9 张完整 lookbook + 价格表）"
+        }
+      ],
+      "note": "Vancy 微博节奏：2021-08 首发 → 多次再贩（具体年份未细数）→ 2026-04-29 最新一团。每次再贩品牌官号自发 + Lolita洋装上新 同步转发。"
+    },
+    "xiaohongshu": {
+      "official_account": "Vancy梵希",
+      "official_url": "https://www.xiaohongshu.com/user/profile/606d7f92000000000101e3c1",
+      "official_user_id": "606d7f92000000000101e3c1",
+      "official_xhs_id": "9520620817",
+      "alt_account": "梵希工作室",
+      "alt_url": "https://www.xiaohongshu.com/user/profile/6485e0720000000012034a79",
+      "alt_user_id": "6485e0720000000012034a79",
+      "designer_account": null,
+      "designer_url": null,
+      "note": "Vancy XHS 官号活跃（7 小时前更新），主号粉丝/笔记数据未显示完整。副号『梵希工作室』作为副线运营。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 2,
+        "author": "Vancy梵希（品牌官号）",
+        "date": "2026-04-22",
+        "likes": "119",
+        "collects": "18",
+        "comments": "35",
+        "title": "搜查者｜军绿色",
+        "url": "https://www.xiaohongshu.com/explore/69e8e38e000000002200e947?xsec_token=ABHC40cPHzc38zj8c3nJwRBV-ciorHMALzSykCEOv-1W4=&xsec_source=pc_user",
+        "type": "品牌官号 XHS 再贩预热",
+        "summary": "再贩开团前 7 天的预热帖。官号原话『已经核对好，再片反的面料和辅料都是原供应商，顺利的话月末前开团』+『裙子为单层无衬裙的设计，可通过后背绑绳调节腰围』+『模特身高162，体重45kg，肩宽37，胸81，腰64，臀94，穿M码裙子和腰封』。内容透露关键工艺细节：① 单层无衬裙（轻便但需自配撑）② 后背绑绳调节腰围（区别于硬版型，适应更多体型）③ 同供应商面料一致（再贩品质保证）。35 评论积极反馈，是该款 XHS 端的最高赞帖。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "iinora77",
+        "date": "2026-04-02",
+        "likes": "480",
+        "collects": "98",
+        "comments": "32",
+        "title": "求明日香自搭军lo推荐",
+        "url": "https://www.xiaohongshu.com/explore/69cd6a4d00000000230244bb?xsec_token=AB678FgmA4CndbkKYQnV8Iserpz0LIyUeE3ba4K24HsLs=&xsec_source=pc_user",
+        "type": "圈外 cross-genre 选购需求",
+        "summary": "EVA cosplay 圈用户原话『预计四五月份出一套明日香自搭，少女暴君风格的那种，想买一套军lo』tag #EVA #cosplay #明日香。**关键 cross-genre 信号**：『少女暴君』已成 lolita 圈外（cosplay 圈、动漫圈）选购军lo的指导词。EVA 明日香 + 军lo 是『暴躁/锋利/王者气质少女』人设的标准组合。Vancy 搜查者的军绿色调 + 枪套配件正好命中这个需求点（明日香 EVA 二号机也是橘红/军绿+实战感），是该款潜在 cross-over 受众的代表帖。"
+      },
+      {
+        "_genre_context": "lolita 圈军lo+王子系赛道 2026 Q2 高赞参照品牌（与搜查者形成对照）",
+        "comparison_kols": [
+          {
+            "author": "宇宙太",
+            "date": "2025-10-29",
+            "likes": "8451",
+            "title": "先让你跑三秒…",
+            "brand_referenced": "樱洛芙 终焉圣骸（已调研款）",
+            "implication": "终焉圣骸单款在 XHS 真人成片可达 8000+ likes。Vancy 搜查者最高 119 likes（官号自发），差距 70 倍——印证 Vancy 慢营销 / 樱洛芙流量营销 是两条路径"
+          },
+          {
+            "author": "yuancilang",
+            "date": "2024-09-12",
+            "likes": "4445",
+            "title": "我勒个lo圈皇帝穿搭…",
+            "brand_referenced": "YourHighness 永恒银河（已调研款）",
+            "implication": "永恒银河 4445 likes 圈内点评帖，对照搜查者无对应级别讨论。但 yuancilang 帖反向印证 YourHighness 在圈内并非全是负面（高单价低口碑的反面教材定位+ 也有华丽设计被认可）"
+          }
+        ]
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": [
+      "5 年长寿看家款（2021→2026）",
+      "圈内工艺顶级口碑（『梵希yyds』）",
+      "三件套 + 枪套配件 ¥510 全套",
+      "军绿主推暗示 OG 军装风（区别于 黑红 / 暗黑）",
+      "慢营销 + 口碑型品牌",
+      "Vancy 整店销量低但维持 5+ 年",
+      "今天 4-29 20:00 刚开团（最新动态）"
+    ],
+    "highlights_positive": [
+      "**5 年长寿 IP 数据稀缺**——2021-08 首发到 2026-04 再贩跨 5 年仍有需求，圈内款式生命力跨越多代 lo 娘换茬。这是 PC 红与黑 4.0（2019→2024，5 年 4 代）同档的『看家系列』时间锚点",
+      "**圈内工艺口碑顶级**——KOL 原话『梵希yyds，裁剪版型布料比商场衣服都好』2022 年发布到 2026 年仍流传，跨平台一致认知。是同期军lo赛道里口碑最稳的品牌之一",
+      "**完整 lookbook + 价格表透明**——9 张官方海报含 P8 详情表（3 件全套 ¥510 / 单品 ¥380 / 枪套 ¥100 / 船帽 ¥70 + 颜色 + 尺码 + 工期 100-200 单），决策信息齐全",
+      "**¥510 全套进入中下端段**——配件齐全（裙+帽+枪套）但价格低于龙曜 ¥523 单衬衫马甲 / 终焉圣骸 op=520 + 帽，性价比突出",
+      "**军绿主色调差异化**——区别于同期军lo流行的黑红 / 蓝黑配色（终焉 / 骑士精神 / PC 红与黑），军绿更接近 OG 军服美学，独占该色赛道",
+      "**Vancy 跨渠道一致**——微博官号 + XHS 双号 + 淘宝同店现货 + 快团团团购，运营稳但慢"
+    ],
+    "highlights_negative": [
+      "**搜查者本款淘宝当前无直挂**——只能走微博团购 / 快团团 / 客服私单，对淘宝流量买家不友好",
+      "**整店销量普遍低**——同店探索者 2 套装 100+ 付款已是高位，旧日影衬衫 4 付款 / 远航者 2.0 1 付款，整店冷启动型客流；搜查者再贩可能等截单后到货才补现货淘宝",
+      "**枪套配件可能有快递/海关风险**——PVC 假枪虽是装饰但偏远地区或国际买家可能被卡件，再贩 post 注『偏远地区包邮，偏远地区补邮费需按订单调整』暗示有运输额外成本",
+      "**工期 100-200 个团下单后开始**——这是品牌的产能限制，团购窗口结束后等几个月才出货，对急于穿的买家不友好",
+      "**XHS 圈内热度数据未深查**（本次调研 XHS 配额限制）——但官号 7 小时前更新 + 副号双线运营，活跃度可信",
+      "**5 年只迭代 N 次（具体次数未确认）**——相对 PC 红与黑 1.0/2.0/3.0/4.0 明确版本号迭代，搜查者用『再片反』而非版本号，IP 演进路径清晰度低于 PC"
+    ],
+    "verdict_short": "目标客户：**圈内老 lo 娘 / 看重版型工艺 / 不急于穿 / 接受工期长**的 ¥500 段买家；新手不太适合（淘宝直挂少 + 工期长）。最大优势：5 年长寿 IP + 圈内工艺口碑顶级 + 军绿差异化 + 全套 ¥510 配件齐全。最大短板：淘宝无现货 + 整店冷启动型客流 + 工期 100-200 单后才出货。**对自家做款的核心启发**：① Vancy 的『慢营销 + 口碑型』模型是 lolita 圈和『流量 + 营销节奏型』（如 PC / 樱洛芙）并存的另一条可持续路径，**不需要每团高赞 KOL 真人成片**也能维持 5 年；② 配件细节（如枪套这种 oc 化道具）是『角色服化』产品的差异化锚点——把 lolita 当 oc 角色服而非纯日常穿搭来设计，能延展系列周期；③ 同款多次再贩比每次新款更稳——『早古款再片反』本身是品牌 IP 资产管理的成熟做法，搭配定期复刻能 amortize 工艺打版成本。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "20 世纪初欧洲 / 日本旧军装搜查官（gendarme / kempei / detective）——把 OG 军服美学（军绿色、勋章、肩章绶带）转译到 lolita 三件套结构，叙事场景是『年轻军部搜查官在战时古城调查』",
+    "official_quote": null,
+    "kol_quote": "君不见鹿 2022-06『梵希真的 yyds，裁剪版型布料比商场衣服都好』；圈内 tag #军lo# #lolita装扮# 反复强调『搜查者』作为款名直接命中『侦探/搜查』叙事",
+    "elements": [
+      {
+        "name": "军绿色 A 字裙（搜查者 裙子）",
+        "source_lineage": "原型为 20 世纪初欧美/日本军部女性制服（如 WAC / WAVES / 旧日本陆军女子挺身队）的中长 A 字军服裙——军绿色（OD green / olive drab）是 OG 军装的标志色。Vancy 在传统 lolita JSK 廓形上加军绿配色 + 修身收腰",
+        "purpose": "整套款的视觉锚点——军绿色直接打出 OG 军装识别度，区别于同期军lo流行的黑红/蓝黑配色",
+        "official": false
+      },
+      {
+        "name": "船帽（cap / kepi 风格）",
+        "source_lineage": "原型为 19-20 世纪欧洲军帽（French kepi / British peaked cap / Japanese kepi-style military cap），是军部 / 警察 / 搜查官的身份标记",
+        "purpose": "强化『搜查官』角色身份——帽子是该款 oc 角色服的关键识别件，比单纯军lo 套装多一档军部官僚感",
+        "official": false
+      },
+      {
+        "name": "腿肯（背带枪套 + PVC 假枪 + 皮带）",
+        "source_lineage": "原型为军部 / 侦探 / 搜查官标准装备的 leg holster / shoulder holster（腿肯是大腿外侧绑式枪套，gangster / military / detective 角色装）。Vancy 用 PVC 假枪保留视觉但不上手枪法律敏感度",
+        "purpose": "**最差异化的配件**——这是该款『角色服化』程度最高的设计单件。普通军lo只有衣服 + 帽子，加枪套直接把 lolita 提升到 oc cosplay 服级别，叙事密度大幅提升",
+        "official": false
+      },
+      {
+        "name": "腰部硬挺设计（裙子内置硬支撑）",
+        "source_lineage": "灵感来自军服腰部硬版型（rigid waist tailoring，区别于柔软 lolita 收腰），增强『军服感』而非『甜系软糯』",
+        "purpose": "工艺差异化——这是 KOL 君不见鹿『裁剪版型布料比商场衣服都好』的具体落点，是 Vancy 工艺口碑的物质载体",
+        "official": false
+      },
+      {
+        "name": "白色或同色衬衫（含立领）",
+        "source_lineage": "维多利亚军服或军校生制服衬衫（chemise + 立领），底层亮色与外层军绿形成对比",
+        "purpose": "做底层 lolita 属性锚点（白色是 lolita 经典内搭），平衡军服硬朗感",
+        "official": false
+      }
+    ],
+    "design_thinking": "搜查者是 Vancy 在『lolita JSK 廓形 + OG 军装色调 + 搜查官 oc 角色化』三轴交叉的设计——核心差异化在于把军lo 推到『oc 角色服』维度（通过枪套这类道具配件）而不是停留在『带军装元素的 lolita』层面。叙事场景预设是『年轻军部搜查官』，所以核心元素围绕『军部制服 + 帽子身份 + 枪套装备』三组符号。5 年长寿 IP 验证了这个『lolita + 角色服化』方向的稳定需求。",
+    "for_image_gen_prompt": "A young person posed as 'a 1920s European military investigator / gendarme' in a lolita-meets-military coordinate: olive-drab military green A-line lolita JSK pinafore over a white high-collar long-sleeve blouse, fitted at the waist with rigid tailoring, paired with a matching military green French-kepi-style cap with a small visor and brass insignia, a black leather leg holster strapped over the left thigh holding a vintage PVC prop pistol, brown leather belt with brass buckle. Aesthetic: '20th-century European military female officer uniform meets Lolita ouji JSK silhouette' — austere, investigative, gender-neutral. Color palette: olive drab green dominant, white blouse accent, black leather and brown belt as utility accents, brass/gold buttons. Setting: dimly lit detective office with vintage typewriter, magnifying glass on desk, old maps pinned to wall, soft amber light from a desk lamp. Mood: pensive, on-duty, mid-investigation. Style references: Japanese WW2-era female military uniform, French gendarmerie 1920s, classic detective fiction wardrobe, gothic Lolita JSK structure. Avoid: bright candy colors, fairy princess elements, frilly bows, modern sportswear."
+  },
+  "posters": [
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_1.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_2.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_3.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_4.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_5.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_6.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_7.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_8.jpg",
+    "images/Vancy_搜查者/weibo_official_QCWanCjGU_9.jpg"
+  ],
+  "posters_source": "微博 Vancy 官号 QCWanCjGU 完整再贩 lookbook 9 张（含 P8 价格 + 尺码表）。",
+  "verified": true,
+  "verified_at": "2026-04-29",
+  "verified_by": "Claude (cross-checked: weibo 4 posts incl. 2021 首发 + 2026 再贩 + taobao Vancy 店铺同款 + XHS 双号 + XHS 搜查者深度搜索 5 帖)",
+  "raw_sources": {
+    "weibo_brand_official_url": "https://weibo.com/u/3868095717",
+    "weibo_aggregator_post": "https://weibo.com/5993650397/QD4DC42pI",
+    "weibo_brand_self_post": "https://weibo.com/3868095717/QCWanCjGU",
+    "xhs_brand_official_url": "https://www.xiaohongshu.com/user/profile/606d7f92000000000101e3c1",
+    "taobao_search_query": "Vancy梵希"
+  }
+}

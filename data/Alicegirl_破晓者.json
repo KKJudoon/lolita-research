@@ -51,8 +51,18 @@
       "sales_note": "破晓者拆 4 个 SKU 各独立销售：jsk ¥88 定金 95 付款 + 斗篷外套 ¥58 定金 100+ + 帽子绶带胸章 ¥18 定金 100+ + 第 4 件（衬衫/op）。各 SKU 销量均 95-100+，中端水平。",
       "location": "江苏淮安",
       "related_skus": [
-        {"id": "1014052144471", "title": "斗篷外套", "price": "¥58 定金", "sales": "100+人付款"},
-        {"id": "1011766487968", "title": "帽子 绶带 胸章", "price": "¥18 定金", "sales": "100+人付款"}
+        {
+          "id": "1014052144471",
+          "title": "斗篷外套",
+          "price": "¥58 定金",
+          "sales": "100+人付款"
+        },
+        {
+          "id": "1011766487968",
+          "title": "帽子 绶带 胸章",
+          "price": "¥18 定金",
+          "sales": "100+人付款"
+        }
       ]
     },
     "weibo": {
@@ -71,10 +81,26 @@
       "current_post_account": "Alicegirl原创工作室",
       "current_post_date": "2026-01-10",
       "brand_self_posts": [
-        {"url": "https://weibo.com/6372985568/QmtGAlpcZ", "date": "2026-01-10", "type": "官号图透（『改了四版』）"},
-        {"url": "https://weibo.com/6372985568/QnGSe2kcB", "date": "2026-01-19", "type": "一团 1.18 当晚开 🔔"},
-        {"url": "https://weibo.com/6372985568/QosStzWNU", "date": "2026-01-23", "type": "一团预约中"},
-        {"url": "https://weibo.com/7629506166/QqabEuCni", "date": "2026-02-03", "type": "南京店二团接力"}
+        {
+          "url": "https://weibo.com/6372985568/QmtGAlpcZ",
+          "date": "2026-01-10",
+          "type": "官号图透（『改了四版』）"
+        },
+        {
+          "url": "https://weibo.com/6372985568/QnGSe2kcB",
+          "date": "2026-01-19",
+          "type": "一团 1.18 当晚开 🔔"
+        },
+        {
+          "url": "https://weibo.com/6372985568/QosStzWNU",
+          "date": "2026-01-23",
+          "type": "一团预约中"
+        },
+        {
+          "url": "https://weibo.com/7629506166/QqabEuCni",
+          "date": "2026-02-03",
+          "type": "南京店二团接力"
+        }
       ],
       "note": "Alicegirl 主店 + 南京线下店双号同步，营销渠道完整。"
     },
@@ -110,6 +136,36 @@
         "url": "https://www.xiaohongshu.com/explore/696ed859000000000e00ee10?xsec_token=AB4narKB-VzT1EDssi3Cy9yTlTnrvI99nVug0t2vaYMz8=&xsec_source=pc_user",
         "type": "XHS 上新汇总号转发",
         "summary": "XHS 端的『lolita 上新』汇总号同步转发，是该款在 XHS 上的主要曝光路径——Alicegirl 自身 XHS 营销弱，靠汇总号补流。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "玥儿",
+        "date": "2024-12-27",
+        "likes": "243",
+        "title": "学院风军lo真凉得透透的",
+        "url": "https://www.xiaohongshu.com/explore/676e54fd00000000130012e2?xsec_token=ABszsevYey1ZVoKsuUpoGqadJfZ5val8VliSzzlJwkXOg=&xsec_source=pc_user",
+        "type": "圈内款式分类锚点",
+        "summary": "**关键 tag 锚点**：直接把破晓者归入『学院风军lo』子赛道——这一标签在圈内成为该款的固定分类（区别于樱洛芙的『骑士战场感』、PC 的『中世纪贵族感』、糖果铺的『甜系王子』）。243 likes 反馈印证学院风军lo 是 lolita 圈一个有需求的细分。"
+      },
+      {
+        "rank_in_search": 1,
+        "author": "Xxxxxz",
+        "date": "2024-12-29",
+        "likes": "651",
+        "title": "lo娘真好欺负",
+        "url": "https://www.xiaohongshu.com/explore/67714e08000000000b00c923?xsec_token=ABOEPNXdAVqDQTlaGKIbuNM93zsT6bwRFqf4MYMWzqquA=&xsec_source=pc_user",
+        "type": "圈内拔草/抱怨帖（疑关联款）",
+        "summary": "651 likes 抱怨帖发布于一团截单后 11 天（2024-12-29，对照破晓者一团 2026-01-18，时间不符 —— 实为 2024-12，预计指向更早的 Alicegirl 款）。该帖在 Alicegirl 品牌相关搜索里排第 1 是品牌负面信号——圈内对 Alicegirl 的部分款有体感不佳的反馈，对破晓者新买家是参考的间接背景。"
+      },
+      {
+        "rank_in_search": 7,
+        "author": "莫佴",
+        "date": "2026-04-04",
+        "likes": "215",
+        "title": "当我试图加入Lolita这个更为权威的圈子",
+        "url": "https://www.xiaohongshu.com/explore/69bf35700000000021005b91?xsec_token=ABSz-J9-fptchJ377RaM_QHu0b-MR906IajrwAZkDB6Ig=&xsec_source=pc_user",
+        "type": "圈内综合点评（cross-brand）",
+        "summary": "215 likes 的圈内综合穿搭/品牌点评帖，搜『Alicegirl 破晓者』和『樱洛芙 骨龙』时都排在前 7——意味这帖讨论了多家品牌包括 Alicegirl。该帖反映破晓者作为中端军lo被纳入横评清单，但不是头部款。"
       }
     ],
     "_genre_context_2026Q2": "2026-03~04 lolita 圈出现现象级『少女暴君』viral 标签（Yuki雪雪 4.4 万赞、芋泥脑袋瓜额 25 万赞法语音乐剧 cover、啊川 36 万赞甜lo配军lo），把军lo推到圈外破圈层。破晓者是 2026-01 上新的中端军lo，未直接吃到这波 4 月浪潮，但同期军lo整体热度上升对该款销量是 tailwind。"
