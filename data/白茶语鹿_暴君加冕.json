@@ -82,8 +82,10 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 军lo, 王子系, 暴君系列 Lolita coordinate. Style: 白茶语鹿 2026 Q2 借势 XHS『少女暴君』viral 浪潮（最高单帖 36w likes）开的军lo系列。淘宝 ¥5 意向金抵 ¥30 / 1000+ 付款，是 viral → 销量转化的实证案例。同店还有『荣耀向我俯首王子系列』200+ 付款，命名直接对应法语音乐剧 cover 帖（25w"
   },
-  "posters": [],
-  "posters_source": "图源待补——品牌微博渠道弱 / 借势新品微博无 post（基础调研阶段未抓图）。后续可走品牌客服 / 淘宝商品页 / XHS 官号补。",
+  "posters": [
+    "images/白茶语鹿_暴君加冕/taobao_thumb_1.jpg"
+  ],
+  "posters_source": "淘宝搜索结果页 460x460 缩略图原图（item 1041117960711 主图，alicdn 静态资源）。完整 lookbook 待补。",
   "popularity": {
     "scale_tier": "头部",
     "buzz_tier": "破圈",

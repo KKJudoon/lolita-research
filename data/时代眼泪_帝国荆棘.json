@@ -80,8 +80,10 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 军lo, 暗黑, 荆棘 Lolita coordinate. Style: 时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现象级爆款季』成员（与樱洛芙终焉圣骸 2.0 + 未知星辰继承"
   },
-  "posters": [],
-  "posters_source": "图源待补——品牌微博渠道弱 / 借势新品微博无 post（基础调研阶段未抓图）。后续可走品牌客服 / 淘宝商品页 / XHS 官号补。",
+  "posters": [
+    "images/时代眼泪_帝国荆棘/taobao_thumb_1.jpg"
+  ],
+  "posters_source": "淘宝搜索结果页缩略图原图（item 1044978525466 主图，7.6MB 高清 alicdn 静态资源）。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "现象",

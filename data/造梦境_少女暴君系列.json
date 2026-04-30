@@ -81,8 +81,10 @@
     "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
     "for_image_gen_prompt": "A young person wearing a 王子lo, 军lo, viral 借势 Lolita coordinate. Style: 造梦境原创设计借 2026 Q2 XHS『少女暴君』viral 浪潮开的系列套装，淘宝 ¥5 意向金 / 600+ 付款（征名中状态）。是 viral → 销量转化的另一实证（与白茶语鹿暴君加冕 1000+ 同档）。"
   },
-  "posters": [],
-  "posters_source": "图源待补——品牌微博渠道弱 / 借势新品微博无 post（基础调研阶段未抓图）。后续可走品牌客服 / 淘宝商品页 / XHS 官号补。",
+  "posters": [
+    "images/造梦境_少女暴君系列/taobao_thumb_1.jpg"
+  ],
+  "posters_source": "淘宝搜索结果页缩略图（item 1032403998647 主图）。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "破圈",
