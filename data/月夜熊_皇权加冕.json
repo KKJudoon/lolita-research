@@ -1,0 +1,108 @@
+{
+  "id": "yueyexiong_huangquanjiamian",
+  "name": "皇权加冕（月夜熊原创现货大衣军lolita）",
+  "brand": "月夜熊 Lolita 原创设计",
+  "designer": "月夜熊（中端品牌）",
+  "illustrator": null,
+  "illustrator_note": "未公开。月夜熊自营设计。",
+  "style_tags": [
+    "军lo",
+    "王子系",
+    "现货款",
+    "大衣",
+    "披风",
+    "斗篷",
+    "秋冬款",
+    "¥219 中下端"
+  ],
+  "style_summary": "月夜熊 Lolita 原创的『皇权加冕』军lolita 现货款——大衣+披风+斗篷+连衣裙套装。¥219 / 500+ 付款属白菜+中下端段。是 4 月 2026 军lo 浪潮中的现货段代表（区别于樱洛芙终焉圣骸 2.0 等截单款）。同店『骑士风军lo 王子装』同价位段也在卖。",
+  "release": {
+    "type": "现货款（直接发货，无意向金/截单环节）",
+    "date_range": "",
+    "poster_first_seen": "",
+    "note": "月夜熊定位『现货 + 中端价位』，与 Vancy 梵希慢营销 / 樱洛芙截单营销 形成对比。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "list_price_at_research": "¥219",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+  },
+  "colors": [],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=990032521820",
+      "shop_url": null,
+      "shop_url_note": "店铺名 月夜熊Lolita原创设计 —— 详细 shop URL 待补",
+      "item_id": "990032521820",
+      "shop_name": "月夜熊Lolita原创设计",
+      "list_title": "现货月夜熊原创正品皇权加冕大衣军lolita连衣裙披风斗篷套装秋冬",
+      "list_price": "¥219",
+      "sales": "500+人付款",
+      "location": "河南周口",
+      "note": "基础信息款 —— 后续可深入跑 detail / 微博/XHS 补充"
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查微博渠道"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查 XHS 渠道"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": []
+  },
+  "synthesis": {
+    "keywords": [
+      "军lo",
+      "王子系",
+      "现货款",
+      "大衣",
+      "披风"
+    ],
+    "highlights_positive": [
+      "月夜熊 Lolita 原创的『皇权加冕』军lolita 现货款——大衣+披风+斗篷+连衣裙套装。¥219 / 500+ 付款属白菜+中下端段。是 4 月 2026 军lo 浪潮中的现货段代表（区别于樱洛芙终焉圣骸 2.0 等截单款）。同店『"
+    ],
+    "highlights_negative": [
+      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+    ],
+    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "皇权加冕（月夜熊原创现货大衣军lolita） 设计灵感未深查 —— 待补",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [],
+    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
+    "for_image_gen_prompt": "A young person wearing a 军lo, 王子系, 现货款 Lolita coordinate. Style: 月夜熊 Lolita 原创的『皇权加冕』军lolita 现货款——大衣+披风+斗篷+连衣裙套装。¥219 / 500+ 付款属白菜+中下端段。是 4 月 2026 军lo 浪潮中的现货段代表（区别于樱洛芙终焉圣骸 2.0 等截单款）。同店『骑士风军lo 王子装』同价位段也在卖。"
+  },
+  "posters": [],
+  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "未深查",
+    "authority_tier": "未提及",
+    "resale_tier": "中保值",
+    "composite_label": "现货畅销",
+    "evidence": [
+      "淘宝 500+ 现货付款（最准——下单即发，无意向金水分；『中位』500-3k 单档）",
+      "¥219 全套白菜+中下端段定位",
+      "月夜熊品牌未在 KOL 横评 top 出现 → 权威未提及",
+      "现货款 = 工艺已稳定 → 中保值"
+    ]
+  },
+  "verified": false,
+  "verified_at": "2026-04-30",
+  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "research_depth": "基础（淘宝 list only）",
+  "raw_sources": {
+    "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
+  }
+}

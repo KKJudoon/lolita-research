@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>帝国荆棘（时代眼泪原创军lo） · 军lo 调研</title>
+<style>
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
+  .posters-source { font-size: 12px; color: #888; padding: 4px 0 12px; line-height: 1.6; }
+  .posters-source a { color: #6a5a30; text-decoration: none; }
+  .posters-source a:hover { color: #2c2418; text-decoration: underline; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
+  .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0; grid-auto-rows: max-content; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; grid-auto-rows: max-content; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .inspiration { margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }
+  .inspiration h3 { margin: 0 0 8px 0; }
+  .insp-badge { font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }
+  .insp-badge.insp-official { background: #d4f4d4; color: #2c7a2c; }
+  .insp-badge.insp-kol { background: #fde8b0; color: #6a4a1a; }
+  .insp-badge.insp-ai { background: #fde0d0; color: #a04020; }
+  .insp-note { font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }
+  .insp-theme { font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }
+  .quote { margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }
+  .elements { display: grid; gap: 10px; margin: 12px 0; }
+  .el { background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .el-name { font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }
+  .el-src { color: #444; }
+  .el-src b { color: #888; font-weight: normal; }
+  .el-purpose { color: #555; font-size: 12px; margin-top: 4px; }
+  .el-purpose b { color: #888; font-weight: normal; }
+  .el-note { color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }
+  .el-mark { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  .el-mark.official { background: #d4f4d4; color: #2c7a2c; }
+  .el-mark.ai { background: #fde0d0; color: #a04020; }
+  .thinking { margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .thinking b { color: #5a4a2a; }
+  .ai-prompt { margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+  .ai-prompt summary { cursor: pointer; color: #5a4a2a; font-weight: 600; }
+  .prompt-text { margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="shidaiyanlei_diguojingji">
+    <header>
+      <h2>帝国荆棘（时代眼泪原创军lo） <span class="unverified">unverified</span></h2>
+      <div class="brand-line">品牌：时代眼泪原创 lolita　/　服装设计：山福桃桃老师设计　/　画师：山福桃桃老师</div>
+      <div class="designer-note">淘宝 list_title 明文『山福桃桃老师设计』——画师有独立 IP。</div>
+      <div class="tags"><span class="tag">军lo</span> <span class="tag">暗黑</span> <span class="tag">荆棘</span> <span class="tag">2026 Q2 爆款</span> <span class="tag">画师 IP</span></div>
+    </header>
+    <p class="summary">时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现象级爆款季』成员（与樱洛芙终焉圣骸 2.0 + 未知星辰继承人王子装同期上新）。</p>
+    <div class="poster-grid"></div>
+    <div class="posters-source">📷 来源：<a href="https://item.taobao.com/item.htm?id=1044978525466" target="_blank">淘宝商品页 ↗</a></div>
+    
+        <section class="popularity-section">
+          <h3>畅销度评估 <span class="pop-label pop-high">4 月军lo 爆款</span></h3>
+          <div class="pop-dims"><div class="pop-dim"><div class="pop-dim-label">规模</div><div class="pop-dim-value">中位</div><div class="pop-dim-desc">真实付款规模量级</div></div><div class="pop-dim"><div class="pop-dim-label">传播</div><div class="pop-dim-value">现象</div><div class="pop-dim-desc">圈内自然传播深度</div></div><div class="pop-dim"><div class="pop-dim-label">权威</div><div class="pop-dim-value">知名</div><div class="pop-dim-desc">圈内权威背书</div></div><div class="pop-dim"><div class="pop-dim-label">保值</div><div class="pop-dim-value">中保值</div><div class="pop-dim-desc">二级市场长尾</div></div></div>
+          <div class="pop-evidence-block">
+            <div class="pop-evidence-label">证据清单（4 维交叉验证）</div>
+            <ul class="pop-evidence"><li>淘宝 500+ 意向金付款（『中位』500-3k 单档，¥1 意向金转化率 30% 估 150 真实付款）</li><li>lolita-domain-knowledge style-genres.md 明文记录『2026-04 军lo 现象级爆款季』三款之一</li><li>山福桃桃老师设计（画师 IP 加持）→ 权威知名</li><li>与终焉圣骸 2.0（4w+ 现象级）+ 继承人（400+ 白菜）形成 4 月军lo 爆款矩阵的中端段</li></ul>
+          </div>
+        </section>
+        
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">类型</span><span class="v">意向金 ¥1 抵 ¥10 → 截单 → 工厂出货</span></div><div class="row note">**lolita-domain-knowledge style-genres.md 明文记录**：『2026-04 关键节点（军lo 爆发）：樱洛芙终焉圣骸 2.0 + 时代眼泪帝国荆棘 + 未知星辰继承人王子装同时上新，引发军lo 现象级爆款季』。山福桃桃老师设计的 IP 加持是该款的关键差异化。</div></section>
+      <section class="info"><h3>价格</h3><div class="row note">**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。</div></section>
+      <section class="info"><h3>配色</h3><div class="row"></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">时代眼泪原创lolita</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=1044978525466" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=1044978525466</a></span></div><div class="row"><span class="k">当前标题</span><span class="v">【意定金】1r抵10r 帝国荆棘 时代眼泪原创军lo 山福桃桃老师设计</span></div><div class="row"><span class="k">挂牌价</span><span class="v">¥1</span></div><div class="row"><span class="k">销量</span><span class="v">500+人付款</span></div><div class="row"><span class="k">发货地</span><span class="v">北京</span></div><div class="row note">基础信息款 —— 后续可深入跑 detail / 微博/XHS 补充</div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row note">基础调研未深查微博渠道</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row note">基础调研未深查 XHS 渠道</div></div>
+    </div>
+    
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 0 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note"></div>
+            <div class="insp-theme"><b>主题：</b>帝国荆棘（时代眼泪原创军lo） 设计灵感未深查 —— 待补</div>
+            
+            <div class="elements"></div>
+            <div class="thinking"><b>设计思路：</b>基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">A young person wearing a 军lo, 暗黑, 荆棘 Lolita coordinate. Style: 时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现象级爆款季』成员（与樱洛芙终焉圣骸 2.0 + 未知星辰继承</div></details>
+          </div>
+        </details>
+        
+    
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">军lo</span> <span class="kw">暗黑</span> <span class="kw">荆棘</span> <span class="kw">2026 Q2 爆款</span> <span class="kw">画师 IP</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。</li></ul></div>
+          </div>
+          <div class="verdict">基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。</div>
+        </section>
+        
+  </article>
+
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
+</body>
+</html>

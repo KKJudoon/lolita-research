@@ -1,0 +1,106 @@
+{
+  "id": "shejishidiliwu_xiaowangzizhuang",
+  "name": "小王子装（设计师的礼物）",
+  "brand": "设计师的礼物",
+  "designer": "设计师的礼物（独立工作室品牌）",
+  "illustrator": null,
+  "illustrator_note": "未公开。",
+  "style_tags": [
+    "王子lo",
+    "正太",
+    "少年感",
+    "基佬装",
+    "日常款",
+    "¥139 中下端"
+  ],
+  "style_summary": "设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。",
+  "release": {
+    "type": "现货款 / 多 SKU 销售",
+    "date_range": "",
+    "poster_first_seen": "",
+    "note": "中下端腰部品牌走量款，无微博完整节奏 / 无圈内 KOL 横评，靠淘宝直挂 + 性价比驱动。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "list_price_at_research": "¥139",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+  },
+  "colors": [],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=857926438238",
+      "shop_url": null,
+      "shop_url_note": "店铺名 设计师的礼物 —— 详细 shop URL 待补",
+      "item_id": "857926438238",
+      "shop_name": "设计师的礼物",
+      "list_title": "设计师的礼物原创小王子装洛丽塔女Lolita少年感日常正太基佬套装",
+      "list_price": "¥139",
+      "sales": "800+人付款",
+      "location": "河南周口",
+      "note": "基础信息款 —— 后续可深入跑 detail / 微博/XHS 补充"
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查微博渠道"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查 XHS 渠道"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": []
+  },
+  "synthesis": {
+    "keywords": [
+      "王子lo",
+      "正太",
+      "少年感",
+      "基佬装",
+      "日常款"
+    ],
+    "highlights_positive": [
+      "设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。"
+    ],
+    "highlights_negative": [
+      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+    ],
+    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "小王子装（设计师的礼物） 设计灵感未深查 —— 待补",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [],
+    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
+    "for_image_gen_prompt": "A young person wearing a 王子lo, 正太, 少年感 Lolita coordinate. Style: 设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。"
+  },
+  "posters": [],
+  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "长尾",
+    "authority_tier": "未提及",
+    "resale_tier": "低保值",
+    "composite_label": "白菜畅销",
+    "evidence": [
+      "淘宝 800+ 付款（『中位』500-3k 单档）",
+      "¥139 全套白菜段定位，性价比驱动",
+      "品牌未在圈内 KOL 横评出现 → 权威未提及",
+      "腰部品牌靠淘宝直挂，无微博/XHS 完整节奏支撑长尾"
+    ]
+  },
+  "verified": false,
+  "verified_at": "2026-04-30",
+  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "research_depth": "基础（淘宝 list only）",
+  "raw_sources": {
+    "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
+  }
+}

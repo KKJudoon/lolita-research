@@ -1,0 +1,106 @@
+{
+  "id": "chenmohuoxing_xingxunyeqishi_qun",
+  "name": "星巡夜骑士 裙装版（沉默火星军lo）",
+  "brand": "沉默火星 SilentMars",
+  "designer": "沉默火星（独立工作室）",
+  "illustrator": null,
+  "illustrator_note": "未公开。",
+  "style_tags": [
+    "军lo",
+    "骑士",
+    "礼服式",
+    "高腰裙",
+    "¥168 中下端",
+    "五团余量"
+  ],
+  "style_summary": "沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特西幻军LO 骑士服』300+。",
+  "release": {
+    "type": "五团余量 / 现货补单（已多团重复开订）",
+    "date_range": "",
+    "poster_first_seen": "",
+    "note": "已 5 团重复开订 → 是品牌看家系列；裙装版 + 马术服裤装版 双 SKU 覆盖王子系男女装两条线。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "currency": "CNY",
+    "list_price_at_research": "¥168",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+  },
+  "colors": [],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=930183090964",
+      "shop_url": null,
+      "shop_url_note": "店铺名 沉默火星SilentMars —— 详细 shop URL 待补",
+      "item_id": "930183090964",
+      "shop_name": "沉默火星SilentMars",
+      "list_title": "裙装版五团余量-沉默火星-星巡夜骑士军lo 礼服式高腰裙",
+      "list_price": "¥168",
+      "sales": "400+人付款",
+      "location": "湖南长沙",
+      "note": "基础信息款 —— 后续可深入跑 detail / 微博/XHS 补充"
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查微博渠道"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "note": "基础调研未深查 XHS 渠道"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": []
+  },
+  "synthesis": {
+    "keywords": [
+      "军lo",
+      "骑士",
+      "礼服式",
+      "高腰裙",
+      "¥168 中下端"
+    ],
+    "highlights_positive": [
+      "沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特"
+    ],
+    "highlights_negative": [
+      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+    ],
+    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "星巡夜骑士 裙装版（沉默火星军lo） 设计灵感未深查 —— 待补",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [],
+    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
+    "for_image_gen_prompt": "A young person wearing a 军lo, 骑士, 礼服式 Lolita coordinate. Style: 沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特西幻军LO 骑士服』300+。"
+  },
+  "posters": [],
+  "posters_source": "基础调研未抓海报图。后续补微博官号 / 淘宝 detail 页 SKU 模特图。",
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "未深查",
+    "authority_tier": "知名",
+    "resale_tier": "中保值",
+    "composite_label": "看家款多团迭代",
+    "evidence": [
+      "淘宝 400+ 五团余量付款（『中位』500-3k 单档下沿）",
+      "5 团重复开订 = 看家系列 IP 资产化（与 PC 红与黑 4 代 / Vancy 搜查者 6 团同模式）",
+      "双 SKU（裙装 ¥168 + 马术服裤装 ¥175 共 600+ 付款累计）",
+      "品牌画师/设计师未独立署名，但多团迭代说明圈内有稳定客群"
+    ]
+  },
+  "verified": false,
+  "verified_at": "2026-04-30",
+  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "research_depth": "基础（淘宝 list only）",
+  "raw_sources": {
+    "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
+  }
+}
