@@ -84,6 +84,26 @@
 
 ⚠ **每次原子改动 Claude 自己先写语义 commit**，留给 deploy.sh 的应该是干净 worktree（只剩未推送 commit 待 push），别让它兜底 commit 成 `Update site: <ts>` 丢语义。
 
+## 网页版本对照（footer）
+
+每个 HTML 页面（index + 21 个 detail）右下角固定一个版本标签：
+
+```
+v <短 hash> · commit <YYYY-MM-DD> · build <YYYY-MM-DD HH:MM>
+```
+
+- **v 短 hash**：html 被 build 时的 git HEAD（短 hash），点击跳 GitHub commit URL 看 diff
+- **commit 日期**：那次 commit 的日期
+- **build 时间**：`python3 build.py` 跑的时刻（每次 build 必更新）
+
+⚠ **footer 的 hash ≠ 当前 HEAD**——git 本性，commit 之前不可能知道自己的 hash。每次循环 commit + build 时 footer hash 会落后 HEAD 1 个 commit。**对照同步状态时优先看 build 时间**——它代表"网页是几点 build 出来的"。
+
+**新对话开始流程**：
+1. 浏览器开 https://kkjudoon.github.io/lolita-research/ 看右下角 footer
+2. m87 上 `git log --oneline -5` 看最近 commit
+3. 对照：footer hash 应该 ≈ origin/main 上某个最近 commit；build 时间应该 ≈ 那次 commit 后的时间
+4. 不匹配 → 说明本地有未 deploy 的改动，或 Pages 还没部署完最近 push（GitHub Pages 部署延迟通常 30s–2min）
+
 ## JSON schema
 
 详见 lolita-fashion-research skill SKILL.md（在 `~/.openclaw/workspace/skills/lolita-fashion-research/`）；本目录每条 JSON 都遵循它。
