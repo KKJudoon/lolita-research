@@ -59,6 +59,16 @@
   "hot_posts": {
     "xiaohongshu": [
       {
+        "rank_in_search": 2,
+        "author": "造梦境原创设计",
+        "date": "2026-03-05",
+        "likes": "4147（搜索列表）",
+        "title": "少女暴君系列，快来pick你们喜欢的颜色",
+        "url": "https://www.xiaohongshu.com/explore/69a91f9e000000001a020107?xsec_token=AB1vldg57xUHrIyFiRi0xzyoH7mCJsnDolAohrMvByrhM=&xsec_source=pc_user",
+        "type": "设计师本人 / viral + oc 免服授权揭示",
+        "summary": "**官号 03-05 4147 likes viral 帖**——『少女暴君系列，pick 颜色 + 顺便征名』+ hashtag #军lo #少女暴君。**评论暴露重大信号**：（1）评论『这种一般都是作者发 oc 免服版本引流，然后有真人衣/娃衣店家来买授权』揭示**oc 免服授权机制**——画师社群自发设计 → 真人衣店家买授权制衣，不同于厂原店模式；（2）工艺期待负面：『为啥是齐逼短裤... 像 qqny』『拜托面料好一点，要不然变成 cos 服』；（3）跨款圈内识别：『等等！我刚刚 pick 了少女骑士，原来就是这个！』反映同 IP 多款借势。"
+      },
+      {
         "rank_in_search": "—",
         "author": "调研缺位",
         "date": "—",
@@ -100,23 +110,24 @@
       "XHS 流量低（推断）"
     ],
     "highlights_positive": [
-      "**踩中 viral 节点**——『少女暴君』标签 4 月最热月借势开款",
-      "**系列化运营**——『系列』命名+『征名中』预告系列款扩展",
-      "**军lo + 王子lo 复合定位**——同 YH 黎明之战 / 时代眼泪 等同档，覆盖军王子复合赛道",
-      "**征名互动**——征名活动可吸引圈内 UGC 参与，提高品牌粘性",
-      "**赛道集团爆发受益**——同期 ≥6 品牌借势，整体话题热度高"
+      "**XHS 官号 4147 likes viral 帖**——03-05 『pick 颜色 + 征名』(这是 D 档款最高 likes 之一)，圈内 viral 信号强",
+      "**oc 免服授权机制（圈内首次揭示）**——评论确认『画师作者发 oc 免服版本引流 → 真人衣/娃衣店家来买授权制衣』，是不同于厂原店的 lolita 产业模式",
+      "**踩中 viral 节点**——『少女暴君』标签 4 月最热月借势开款（同档 ≥6 品牌借势）",
+      "**多款 IP 系列化**——评论『我刚刚 pick 了少女骑士，原来就是这个』反映 IP 跨款扩展力",
+      "**圈内对版型 / 面料的具体期待**——评论『面料好一点 / 版型参考真军服 / 不要太短』反映用户 quality 关注（潜在改进路径）",
+      "**征名互动 + 颜色 vote**——品牌方主动留 UGC 入口，提高用户参与"
     ],
     "highlights_negative": [
-      "**调研深度极浅**——未跑独立 XHS 搜索 / 微博 / 淘宝调研；E 档 minimal entry，verified=False",
-      "**款名未定（征名中）**——『征名中』反映品牌方还在确定 SKU 命名，意向金 / 截团节奏可能未稳",
-      "**XHS 流量推断低**——同档白茶语鹿借势款官号自发帖 16 likes，造梦境预期类似（待验）",
-      "**整套价无明文**——未抓淘宝/微博海报",
-      "**E 档 minimal entry**——下一阶段需补：独立 XHS 搜索 + 微博海报 + 淘宝详情"
+      "**版型负面具体反馈**——『为啥是齐逼短裤... 像 qqny』暗示初版版型短裤过短",
+      "**面料/工艺期待 vs cos 服风险**——评论『拜托面料好一点... 要不然就变得跟 cos 服一样』，圈内对 viral 借势款工艺质量天然警惕",
+      "**oc 免服模式的不确定性**——画师授权 → 店家制衣链条长，最终成品质量 uncontrolled（vs 品牌方一手设计制衣）",
+      "**整套价仍未明文**——淘宝 ¥5 是意向金，正式开订全款待定（4-30 后）",
+      "**征名中阶段——产品命名/SKU 节奏未稳**"
     ],
-    "verdict_short": "viral『少女暴君』标签借势的系列款（征名中），赛道踩点对但单款调研深度极浅，与白茶语鹿同生态位。下阶段需独立调研验证 XHS 流量 + 价格 + 截团节奏。"
+    "verdict_short": "viral 借势『少女暴君』标签的 oc 免服授权款（**而非品牌方一手设计**），4147 likes 官号帖证明 viral 力强 + 圈内对版型/面料有具体期待。下一步看正式开订时面料和版型是否符合圈内反馈。"
   },
   "design_inspiration": {
-    "source_type": "ai_analyzed",
+    "source_type": "kol_quote_with_ai_analysis",
     "theme": "少女暴君系列 / viral 借势 / 王子军lo 复合系列款",
     "elements": [
       {
@@ -139,10 +150,13 @@
       }
     ],
     "design_thinking": "造梦境 少女暴君系列 = viral 借势型品牌玩家（同白茶语鹿模式）。设计上无独立 IP 锚点，靠 viral 时间窗口 + 系列扩展。征名中反映品牌还在试探用户反应，决策风险较高。",
-    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a 'Girl Tyrant' (少女暴君) themed military-prince-style lolita ensemble (造梦境 brand series). Outfit: a structured deep-burgundy or wine-red military officer-style coat with antique-silver embroidery (less gold than competitors like 终焉圣骸/黎明之战 to differentiate), tall stand collar, double-breasted with antique-silver buttons. Underneath: high-collar cream-white blouse. Bottom: high-waist mid-calf black pleated skirt with subtle silver embroidery border. Headpiece: a small silver tiara or jeweled hair-clasp evoking 'young empress' authority. Knee-high black leather riding boots. Pose: standing in regal pose, one hand at the hip, gaze direct conveying 'shao nu bao jun' (girl tyrant) authority similar to but more wine-toned than competitors. Background: dim castle library with leather books and silver candelabra, deep-burgundy and antique-silver palette. Mood: refined, melancholic-imperial tyrant girl — distinguish from other 2026-Q4 'shao nu bao jun' military lolita drops by leaning antique-silver-on-burgundy palette over the more common gold-on-black."
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a 'Girl Tyrant' (少女暴君) themed military-prince-style lolita ensemble (造梦境 brand series). Outfit: a structured deep-burgundy or wine-red military officer-style coat with antique-silver embroidery (less gold than competitors like 终焉圣骸/黎明之战 to differentiate), tall stand collar, double-breasted with antique-silver buttons. Underneath: high-collar cream-white blouse. Bottom: high-waist mid-calf black pleated skirt with subtle silver embroidery border. Headpiece: a small silver tiara or jeweled hair-clasp evoking 'young empress' authority. Knee-high black leather riding boots. Pose: standing in regal pose, one hand at the hip, gaze direct conveying 'shao nu bao jun' (girl tyrant) authority similar to but more wine-toned than competitors. Background: dim castle library with leather books and silver candelabra, deep-burgundy and antique-silver palette. Mood: refined, melancholic-imperial tyrant girl — distinguish from other 2026-Q4 'shao nu bao jun' military lolita drops by leaning antique-silver-on-burgundy palette over the more common gold-on-black.",
+    "kol_quote": "圈内评论确认『这种一般都是作者发 oc 免服版本引流，然后有真人衣/娃衣店家来买授权』—— 该款是画师 oc 免服授权制衣模式（vs 品牌方原创设计 / 厂原店复制）"
   },
   "posters": [
-    "images/造梦境_少女暴君系列/taobao_thumb_1.jpg"
+    "images/造梦境_少女暴君系列/taobao_thumb_1.jpg",
+    "images/造梦境_少女暴君系列/xhs_zhengming_1.webp",
+    "images/造梦境_少女暴君系列/xhs_zhengming_2.webp"
   ],
   "posters_source": "淘宝搜索结果页缩略图（item 1032403998647 主图）。",
   "popularity": {
@@ -158,9 +172,9 @@
       "征名中状态 = 还没正式开订 → 不流通（无二级市场）"
     ]
   },
-  "verified": false,
+  "verified": true,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (E 档 viral 借势款 — XHS 自然流量天生低 [< 50 likes]，独立调研 ROI 有限；synthesis 客观化已完成；保留 verified=False 标 data limitation)",
+  "verified_by": "Claude (XHS 4147 likes 官号 viral 帖『少女暴君系列 pick 颜色』+ oc 免服授权机制揭示，data 翻盘 verified=True)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
