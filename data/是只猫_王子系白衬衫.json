@@ -151,9 +151,13 @@
     "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a minimal prince-style (王子系) lolita ensemble, themed 'Prince's white shirt' (王子系白衬衫). Outfit: a crisp pure-white long-sleeve high-collar Peter-Pan-collar blouse with subtle ruffles, but with one signature detail — extra-flowy bell-sleeve cuffs that drape and flow when in motion (the '垂落飘逸袖口' element praised by KOL). Bottom: high-waist black slim-fit ankle-length tailored trousers (高腰西裤). Accessory: a thin black ribbon tied loosely at the collar, polished black Oxford shoes. Pose: walking forward with arms slightly back, capturing the flow of the sleeves in motion. Background: monochrome white-and-grey indoor minimalist setting (gallery wall, white floor). Lighting: soft directional front light highlighting the white shirt fabric and sleeve drape. Mood: clean, minimal, gender-neutral prince-style — emphasizing tailoring and silhouette over heavy ornament, contrast with more decorated military-prince drops in the same project."
   },
   "posters": [
-    "images/是只猫_王子系白衬衫/taobao_thumb_1.jpg"
+    "images/是只猫_王子系白衬衫/taobao_thumb_1.jpg",
+    "images/是只猫_王子系白衬衫/xhs_hongshao_1.webp",
+    "images/是只猫_王子系白衬衫/xhs_hongshao_2.webp",
+    "images/是只猫_王子系白衬衫/xhs_hongshao_3.webp",
+    "images/是只猫_王子系白衬衫/xhs_hongshao_4.webp"
   ],
-  "posters_source": "淘宝搜索结果页缩略图（item 980512889337 主图）。",
+  "posters_source": "淘宝搜索结果页缩略图（item 980512889337 主图）。 | + 4 张 XHS 是只猫·红烧 130 likes 路人 KOL（宫阙穿搭版）真人成片帖图（红黑配色，跨款 brand reference）",
   "popularity": {
     "scale_tier": "头部",
     "buzz_tier": "长尾",

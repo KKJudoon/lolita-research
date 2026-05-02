@@ -209,7 +209,9 @@
   "posters": [
     "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg",
     "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmb94ooj31jk28lu0x.jpg",
-    "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg"
+    "images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxmbzholj31jk28lb29.jpg",
+    "images/樱洛芙_骨龙/xhs_real_1.webp",
+    "images/樱洛芙_骨龙/xhs_real_2.webp"
   ],
   "verified": true,
   "verified_at": "2026-04-27",
@@ -262,7 +264,7 @@
     "design_thinking": "『骨龙』= bone dragon，西方奇幻 + 哥特小说交叉。把维多利亚哥特装饰主题搬到 lolita JSK 上，斗篷 + 紧身束腰 + 蕾丝下摆是经典哥特三件套，蝙蝠胸饰 + 玫瑰刺绣 + 骨头下摆 三个签名识别元素同时存在。同 brand 终焉圣骸（军lo）形成『暗黑双 IP』——骨龙服务哥特粉，终焉服务军lo粉。",
     "for_image_gen_prompt": "Gothic bone dragon JSK lolita: hooded cape with embroidered cross at hem, bat-shaped chest brooch, rose embroidery and lace details, asymmetric pointed hem with bone/cross motifs, fitted corset bodice, multi-layer lace skirt, color palette wine-red+black or black-purple or wasteland brown, Victorian gothic Dracula aesthetic"
   },
-  "posters_source": "微博官方海报，3 张（樱洛芙官号原稿）。",
+  "posters_source": "微博官方海报，3 张（樱洛芙官号原稿）。 | + 2 张 XHS 路人 KOL 394 likes 帖图（骨龙真人成片）",
   "popularity": {
     "scale_tier": "头部",
     "buzz_tier": "中位",

@@ -153,9 +153,13 @@
     "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian person (gender-neutral) in a budget-friendly prince-style (王子系) lolita outfit, themed 'Little Prince' (小王子装). Outfit: simple white short-sleeve Peter-Pan-collar blouse with subtle ruffles, layered with high-waist black knee-length shorts held by black suspenders crossing in back. Bow at the chest collar (medium-size cream silk). Knee-high white socks, black mary-jane shoes. Optional small gold-trimmed beret tilted to one side. Pose: shy standing with hands crossed in front, slight smile, 'little prince from the children's storybook' aura — referencing Saint-Exupéry's Le Petit Prince book illustration. Background: pastel daytime garden with rose hedges. Mood: gentle, child-like, gender-neutral 'shou nan' (正太/少年感) prince look — minimal ornament, basic silhouette typical of budget Lolita 'factory-original' (厂原) market segment."
   },
   "posters": [
-    "images/设计师的礼物_小王子装/taobao_thumb_1.jpg"
+    "images/设计师的礼物_小王子装/taobao_thumb_1.jpg",
+    "images/设计师的礼物_小王子装/xhs_248_1.webp",
+    "images/设计师的礼物_小王子装/xhs_248_2.webp",
+    "images/设计师的礼物_小王子装/xhs_248_3.webp",
+    "images/设计师的礼物_小王子装/xhs_248_4.webp"
   ],
-  "posters_source": "淘宝搜索结果页缩略图（item 857926438238 主图）。",
+  "posters_source": "淘宝搜索结果页缩略图（item 857926438238 主图）。 | + 4 张 XHS 设计师的礼物官号 ¥248 帖（54 likes，2024-11-29 一团首发上身效果图）",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "长尾",
