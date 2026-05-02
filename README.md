@@ -45,8 +45,7 @@
 - C 档 4 款补 XHS 帖 + 正负面亮点 + 灵感 elements
 - B 档 8 款补 price 字段（XHS 长贴里抠全款价）
 - 月夜熊 海报从 0 张补到 ≥4 张
-- `index-Magellan.html` 是 4-30 14:35 实验的另一套首页模板，untracked，未决定是否替换 `index.html`
-- 自 4-30 15:19 之后有 5 个 commit 没跑过 `deploy.sh`，GitHub Pages 是旧版本
+- `index-Magellan.html` 是 4-30 14:35 实验的另一套首页模板，untracked，未决定是否替换 `index.html` ⚠ 启动 watcher 前要么 `.gitignore` 它，要么删/改名（见下方"自动部署 watcher"）
 
 ## 目录
 
@@ -58,7 +57,7 @@
 - `reports/` — 跨款综合研究报告（md + html）
 - `build.py` — 读 `data/*.json` 生成 `index.html` + `items/*.html`
 - `apply_popularity.py` — 把淘宝销量/缩略图回填到 JSON `posters[]`
-- `deploy.sh` — git add+commit+push 到 GitHub Pages（须 m87 GUI session 跑，ssh 调用 keychain 读不到）
+- `deploy.sh` — `git add . && git commit "Update site: <ts>" && git push` 到 GitHub Pages（须 m87 GUI session 跑，ssh 调用 keychain 读不到 push 凭证）— 一般不直接调，靠下方 watcher 触发
 
 ## 工作流（每加一款）
 
@@ -69,7 +68,35 @@
 5. 海报下载到 `images/<品牌_款名>/`
 6. 写 `data/<品牌_款名>.json`（schema 见下）
 7. 跑 `python3 build.py` 重新渲染
-8. m87 GUI 终端跑 `./deploy.sh` 上 GitHub Pages
+8. `git commit`（如果 watcher 已跑就只 commit；watcher 没跑就 commit 后跑 `lolita-autodeploy run` 一次或者直接 `./deploy.sh`）
+
+## 自动部署 watcher
+
+m87 上 `~/.local/bin/lolita-autodeploy` 是 git watcher，每 30s 轮询本仓库，发现以下任一情况就触发 `deploy.sh`：
+
+- worktree 有未提交改动（modified / untracked）
+- index 有 staged 未 commit
+- 本地有未推送 commit
+
+触发流程：检测到改动 → 等 5s 防抖 → 跑 `deploy.sh`（自动 `git add . && git commit "Update site: <ts>" && git push`）。锁文件防并发。
+
+| 命令 | 用途 |
+|---|---|
+| `lolita-autodeploy start` | 后台启动 watcher（写 pid + log） |
+| `lolita-autodeploy stop` | 停 |
+| `lolita-autodeploy status` | 查状态 |
+| `lolita-autodeploy run` | 一次性检查 + deploy（不开 watcher） |
+| `lolita-autodeploy watch` | 前台跑 watcher loop |
+
+环境变量：`LOLITA_DEPLOY_INTERVAL`（默认 30s）/ `LOLITA_DEPLOY_DEBOUNCE`（默认 5s）。
+状态目录：`~/.local/state/lolita-research/`（pid / log / 锁）。
+
+⚠ **使用注意**：
+
+- watcher 跑 `git add .`（含 untracked，遵守 `.gitignore`）—— **任何 untracked 文件都会被自动 commit**，实验性/草稿文件要放 `.gitignore` 或挪出 repo
+- 每个原子改动建议先**自己 commit 一次**（写好 message），watcher 只负责把它 push；不要全靠 watcher 的 "Update site: <ts>" 兜底，会丢语义
+- m87 重启后 watcher 不会自启（无 launchd 包装），需要手动 `start`
+- ssh 远程触发 deploy 会卡 keychain push 凭证，所以 watcher 必须跑在 m87 GUI session 下
 
 ## JSON schema
 
