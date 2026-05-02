@@ -133,6 +133,35 @@ def _extract_release_dates(item):
     return publish_short, tuan_short
 
 
+def _shorten_name(name):
+    """去括号副标题，只留主名"""
+    if not name:
+        return ""
+    m = re.match(r'^([^（(]+)', name)
+    return (m.group(1) if m else name).strip()
+
+
+def _render_name_cell(item, detail_url):
+    """名称单元格：精简款名 + 品牌 + 完整名 ⓘ button → modal"""
+    full = item.get("name", "")
+    short = _shorten_name(full)
+    brand = item.get("brand", "")
+    designer = item.get("designer", "")
+    illustrator = item.get("illustrator", "")
+    designer_note = item.get("designer_note") or item.get("illustrator_note") or ""
+    style_summary = item.get("style_summary", "")
+    detail = {
+        "name": full, "brand": brand,
+        "designer": designer, "illustrator": illustrator,
+        "designer_note": designer_note, "style_summary": style_summary,
+    }
+    detail = {k: v for k, v in detail.items() if v}
+    has_extra = full != short or designer or illustrator or designer_note or style_summary
+    detail_json = html.escape(json.dumps(detail, ensure_ascii=False))
+    info_btn = f'<button class="name-info-btn" data-name-detail="{detail_json}" title="完整名 / 设计师 / 风格说明">ⓘ</button>' if has_extra else ''
+    return f'''<a class="bare" href="{esc(detail_url)}"><div class="title">{esc(short)}</div><div class="brand">{esc(brand)}</div></a>{info_btn}'''
+
+
 def _render_price_btn(price, name):
     """价格按钮（点击展开 modal 显示完整 price 字段）"""
     short = _extract_main_prices(price or {})
@@ -386,7 +415,7 @@ def render_summary_row(item):
     return f'''
     <tr data-sales="{sales_v}" data-time="{research_ts}" data-pop="{pop_rank}" data-status-priority="{status_priority}" data-styles="{" ".join(esc(s) for s in canonical)}">
       <td class="col-thumb"><a class="bare" href="{esc(detail_url)}">{thumb_html}</a></td>
-      <td class="col-name"><a class="bare" href="{esc(detail_url)}"><div class="title">{name}</div><div class="brand">{brand}</div></a></td>
+      <td class="col-name">{_render_name_cell(item, detail_url)}</td>
       <td class="col-pop"><button class="pop-btn {pop_class}" data-evidence="{evidence_json}">{esc(composite)} <span class="pop-info">ⓘ</span></button></td>
       <td class="col-price">{_render_price_btn(item.get("price", {}) or {}, item.get("name",""))}</td>
       <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
@@ -454,19 +483,26 @@ def write_index(items):
   .search-input {{ border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }}
   .search-input:focus {{ border-color: #c5a572; }}
 
-  table.research {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05); font-size: 13px; }}
+  .table-wrap {{ overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }}
+  table.research {{ width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }}
   table.research th {{ background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }}
-  table.research td {{ padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; }}
+  table.research td {{ padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }}
   table.research tr:hover td {{ background: #fbf7e8; }}
+  /* sticky 左 2 列：缩略图 + 标题 */
+  table.research th.col-thumb, table.research td.col-thumb {{ position: sticky; left: 0; z-index: 4; }}
+  table.research th.col-name, table.research td.col-name {{ position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }}
+  table.research thead th.col-thumb, table.research thead th.col-name {{ z-index: 6; }}
 
   .col-thumb {{ width: 64px; padding: 4px 6px; }}
   .col-thumb img {{ width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }}
   .col-thumb .no-thumb {{ width: 50px; height: 64px; border-radius: 4px; background: #f0eee8; color: #ccc; display: flex; align-items: center; justify-content: center; font-size: 11px; }}
   .col-status {{ width: 78px; }}
-  .col-name {{ min-width: 200px; }}
-  .col-name a.bare {{ color: #2c2418; }}
-  .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; }}
-  .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; }}
+  .col-name {{ min-width: 140px; max-width: 180px; position: relative; }}
+  .col-name a.bare {{ color: #2c2418; display: block; padding-right: 18px; }}
+  .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+  .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+  .name-info-btn {{ position: absolute; top: 50%; right: 6px; transform: translateY(-50%); background: none; border: none; color: #999; cursor: pointer; font-size: 13px; padding: 2px 4px; }}
+  .name-info-btn:hover {{ color: #5a4a2a; }}
   .col-price {{ width: 150px; white-space: nowrap; }}
   .col-time {{ width: 130px; white-space: nowrap; }}
   .col-pop {{ width: 150px; white-space: nowrap; }}
@@ -548,6 +584,7 @@ def write_index(items):
       <input type="search" class="search-input" id="search" placeholder="搜索款名 / 品牌">
     </div>
   </div>
+  <div class="table-wrap">
   <table class="research">
     <thead>
       <tr>
@@ -564,6 +601,7 @@ def write_index(items):
 {rows_html}
     </tbody>
   </table>
+  </div>
 
   <div id="pop-modal" class="pop-modal" onclick="closePopModal(event)" aria-hidden="true">
     <div class="pop-modal-card" onclick="event.stopPropagation()">
@@ -591,6 +629,15 @@ def write_index(items):
       <div class="pop-modal-name" id="release-modal-name"></div>
       <div class="pop-modal-evlabel">销售时间详情</div>
       <div id="release-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
+    </div>
+  </div>
+
+  <div id="name-modal" class="pop-modal" onclick="closeNameModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closeNameModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="name-modal-name"></div>
+      <div class="pop-modal-evlabel">完整名 / 品牌 / 设计师 / 风格</div>
+      <div id="name-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
     </div>
   </div>
 
@@ -739,10 +786,35 @@ def write_index(items):
     if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
     releaseModal.classList.remove("open");
   }};
+  // name click → modal
+  const nameModal = document.getElementById("name-modal");
+  const nameModalName = document.getElementById("name-modal-name");
+  const nameModalBody = document.getElementById("name-modal-body");
+  document.querySelectorAll(".name-info-btn").forEach(btn => {{
+    btn.addEventListener("click", (e) => {{
+      e.preventDefault(); e.stopPropagation();
+      let d;
+      try {{ d = JSON.parse(btn.dataset.nameDetail); }} catch(err) {{ return; }}
+      nameModalName.textContent = d.name || "";
+      const rows = [];
+      const fields = [["brand","品牌"],["designer","设计师"],["illustrator","画师"],["designer_note","设计师注"],["style_summary","风格说明"]];
+      for (const [k,label] of fields) {{
+        if (d[k]) rows.push(`<div style="margin-top:4px;"><strong>${{label}}</strong>: ${{escHtml(d[k])}}</div>`);
+      }}
+      nameModalBody.innerHTML = rows.join("") || "<em>—</em>";
+      nameModal.classList.add("open");
+    }});
+  }});
+  window.closeNameModal = function(e) {{
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    nameModal.classList.remove("open");
+  }};
+
   document.addEventListener("keydown", (e) => {{
     if (e.key === "Escape") {{
       if (priceModal.classList.contains("open")) priceModal.classList.remove("open");
       if (releaseModal.classList.contains("open")) releaseModal.classList.remove("open");
+      if (nameModal.classList.contains("open")) nameModal.classList.remove("open");
     }}
   }});
 </script>
