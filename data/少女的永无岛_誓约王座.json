@@ -14,17 +14,19 @@
   ],
   "style_summary": "少女的永无岛的王子装『誓约王座』——长袖衬衫+长款腰封套装。淘宝 ¥78.3 单 SKU / 500+ 付款，是品牌王子系销量头部款（同品牌祷告者千人加购 / 星辉骑士 400+ / 启示录 200+ / 誓约之剑 100+）。注意品牌仿冒泛滥（被识图 30+ 山店）影响保值。",
   "release": {
-    "type": "现货款（拆 SKU 销售）",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "现货 / 厂原店模式（圈内确认）",
+    "date_range": "未明（厂原店持续供货模式，非传统截团）",
+    "poster_first_seen": "未明（多平台搬运式上架）",
     "note": "少女的永无岛 brand 整体仿冒泛滥（lolita-domain-knowledge brands-reference + 啊不许烦 344 likes 帖『识图 30+ 山店』）影响所有该品牌款的二级市场保值。"
   },
   "price": {
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥78.3",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "¥78.3（淘宝挂牌，2026-04-30）",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "誓约王座是 王子装 + 长款腰封套装，无 OP 单件 SKU。",
+    "full_set_note": "整套约 ¥78.3 白菜段（淘宝挂牌价，已在 list_price_at_research）。厂原店模式下『全套』概念模糊（按件买配凑），价格优势是核心卖点。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -53,32 +55,99 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": 8,
+        "author": "少女的永无岛 原创工作室",
+        "date": "2026-04-07",
+        "likes": "547（搜索列表）",
+        "title": "希腊风又添一员猛将……",
+        "url": "https://www.xiaohongshu.com/explore/69d46514000000001f0014ed?xsec_token=ABOoYkRzcqX8sGZd1jJP4Sciip-SyZc8MPcbm3XOIOwMA=&xsec_source=pc_user",
+        "type": "设计师本人 / 系列主题定调",
+        "summary": "官号自发，标题『希腊风又添一员猛将』+ hashtag #希腊风 #神女 + 文案『赫拉王冠』—— 揭示誓约系列的设计灵感是希腊神话女神 / 神女主题。评论以基础问询为主（哪家、怎么卖、假发、头饰），互动深度浅。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "不会起名字的憨憨",
+        "date": "2025-04-18",
+        "likes": "114（搜索列表）",
+        "title": "甜蜜之约和少女的永无岛，这两家店怎么选",
+        "url": "https://www.xiaohongshu.com/explore/68019f4a000000001c015134?xsec_token=AB99_7nSHOWY3L3cImF_dL9xylFRwDZODkveXXP_dxFZk=&xsec_source=pc_user",
+        "type": "工艺争议 / 品牌避雷",
+        "summary": "圈内对比帖，揭露『甜蜜之约和少女的永无岛 好多裙子都一样』+ 评论高密度确认『他们家是厂原』『避雷少女 态度好差』『卖厂原的，还有设计师的礼物也是』—— 这是品牌级风险信号：少女的永无岛 = 厂原店模式（圈内 quality-flags 类别）。"
+      },
+      {
+        "rank_in_search": 1,
+        "author": "坐好，别闹",
+        "date": "未抓正文",
+        "likes": "263",
+        "title": "⚔️ 剑锋所向，誓约所指⚔️",
+        "url": "https://www.xiaohongshu.com/explore/69661fb3000000001a028f38?xsec_token=AB0JL63VxeCJWGEKm_lKEwB3KOXCj-TvaR3FW2U8j2j-o=&xsec_source=pc_user",
+        "type": "真人成片种草",
+        "summary": "title-only。263 likes 路人种草帖，用『剑锋所向，誓约所指』叙事强化『誓约』主题——给该款提供战士/骑士女神的角色叙事接口。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "小qq想早点睡觉",
+        "date": "未抓正文",
+        "likes": "215",
+        "title": "白茶对我笑！白茶对我笑！",
+        "url": "https://www.xiaohongshu.com/explore/699982700000000015038d18?xsec_token=ABtbe2SlD00azwH6-OnJMcrUllD_NRDTGqpR-aCyTxGoU=&xsec_source=pc_user",
+        "type": "热度锚点",
+        "summary": "title-only。215 likes，标题『白茶对我笑』可能是该款颜色/风格关联到白茶语鹿其他款，反映誓约系列在跨品牌讨论中的曝光。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "王子lo",
-      "长袖衬衫",
-      "长款腰封",
+      "白菜段（¥78.3）",
+      "希腊神女主题",
+      "厂原店模式",
       "誓约系列",
-      "¥78.3 白菜段"
+      "王子装+腰封"
     ],
     "highlights_positive": [
-      "少女的永无岛的王子装『誓约王座』——长袖衬衫+长款腰封套装。淘宝 ¥78.3 单 SKU / 500+ 付款，是品牌王子系销量头部款（同品牌祷告者千人加购 / 星辉骑士 400+ / 启示录 200+ / 誓约之剑 100+）。注意品牌仿冒"
+      "**白菜段价格优势**——¥78.3 整套（淘宝挂牌）是市场极低价位，远低于樱洛芙终焉圣骸 ¥648 / PC 红与黑 ¥500+ 等中端段",
+      "**希腊神女主题清晰**——XHS 官号 547 likes 帖明确『赫拉王冠』『希腊风』『神女』hashtag，给该款提供独立设计辨识度（vs 通用王子军lo 套装）",
+      "**誓约系列叙事统一**——『誓约王座』+『剑锋所向，誓约所指』+ 系列内多款形成稳定叙事 IP",
+      "**王子装+长款腰封结构**——长款腰封（vs 普通宽腰带）形成希腊女神柱式垂顺感，与希腊神女主题契合",
+      "**现货模式无截团等待**——厂原店通常持续供货，下单即发，避免传统 lolita 截团 3-12 月等货周期"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**⚠ 品牌级避雷：少女的永无岛 = 厂原店**——圈内 2025-04 对比帖密集确认『他们家是厂原』『避雷少女 态度好差』『卖厂原的，还有设计师的礼物也是』。厂原店 = 1:1 仿正版工厂出品，不属于原创设计 lolita，圈内（terminology / quality-flags 知识库）有持续避雷讨论",
+      "**态度服务争议**——同上对比帖评论『避雷少女 态度好差』，反映品牌方客服质量低",
+      "**版权/原创身份模糊**——『少女的永无岛写名字了，甜蜜之约没写』『一样的裙子』暗示 SKU 来源是同一工厂上下家分销，原创身份存疑",
+      "**布料/工艺评价一般**——圈内『可以买，但布料什么的一般』评价反映中下游品质",
+      "**圈内对厂原本质的争议**——『他们家是厂原，也算正的吧』『就是哪个便宜买哪个』反映买方知道品牌定位但仍因价格妥协，决策时要权衡"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "白菜段（¥78.3）的希腊神女主题王子装，价格诱人 + 主题清晰，但**品牌级避雷信号强**（少女的永无岛 = 厂原店，圈内有持续讨论）。适合愿意接受厂原品质 + 把价格放第一的用户；强调原创设计 / 品牌价值的用户应避雷。"
   },
   "design_inspiration": {
-    "source_type": "ai_analyzed",
-    "theme": "誓约王座（少女的永无岛王子装腰封套装） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 王子lo, 长袖衬衫, 长款腰封 Lolita coordinate. Style: 少女的永无岛的王子装『誓约王座』——长袖衬衫+长款腰封套装。淘宝 ¥78.3 单 SKU / 500+ 付款，是品牌王子系销量头部款（同品牌祷告者千人加购 / 星辉骑士 400+ / 启示录 200+ / 誓约之剑 100+）。注意品牌仿冒泛滥（被识图 30+ 山店）影响保值。"
+    "source_type": "official",
+    "theme": "希腊神话女神 / 赫拉王座 / 誓约女祭司",
+    "official_quote": "XHS 少女的永无岛 原创工作室 2026-04-07 官号帖：『好喜欢这个蹁跹的衣摆 赫拉王冠 #希腊风 #神女』",
+    "elements": [
+      {
+        "name": "希腊式长款腰封",
+        "source_lineage": "希腊女神服饰 chiton/peplos 的腰间束带 + 拜占庭女皇服饰的长腰封传统，长款腰封（vs 普通宽腰带）形成柱式垂顺感",
+        "purpose": "拉长身形 / 强化希腊女神 silhouette / 区分常规王子 lolita 短腰封",
+        "official": true
+      },
+      {
+        "name": "赫拉王冠（头饰）",
+        "source_lineage": "希腊神话最高女神赫拉的金冠形象，圈内官号文案明确点名『赫拉王冠』",
+        "purpose": "头饰加分 / 神女气场 / 拍照仪式感",
+        "official": true
+      },
+      {
+        "name": "长袖白衬衫 + 王子装 silhouette",
+        "source_lineage": "传统王子 lolita 套装（衬衫+裤+腰封）的基础结构，纯白配色对应希腊女神纯洁感",
+        "purpose": "经典王子 lolita 形态 + 希腊纯白主题",
+        "official": true
+      }
+    ],
+    "design_thinking": "誓约王座主打希腊女神主题（赫拉王冠 / 希腊风 hashtag），用长款腰封 + 纯白王子装 silhouette 营造神女气场。设计 IP 清晰是优点，但品牌方厂原店模式让该设计的『独立原创性』打折扣（圈内反复确认）。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a Greek-goddess-themed prince-style (王子系) lolita ensemble, themed 'Pledge of the Throne' (誓约王座). Outfit: a long-sleeve crisp pure-white high-collar blouse with subtle Peter-Pan collar; layered with high-waist black or deep navy slim trousers (or knee-length trouser-skirt). Signature element: an EXTRA-LONG SASH-WAIST belt (长款腰封) in metallic gold/cream silk, wrapping around the waist multiple times in a Grecian chiton-binding manner, with the long ends draping down the side of the leg, evoking the columnar/draped silhouette of ancient Greek peplos/chiton. Headpiece: a delicate gold laurel-leaf or filigree crown (the 'Hera Crown' explicitly named by the brand) sitting low on the brow. Optional: a long sword or scepter held in one hand reinforcing the 'oath of throne' narrative. Pose: standing tall in regal stance, slight head tilt, gaze straight or upward, channeling Greek goddess Hera authority. Background: marble columns of a Greek temple courtyard at dusk, soft golden hour rim-lighting on the laurel crown and sash silk, warm cream-and-gold palette. Mood: solemn, regal, neo-classical Greek-goddess fashion fused with Lolita prince-style silhouette."
   },
   "posters": [
     "images/少女的永无岛_誓约王座/weibo_brand_1.jpg",
@@ -104,9 +173,9 @@
       "圣职系赛道头部款是『安缇娅的祷告』（小蝴蝶 1506 likes 圈内 tag 共识）→ 该品牌 sub-genre 内非头部"
     ]
   },
-  "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified": true,
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (XHS browser-harness 2 帖详情 + 2 帖 title-only；揭露品牌级厂原店避雷信号)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
