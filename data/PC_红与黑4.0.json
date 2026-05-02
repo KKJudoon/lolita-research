@@ -26,12 +26,13 @@
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥109-249（单件区间，淘宝 SKU）",
+    "list_price_at_research": "淘宝 ¥109-249 单件 SKU 区间（仅参考，衬衫 / 短裤 / 长马甲 各独立挂牌）；整套真实价待 XHS 搜『PC 红与黑 4.0 全款 / 整套』+ 微博官号海报正文核",
     "shirt_estimate": 109,
     "vest_estimate": 249,
     "note": "三件单卖 SKU：衬衫 / 短裤 / 长马甲 各独立挂牌价格。¥109 推测为衬衫，¥249 推测为长马甲。整套价格无微博海报正文交叉验证（PC 海报多为视觉图透，价格信息少披露）。整套估算 ¥500+ 进入中端价位，与同梯队（终焉圣骸 op=520 / 龙曜 ¥523）相当。",
     "op_note": "**该款没有 OP 连衣裙形态**——红与黑 4.0 是 3 件套（衬衫 / 短裤 / 长马甲），淘宝按单件 SKU 独立挂牌（不像终焉圣骸 2.0 / 龙曜那样有明确 op 单件）。按 SKILL.md \"❌ 凭印象填字段\" 原则留 null。",
-    "full_set_note": "整套官方未公开打包价。已搜：XHS \"PC原创设计 红与黑\" / \"红与黑4.0 lolita\" / \"PC 红与黑4.0 价格\"——找到 PrincessChronicles 545 likes 上新帖（2025-08-24）正文只放 hashtags 无定价，评论无价格讨论；微博海报多为视觉图透不披露价格。整套估算 ≈ ¥500+（中端段），但无明文交叉验证。"
+    "full_set_note": "整套官方未公开打包价。已搜：XHS \"PC原创设计 红与黑\" / \"红与黑4.0 lolita\" / \"PC 红与黑4.0 价格\"——找到 PrincessChronicles 545 likes 上新帖（2025-08-24）正文只放 hashtags 无定价，评论无价格讨论；微博海报多为视觉图透不披露价格。整套估算 ≈ ¥500+（中端段），但无明文交叉验证。",
+    "list_price_priority_note": "按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 > XHS/微博 官方宣传 > 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。"
   },
   "colors": [
     "颜色分类（淘宝 SKU 仅列『颜色分类』，主推黑红双色调，可能含红黑 / 黑黑两种主色）"
