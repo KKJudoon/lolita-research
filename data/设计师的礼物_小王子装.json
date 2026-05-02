@@ -22,13 +22,14 @@
   },
   "price": {
     "op": null,
-    "full_set": null,
+    "full_set": 248,
     "currency": "CNY",
-    "list_price_at_research": "淘宝 ¥139 单 SKU（仅参考；偏低价，可能是衬衫单件不是套装）；整套真实价待 XHS 搜『设计师的礼物 小王子装 全款 / 整套』核——注：本品牌是厂原店（圈内 2025-04 对比帖确认）",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
-    "op_note": "未抓 SKU 拆分；E 档 minimal entry 调研深度浅。",
+    "list_price_at_research": "整套 ¥248（一团首批，XHS 官号明文）/ ¥278（二团）/ ¥329 / ¥359（贵气版，XHS 官号 2025 帖明文 341 likes）。**淘宝 ¥139 单 SKU 不是整套**——是用户 2026-05-02 反馈『淘宝低价款不准』的实证款。",
+    "note": "**整套价 ¥248 来自 XHS 官号 2024-11-29 帖明文**（『上衣和背带裤两件套设计，第一批是248』）。**⚠ 厂原三家同售验证**：圈内 2025-08 避雷帖（甘霜sugarycold 130 likes）评论『tb 这堆所谓卖厂原的店家（设计师的礼物、少女的永无岛、锦慕lolita 等等），估计全都是同家店，发货时间地点款式模特图价格都一模一样』。三家共享同款 / 同价 / 同发货。",
+    "op_note": "无 OP 单件——小王子装是上衣+背带裤两件套设计（XHS 官号 2024-11-29 自报明文）",
     "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。",
-    "list_price_priority_note": "按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 > XHS/微博 官方宣传 > 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。"
+    "list_price_priority_note": "按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 > XHS/微博 官方宣传 > 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。",
+    "full_set_history": "一团 ¥248（首批 + 满减），二团 ¥278（XHS 官号『设计师的礼物』2024-11-29 帖明文：『第一批是248，还可以参加满减活动，第二批是278』）"
   },
   "colors": [],
   "colors_dropped": [],
