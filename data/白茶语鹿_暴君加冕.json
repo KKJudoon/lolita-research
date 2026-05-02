@@ -16,17 +16,19 @@
   ],
   "style_summary": "白茶语鹿 2026 Q2 借势 XHS『少女暴君』viral 浪潮（最高单帖 36w likes）开的军lo系列。淘宝 ¥5 意向金抵 ¥30 / 1000+ 付款，是 viral → 销量转化的实证案例。同店还有『荣耀向我俯首王子系列』200+ 付款，命名直接对应法语音乐剧 cover 帖（25w likes 跨圈层）。",
   "release": {
-    "type": "意向金 → 截单 → 工厂出货（系列款，多 SKU）",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "意向金 + 截单全款",
+    "date_range": "2026-04-04（XHS 上意向金）~ ?（截团日期未抓）",
+    "poster_first_seen": "2026-04-04",
     "note": "viral 浪潮借势型款——从 'Yuki雪雪 我要权力向我而来' 4.4w likes / 啊川 36w likes / 芋泥脑袋瓜额 25w likes 同期切入。借势速度极快（1000+ 付款达成）。"
   },
   "price": {
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥5",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "¥5 意向金抵扣（淘宝挂牌，2026-04-30）",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "未抓全套 SKU 拆分；暴君加冕系列是套装款（含外套+内衫+下装+配件），按系列出。",
+    "full_set_note": "整套官方未明文标价；XHS 官号 4-04 意向金帖只发主图未发价格。淘宝 ¥5 意向金抵扣（无全款链）。需正式开订后看微博海报正文。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -55,32 +57,87 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "白茶语鹿Lolita原创设计",
+        "date": "2026-04-04",
+        "likes": "16",
+        "title": "意向金已上老婆们",
+        "url": "https://www.xiaohongshu.com/explore/69d06b260000000022024dda?xsec_token=ABuosLpS0d8cDFnBpVV544MHC46x6ZHm_9zZ6Y6NeJCUk=&xsec_source=pc_user",
+        "type": "设计师本人 / 官号意向金通告",
+        "summary": "官号自发上意向金通告，hashtag #暴君加冕 #白茶语鹿Lolita原创设计。仅 16 likes 评论 8 条（蹲实物 / 小个子能穿 / 银白色），互动量级远低于 YourHighness 黎明之战 (2834) / PC 人偶 (3273) 等同档款 — 反映白茶语鹿在 XHS 自然流量低，依赖『少女暴君 / 暴君加冕』标签借势。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "白茶语鹿Lolita原创设计",
+        "date": "未抓正文",
+        "likes": "12",
+        "title": "老婆们，王子系列意向金已上",
+        "url": "https://www.xiaohongshu.com/explore/69ec0a3f00000000230151c6?xsec_token=ABh-UJT7RATcK9HE-CMkRj3fxzhDNZfgvZFlVOvZmZJD0=&xsec_source=pc_user",
+        "type": "设计师本人 / 王子系列扩展",
+        "summary": "title-only。官号同月再上王子系列意向金（白茶语鹿在拓展王子系列产品线）。12 likes 同样反映自然流量弱。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "🦁🦈坚定自信！",
+        "date": "未抓正文",
+        "likes": "3",
+        "title": "避雷白鹿语",
+        "url": "https://www.xiaohongshu.com/explore/691c20a5000000000d03cab0?xsec_token=ABGfih0MImu5xZkzyTM-q3JigSjrDEpXWnSYyaDYm68V0=&xsec_source=pc_user",
+        "type": "工艺争议 / 避雷",
+        "summary": "title-only。避雷帖，3 likes 量级低但暴露品牌风险点—— 圈内对白茶语鹿（也叫 白鹿语 别称）有避雷讨论。具体内容未抓正文。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "军lo",
-      "王子系",
-      "暴君系列",
-      "viral 借势",
-      "金线刺绣"
+      "viral 借势『暴君加冕』",
+      "白茶语鹿原创设计",
+      "XHS 自然流量低",
+      "王子系列扩展"
     ],
     "highlights_positive": [
-      "白茶语鹿 2026 Q2 借势 XHS『少女暴君』viral 浪潮（最高单帖 36w likes）开的军lo系列。淘宝 ¥5 意向金抵 ¥30 / 1000+ 付款，是 viral → 销量转化的实证案例。同店还有『荣耀向我俯首王子系列』2"
+      "**踩中『少女暴君』viral 节点**——XHS 4-04 上意向金，正好覆盖 4 月『少女暴君』话题最热（详见 junlo_prince_report 摘要 1：≥6 个品牌借势开款）",
+      "**系列化运营**——『暴君加冕』+ 同月推王子系列意向金，品牌方在拓展王子系产品线（不只单款）",
+      "**淘宝链 ¥5 意向金低门槛**——意向金抵扣模式降低用户决策成本",
+      "**官号自发节奏**——4-04 主动 XHS 上新通告，避免完全依赖第三方汇总号",
+      "**hashtag 精准**——#暴君加冕 #白茶语鹿Lolita原创设计 双 tag 匹配 viral 标签 + 品牌识别"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**XHS 自然流量低**——官号意向金帖仅 16 likes（vs PC 人偶 3273 / YH 黎明之战 2834），评论以基础问询（蹲实物 / 小个子能穿 / 银白色）为主，无圈内 KOL 真人成片",
+      "**品牌避雷帖存在**——『避雷白鹿语』（3 likes）虽热度低但存在，反映圈内对该品牌有未澄清的工艺/态度争议（具体未深查）",
+      "**整套价无明文**——意向金 ¥5 抵扣，但全款价 / 套装拆分价 官方未公开，决策摩擦",
+      "**借势型设计辨识度低**——『暴君加冕』命名直接蹭 viral 标签，无独立设计 IP（vs 永无岛 誓约王座有『希腊神女 / 赫拉王冠』清晰主题）",
+      "**E 档 minimal entry 起点**——本款是 4-30 一次性补的 top-畅销度 minimal 条目（commit 8104bf5），调研深度浅"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "viral『少女暴君』标签借势款，时间窗口对 + 系列化运营但 XHS 自然流量低、避雷帖存在、设计辨识度弱。适合作为『话题款』短期收割，不建议长期 IP 投入。"
   },
   "design_inspiration": {
     "source_type": "ai_analyzed",
-    "theme": "暴君加冕军lo系列（白茶语鹿） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 军lo, 王子系, 暴君系列 Lolita coordinate. Style: 白茶语鹿 2026 Q2 借势 XHS『少女暴君』viral 浪潮（最高单帖 36w likes）开的军lo系列。淘宝 ¥5 意向金抵 ¥30 / 1000+ 付款，是 viral → 销量转化的实证案例。同店还有『荣耀向我俯首王子系列』200+ 付款，命名直接对应法语音乐剧 cover 帖（25w"
+    "theme": "暴君加冕 / 君权仪式 / 王子系军lo 借势『少女暴君』",
+    "elements": [
+      {
+        "name": "加冕仪式主题",
+        "source_lineage": "欧洲君主加冕礼传统（拿破仑加冕 / 路易十四加冕等历史画面），『暴君加冕』命名直接 invoke 君权统治叙事",
+        "purpose": "主题叙事 / 仪式感强化",
+        "official": false
+      },
+      {
+        "name": "军lo + 王子系混合",
+        "source_lineage": "军lo 立领+斗篷 + 王子系衬衫+腰封 套装组合，跟『少女暴君黎明之战』『时代眼泪 帝国荆棘』等同档 viral 借势款 silhouette 类似",
+        "purpose": "踩中 viral 标签 + 提供完整 lookbook",
+        "official": false
+      },
+      {
+        "name": "系列化设计语言",
+        "source_lineage": "白茶语鹿同月推暴君加冕 + 王子系列两条线，可能共享暗调金线刺绣等设计元素",
+        "purpose": "系列叙事 / 拓展产品线",
+        "official": false
+      }
+    ],
+    "design_thinking": "白茶语鹿是 viral 借势型品牌玩家——4 月『少女暴君』话题爆发时跟进开『暴君加冕』，命名直接蹭 viral 流量。设计上没有独立 IP 锚点（vs 永无岛 赫拉王冠），靠 viral 时间窗口 + 系列扩展赌一波。XHS 自然流量低反映借势收效一般。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a 'Tyrant's Coronation' (暴君加冕) themed military-prince-style lolita ensemble. Outfit: a structured black-and-gold military officer-style overcoat with gold-thread embroidered floral/imperial motifs along lapel and sleeves, double-breasted brass buttons, high stand collar, fitted waist with subtle peplum. Underneath: a high-collar cream-white blouse with subtle ruffles. Bottom: high-waist black knee-length pleated skirt OR slim trousers. Signature element: an ornate gold-and-jewel coronation crown carried in one hand or set on a small velvet pillow beside, evoking the 'crowning of the tyrant' narrative; gold ceremonial sash diagonally across the chest with imperial medals. Knee-high black polished riding boots. Pose: standing in regal coronation-moment posture, crown held forward as if about to self-crown (Napoleon-style self-coronation reference), gaze direct and authoritative. Background: deep-red velvet curtains and gold candelabra in a Baroque palace interior, dramatic warm chiaroscuro lighting. Mood: solemn imperial coronation, Napoleon-coronation-painting energy meets lolita prince-style military silhouette."
   },
   "posters": [
     "images/白茶语鹿_暴君加冕/taobao_thumb_1.jpg"
@@ -99,9 +156,9 @@
       "白茶语鹿品牌圈内未在 KOL 横评 top 列表（@feshianla / 玲玲玲姐 / 茉香椰果）→ 权威普通"
     ]
   },
-  "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified": true,
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (XHS browser-harness 1 帖详情 + 2 帖 title-only；E 档 minimal entry 升级)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
