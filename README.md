@@ -45,7 +45,7 @@
 - C 档 4 款补 XHS 帖 + 正负面亮点 + 灵感 elements
 - B 档 8 款补 price 字段（XHS 长贴里抠全款价）
 - 月夜熊 海报从 0 张补到 ≥4 张
-- `index-Magellan.html` 是 4-30 14:35 实验的另一套首页模板，untracked，未决定是否替换 `index.html` ⚠ 启动 watcher 前要么 `.gitignore` 它，要么删/改名（见下方"自动部署 watcher"）
+- `index-Magellan.html` 是 4-30 14:35 实验的另一套首页模板，已 `.gitignore`，未决定是否替换 `index.html`
 
 ## 目录
 
@@ -57,7 +57,7 @@
 - `reports/` — 跨款综合研究报告（md + html）
 - `build.py` — 读 `data/*.json` 生成 `index.html` + `items/*.html`
 - `apply_popularity.py` — 把淘宝销量/缩略图回填到 JSON `posters[]`
-- `deploy.sh` — `git add . && git commit "Update site: <ts>" && git push` 到 GitHub Pages（须 m87 GUI session 跑，ssh 调用 keychain 读不到 push 凭证）— 一般不直接调，靠下方 watcher 触发
+- `deploy.sh` — `git add . && git commit "Update site: <ts>" && git push` 到 GitHub Pages。**必须在 m87 GUI Terminal 里跑**（ssh 调用 keychain 读不到 push 凭证）。手动部署是当前唯一稳定方式（watcher 实验过被弃用，原因见下文 README 历史）
 
 ## 工作流（每加一款）
 
@@ -68,37 +68,21 @@
 5. 海报下载到 `images/<品牌_款名>/`
 6. 写 `data/<品牌_款名>.json`（schema 见下）
 7. 跑 `python3 build.py` 重新渲染
-8. `git commit -m "<语义 message>"` —— 不用手动 push，watcher 看到未推送 commit 会自动推
+8. `git commit -m "<语义 message>"`
+9. **m87 GUI Terminal 跑 `./deploy.sh`** 推到 GitHub Pages
 
-## 自动部署 watcher
+## 部署说明（手动）
 
-m87 上 `~/.local/bin/lolita-autodeploy` 是 git watcher，**常驻在 m87**。职责分工：
+部署一律在 **m87 GUI Terminal** 里跑 `./deploy.sh`——手动稳定，不依赖任何后台进程。
 
-| 谁 | 做什么 |
-|---|---|
-| 你 / Claude | 改完 → `python3 build.py` → `git commit -m "<语义 message>"` |
-| watcher | 每 30s 轮询，看到 `@{u}..HEAD != 0`（有未推送 commit）→ 自动 `git push` |
+`deploy.sh` 行为：
+1. 如果 worktree 有未提交改动（modified/untracked，遵守 `.gitignore`）→ `git add . && git commit "Update site: <ts>"` 兜底 commit
+2. 如果有未推送 commit → `git push`
+3. 否则报 `No changes to deploy.`
 
-watcher 内部其实跑的是 `deploy.sh`（同时也兜底处理"未提交改动 = `git add . && git commit "Update site: <ts>"`"），但**正常工作流应该把 commit 交给人/Claude 写语义 message**，让 watcher 退化成「只 push」。
+⚠ **必须在 m87 GUI Terminal 跑**：ssh 启动的进程没 GUI keychain 上下文，push 会报 `fatal: could not read Username for 'https://github.com'`（2026-05-02 实测）。`~/.local/bin/lolita-autodeploy` 后台 watcher 之前实验过自动化，因 keychain 问题废弃，已弃用。
 
-| 命令 | 用途 |
-|---|---|
-| `lolita-autodeploy start` | 后台启动 watcher（写 pid + log） |
-| `lolita-autodeploy stop` | 停 |
-| `lolita-autodeploy status` | 查状态 |
-| `lolita-autodeploy run` | 一次性检查 + deploy（不开 watcher） |
-| `lolita-autodeploy watch` | 前台跑 watcher loop |
-
-环境变量：`LOLITA_DEPLOY_INTERVAL`（默认 30s）/ `LOLITA_DEPLOY_DEBOUNCE`（默认 5s）。
-状态目录：`~/.local/state/lolita-research/`（pid / log / 锁）。
-
-⚠ **使用注意**：
-
-- **不要给 watcher 留未提交改动**——它 5s 防抖后会用 `git add .` 兜底 commit 成 `Update site: <ts>`，丢语义。任何改动 Claude 都先 `git commit` 写好 message
-- **untracked 文件同样会被兜底 add+commit**——实验/草稿文件要 `.gitignore` 或挪出 repo（如当前的 `index-Magellan.html`）
-- m87 重启后 watcher 不会自启（无 launchd 包装），开机后要手动 `lolita-autodeploy start`
-- ⚠ **必须在 m87 上的 Terminal.app 里启动**——`ssh kangchen@m87 'lolita-autodeploy start'` 起的进程没 GUI keychain 上下文，git push 会报 `fatal: could not read Username for 'https://github.com': Device not configured`，watcher 会一直空转 fail（2026-05-02 实测）
-- 健康检查：`tail -f ~/.local/state/lolita-research/watcher.log`，看到 `Deployed to GitHub Pages.` 才是真成功；只有 `changes detected` + `deploy failed` 是 keychain 错
+⚠ **每次原子改动 Claude 自己先写语义 commit**，留给 deploy.sh 的应该是干净 worktree（只剩未推送 commit 待 push），别让它兜底 commit 成 `Update site: <ts>` 丢语义。
 
 ## JSON schema
 
