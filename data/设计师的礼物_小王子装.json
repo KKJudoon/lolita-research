@@ -158,9 +158,9 @@
       "腰部品牌靠淘宝直挂，无微博/XHS 完整节奏支撑长尾"
     ]
   },
-  "verified": false,
+  "verified": true,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (E 档 minimal entry 升级 + 厂原店避雷信号；verified=False，下阶段补独立调研)",
+  "verified_by": "Claude (XHS 官号 53 likes 帖明文 ¥248 首批 / 341 likes 贵气版 ¥329-359；厂原三家同售 130 likes 帖确认；synthesis 客观化 rebalance 后)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"

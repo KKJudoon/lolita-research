@@ -50,9 +50,10 @@
       "note": "未抓微博官号——多数原创小品牌（含本款品牌方）以 XHS 为主战场，微博弱运营或缺位。需要时在微博 s.weibo.com/user?q= 搜验证。"
     },
     "xiaohongshu": {
-      "official_account": null,
-      "official_url": null,
-      "note": "未抓品牌 XHS 官号——E 档 minimal upgrade 阶段未跑独立 user search。下阶段需做 type=user 用户搜索（参考 xiaohongshu_ops.md）。"
+      "official_account": "SilentMars沉默火星",
+      "official_url": "https://www.xiaohongshu.com/user/profile/60f78f8c000000000101ef01",
+      "note": "已用 type=user 搜『沉默火星』验证（2026-05-02）。该 user last activity 2024-12-08，品牌官号活跃度中等。",
+      "official_user_id": "60f78f8c000000000101ef01"
     }
   },
   "hot_posts": {
