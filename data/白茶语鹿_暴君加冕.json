@@ -48,12 +48,12 @@
     "weibo": {
       "official_account": null,
       "official_url": null,
-      "note": "基础调研未深查微博渠道"
+      "note": "未抓微博官号——多数原创小品牌（含本款品牌方）以 XHS 为主战场，微博弱运营或缺位。需要时在微博 s.weibo.com/user?q= 搜验证。"
     },
     "xiaohongshu": {
-      "official_account": null,
+      "official_account": "白茶语鹿Lolita原创设计",
       "official_url": null,
-      "note": "基础调研未深查 XHS 渠道"
+      "note": "已抓 XHS hot_posts 中确认账号名，但 user profile URL 未单独抓（下阶段需补）"
     }
   },
   "hot_posts": {

@@ -49,12 +49,12 @@
     "weibo": {
       "official_account": null,
       "official_url": null,
-      "note": "基础调研未深查微博渠道"
+      "note": "未抓微博官号——多数原创小品牌（含本款品牌方）以 XHS 为主战场，微博弱运营或缺位。需要时在微博 s.weibo.com/user?q= 搜验证。"
     },
     "xiaohongshu": {
-      "official_account": null,
-      "official_url": null,
-      "note": "基础调研未深查 XHS 渠道"
+      "official_account": "PrincessChronicles",
+      "official_url": "https://www.xiaohongshu.com/user/profile/600d15a80000000001003fef",
+      "note": "已抓 XHS hot_posts 中确认；profile URL 来自项目其他款交叉引用"
     }
   },
   "hot_posts": {
