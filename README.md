@@ -26,26 +26,31 @@
 
 **已产出报告**：`reports/junlo_prince_report.{md,html}` — 中国军lo王子系市场进入研究报告（44KB md / 67KB html，2026-04-30）。
 
-## 数据完整度 audit（4 档）
+## 数据完整度 audit（5 档，2026-05-02 重测）
 
-字段维度：海报数 / price.op·full_set·list / shops 三平台 / hot_posts.xiaohongshu ≥3 / synthesis 正负面各 ≥4 / design_inspiration.elements + prompt / illustrator·designer。
+按 SKILL.md schema 全维度评估（基础字段 + price 双段 + shops 三平台齐 + hot_posts.xhs ≥3 + synthesis 正负面 ≥4 + `design_inspiration` 必填 + posters ≥4 + verified）。
 
-| 档 | 款数 | 款 | 缺什么 |
+| 档 | 款数 | 款 | 关键缺项 |
 |---|---|---|---|
-| **A 完整** | 3 | Alicegirl 破晓者 · 未知星辰 继承人 · 第二城堡 糖果铺 | — |
-| **B 小修（只缺 price 字段）** | 8 | PC 红与黑 4.0 · Vancy 搜查者 · 少女的永无岛 祷告者 · 樱洛芙 终焉圣骸 2.0 · 猫咪晚安 卷卷 · YourHighness 骑士精神 · 映月 龙曜 · 樱洛芙 骨龙 | `price.op` / `price.full_set` / `price.list_price_at_research`（骨龙额外缺 1 张海报到 4 张） |
-| **C 中缺（结构 OK，内容浅）** | 4 | PC 人偶 · YourHighness 黎明之战 · 少女的永无岛 誓约王座 · 沉默火星 星巡夜骑士 | XHS 帖 0/5 · 正面亮点 1/4 · 负面亮点 1/4 · `design_inspiration.elements` · `price` |
-| **D 占位级（minimal entry）** | 6 | 时代眼泪 帝国荆棘 · 是只猫 白衬衫 · 白茶语鹿 暴君加冕 · 设计师的礼物 小王子装 · 造梦境 少女暴君 · **月夜熊 皇权加冕（0 海报）** | 全字段都缺；当前只有淘宝缩略图 1 张（月夜熊 0 张） |
+| **A 接近完整** | 4 | 樱洛芙 终焉圣骸 2.0 · Alicegirl 破晓者 · 未知星辰 继承人 · 第二城堡 糖果铺 | `designer_note` / `colors_dropped`（多数是 if-applicable，非真缺） |
+| **B 小修** | 5 | PC 红与黑 4.0 · 樱洛芙 骨龙 · 少女的永无岛 祷告者 · YourHighness 骑士精神 · Vancy 搜查者 | 缺 `price.op_or_full_set` 或 `price.list_price_at_research`（骨龙价格圈内未公开是已知 known fact，骨龙还差 1 张海报到 4） |
+| **C 中缺** | 2 | 映月 龙曜 · 猫咪晚安 卷卷 | 缺 price 双段 + `shops.weibo`（这两家以 XHS 为主战场，weibo 缺位是事实） |
+| **D 重缺** | 4 | PC 人偶 · YourHighness 黎明之战 · 少女的永无岛 誓约王座 · 沉默火星 星巡夜骑士 | 缺 `hot_posts.xiaohongshu` 全套 / `synthesis` 正负面亮点 / `design_inspiration` 必填字段（**结构占位但内容浅**） |
+| **E 占位级** | 6 | 时代眼泪 帝国荆棘 · 是只猫 白衬衫 · 白茶语鹿 暴君加冕 · 设计师的礼物 小王子装 · 造梦境 少女暴君 · **月夜熊 皇权加冕（0 海报）** | 几乎全维度缺；当前只有淘宝缩略图 1 张（月夜熊 0 张） |
 
-⚠ **D 档 6 款是 4-30 一次性补的 top-畅销度 minimal 条目**（commit `8104bf5`），不是真实调研结果，下一阶段必须升级。
+⚠ **E 档 6 款是 4-30 一次性补的 top-畅销度 minimal 条目**（commit `8104bf5`），不是真实调研结果，下一阶段必须升级。
+⚠ **普遍缺项**：21/21 缺 `designer_note`（如何确认 designer 的注解），多数缺 `colors_dropped`（"白金被砍"那种字段，if-applicable，非真缺），`verified`/`verified_at` 是新字段老款没标。
 
 ## 未决 / 待办
 
-- D 档 6 款全维度补全（每款一轮 browser-harness 抓取）
-- C 档 4 款补 XHS 帖 + 正负面亮点 + 灵感 elements
-- B 档 8 款补 price 字段（XHS 长贴里抠全款价）
-- 月夜熊 海报从 0 张补到 ≥4 张
-- `index-Magellan.html` 是 4-30 14:35 实验的另一套首页模板，已 `.gitignore`，未决定是否替换 `index.html`
+按性价比排序：
+
+1. **B 档 4 款补 price**（约 30 min）：PC 红与黑 4.0 / 永无岛 祷告者 / 骑士精神 / Vancy 搜查者；骨龙跳过（圈内未公开）
+2. **D 档 4 款核心调研**（半天工作量）：每款一轮 browser-harness 抓 hot_posts ≥3 + 写 synthesis 正负面亮点 + 写 `design_inspiration`
+3. **E 档 6 款全维度补全**（半天–1 天）：每款从抓海报开始
+4. **A 档 4 款补 designer_note**（10 min 微整）
+5. **月夜熊 海报 0→4**（含在 E 档第 3 项）
+6. `index-Magellan.html` 已 `.gitignore`，未决定是否替换 `index.html`
 
 ## 目录
 
