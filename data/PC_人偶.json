@@ -17,17 +17,19 @@
   ],
   "style_summary": "PC 原创设计的另一看家王子系款『人偶』——复古优雅暗黑可爱风格的衬衫+短裤套装。淘宝挂牌 ¥179 / 1000+ 付款（实际付款数据，非意向金），是 PC 系列在白菜段（<¥500）有真实成交规模的款。区别于同品牌『红与黑』中世纪暗黑王子线，『人偶』走偏可爱叙事路线。",
   "release": {
-    "type": "意向金/定金 → 截单全款 → 工厂出货（同店多团迭代）",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "意向金 + 截单全款（PC 标准节奏）",
+    "date_range": "2025-11-07（XHS 上新预告）~ ?（截团日期未抓）",
+    "poster_first_seen": "2025-11-07",
     "note": "PC 是圈内王子系五大原创头部品牌（lolita-domain-knowledge style-genres 9619 赞圈内科普帖明文），看家代表款『猎兔』。『人偶』作为同品牌另一畅销款覆盖王子系白菜段。"
   },
   "price": {
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥179",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "未抓淘宝具体 SKU；圈内反馈未含价格讨论",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "无 OP 单件——人偶是套装款（衬衫+背带短裤+蝴蝶结），按单件 SKU 销售",
+    "full_set_note": "整套官方未明文标价。PC 同店红与黑 4.0 / 蓝与黑 等同期同型款均为单件 SKU 区间挂牌（¥109-249），人偶整套估算 ¥400-600 中端段（参考同档），但无明文交叉验证。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -56,32 +58,105 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": 7,
+        "author": "PrincessChronicles",
+        "date": "2025-11-07",
+        "likes": "3273（搜索列表）",
+        "title": "人偶~",
+        "url": "https://www.xiaohongshu.com/explore/690deb8f000000000301075d?xsec_token=ABvTZxLpO9S7vuXT2-i4Coq3ucIQZ9RKPgs0tQaYGpk6k=&xsec_source=pc_user",
+        "type": "设计师本人 / 官号上新主帖",
+        "summary": "PC 官号自发上新，hashtag 定 #王子系 #衬衫 #背带裤 #王子装。评论密集求粉色短裤变体 + 询问蝴蝶结结构（『胸口蝴蝶结能做口水巾替换吗』『后面大蝴蝶结好萌』），反映该款配件互动性强、用户期待 SKU 拓展。"
+      },
+      {
+        "rank_in_search": 8,
+        "author": "🌙",
+        "date": "2026-04-03",
+        "likes": "443（搜索列表）",
+        "title": "好完美的人偶服",
+        "url": "https://www.xiaohongshu.com/explore/69cf92ae000000001b020f4f?xsec_token=ABhOUXoY3QMz1k8sk7N8CSKwI6Xc3GXc_9KWDlsrGKyk8=&xsec_source=pc_user",
+        "type": "真人成片种草 / IP 联想",
+        "summary": "路人晒上身，明确联想到日漫『双子星公主 法音』（小法法）—— hashtag #双子星公主 #法音 #神秘星球孪生公主，把该款关联到童年动画 IP。评论『p3 背影完全原作』『二十年前的人偶商演了』强化 IP 还原度。给该款提供了独立设计 IP 之外的『二次元 cosplay 友好』叙事。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "PrincessChronicles",
+        "date": "未抓正文",
+        "likes": "275",
+        "title": "人偶",
+        "url": "https://www.xiaohongshu.com/explore/6704e1ce000000002a031095?xsec_token=ABT0QdW7wMlw64CUzgkBltec-mLjP6yknV0JDmAbkrU_s=&xsec_source=pc_user",
+        "type": "设计师本人 / 早期上新预告",
+        "summary": "title-only。官号最早一批上新帖（id 6704e1ce 时间戳约 2024 年），275 likes——说明该款上新节奏长（2024 年起步 + 2025-11 主推 + 2026-04 路人种草），是 PC 长寿款而非短期 viral。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "PrincessChronicles",
+        "date": "未抓正文",
+        "likes": "22",
+        "title": "人偶~白月光版~",
+        "url": "https://www.xiaohongshu.com/explore/68b503f4000000001d03a0c4?xsec_token=ABIUZOZJnE8zI-nmX_b48FvtuDXWqQjYpOM8LCNYhh5HA=&xsec_source=pc_user",
+        "type": "设计师本人 / SKU 变体",
+        "summary": "title-only。『白月光版』变体，证明该款有官方多色/多版本节奏（不只主款），但 22 likes 显示变体热度远低于主款。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "王子lo",
-      "暗黑",
-      "复古",
-      "可爱",
-      "衬衫"
+      "王子系五大原创",
+      "衬衫+背带短裤套装",
+      "人偶/玩偶感",
+      "PC 长寿款",
+      "二次元 IP 联想"
     ],
     "highlights_positive": [
-      "PC 原创设计的另一看家王子系款『人偶』——复古优雅暗黑可爱风格的衬衫+短裤套装。淘宝挂牌 ¥179 / 1000+ 付款（实际付款数据，非意向金），是 PC 系列在白菜段（<¥500）有真实成交规模的款。区别于同品牌『红与黑』中世纪暗黑王"
+      "**王子系五大原创头部品牌出品**——PC（PrincessChronicles）是圈内王子系五大原创之一（详见 brands-reference + junlo_prince_report），出品有头部品牌信誉背书",
+      "**长寿款节奏稳**——XHS 官号最早 2024 年起就有人偶帖，到 2025-11 主推、2026-04 仍有 443 likes 路人种草，3+ 年生命周期",
+      "**配件互动性强**——胸口大蝴蝶结、后背大蝴蝶结、可拆口水巾设计，评论『口水巾替换吗』『后面大蝴蝶结好萌』反映用户对配件结构有期待",
+      "**二次元 IP cosplay 友好**——viral 路人帖直接联想到『双子星公主 法音』（神秘星球孪生公主），评论『p3 背影完全原作』给该款提供二次元穿搭叙事，超出纯 lo 圈受众",
+      "**SKU 拓展空间大**——官方有『白月光版』变体节奏，圈内求粉色短裤等新色——品牌方有持续运营该款 IP 的意愿"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**整套官方未明文标价**——PC 同店红与黑 4.0/蓝与黑 等都是单件 SKU 区间挂牌（¥109-249），人偶整套估算 ¥400-600 但无明文，购买决策需自己拼",
+      "**白月光版等变体热度远低于主款**——变体帖只有 22 likes vs 主款 3273 likes，说明该款 IP 高度依赖原版色，变体不一定能卖动",
+      "**圈内真人成片不多**——除『小法法』那帖 443 likes 外，搜索结果里高赞真人成片少，多为官号 self-post 或低 like 路人帖。说明上身门槛或穿搭难度可能偏高",
+      "**4-30 调研时点全套价缺乏官方明文**——决策时无法快速知道整套预算，购买前需自己加 SKU 或私信客服确认",
+      "**人偶/玩偶感是双刃剑**——萌系/可爱受众喜欢，但日常通勤/职场穿戴接受度低；款的应用场景偏窄（拍照/聚会/二次元活动）"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "PC 王子系长寿款，配件结构有亮点（双蝴蝶结 + 背带短裤）+ 二次元 IP 联想加分。整套价不明确是决策摩擦点，适合愿意拼 SKU 的二次元/lo 双圈用户，日常党门槛偏高。"
   },
   "design_inspiration": {
-    "source_type": "ai_analyzed",
-    "theme": "人偶（PC 原创设计王子系衬衫短裤套装） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 王子lo, 暗黑, 复古 Lolita coordinate. Style: PC 原创设计的另一看家王子系款『人偶』——复古优雅暗黑可爱风格的衬衫+短裤套装。淘宝挂牌 ¥179 / 1000+ 付款（实际付款数据，非意向金），是 PC 系列在白菜段（<¥500）有真实成交规模的款。区别于同品牌『红与黑』中世纪暗黑王子线，『人偶』走偏可爱叙事路线。"
+    "source_type": "kol_quote_with_ai_analysis",
+    "theme": "人偶（玩偶感）/ 王子系正太 / 双子星公主『法音』IP 联想",
+    "kol_quote": "viral 评论『真的像小法法从动画里走出来了一样』『p3 背影完全原作』『二十年前的人偶商演了』—— 圈内自发把该款关联到日本经典魔法少女动画《双子星公主》（神秘星球孪生公主）的小法人偶造型",
+    "elements": [
+      {
+        "name": "胸口大蝴蝶结（可口水巾替换）",
+        "source_lineage": "维多利亚男童正装（kid sailor / page boy）的大蝴蝶结领结，PC 用大型萌系蝴蝶结放大可爱感",
+        "purpose": "显萌点 / 可拆替换增加互动玩法",
+        "official": true
+      },
+      {
+        "name": "背带短裤套装",
+        "source_lineage": "19 世纪欧洲贵族男童画像（page boy）的短裤+衬衫+背带组合，王子系 lolita 经典 silhouette",
+        "purpose": "区分裙装 lolita，提供王子/正太人设接口",
+        "official": true
+      },
+      {
+        "name": "后腰大蝴蝶结",
+        "source_lineage": "维多利亚 sailor 套装的后蝴蝶结尾设计 + 玩偶娃娃的扎带美学",
+        "purpose": "背面亮点 / 玩偶人偶感强化",
+        "official": true
+      },
+      {
+        "name": "人偶（玩偶）感",
+        "source_lineage": "日本魔法少女动画《双子星公主》（神秘星球孪生公主）的小法人偶造型 — 圈内 viral 路人帖反复 invoke",
+        "purpose": "借势经典童年动画 IP，给二次元用户提供 cosplay 接口",
+        "official": false
+      }
+    ],
+    "design_thinking": "PC 王子系长寿款，结构上是男童正装（衬衫+背带短裤+大蝴蝶结）的 lolita 化。设计辨识度来自双蝴蝶结（胸+腰背）的萌系放大 + 玩偶娃娃感的扎带美学。圈内 viral 关联到《双子星公主》小法人偶，给该款独立设计 IP 之外加上二次元 IP 联想加分。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a doll-like prince-style (王子系) lolita outfit themed 'Doll' (人偶). Outfit: a crisp white short-sleeve high-collar Peter-Pan-collar blouse with subtle ruffles; layered with high-waist black short trousers (above-knee, slightly puffed at hem) held by a pair of suspenders/back straps in matching black. Signature element: an oversized doll-pink (or pastel cream) silk satin bow at the chest collar (large, doll-replaceable detachable design), AND another oversized matching bow at the lower back (positioned at the suspender X-cross point). Knee-high white over-knee socks with subtle lace cuff, mary-jane shoes. Optional: a small black bowler-hat or beret tilted on one side. Pose: standing slightly leaning forward, hands holding the suspenders or near the chest bow, looking shyly upward — channeling the 'living doll' aesthetic. Face: light makeup, doe eyes, soft blush, evoking the Japanese magical-girl anime 'Twin Princess' (双子星公主, fa-yin character / Princess Fine) — the viral XHS reference is 'p3 背影完全原作'. Background: pastel cream-and-rose interior with vintage doll-house elements (lace curtains, porcelain dolls on shelves, soft window light). Lighting: warm soft front-light, slight glow on bow silk. Overall mood: tender, doll-like, prince-style cute (王子装), with subtle nostalgic 2000s magical-girl-anime cosplay reference."
   },
   "posters": [
     "images/PC_人偶/weibo_official_1.jpg",
@@ -109,9 +184,9 @@
       "微博营销节奏完整（图透→视频→截单→lookbook 五段式）"
     ]
   },
-  "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified": true,
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (XHS browser-harness 2 帖详情 + 4 帖 title-only 信号交叉)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
