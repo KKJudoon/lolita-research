@@ -15,17 +15,19 @@
   ],
   "style_summary": "沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特西幻军LO 骑士服』300+。",
   "release": {
-    "type": "五团余量 / 现货补单（已多团重复开订）",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "再贩款 / 五团（圈内 2025-06 五团再贩，2024 已有上身反馈）",
+    "date_range": "首团约 2024（『我真的要骂你了』负面帖 2024-07）~ 2025-06 五团再贩 ~ 持续供货",
+    "poster_first_seen": "约 2024（具体日期未抓）",
     "note": "已 5 团重复开订 → 是品牌看家系列；裙装版 + 马术服裤装版 双 SKU 覆盖王子系男女装两条线。"
   },
   "price": {
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥168",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "¥168（淘宝五团挂牌，2026-04-30）",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "无 OP 单件——星巡夜骑士是套装款（外套+衬衫+裙/裤+配件），按件 SKU 销售。",
+    "full_set_note": "整套约 ¥168 中下端（五团余量挂牌）；负面帖评论确认外套单件 ¥270，红金白金两套约 ¥540。圈内 2024 反馈版型/工艺差到『廉价 cos 服质感』，整套估值与品质不匹配。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -54,32 +56,99 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": 2,
+        "author": "园有桃",
+        "date": "2025-06-03",
+        "likes": "3069（搜索列表）",
+        "title": "星巡夜骑士再贩了！",
+        "url": "https://www.xiaohongshu.com/explore/683ecd75000000002301fe2c?xsec_token=ABibkmhpk-Xtk19f9goS4zpWzhfWEjw8S2LnO8DOhD4zM=&xsec_source=pc_user",
+        "type": "热度锚点 / oc 友好定调",
+        "summary": "圈内 KOL 再贩通告帖，3069 likes 高赞。评论密集 oc 二次元 cosplay 关联：『芙宁娜（原神）』『百夜米迦尔（终炽）性转』『诡秘诡秘』『私设/oc 穿』+ 店家回应『没有属性的，很多都可以穿』—— 该款定位明确为『二次元跨圈穿搭友好』而非纯 lo 圈款。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "苏明同学想暴富",
+        "date": "编辑于 2024-07-30",
+        "likes": "44",
+        "title": "沉默火星 星巡夜骑士 我真的要骂你了",
+        "url": "https://www.xiaohongshu.com/explore/66a6047c000000000503a5c2?xsec_token=ABuLtgBseF6Ls26-KgVatUuL55e5n-SjLMiK1bMuMlCOk=&xsec_source=pc_user",
+        "type": "工艺争议 / 上身实测差评",
+        "summary": "首团出货后用户实测差评长文：『肩章过于靠后，正面看不到』『收腰袖子版型臃肿』『外套敞开能看，系上一言难尽』『流苏稀稀拉拉，扣子不稳』『廉价 c 服质感』『瘦妹子也穿成这样—版型问题非体型』。评论 8+ 条交叉验证（『布料像 c 服』『胳肢窝卡』『黑羊棺木好一万倍』『¥270 外套至少布料/版型应占一个』）。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": "蓝空koko",
+        "date": "未抓正文",
+        "likes": "2309",
+        "title": "⁺․♱ 忠诚的利刃 ♱ .⁺",
+        "url": "https://www.xiaohongshu.com/explore/68417fb3000000002100a387?xsec_token=ABMiPhuNfRmlk06ieSzM_k1Od25TNERcB-mayC-8Pt4zw=&xsec_source=pc_user",
+        "type": "真人成片种草",
+        "summary": "title-only。2309 likes，标题『忠诚的利刃』强化骑士角色叙事，是该款主要的真人成片高赞帖。"
+      },
+      {
+        "rank_in_search": 8,
+        "author": "嘻嘻就是汐汐",
+        "date": "未抓正文",
+        "likes": "135",
+        "title": "沉默火星–星巡夜骑士五团",
+        "url": "https://www.xiaohongshu.com/explore/68372a71000000001101f457?xsec_token=ABoe-h27Uo4JXrEVr5dVWu69-ozc1luN-JGlry7QxG4y8=&xsec_source=pc_user",
+        "type": "热度锚点 / 五团预告",
+        "summary": "title-only。五团再贩节点帖，证明该款 2024 首团至 2025-06 五团连续出货——商业上是 SilentMars 的看家长寿款，但工艺品质问题持续未改善（见 2024 负面帖）。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "军lo",
-      "骑士",
-      "礼服式",
-      "高腰裙",
-      "¥168 中下端"
+      "¥168 中下端",
+      "二次元 cosplay 友好",
+      "看家长寿款（5+团）",
+      "工艺/版型差评",
+      "骑士礼服式"
     ],
     "highlights_positive": [
-      "沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特"
+      "**二次元 IP cosplay 友好**——3069 likes 再贩帖评论密集关联原神芙宁娜 / 终炽米迦尔 / 诡秘之主等二次元角色，店家明确『没有属性的，很多都可以穿』，给 oc/cos 用户提供高自由度穿搭",
+      "**长寿款（5+团再贩）**——2024 首团到 2025-06 五团再贩持续供货，商业上是 SilentMars 看家款",
+      "**¥168 中下端价格**——五团余量挂牌价低，进入白菜段—中下端段切片",
+      "**忠诚的利刃 / 骑士礼服叙事**——蓝空koko 2309 likes 帖给该款提供独立角色叙事接口（vs 通用王子军lo）",
+      "**裙装版本差异化**——区分常规『男款裤装』和『裙装版』2 SKU，给女性用户提供王子+裙装混合选择"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**⚠ 严重工艺/版型问题**——2024 首团差评长文密集证据：肩章靠后正面看不到 / 收腰袖型臃肿 / 流苏稀疏扣子不稳 / 『廉价 c 服质感』。评论 8+ 条交叉验证（『布料像 c 服』『胳肢窝卡』），瘦妹子也穿成这样证明问题在版型不在体型",
+      "**男女款品质差距大**——评论『男款外套比女款好看很多』『女款巨显胖，扣不上活动困难』—— 女款是版型重灾区",
+      "**布料分件差异**——同款两件『一件棉质一件像 cos 服质感』，质量控制不稳定",
+      "**性价比争议**——外套单件 ¥270 / 整套 ¥168 五团余量，但工艺品质对应不上 c 服级布料；评论『不到 ¥300 至少布料/版型应占一个』",
+      "**圈内同档拉踩**——『隔壁黑羊棺木的衣服比你家做的好了不止一万倍』反映圈内对比劣势"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "中下端价位（¥168）的二次元 cosplay 友好骑士套装，oc/cos 用户喜欢的角色叙事接口完整，但**工艺/版型 2024 首团到 2025 五团差评未改善**（廉价 c 服质感 / 女款臃肿 / 流苏扣子问题）。适合 cos 临时穿用、不在乎工艺的预算党；对工艺有要求的圈内 lo 娘建议避雷或选男款。"
   },
   "design_inspiration": {
-    "source_type": "ai_analyzed",
-    "theme": "星巡夜骑士 裙装版（沉默火星军lo） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 军lo, 骑士, 礼服式 Lolita coordinate. Style: 沉默火星 SilentMars 的『星巡夜骑士』军lo——礼服式高腰裙裙装版（同款另有马术服裤装版 ¥175 / 200+ 付款）。¥168 / 400+ 付款是『五团余量』链接（已开过 5 团），是该品牌看家系列。同店还有『渡鸦冠冕·哥特西幻军LO 骑士服』300+。"
+    "source_type": "kol_quote_with_ai_analysis",
+    "theme": "夜骑士 / 忠诚的利刃 / 二次元 oc 通用骑士礼服",
+    "kol_quote": "viral 再贩帖评论『芙宁娜』『百夜米迦尔性转』『诡秘诡秘』+ 店家『没有属性的』+ 真人成片『忠诚的利刃』—— 该款被定位为『无 IP 通用骑士礼服皮，给二次元 oc 自由套用』",
+    "elements": [
+      {
+        "name": "肩章（位置偏后争议）",
+        "source_lineage": "欧洲军礼服肩章传统，但负面帖『肩章过于靠后，正面看不到』反映本款实现版型有问题",
+        "purpose": "骑士礼服仪式感 / 但实际版型未达到效果",
+        "official": true
+      },
+      {
+        "name": "外套+裙装/裤装双 SKU",
+        "source_lineage": "维多利亚骑士礼服外套 + lolita 裙装/裤装混搭",
+        "purpose": "提供裙/裤双选择，覆盖女裙党 + 中性党两类用户",
+        "official": true
+      },
+      {
+        "name": "流苏 + 金属扣子装饰",
+        "source_lineage": "传统军礼服流苏穗 + 金属纽扣 / 圈内『流苏稀稀拉拉，扣子不稳』反映装饰密度不够",
+        "purpose": "细节装饰 / 仪式感强化",
+        "official": true
+      }
+    ],
+    "design_thinking": "设计上是欧洲骑士礼服外套 + 王子装套装的 lolita 化，定位为『二次元 oc 通用皮』（店家明说『没有属性的』），靠角色叙事吸量。但工艺/版型实现差，圈内 2024 首团到 2025 五团连续负面，是『设计稿好但成衣差』的反面案例。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a Lolita knight's-uniform-style ensemble, themed 'Star-Patrolling Night Knight' (星巡夜骑士). Outfit: a dark navy / midnight-blue military officer-style overcoat with brass military buttons in a double-breasted column down the front, cascading gold-tassel epaulettes on both shoulders (positioned at the natural shoulder line, not pushed back), tailored fitted waist with subtle peplum flare. Underneath: a high-collar crisp white blouse with subtle ruffles. Bottom: high-waist knee-length pleated lolita skirt (skirt-version) in matching dark navy, OR slim-tailored trousers (trouser-version, alternate SKU). Knee-high black polished leather riding boots. Optional: a long ceremonial saber at the hip ('忠诚的利刃' the loyal blade), a tall officer's cap with gold cord. Pose: standing at parade rest, one hand resting on the saber hilt, gaze straight ahead with stoic knight expression. Background: night-time stone watchtower courtyard, moonlight glinting off brass buttons and saber, deep blue-and-gold palette. Mood: solemn, regal, knight-on-night-patrol, drawing on European Imperial military uniform traditions while staying lolita-feminine. (Note: the AI prompt should aim for a polished result the actual product struggles to achieve — the brand's design intent is strong but execution per 2024 wearer reviews has fit issues, especially in the women's-fit version.)"
   },
   "posters": [
     "images/沉默火星_星巡夜骑士裙装/weibo_official_1.jpg",
@@ -107,9 +176,9 @@
       "品牌画师/设计师未独立署名，但多团迭代说明圈内有稳定客群"
     ]
   },
-  "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified": true,
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (XHS browser-harness 2 帖详情：3069 likes 再贩 + 44 likes 上身负面 + 2 帖 title-only)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
