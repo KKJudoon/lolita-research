@@ -9,15 +9,55 @@ import pathlib
 import html
 import datetime
 import re
+import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
 ITEMS_DIR = ROOT / "items"
 INDEX = ROOT / "index.html"
+REPO_URL = "https://github.com/KKJudoon/lolita-research"
 
 
 def esc(s):
     return html.escape(str(s)) if s is not None else ""
+
+
+def _version_info():
+    try:
+        h_short = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, stderr=subprocess.DEVNULL
+        ).decode().strip()
+        h_full = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, stderr=subprocess.DEVNULL
+        ).decode().strip()
+        c_time = subprocess.check_output(
+            ["git", "log", "-1", "--format=%ci", "HEAD"], cwd=ROOT, stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except Exception:
+        h_short, h_full, c_time = "dev", "", ""
+    b_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    return h_short, h_full, c_time, b_time
+
+
+def _version_footer_html():
+    hs, hf, ct, bt = _version_info()
+    link = f'<a href="{REPO_URL}/commit/{hf}" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v {hs}</a>' if hf else f'<span>v {hs}</span>'
+    ct_short = ct.split(" ")[0] if ct else ""
+    return (
+        '<div style="position:fixed;bottom:8px;right:12px;'
+        'font:11px/1.4 -apple-system,Menlo,monospace;color:#666;'
+        'background:rgba(255,255,255,0.9);padding:4px 10px;'
+        'border:1px solid #ddd;border-radius:4px;z-index:9999;'
+        'box-shadow:0 1px 3px rgba(0,0,0,0.05);">'
+        f'{link}'
+        f'<span style="color:#999;"> · commit {ct_short} · build {bt}</span>'
+        '</div>'
+    )
+
+
+def _inject_version(doc):
+    footer = _version_footer_html()
+    return doc.replace("</body>", footer + "\n</body>", 1)
 
 
 def _parse_sales_value(s):
@@ -552,7 +592,7 @@ def write_index(items):
 </script>
 </body>
 </html>'''
-    INDEX.write_text(doc)
+    INDEX.write_text(_inject_version(doc))
 
 
 # ---------------------------------------------------------------- detail page
@@ -958,7 +998,7 @@ def render_detail(item):
   </script>
 </body>
 </html>'''
-    return doc
+    return _inject_version(doc)
 
 
 def main():
