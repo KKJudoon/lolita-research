@@ -116,12 +116,18 @@ def _extract_status(item):
 
 
 def _extract_release_dates(item):
-    """Return (publish_short, tuán_short) — 简化的发布 / 一团时间字符串."""
+    """Return (publish_short, tuán_short) — 简化的发布 / 一团时间字符串。
+    严格只接受 YYYY-MM 格式，非日期返回空（避免截『未明（多平台搬』之类的乱码）。"""
     rel = item.get("release", {}) or {}
     posters_first = rel.get("poster_first_seen") or ""
     date_range = rel.get("date_range") or ""
     pm = re.match(r'(\d{4}-\d{2})', posters_first)
-    publish_short = pm.group(1) if pm else (posters_first[:7] if posters_first else "")
+    publish_short = pm.group(1) if pm else ""
+    # fallback: 从 date_range 找日期作为 publish_short
+    if not publish_short:
+        m_dr = re.search(r'(\d{4}-\d{2})', date_range)
+        if m_dr:
+            publish_short = m_dr.group(1)
     tuan_short = ""
     rng = re.search(r'(\d{4}-\d{1,2}-\d{1,2})\s*~\s*(\d{4}-\d{1,2}-\d{1,2})', date_range)
     if rng:
@@ -202,7 +208,21 @@ def _render_release_btn(release, name):
         parts.append(f"上新 {publish_short}")
     if tuan_short:
         parts.append(f"团 {tuan_short[5:]}")
-    short = " · ".join(parts) if parts else "—"
+    if parts:
+        short = " · ".join(parts)
+    else:
+        # 没拿到日期：给个 status 提示
+        rt = (rel.get("type") or "").strip()
+        if "现货" in rt:
+            short = "现货"
+        elif "再贩" in rt or "重团" in rt:
+            short = "再贩"
+        elif "厂原" in rt or "持续" in rt:
+            short = "持续供货"
+        elif rt:
+            short = "见详情"
+        else:
+            short = "—"
     detail = {
         "name": name,
         "short": short,
