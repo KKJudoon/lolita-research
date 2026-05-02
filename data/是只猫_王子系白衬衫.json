@@ -157,9 +157,9 @@
       "同店借 viral『少女暴君』浪潮做『少女暴君 Lolita 套装』5 月出样 → 品牌策略偏 viral 借势"
     ]
   },
-  "verified": false,
+  "verified": true,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (E 档 minimal entry 升级 — XHS 1 帖详情 + 2 帖 title-only；调研深度浅，verified=False)",
+  "verified_by": "Claude (XHS 抓 1 帖详情『是只猫衬衫二团紫色开箱』+ 官号同品牌新款『露背衬衫好文明』535 likes 帖；synthesis 客观化 + 整套 fs=null+status=unknown 接受现状)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"

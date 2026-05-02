@@ -157,9 +157,9 @@
       "白茶语鹿品牌圈内未在 KOL 横评 top 列表（@feshianla / 玲玲玲姐 / 茉香椰果）→ 权威普通"
     ]
   },
-  "verified": true,
+  "verified": false,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (XHS browser-harness 1 帖详情 + 2 帖 title-only；E 档 minimal entry 升级)",
+  "verified_by": "Claude (E 档 viral 借势款 — XHS 自然流量天生低 [< 50 likes]，独立调研 ROI 有限；synthesis 客观化已完成；保留 verified=False 标 data limitation)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"

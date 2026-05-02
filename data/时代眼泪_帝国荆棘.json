@@ -69,6 +69,26 @@
       },
       {
         "rank_in_search": "—",
+        "author": "庭-",
+        "date": "2025-01-06",
+        "likes": "4170",
+        "title": "虽然是lo圈最冷门的军lo，但最可怕的地方是",
+        "url": "https://www.xiaohongshu.com/explore/677c9526000000000100801d?xsec_token=AB-YXSMjBqqh7qBfFANEpe1jrtCUkY3hlGiS0HHhoxcT0=&xsec_source=pc_user",
+        "type": "赛道现象级 / supplement",
+        "summary": "title-only。XHS 4170 likes 顶级 viral，圈内对军lo赛道整体热度 vs 冷门讨论；时代眼泪帝国荆棘是该赛道一员（非款独立帖，作 supplement signal）。"
+      },
+      {
+        "rank_in_search": "—",
+        "author": "奔小康～",
+        "date": "未抓",
+        "likes": "2005",
+        "title": "军lo是不是lo圈最底层了！🥲",
+        "url": "https://www.xiaohongshu.com/explore/66cdef5e000000001d01a030?xsec_token=AB8k20_XDdRUiiAX_RMXaf0ySBIyNuWQYAp1Svj1801Ik=&xsec_source=pc_user",
+        "type": "赛道现象级 / supplement",
+        "summary": "title-only。2005 likes 圈内反思军lo圈层位置 — 时代眼泪帝国荆棘所属赛道整体热度信号。"
+      },
+      {
+        "rank_in_search": "—",
         "author": "junlo_prince_report 摘要 1 引用",
         "date": "2026-04",
         "likes": "—",
@@ -158,7 +178,7 @@
   },
   "verified": false,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (E 档 minimal entry 升级 — XHS 关键词命中失败，主要靠 junlo_prince_report 引用 + ai_analyzed 推断；待后续微博/淘宝补充)",
+  "verified_by": "Claude (E 档 minimal entry 升级 — XHS 关键词命中失败，款独立帖缺位；保留 verified=False；补军lo赛道 supplement hot_posts 作整体热度信号)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"

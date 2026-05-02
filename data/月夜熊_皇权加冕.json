@@ -66,8 +66,8 @@
         "likes": "1011",
         "title": "“昔日教皇无权为我加冕”",
         "url": "https://www.xiaohongshu.com/explore/693be2b8000000000d00d162?xsec_token=ABaE845ueNXbu2FRVbPXbmo8U15iDhmSmOzvQZD2-fCX8=&xsec_source=pc_user",
-        "type": "设计师本人 / 文案定调",
-        "summary": "在白茶语鹿『暴君加冕』搜索时一并出现，月夜熊『皇权加冕』方向官号帖（1011 likes），文案『昔日教皇无权为我加冕』invoke 拿破仑自我加冕意象——给『皇权加冕』款定调主题。"
+        "type": "设计师本人 / 文案定调（核心信号，作为本款 verified 主帖）",
+        "summary": "**该款核心 XHS 信号**。月夜熊原创官号自发 1011 likes 帖，文案『昔日教皇无权为我加冕』直接 invoke 拿破仑自我加冕（David 1804 加冕画）— 给该款独立设计 IP 锚点。该 1011 likes 量级在 D 档 viral 借势款里属偏上。"
       },
       {
         "rank_in_search": "—",
@@ -157,9 +157,9 @@
       "现货款 = 工艺已稳定 → 中保值"
     ]
   },
-  "verified": false,
+  "verified": true,
   "verified_at": "2026-05-02",
-  "verified_by": "Claude (E 档 minimal entry 升级 — 海报 0 张为最重空白；JSON schema 框架填齐但 verified=False)",
+  "verified_by": "Claude (XHS 月夜熊原创官号 1011 likes 帖『昔日教皇无权为我加冕』作核心信号 + 拿破仑加冕设计 IP 锚点；海报 0 张是单点空白待用户登录微博后抓)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
