@@ -14,17 +14,19 @@
   ],
   "style_summary": "时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现象级爆款季』成员（与樱洛芙终焉圣骸 2.0 + 未知星辰继承人王子装同期上新）。",
   "release": {
-    "type": "意向金 ¥1 抵 ¥10 → 截单 → 工厂出货",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "意向金 + 截单全款（淘宝 500+ 付款）",
+    "date_range": "2026-04 上新（具体日期未抓）",
+    "poster_first_seen": "2026-04 早期（未明）",
     "note": "**lolita-domain-knowledge style-genres.md 明文记录**：『2026-04 关键节点（军lo 爆发）：樱洛芙终焉圣骸 2.0 + 时代眼泪帝国荆棘 + 未知星辰继承人王子装同时上新，引发军lo 现象级爆款季』。山福桃桃老师设计的 IP 加持是该款的关键差异化。"
   },
   "price": {
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥1",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "未抓淘宝挂牌价（淘宝 SKU 链 https://item.taobao.com/item.htm?id=864889519049 见 junlo_prince_report 引用）",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "暗黑军lo 套装款，无 OP 单件 SKU。",
+    "full_set_note": "整套官方未明文标价；淘宝 500+ 付款（参照 junlo_prince_report 摘要）证明实际销售热度，但价格未抓。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -53,32 +55,88 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": "未明",
+        "author": "—",
+        "date": "—",
+        "likes": "—",
+        "title": "XHS 圈内真人成片高赞帖未命中",
+        "url": null,
+        "type": "调研缺位说明",
+        "summary": "已搜 XHS『时代眼泪 帝国荆棘』关键词——返回结果以 clot 潮牌荆棘系列 / 东罗马帝国 EU5 角色 / 其他同名词为主，**无 lolita 圈内 KOL 真人成片高赞帖**。该款 XHS 自然流量低（vs PC 人偶 3273 / YH 黎明之战 2834）。需后续按淘宝 SKU 链 + 微博海报 + 圈内品牌讨论补充。"
+      },
+      {
+        "rank_in_search": "—",
+        "author": "junlo_prince_report 摘要 1 引用",
+        "date": "2026-04",
+        "likes": "—",
+        "title": "时代眼泪『帝国荆棘』500+ 付款（淘宝销量信号）",
+        "url": "https://item.taobao.com/item.htm?id=864889519049",
+        "type": "热度锚点 / 销量信号",
+        "summary": "本项目 junlo_prince_report 摘要 1 已引用：『同期上新的 时代眼泪「帝国荆棘」500+ 付款 + 樱洛芙「终焉圣骸 2.0」+ 未知星辰「继承人」』集团爆发。淘宝销量是该款唯一 robust 信号。"
+      },
+      {
+        "rank_in_search": "—",
+        "author": "圈内集团爆发标签",
+        "date": "2026-04",
+        "likes": "—",
+        "title": "『2026-04 军lo 季 / 王子军lo 复合』集团爆发的一员",
+        "url": null,
+        "type": "圈内现象级标签",
+        "summary": "时代眼泪 帝国荆棘 是 2026-04 军lo 现象级爆发的代表款之一（详见 reports/junlo_prince_report.md Part 1.1 末段），与终焉圣骸 / 帝国荆棘 / 龙曜 / Vancy / PC 红与黑 / Alicegirl 形成集团爆发——单款 XHS 流量低但赛道整体热度高。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
       "军lo",
-      "暗黑",
-      "荆棘",
-      "2026 Q2 爆款",
-      "画师 IP"
+      "暗黑荆棘",
+      "2026 Q2 集团爆发",
+      "画师 IP",
+      "淘宝 500+ 付款"
     ],
     "highlights_positive": [
-      "时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现"
+      "**淘宝 500+ 付款实销验证**——junlo_prince_report 摘要 1 引用淘宝销量数据，比意向金 ¥5/¥1 抵扣的 4w+ 假销更 robust",
+      "**踩中 2026-04 军lo 集团爆发节点**——与终焉圣骸 / 龙曜 / Vancy / PC 红与黑 / Alicegirl 同期上新，赛道热度高",
+      "**暗黑荆棘主题清晰**——『荆棘』命名给设计提供独立 IP 锚点（vs 通用『加冕』『暴君』命名）",
+      "**画师 IP 标签**——style_tags 含『画师 IP』，反映品牌方有画师署名运营",
+      "**进入 lolita 圈调研锚点**——junlo_prince_report 已引用，本项目其他款的对比基准之一"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**XHS 自然流量极低**——已搜款名关键词无圈内 KOL 真人成片高赞帖，搜索结果被 clot 潮牌荆棘 / EU5 同名词覆盖",
+      "**调研深度浅**——本款是 4-30 一次性补的 top-畅销度 minimal 条目（commit 8104bf5），未跑完整 XHS 调研流程",
+      "**官方价格未公开**——整套全款未抓，淘宝挂牌价未抓",
+      "**圈内 KOL 反馈缺位**——除淘宝销量数字外，无圈内独立讨论 / 真人测评，购买决策证据不足",
+      "**E 档 minimal entry**——下一阶段需全维度补：微博海报正文 + 淘宝详情页 SKU + 跨关键词 XHS 搜（『暗黑荆棘 lo』『时代眼泪 lolita』『帝国荆棘 军lo』等）"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "暗黑荆棘主题军lo，淘宝 500+ 付款实销验证 + 集团爆发踩点对，但 XHS 圈内独立讨论近乎缺位，调研深度浅。当前可作为赛道锚点引用，决策购买需补微博海报正文 + 跨关键词 XHS 搜。"
   },
   "design_inspiration": {
     "source_type": "ai_analyzed",
-    "theme": "帝国荆棘（时代眼泪原创军lo） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 军lo, 暗黑, 荆棘 Lolita coordinate. Style: 时代眼泪原创 2026 Q2 推出的军lo款『帝国荆棘』——山福桃桃老师设计（圈内有 IP 加持）。淘宝 ¥1 意向金抵 ¥10 / 500+ 付款，是 lolita-domain-knowledge 明文记录的『2026-04 军lo 现象级爆款季』成员（与樱洛芙终焉圣骸 2.0 + 未知星辰继承"
+    "theme": "暗黑荆棘 / 哥特军lo 暗调战场",
+    "elements": [
+      {
+        "name": "荆棘意象",
+        "source_lineage": "哥特艺术 + 浪漫主义诗歌（叶芝『荆棘冠』/ 圣殇基督荆棘冠）",
+        "purpose": "暗黑神圣感 / 区分通用军lo",
+        "official": false
+      },
+      {
+        "name": "军lo 暗调结构",
+        "source_lineage": "19 世纪欧洲军装高领立领+斗篷+绶带，暗黑色调（vs 樱洛芙终焉圣骸的金线刺绣）",
+        "purpose": "踩中 2026-04 军lo 集团爆发节奏",
+        "official": false
+      },
+      {
+        "name": "画师 IP 署名",
+        "source_lineage": "圈内画师外包模式，画师独立 IP 与品牌方分账（详见 SKILL.md 严禁动作 + 终焉圣骸 2.0 叁狐画师案例）",
+        "purpose": "画师粉丝引流",
+        "official": false
+      }
+    ],
+    "design_thinking": "时代眼泪 帝国荆棘走『暗黑哥特军lo』细分赛道（vs 通用王子军lo），用『荆棘』IP 命名 + 暗调结构差异化。淘宝销量验证商业上跑通了，但 XHS 圈内自然讨论低反映品牌还没建立 KOL 资产。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a dark gothic-military-lolita ensemble, themed 'Imperial Thorns' (帝国荆棘). Outfit: a high-collar deep-black military officer-style coat with intricate dark-silver embroidery of thorny vines and gothic crosses winding around the lapels, sleeves, and back hem. Underneath: a high-neck black blouse with dark lace trim. Bottom: high-waist mid-calf pleated black skirt with subtle thorn-vine embroidery along the hem. Signature element: a barbed-wire-meets-crown-of-thorns headpiece in tarnished silver, evoking the gothic 'Crown of Thorns' Christian iconography. Knee-high black polished leather boots, dark-stained gauntlet gloves with thorn-shape silver studs. Pose: standing in dark cathedral with stained-glass window light, slight head bow, holding a single black rose with thorny stem. Background: gothic cathedral interior, deep black-and-burgundy palette, candle-lit chiaroscuro lighting. Mood: dark, sacred, gothic-imperial, channeling the romantic-gothic crown-of-thorns visual tradition merged with Eastern military officer silhouette. Distinguishing feature vs other 2026-Q4 military lolita drops (终焉圣骸 / 黎明之战): much darker palette, no gold thread (silver/black only), explicit thorn iconography."
   },
   "posters": [
     "images/时代眼泪_帝国荆棘/taobao_thumb_1.jpg"
@@ -98,8 +156,8 @@
     ]
   },
   "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (E 档 minimal entry 升级 — XHS 关键词命中失败，主要靠 junlo_prince_report 引用 + ai_analyzed 推断；待后续微博/淘宝补充)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
