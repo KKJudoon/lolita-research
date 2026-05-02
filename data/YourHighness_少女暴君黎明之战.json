@@ -16,17 +16,19 @@
   ],
   "style_summary": "YourHighness 永恒银河借 2026 Q2『少女暴君』viral 浪潮开的款。淘宝 ¥30 定金 / 400+ 付款（一个月达成，4-30 截团）。命名直接借势，但 YourHighness 圈内黑红常驻（抄袭质疑 + 价格虚高反面教材，参见 [骑士精神](items/yourhighness_qishijingshen.html) 调研）→ viral 借势 + 反面教材风险叠加。",
   "release": {
-    "type": "定金 → 截单（4-30）→ 工厂出货",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "意向金 + 截单全款",
+    "date_range": "2026-04-03（XHS 官号上新预告）~ 2026-04-30（截团）",
+    "poster_first_seen": "2026-04-03",
     "note": "命名直接对应 XHS『少女暴君』viral 标签 + 『黎明之战』叙事感。但品牌黑红常驻（抄袭+超重+PDD加价记录）。"
   },
   "price": {
     "op": null,
-    "full_set": null,
+    "full_set": 900,
     "currency": "CNY",
-    "list_price_at_research": "¥30",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "list_price_at_research": "¥30 定金（淘宝意向金链）",
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "无 OP 单件 SKU——黎明之战是『SK + 双腰封 + 配件』军装套装。",
+    "full_set_note": "estimate（XHS 官号 2026-04-03 帖评论『没记错的话应该九百多』圈内确认；非官方明文标价，截团 4-30 后正式开订才会有发货价）。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -55,32 +57,105 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": 2,
+        "author": "YourHighness永恒银河",
+        "date": "2026-04-03",
+        "likes": "2834（搜索列表显示）/ 6（页内当前）",
+        "title": "黎明之战💗",
+        "url": "https://www.xiaohongshu.com/explore/69cfdf8a000000002200d3fd?xsec_token=ABhOUXoY3QMz1k8sk7N8CSK2lvWH59V0_K3JIECFWE3W4=&xsec_source=pc_user",
+        "type": "设计师本人 / 官号上新预告",
+        "summary": "官号自发上新帖，正文短（『腰封下叠加的腰封为 SK 自带的可拆卸腰封 有点绕…』+ hashtag），评论密集问全款价、求链接、问设计细节（领子一边高一边低？拆腰带图？）——说明信息披露不充分但需求高。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": "芋泥脑袋（邹十八）",
+        "date": "2026-04-12",
+        "likes": "26.2 万（搜索列表显示）/ 5608（页内当前）",
+        "title": "「少女暴君」挑战法语音乐剧《荣耀向我俯首！》",
+        "url": "https://www.xiaohongshu.com/explore/69db66a6000000001a030cae?xsec_token=ABjsL8fWqzjcrYcC813T7Sn-C0Igb2xHl0QWkRa0ODK0s=&xsec_source=pc_user",
+        "type": "破圈百万级 / viral",
+        "summary": "穿着该款 cover 法语音乐剧《荣耀向我俯首》，hashtag 跨音乐剧/翻唱圈层。评论形成『少女暴君（更权威一点）』『古堡里冷脸萝莉』『叶卡捷琳娜大帝出装』等角色叙事，把『少女暴君』标签从 lo 圈推到圈外。这条帖是『少女暴君』话题的 viral 引爆点之一。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "Yuki雪雪",
+        "date": "未抓正文",
+        "likes": "5 万",
+        "title": "我要权力向我而来",
+        "url": "https://www.xiaohongshu.com/explore/69e5f451000000002301149c?xsec_token=ABnR-1hnVRTtP236TvUROQ08pq7CcUaaXEJOedWCA5_OY=&xsec_source=pc_user",
+        "type": "热度锚点 / viral",
+        "summary": "title-only，5 万 likes 量级跨第二档 viral，标题『我要权力向我而来』直接 invoke 少女暴君人设——证明该款 viral 不只是法语音乐剧那一帖，是多账号集群 viral。"
+      },
+      {
+        "rank_in_search": 1,
+        "author": "YourHighness永恒银河",
+        "date": "未抓正文",
+        "likes": "43",
+        "title": "黎明之战正在预约中～",
+        "url": "https://www.xiaohongshu.com/explore/69d4309d000000001d01ae9c?xsec_token=ABOoYkRzcqX8sGZd1jJP4ScixmwaQt3k1IDuFyftOmFMs=&xsec_source=pc_user",
+        "type": "设计师本人 / 截团预告",
+        "summary": "title-only，官号截团预告帖（4-30 前），43 likes 反映品牌官号常规更新触达，与 viral 帖 5w/26w 量级形成对比——viral 流量主要靠路人 KOL 而非品牌方自发。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "军lo",
-      "王子系",
-      "viral 借势",
       "少女暴君",
-      "oc"
+      "viral 借势",
+      "军lo 王子系",
+      "oc 友好",
+      "破圈"
     ],
     "highlights_positive": [
-      "YourHighness 永恒银河借 2026 Q2『少女暴君』viral 浪潮开的款。淘宝 ¥30 定金 / 400+ 付款（一个月达成，4-30 截团）。命名直接借势，但 YourHighness 圈内黑红常驻（抄袭质疑 + 价格虚高反"
+      "**viral 破圈现象级**——XHS 26.2 万 likes 法语音乐剧 cover 帖（芋泥脑袋邹十八 4-12）+ 5 万 likes 『我要权力向我而来』帖（Yuki雪雪），『少女暴君』标签从 lo 圈推到音乐剧/翻唱跨圈层",
+      "**踩中 viral 时机**——4-03 官号上新到 4-30 截团，正好覆盖『少女暴君』话题最热月，借势完整",
+      "**oc 友好**——hashtag 明确 #oc，评论『准备给 oc 套上了』，给二次元/角色扮演用户提供叙事接口（古堡冷脸萝莉、叶卡捷琳娜大帝出装等评论印证）",
+      "**双腰封叠加层次**——SK 自带可拆卸腰封 + 外加一条腰封，结构层次比常规军lo 单腰封丰富",
+      "**截团预约模式锁单**——意向金 ¥30 定金 + 4-30 截团，圈内提前锁定订单，降低流团风险"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**全套估算 ¥900 偏中端段偏贵**——同档 终焉圣骸 ¥648 / 龙曜 ¥523 / 卷卷 ¥368 / 继承人 ¥369；¥900 接近 YourHighness 同店骑士精神 ¥1700+ 段下沿，性价比未明",
+      "**viral 借势型 vs 独立设计 IP**——『少女暴君』是圈内集体话题（≥6 个品牌借势开款，详见 junlo_prince_report），黎明之战只是其中一款，无独立设计辨识度",
+      "**官号帖信息披露不充分**——4-03 上新帖正文只 hashtag，评论密集问基础问题（全款多少 / 领子设计 / 拆腰带图），品牌方未及时回应",
+      "**未发货质量未知**——截团 4-30 后才进入正式生产，圈内对 YourHighness 同店骑士精神有『单斗篷+小物 1300 抢钱』的负面记录（见骑士精神 JSON），黎明之战工艺质量待验",
+      "**viral 流量集中在路人 KOL 而非品牌方**——官号自发帖最高 2834（占据搜索 rank 2），但路人 viral 5w/26w 量级远超官号——品牌方未在 viral 节点联动放大（无 KOL 合作 / 联动帖）"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "viral 借势成功的中端军lo，标签流量已破圈，但全套 ¥900 估算偏中端上沿、官号信息披露弱、生产质量未验，决策时把『viral 流量』和『款本身性价比』分开考量。"
   },
   "design_inspiration": {
-    "source_type": "ai_analyzed",
-    "theme": "少女暴君黎明之战军lolita（YourHighness） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 军lo, 王子系, viral 借势 Lolita coordinate. Style: YourHighness 永恒银河借 2026 Q2『少女暴君』viral 浪潮开的款。淘宝 ¥30 定金 / 400+ 付款（一个月达成，4-30 截团）。命名直接借势，但 YourHighness 圈内黑红常驻（抄袭质疑 + 价格虚高反面教材，参见 [骑士精神](items/yourhighne"
+    "source_type": "kol_quote_with_ai_analysis",
+    "theme": "少女暴君 / 军装风 / 黎明之战（暗调战场叙事）",
+    "kol_quote": "viral 评论『古堡里一身黑裙子的冷脸萝莉角色，外人以为是古堡主人的女儿，实际是古堡主人本人』+『叶卡捷琳娜大帝出装安琪拉出席俄国军队远征柏林的誓师大会』—— 圈内对该款的角色定位",
+    "elements": [
+      {
+        "name": "双腰封叠加",
+        "source_lineage": "SK 本体自带可拆卸腰封 + 外加一条腰封——18-19 世纪欧洲军装多层皮革腰封传统的 lolita 化",
+        "purpose": "结构层次丰富 / 拆装可玩性 / 拍照角度多",
+        "official": true
+      },
+      {
+        "name": "黎明暗调主题",
+        "source_lineage": "标题『黎明之战』暗示战前/战场叙事，色调以暗色为主（具体配色未抓）",
+        "purpose": "区分日常款的甜美调，强化『少女暴君』的统治者气场",
+        "official": true
+      },
+      {
+        "name": "高低不规则领（推测）",
+        "source_lineage": "评论『这个领子是一边高一边低吗』暗示有不规则衣领设计，可能借鉴军装立领的不对称变体",
+        "purpose": "细节亮点 / 区分常规军lo 对称设计",
+        "official": false
+      },
+      {
+        "name": "oc 角色化叙事",
+        "source_lineage": "viral 评论『古堡冷脸萝莉』『叶卡捷琳娜大帝』将该款关联到俄罗斯沙皇 / 欧洲女王人设——叶卡捷琳娜二世（Catherine the Great）的肖像画统治者气场",
+        "purpose": "给 oc 用户提供现成人设接口，提高消费转化",
+        "official": false
+      }
+    ],
+    "design_thinking": "借势 XHS 『少女暴君』viral 标签 + 简单结构变体（双腰封叠加 + 暗调）快速变现。本质是『话题款』而非『独立设计款』——优势是流量自带、风险是 viral 退潮后辨识度归零。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a militaristic gothic-leaning lolita ensemble, themed 'dawn of battle' (黎明之战) with deep dark color palette (off-black with hints of dawn purple/dusty blue). Outfit: a fitted SK (Skirt-style) lolita dress with structured corseted bodice, layered with TWO sash-style waist belts (one detachable belt built into the SK, another external belt added on top) creating a complex multi-layer waist silhouette. Asymmetric high-low collar (one side higher than the other) with subtle military stand-collar influence, gold thread embroidery on collar trim. Long fitted sleeves with cuff buttons. Skirt: knee-to-mid-calf length with multiple layered hems, military-tailoring crispness. Optional Napoleonic-era epaulette accessories on shoulders (bold thread / metal pins). Pose: regal, slight chin-up gaze conveying 'shao nu bao jun' (girl tyrant / young empress) authority — channeling Catherine the Great portrait energy. Background: cold-stone Gothic castle interior or pre-battle dawn courtyard mist. Lighting: dramatic side-light with cool blue rim, slight chiaroscuro on face. Subtle reference: viral 'shao nu bao jun' XHS aesthetic, French rock musical 'Le Rouge et le Noir' poster influence (alluded to in the viral 26w-likes cover post)."
   },
   "posters": [
     "images/YourHighness_少女暴君黎明之战/xhs_yh_1.jpg",
@@ -102,9 +177,9 @@
       "viral 借势 + 反面教材风险叠加 → 短期 viral 销量但长期保值堪忧"
     ]
   },
-  "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified": true,
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (XHS browser-harness 2 帖详情 + 4 帖 title-only 信号交叉)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
