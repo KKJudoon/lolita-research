@@ -577,10 +577,11 @@ def write_index(items):
 
   @media (max-width: 720px) {{
     body {{ padding: 12px 8px; }}
-    table.research {{ font-size: 11px; display: block; overflow-x: auto; }}
+    table.research {{ font-size: 11px; }}
     table.research th, table.research td {{ padding: 6px 8px; }}
-    .col-time {{ display: none; }}
     .col-name .brand {{ font-size: 10px; }}
+    .col-time, .col-price {{ width: auto; min-width: 100px; }}
+    .col-name {{ max-width: 130px; }}
   }}
 </style>
 </head>
