@@ -44,18 +44,22 @@
   .col-name a.bare { color: #2c2418; }
   .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; }
   .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; }
-  .col-price { width: 180px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-price { width: 150px; white-space: nowrap; }
+  .col-time { width: 130px; white-space: nowrap; }
   .col-pop { width: 150px; white-space: nowrap; }
   .pop-btn { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; transition: filter 0.15s; }
   .pop-btn:hover { filter: brightness(1.1); }
   .pop-btn .pop-info { font-size: 10px; opacity: 0.7; }
+  .price-btn, .release-btn { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 500; border: 1px solid #d8c89a; background: #fbf7e8; color: #5a4a2a; cursor: pointer; transition: filter 0.15s; font-variant-numeric: tabular-nums; }
+  .price-btn:hover, .release-btn:hover { background: #f5ecc8; }
+  .price-btn .pop-info, .release-btn .pop-info { font-size: 10px; opacity: 0.6; color: #888; }
   .pop-label { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
   .pop-top { background: #b00020; color: white; }
   .pop-high { background: #c5a572; color: white; }
   .pop-mid { background: #efe9d9; color: #5a4a2a; }
   .pop-low { background: #f0eee8; color: #999; }
   .pop-none { background: #f0eee8; color: #ccc; }
-  .col-publish, .col-tuan { width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }
+  .col-publish, .col-tuan { display: none; }
   .col-style { min-width: 110px; }
 
   /* popularity modal */
@@ -95,14 +99,14 @@
     body { padding: 12px 8px; }
     table.research { font-size: 11px; display: block; overflow-x: auto; }
     table.research th, table.research td { padding: 6px 8px; }
-    .col-publish, .col-tuan { display: none; }
+    .col-time { display: none; }
     .col-name .brand { font-size: 10px; }
   }
 </style>
 </head>
 <body>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 2026-05-02 17:48 · 共 21 款 · 点行查看详情</div>
+  <div class="meta">最后更新 2026-05-02 18:17 · 共 21 款 · 点行查看详情</div>
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
   </div>
@@ -128,8 +132,7 @@
         <th>畅销度</th>
         <th>价格</th>
         <th>状态</th>
-        <th>发布</th>
-        <th>一团</th>
+        <th>时间</th>
         <th>风格</th>
       </tr>
     </thead>
@@ -139,10 +142,9 @@
       <td class="col-thumb"><a class="bare" href="items/alicegirl_poxiaozhe.html"><img src="images/Alicegirl_破晓者/weibo_official_QnSD0AD9g_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/alicegirl_poxiaozhe.html"><div class="title">破晓者（Alicegirl 重工军lo 套装）</div><div class="brand">Alicegirl 原创工作室</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-low" data-evidence="{&quot;name&quot;: &quot;破晓者（Alicegirl 重工军lo 套装）&quot;, &quot;label&quot;: &quot;腰部&quot;, &quot;scale&quot;: &quot;腰部&quot;, &quot;buzz&quot;: &quot;长尾&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;拆 4 SKU 各 95-100+ 付款 → 取最低（jsk 95+）作为成套数估算（『腰部』100-500 单档）&quot;, &quot;Alicegirl XHS 官号自发『剑和玫瑰』2026-01 仅 39 likes 真人成片（极薄）&quot;, &quot;圈内 651 likes 拔草帖（Xxxxxz 2024-12『lo娘真好欺负』）但未明确是破晓者&quot;, &quot;Alicegirl 进入 brands-reference『原创设计师线』列表（普通），未进王子系五大&quot;, &quot;改 4 版品控信号：官号原话『这款改了四版终于可以给老婆们看了』&quot;]}">腰部 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥1018 · OP ¥178 · JSK ¥348</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;破晓者（Alicegirl 重工军lo 套装）&quot;, &quot;short&quot;: &quot;整套 ¥1018 · OP ¥178 · JSK ¥348&quot;, &quot;op&quot;: 178, &quot;full_set&quot;: 1018, &quot;currency&quot;: &quot;CNY&quot;, &quot;deposit_link_intent&quot;: &quot;¥18-88（淘宝 SKU 拆件意向金）&quot;, &quot;list_price_at_research&quot;: &quot;¥18-88（淘宝定金）/ 全款见微博海报&quot;, &quot;note&quot;: &quot;全款来自微博 @Lolita洋装上新 海报正文（QnSD0AD9g, 2026-01-19）：『Price：jsk：348 斗篷：178 绶带：98 胸章：38 斗篷：178 衬衫：178』—— 第二个『斗篷：178』为 op 单件。整套 jsk+衬衫+斗篷+绶带+胸章 = ¥1000；加 op 共 ¥1018，进入中端段。淘宝 SKU 拆 4 件独立挂牌定金 ¥18/58/88，下单后补全款。&quot;}">整套 ¥1018 · OP ¥178 · JSK ¥348 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-01</td>
-      <td class="col-tuan">2026-01-10</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;破晓者（Alicegirl 重工军lo 套装）&quot;, &quot;short&quot;: &quot;上新 2026-01 · 团 01-10&quot;, &quot;type&quot;: &quot;意向金 → 截单 → 工厂出货&quot;, &quot;date_range&quot;: &quot;2026-01-10 官号自发图透 → 2026-01-13 汇总号转图透 → 2026-01-18 一团截单 → 2026-01-22~25 汇总号持续转发 → 2026-02-03 南京店二团&quot;, &quot;poster_first_seen&quot;: &quot;2026-01-10&quot;, &quot;note&quot;: &quot;运营节奏完整：品牌官号图透 + 4 次 @Lolita洋装上新 转发 + 南京店二团接力。一团到二团间隔 16 天，回购速度较快。淘宝至 2026-04 时点 jsk SKU 95 人付款，斗篷 100+，配件 100+——中端销量稳但非爆款。&quot;}">上新 2026-01 · 团 01-10 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">哥特</span></td>
     </tr>
     
@@ -151,10 +153,9 @@
       <td class="col-thumb"><a class="bare" href="items/pc_renou.html"><img src="images/PC_人偶/weibo_official_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/pc_renou.html"><div class="title">人偶（PC 原创设计王子系衬衫短裤套装）</div><div class="brand">PC 原创设计（PrincessChronicles）</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-top" data-evidence="{&quot;name&quot;: &quot;人偶（PC 原创设计王子系衬衫短裤套装）&quot;, &quot;label&quot;: &quot;头部 IP&quot;, &quot;scale&quot;: &quot;头部&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;头部 IP&quot;, &quot;resale&quot;: &quot;高保值&quot;, &quot;evidence&quot;: [&quot;淘宝 1000+ 付款（『头部』3k-1w 单档下沿，¥179 是定金/挂牌价不是意向金 → 真实付款率高）&quot;, &quot;**王子系五大原创品牌之一**（lolita-domain-knowledge style-genres 9619 赞圈内科普帖明文）= 头部 IP&quot;, &quot;PC 看家系列代代复刻 IP 资产化范本（红与黑 1.0→4.0 跨 5 年）→ 高保值&quot;, &quot;微博营销节奏完整（图透→视频→截单→lookbook 五段式）&quot;]}">头部 IP <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥358</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;人偶（PC 原创设计王子系衬衫短裤套装）&quot;, &quot;short&quot;: &quot;整套 ¥358&quot;, &quot;full_set&quot;: 358, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;**淘宝按上下身分件 SKU 销售**：衬衫 ¥179 + 短裤 ¥179（用户 2026-05-02 淘宝实测）。短裤含可拆拖尾+肩带（KOL 离碑 86 likes 帖确认）。整套 ¥358。&quot;, &quot;op_note&quot;: &quot;无 OP 单件——人偶是上下身分件 SKU 销售（衬衫 + 短裤 各 ¥179）。&quot;, &quot;full_set_note&quot;: &quot;整套 = 衬衫 ¥179 + 短裤 ¥179 = ¥358（用户 2026-05-02 淘宝实测确认两 SKU 都是 ¥179）。&quot;, &quot;list_price_priority_note&quot;: &quot;按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 &gt; XHS/微博 官方宣传 &gt; 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。&quot;, &quot;full_set_estimate_v3&quot;: &quot;整套 ≈ ¥330-380（衬衫 SKU ¥150-200 推测 + 短裤 ¥179 实证）&quot;, &quot;skus_known&quot;: {&quot;衬衫&quot;: 179, &quot;短裤（含可拆拖尾+肩带）&quot;: 179, &quot;整套&quot;: 358}, &quot;note&quot;: &quot;PC 人偶淘宝按衬衫 + 短裤分件 SKU 销售（各 ¥179），整套 ¥358。KOL 离碑帖确认短裤价含可拆拖尾+肩带（『单短裤价格其实有点不值的 但有拖尾肩带可拆突然感觉划算起来』）。中端段定价。&quot;}">整套 ¥358 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2025-11</td>
-      <td class="col-tuan">2025-11-07</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;人偶（PC 原创设计王子系衬衫短裤套装）&quot;, &quot;short&quot;: &quot;上新 2025-11 · 团 11-07&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（PC 标准节奏）&quot;, &quot;date_range&quot;: &quot;2025-11-07（XHS 上新预告）~ ?（截团日期未抓）&quot;, &quot;poster_first_seen&quot;: &quot;2025-11-07&quot;, &quot;note&quot;: &quot;PC 是圈内王子系五大原创头部品牌（lolita-domain-knowledge style-genres 9619 赞圈内科普帖明文），看家代表款『猎兔』。『人偶』作为同品牌另一畅销款覆盖王子系白菜段。&quot;}">上新 2025-11 · 团 11-07 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -163,10 +164,9 @@
       <td class="col-thumb"><a class="bare" href="items/pc_hongyuhei_4.0.html"><img src="images/PC_红与黑4.0/weibo_official_Pb1Aqp4Ek_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/pc_hongyuhei_4.0.html"><div class="title">红与黑 4.0（PC 原创设计王子系长马甲套装）</div><div class="brand">PC 原创设计（PrincessChronicles）</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-top" data-evidence="{&quot;name&quot;: &quot;红与黑 4.0（PC 原创设计王子系长马甲套装）&quot;, &quot;label&quot;: &quot;头部 IP&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;头部 IP&quot;, &quot;resale&quot;: &quot;高保值&quot;, &quot;evidence&quot;: [&quot;淘宝『千人加购』→ 真实付款估 100-200（淘宝层面腰部），但 PC 主战场是微博团购 + 客服私单（淘宝数据被低估）→ 综合判中位&quot;, &quot;Duuu 04-06 真人成片 1002 likes（『#黑与红』tag 命中系列）+ 圈内 KOL 流量集中在 PC 其他款（猎兔 / 兔子剧场）→ 红与黑单款传播中位&quot;, &quot;**王子系五大原创之一**（lolita-domain-knowledge style-genres 9619 赞圈内科普帖明文）= 头部 IP&quot;, &quot;**红与黑系列 1.0 → 4.0 跨 5 年看家款**（2019-2024）= 高保值 IP 资产化典范&quot;, &quot;微博营销节奏完整：图透 → 视频 → 截单预告 → lookbook 五段式（5 个 brand_self_posts）&quot;]}">头部 IP <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套官方/圈内均未明文披露具体数字。已搜 XHS 多个高赞帖（官号 545 + KOL 焕子 107 + 红黑帖 178 等），KOL 帖只有相对比较『红黑预约比蓝黑便宜』，无具体数字。淘宝单 SKU 区间 ¥109-249 仅参考。</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;红与黑 4.0（PC 原创设计王子系长马甲套装）&quot;, &quot;short&quot;: &quot;整套官方/圈内均未明文披露具体数字。已搜 XHS 多个高赞帖（官号 545 + KOL 焕子 107 + 红黑帖 178 等），KOL 帖只有相对比较『红黑预约比蓝黑便宜』，无具体数字。淘宝单 SKU 区间 ¥109-249 仅参考。&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套官方/圈内均未明文披露具体数字。已搜 XHS 多个高赞帖（官号 545 + KOL 焕子 107 + 红黑帖 178 等），KOL 帖只有相对比较『红黑预约比蓝黑便宜』，无具体数字。淘宝单 SKU 区间 ¥109-249 仅参考。&quot;, &quot;op_note&quot;: &quot;**该款没有 OP 连衣裙形态**——红与黑 4.0 是 3 件套（衬衫 / 短裤 / 长马甲），淘宝按单件 SKU 独立挂牌（不像终焉圣骸 2.0 / 龙曜那样有明确 op 单件）。按 SKILL.md \&quot;❌ 凭印象填字段\&quot; 原则留 null。&quot;, &quot;full_set_note&quot;: &quot;整套官方未公开打包价。已搜：XHS \&quot;PC原创设计 红与黑\&quot; / \&quot;红与黑4.0 lolita\&quot; / \&quot;PC 红与黑4.0 价格\&quot;——找到 PrincessChronicles 545 likes 上新帖（2025-08-24）正文只放 hashtags 无定价，评论无价格讨论；微博海报多为视觉图透不披露价格。整套估算 ≈ ¥500+（中端段），但无明文交叉验证。&quot;, &quot;list_price_priority_note&quot;: &quot;按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 &gt; XHS/微博 官方宣传 &gt; 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。&quot;, &quot;full_set_status&quot;: &quot;未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）&quot;, &quot;note&quot;: &quot;**整套价 XHS 圈内未明文披露**——但 KOL 焕子 107 likes 帖（2025-01-03）评论 2 条交叉确认『红黑预约便宜』vs 同店蓝与黑。上链时间确认：2025-01-06（红黑 4.0 上链接）。预约价相对蓝黑便宜 + 无具体数字。同 PC 同型款单件 SKU ¥109-249 区间，整套估算 ¥400-600 中端段无明文。&quot;}">整套官方/圈内均未明文披露具体数字。已搜 XHS 多个高赞帖（官号 545 + KOL 焕子 107 + 红黑帖 178 等），KOL 帖只有相对比较『红黑预约比蓝黑便宜』，无具体数字。淘宝单 SKU 区间 ¥109-249 仅参考。 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-3">再贩团</span></td>
-      <td class="col-publish">2024-11</td>
-      <td class="col-tuan">2024-11-29</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;红与黑 4.0（PC 原创设计王子系长马甲套装）&quot;, &quot;short&quot;: &quot;上新 2024-11 · 团 11-29&quot;, &quot;type&quot;: &quot;意向金 → 截单 → 工厂出货&quot;, &quot;date_range&quot;: &quot;2024-11-29 汇总号转发图透 → 2024-12-09 PC官号自发图透 → 2025-01-06 截单（『1.6↑』标记）→ 2025-07 出货&quot;, &quot;poster_first_seen&quot;: &quot;2024-11-29&quot;, &quot;note&quot;: &quot;PC 看家王子线 4.0 重团：从图透到截单约 1 个月（11-29 → 1-06），从截单到出货约 6 个月（1-06 → 7月发）。淘宝当前 ¥109-249 区间是 SKU 单件挂牌（衬衫 / 短裤 / 长马甲 各独立销售）。&quot;}">上新 2024-11 · 团 11-29 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -175,10 +175,9 @@
       <td class="col-thumb"><a class="bare" href="items/vancy_souchazhe.html"><img src="images/Vancy_搜查者/weibo_official_QCWanCjGU_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/vancy_souchazhe.html"><div class="title">搜查者（Vancy 梵希军lo 三件套+枪套）</div><div class="brand">Vancy 梵希</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;搜查者（Vancy 梵希军lo 三件套+枪套）&quot;, &quot;label&quot;: &quot;工艺型小众&quot;, &quot;scale&quot;: &quot;长尾&quot;, &quot;buzz&quot;: &quot;冷启动&quot;, &quot;authority&quot;: &quot;头部 IP&quot;, &quot;resale&quot;: &quot;高保值&quot;, &quot;evidence&quot;: [&quot;淘宝本款无直挂（走微博团购 + 快团团 + 客服私单）→ 淘宝规模长尾，但同店探索者 2 套装 100+ 付款做参照&quot;, &quot;Vancy XHS 官号自发『搜查者｜军绿色』119 likes 是最高赞，剔除官号自发后无 KOL 真人成片 → 传播冷启动&quot;, &quot;**圈内『梵希 yyds』顶级口碑** 2022 KOL 君不见鹿原话流通到 2026 → 头部 IP（圈内权威 + 长尾 KOL 引用）&quot;, &quot;**5 年长寿款 IP**（2021-08 首发 → 2026-04 第 6 团再贩）= 高保值 IP 资产化典范&quot;, &quot;枪套配件『腿肯』+ 船帽 + 军绿主推差异化 = 工艺差异化锚点（工艺型而非流量型品牌）&quot;]}">工艺型小众 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥510 · OP ¥380</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;搜查者（Vancy 梵希军lo 三件套+枪套）&quot;, &quot;short&quot;: &quot;整套 ¥510 · OP ¥380&quot;, &quot;op&quot;: 380, &quot;full_set&quot;: 510, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_note&quot;: &quot;搜查者本款 2026-04-30 调研当时未上淘宝直挂（走微博团购 + 客服私单 + 快团团），无淘宝挂牌价；同店其他款挂牌仅供参考。&quot;, &quot;note&quot;: &quot;op=380（single_dress_total = 主裙单件，OP 等价物）；full_set=510（3 件套含裙+帽+枪套，比单买省 ¥40）。价格来自微博海报 P8 详情表（QCWanCjGU 第 8 张）。3 件全套 ¥510（裙 + 帽 + 枪套 = ¥510，比单买拆件 ¥380+¥70+¥100=¥550 省 ¥40）。整套含腿肯（背带枪套，PVC 假枪 + 皮带）属于完整 lookbook 价位，进入中下端段（与 卷卷 ¥368 / 继承人 ¥369 同档但配件更全）。&quot;}">整套 ¥510 · OP ¥380 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-3">再贩团</span></td>
-      <td class="col-publish">2021-08</td>
-      <td class="col-tuan">2021-08-27</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;搜查者（Vancy 梵希军lo 三件套+枪套）&quot;, &quot;short&quot;: &quot;上新 2021-08 · 团 08-27&quot;, &quot;type&quot;: &quot;意向金 → 截单全款 → 工厂出货&quot;, &quot;date_range&quot;: &quot;2021-08-27 首发开团 → ... → 2026-04-29 20:00 启动早古款再片反 → 2026-05-29 24:00 截单&quot;, &quot;poster_first_seen&quot;: &quot;2021-08-27（@Vancy梵希 微博官号 Kvq35hZBw 自发首发图透）&quot;, &quot;note&quot;: &quot;5 年长寿 IP 跨 6 个团（首发 + 5 次复刻），是品牌看家系列。再贩 post 2026-04-28 22:11 自发 + 4-29 19:45 @Lolita洋装上新 转发，营销节奏紧凑。工期 100-200 个团下单后开始，具体视量定。&quot;}">上新 2021-08 · 团 08-27 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -187,10 +186,9 @@
       <td class="col-thumb"><a class="bare" href="items/yourhighness_shaonyubaojun_liminzhanzhi.html"><img src="images/YourHighness_少女暴君黎明之战/xhs_yh_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yourhighness_shaonyubaojun_liminzhanzhi.html"><div class="title">少女暴君黎明之战军lolita（YourHighness）</div><div class="brand">YourHighness 永恒银河</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;少女暴君黎明之战军lolita（YourHighness）&quot;, &quot;label&quot;: &quot;viral 借势新品&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;破圈&quot;, &quot;authority&quot;: &quot;黑红常驻&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝 ¥30 定金 400+ 付款（一个月达成，『中位』500-3k 单档下沿）&quot;, &quot;命名直接借势『少女暴君』viral 浪潮（36w/25w/4.4w likes 跨圈层）&quot;, &quot;YourHighness 品牌黑红常驻（抄袭质疑 + 6-7 斤超重 + PDD 厂货加价 + ¥1700 全套虚高反面教材，见已调研款『骑士精神』）&quot;, &quot;viral 借势 + 反面教材风险叠加 → 短期 viral 销量但长期保值堪忧&quot;]}">viral 借势新品 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥900</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;少女暴君黎明之战军lolita（YourHighness）&quot;, &quot;short&quot;: &quot;整套 ¥900&quot;, &quot;full_set&quot;: 900, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥30 定金（淘宝意向金链）&quot;, &quot;op_note&quot;: &quot;无 OP 单件 SKU——黎明之战是『SK + 双腰封 + 配件』军装套装。&quot;, &quot;full_set_note&quot;: &quot;estimate（XHS 官号 2026-04-03 帖评论『没记错的话应该九百多』圈内确认；非官方明文标价，截团 4-30 后正式开订才会有发货价）。&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">整套 ¥900 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-04</td>
-      <td class="col-tuan">2026-04-03</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;少女暴君黎明之战军lolita（YourHighness）&quot;, &quot;short&quot;: &quot;上新 2026-04 · 团 04-03&quot;, &quot;type&quot;: &quot;意向金 + 截单全款&quot;, &quot;date_range&quot;: &quot;2026-04-03（XHS 官号上新预告）~ 2026-04-30（截团）&quot;, &quot;poster_first_seen&quot;: &quot;2026-04-03&quot;, &quot;note&quot;: &quot;命名直接对应 XHS『少女暴君』viral 标签 + 『黎明之战』叙事感。但品牌黑红常驻（抄袭+超重+PDD加价记录）。&quot;}">上新 2026-04 · 团 04-03 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -199,10 +197,9 @@
       <td class="col-thumb"><a class="bare" href="items/yourhighness_qishijingshen.html"><img src="images/YourHighness_骑士精神/poster_006xCKgBgy1htraaqr8fwj31jk2bc1kx.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yourhighness_qishijingshen.html"><div class="title">骑士精神（王子系军lo / 大斗篷套装）</div><div class="brand">YourHighness永恒银河</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-low" data-evidence="{&quot;name&quot;: &quot;骑士精神（王子系军lo / 大斗篷套装）&quot;, &quot;label&quot;: &quot;反面教材&quot;, &quot;scale&quot;: &quot;腰部&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;黑红常驻&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝 300+ 付款（『腰部』100-500 单档）&quot;, &quot;yuancilang 2024-09 4445 likes『lo圈皇帝穿搭』圈内点评（讽刺意味）&quot;, &quot;圈内挂烂记录：抄袭质疑（明承认参考嘉德礼服+夏尔斗篷被吐照搬）+ 6-7 斤超重 + PDD 厂货加价 + ¥1700 全套 = 终焉圣骸 ¥648 的 2.6 倍&quot;, &quot;高单价低口碑反面教材（lolita-domain-knowledge brands-reference 黑红常驻记录）&quot;]}">反面教材 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥1700</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;骑士精神（王子系军lo / 大斗篷套装）&quot;, &quot;short&quot;: &quot;整套 ¥1700&quot;, &quot;full_set&quot;: 1700, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥98（淘宝某斗篷 SKU 价，2026-04-30；不代表全套，全套估算见 full_set）&quot;, &quot;op_note&quot;: &quot;**该款没有 OP 单件 SKU**——骑士精神是斗篷套装（基础套 + 配件加购），没有 lolita 标准 OP 连衣裙形态。类似终焉圣骸 2.0 海报只 op+fs / 没 JSK，按 SKU 实际形态填，不脑补。&quot;, &quot;full_set_note&quot;: &quot;estimate（来自 XHS 官号 2024-09-15 情报帖正文，含基础套 + 裤子 + 蓝绶带 + 帽子）；非淘宝/微博海报明文标价。&quot;, &quot;full_set_estimate&quot;: &quot;约 ¥1700+（含基础套 + 裤子 + 蓝绶带 + 帽子）&quot;, &quot;price_breakdown&quot;: {&quot;基础套（5米斗篷+红绶带+蝴蝶结+燕尾外套+腰带+全套金属小物）&quot;: &quot;¥1300+&quot;, &quot;裤子 OR 裙子（单独加购，二选一）&quot;: &quot;¥200+&quot;, &quot;蓝色绶带加宝石（选购）&quot;: &quot;¥100+&quot;, &quot;帽子（选购）&quot;: &quot;¥100+&quot;}, &quot;note&quot;: &quot;价格信息来自小红书 qingbao 情报帖（YourHighness 官号自发，3272 likes，2024-09-15）正文明文公布。**注意**：淘宝 ¥98 SKU 是斗篷外套单件意向金/补单链（item id 838292216852），不代表全款。圈内对该价格普遍认为偏贵：评论吐槽『单斗篷+小物就1300...抢钱不是这么抢的吧』、『啥面料就1k3 洗钱都没这么洗的』。同档对比：远高于樱洛芙终焉圣骸全套 ¥648。&quot;}">整套 ¥1700 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-5">现货</span></td>
-      <td class="col-publish">2024-09</td>
-      <td class="col-tuan">2024-09-15</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;骑士精神（王子系军lo / 大斗篷套装）&quot;, &quot;short&quot;: &quot;上新 2024-09 · 团 09-15&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（截至 2024-09 上新，已发售并持续出货）&quot;, &quot;date_range&quot;: &quot;2024-09-15（情报+价格公布）→ 2024-09-18（图透海报）→ 持续在售（淘宝至 2026-04 仍有 ¥98 SKU 链接）&quot;, &quot;poster_first_seen&quot;: &quot;2024-09-18（@Lolita洋装上新 转发的图透海报）&quot;, &quot;note&quot;: &quot;上新已 1.5 年。淘宝 300+人付款是累计销量。当前店铺还在售，可能是补单 / 现货掉落 / 单件配件链。&quot;}">上新 2024-09 · 团 09-15 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -211,10 +208,9 @@
       <td class="col-thumb"><a class="bare" href="items/shaonyongdao_daogaozhe.html"><img src="images/少女的永无岛_祷告者/taobao_official_sku_2.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/shaonyongdao_daogaozhe.html"><div class="title">祷告者（少女的永无岛王子系套装）</div><div class="brand">少女的永无岛 原创工作室</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-low" data-evidence="{&quot;name&quot;: &quot;祷告者（少女的永无岛王子系套装）&quot;, &quot;label&quot;: &quot;仿冒受害腰部&quot;, &quot;scale&quot;: &quot;腰部&quot;, &quot;buzz&quot;: &quot;长尾&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝『千人加购』+ 现货销售 → 真实付款估 50-150（『腰部』100-500 单档）&quot;, &quot;圣职系赛道头部款是另一品牌『安缇娅的祷告』（小蝴蝶 1506 likes 帖明确 tag #安缇娅的祷告）→ 该款赛道内非头部&quot;, &quot;啊不许烦 2024-06 344 likes『重复的已经不想截了』直接吐槽：识图发现『不下三十家店在卖』 → 品牌仿冒泛滥实证&quot;, &quot;圈内对少女的永无岛 PDD 厂货争议（@JK日常 2025-02 微博）→ 原版稀缺性受损&quot;, &quot;保值降级原因：仿冒泛滥而非工艺翻车（与 YourHighness 黑红性质不同）&quot;]}">仿冒受害腰部 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥538</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;祷告者（少女的永无岛王子系套装）&quot;, &quot;short&quot;: &quot;整套 ¥538&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;淘宝 ¥109-538 SKU 区间（仅参考——109 单衬衫，538 估算上限）；XHS 圈内未直接披露祷告者整套价，但同品牌同生产线『审判天使』2025-08 帖明文 ¥298（曾 ¥347），推断祷告者 ≈ ¥250-350&quot;, &quot;op_note&quot;: &quot;**该款不是 OP 连衣裙形态**——祷告者是 3 件套（衬衫 / 长裤 / 外套）。淘宝单衬衫 ¥109 已在 shirt_estimate 字段。按 SKILL.md 不脑补 op 字段。&quot;, &quot;full_set_note&quot;: &quot;estimate ≈ 淘宝挂牌 SKU 区间端点最高值（¥109-538 区间，按最低=单件、最高=全套合理推断）。**无微博上新海报正文交叉验证**——祷告者品牌方未发独立带价图（不像糖果铺有『衬衫=128；马甲+短裤=278』的明确切分）。&quot;, &quot;list_price_priority_note&quot;: &quot;按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 &gt; XHS/微博 官方宣传 &gt; 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。&quot;, &quot;full_set_estimate&quot;: 538, &quot;full_set_estimate_v2&quot;: &quot;≈ ¥250-350（参考同品牌同生产线『审判天使』XHS 帖披露价 ¥347 → ¥298 → ¥200 多预售；祷告者作为同品牌同型套装款，整套真实价应在该区间）&quot;, &quot;note&quot;: &quot;**祷告者本款 XHS 圈内未直接披露整套价**——但同品牌同生产线『审判天使』2025-08 圈内 130 likes 避雷帖（甘霜sugarycold）评论披露 ¥298（曾 ¥347 → 降价 ¥298 → 预售 ¥200 多）。**⚠ 厂原三家同售**：评论『设计师的礼物、少女的永无岛、锦慕lolita 等等，估计全都是同家店』 — 三家共享款 / 价 / 发货。淘宝 ¥538 端点上限不是真实整套价。&quot;}">整套 ¥538 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-5">现货</span></td>
-      <td class="col-publish">—</td>
-      <td class="col-tuan">—</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;祷告者（少女的永无岛王子系套装）&quot;, &quot;short&quot;: &quot;—&quot;, &quot;type&quot;: &quot;现货（淘宝详情『7天无理由退货』+ 价格 ¥109-538 显示是现货销售而非意向金）&quot;, &quot;date_range&quot;: &quot;未知（无微博上新海报锚点；淘宝 item_id 869541734831 的具体上架日未公开）&quot;, &quot;note&quot;: &quot;**该款无微博上新海报**——@少女的永无岛原创工作室（UID 6310911356）发『祷告者』关键词的 post 通过搜索未找到。淘宝商品详情显示『7 天无理由退货』+ 千人加购，是稳态现货销售。无『意向金 → 截单』流程意味着工艺早已稳定，但同时也说明品牌方不再为其做营销动作。&quot;}">— <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -223,10 +219,9 @@
       <td class="col-thumb"><a class="bare" href="items/shaonyongdao_shiyuewangzuo.html"><img src="images/少女的永无岛_誓约王座/weibo_brand_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/shaonyongdao_shiyuewangzuo.html"><div class="title">誓约王座（少女的永无岛王子装腰封套装）</div><div class="brand">少女的永无岛 原创工作室</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-low" data-evidence="{&quot;name&quot;: &quot;誓约王座（少女的永无岛王子装腰封套装）&quot;, &quot;label&quot;: &quot;仿冒受害腰部&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;未深查&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝 500+ 付款（『中位』500-3k 单档下沿，¥78.3 单 SKU 真实付款）&quot;, &quot;品牌仿冒泛滥实证：啊不许烦 2024-06 344 likes『重复的已经不想截了，识图 30+ 山店』&quot;, &quot;lolita-domain-knowledge 记录少女的永无岛 PDD 厂货争议 → 原版稀缺性受损 → 低保值&quot;, &quot;圣职系赛道头部款是『安缇娅的祷告』（小蝴蝶 1506 likes 圈内 tag 共识）→ 该品牌 sub-genre 内非头部&quot;]}">仿冒受害腰部 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">¥78.3（淘宝挂牌，2026-04-30）</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;誓约王座（少女的永无岛王子装腰封套装）&quot;, &quot;short&quot;: &quot;¥78.3（淘宝挂牌，2026-04-30）&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥78.3（淘宝挂牌，2026-04-30）&quot;, &quot;op_note&quot;: &quot;誓约王座是 王子装 + 长款腰封套装，无 OP 单件 SKU。&quot;, &quot;full_set_note&quot;: &quot;整套约 ¥78.3 白菜段（淘宝挂牌价，已在 list_price_at_research）。厂原店模式下『全套』概念模糊（按件买配凑），价格优势是核心卖点。&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">¥78.3（淘宝挂牌，2026-04-30） <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-5">现货</span></td>
-      <td class="col-publish">未明（多平台搬</td>
-      <td class="col-tuan">—</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;誓约王座（少女的永无岛王子装腰封套装）&quot;, &quot;short&quot;: &quot;上新 未明（多平台搬&quot;, &quot;type&quot;: &quot;现货 / 厂原店模式（圈内确认）&quot;, &quot;date_range&quot;: &quot;未明（厂原店持续供货模式，非传统截团）&quot;, &quot;poster_first_seen&quot;: &quot;未明（多平台搬运式上架）&quot;, &quot;note&quot;: &quot;少女的永无岛 brand 整体仿冒泛滥（lolita-domain-knowledge brands-reference + 啊不许烦 344 likes 帖『识图 30+ 山店』）影响所有该品牌款的二级市场保值。&quot;}">上新 未明（多平台搬 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -235,10 +230,9 @@
       <td class="col-thumb"><a class="bare" href="items/shidaiyanlei_diguojingji.html"><img src="images/时代眼泪_帝国荆棘/taobao_thumb_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/shidaiyanlei_diguojingji.html"><div class="title">帝国荆棘（时代眼泪原创军lo）</div><div class="brand">时代眼泪原创 lolita</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;帝国荆棘（时代眼泪原创军lo）&quot;, &quot;label&quot;: &quot;4 月军lo 爆款&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;现象&quot;, &quot;authority&quot;: &quot;知名&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝 500+ 意向金付款（『中位』500-3k 单档，¥1 意向金转化率 30% 估 150 真实付款）&quot;, &quot;lolita-domain-knowledge style-genres.md 明文记录『2026-04 军lo 现象级爆款季』三款之一&quot;, &quot;山福桃桃老师设计（画师 IP 加持）→ 权威知名&quot;, &quot;与终焉圣骸 2.0（4w+ 现象级）+ 继承人（400+ 白菜）形成 4 月军lo 爆款矩阵的中端段&quot;]}">4 月军lo 爆款 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">未公开</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;帝国荆棘（时代眼泪原创军lo）&quot;, &quot;short&quot;: &quot;未公开&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套官方/圈内未明文披露具体数字。淘宝 ¥1 是意向金抵扣。淘宝销量 500+ 付款是 robust 信号，价格不公开是该款决策摩擦点。&quot;, &quot;op_note&quot;: &quot;暗黑军lo 套装款，无 OP 单件 SKU。&quot;, &quot;full_set_note&quot;: &quot;整套官方未明文标价；淘宝 500+ 付款（参照 junlo_prince_report 摘要）证明实际销售热度，但价格未抓。&quot;, &quot;full_set_status&quot;: &quot;未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">未公开 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-04</td>
-      <td class="col-tuan">—</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;帝国荆棘（时代眼泪原创军lo）&quot;, &quot;short&quot;: &quot;上新 2026-04&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（淘宝 500+ 付款）&quot;, &quot;date_range&quot;: &quot;2026-04 上新（具体日期未抓）&quot;, &quot;poster_first_seen&quot;: &quot;2026-04 早期（未明）&quot;, &quot;note&quot;: &quot;**lolita-domain-knowledge style-genres.md 明文记录**：『2026-04 关键节点（军lo 爆发）：樱洛芙终焉圣骸 2.0 + 时代眼泪帝国荆棘 + 未知星辰继承人王子装同时上新，引发军lo 现象级爆款季』。山福桃桃老师设计的 IP 加持是该款的关键差异化。&quot;}">上新 2026-04 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -247,10 +241,9 @@
       <td class="col-thumb"><a class="bare" href="items/yingyue_longyao.html"><img src="images/映月_龙曜/taobao_official_sku_2.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yingyue_longyao.html"><div class="title">龙曜</div><div class="brand">映月原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;龙曜&quot;, &quot;label&quot;: &quot;中华细分主流&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;知名&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝 700+ 付款（『中位』500-3k 单档）&quot;, &quot;初柒顾 1665 likes KOL 设计帖明确公开 4 档价格 + 设计解读（中华军lo 赛道头部 KOL 帖）&quot;, &quot;叁狐 04-10 1086 likes『平平无奇的军lo罢了』提及军lo赛道（含龙曜同期对照）&quot;, &quot;汉洋折衷主题填补市场空白（中华+军lo 双标签独家覆盖）&quot;]}">中华细分主流 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥523</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;龙曜&quot;, &quot;short&quot;: &quot;整套 ¥523&quot;, &quot;full_set&quot;: 523, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥523（淘宝小全套，2026-04-30）/ ¥583（大全套）&quot;, &quot;op_note&quot;: &quot;**该款无 OP 单件 SKU**——龙曜是斗篷+立领衬衫+下装的多件套装，没有 lolita 标准 OP 连衣裙形态。淘宝按『小全套 / 大全套』2 个 SKU 组合挂牌。&quot;, &quot;full_set_note&quot;: &quot;small_full_set 小全套淘宝挂牌价（非意向金）；大全套 ¥583（详见 price_breakdown）。来源 XHS 初柒顾 1665 likes 帖正文 2026-03-18。&quot;, &quot;price_breakdown&quot;: {&quot;意向金价 · 小全套&quot;: &quot;¥498&quot;, &quot;意向金价 · 大全套&quot;: &quot;¥558&quot;, &quot;非意向金 · 小全套&quot;: &quot;¥523（淘宝挂牌）&quot;, &quot;非意向金 · 大全套&quot;: &quot;¥583&quot;, &quot;意向金抵扣 / 退款&quot;: &quot;买意向金后收到货还能退 ¥30，相当于多优惠&quot;}, &quot;note&quot;: &quot;**价格信息来自 XHS 初柒顾 1665 likes 帖正文**（2026-03-18，sheji 帖），不是淘宝意向金链或微博海报——印证『价格优先 XHS』规则。淘宝挂牌 ¥523 对应非意向金小全套。意向金截止 2026-04-15。意向金可退（¥30 余额返还），买的早 = 直接省 ¥30。&quot;}">整套 ¥523 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-03</td>
-      <td class="col-tuan">2026-03-18</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;龙曜&quot;, &quot;short&quot;: &quot;上新 2026-03 · 团 03-18&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（截止 2026-04-15）&quot;, &quot;date_range&quot;: &quot;2026-03-18 海报上新 → 2026-04-15 截单 → 后续打版出货&quot;, &quot;poster_first_seen&quot;: &quot;2026-03-18&quot;, &quot;note&quot;: &quot;运营节奏与樱洛芙类大牌相比偏小工作室——主力宣传在 XHS 集赞营销+小博主转发，没看到 weibo 官方上新海报。&quot;}">上新 2026-03 · 团 03-18 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">中华</span></td>
     </tr>
     
@@ -259,10 +252,9 @@
       <td class="col-thumb"><a class="bare" href="items/shizhimao_baichengshan_2.html"><img src="images/是只猫_王子系白衬衫/taobao_thumb_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/shizhimao_baichengshan_2.html"><div class="title">王子系白衬衫 二团（是只猫原创设计）</div><div class="brand">是只猫原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;王子系白衬衫 二团（是只猫原创设计）&quot;, &quot;label&quot;: &quot;白菜单品畅销&quot;, &quot;scale&quot;: &quot;头部&quot;, &quot;buzz&quot;: &quot;长尾&quot;, &quot;authority&quot;: &quot;未提及&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝 1000+ 付款（『头部』下沿，¥15 是二团尾款 → 真实付款率高）&quot;, &quot;白衬衫单品在 lolita 圈通常作为基础百搭单品 → 销量稳但保值低（单 OP/JSK 折损快 50-70%）&quot;, &quot;是只猫品牌未在圈内 KOL 横评（玲玲玲姐 / @feshianla）出现 → 权威未提及&quot;, &quot;同店借 viral『少女暴君』浪潮做『少女暴君 Lolita 套装』5 月出样 → 品牌策略偏 viral 借势&quot;]}">白菜单品畅销 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套官方/圈内未明文披露具体数字。XHS KOL 二团开箱帖 + 同品牌新款帖均未提价格。淘宝 ¥15 单 SKU 是单件促销价，不是整套。</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;王子系白衬衫 二团（是只猫原创设计）&quot;, &quot;short&quot;: &quot;整套官方/圈内未明文披露具体数字。XHS KOL 二团开箱帖 + 同品牌新款帖均未提价格。淘宝 ¥15 单 SKU 是单件促销价，不是整套。&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套官方/圈内未明文披露具体数字。XHS KOL 二团开箱帖 + 同品牌新款帖均未提价格。淘宝 ¥15 单 SKU 是单件促销价，不是整套。&quot;, &quot;op_note&quot;: &quot;白衬衫 + 高腰长裤分件 SKU 销售，无 OP 单件概念。&quot;, &quot;full_set_note&quot;: &quot;整套（衬衫+高腰长裤）官方未明文标价；二团尾款款，需看微博海报正文 / 淘宝详情。&quot;, &quot;list_price_priority_note&quot;: &quot;按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 &gt; XHS/微博 官方宣传 &gt; 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。&quot;, &quot;full_set_status&quot;: &quot;未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）&quot;, &quot;note&quot;: &quot;**整套价 XHS 圈内未明文披露**——KOL 二团紫色开箱帖（2 天前发，1 天到货）未提价格。淘宝 ¥15 是单件促销价（明显非整套）。下阶段需待品牌方官号自报或圈内 KOL 上身帖明文披露。&quot;}">整套官方/圈内未明文披露具体数字。XHS KOL 二团开箱帖 + 同品牌新款帖均未提价格。淘宝 ¥15 单 SKU 是单件促销价，不是整套。 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">未明（二团再贩</td>
-      <td class="col-tuan">2026-04-30</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;王子系白衬衫 二团（是只猫原创设计）&quot;, &quot;short&quot;: &quot;上新 未明（二团再贩 · 团 04-30&quot;, &quot;type&quot;: &quot;二团 / 尾款款&quot;, &quot;date_range&quot;: &quot;二团节奏（具体日期未抓；同品牌 2026-04-30 仍有近期上新活动）&quot;, &quot;poster_first_seen&quot;: &quot;未明（二团再贩款）&quot;, &quot;note&quot;: &quot;是只猫品牌借助 viral 浪潮（『少女暴君』）扩展产品线。该白衬衫作为基础款是『单品畅销』而非系列爆款。&quot;}">上新 未明（二团再贩 · 团 04-30 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -271,10 +263,9 @@
       <td class="col-thumb"><a class="bare" href="items/yueyexiong_huangquanjiamian.html"><img src="images/月夜熊_皇权加冕/xhs_yueye_main.webp" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yueyexiong_huangquanjiamian.html"><div class="title">皇权加冕（月夜熊原创现货大衣军lolita）</div><div class="brand">月夜熊 Lolita 原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;皇权加冕（月夜熊原创现货大衣军lolita）&quot;, &quot;label&quot;: &quot;现货畅销&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;未深查&quot;, &quot;authority&quot;: &quot;未提及&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝 500+ 现货付款（最准——下单即发，无意向金水分；『中位』500-3k 单档）&quot;, &quot;¥219 全套白菜+中下端段定位&quot;, &quot;月夜熊品牌未在 KOL 横评 top 出现 → 权威未提及&quot;, &quot;现货款 = 工艺已稳定 → 中保值&quot;]}">现货畅销 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">¥219</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;皇权加冕（月夜熊原创现货大衣军lolita）&quot;, &quot;short&quot;: &quot;¥219&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥219&quot;, &quot;op_note&quot;: &quot;未抓 SKU 拆分；E 档 minimal entry 调研深度浅。&quot;, &quot;full_set_note&quot;: &quot;整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">¥219 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-5">现货</span></td>
-      <td class="col-publish">未明</td>
-      <td class="col-tuan">2026-04-30</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;皇权加冕（月夜熊原创现货大衣军lolita）&quot;, &quot;short&quot;: &quot;上新 未明 · 团 04-30&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（具体节奏未抓）&quot;, &quot;date_range&quot;: &quot;未明（E 档 minimal entry，2026-04-30 一次性补的 top-畅销度条目）&quot;, &quot;poster_first_seen&quot;: &quot;未明&quot;, &quot;note&quot;: &quot;月夜熊定位『现货 + 中端价位』，与 Vancy 梵希慢营销 / 樱洛芙截单营销 形成对比。&quot;}">上新 未明 · 团 04-30 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -283,10 +274,9 @@
       <td class="col-thumb"><a class="bare" href="items/weizhixingchen_jichengren.html"><img src="images/未知星辰_继承人/weibo_official_PeZ5fc8qO_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/weizhixingchen_jichengren.html"><div class="title">继承人（王子系军lo · 红色款）</div><div class="brand">未知星辰的来信</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;继承人（王子系军lo · 红色款）&quot;, &quot;label&quot;: &quot;白菜畅销&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝 400+ 现货付款（最准——下单即发，无意向金水分）&quot;, &quot;圈内王子系科普 9619 likes 帖（明确未列入五大原创头部清单 → 腰部品牌定位）&quot;, &quot;白菜价 ¥369 全套（继承人红 / 神权使者绿双 SKU 系列）&quot;, &quot;同品牌 兔叽侦探 ¥68.6 衬衫 600+ 付款 → 整店白菜段稳定走量&quot;]}">白菜畅销 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥439</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;继承人（王子系军lo · 红色款）&quot;, &quot;short&quot;: &quot;整套 ¥439&quot;, &quot;full_set&quot;: 439, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥439（淘宝当前挂牌，可能已调价）&quot;, &quot;full_set_note&quot;: &quot;现货价 ¥439（含外套+衬衫+短裤三件套，淘宝『颜色分类 | 外套+衬衫+短裤=三件套（现货）』SKU 直接显示）。早期调研记 ¥369 是 SKU 旧标价，已涨价。&quot;, &quot;full_set_history&quot;: &quot;¥369（早期调研）→ ¥439（2026-04 raw/taobao_detail.json 现货当前价）&quot;, &quot;note&quot;: &quot;**价格信息综合 weibo 海报正文 + 品牌官号自发**。set=¥369 是 2025-02-20 上架原价（『白菜lolita』）。淘宝当前挂牌 ¥439 是 2026-04 时价，可能因复刻 / 补单 / 调价上调约 19%。买家实际成交价区间 ¥361-¥439 不等，看下单时间。圈内自称『白菜价』在 lolita 圈是 ¥&lt;500 全套的标签。&quot;}">整套 ¥439 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-5">现货</span></td>
-      <td class="col-publish">2024-12</td>
-      <td class="col-tuan">2024-12-11</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;继承人（王子系军lo · 红色款）&quot;, &quot;short&quot;: &quot;上新 2024-12 · 团 12-11&quot;, &quot;type&quot;: &quot;意向金 → 截单 → 出货 → **现货补货**（已于 2025-02 转入现货销售）&quot;, &quot;date_range&quot;: &quot;2024-12-11（图透海报）→ 2025-02-19（现货上架）→ 持续在售（淘宝至 2026-04 仍 400+）&quot;, &quot;poster_first_seen&quot;: &quot;2024-12-11（@Lolita洋装上新 转发图透）&quot;, &quot;note&quot;: &quot;微博海报『Time：王见huo』疑为『见货』口误（即下单见货 = 现货销售）。这是该款的运营关键差异：与终焉/龙曜的『截单 → 工厂 → 几个月后出货』不同，继承人现货已发售，下单即拿。是该 brand 主推『白菜+现货』的策略一部分。&quot;}">上新 2024-12 · 团 12-11 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
@@ -295,10 +285,9 @@
       <td class="col-thumb"><a class="bare" href="items/yingluofu_zhongyan_2.0.html"><img src="images/樱洛芙_终焉圣骸2.0/poster_006xCKgBgy1i6uihyv9gej30u0190jx1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yingluofu_zhongyan_2.0.html"><div class="title">终焉圣骸 2.0</div><div class="brand">樱洛芙Lolita</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-top" data-evidence="{&quot;name&quot;: &quot;终焉圣骸 2.0&quot;, &quot;label&quot;: &quot;现象级爆款&quot;, &quot;scale&quot;: &quot;现象级&quot;, &quot;buzz&quot;: &quot;破圈&quot;, &quot;authority&quot;: &quot;头部 IP&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝意向金 4w+ 付款 → 按 30% 真实转化估 1.2w 真实付款（已超『现象级 ≥ 1w 单』阈值）&quot;, &quot;宇宙太 2025-10 真人成片 8451 likes（樱洛芙终焉圣骸帖）&quot;, &quot;viral『少女暴君』2026 Q2 浪潮同期款，破圈帖最高 36w likes&quot;, &quot;画师叁狐 1117 likes 自发『是我画的』为品牌 IP 加持&quot;, &quot;白金色被砍 / 红黑色褪色担忧 → 保值打中保值（非高）&quot;]}">现象级爆款 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥648 · OP ¥520</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;终焉圣骸 2.0&quot;, &quot;short&quot;: &quot;整套 ¥648 · OP ¥520&quot;, &quot;op&quot;: 520, &quot;full_set&quot;: 648, &quot;currency&quot;: &quot;CNY&quot;, &quot;deposit_link_intent&quot;: 5, &quot;list_price_at_research&quot;: &quot;¥5（淘宝意向金挂牌价，2026-04-30 调研当时）&quot;, &quot;note&quot;: &quot;OP=单件 OP 连衣裙；full_set=全套（含披风/胸章/绶带等附件）。**该款没有 JSK 版本**——官方海报只列 op + fs 两选。淘宝挂牌为 ¥5 意向金链接（抵 ¥30），不代表全款；op/full_set 价来自微博/XHS 官方海报。**真人收货验证**（XHS 孝红服装细节控 2026-04-26 路人视角测评帖，400+ likes）：评论『这么便宜的吗？大全套六百多』『对的』独立确认 full_set=648。&quot;}">整套 ¥648 · OP ¥520 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2025-10</td>
-      <td class="col-tuan">2025-10-18</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;终焉圣骸 2.0&quot;, &quot;short&quot;: &quot;上新 2025-10 · 团 10-18&quot;, &quot;type&quot;: &quot;意向金 + 截单全款&quot;, &quot;date_range&quot;: &quot;2025-10-18 ~ 2025-11-18&quot;, &quot;poster_first_seen&quot;: &quot;2025-10-29&quot;, &quot;note&quot;: &quot;为 1.0 翻新版本（淘宝标 2.0），原 1.0 此前已发售并仍在二手流转&quot;}">上新 2025-10 · 团 10-18 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
@@ -307,10 +296,9 @@
       <td class="col-thumb"><a class="bare" href="items/yingluofu_gulong.html"><img src="images/樱洛芙_骨龙/poster_006xCKgBgy1i9dxm9sin9j31ac1v81kx.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/yingluofu_gulong.html"><div class="title">骨龙（暗黑哥特 JSK）</div><div class="brand">樱洛芙Lolita</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;骨龙（暗黑哥特 JSK）&quot;, &quot;label&quot;: &quot;暗黑哥特主流&quot;, &quot;scale&quot;: &quot;头部&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝意向金 1w+ 付款 → 真实付款估 3-5k（『头部』3k-1w 单档）&quot;, &quot;孝红服装细节控 04-27 3737 likes 工艺测评帖（樱洛芙整体做工对照信号）&quot;, &quot;同名款冲突（Alicegirl 也有骨龙）增加搜索流量但分散品牌识别&quot;, &quot;樱洛芙整体在 brands-reference top，但骨龙单款未进 KOL 横评 → 权威『普通』&quot;]}">暗黑哥特主流 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">未公开</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;骨龙（暗黑哥特 JSK）&quot;, &quot;short&quot;: &quot;未公开&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;deposit_link_intent&quot;: 5, &quot;list_price_at_research&quot;: &quot;¥5（淘宝挂牌价，意向金抵 ¥30）&quot;, &quot;op_note&quot;: &quot;骨龙是 JSK（不是 OP）—— op 字段不适用。&quot;, &quot;full_set_note&quot;: &quot;全款价**官方至今未公开**（known fact，2026-04 决策痛点）。已 cross-platform 搜过 6 种关键词均无价（详见原 note）。同 brand 终焉圣骸 OP=520/全套=648 仅作粗略参考——骨龙是 JSK 不是 OP+整套，价格结构可能完全不同。&quot;, &quot;note&quot;: &quot;全款价**官方至今未公开**。已 cross-platform 搜索：(1) 微博海报正文（1月17日图透 / 1月21日加色公告）只列颜色不列价格；(2) 淘宝意向金链商品页只显示 ¥5 抵扣不显示全款；(3) 小红书搜 6 种关键词（樱洛芙 骨龙 价格 / 全款 / op价 / 多少钱 / op fs / jsk 多少）— 4 月 4 日 Min 帖买家原话『想问问骨龙全套多少钱啊』评论里 25 条均无价格答复。这是该款决策上的真实痛点。同 brand 终焉圣骸 OP=520 / 整套=648 可作粗略参考，但骨龙是 JSK 不是 OP+整套，价格结构可能完全不同。&quot;}">未公开 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-01</td>
-      <td class="col-tuan">2026-01-17</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;骨龙（暗黑哥特 JSK）&quot;, &quot;short&quot;: &quot;上新 2026-01 · 团 01-17&quot;, &quot;type&quot;: &quot;意向金 + 截单全款&quot;, &quot;date_range&quot;: &quot;2026-01-17（首次海报上新）→ 2026-01-21（新增黑紫黑绿）→ 仍在收意向金（截单时间未明）&quot;, &quot;poster_first_seen&quot;: &quot;2026-01-17&quot;, &quot;note&quot;: &quot;1月17日发『新色图透』海报；1月21日宣布新增黑紫色💜和黑绿色💚，共6色；淘宝意向金链当前实际显示8 SKU（含白红、墨绿额外加色）。海报和淘宝 SKU 数量略对不上——属正常迭代过程。&quot;}">上新 2026-01 · 团 01-17 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">哥特</span></td>
     </tr>
     
@@ -319,10 +307,9 @@
       <td class="col-thumb"><a class="bare" href="items/chenmohuoxing_xingxunyeqishi_qun.html"><img src="images/沉默火星_星巡夜骑士裙装/weibo_official_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/chenmohuoxing_xingxunyeqishi_qun.html"><div class="title">星巡夜骑士 裙装版（沉默火星军lo）</div><div class="brand">沉默火星 SilentMars</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;星巡夜骑士 裙装版（沉默火星军lo）&quot;, &quot;label&quot;: &quot;看家款多团迭代&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;未深查&quot;, &quot;authority&quot;: &quot;知名&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝 400+ 五团余量付款（『中位』500-3k 单档下沿）&quot;, &quot;5 团重复开订 = 看家系列 IP 资产化（与 PC 红与黑 4 代 / Vancy 搜查者 6 团同模式）&quot;, &quot;双 SKU（裙装 ¥168 + 马术服裤装 ¥175 共 600+ 付款累计）&quot;, &quot;品牌画师/设计师未独立署名，但多团迭代说明圈内有稳定客群&quot;]}">看家款多团迭代 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">¥168（淘宝五团挂牌，2026-04-30）</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;星巡夜骑士 裙装版（沉默火星军lo）&quot;, &quot;short&quot;: &quot;¥168（淘宝五团挂牌，2026-04-30）&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;¥168（淘宝五团挂牌，2026-04-30）&quot;, &quot;op_note&quot;: &quot;无 OP 单件——星巡夜骑士是套装款（外套+衬衫+裙/裤+配件），按件 SKU 销售。&quot;, &quot;full_set_note&quot;: &quot;整套约 ¥168 中下端（五团余量挂牌）；负面帖评论确认外套单件 ¥270，红金白金两套约 ¥540。圈内 2024 反馈版型/工艺差到『廉价 cos 服质感』，整套估值与品质不匹配。&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">¥168（淘宝五团挂牌，2026-04-30） <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">约 2024（</td>
-      <td class="col-tuan">—</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;星巡夜骑士 裙装版（沉默火星军lo）&quot;, &quot;short&quot;: &quot;上新 约 2024（&quot;, &quot;type&quot;: &quot;再贩款 / 五团（圈内 2025-06 五团再贩，2024 已有上身反馈）&quot;, &quot;date_range&quot;: &quot;首团约 2024（『我真的要骂你了』负面帖 2024-07）~ 2025-06 五团再贩 ~ 持续供货&quot;, &quot;poster_first_seen&quot;: &quot;约 2024（具体日期未抓）&quot;, &quot;note&quot;: &quot;已 5 团重复开订 → 是品牌看家系列；裙装版 + 马术服裤装版 双 SKU 覆盖王子系男女装两条线。&quot;}">上新 约 2024（ <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -331,10 +318,9 @@
       <td class="col-thumb"><a class="bare" href="items/maomiwanan_juanjuan.html"><img src="images/猫咪晚安_卷卷/69d1e7fe000000002200c408_2.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/maomiwanan_juanjuan.html"><div class="title">卷卷（军LO）</div><div class="brand">猫咪晚安洛丽塔原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-none" data-evidence="{&quot;name&quot;: &quot;卷卷（军LO）&quot;, &quot;label&quot;: &quot;加购未上架&quot;, &quot;scale&quot;: &quot;加购未上架&quot;, &quot;buzz&quot;: &quot;冷启动&quot;, &quot;authority&quot;: &quot;未提及&quot;, &quot;resale&quot;: &quot;不流通&quot;, &quot;evidence&quot;: [&quot;淘宝无独立 SKU（运营路径：试样图 → 投票 → 开订）&quot;, &quot;XHS 投票帖 2349 likes 但是品牌官号自发，剔除集赞营销 / 官号自发后无自然 KOL 真人成片&quot;, &quot;微博渠道几乎缺位 → 多渠道营销弱&quot;, &quot;未在任何 KOL 横评帖出现&quot;]}">加购未上架 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥368</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;卷卷（军LO）&quot;, &quot;short&quot;: &quot;整套 ¥368&quot;, &quot;full_set&quot;: 368, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_note&quot;: &quot;卷卷本款在淘宝无独立挂牌链接（猫咪晚安洛丽塔原创设计 同店主推 ¥69 十字圣焰高质军LO 等其他款，卷卷未上）。¥368 全套价仅来自 XHS 帖明文。&quot;, &quot;note&quot;: &quot;小红书 帖明确『368 的军LO』全套价。淘宝当前没有该款独立链接（同店有 ¥69 的『十字圣焰高质军LO』另一款）。OP 单件价格未明确——设计稿包含完整套装（大衣+腰封+军帽+绶带+剑），可能仅整套售。&quot;}">整套 ¥368 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-0">加购未上架</span></td>
-      <td class="col-publish">2026-03</td>
-      <td class="col-tuan">2026-03-05</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;卷卷（军LO）&quot;, &quot;short&quot;: &quot;上新 2026-03 · 团 03-05&quot;, &quot;type&quot;: &quot;试样阶段 → 社区 颜色 投票 → 即将开订（截至 2026-04-26 仍未开淘宝意向金链）&quot;, &quot;date_range&quot;: &quot;未定（试样图 2026-03-05；投票加色帖 2026-04-05）&quot;, &quot;poster_first_seen&quot;: &quot;2026-03-05（小红书试样样衣）/ 2026-04-05（投票加色稿）&quot;, &quot;note&quot;: &quot;运营节奏与樱洛芙等大牌不同——先做样、发图、收 社区 颜色建议，再决定开订配色。这种『先 投票 后开订』模式给买家参与感，但 品牌控制力较弱。&quot;}">上新 2026-03 · 团 03-05 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
@@ -343,10 +329,9 @@
       <td class="col-thumb"><a class="bare" href="items/baichayulu_baojunjiamian.html"><img src="images/白茶语鹿_暴君加冕/taobao_thumb_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/baichayulu_baojunjiamian.html"><div class="title">暴君加冕军lo系列（白茶语鹿）</div><div class="brand">白茶语鹿 Lolita 原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;暴君加冕军lo系列（白茶语鹿）&quot;, &quot;label&quot;: &quot;viral 借势新品&quot;, &quot;scale&quot;: &quot;头部&quot;, &quot;buzz&quot;: &quot;破圈&quot;, &quot;authority&quot;: &quot;普通&quot;, &quot;resale&quot;: &quot;不流通&quot;, &quot;evidence&quot;: [&quot;淘宝意向金 1000+ 付款（『头部』3k-1w 单档下沿，按 30% 转化估 300+ 真实付款）&quot;, &quot;命名直接借势 XHS『少女暴君』2026 Q2 viral 浪潮（36w / 25w / 4.4w likes 跨圈层）&quot;, &quot;同店『荣耀向我俯首王子系列』200+ 付款命名对应『芋泥脑袋瓜额 25w likes 法语音乐剧 cover 帖』，借势链条完整&quot;, &quot;白茶语鹿品牌圈内未在 KOL 横评 top 列表（@feshianla / 玲玲玲姐 / 茉香椰果）→ 权威普通&quot;]}">viral 借势新品 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">未公开</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;暴君加冕军lo系列（白茶语鹿）&quot;, &quot;short&quot;: &quot;未公开&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套官方/圈内未明文披露具体数字。淘宝 ¥5 是意向金抵扣，正式开订全款待定。&quot;, &quot;op_note&quot;: &quot;未抓全套 SKU 拆分；暴君加冕系列是套装款（含外套+内衫+下装+配件），按系列出。&quot;, &quot;full_set_note&quot;: &quot;整套官方未明文标价；XHS 官号 4-04 意向金帖只发主图未发价格。淘宝 ¥5 意向金抵扣（无全款链）。需正式开订后看微博海报正文。&quot;, &quot;full_set_status&quot;: &quot;未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">未公开 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2026-04</td>
-      <td class="col-tuan">2026-04-04</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;暴君加冕军lo系列（白茶语鹿）&quot;, &quot;short&quot;: &quot;上新 2026-04 · 团 04-04&quot;, &quot;type&quot;: &quot;意向金 + 截单全款&quot;, &quot;date_range&quot;: &quot;2026-04-04（XHS 上意向金）~ ?（截团日期未抓）&quot;, &quot;poster_first_seen&quot;: &quot;2026-04-04&quot;, &quot;note&quot;: &quot;viral 浪潮借势型款——从 &#x27;Yuki雪雪 我要权力向我而来&#x27; 4.4w likes / 啊川 36w likes / 芋泥脑袋瓜额 25w likes 同期切入。借势速度极快（1000+ 付款达成）。&quot;}">上新 2026-04 · 团 04-04 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span></td>
     </tr>
     
@@ -355,10 +340,9 @@
       <td class="col-thumb"><a class="bare" href="items/dierchengbao_tangguopu.html"><img src="images/第二城堡_糖果铺/weibo_official_PzUHHgfgS_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/dierchengbao_tangguopu.html"><div class="title">糖果铺（第二城堡王子系 · 甜基佬套装）</div><div class="brand">第二城堡 CastleToo</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-high" data-evidence="{&quot;name&quot;: &quot;糖果铺（第二城堡王子系 · 甜基佬套装）&quot;, &quot;label&quot;: &quot;甜系王子主流&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;中位&quot;, &quot;authority&quot;: &quot;知名&quot;, &quot;resale&quot;: &quot;中保值&quot;, &quot;evidence&quot;: [&quot;淘宝老链接 400+ 付款（『中位』500-3k 单档下沿）&quot;, &quot;无人区自助售卖机 2025-06 真人成片 1626 likes + 蓝空koko 2025-05 真人成片 1376 likes 累计 ~3k（『中位』传播）&quot;, &quot;圈内『小甜基』标签共识形成（甜系 × 王子复合赛道）&quot;, &quot;本款『久违的小甜基』暗示重团 + 命中 2026 Q2 viral 浪潮（但开团早于 viral 爆点）&quot;]}">甜系王子主流 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥406</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;糖果铺（第二城堡王子系 · 甜基佬套装）&quot;, &quot;short&quot;: &quot;整套 ¥406&quot;, &quot;full_set&quot;: 406, &quot;currency&quot;: &quot;CNY&quot;, &quot;deposit_link_intent&quot;: &quot;¥8（定金卡，需补款）&quot;, &quot;list_price_at_research&quot;: &quot;¥8（2026-04 淘宝挂牌定金价）&quot;, &quot;note&quot;: &quot;**全款价格来自微博 @Lolita洋装上新 二团海报正文**：『Price：衬衫=128；马甲+短裤=278』。即衬衫 ¥128 单卖 + 马甲短裤 ¥278 套卖，全套 ¥406。淘宝 ¥8 是定金抵扣，需后续补款全款。圈内『白菜价』标签——¥&lt;500 全套属白菜段（与未知星辰继承人 ¥369 / 兔叽侦探 ¥68.6 同档）。第二城堡定位『中端偏白菜』。&quot;}">整套 ¥406 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">2025-07</td>
-      <td class="col-tuan">2025-07-01</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;糖果铺（第二城堡王子系 · 甜基佬套装）&quot;, &quot;short&quot;: &quot;上新 2025-07 · 团 07-01&quot;, &quot;type&quot;: &quot;意向金 → 截单 → 出货&quot;, &quot;date_range&quot;: &quot;2025-07-01 ~ 2025-07-31（二团重团；老链接 917187493014 一团已截单 400+，新链接 1030474963498 是 2026 当前在售的定金卡）&quot;, &quot;poster_first_seen&quot;: &quot;2025-07-07（@第二城堡Lolita原创设计 微博官号自发图透抽奖帖）&quot;, &quot;note&quot;: &quot;运营节奏：2025-07-07 品牌官号微博自发上新图透 + 转发抽奖（评论卷过 300/600/800 送假发/衣服）→ 2025-07-09 @Lolita洋装上新 转发二团海报正文（『久违的小甜基』暗示之前出过类似款本次重团）→ 老链接 917187493014 累计 400+ 销量 → 2026-04 新定金链接 1030474963498 仍在售。文案『久违的小甜基』是该款的关键叙事——是品牌看家王子线的常规重团而非首发新品。&quot;}">上新 2025-07 · 团 07-01 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -367,10 +351,9 @@
       <td class="col-thumb"><a class="bare" href="items/shejishidiliwu_xiaowangzizhuang.html"><img src="images/设计师的礼物_小王子装/taobao_thumb_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/shejishidiliwu_xiaowangzizhuang.html"><div class="title">小王子装（设计师的礼物）</div><div class="brand">设计师的礼物</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;小王子装（设计师的礼物）&quot;, &quot;label&quot;: &quot;白菜畅销&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;长尾&quot;, &quot;authority&quot;: &quot;未提及&quot;, &quot;resale&quot;: &quot;低保值&quot;, &quot;evidence&quot;: [&quot;淘宝 800+ 付款（『中位』500-3k 单档）&quot;, &quot;¥139 全套白菜段定位，性价比驱动&quot;, &quot;品牌未在圈内 KOL 横评出现 → 权威未提及&quot;, &quot;腰部品牌靠淘宝直挂，无微博/XHS 完整节奏支撑长尾&quot;]}">白菜畅销 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">整套 ¥248</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;小王子装（设计师的礼物）&quot;, &quot;short&quot;: &quot;整套 ¥248&quot;, &quot;full_set&quot;: 248, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套 ¥248（一团首批，XHS 官号明文）/ ¥278（二团）/ ¥329 / ¥359（贵气版，XHS 官号 2025 帖明文 341 likes）。**淘宝 ¥139 单 SKU 不是整套**——是用户 2026-05-02 反馈『淘宝低价款不准』的实证款。&quot;, &quot;op_note&quot;: &quot;无 OP 单件——小王子装是上衣+背带裤两件套设计（XHS 官号 2024-11-29 自报明文）&quot;, &quot;full_set_note&quot;: &quot;整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。&quot;, &quot;list_price_priority_note&quot;: &quot;按 SKILL.md / feedback_lolita_price_source memory：价格信号源优先级 = XHS 个人分享/收货 &gt; XHS/微博 官方宣传 &gt; 淘宝挂牌（仅参考）。淘宝多 SKU 销售时单 SKU 价 ≠ 整套价。&quot;, &quot;full_set_history&quot;: &quot;一团 ¥248（首批 + 满减），二团 ¥278（XHS 官号『设计师的礼物』2024-11-29 帖明文：『第一批是248，还可以参加满减活动，第二批是278』）&quot;, &quot;note&quot;: &quot;**整套价 ¥248 来自 XHS 官号 2024-11-29 帖明文**（『上衣和背带裤两件套设计，第一批是248』）。**⚠ 厂原三家同售验证**：圈内 2025-08 避雷帖（甘霜sugarycold 130 likes）评论『tb 这堆所谓卖厂原的店家（设计师的礼物、少女的永无岛、锦慕lolita 等等），估计全都是同家店，发货时间地点款式模特图价格都一模一样』。三家共享同款 / 同价 / 同发货。&quot;}">整套 ¥248 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">未明</td>
-      <td class="col-tuan">2026-04-30</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;小王子装（设计师的礼物）&quot;, &quot;short&quot;: &quot;上新 未明 · 团 04-30&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（具体节奏未抓）&quot;, &quot;date_range&quot;: &quot;未明（E 档 minimal entry，2026-04-30 一次性补的 top-畅销度条目）&quot;, &quot;poster_first_seen&quot;: &quot;未明&quot;, &quot;note&quot;: &quot;中下端腰部品牌走量款，无微博完整节奏 / 无圈内 KOL 横评，靠淘宝直挂 + 性价比驱动。&quot;}">上新 未明 · 团 04-30 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">王子lo</span></td>
     </tr>
     
@@ -379,10 +362,9 @@
       <td class="col-thumb"><a class="bare" href="items/zaomeng_shaonyubaojun.html"><img src="images/造梦境_少女暴君系列/taobao_thumb_1.jpg" loading="lazy" alt="" /></a></td>
       <td class="col-name"><a class="bare" href="items/zaomeng_shaonyubaojun.html"><div class="title">少女暴君系列套装（造梦境，征名中）</div><div class="brand">造梦境原创设计</div></a></td>
       <td class="col-pop"><button class="pop-btn pop-mid" data-evidence="{&quot;name&quot;: &quot;少女暴君系列套装（造梦境，征名中）&quot;, &quot;label&quot;: &quot;viral 借势新品&quot;, &quot;scale&quot;: &quot;中位&quot;, &quot;buzz&quot;: &quot;破圈&quot;, &quot;authority&quot;: &quot;未提及&quot;, &quot;resale&quot;: &quot;不流通&quot;, &quot;evidence&quot;: [&quot;淘宝 600+ 意向金付款（『中位』500-3k 单档下沿，¥5 意向金转化率低估 50-100 真实）&quot;, &quot;标题直接含『少女暴君系列』命名 → 借 36w / 25w / 4.4w likes XHS viral 浪潮&quot;, &quot;造梦境品牌圈内未在 KOL 横评出现 → 权威未提及&quot;, &quot;征名中状态 = 还没正式开订 → 不流通（无二级市场）&quot;]}">viral 借势新品 <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">未公开</td>
+      <td class="col-price"><button class="price-btn" data-price-detail="{&quot;name&quot;: &quot;少女暴君系列套装（造梦境，征名中）&quot;, &quot;short&quot;: &quot;未公开&quot;, &quot;currency&quot;: &quot;CNY&quot;, &quot;list_price_at_research&quot;: &quot;整套官方/圈内未明文披露具体数字（征名中阶段）。淘宝 ¥5 是意向金抵扣。&quot;, &quot;op_note&quot;: &quot;未抓 SKU 拆分；E 档 minimal entry 调研深度浅。&quot;, &quot;full_set_note&quot;: &quot;整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。&quot;, &quot;full_set_status&quot;: &quot;未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）&quot;, &quot;note&quot;: &quot;**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。&quot;}">未公开 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-status"><span class="status status-4">已开团</span></td>
-      <td class="col-publish">未明</td>
-      <td class="col-tuan">2026-04-30</td>
+      <td class="col-time"><button class="release-btn" data-release-detail="{&quot;name&quot;: &quot;少女暴君系列套装（造梦境，征名中）&quot;, &quot;short&quot;: &quot;上新 未明 · 团 04-30&quot;, &quot;type&quot;: &quot;意向金 + 截单全款（具体节奏未抓）&quot;, &quot;date_range&quot;: &quot;未明（E 档 minimal entry，2026-04-30 一次性补的 top-畅销度条目）&quot;, &quot;poster_first_seen&quot;: &quot;未明&quot;, &quot;note&quot;: &quot;纯 viral 借势型款：标题里直接含『少女暴君系列套装（征名中）』，借势策略明显。&quot;}">上新 未明 · 团 04-30 <span class="pop-info">ⓘ</span></button></td>
       <td class="col-style"><span class="chip">军lo</span><span class="chip">王子lo</span></td>
     </tr>
     
@@ -397,6 +379,24 @@
       <div class="pop-modal-dims" id="pop-modal-dims"></div>
       <div class="pop-modal-evlabel">销量与畅销度证据（4 维交叉）</div>
       <ul class="pop-modal-ev" id="pop-modal-ev"></ul>
+    </div>
+  </div>
+
+  <div id="price-modal" class="pop-modal" onclick="closePriceModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closePriceModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="price-modal-name"></div>
+      <div class="pop-modal-evlabel">价格详情</div>
+      <div id="price-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
+    </div>
+  </div>
+
+  <div id="release-modal" class="pop-modal" onclick="closeReleaseModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closeReleaseModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="release-modal-name"></div>
+      <div class="pop-modal-evlabel">销售时间详情</div>
+      <div id="release-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
     </div>
   </div>
 
@@ -483,7 +483,75 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && popModal.classList.contains("open")) popModal.classList.remove("open");
   });
+
+  // price click → modal
+  const priceModal = document.getElementById("price-modal");
+  const priceModalName = document.getElementById("price-modal-name");
+  const priceModalBody = document.getElementById("price-modal-body");
+  function fmtPriceVal(v) {
+    if (v === null || v === undefined) return "—";
+    if (typeof v === "number") return "¥" + v;
+    return String(v);
+  }
+  function escHtml(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  document.querySelectorAll(".price-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      let d;
+      try { d = JSON.parse(btn.dataset.priceDetail); } catch(err) { return; }
+      priceModalName.textContent = d.name || "";
+      const rows = [];
+      const numFields = [["op","OP 单件"],["full_set","整套"],["deposit_link_intent","意向金"]];
+      for (const [k,label] of numFields) {
+        if (d[k] !== undefined && d[k] !== null) rows.push(`<div><strong>${label}</strong>: ¥${d[k]}</div>`);
+      }
+      const strFields = [["list_price_at_research","调研当时挂牌价"],["full_set_estimate","整套估算"],["full_set_estimate_v2","整套估算 v2"],["full_set_estimate_v3","整套估算 v3"],["full_set_history","价格历史"],["full_set_status","整套价 status"],["op_note","OP 注"],["full_set_note","整套 注"],["list_price_note","挂牌价 注"],["list_price_priority_note","价格优先级"],["note","总注"]];
+      for (const [k,label] of strFields) {
+        if (d[k]) rows.push(`<div style="margin-top:6px;"><strong>${label}</strong>: ${escHtml(d[k])}</div>`);
+      }
+      if (d.skus_known) rows.push(`<div style="margin-top:6px;"><strong>SKU 拆分</strong>:<br>${Object.entries(d.skus_known).map(([k,v])=>`&nbsp;&nbsp;${escHtml(k)}: ${fmtPriceVal(v)}`).join("<br>")}</div>`);
+      if (d.price_breakdown) rows.push(`<div style="margin-top:6px;"><strong>价格分档</strong>:<br>${Object.entries(d.price_breakdown).map(([k,v])=>`&nbsp;&nbsp;${escHtml(k)}: ${escHtml(v)}`).join("<br>")}</div>`);
+      priceModalBody.innerHTML = rows.join("") || "<em>—</em>";
+      priceModal.classList.add("open");
+    });
+  });
+  window.closePriceModal = function(e) {
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    priceModal.classList.remove("open");
+  };
+
+  // release click → modal
+  const releaseModal = document.getElementById("release-modal");
+  const releaseModalName = document.getElementById("release-modal-name");
+  const releaseModalBody = document.getElementById("release-modal-body");
+  document.querySelectorAll(".release-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      let d;
+      try { d = JSON.parse(btn.dataset.releaseDetail); } catch(err) { return; }
+      releaseModalName.textContent = d.name || "";
+      const rows = [];
+      const fields = [["type","类型"],["date_range","上新窗口"],["poster_first_seen","海报首发"],["note","注"]];
+      for (const [k,label] of fields) {
+        if (d[k]) rows.push(`<div style="margin-top:4px;"><strong>${label}</strong>: ${escHtml(d[k])}</div>`);
+      }
+      releaseModalBody.innerHTML = rows.join("") || "<em>—</em>";
+      releaseModal.classList.add("open");
+    });
+  });
+  window.closeReleaseModal = function(e) {
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    releaseModal.classList.remove("open");
+  };
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      if (priceModal.classList.contains("open")) priceModal.classList.remove("open");
+      if (releaseModal.classList.contains("open")) releaseModal.classList.remove("open");
+    }
+  });
 </script>
-<div style="position:fixed;bottom:8px;right:12px;font:11px/1.4 -apple-system,Menlo,monospace;color:#666;background:rgba(255,255,255,0.9);padding:4px 10px;border:1px solid #ddd;border-radius:4px;z-index:9999;box-shadow:0 1px 3px rgba(0,0,0,0.05);"><a href="https://github.com/KKJudoon/lolita-research/commit/59a3c287f4d6ad343e480561542be55251c97a4d" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v 59a3c28</a><span style="color:#999;"> · commit 2026-05-02 · build 2026-05-02 17:48</span></div>
+<div style="position:fixed;bottom:8px;right:12px;font:11px/1.4 -apple-system,Menlo,monospace;color:#666;background:rgba(255,255,255,0.9);padding:4px 10px;border:1px solid #ddd;border-radius:4px;z-index:9999;box-shadow:0 1px 3px rgba(0,0,0,0.05);"><a href="https://github.com/KKJudoon/lolita-research/commit/98e47274364ec945c568fe4f38f1b209bbd07c26" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v 98e4727</a><span style="color:#999;"> · commit 2026-05-02 · build 2026-05-02 18:17</span></div>
 </body>
 </html>

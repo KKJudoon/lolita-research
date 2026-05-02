@@ -133,6 +133,60 @@ def _extract_release_dates(item):
     return publish_short, tuan_short
 
 
+def _render_price_btn(price, name):
+    """价格按钮（点击展开 modal 显示完整 price 字段）"""
+    short = _extract_main_prices(price or {})
+    if not price:
+        price = {}
+    detail = {
+        "name": name,
+        "short": short,
+        "op": price.get("op"),
+        "full_set": price.get("full_set"),
+        "currency": price.get("currency", "CNY"),
+        "deposit_link_intent": price.get("deposit_link_intent"),
+        "list_price_at_research": price.get("list_price_at_research"),
+        "op_note": price.get("op_note"),
+        "full_set_note": price.get("full_set_note"),
+        "list_price_note": price.get("list_price_note"),
+        "list_price_priority_note": price.get("list_price_priority_note"),
+        "full_set_estimate": price.get("full_set_estimate"),
+        "full_set_estimate_v2": price.get("full_set_estimate_v2"),
+        "full_set_estimate_v3": price.get("full_set_estimate_v3"),
+        "full_set_history": price.get("full_set_history"),
+        "full_set_status": price.get("full_set_status"),
+        "skus_known": price.get("skus_known"),
+        "price_breakdown": price.get("price_breakdown"),
+        "note": price.get("note"),
+    }
+    detail = {k: v for k, v in detail.items() if v not in (None, "", [], {})}
+    detail_json = html.escape(json.dumps(detail, ensure_ascii=False))
+    return f'<button class="price-btn" data-price-detail="{detail_json}">{esc(short)} <span class="pop-info">ⓘ</span></button>'
+
+
+def _render_release_btn(release, name):
+    """时间按钮（点击展开 modal 显示完整 release 字段）"""
+    rel = release or {}
+    publish_short, tuan_short = _extract_release_dates({"release": rel})
+    parts = []
+    if publish_short:
+        parts.append(f"上新 {publish_short}")
+    if tuan_short:
+        parts.append(f"团 {tuan_short[5:]}")
+    short = " · ".join(parts) if parts else "—"
+    detail = {
+        "name": name,
+        "short": short,
+        "type": rel.get("type"),
+        "date_range": rel.get("date_range"),
+        "poster_first_seen": rel.get("poster_first_seen"),
+        "note": rel.get("note"),
+    }
+    detail = {k: v for k, v in detail.items() if v not in (None, "", [], {})}
+    detail_json = html.escape(json.dumps(detail, ensure_ascii=False))
+    return f'<button class="release-btn" data-release-detail="{detail_json}">{esc(short)} <span class="pop-info">ⓘ</span></button>'
+
+
 def _extract_main_prices(price):
     """整套 + OP + JSK 主价（不展示定金/配饰）；fallback 到 estimate / breakdown / list."""
     if not price:
@@ -321,10 +375,9 @@ def render_summary_row(item):
       <td class="col-thumb"><a class="bare" href="{esc(detail_url)}">{thumb_html}</a></td>
       <td class="col-name"><a class="bare" href="{esc(detail_url)}"><div class="title">{name}</div><div class="brand">{brand}</div></a></td>
       <td class="col-pop"><button class="pop-btn {pop_class}" data-evidence="{evidence_json}">{esc(composite)} <span class="pop-info">ⓘ</span></button></td>
-      <td class="col-price">{esc(price_str)}</td>
+      <td class="col-price">{_render_price_btn(item.get("price", {}) or {}, item.get("name",""))}</td>
       <td class="col-status"><span class="status {status_class}">{esc(status_label)}</span></td>
-      <td class="col-publish">{esc(publish_short or "—")}</td>
-      <td class="col-tuan">{esc(tuan_short or "—")}</td>
+      <td class="col-time">{_render_release_btn(item.get("release", {}) or {}, item.get("name",""))}</td>
       <td class="col-style">{style_chips}</td>
     </tr>
     '''
@@ -401,18 +454,22 @@ def write_index(items):
   .col-name a.bare {{ color: #2c2418; }}
   .col-name .title {{ font-weight: 600; font-size: 14px; line-height: 1.3; }}
   .col-name .brand {{ color: #888; font-size: 11px; margin-top: 2px; }}
-  .col-price {{ width: 180px; color: #444; white-space: nowrap; font-variant-numeric: tabular-nums; }}
+  .col-price {{ width: 150px; white-space: nowrap; }}
+  .col-time {{ width: 130px; white-space: nowrap; }}
   .col-pop {{ width: 150px; white-space: nowrap; }}
   .pop-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; transition: filter 0.15s; }}
   .pop-btn:hover {{ filter: brightness(1.1); }}
   .pop-btn .pop-info {{ font-size: 10px; opacity: 0.7; }}
+  .price-btn, .release-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 500; border: 1px solid #d8c89a; background: #fbf7e8; color: #5a4a2a; cursor: pointer; transition: filter 0.15s; font-variant-numeric: tabular-nums; }}
+  .price-btn:hover, .release-btn:hover {{ background: #f5ecc8; }}
+  .price-btn .pop-info, .release-btn .pop-info {{ font-size: 10px; opacity: 0.6; color: #888; }}
   .pop-label {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }}
   .pop-top {{ background: #b00020; color: white; }}
   .pop-high {{ background: #c5a572; color: white; }}
   .pop-mid {{ background: #efe9d9; color: #5a4a2a; }}
   .pop-low {{ background: #f0eee8; color: #999; }}
   .pop-none {{ background: #f0eee8; color: #ccc; }}
-  .col-publish, .col-tuan {{ width: 80px; color: #6a5a30; font-size: 12px; white-space: nowrap; }}
+  .col-publish, .col-tuan {{ display: none; }}
   .col-style {{ min-width: 110px; }}
 
   /* popularity modal */
@@ -452,7 +509,7 @@ def write_index(items):
     body {{ padding: 12px 8px; }}
     table.research {{ font-size: 11px; display: block; overflow-x: auto; }}
     table.research th, table.research td {{ padding: 6px 8px; }}
-    .col-publish, .col-tuan {{ display: none; }}
+    .col-time {{ display: none; }}
     .col-name .brand {{ font-size: 10px; }}
   }}
 </style>
@@ -485,8 +542,7 @@ def write_index(items):
         <th>畅销度</th>
         <th>价格</th>
         <th>状态</th>
-        <th>发布</th>
-        <th>一团</th>
+        <th>时间</th>
         <th>风格</th>
       </tr>
     </thead>
@@ -503,6 +559,24 @@ def write_index(items):
       <div class="pop-modal-dims" id="pop-modal-dims"></div>
       <div class="pop-modal-evlabel">销量与畅销度证据（4 维交叉）</div>
       <ul class="pop-modal-ev" id="pop-modal-ev"></ul>
+    </div>
+  </div>
+
+  <div id="price-modal" class="pop-modal" onclick="closePriceModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closePriceModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="price-modal-name"></div>
+      <div class="pop-modal-evlabel">价格详情</div>
+      <div id="price-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
+    </div>
+  </div>
+
+  <div id="release-modal" class="pop-modal" onclick="closeReleaseModal(event)" aria-hidden="true">
+    <div class="pop-modal-card" onclick="event.stopPropagation()">
+      <button class="pop-modal-close" onclick="closeReleaseModal(event)" aria-label="关闭">×</button>
+      <div class="pop-modal-name" id="release-modal-name"></div>
+      <div class="pop-modal-evlabel">销售时间详情</div>
+      <div id="release-modal-body" style="font-size:13px;line-height:1.7;color:#444;"></div>
     </div>
   </div>
 
@@ -588,6 +662,74 @@ def write_index(items):
   }};
   document.addEventListener("keydown", (e) => {{
     if (e.key === "Escape" && popModal.classList.contains("open")) popModal.classList.remove("open");
+  }});
+
+  // price click → modal
+  const priceModal = document.getElementById("price-modal");
+  const priceModalName = document.getElementById("price-modal-name");
+  const priceModalBody = document.getElementById("price-modal-body");
+  function fmtPriceVal(v) {{
+    if (v === null || v === undefined) return "—";
+    if (typeof v === "number") return "¥" + v;
+    return String(v);
+  }}
+  function escHtml(s) {{
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }}
+  document.querySelectorAll(".price-btn").forEach(btn => {{
+    btn.addEventListener("click", (e) => {{
+      e.preventDefault(); e.stopPropagation();
+      let d;
+      try {{ d = JSON.parse(btn.dataset.priceDetail); }} catch(err) {{ return; }}
+      priceModalName.textContent = d.name || "";
+      const rows = [];
+      const numFields = [["op","OP 单件"],["full_set","整套"],["deposit_link_intent","意向金"]];
+      for (const [k,label] of numFields) {{
+        if (d[k] !== undefined && d[k] !== null) rows.push(`<div><strong>${{label}}</strong>: ¥${{d[k]}}</div>`);
+      }}
+      const strFields = [["list_price_at_research","调研当时挂牌价"],["full_set_estimate","整套估算"],["full_set_estimate_v2","整套估算 v2"],["full_set_estimate_v3","整套估算 v3"],["full_set_history","价格历史"],["full_set_status","整套价 status"],["op_note","OP 注"],["full_set_note","整套 注"],["list_price_note","挂牌价 注"],["list_price_priority_note","价格优先级"],["note","总注"]];
+      for (const [k,label] of strFields) {{
+        if (d[k]) rows.push(`<div style="margin-top:6px;"><strong>${{label}}</strong>: ${{escHtml(d[k])}}</div>`);
+      }}
+      if (d.skus_known) rows.push(`<div style="margin-top:6px;"><strong>SKU 拆分</strong>:<br>${{Object.entries(d.skus_known).map(([k,v])=>`&nbsp;&nbsp;${{escHtml(k)}}: ${{fmtPriceVal(v)}}`).join("<br>")}}</div>`);
+      if (d.price_breakdown) rows.push(`<div style="margin-top:6px;"><strong>价格分档</strong>:<br>${{Object.entries(d.price_breakdown).map(([k,v])=>`&nbsp;&nbsp;${{escHtml(k)}}: ${{escHtml(v)}}`).join("<br>")}}</div>`);
+      priceModalBody.innerHTML = rows.join("") || "<em>—</em>";
+      priceModal.classList.add("open");
+    }});
+  }});
+  window.closePriceModal = function(e) {{
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    priceModal.classList.remove("open");
+  }};
+
+  // release click → modal
+  const releaseModal = document.getElementById("release-modal");
+  const releaseModalName = document.getElementById("release-modal-name");
+  const releaseModalBody = document.getElementById("release-modal-body");
+  document.querySelectorAll(".release-btn").forEach(btn => {{
+    btn.addEventListener("click", (e) => {{
+      e.preventDefault(); e.stopPropagation();
+      let d;
+      try {{ d = JSON.parse(btn.dataset.releaseDetail); }} catch(err) {{ return; }}
+      releaseModalName.textContent = d.name || "";
+      const rows = [];
+      const fields = [["type","类型"],["date_range","上新窗口"],["poster_first_seen","海报首发"],["note","注"]];
+      for (const [k,label] of fields) {{
+        if (d[k]) rows.push(`<div style="margin-top:4px;"><strong>${{label}}</strong>: ${{escHtml(d[k])}}</div>`);
+      }}
+      releaseModalBody.innerHTML = rows.join("") || "<em>—</em>";
+      releaseModal.classList.add("open");
+    }});
+  }});
+  window.closeReleaseModal = function(e) {{
+    if (e && e.target.closest && e.target.closest(".pop-modal-card") && !e.target.classList.contains("pop-modal-close")) return;
+    releaseModal.classList.remove("open");
+  }};
+  document.addEventListener("keydown", (e) => {{
+    if (e.key === "Escape") {{
+      if (priceModal.classList.contains("open")) priceModal.classList.remove("open");
+      if (releaseModal.classList.contains("open")) releaseModal.classList.remove("open");
+    }}
   }});
 </script>
 </body>
