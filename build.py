@@ -161,7 +161,7 @@ def _render_price_btn(price, name):
     }
     detail = {k: v for k, v in detail.items() if v not in (None, "", [], {})}
     detail_json = html.escape(json.dumps(detail, ensure_ascii=False))
-    return f'<button class="price-btn" data-price-detail="{detail_json}">{esc(short)} <span class="pop-info">ⓘ</span></button>'
+    return f'<button class="price-btn" data-price-detail="{detail_json}" title="{esc(short)}"><span class="lbl">{esc(short)}</span><span class="pop-info">ⓘ</span></button>'
 
 
 def _render_release_btn(release, name):
@@ -184,7 +184,7 @@ def _render_release_btn(release, name):
     }
     detail = {k: v for k, v in detail.items() if v not in (None, "", [], {})}
     detail_json = html.escape(json.dumps(detail, ensure_ascii=False))
-    return f'<button class="release-btn" data-release-detail="{detail_json}">{esc(short)} <span class="pop-info">ⓘ</span></button>'
+    return f'<button class="release-btn" data-release-detail="{detail_json}" title="{esc(short)}"><span class="lbl">{esc(short)}</span><span class="pop-info">ⓘ</span></button>'
 
 
 def _extract_main_prices(price):
@@ -201,11 +201,21 @@ def _extract_main_prices(price):
         parts.append(f'JSK ¥{price["jsk"]}')
     if parts:
         return " · ".join(parts)
-    # fallback: full_set_estimate
-    fse = price.get("full_set_estimate")
+    # fallback: SKU 单件 estimate（PC 红黑 / 永无岛 等）
+    shirt = price.get("shirt_estimate")
+    vest = price.get("vest_estimate")
+    if shirt or vest:
+        sub = []
+        if shirt: sub.append(f'衬衫 ¥{shirt}')
+        if vest: sub.append(f'马甲 ¥{vest}')
+        return " · ".join(sub)
+    # fallback: full_set_estimate (短数字才显示)
+    fse = price.get("full_set_estimate") or price.get("full_set_estimate_v2") or price.get("full_set_estimate_v3")
     if fse:
         s = str(fse)
-        return s if s.startswith('¥') or s.startswith('约') else f'整套 ¥{s}'
+        if len(s) > 24:
+            return '整套估算 见详情'
+        return s if s.startswith('¥') or s.startswith('约') or s.startswith('整套') else f'整套 {s}'
     # fallback: price_breakdown 取『非意向金 · 大全套』优先
     pb = price.get("price_breakdown")
     if pb and isinstance(pb, dict):
@@ -215,9 +225,12 @@ def _extract_main_prices(price):
                 if keyword in k:
                     label = "整套" if "全套" in k or "整套" in k else k.split("·")[-1].strip() if "·" in k else "套"
                     return f'{label} {v}'
-    # fallback: list_price_at_research（剔除意向金 / 定金 抵扣）
+    # fallback: list_price_at_research（剔除意向金 / 定金 抵扣 / 长 note 字符串）
     lpr = price.get("list_price_at_research") or ""
     if lpr and "意向金" not in lpr and "定金" not in lpr:
+        # 长字符串（>24 字 或 含 markdown / note 标记）→ 简化
+        if len(lpr) > 24 or "**" in lpr or "已搜" in lpr or "圈内" in lpr or "未明文" in lpr:
+            return "未公开 见详情"
         return lpr
     return "未公开"
 
@@ -460,9 +473,10 @@ def write_index(items):
   .pop-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; transition: filter 0.15s; }}
   .pop-btn:hover {{ filter: brightness(1.1); }}
   .pop-btn .pop-info {{ font-size: 10px; opacity: 0.7; }}
-  .price-btn, .release-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font-size: 11px; font-weight: 500; border: 1px solid #d8c89a; background: #fbf7e8; color: #5a4a2a; cursor: pointer; transition: filter 0.15s; font-variant-numeric: tabular-nums; }}
+  .price-btn, .release-btn {{ display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 11px; font: 500 11px/1.2 -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; border: 1px solid #d8c89a; background: #fbf7e8; color: #5a4a2a; cursor: pointer; transition: background 0.15s; font-variant-numeric: tabular-nums; max-width: 100%; overflow: hidden; }}
   .price-btn:hover, .release-btn:hover {{ background: #f5ecc8; }}
-  .price-btn .pop-info, .release-btn .pop-info {{ font-size: 10px; opacity: 0.6; color: #888; }}
+  .price-btn .pop-info, .release-btn .pop-info {{ font-size: 10px; opacity: 0.6; color: #888; flex-shrink: 0; }}
+  .price-btn .lbl, .release-btn .lbl {{ overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }}
   .pop-label {{ display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }}
   .pop-top {{ background: #b00020; color: white; }}
   .pop-high {{ background: #c5a572; color: white; }}
