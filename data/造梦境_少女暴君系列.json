@@ -24,10 +24,11 @@
     "op": null,
     "full_set": null,
     "currency": "CNY",
-    "list_price_at_research": "¥5",
+    "list_price_at_research": "整套官方/圈内未明文披露具体数字（征名中阶段）。淘宝 ¥5 是意向金抵扣。",
     "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
     "op_note": "未抓 SKU 拆分；E 档 minimal entry 调研深度浅。",
-    "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。"
+    "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。",
+    "full_set_status": "未明文披露（圈内/官方均未公开具体数字 — 用户 2026-05-02 确认接受 unknown 状态）"
   },
   "colors": [],
   "colors_dropped": [],
