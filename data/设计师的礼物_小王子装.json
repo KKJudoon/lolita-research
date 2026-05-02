@@ -15,9 +15,9 @@
   ],
   "style_summary": "设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。",
   "release": {
-    "type": "现货款 / 多 SKU 销售",
-    "date_range": "",
-    "poster_first_seen": "",
+    "type": "意向金 + 截单全款（具体节奏未抓）",
+    "date_range": "未明（E 档 minimal entry，2026-04-30 一次性补的 top-畅销度条目）",
+    "poster_first_seen": "未明",
     "note": "中下端腰部品牌走量款，无微博完整节奏 / 无圈内 KOL 横评，靠淘宝直挂 + 性价比驱动。"
   },
   "price": {
@@ -25,7 +25,9 @@
     "full_set": null,
     "currency": "CNY",
     "list_price_at_research": "¥139",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。"
+    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "op_note": "未抓 SKU 拆分；E 档 minimal entry 调研深度浅。",
+    "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。"
   },
   "colors": [],
   "colors_dropped": [],
@@ -54,32 +56,88 @@
     }
   },
   "hot_posts": {
-    "xiaohongshu": []
+    "xiaohongshu": [
+      {
+        "rank_in_search": "—",
+        "author": "圈内对比帖（永无岛 vs 甜蜜之约 评论交叉）",
+        "date": "2025-04-18",
+        "likes": "114",
+        "title": "圈内确认：设计师的礼物 = 厂原店（同少女的永无岛 / 甜蜜之约）",
+        "url": "https://www.xiaohongshu.com/explore/68019f4a000000001c015134?xsec_token=AB99_7nSHOWY3L3cImF_dL9xylFRwDZODkveXXP_dxFZk=&xsec_source=pc_user",
+        "type": "工艺争议 / 品牌避雷",
+        "summary": "在调研永无岛 誓约王座时一并发现：圈内 114 likes 对比帖评论密集确认『卖厂原的，还有设计师的礼物也是』—— 设计师的礼物 与 少女的永无岛 / 甜蜜之约 同属厂原店类别。这是品牌级避雷信号。"
+      },
+      {
+        "rank_in_search": "—",
+        "author": "调研缺位",
+        "date": "—",
+        "likes": "—",
+        "title": "小王子装 独立 XHS 搜索未跑",
+        "url": null,
+        "type": "调研缺位说明",
+        "summary": "未跑独立 XHS 搜索『设计师的礼物 小王子装』；下阶段需补 KOL 真人帖 + 微博/淘宝完整调研。"
+      },
+      {
+        "rank_in_search": "—",
+        "author": "junlo_prince_report 引用",
+        "date": "2026-04",
+        "likes": "—",
+        "title": "设计师的礼物 小王子装（¥139 中下端 / 正太 / 少年感 / 基佬装 / 日常款）",
+        "url": null,
+        "type": "项目内基础信号",
+        "summary": "本项目原 minimal entry 信号：¥139 中下端、正太/少年感主题、基佬装日常款。"
+      }
+    ]
   },
   "synthesis": {
     "keywords": [
-      "王子lo",
-      "正太",
-      "少年感",
-      "基佬装",
-      "日常款"
+      "¥139 中下端",
+      "正太 / 少年感",
+      "小王子装",
+      "厂原店（圈内确认）",
+      "调研深度浅"
     ],
     "highlights_positive": [
-      "设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。"
+      "**¥139 极低价位**——比同档少女永无岛 ¥78 略高但仍在白菜段，远低于 PC/YH/樱洛芙中端段",
+      "**正太 / 少年感定位清晰**——『小王子装』命名直接对应正太/少年系穿搭",
+      "**日常款不是看活动款**——基佬装/日常款定位适合 lolita 圈内日常通勤需求",
+      "**白菜价格促上身门槛低**——价格诱人，新人入坑友好",
+      "**与永无岛系列同生态位**——风格相近的厂原店白菜段款，方便圈内 SKU 比较"
     ],
     "highlights_negative": [
-      "**基础信息款**——本次仅淘宝 list 数据落档，工艺/微博节奏/XHS 圈内热度均未深入调研，决策需补充。"
+      "**⚠ 品牌级避雷：设计师的礼物 = 厂原店**——圈内 2025-04 对比帖评论密集确认『卖厂原的，还有设计师的礼物也是』。原创身份存疑（参考 quality-flags.md 厂原店类别）",
+      "**调研深度极浅**——未跑独立 XHS 搜索 / 微博 / 淘宝详情；E 档 minimal entry，verified=False",
+      "**整套价无明文**——¥139 信号来自 minimal entry，未交叉验证",
+      "**圈内对厂原 / 原创身份的争议**——决策时需知：『就是哪个便宜买哪个』vs 『拒绝厂原』圈内有分裂",
+      "**E 档 minimal entry**——下一阶段需补：独立 XHS 搜索 + 微博海报 + 淘宝详情 + 厂原店避雷讨论详查"
     ],
-    "verdict_short": "基础信息款。淘宝销量 + 推断风格 tags 已落，深入调研待补（微博官号 / XHS 真人成片 / 圈内 KOL 横评 / 闲鱼保值）。"
+    "verdict_short": "¥139 白菜段正太小王子装，价格优势明显但**品牌级厂原店避雷信号已确认**（圈内 2025-04 对比帖评论），决策同永无岛 誓约王座：愿意接受厂原品质 + 价格优先用户可买，强调原创设计/品牌价值用户应避雷。"
   },
   "design_inspiration": {
     "source_type": "ai_analyzed",
-    "theme": "小王子装（设计师的礼物） 设计灵感未深查 —— 待补",
-    "official_quote": null,
-    "kol_quote": null,
-    "elements": [],
-    "design_thinking": "基础信息款，仅根据 title / style_tags 初步推断。深入设计灵感拆解待后续调研。",
-    "for_image_gen_prompt": "A young person wearing a 王子lo, 正太, 少年感 Lolita coordinate. Style: 设计师的礼物的小王子装套装——日常正太基佬套装，¥139 全套是白菜段定位。淘宝 800+ 付款属于白菜段中位，是品牌走量款。"
+    "theme": "小王子 / 正太基佬装 / 厂原通用王子装",
+    "elements": [
+      {
+        "name": "小王子套装",
+        "source_lineage": "《小王子》Saint-Exupéry 童话 + 19 世纪欧洲男童 page boy 正装的 lolita 化",
+        "purpose": "童话/正太叙事接口",
+        "official": false
+      },
+      {
+        "name": "基佬装短裤+背带",
+        "source_lineage": "圈内『基佬装』标签指代王子系男装 silhouette（短裤+背带+衬衫），是 lolita 王子系的圈内昵称",
+        "purpose": "圈内通用语义识别",
+        "official": false
+      },
+      {
+        "name": "白菜价 SKU 控制",
+        "source_lineage": "厂原店模式下用低价工厂出品 + 简化设计元素，¥139 是该模式典型价位",
+        "purpose": "价格门槛低",
+        "official": false
+      }
+    ],
+    "design_thinking": "设计师的礼物 是厂原店模式（圈内 2025-04 对比帖确认），『小王子装』走通用正太 silhouette（衬衫+短裤+背带）+ 白菜价。设计上没有独立 IP 锚点，靠价格 + 通用风格通量。",
+    "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian person (gender-neutral) in a budget-friendly prince-style (王子系) lolita outfit, themed 'Little Prince' (小王子装). Outfit: simple white short-sleeve Peter-Pan-collar blouse with subtle ruffles, layered with high-waist black knee-length shorts held by black suspenders crossing in back. Bow at the chest collar (medium-size cream silk). Knee-high white socks, black mary-jane shoes. Optional small gold-trimmed beret tilted to one side. Pose: shy standing with hands crossed in front, slight smile, 'little prince from the children's storybook' aura — referencing Saint-Exupéry's Le Petit Prince book illustration. Background: pastel daytime garden with rose hedges. Mood: gentle, child-like, gender-neutral 'shou nan' (正太/少年感) prince look — minimal ornament, basic silhouette typical of budget Lolita 'factory-original' (厂原) market segment."
   },
   "posters": [
     "images/设计师的礼物_小王子装/taobao_thumb_1.jpg"
@@ -99,8 +157,8 @@
     ]
   },
   "verified": false,
-  "verified_at": "2026-04-30",
-  "verified_by": "Claude (基础信息款，仅淘宝 search snapshot 验证)",
+  "verified_at": "2026-05-02",
+  "verified_by": "Claude (E 档 minimal entry 升级 + 厂原店避雷信号；verified=False，下阶段补独立调研)",
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
