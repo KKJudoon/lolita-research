@@ -93,6 +93,16 @@
         "url": null,
         "type": "项目内基础信号",
         "summary": "本项目原 minimal entry 信号：现货大衣 + 披风 + 斗篷 套装、秋冬款、¥219 中下端段；属于 2026-04 王子军lo 集团爆发的现货款代表。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": "一株盆栽QvQ",
+        "date": "未抓正文",
+        "likes": "1390（搜索列表）",
+        "title": "第一次穿墨绿色",
+        "url": "https://www.xiaohongshu.com/explore/69e37015000000002102daf6?xsec_token=ABzJQb8PZ6lvCXOkx1NtKnsaVhbDnC_iX142Ymr2pE0lU=&xsec_source=pc_user",
+        "type": "真人成片种草 / 海报源",
+        "summary": "1390 likes 路人种草帖（墨绿色版本上身）。该帖图被本项目作为月夜熊皇权加冕主要海报源（4 张），证明该款墨绿色配色受路人喜爱。"
       }
     ]
   },
@@ -147,8 +157,14 @@
     "design_thinking": "月夜熊『皇权加冕』走『中下端价位 + 完整 lookbook + 拿破仑加冕叙事』策略，¥219 现货大衣套装是该价位段的密度优势。叙事上 invoke 拿破仑自我加冕（『昔日教皇无权为我加冕』），定位偏戏剧化王子军lo。",
     "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a Napoleonic-coronation themed military prince-style lolita outfit, themed 'Imperial Coronation' (皇权加冕). Outfit: a deep-navy or off-black long military overcoat reaching mid-calf, double-breasted with brass buttons, gold-thread embroidery on lapels and cuffs, tall stand collar; layered OVER the coat with a separate detachable PELERINE/cape collar piece in matching fabric with gold trim; AND further layered with a long flowing cloak (斗篷) reaching the floor in deep crimson satin lining. Underneath: high-collar cream-white blouse and high-waist black trousers. Headpiece: a black bicorn-style officer's hat OR a thin gold laurel coronet (referencing Napoleon's self-coronation by David 1804). Pose: standing with cloak swept dramatically to one side, hand gesture as if about to self-crown, gaze direct and authoritative. Background: candle-lit Baroque palace interior with Napoleonic-coronation-painting energy, deep-red velvet, gold-leaf gilding. Lighting: warm chiaroscuro from candelabra. Mood: solemn imperial coronation, three-layer outerwear emphasizing winter prince-military silhouette."
   },
-  "posters": [],
-  "posters_source": "[海报缺位 — 待用户在 m87 手动截图 XHS 1011 likes 帖『昔日教皇无权为我加冕』URL: https://www.xiaohongshu.com/explore/693be2b8000000000d00d162?xsec_token=ABaE845ueNXbu2FRVbPXbmo8U15iDhmSmOzvQZD2-fCX8=&xsec_source=pc_user]",
+  "posters": [
+    "images/月夜熊_皇权加冕/xhs_yueye_main.webp",
+    "images/月夜熊_皇权加冕/xhs_real_1.webp",
+    "images/月夜熊_皇权加冕/xhs_real_2.webp",
+    "images/月夜熊_皇权加冕/xhs_real_3.webp",
+    "images/月夜熊_皇权加冕/xhs_real_4.webp"
+  ],
+  "posters_source": "1 张来自月夜熊原创 1011 likes 官号帖『昔日教皇无权为我加冕』封面；4 张来自一株盆栽QvQ 1390 likes 真人成片『第一次穿墨绿色』。XHS image URL 抓 + curl 下载（带 Referer）。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "未深查",
@@ -169,5 +185,5 @@
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
   },
-  "posters_status": "**海报缺位**——21 款中唯一 0 海报款。微博无品牌官号且本款无 @Lolita洋装上新 转发；淘宝详情页 m87 商家账号 access deny；XHS 1011 likes 官号帖『昔日教皇无权为我加冕』有图但 XHS 抓图风险高（download 禁用 + 行为指纹敏感）。**唯一可行方案：用户在 m87 手动打开 XHS 该帖截屏**（参考 xiaohongshu_ops.md 图片获取替代 #3）。"
+  "posters_status": "已抓 5 张（XHS 图，2026-05-02）"
 }
