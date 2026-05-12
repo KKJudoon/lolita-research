@@ -1,391 +1,469 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8">
-<title>Lolita 画师调研 - Lolita Research</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lolita 画师调研</title>
 <style>
-  body { font: 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC',sans-serif; max-width: 1200px; margin: 0 auto; padding: 16px; color: #222; background: #fafafa; }
+  body { font: 14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC',sans-serif; max-width: 1280px; margin: 0 auto; padding: 16px; color: #222; background: #fafafa; }
   h1 { font-size: 24px; margin: 4px 0 2px; }
-  .meta { font-size: 12px; color: #666; margin-bottom: 16px; }
+  h2 { font-size: 18px; border-bottom: 2px solid #f0c674; padding-bottom: 4px; margin-top: 20px; }
+  .meta { font-size: 12px; color: #666; margin-bottom: 12px; }
   .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 4px 10px; border-radius: 4px; font-weight: 500; }
-  .topnav { margin: 8px 0 16px; padding: 8px 0; border-bottom: 1px solid #ddd; }
-  .topnav a { margin-right: 16px; color: #2c5aa0; text-decoration: none; }
-  .topnav a:hover { text-decoration: underline; }
-  .toolbar { margin: 12px 0; }
-  .role-section { margin: 20px 0; }
-  .role-section h2 { font-size: 18px; border-bottom: 2px solid #f0c674; padding-bottom: 4px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  /* module nav */
+  .module-nav { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 16px; padding: 8px 0; border-bottom: 1px solid #ddd; }
+  .module-nav .mod { padding: 6px 14px; background: #fff; border: 1px solid #ddd; border-radius: 18px; font-size: 13px; color: #333; text-decoration: none; }
+  .module-nav .mod:hover { border-color: #f0c674; background: #fffaf0; }
+  .module-nav .mod.active { background: #f0c674; border-color: #f0c674; color: #000; font-weight: 600; }
+  .module-nav .mod.disabled { color: #999; background: #f5f5f5; cursor: not-allowed; }
+  /* toolbar */
+  .toolbar { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 12px; margin: 12px 0; }
+  .toolbar-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 4px 0; }
+  .toolbar-label { font-size: 12px; color: #666; min-width: 60px; }
+  .chip { padding: 4px 10px; background: #fff; border: 1px solid #ccc; border-radius: 14px; font-size: 12px; cursor: pointer; user-select: none; }
+  .chip:hover { border-color: #f0c674; }
+  .chip.active { background: #f0c674; border-color: #f0c674; color: #000; font-weight: 600; }
+  .chip .cnt { font-size: 10px; color: #666; margin-left: 3px; }
+  .chip.active .cnt { color: #444; }
+  /* card grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
   .card { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 12px; }
   .card:hover { border-color: #f0c674; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
-  .card .nick { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+  .card .nick { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
   .card .nick a { color: #222; text-decoration: none; }
   .card .nick a:hover { color: #2c5aa0; }
-  .card .stats { font-size: 12px; color: #666; margin: 4px 0; }
-  .card .sig { font-size: 12px; color: #444; max-height: 60px; overflow: hidden; text-overflow: ellipsis; }
-  .card .badges { margin-top: 6px; }
-  .badge { display: inline-block; font-size: 11px; padding: 2px 6px; border-radius: 3px; margin-right: 4px; }
+  .card .stats { font-size: 11px; color: #666; margin: 3px 0; }
+  .card .sig { font-size: 11px; color: #444; max-height: 50px; overflow: hidden; line-height: 1.3; }
+  .card .badges { margin-top: 5px; }
+  .badge { display: inline-block; font-size: 10px; padding: 1px 5px; border-radius: 3px; margin-right: 3px; }
   .b-conf { background: #d4edda; color: #155724; }
   .b-illustrator { background: #cfe2ff; color: #0a4791; }
   .b-brand { background: #f8d7da; color: #842029; }
-  .b-mil { background: #d1c4e9; color: #4527a0; }
+  .b-unknown { background: #e7e7e7; color: #555; }
+  .b-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .b-style { background: #fff3cd; color: #856404; }
   .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
   .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
   .post-card .body { flex: 1; }
   .post-card .desc { font-size: 13px; color: #333; }
   .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
   .post-card .tags { font-size: 11px; }
-  .post-card .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
-  .post-card .hashtag { color: #2c5aa0; margin-right: 5px; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
   .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
   .nodata { color: #999; text-align: center; padding: 30px; }
+  .hidden { display: none !important; }
   footer { font-size: 11px; color: #888; margin-top: 30px; padding-top: 10px; border-top: 1px solid #ddd; }
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: 1fr; }
+    body { padding: 10px; }
+    h1 { font-size: 20px; }
+  }
 </style>
 </head><body>
-<div class="topnav">
-  <a href="../index.html">← 款式总览</a>
-  <a href="index.html">画师调研</a>
-  <a href="military_research/index.html">军lo 稿件专题</a>
-</div>
-<h1>Lolita 画师调研</h1>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (54)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>🎨 Lolita 画师调研</h1>
 <div class="meta">
   <span class="data-ts">📅 数据时点：2026-05-12T10:38:03+08:00</span>
-  · 共 54 个唯一作者 · 含 22 真画师
+  · 共 <span id="visible-count">54</span> / 54 作者
 </div>
-<p style="color:#555;font-size:13px;">监控来源：抖音 web。识别方法：profile signature 黑话扫描 + 收藏/关注 ground truth。详见 <a href="../douyin-monitor/jargon_dictionary.md">黑话词典</a>。</p>
+<p style="color:#555;font-size:12px;">监控来源：抖音 web。识别方法：profile signature 黑话扫描 + 收藏/关注 ground truth。
+详见 <a href="../douyin-monitor/jargon_dictionary.md">黑话词典</a>、<a href="../douyin-monitor/monitor_strategy.md">监控战略</a>。</p>
 
-          <div class="role-section">
-            <h2>🎨 画师 (22)</h2>
-            <div class="grid">
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAbUKN04EA042aIPQdyvxyksZ33B05BxUGHHViXK7QkbKNUNfZMC5mBesmfL6edHQG.html">无骨貓.（画稿中）</a></div>
-                <div class="stats">粉丝 1402 · 黑话分 81</div>
-                <div class="sig">默认分领域授权！ / 🉑️约稿，免服是oc领域米分/福！ / 未经允许🈲️商🈲️实物🈲️二转二改 / 绿泡泡wugumao123（注明来意宝宝们！） / 喜欢有礼貌的宝宝！</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAYx35fuCAEncb75aVOQSgoYeN_Oo320tGwkSFrnPaOPg.html">莓屿不语（求推荐）</a></div>
-                <div class="stats">粉丝 1.5万 · 黑话分 78</div>
-                <div class="sig">恋人：procreate / 成衣服设画手呀 默认分领域 / lxfs：抖音号（带备注/店名）｜免服限粉使用 / 装的时候@半只莓屿  / 随便发@莓屿（to限粉）（求推荐）</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 3帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAP6bi_DVsG6vCf8DshKV5EPUbipdYvdpZyS-oQycZqDsBQt9ECbMfbkQxRRFedSni.html">总裁（化身裁缝版）</a></div>
-                <div class="stats">粉丝 1.6万 · 黑话分 43</div>
-                <div class="sig">免服仅供粉丝使用，取关默认收回使用权 / 社畜没啥时间，不闲聊，确定要了再➕ / 拿我图练ai全家替我挡灾哈 / 禁止🚫私自实体化or商用/洗稿/抄袭/无盈利团需要授权/倒卖批发服设发现就挂</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAA98lj4baWzRVGCUIdGa0PSc_0XBBmPLJ9jHtnT5KoAsQvNlOW7NWhRYYQMBEe4zT5.html">羽羽</a></div>
-                <div class="stats">粉丝 1578 · 黑话分 39</div>
-                <div class="sig">lolita版型设计师/4 年经验 / 约稿请自带脑洞.不便宜 800+ / 稿件未特殊标注均为oc免服，关注可使用 / 收稿相关➡️yuyuhuatu</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAbjVlAxXZPg__ZhOVRX8HKZROaIU9GW-xrUN8GcHtH-jufTcTWPLMp85FjqDS_8QF.html">悲伤流泪鸽鸽头</a></div>
-                <div class="stats">粉丝 264 · 黑话分 35</div>
-                <div class="sig">小小画手～ / 只是稿件只是稿件！没有授权成衣！！！（有才会标注） / 可约稿！（mhs：A号悲伤流泪鸽鸽头）（hj：悲伤流泪鸽鸽头a） / 大部分直出，可小窗问价 / 在小🍠拍卖服设（id：chuntian5160）</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAVztAPKEXZ3_L1UyCcbFLGGQPih0UrCkB5zP_UqqMtW0.html">啾啾同-Lolita设计</a></div>
-                <div class="stats">粉丝 4432 · 黑话分 32</div>
-                <div class="sig">雷“收藏备孕”，连续收藏几十个还不关注会拉黑哦。想蹲小裙子实体化和oc原图的可以进群，我会汇报裙子动态～想要原图的宝也可以在群里直接问我要（但不能二改二传商改商用）。画加也叫啾啾同，@啾啾同  是二号机，Lolita480起，童装和娃衣比lo➖200，默认带大货一件，不要问了不回复！还是希望大家夸夸</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAs_MXGZ0vFOXH7-is9zUJREIrvJcdK3kCdU6-eaWhw1JmgAiQop63TP1gAjUOCcnj.html">山福桃🍑</a></div>
-                <div class="stats">粉丝 1.1万 · 黑话分 30</div>
-                <div class="sig">服设号成长中，全平台同名，除oc领域可做免服外，其他领域授权都是有偿的，自己做或定制都有偿 / ｏｃ免服需关➕苹➕❤️ / 多领域授权欢迎来问（娃衣、人衣、童装等）有撞请丝 / 默认大货一件 / lx：shanfutaotao(备注来意店名）我是画师只加店主，其他勿扰</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 3帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAZ-c14AfsOeUm_MKxwqq6s2BRpHsfyvh8FOVq1_QcATQ.html">初玖（接画版）</a></div>
-                <div class="stats">粉丝 1045 · 黑话分 28</div>
-                <div class="sig">【作品可借鉴临摹不可商用】【使用麻烦标明出处】 / 可约稿，会邮寄 / 手绘：立绘/oc/水彩/丙烯/线描/素描/马克笔/彩铅/装饰画等等</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAYqJnoY4LBP1G9MoXXUIRHQNaENloJtD3F_oaAeY_Viw.html">璃yoooo</a></div>
-                <div class="stats">粉丝 5498 · 黑话分 25</div>
-                <div class="sig">叫我阿璃或璃子都行！（爱挖白菜的oc人一枚） / 主要发发小白凤凰齊亘，生日0920 / 头发是光的三原色结合间色衍生，最后原点为白 / 画师随缘回，没关注和夸夸直接来问的一律不回 / 主页都是稿件，禁止保存，ky，抄袭，借鉴等 / 扩列大欢迎，喜欢互动请摩多摩多 / 设子容易漏错，所以不太能接受未</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAA3tjhj9I2cEVgQF_mcdL5clPfJEwHYQV27TCimt0e-8Q.html">山福小桃（不接定制</a></div>
-                <div class="stats">粉丝 1555 · 黑话分 24</div>
-                <div class="sig">Lolita设计号@山福桃🍑 花甲批发服设：山福桃桃 / 一些lo裙不好实现的设计会放在这里～不定期更新哦～ / 暂不接定制，谢谢宝宝们喜欢我的设计～</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAwaB9IHjIrRSKYdS9pKtaBPS3G4vxTZ8nV9N5jMxYESU.html">一只懒阿M🐈</a></div>
-                <div class="stats">粉丝 4.1万 · 黑话分 20</div>
-                <div class="sig">嗨嗨！这里是阿M！ / 🛰️约稿糕➕合作：YzlaM01 / （记得备注来意哟） / ⚠️委托稿禁止使用⚠️禁止二改⚠️</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAFuIWbNBjMcBRtSOA7UK0gNJuQ9WoPxCeNpGHAvxVQRhSjBwpu-0PQEjEomfi3Oy2.html">仁儿这样来财【Lolita画师版】</a></div>
-                <div class="stats">粉丝 2633 · 黑话分 20</div>
-                <div class="sig">我要成为Lolita大王 / 全领域出 可私✉️（✉️没回看头像/置顶）  / 本人好说话 不收的话请告知不要不回 / 如有雷同纯属巧合可以私✉️联系 / red book同名</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAE-_YTG4JQuyd1SugLJjeHLbwg8HJ2Fx8KgHO5LIlu-e5ajY_mNmA2p-xji6pOD7K.html">小香芬（价格在置顶）</a></div>
-                <div class="stats">粉丝 2830 · 黑话分 18</div>
-                <div class="sig">🈲造谣🈲不接无偿⚠️不确定约不要➕我，不要浪费我时间😭🙏 / pt：画➕🉑临界🉑（小香芬） / ✅约稿➕wx或🐧=15060293045（不约别加求你了别浪费我时间。 / ⚠️別背刺。。。。。。。很痛 / 不常聊不怎么熟会双清不活跃（清列自由🤲） / 🈲仿视频内容（不是不让抽象） / 视频是节目效果</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAvXw-du-YDJbeJEgt7Jjx7i-75UTSaZeTLKEvAaAC8tYN91iVu3ZNbmDbpiQWCY67.html">FF_ANLIN（接稿版）</a></div>
-                <div class="stats">粉丝 255 · 黑话分 18</div>
-                <div class="sig">全平台同名 / 禁止🚫商用、二改和二传，可以自用当壁纸头像 / 花甲：ANLIN想睡觉版</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAGFgZvBNYZWv_a1REa1s4MeIMgQoHtdILyTppO1lBeLnOu3nlH5VoB5cRm4rHkqeG.html">龟龟要成为约稿大师</a></div>
-                <div class="stats">粉丝 1.1万 · 黑话分 15</div>
-                <div class="sig">大部分稿件都在保密中 有进度会发在首页稿件蹲蹲群 / 暂不接约稿 / 不合作无成品新店 不合作无成品新店  / 谢谢喜欢💕  / 会删不喜欢的评论</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAVv9rWVVars-4ORtT8f2BdqPydExD779w_f1nwWWhO3_o4wfqSJBmn-LjQyPTs858.html">喵树Miaoshu</a></div>
-                <div class="stats">粉丝 2062 · 黑话分 15</div>
-                <div class="sig">约稿/私信→米画师:喵树丶 / 合作📭:catree-911@qq.com /  / 野生插漫画家勇闯🎶 / 常用名:喵喵喵喵丶喵树 / 《哎呀我的少女心》漫画🌸作者 / 感谢喜欢❤️ / 都是自己画的，带水印的是稿件请不要用 / 感谢你的喜欢  ˗ˋˏᰔᩚˎˊ˗</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAhogKDiCWiGiWJ8RUYcAmwaDUmwTs1PdzO8Jue3fSsOg.html">Prey</a></div>
-                <div class="stats">粉丝 515 · 黑话分 15</div>
-                <div class="sig">欢迎来到PP的精神世界！ / 在画+开了一些稿位，想约稿的咪可以去画+看看ww / 企鹅是1341490337，卫星是li1341490337（也可以加这些 / 但是我会有点拖稿ww！讨厌不能按时交稿的咪慎来哦！ / （不过长假不会拖，因为我没什么事干基本就是每天画稿哈哈哈哈哈哈哈</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAU57X9vd39worrUwWKoiaM84QHF2fJir9VZdBTEx9nvveriaymHdeVybmmKYxNScs.html">路宁一</a></div>
-                <div class="stats">粉丝 67 · 黑话分 15</div>
-                <div class="sig">=橘络 / oc人营业号，一般只发黑长直妹妹相关 / 欢迎交友，请不要收藏我的稿件到参考 / 可以问画师但是麻烦不要用命令的语气……可以的话希望得到你的赞！ / 剪视频还是太为难我了</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAABoExn6KUhoTFxxjfuCNz1KnVJidpNtxMPF7-Hvbqi7gezKhn15kyp-Y1_MJmxP6D.html">须须吃两碗</a></div>
-                <div class="stats">粉丝 45 · 黑话分 15</div>
-                <div class="sig">✨柄图画手︴毛茸茸︴小动物︴可爱复古cla︴✨ / 🍠须须吃两碗</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAACQ2SzaSWKToD92yByrNqhCXA6eOB4dEwNX7O2D6ckGE.html">VoiceDie</a></div>
-                <div class="stats">粉丝 2.6万 · 黑话分 10</div>
-                <div class="sig">绵绵猫，绵绵狗，可摩熊，甜心动物会ip作者原画师 / 作品均有版权，侵权必究🥰不发原图！禁止自印！ / 全//平//台//同//名（授权和约稿可以si俺✉️） / 【😁盗图商用的会直接起诉，尤其睡衣和布料】</div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAVi2jvJds-6FAYGlTENMkvAL_bPZUB4xZ4TJ2_NXpeEcj1bMSfKHLd0xd0piZYS66.html">图案设计师JUJU</a></div>
-                <div class="stats">粉丝 1451 · 黑话分 8</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAWa5nQynPN6UmPWw-KlX8lI0P5LRQZ6io_hAYI4BjPSHlZ2bwO_WruGtpAq7FzvOX.html">瓜子其实是比格犬</a></div>
-                <div class="stats">粉丝 126 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
-              </div></div>
-          </div>
-          <div class="role-section">
-            <h2>🏷 品牌方 (6)</h2>
-            <div class="grid">
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAS29nq7dInOZBrToUB6rqn6LPBJUmqp60GlZM0fCtR5eKWhce74DXAaGZlo46Tipx">甜兔梦屿Lolita原创设计</a></div>
-                <div class="stats">粉丝 4.5万 · 黑话分 5</div>
-                <div class="sig">谢谢宝宝们的关注，以后就是老粉啦。 / 欢迎宝宝们关注入股 / 蹲蹲的宝宝可以进粉丝群哦，会通知最新进度 / 所有稿件均有国家版权登记｜原创专属，侵权必究， / 一经发现侵权，必追究法律责任。</div>
-                <div class="badges"><span class="badge b-brand">brand</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAcsrIaurN1XTQx11ctLk3nKsZgc44uu5TeDhf2zWGt1U.html">樱洛芙Lolita原创设计</a></div>
-                <div class="stats">粉丝 26.8万 · 黑话分 4</div>
-                <div class="sig">纯原创无溢价 / 专注重工华丽款Lolita，你的专属设计师！ / 共创研发体系，认真听取每一位小宝的建议 / （重点细节会票选，意见不一选多数）</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 5帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAA39X4Jmclfz6rfuw-AocFF7S7xKc9liSwzNfRl1g4pek.html">甜心玩偶lolita原创</a></div>
-                <div class="stats">粉丝 4447 · 黑话分 2</div>
-                <div class="sig">专业做洛丽塔原创喜欢的宝宝可以点关注蹲蹲哦。                                                       咱们家原创质量第一价格亲民哦！欢迎和宝子们一起见证留个关注哦！！欢迎种草姬来合作</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 2帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAYjhqUsV4h_mi3MdhYoQTgQvUETDuOwRArHwmCg3MNSg.html">猫咪晚安lolita原创设计</a></div>
-                <div class="stats">粉丝 4.3万 · 黑话分 0</div>
-                <div class="sig">一家新店~谢谢宝宝们关注以后就是老粉啦 电阻80后再就业(以前的大厂代工哦) / 新店刚起步 后续会找棉花糖天空树宝宝请宝宝们等等</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 6帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAQUIwmWrpU0d3K2lyvrTlnyfh0gWnGqBBV0lcFznCUkVBKPw_mlUMwbuPJ5fywlvN.html">七分花原创设计</a></div>
-                <div class="stats">粉丝 1.6万 · 黑话分 0</div>
-                <div class="sig">所有裙子版权均已买，如若发现抄袭，就等着律师函吧！造谣必究，店店非常好相处，会时不时抽粉丝送小裙裙 / 圣剑骑士5月12号白胚，5月25号黑篮蹲七分花的小宝宝，可以进七分花1群，股东一群已满并隐藏 / 圣剑骑士群在三群到五群，想加哪个加哪个，蹲蹲的宝宝可以加，具体样衣在五月二十五出黑篮 / 目前没有</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAA3j_SOJULqtaMi-lQqUTkYI8YVh6ZW3rI97OwWEjx_pWUV7Lb5kGyF_fMmxMnmTwO.html">银线十字lolita原创设计</a></div>
-                <div class="stats">粉丝 4874 · 黑话分 0</div>
-                <div class="sig">新店报道！诚意官宣</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div></div>
-          </div>
-          <div class="role-section">
-            <h2>❓ 待分类 (26)</h2>
-            <div class="grid">
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAANyWXqZtpe_uVT72WDk2de-6rzFv-Y42J8LVlw5JPKWNt6jwrPwdmHgyX_voma53A.html">香辣鸭脖</a></div>
-                <div class="stats">粉丝 1476 · 黑话分 14</div>
-                <div class="sig">Lolita型设画手  📕同名 / 擅长华丽款花嫁  / v同id</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 2帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAANwljMBe0F8QqwQrZdk1LVV1Mq7NDcbi8EvCb9PmiwQw">小桃不吃🍑</a></div>
-                <div class="stats">粉丝 1426 · 黑话分 14</div>
-                <div class="sig">160/108  lolita日常/测评/好物分享～ / 宝宝们有问题或问🔗可以进粉丝群问我哦～ / 🈴 Oct11_twq（备注来意 / 2000粉🎁解锁中（抽粉丝送👗</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAll0EL5o-5oarzgEQa6SY7130IeRLXVG7aNk0UjVm3eBOYWpvf_D7GkkDTstXdHSG">沉玖</a></div>
-                <div class="stats">粉丝 3.0万 · 黑话分 10</div>
-                <div class="sig">有收集癖，买买买狂热爱好者 / 身高158 85，日常穿s / 主页搭配未标明具体作品的视频可做oc服装灵感 / 接寄📸 抖音号 不经常看评论</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAZ9RSnnoyuxw6aDzvOsMFpz_ek-RX6K1MI45rFy4Ul7hUthkEitm2UzXRcS1Nd96Y">骨下水</a></div>
-                <div class="stats">粉丝 2.5万 · 黑话分 10</div>
-                <div class="sig">164/104浮动  36/84/66/89 / 📕同名 ｜ 禁止转载盗图商用 / 个人绘画参考请@ ｜ 商用约稿相关x / 评论被吞没有办法 会编辑在标题＞_＜</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAo-Q4V-LTocZedBQK4rgWjX5VLEaRygZ9o-23UDLoSL0">薇薇菲之专卖店</a></div>
-                <div class="stats">粉丝 8717 · 黑话分 10</div>
-                <div class="sig">薇薇菲原创jk～你的好评店铺～ / pdd、tb、ks都有店铺哦～ / 种草姬找管理审核//画手投稿进群（主页可见） / 管理员账号：@RUZUYEE1128 / 欢迎返图or投稿</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAJccCq1Cqc1M61W_iZrJw6uQcUr0yozRYG7kIdvf4Q53_ePGGZmiycKZHvwr9eglb.html">初级召唤师</a></div>
-                <div class="stats">粉丝 7977 · 黑话分 10</div>
-                <div class="sig">aigc召唤师  作品为ai技术辅助 / 热爱做各种小裙子 非垫图溶图 / 红薯同名   禁止商用禁止搬运 / 自行避⚡ 不喜5️⃣入 合作可私</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAgyT9rrGcQgXbgfrfbbmgqIiHfBi9YLv4Rn3i-9rBKbiVrEluqPa3H6HB0GaCrb5X">蟹味盐</a></div>
-                <div class="stats">粉丝 7230 · 黑话分 10</div>
-                <div class="sig">临界/梅花山同名 / 🉑连赞🉑收藏💖感谢喜欢 / 不回复约稿相关(听说会被平台制裁😖💦💦 / 下次开邀请在六一</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAA34llOmP0e_OnYsW1i-7wfsVpp2YmEjezK_hFm53Zr6c">橙花粥</a></div>
-                <div class="stats">粉丝 4819 · 黑话分 10</div>
-                <div class="sig">🌼️绘画新手，自学哒！ / 🌼️欢迎约稿，约稿合作请加👇 / 🌼️vx:zzx000000926（备注来意） / 🌼️谢谢关注和鼓励！</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAhEQ0w4D6OsYljkPqZ2vpOr4uvnnK5jIiONwd7sP7AAc">洛克丽塔</a></div>
-                <div class="stats">粉丝 447 · 黑话分 10</div>
-                <div class="sig">🩵这里是洛    oc 梦女💎全平台同名 /   💎画师名字在视频，交友会考虑 / 💎无偿欢迎 但请出于对oc喜欢 / 💎不雷收藏／雷不礼貌、ky / ［恋人：@雾浅💎 ］</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAA6bPJzDluGV8JSnl_q9eI-gnYJ8X1g0MQ-KqoljjkLp2ZFYvolsJTk4uVlnmYmFJ6">無所謂一顆真心</a></div>
-                <div class="stats">粉丝 301 · 黑话分 10</div>
-                <div class="sig">你的壞 你的可愛 我照單全收 /              @Petener  / 约稿私私一一一一 / 价格↓ / 大头15🥕 / 全身7🥕 / 半身12🥕   不接无偿 / =小貓/貓貓🐾 / @恶魔用户 @摩西摩西💬</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAjW1Y76egw5UoVB91XzCDb2Bqu5Snb-qZdnHgCaFx_inmbtpUomDq0_5T30AaMihT">雾茗</a></div>
-                <div class="stats">粉丝 182 · 黑话分 10</div>
-                <div class="sig">cn花袄/雾茗 / 绝望的oc妹，有oc梦属性 / 乙代梦全肯定 / 我雷/恨乙向nzd和乙腐，有相关的拉黑我 / 注意，我一设多梦，会分不同世界观，只是不想养太多设定，不过也不怎么发除了oc以外的梦向 / 发的东西很杂，不要因为一个作品关注我，可能会失望。绿发女子林璃和黑发女子叶倩=我本人 / 问</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAgPzrYqlNVsxBS_AAsJlpHczdrxg0fXMJtMJML2df95k">美味菌菇汤😋</a></div>
-                <div class="stats">粉丝 42 · 黑话分 10</div>
-                <div class="sig">头像和壁纸以及视频均为自家oc请勿使用！ / 这里会更新自家小情侣 莉莉丝&amp;戴蒙 肉食主义小肉 / 以及重返未来1999oc 藏香柏 相关 / 女神@菌菇想睡觉🍄</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAWBaIEqOM7YhCK8o0zGV7CWbKlaOEmyoSr8rG5UDeCPM.html">苹果鱼</a></div>
-                <div class="stats">粉丝 2909 · 黑话分 5</div>
-                <div class="sig">一个会画画的苹果鱼... / 除非稿件其余当头像当壁纸皆可，自行截图 / 🈲ai 未授权转载 自印 无盈利 商用 / 产品：日黑 实玄</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAw7sPAjFhbsqBTTMFkoFlS0xnE8PmUQ-Ar-QVVpx8YzI.html">鎏清(二号机)</a></div>
-                <div class="stats">粉丝 1860 · 黑话分 5</div>
-                <div class="sig">画稿完成度看心情的臭毛病还是改! / 收稿请4️⃣我，不是🥬画师我lx↑↑↑可以直接加!请勿过度讲价决定好再加 / 交流集赞请进群 / ⚠️有撞请4️⃣  设计是很主观的东西，不喜欢也请划走，请不要留言论伤害到评论区的妹子 / 「⚠️默认使用可商用褶皱笔刷和可商用素材」 / 🍠同名(4️⃣我没有回的</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 6帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAhj50RKsRT8MbmuiCenan-oLeyaKjN3qDqBafwygRm1Dz_IWtpcfTnt1O6ajmQVE0">暗焰姬 Kanna Noir</a></div>
-                <div class="stats">粉丝 3.6万 · 黑话分 4</div>
-                <div class="sig">🖤Lolita 亚文化 哥特 汉元素 / 🖤做你们喜欢的服饰！ / 感谢宝宝们的关注 / D：Kanna Noir暗焰姬洋装</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAANIz9TvUxv8JzDKGxTSrwNp_U18LaYBWktFqdhsNxTvitCAsjuN0ivCa749O28SQW.html">love 你</a></div>
-                <div class="stats">粉丝 7172 · 黑话分 4</div>
-                <div class="sig">Lolita设计画师 / 未出稿看点赞列表 / ⚠️收稿，商务合作可私信 / 🛰️👉复制ID</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAuaQJ0aByGdJsz2jPg4jJnRO_XKnk7Io-zSAnIZZFYRs">咩咩Melody 原创Lolita</a></div>
-                <div class="stats">粉丝 6965 · 黑话分 0</div>
-                <div class="sig">星雾纱屿和紫薰花序意定金开启… 5.10号早晨截团下一件黑百合重工哥特样衣持续打版中～可蹲  / 客服如果不回请宝宝耐心等待，可能吃饭可能上厕所去啦！中午客服宝宝需要午休2个小时 / 擦边画师，擦边种草姬，勿私信，一律不回 / ⚠️男的别关注，看到直接拉黑</div>
-                <div class="badges"><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAFZqlcw2W7C4-xX7Ny5YRl09InZszYEKa470eUwTPolgqUu5VBLZXNcHOgUo61fKx.html">秘制弦菜鱼</a></div>
-                <div class="stats">粉丝 2944 · 黑话分 0</div>
-                <div class="sig">慢慢急，不要来</div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAA_TerVkA2T5oTTyhxTqaNT_emE10JfGPbyOTKVlzTnr4.html">Delos</a></div>
-                <div class="stats">粉丝 7 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAZ5TrRoMWV2lUPdd-U4sJX8Y03OLCNBcHWe7aQg5LXCoswwLU1RdbiiT3XoD7Guhj.html">哇咔咔kk</a></div>
-                <div class="stats">粉丝 1.2万 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAArkA5qC7lXs_p-erCZqbf8W05sRXuPBfwzU5UuM4a5KW79hMmY5Cofh7Z7nWf2VBt.html">🤍</a></div>
-                <div class="stats">粉丝 241 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAIVBGwIPvuCM5U5eHKOfdsKwqdHTEgqu9i2Ck16vuyxE.html">YY^</a></div>
-                <div class="stats">粉丝 303 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAXb-4Ck6I7ki0OzCtWsaKhBHlyji-TkYqk1jzF5tNRRI.html">楠木南</a></div>
-                <div class="stats">粉丝 126 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAwFY3OFmPYYQfctOnxNW5-hekcLxV9q_a3luiQ8QCoJs.html">涛子📷（约拍私）</a></div>
-                <div class="stats">粉丝 5973 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAAhW2-tByn0tW6bxGPhvSc5evZwwjH1LEHbm7plalRLIM.html">机智阿月</a></div>
-                <div class="stats">粉丝 156.9万 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
-              </div>
-              <div class="card">
-                <div class="nick"><a href="MS4wLjABAAAANqj88iO2TcPhvvLFS35Qby8c-b0jPr4JLz_TMuCMNTE.html">川奈兔子原创</a></div>
-                <div class="stats">粉丝 5272 · 黑话分 0</div>
-                <div class="sig"></div>
-                <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
-              </div></div>
-          </div>
-<footer>本页由 render_illustrators.py 生成。Phase 1 基线版本，Phase 2 接定时监控 + viral 增速。</footer>
+<div class="toolbar">
+  <div class="toolbar-row"><span class="toolbar-label">角色</span><span class="chip active" data-role-filter="all">全部<span class="cnt">54</span></span> <span class="chip" data-role-filter="illustrator">🎨 画师<span class="cnt">22</span></span> <span class="chip" data-role-filter="brand">🏷 品牌<span class="cnt">6</span></span> <span class="chip" data-role-filter="unknown">❓ 待分类<span class="cnt">26</span></span></div>
+  <div class="toolbar-row"><span class="toolbar-label">风格</span><span class="chip" data-style-filter="军lo">军lo<span class="cnt">18</span></span> <span class="chip" data-style-filter="王子lo">王子lo<span class="cnt">7</span></span> <span class="chip" data-style-filter="甜lo">甜lo<span class="cnt">16</span></span> <span class="chip" data-style-filter="古典">古典<span class="cnt">3</span></span> <span class="chip" data-style-filter="哥特">哥特<span class="cnt">11</span></span> <span class="chip" data-style-filter="中华">中华<span class="cnt">4</span></span> <span class="chip" data-style-filter="圣职">圣职<span class="cnt">4</span></span><span style="font-size:11px;color:#999;margin-left:8px;">(多选=同时含所有标签)</span></div>
+  <div class="toolbar-row"><span class="toolbar-label">来源</span><span class="chip" data-conf-filter="1">⭐ 仅显示 关注/收藏<span class="cnt">25</span></span></div>
+  <div class="toolbar-row"><span class="toolbar-label">排序</span><span class="chip active" data-sort="sig">黑话分 ↓</span> <span class="chip" data-sort="fans">粉丝量 ↓</span> <span class="chip" data-sort="mil">军lo 帖数 ↓</span> <span class="chip" data-sort="total">总帖数 ↓</span> <span class="chip" data-sort="likes">总点赞 ↓</span></div>
+</div>
+
+<div id="grid" class="grid">
+<div class="card" data-role="illustrator" data-fans="1402" data-sig="81" data-mil="0" data-total="12" data-likes="24835" data-styles="哥特" data-sources="my_following" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAbUKN04EA042aIPQdyvxyksZ33B05BxUGHHViXK7QkbKNUNfZMC5mBesmfL6edHQG.html">无骨貓.（画稿中）</a></div>
+  <div class="stats">粉丝 1402 · 黑话分 81 · 总帖 12</div>
+  <div class="sig">默认分领域授权！ / 🉑️约稿，免服是oc领域米分/福！ / 未经允许🈲️商🈲️实物🈲️二转二改 / 绿泡泡wugumao123（注明来意宝宝们！） / 喜欢有礼貌的宝宝！</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-style">哥特 2</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="15152" data-sig="78" data-mil="3" data-total="16" data-likes="35636" data-styles="军lo,哥特" data-sources="my_following,v2_search" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAYx35fuCAEncb75aVOQSgoYeN_Oo320tGwkSFrnPaOPg.html">莓屿不语（求推荐）</a></div>
+  <div class="stats">粉丝 1.5万 · 黑话分 78 · 总帖 16</div>
+  <div class="sig">恋人：procreate / 成衣服设画手呀 默认分领域 / lxfs：抖音号（带备注/店名）｜免服限粉使用 / 装的时候@半只莓屿  / 随便发@莓屿（to限粉）（求推荐）</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 3帖</span><span class="badge b-style">哥特 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="16217" data-sig="43" data-mil="1" data-total="19" data-likes="165127" data-styles="王子lo,军lo,甜lo" data-sources="my_following" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAP6bi_DVsG6vCf8DshKV5EPUbipdYvdpZyS-oQycZqDsBQt9ECbMfbkQxRRFedSni.html">总裁（化身裁缝版）</a></div>
+  <div class="stats">粉丝 1.6万 · 黑话分 43 · 总帖 19</div>
+  <div class="sig">免服仅供粉丝使用，取关默认收回使用权 / 社畜没啥时间，不闲聊，确定要了再➕ / 拿我图练ai全家替我挡灾哈 / 禁止🚫私自实体化or商用/洗稿/抄袭/无盈利团需要授权/倒卖批发服设发现就挂</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">王子lo 1</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="1578" data-sig="39" data-mil="1" data-total="19" data-likes="56220" data-styles="中华,王子lo,甜lo,军lo,古典" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAA98lj4baWzRVGCUIdGa0PSc_0XBBmPLJ9jHtnT5KoAsQvNlOW7NWhRYYQMBEe4zT5.html">羽羽</a></div>
+  <div class="stats">粉丝 1578 · 黑话分 39 · 总帖 19</div>
+  <div class="sig">lolita版型设计师/4 年经验 / 约稿请自带脑洞.不便宜 800+ / 稿件未特殊标注均为oc免服，关注可使用 / 收稿相关➡️yuyuhuatu</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">王子lo 3</span><span class="badge b-style">甜lo 2</span><span class="badge b-style">中华 1</span><span class="badge b-style">古典 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="264" data-sig="35" data-mil="0" data-total="20" data-likes="2073" data-styles="甜lo" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAbjVlAxXZPg__ZhOVRX8HKZROaIU9GW-xrUN8GcHtH-jufTcTWPLMp85FjqDS_8QF.html">悲伤流泪鸽鸽头</a></div>
+  <div class="stats">粉丝 264 · 黑话分 35 · 总帖 20</div>
+  <div class="sig">小小画手～ / 只是稿件只是稿件！没有授权成衣！！！（有才会标注） / 可约稿！（mhs：A号悲伤流泪鸽鸽头）（hj：悲伤流泪鸽鸽头a） / 大部分直出，可小窗问价 / 在小🍠拍卖服设（id：chuntian5160）</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">甜lo 2</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="4432" data-sig="32" data-mil="0" data-total="23" data-likes="30275" data-styles="哥特" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAVztAPKEXZ3_L1UyCcbFLGGQPih0UrCkB5zP_UqqMtW0.html">啾啾同-Lolita设计</a></div>
+  <div class="stats">粉丝 4432 · 黑话分 32 · 总帖 23</div>
+  <div class="sig">雷“收藏备孕”，连续收藏几十个还不关注会拉黑哦。想蹲小裙子实体化和oc原图的可以进群，我会汇报裙子动态～想要原图的宝也可以在群里直接问我要（但不能二改二传商改商用）。画加也叫啾啾同，@啾啾同  是二号机，Lolita480起，童装和娃衣比lo➖200，默认带大货一件，不要问了不回</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">哥特 5</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="11235" data-sig="30" data-mil="3" data-total="18" data-likes="105069" data-styles="哥特,军lo,王子lo,中华,甜lo" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAs_MXGZ0vFOXH7-is9zUJREIrvJcdK3kCdU6-eaWhw1JmgAiQop63TP1gAjUOCcnj.html">山福桃🍑</a></div>
+  <div class="stats">粉丝 1.1万 · 黑话分 30 · 总帖 18</div>
+  <div class="sig">服设号成长中，全平台同名，除oc领域可做免服外，其他领域授权都是有偿的，自己做或定制都有偿 / ｏｃ免服需关➕苹➕❤️ / 多领域授权欢迎来问（娃衣、人衣、童装等）有撞请丝 / 默认大货一件 / lx：shanfutaotao(备注来意店名）我是画师只加店主，其他勿扰</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 3帖</span><span class="badge b-style">哥特 4</span><span class="badge b-style">王子lo 2</span><span class="badge b-style">甜lo 2</span><span class="badge b-style">中华 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="1045" data-sig="28" data-mil="0" data-total="15" data-likes="7358" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAZ-c14AfsOeUm_MKxwqq6s2BRpHsfyvh8FOVq1_QcATQ.html">初玖（接画版）</a></div>
+  <div class="stats">粉丝 1045 · 黑话分 28 · 总帖 15</div>
+  <div class="sig">【作品可借鉴临摹不可商用】【使用麻烦标明出处】 / 可约稿，会邮寄 / 手绘：立绘/oc/水彩/丙烯/线描/素描/马克笔/彩铅/装饰画等等</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="5498" data-sig="25" data-mil="0" data-total="19" data-likes="3301" data-styles="甜lo" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAYqJnoY4LBP1G9MoXXUIRHQNaENloJtD3F_oaAeY_Viw.html">璃yoooo</a></div>
+  <div class="stats">粉丝 5498 · 黑话分 25 · 总帖 19</div>
+  <div class="sig">叫我阿璃或璃子都行！（爱挖白菜的oc人一枚） / 主要发发小白凤凰齊亘，生日0920 / 头发是光的三原色结合间色衍生，最后原点为白 / 画师随缘回，没关注和夸夸直接来问的一律不回 / 主页都是稿件，禁止保存，ky，抄袭，借鉴等 / 扩列大欢迎，喜欢互动请摩多摩多 / 设子容易漏</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">甜lo 3</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="1555" data-sig="24" data-mil="1" data-total="8" data-likes="11444" data-styles="军lo,哥特" data-sources="anchor_mention_validated" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAA3tjhj9I2cEVgQF_mcdL5clPfJEwHYQV27TCimt0e-8Q.html">山福小桃（不接定制</a></div>
+  <div class="stats">粉丝 1555 · 黑话分 24 · 总帖 8</div>
+  <div class="sig">Lolita设计号@山福桃🍑 花甲批发服设：山福桃桃 / 一些lo裙不好实现的设计会放在这里～不定期更新哦～ / 暂不接定制，谢谢宝宝们喜欢我的设计～</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">哥特 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="41018" data-sig="20" data-mil="0" data-total="20" data-likes="77190" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAwaB9IHjIrRSKYdS9pKtaBPS3G4vxTZ8nV9N5jMxYESU.html">一只懒阿M🐈</a></div>
+  <div class="stats">粉丝 4.1万 · 黑话分 20 · 总帖 20</div>
+  <div class="sig">嗨嗨！这里是阿M！ / 🛰️约稿糕➕合作：YzlaM01 / （记得备注来意哟） / ⚠️委托稿禁止使用⚠️禁止二改⚠️</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="2633" data-sig="20" data-mil="1" data-total="20" data-likes="7205" data-styles="军lo,王子lo,哥特,圣职,古典,中华" data-sources="my_following" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAFuIWbNBjMcBRtSOA7UK0gNJuQ9WoPxCeNpGHAvxVQRhSjBwpu-0PQEjEomfi3Oy2.html">仁儿这样来财【Lolita画师版】</a></div>
+  <div class="stats">粉丝 2633 · 黑话分 20 · 总帖 20</div>
+  <div class="sig">我要成为Lolita大王 / 全领域出 可私✉️（✉️没回看头像/置顶）  / 本人好说话 不收的话请告知不要不回 / 如有雷同纯属巧合可以私✉️联系 / red book同名</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">哥特 3</span><span class="badge b-style">王子lo 2</span><span class="badge b-style">古典 2</span><span class="badge b-style">中华 2</span><span class="badge b-style">圣职 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="2830" data-sig="18" data-mil="0" data-total="19" data-likes="8050" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAE-_YTG4JQuyd1SugLJjeHLbwg8HJ2Fx8KgHO5LIlu-e5ajY_mNmA2p-xji6pOD7K.html">小香芬（价格在置顶）</a></div>
+  <div class="stats">粉丝 2830 · 黑话分 18 · 总帖 19</div>
+  <div class="sig">🈲造谣🈲不接无偿⚠️不确定约不要➕我，不要浪费我时间😭🙏 / pt：画➕🉑临界🉑（小香芬） / ✅约稿➕wx或🐧=15060293045（不约别加求你了别浪费我时间。 / ⚠️別背刺。。。。。。。很痛 / 不常聊不怎么熟会双清不活跃（清列自由🤲） / 🈲仿视频内容（不是不让抽象）</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="255" data-sig="18" data-mil="0" data-total="15" data-likes="9917" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAvXw-du-YDJbeJEgt7Jjx7i-75UTSaZeTLKEvAaAC8tYN91iVu3ZNbmDbpiQWCY67.html">FF_ANLIN（接稿版）</a></div>
+  <div class="stats">粉丝 255 · 黑话分 18 · 总帖 15</div>
+  <div class="sig">全平台同名 / 禁止🚫商用、二改和二传，可以自用当壁纸头像 / 花甲：ANLIN想睡觉版</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="11010" data-sig="15" data-mil="1" data-total="17" data-likes="3441" data-styles="甜lo,军lo" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAGFgZvBNYZWv_a1REa1s4MeIMgQoHtdILyTppO1lBeLnOu3nlH5VoB5cRm4rHkqeG.html">龟龟要成为约稿大师</a></div>
+  <div class="stats">粉丝 1.1万 · 黑话分 15 · 总帖 17</div>
+  <div class="sig">大部分稿件都在保密中 有进度会发在首页稿件蹲蹲群 / 暂不接约稿 / 不合作无成品新店 不合作无成品新店  / 谢谢喜欢💕  / 会删不喜欢的评论</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">甜lo 2</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="2062" data-sig="15" data-mil="0" data-total="20" data-likes="6130" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAVv9rWVVars-4ORtT8f2BdqPydExD779w_f1nwWWhO3_o4wfqSJBmn-LjQyPTs858.html">喵树Miaoshu</a></div>
+  <div class="stats">粉丝 2062 · 黑话分 15 · 总帖 20</div>
+  <div class="sig">约稿/私信→米画师:喵树丶 / 合作📭:catree-911@qq.com /  / 野生插漫画家勇闯🎶 / 常用名:喵喵喵喵丶喵树 / 《哎呀我的少女心》漫画🌸作者 / 感谢喜欢❤️ / 都是自己画的，带水印的是稿件请不要用 / 感谢你的喜欢  ˗ˋˏᰔᩚˎˊ˗</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="515" data-sig="15" data-mil="0" data-total="19" data-likes="2058" data-styles="甜lo" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAhogKDiCWiGiWJ8RUYcAmwaDUmwTs1PdzO8Jue3fSsOg.html">Prey</a></div>
+  <div class="stats">粉丝 515 · 黑话分 15 · 总帖 19</div>
+  <div class="sig">欢迎来到PP的精神世界！ / 在画+开了一些稿位，想约稿的咪可以去画+看看ww / 企鹅是1341490337，卫星是li1341490337（也可以加这些 / 但是我会有点拖稿ww！讨厌不能按时交稿的咪慎来哦！ / （不过长假不会拖，因为我没什么事干基本就是每天画稿哈哈哈哈哈哈</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="67" data-sig="15" data-mil="0" data-total="13" data-likes="1582" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAU57X9vd39worrUwWKoiaM84QHF2fJir9VZdBTEx9nvveriaymHdeVybmmKYxNScs.html">路宁一</a></div>
+  <div class="stats">粉丝 67 · 黑话分 15 · 总帖 13</div>
+  <div class="sig">=橘络 / oc人营业号，一般只发黑长直妹妹相关 / 欢迎交友，请不要收藏我的稿件到参考 / 可以问画师但是麻烦不要用命令的语气……可以的话希望得到你的赞！ / 剪视频还是太为难我了</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="45" data-sig="15" data-mil="0" data-total="9" data-likes="603" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAABoExn6KUhoTFxxjfuCNz1KnVJidpNtxMPF7-Hvbqi7gezKhn15kyp-Y1_MJmxP6D.html">须须吃两碗</a></div>
+  <div class="stats">粉丝 45 · 黑话分 15 · 总帖 9</div>
+  <div class="sig">✨柄图画手︴毛茸茸︴小动物︴可爱复古cla︴✨ / 🍠须须吃两碗</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="1476" data-sig="14" data-mil="2" data-total="6" data-likes="37670" data-styles="军lo,哥特,古典" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAANyWXqZtpe_uVT72WDk2de-6rzFv-Y42J8LVlw5JPKWNt6jwrPwdmHgyX_voma53A.html">香辣鸭脖</a></div>
+  <div class="stats">粉丝 1476 · 黑话分 14 · 总帖 6</div>
+  <div class="sig">Lolita型设画手  📕同名 / 擅长华丽款花嫁  / v同id</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 2帖</span><span class="badge b-style">哥特 1</span><span class="badge b-style">古典 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="1426" data-sig="14" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAANwljMBe0F8QqwQrZdk1LVV1Mq7NDcbi8EvCb9PmiwQw">小桃不吃🍑</a></div>
+  <div class="stats">粉丝 1426 · 黑话分 14 · 总帖 0</div>
+  <div class="sig">160/108  lolita日常/测评/好物分享～ / 宝宝们有问题或问🔗可以进粉丝群问我哦～ / 🈴 Oct11_twq（备注来意 / 2000粉🎁解锁中（抽粉丝送👗</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="25807" data-sig="10" data-mil="0" data-total="21" data-likes="29249" data-styles="甜lo" data-sources="v2_search,v3_role_illustrator" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAACQ2SzaSWKToD92yByrNqhCXA6eOB4dEwNX7O2D6ckGE.html">VoiceDie</a></div>
+  <div class="stats">粉丝 2.6万 · 黑话分 10 · 总帖 21</div>
+  <div class="sig">绵绵猫，绵绵狗，可摩熊，甜心动物会ip作者原画师 / 作品均有版权，侵权必究🥰不发原图！禁止自印！ / 全//平//台//同//名（授权和约稿可以si俺✉️） / 【😁盗图商用的会直接起诉，尤其睡衣和布料】</div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">甜lo 3</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="29962" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAll0EL5o-5oarzgEQa6SY7130IeRLXVG7aNk0UjVm3eBOYWpvf_D7GkkDTstXdHSG">沉玖</a></div>
+  <div class="stats">粉丝 3.0万 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">有收集癖，买买买狂热爱好者 / 身高158 85，日常穿s / 主页搭配未标明具体作品的视频可做oc服装灵感 / 接寄📸 抖音号 不经常看评论</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="24554" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAZ9RSnnoyuxw6aDzvOsMFpz_ek-RX6K1MI45rFy4Ul7hUthkEitm2UzXRcS1Nd96Y">骨下水</a></div>
+  <div class="stats">粉丝 2.5万 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">164/104浮动  36/84/66/89 / 📕同名 ｜ 禁止转载盗图商用 / 个人绘画参考请@ ｜ 商用约稿相关x / 评论被吞没有办法 会编辑在标题＞_＜</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="8717" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAo-Q4V-LTocZedBQK4rgWjX5VLEaRygZ9o-23UDLoSL0">薇薇菲之专卖店</a></div>
+  <div class="stats">粉丝 8717 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">薇薇菲原创jk～你的好评店铺～ / pdd、tb、ks都有店铺哦～ / 种草姬找管理审核//画手投稿进群（主页可见） / 管理员账号：@RUZUYEE1128 / 欢迎返图or投稿</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="7977" data-sig="10" data-mil="0" data-total="21" data-likes="33152" data-styles="甜lo" data-sources="my_following" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAJccCq1Cqc1M61W_iZrJw6uQcUr0yozRYG7kIdvf4Q53_ePGGZmiycKZHvwr9eglb.html">初级召唤师</a></div>
+  <div class="stats">粉丝 7977 · 黑话分 10 · 总帖 21</div>
+  <div class="sig">aigc召唤师  作品为ai技术辅助 / 热爱做各种小裙子 非垫图溶图 / 红薯同名   禁止商用禁止搬运 / 自行避⚡ 不喜5️⃣入 合作可私</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-style">甜lo 7</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="7230" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAgyT9rrGcQgXbgfrfbbmgqIiHfBi9YLv4Rn3i-9rBKbiVrEluqPa3H6HB0GaCrb5X">蟹味盐</a></div>
+  <div class="stats">粉丝 7230 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">临界/梅花山同名 / 🉑连赞🉑收藏💖感谢喜欢 / 不回复约稿相关(听说会被平台制裁😖💦💦 / 下次开邀请在六一</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="4819" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAA34llOmP0e_OnYsW1i-7wfsVpp2YmEjezK_hFm53Zr6c">橙花粥</a></div>
+  <div class="stats">粉丝 4819 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">🌼️绘画新手，自学哒！ / 🌼️欢迎约稿，约稿合作请加👇 / 🌼️vx:zzx000000926（备注来意） / 🌼️谢谢关注和鼓励！</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="447" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAhEQ0w4D6OsYljkPqZ2vpOr4uvnnK5jIiONwd7sP7AAc">洛克丽塔</a></div>
+  <div class="stats">粉丝 447 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">🩵这里是洛    oc 梦女💎全平台同名 /   💎画师名字在视频，交友会考虑 / 💎无偿欢迎 但请出于对oc喜欢 / 💎不雷收藏／雷不礼貌、ky / ［恋人：@雾浅💎 ］</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="301" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAA6bPJzDluGV8JSnl_q9eI-gnYJ8X1g0MQ-KqoljjkLp2ZFYvolsJTk4uVlnmYmFJ6">無所謂一顆真心</a></div>
+  <div class="stats">粉丝 301 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">你的壞 你的可愛 我照單全收 /              @Petener  / 约稿私私一一一一 / 价格↓ / 大头15🥕 / 全身7🥕 / 半身12🥕   不接无偿 / =小貓/貓貓🐾 / @恶魔用户 @摩西摩西💬</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="182" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAjW1Y76egw5UoVB91XzCDb2Bqu5Snb-qZdnHgCaFx_inmbtpUomDq0_5T30AaMihT">雾茗</a></div>
+  <div class="stats">粉丝 182 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">cn花袄/雾茗 / 绝望的oc妹，有oc梦属性 / 乙代梦全肯定 / 我雷/恨乙向nzd和乙腐，有相关的拉黑我 / 注意，我一设多梦，会分不同世界观，只是不想养太多设定，不过也不怎么发除了oc以外的梦向 / 发的东西很杂，不要因为一个作品关注我，可能会失望。绿发女子林璃和黑发女子</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="42" data-sig="10" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="v2_search" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAgPzrYqlNVsxBS_AAsJlpHczdrxg0fXMJtMJML2df95k">美味菌菇汤😋</a></div>
+  <div class="stats">粉丝 42 · 黑话分 10 · 总帖 0</div>
+  <div class="sig">头像和壁纸以及视频均为自家oc请勿使用！ / 这里会更新自家小情侣 莉莉丝&amp;戴蒙 肉食主义小肉 / 以及重返未来1999oc 藏香柏 相关 / 女神@菌菇想睡觉🍄</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="1451" data-sig="8" data-mil="0" data-total="20" data-likes="1735" data-styles="" data-sources="v3_role_illustrator" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAVi2jvJds-6FAYGlTENMkvAL_bPZUB4xZ4TJ2_NXpeEcj1bMSfKHLd0xd0piZYS66.html">图案设计师JUJU</a></div>
+  <div class="stats">粉丝 1451 · 黑话分 8 · 总帖 20</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="44755" data-sig="5" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="anchor_mention_validated" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAS29nq7dInOZBrToUB6rqn6LPBJUmqp60GlZM0fCtR5eKWhce74DXAaGZlo46Tipx">甜兔梦屿Lolita原创设计</a></div>
+  <div class="stats">粉丝 4.5万 · 黑话分 5 · 总帖 0</div>
+  <div class="sig">谢谢宝宝们的关注，以后就是老粉啦。 / 欢迎宝宝们关注入股 / 蹲蹲的宝宝可以进粉丝群哦，会通知最新进度 / 所有稿件均有国家版权登记｜原创专属，侵权必究， / 一经发现侵权，必追究法律责任。</div>
+  <div class="badges"><span class="badge b-brand">brand</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="2909" data-sig="5" data-mil="0" data-total="8" data-likes="50512" data-styles="" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAWBaIEqOM7YhCK8o0zGV7CWbKlaOEmyoSr8rG5UDeCPM.html">苹果鱼</a></div>
+  <div class="stats">粉丝 2909 · 黑话分 5 · 总帖 8</div>
+  <div class="sig">一个会画画的苹果鱼... / 除非稿件其余当头像当壁纸皆可，自行截图 / 🈲ai 未授权转载 自印 无盈利 商用 / 产品：日黑 实玄</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="1860" data-sig="5" data-mil="6" data-total="8" data-likes="60792" data-styles="军lo,王子lo,哥特,圣职" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAw7sPAjFhbsqBTTMFkoFlS0xnE8PmUQ-Ar-QVVpx8YzI.html">鎏清(二号机)</a></div>
+  <div class="stats">粉丝 1860 · 黑话分 5 · 总帖 8</div>
+  <div class="sig">画稿完成度看心情的臭毛病还是改! / 收稿请4️⃣我，不是🥬画师我lx↑↑↑可以直接加!请勿过度讲价决定好再加 / 交流集赞请进群 / ⚠️有撞请4️⃣  设计是很主观的东西，不喜欢也请划走，请不要留言论伤害到评论区的妹子 / 「⚠️默认使用可商用褶皱笔刷和可商用素材」 / 🍠同</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 6帖</span><span class="badge b-style">王子lo 5</span><span class="badge b-style">哥特 2</span><span class="badge b-style">圣职 2</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="268137" data-sig="4" data-mil="5" data-total="16" data-likes="148598" data-styles="军lo,圣职,中华" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAcsrIaurN1XTQx11ctLk3nKsZgc44uu5TeDhf2zWGt1U.html">樱洛芙Lolita原创设计</a></div>
+  <div class="stats">粉丝 26.8万 · 黑话分 4 · 总帖 16</div>
+  <div class="sig">纯原创无溢价 / 专注重工华丽款Lolita，你的专属设计师！ / 共创研发体系，认真听取每一位小宝的建议 / （重点细节会票选，意见不一选多数）</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 5帖</span><span class="badge b-style">圣职 5</span><span class="badge b-style">中华 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="35908" data-sig="4" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="anchor_mention_validated" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAhj50RKsRT8MbmuiCenan-oLeyaKjN3qDqBafwygRm1Dz_IWtpcfTnt1O6ajmQVE0">暗焰姬 Kanna Noir</a></div>
+  <div class="stats">粉丝 3.6万 · 黑话分 4 · 总帖 0</div>
+  <div class="sig">🖤Lolita 亚文化 哥特 汉元素 / 🖤做你们喜欢的服饰！ / 感谢宝宝们的关注 / D：Kanna Noir暗焰姬洋装</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="7172" data-sig="4" data-mil="1" data-total="20" data-likes="97394" data-styles="军lo,哥特,甜lo" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAANIz9TvUxv8JzDKGxTSrwNp_U18LaYBWktFqdhsNxTvitCAsjuN0ivCa749O28SQW.html">love 你</a></div>
+  <div class="stats">粉丝 7172 · 黑话分 4 · 总帖 20</div>
+  <div class="sig">Lolita设计画师 / 未出稿看点赞列表 / ⚠️收稿，商务合作可私信 / 🛰️👉复制ID</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">哥特 3</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="4447" data-sig="2" data-mil="2" data-total="17" data-likes="18295" data-styles="军lo" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAA39X4Jmclfz6rfuw-AocFF7S7xKc9liSwzNfRl1g4pek.html">甜心玩偶lolita原创</a></div>
+  <div class="stats">粉丝 4447 · 黑话分 2 · 总帖 17</div>
+  <div class="sig">专业做洛丽塔原创喜欢的宝宝可以点关注蹲蹲哦。                                                       咱们家原创质量第一价格亲民哦！欢迎和宝子们一起见证留个关注哦！！欢迎种草姬来合作</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 2帖</span></div>
+</div>
+<div class="card" data-role="illustrator" data-fans="126" data-sig="0" data-mil="0" data-total="20" data-likes="14163" data-styles="哥特,甜lo" data-sources="v3_role_illustrator" data-confirmed="0">
+  <div class="nick"><a href="MS4wLjABAAAAWa5nQynPN6UmPWw-KlX8lI0P5LRQZ6io_hAYI4BjPSHlZ2bwO_WruGtpAq7FzvOX.html">瓜子其实是比格犬</a></div>
+  <div class="stats">粉丝 126 · 黑话分 0 · 总帖 20</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-illustrator">illustrator</span><span class="badge b-style">哥特 1</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="43114" data-sig="0" data-mil="6" data-total="12" data-likes="16902" data-styles="军lo,甜lo" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAYjhqUsV4h_mi3MdhYoQTgQvUETDuOwRArHwmCg3MNSg.html">猫咪晚安lolita原创设计</a></div>
+  <div class="stats">粉丝 4.3万 · 黑话分 0 · 总帖 12</div>
+  <div class="sig">一家新店~谢谢宝宝们关注以后就是老粉啦 电阻80后再就业(以前的大厂代工哦) / 新店刚起步 后续会找棉花糖天空树宝宝请宝宝们等等</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 6帖</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="15878" data-sig="0" data-mil="0" data-total="8" data-likes="74869" data-styles="" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAQUIwmWrpU0d3K2lyvrTlnyfh0gWnGqBBV0lcFznCUkVBKPw_mlUMwbuPJ5fywlvN.html">七分花原创设计</a></div>
+  <div class="stats">粉丝 1.6万 · 黑话分 0 · 总帖 8</div>
+  <div class="sig">所有裙子版权均已买，如若发现抄袭，就等着律师函吧！造谣必究，店店非常好相处，会时不时抽粉丝送小裙裙 / 圣剑骑士5月12号白胚，5月25号黑篮蹲七分花的小宝宝，可以进七分花1群，股东一群已满并隐藏 / 圣剑骑士群在三群到五群，想加哪个加哪个，蹲蹲的宝宝可以加，具体样衣在五月二十五</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span></div>
+</div>
+<div class="card" data-role="brand" data-fans="4874" data-sig="0" data-mil="1" data-total="5" data-likes="21375" data-styles="王子lo,军lo,哥特" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAA3j_SOJULqtaMi-lQqUTkYI8YVh6ZW3rI97OwWEjx_pWUV7Lb5kGyF_fMmxMnmTwO.html">银线十字lolita原创设计</a></div>
+  <div class="stats">粉丝 4874 · 黑话分 0 · 总帖 5</div>
+  <div class="sig">新店报道！诚意官宣</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-brand">brand</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">王子lo 3</span><span class="badge b-style">哥特 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="6965" data-sig="0" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="anchor_mention_validated" data-confirmed="0">
+  <div class="nick"><a href="https://www.douyin.com/user/MS4wLjABAAAAuaQJ0aByGdJsz2jPg4jJnRO_XKnk7Io-zSAnIZZFYRs">咩咩Melody 原创Lolita</a></div>
+  <div class="stats">粉丝 6965 · 黑话分 0 · 总帖 0</div>
+  <div class="sig">星雾纱屿和紫薰花序意定金开启… 5.10号早晨截团下一件黑百合重工哥特样衣持续打版中～可蹲  / 客服如果不回请宝宝耐心等待，可能吃饭可能上厕所去啦！中午客服宝宝需要午休2个小时 / 擦边画师，擦边种草姬，勿私信，一律不回 / ⚠️男的别关注，看到直接拉黑</div>
+  <div class="badges"><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="2944" data-sig="0" data-mil="0" data-total="4" data-likes="102414" data-styles="甜lo" data-sources="my_following,my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAFZqlcw2W7C4-xX7Ny5YRl09InZszYEKa470eUwTPolgqUu5VBLZXNcHOgUo61fKx.html">秘制弦菜鱼</a></div>
+  <div class="stats">粉丝 2944 · 黑话分 0 · 总帖 4</div>
+  <div class="sig">慢慢急，不要来</div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="7" data-sig="0" data-mil="0" data-total="0" data-likes="0" data-styles="" data-sources="my_following" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAA_TerVkA2T5oTTyhxTqaNT_emE10JfGPbyOTKVlzTnr4.html">Delos</a></div>
+  <div class="stats">粉丝 7 · 黑话分 0 · 总帖 0</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="11628" data-sig="0" data-mil="1" data-total="21" data-likes="237676" data-styles="军lo,圣职,甜lo" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAZ5TrRoMWV2lUPdd-U4sJX8Y03OLCNBcHWe7aQg5LXCoswwLU1RdbiiT3XoD7Guhj.html">哇咔咔kk</a></div>
+  <div class="stats">粉丝 1.2万 · 黑话分 0 · 总帖 21</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">甜lo 4</span><span class="badge b-style">圣职 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="241" data-sig="0" data-mil="0" data-total="1" data-likes="45" data-styles="" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAArkA5qC7lXs_p-erCZqbf8W05sRXuPBfwzU5UuM4a5KW79hMmY5Cofh7Z7nWf2VBt.html">🤍</a></div>
+  <div class="stats">粉丝 241 · 黑话分 0 · 总帖 1</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="303" data-sig="0" data-mil="1" data-total="9" data-likes="50669" data-styles="军lo,甜lo" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAIVBGwIPvuCM5U5eHKOfdsKwqdHTEgqu9i2Ck16vuyxE.html">YY^</a></div>
+  <div class="stats">粉丝 303 · 黑话分 0 · 总帖 9</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">甜lo 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="126" data-sig="0" data-mil="1" data-total="1" data-likes="20034" data-styles="军lo,王子lo" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAXb-4Ck6I7ki0OzCtWsaKhBHlyji-TkYqk1jzF5tNRRI.html">楠木南</a></div>
+  <div class="stats">粉丝 126 · 黑话分 0 · 总帖 1</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span><span class="badge b-style">王子lo 1</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="5973" data-sig="0" data-mil="0" data-total="19" data-likes="1520504" data-styles="甜lo" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAwFY3OFmPYYQfctOnxNW5-hekcLxV9q_a3luiQ8QCoJs.html">涛子📷（约拍私）</a></div>
+  <div class="stats">粉丝 5973 · 黑话分 0 · 总帖 19</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-style">甜lo 3</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="1569454" data-sig="0" data-mil="0" data-total="20" data-likes="3670061" data-styles="" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAAhW2-tByn0tW6bxGPhvSc5evZwwjH1LEHbm7plalRLIM.html">机智阿月</a></div>
+  <div class="stats">粉丝 156.9万 · 黑话分 0 · 总帖 20</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span></div>
+</div>
+<div class="card" data-role="unknown" data-fans="5272" data-sig="0" data-mil="1" data-total="20" data-likes="74022" data-styles="军lo" data-sources="my_favorites" data-confirmed="1">
+  <div class="nick"><a href="MS4wLjABAAAANqj88iO2TcPhvvLFS35Qby8c-b0jPr4JLz_TMuCMNTE.html">川奈兔子原创</a></div>
+  <div class="stats">粉丝 5272 · 黑话分 0 · 总帖 20</div>
+  <div class="sig"></div>
+  <div class="badges"><span class="badge b-conf">关注/收藏</span><span class="badge b-unknown">unknown</span><span class="badge b-mil">军lo 1帖</span></div>
+</div>
+</div>
+
+<footer>Phase 1 基线。Phase 2 加 24h 增速差量 + TG 推送。每次 deploy 数据时点会更新。</footer>
+
+<script>
+function applyFilter() {
+  const roleFilter = document.querySelector('[data-role-filter].active')?.dataset.roleFilter || 'all';
+  const styleChips = Array.from(document.querySelectorAll('[data-style-filter].active'));
+  const styleFilters = styleChips.map(e => e.dataset.styleFilter);
+  const confFilter = document.querySelector('[data-conf-filter].active')?.dataset.confFilter || null;
+
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    let show = true;
+    if (roleFilter !== 'all' && card.dataset.role !== roleFilter) show = false;
+    if (styleFilters.length > 0) {
+      const cardStyles = (card.dataset.styles || '').split(',').filter(Boolean);
+      // require ALL selected style filters to be present (AND mode)
+      if (!styleFilters.every(s => cardStyles.includes(s))) show = false;
+    }
+    if (confFilter === '1' && card.dataset.confirmed !== '1') show = false;
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  document.getElementById('visible-count').textContent = visible;
+}
+
+function applySort() {
+  const sortKey = document.querySelector('[data-sort].active')?.dataset.sort || 'sig';
+  const grid = document.getElementById('grid');
+  const cards = Array.from(grid.children);
+  cards.sort((a, b) => {
+    const ka = parseFloat(a.dataset[sortKey] || 0);
+    const kb = parseFloat(b.dataset[sortKey] || 0);
+    return kb - ka;
+  });
+  cards.forEach(c => grid.appendChild(c));
+}
+
+document.querySelectorAll('[data-role-filter]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('[data-role-filter]').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    applyFilter();
+  });
+});
+document.querySelectorAll('[data-style-filter]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.classList.toggle('active');
+    applyFilter();
+  });
+});
+document.querySelectorAll('[data-conf-filter]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.classList.toggle('active');
+    applyFilter();
+  });
+});
+document.querySelectorAll('[data-sort]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('[data-sort]').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    applySort();
+  });
+});
+</script>
+
 </body></html>

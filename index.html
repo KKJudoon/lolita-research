@@ -114,13 +114,17 @@
 </style>
 </head>
 <body>
+<style>
+.module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+.module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+.module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+.module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+.module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+</style>
+<div class="module-nav"><a href="index.html" class="mod active">📐 款式调研 (21)</a><a href="illustrators/index.html" class="mod">🎨 画师调研 (54)</a><a href="illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
   <h1>Lolita 款式调研</h1>
   <div class="meta">最后更新 2026-05-02 19:58 · 共 21 款 · 点行查看详情</div>
-  <div class="reports-bar">
-    <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
-    <a href="illustrators/index.html" class="report-link">🎨 抖音画师调研 (含军lo 稿件专题)</a>
-  </div>
-  <div class="toolbar">
+<div class="toolbar">
     <div class="toolbar-section">
       <span class="toolbar-label">风格</span>
       <button class="tab active" data-style="all">全部 (21)</button><button class="tab" data-style="军lo">军lo (13)</button><button class="tab" data-style="哥特">哥特 (2)</button><button class="tab" data-style="王子lo">王子lo (11)</button><button class="tab" data-style="中华">中华 (1)</button>
