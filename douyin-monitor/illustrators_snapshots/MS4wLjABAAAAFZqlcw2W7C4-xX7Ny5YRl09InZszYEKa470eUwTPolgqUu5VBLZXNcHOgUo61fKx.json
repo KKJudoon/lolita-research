@@ -1,0 +1,122 @@
+{
+  "sec_uid": "MS4wLjABAAAAFZqlcw2W7C4-xX7Ny5YRl09InZszYEKa470eUwTPolgqUu5VBLZXNcHOgUo61fKx",
+  "uid": "3777527587281182",
+  "nickname": "秘制弦菜鱼",
+  "signature": "慢慢急，不要来",
+  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAFZqlcw2W7C4-xX7Ny5YRl09InZszYEKa470eUwTPolgqUu5VBLZXNcHOgUo61fKx",
+  "role_tag": "unknown",
+  "sig_score": 0,
+  "sig_matches": [],
+  "sources": [
+    "my_following",
+    "my_favorites"
+  ],
+  "confirmed_by_user": true,
+  "snapshots": [
+    {
+      "ts": "2026-05-12T10:38:03+08:00",
+      "follower_count": 2944,
+      "aweme_count": 0,
+      "total_favorited": 102421,
+      "following_count": 739
+    }
+  ],
+  "posts": {
+    "7636613472738499686": {
+      "aweme_id": "7636613472738499686",
+      "desc": "Lolita|圣伊纳爵堂。#lolita设计 #cla",
+      "create_time": 1778037631,
+      "duration": 0,
+      "hashtags": [
+        "lolita设计",
+        "cla"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7636613472738499686",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ooc7weEDfAmcx6a3BZN8sZAEDfAJFBAEaEATrI~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=r0ryEOgkBX1HU4T5v5OsLHHJ%2Btc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104419D59735DA99ACA2390273",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 9615,
+          "comment_count": 961,
+          "share_count": 1445,
+          "play_count": 0,
+          "collect_count": 2385
+        }
+      ]
+    },
+    "7636092248182295882": {
+      "aweme_id": "7636092248182295882",
+      "desc": "Lolita‖少女骑士。#lolita设计 #服设",
+      "create_time": 1777916286,
+      "duration": 0,
+      "hashtags": [
+        "lolita设计",
+        "服设"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7636092248182295882",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEIieAeca8IAf27DBvAyEgLIkcANAT4RG2BbEc~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=OIP68nKeFeCmEqvsnBa2bMacEEY%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104419D59735DA99ACA2390273",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 6150,
+          "comment_count": 382,
+          "share_count": 858,
+          "play_count": 0,
+          "collect_count": 1171
+        }
+      ]
+    },
+    "7632018840184734282": {
+      "aweme_id": "7632018840184734282",
+      "desc": "少女贤君。#Lolita #服设#小公主苏菲亚",
+      "create_time": 1776967862,
+      "duration": 0,
+      "hashtags": [
+        "Lolita",
+        "服设",
+        "小公主苏菲亚"
+      ],
+      "style_tags": [
+        "甜lo"
+      ],
+      "post_url": "https://www.douyin.com/video/7632018840184734282",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogiAINPfTDJEnrAedY90PAiARAJBdDgAA95tqC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=Jjsgu3dE%2FVaIgYXU9ZWXboAloGo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104419D59735DA99ACA2390273",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 17606,
+          "comment_count": 555,
+          "share_count": 1783,
+          "play_count": 0,
+          "collect_count": 3079
+        }
+      ]
+    },
+    "7631647589926050738": {
+      "aweme_id": "7631647589926050738",
+      "desc": "少女暴君。#lolita原创设计 #oc #服设",
+      "create_time": 1776881429,
+      "duration": 0,
+      "hashtags": [
+        "lolita原创设计",
+        "oc",
+        "服设"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7631647589926050738",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/o8DkgDgJuiAzxA20AOAFIDEpPOADmCANwBweei~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=q0bk7v8G7pcvJR6GJ7%2FdieIiL3k%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104419D59735DA99ACA2390273",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 69043,
+          "comment_count": 3290,
+          "share_count": 12626,
+          "play_count": 0,
+          "collect_count": 12217
+        }
+      ]
+    }
+  }
+}

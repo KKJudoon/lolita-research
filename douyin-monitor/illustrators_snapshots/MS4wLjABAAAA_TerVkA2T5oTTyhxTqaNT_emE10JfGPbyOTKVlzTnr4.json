@@ -1,0 +1,24 @@
+{
+  "sec_uid": "MS4wLjABAAAA_TerVkA2T5oTTyhxTqaNT_emE10JfGPbyOTKVlzTnr4",
+  "uid": "105265281851",
+  "nickname": "Delos",
+  "signature": "",
+  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAA_TerVkA2T5oTTyhxTqaNT_emE10JfGPbyOTKVlzTnr4",
+  "role_tag": "unknown",
+  "sig_score": 0,
+  "sig_matches": [],
+  "sources": [
+    "my_following"
+  ],
+  "confirmed_by_user": true,
+  "snapshots": [
+    {
+      "ts": "2026-05-12T10:38:03+08:00",
+      "follower_count": 7,
+      "aweme_count": 0,
+      "total_favorited": 0,
+      "following_count": 28
+    }
+  ],
+  "posts": {}
+}

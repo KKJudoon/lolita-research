@@ -1,0 +1,247 @@
+{
+  "sec_uid": "MS4wLjABAAAAIVBGwIPvuCM5U5eHKOfdsKwqdHTEgqu9i2Ck16vuyxE",
+  "uid": "65345603256",
+  "nickname": "YY^",
+  "signature": "em...……...",
+  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAIVBGwIPvuCM5U5eHKOfdsKwqdHTEgqu9i2Ck16vuyxE",
+  "role_tag": "unknown",
+  "sig_score": 0,
+  "sig_matches": [],
+  "sources": [
+    "my_favorites"
+  ],
+  "confirmed_by_user": true,
+  "snapshots": [
+    {
+      "ts": "2026-05-12T10:38:03+08:00",
+      "follower_count": 303,
+      "aweme_count": 8,
+      "total_favorited": 51878,
+      "following_count": 52
+    }
+  ],
+  "posts": {
+    "7638075811588839145": {
+      "aweme_id": "7638075811588839145",
+      "desc": "鞠婧祎大王花扇69就能带回家啦！现货现货 接定制不限圈子#应援花扇 #蓝色系应援扇 #鞠婧祎",
+      "create_time": 1778378108,
+      "duration": 19087,
+      "hashtags": [
+        "应援花扇",
+        "蓝色系应援扇",
+        "鞠婧祎"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7638075811588839145",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oIfcgGA08fuIAAeyjI4NBffmVvufjfYAyGfFkhg~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=tePdA9LO8maIWFCFMLSY9dWKCjg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 30,
+          "comment_count": 0,
+          "share_count": 1,
+          "play_count": 0,
+          "collect_count": 1
+        }
+      ]
+    },
+    "7637756015925508678": {
+      "aweme_id": "7637756015925508678",
+      "desc": "宝宝们积攒。#Lolita #军lo #十字圣焰 #猫咪晚安lolita原创设计 #积攒 @猫咪晚安lolita原创设计",
+      "create_time": 1778303650,
+      "duration": 0,
+      "hashtags": [
+        "Lolita",
+        "军lo",
+        "十字圣焰",
+        "猫咪晚安lolita原创设计",
+        "积攒"
+      ],
+      "style_tags": [
+        "军lo"
+      ],
+      "post_url": "https://www.douyin.com/video/7637756015925508678",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oUjB8fseGAK7D4AQAY8EAyEawBfFIMJsTBIEAH~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=oZGqJFBh2%2Ft7dda2uZdGuqUAnps%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 69,
+          "comment_count": 28,
+          "share_count": 0,
+          "play_count": 0,
+          "collect_count": 0
+        }
+      ]
+    },
+    "7636285773185018835": {
+      "aweme_id": "7636285773185018835",
+      "desc": "你对姐姐流泪吧 姐姐我会给你擦的 不要这样沉 默下去然后与姐姐分离#Lolita #走拍 #宝石之冕 #天问",
+      "create_time": 1777961332,
+      "duration": 17323,
+      "hashtags": [
+        "Lolita",
+        "走拍",
+        "宝石之冕",
+        "天问"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7636285773185018835",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/ooAEzXtRH8euMED178lCxXBfAaQeBHCQOTHIIG~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=gL%2FXuPVRZtqCf97SU0dOhSbQEEE%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 24,
+          "comment_count": 3,
+          "share_count": 2,
+          "play_count": 0,
+          "collect_count": 1
+        }
+      ]
+    },
+    "7632926241447927721": {
+      "aweme_id": "7632926241447927721",
+      "desc": "紫色客单展示 很温柔的紫色呀#lolita原创 #bnt #Lolita头饰 #宁澜手作",
+      "create_time": 1777179130,
+      "duration": 21270,
+      "hashtags": [
+        "lolita原创",
+        "bnt",
+        "Lolita头饰",
+        "宁澜手作"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7632926241447927721",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oUQm157BQBA8fgfbGTmAlkfWaCXM7M2MzAX52q~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=4h3sYfZARcFBmKzsEjfzj0hNAeI%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 32,
+          "comment_count": 0,
+          "share_count": 1,
+          "play_count": 0,
+          "collect_count": 3
+        }
+      ]
+    },
+    "7630737875617296767": {
+      "aweme_id": "7630737875617296767",
+      "desc": "天下刀剑，斩不断这情丝万缕#真实生活分享计划 #光剑 #jk道具",
+      "create_time": 1776669612,
+      "duration": 23987,
+      "hashtags": [
+        "真实生活分享计划",
+        "光剑",
+        "jk道具"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7630737875617296767",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oQhLLQcI1b7gBQXIUCLTApPGACae0Ba1e6yBRf~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=THNLXkqbR%2FUDP9Xbj3QdIV%2BQU%2Fk%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 19,
+          "comment_count": 4,
+          "share_count": 1,
+          "play_count": 0,
+          "collect_count": 1
+        }
+      ]
+    },
+    "7630346547334601983": {
+      "aweme_id": "7630346547334601983",
+      "desc": "这么萌的bnt只要35.9🥕就能带回家啦#真实生活分享计划 #lolita原创 #lolita手作娘 #lolita头饰推荐 #波奈特",
+      "create_time": 1776578499,
+      "duration": 25450,
+      "hashtags": [
+        "真实生活分享计划",
+        "lolita原创",
+        "lolita手作娘",
+        "lolita头饰推荐",
+        "波奈特"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7630346547334601983",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oEfIaQbwAAeXBUzM7Ff4NTDCJiylCEBJ8GXBDk~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=fQsgVJpGN0sLySWW9Po7%2Bsas%2FHs%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 75,
+          "comment_count": 9,
+          "share_count": 6,
+          "play_count": 0,
+          "collect_count": 9
+        }
+      ]
+    },
+    "7629568781077206761": {
+      "aweme_id": "7629568781077206761",
+      "desc": "在廉价的生活里做着轻飘飘的公主梦。#lolita原创 #购物清单",
+      "create_time": 1776397410,
+      "duration": 0,
+      "hashtags": [
+        "lolita原创",
+        "购物清单"
+      ],
+      "style_tags": [
+        "甜lo"
+      ],
+      "post_url": "https://www.douyin.com/video/7629568781077206761",
+      "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/okDAwDDcFAa34rhKA9K6ACFAfloEINAfgpaJ4E~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=DQnpb3b7gSINFOgCV1%2ButHd37GM%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 50367,
+          "comment_count": 2293,
+          "share_count": 10361,
+          "play_count": 0,
+          "collect_count": 11285
+        }
+      ]
+    },
+    "7629364918647582931": {
+      "aweme_id": "7629364918647582931",
+      "desc": "他开着邻居家的Toyota🏎️追着日落🌇被父母说是最危险地方她都去过🤓今晚演出的raper🤟算得上是她最喜欢她走到吧台先点了一杯whisky酸🍹She just living he……版本过低，升级后可展示全部信息",
+      "create_time": 1776349946,
+      "duration": 9939,
+      "hashtags": [],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7629364918647582931",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oUvDCgd0MQAetfgUPz8Wg8DjeAQsfEMjnIK2zX~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=ujQiOKoS60bmS1JUHUo6Dzc8h%2Bg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 36,
+          "comment_count": 6,
+          "share_count": 1,
+          "play_count": 0,
+          "collect_count": 3
+        }
+      ]
+    },
+    "7627450396676207871": {
+      "aweme_id": "7627450396676207871",
+      "desc": "想陪你翻山越岭#水手服 #走拍 #夏季 #梧州",
+      "create_time": 1775904186,
+      "duration": 12702,
+      "hashtags": [
+        "水手服",
+        "走拍",
+        "夏季",
+        "梧州"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7627450396676207871",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/ocfaqTzWIm7EALMrxDaEJABJh7wtC5GxBIbe7f~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=et1PuXyh4BK8J2KiPgqWHYkjDi4%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 17,
+          "comment_count": 0,
+          "share_count": 0,
+          "play_count": 0,
+          "collect_count": 0
+        }
+      ]
+    }
+  }
+}

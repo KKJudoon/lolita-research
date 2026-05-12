@@ -1,0 +1,51 @@
+{
+  "sec_uid": "MS4wLjABAAAAXb-4Ck6I7ki0OzCtWsaKhBHlyji-TkYqk1jzF5tNRRI",
+  "uid": "100541042169",
+  "nickname": "楠木南",
+  "signature": "",
+  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAXb-4Ck6I7ki0OzCtWsaKhBHlyji-TkYqk1jzF5tNRRI",
+  "role_tag": "unknown",
+  "sig_score": 0,
+  "sig_matches": [],
+  "sources": [
+    "my_favorites"
+  ],
+  "confirmed_by_user": true,
+  "snapshots": [
+    {
+      "ts": "2026-05-12T10:38:03+08:00",
+      "follower_count": 126,
+      "aweme_count": 0,
+      "total_favorited": 20086,
+      "following_count": 17
+    }
+  ],
+  "posts": {
+    "7635762655496707321": {
+      "aweme_id": "7635762655496707321",
+      "desc": "要是能早一点开智呢……压力给到下半年！（价格为不带披风）#王子系lolita #军lo P2忘算帽子了",
+      "create_time": 1777839537,
+      "duration": 0,
+      "hashtags": [
+        "王子系lolita",
+        "军lo"
+      ],
+      "style_tags": [
+        "军lo",
+        "王子lo"
+      ],
+      "post_url": "https://www.douyin.com/video/7635762655496707321",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oUEX9ADr9D6f2ABA3fNUe8vEAwmFEApJEIwAaP~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=D36WkyN78OBh9DBQlsp6ggRXric%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104520949507CFA9BDCED9E5AE",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 20034,
+          "comment_count": 487,
+          "share_count": 3491,
+          "play_count": 0,
+          "collect_count": 3218
+        }
+      ]
+    }
+  }
+}

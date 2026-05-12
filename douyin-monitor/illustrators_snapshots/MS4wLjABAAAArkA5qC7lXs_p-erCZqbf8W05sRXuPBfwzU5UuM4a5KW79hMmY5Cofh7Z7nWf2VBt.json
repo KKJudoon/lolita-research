@@ -1,0 +1,47 @@
+{
+  "sec_uid": "MS4wLjABAAAArkA5qC7lXs_p-erCZqbf8W05sRXuPBfwzU5UuM4a5KW79hMmY5Cofh7Z7nWf2VBt",
+  "uid": "4355627589056632",
+  "nickname": "🤍",
+  "signature": "许愿钱。\n咋没有用户0213啊。，",
+  "profile_url": "https://www.douyin.com/user/MS4wLjABAAAArkA5qC7lXs_p-erCZqbf8W05sRXuPBfwzU5UuM4a5KW79hMmY5Cofh7Z7nWf2VBt",
+  "role_tag": "unknown",
+  "sig_score": 0,
+  "sig_matches": [],
+  "sources": [
+    "my_favorites"
+  ],
+  "confirmed_by_user": true,
+  "snapshots": [
+    {
+      "ts": "2026-05-12T10:38:03+08:00",
+      "follower_count": 241,
+      "aweme_count": 2,
+      "total_favorited": 83104,
+      "following_count": 193
+    }
+  ],
+  "posts": {
+    "7635569105265141578": {
+      "aweme_id": "7635569105265141578",
+      "desc": "和你一起听歌就是共享心跳(>^ω^<)@Dianays #网易云",
+      "create_time": 1777794470,
+      "duration": 0,
+      "hashtags": [
+        "网易云"
+      ],
+      "style_tags": [],
+      "post_url": "https://www.douyin.com/video/7635569105265141578",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oYCC9BzAHvTDYJjRAAA9akf2AqAFtfEpgIUQsS~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=feiVWCVyarCw7NAu68CHMPRthiI%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104457D88E6C74678407051F6E",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T10:38:03+08:00",
+          "digg_count": 45,
+          "comment_count": 2,
+          "share_count": 1,
+          "play_count": 0,
+          "collect_count": 1
+        }
+      ]
+    }
+  }
+}
