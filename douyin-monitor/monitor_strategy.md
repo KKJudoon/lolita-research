@@ -148,13 +148,49 @@ def viral_score(post, history):
 3. **行动**：联系画师（DM / 进群 / 留言）→ 谈价 → 买断 → 自家做衣
 4. **复盘**：viral 是否兑现（30 天后看流量峰值）→ 调权重
 
+## 🎯 画师入池筛选规则 (2026-05-12 最终版)
+
+**两阶段筛选**：
+
+### 阶段 1：粗筛 — signature 黑话扫描
+- 拉 profile 的 signature
+- 命中黑话词典里的 HIGH/MED/弱信号词
+- 阈值 ≥ 10 才进下一阶段
+- 详细规则参见 `jargon_dictionary.md`
+
+### 阶段 2：精筛 — L∩I 交集指标 (关键)
+
+每个候选 sec_uid，拉近 20 帖 hashtag，计算：
+
+| 集合 | 含义 |
+|---|---|
+| **L** | 该帖 hashtag 含 lolita-direct 词 (lolita/洛丽塔/lo裙/三坑/lolita原创设计...) |
+| **I** | 该帖 hashtag 含 illustrator-action 词 (画稿/柄图/服设/设计稿/手绘/lolita原创设计/原创设计...) |
+| **L∩I** | 该帖同时含 L 和 I |
+
+阈值：
+- **L∩I ≥ 2** → ✅ 进入画师主池 (illustrators_master.jsonl, role_tag=illustrator)
+- L∩I = 1 → 🟡 边缘候选，人工 review
+- L∩I = 0 → ❌ 拒绝（即使 signature 黑话分高也拒，因为作品不证）
+
+⚠ 已知反例（必须能识别）：
+- **图案设计师**（textile pattern）≠ garment 画稿（如 JUJU）
+- **手作/缝纫师** ≠ 画师（如 揭子讷- "手作狂魔"）
+- **OC/二次元 画师** ≠ lolita 画师（如 kstina）
+- **穿搭博主** lolita 帖无 illustrator action
+
+详见 `jargon_dictionary.md` "🚫 反例" 章节。
+
+---
+
 ## 📅 实施阶段
 
-### Phase 1（这次会话 → 完成基线）
-- ✅ 画师池整合 (illustrators_master.jsonl)
+### Phase 1（已完成 2026-05-12）
+- ✅ 画师池整合 (illustrators_master.jsonl, 16 真 lolita 画师)
 - ✅ 基线 snapshot（每画师 t0 数据）
-- ✅ HTML 画师调研页（含数据时点）
+- ✅ HTML 画师调研页（含数据时点 + 表格+sort+filter+search）
 - ✅ HTML 军lo 稿件专题页
+- ✅ L∩I 指标确立 + 反例案例库
 
 ### Phase 2（下次 → 监控自动化）
 - monitor.py：定时拉 snapshot

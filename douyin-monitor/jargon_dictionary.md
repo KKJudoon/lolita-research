@@ -115,6 +115,62 @@ def score(signature, nickname):
 
 ---
 
+## 🎯 关键判断指标 (2026-05-12 加入): L∩I 交集帖数
+
+**只看 signature 不够**——signature 可能写「lolita版型设计师」但实际作品都是 OC（如 v3 误报案例 kstina：sig 含「服设」分 15，但 20 帖里 0 帖跟 lolita 有交叉）。
+
+**真正判定**：看每条帖子的 hashtag 是否同时具备两个条件：
+
+| 集合 | 必须命中的 hashtag (任一即算) |
+|---|---|
+| **L (lolita-direct)** | lolita / Lolita / lo裙 / lo装 / lo娘 / 洛丽塔 / 三坑 / lolita原创设计 / lolita原创 / lolita洋装 / lolita安利 / lolita穿搭 / 洛丽塔图案 ... |
+| **I (illustrator-action)** | 画稿 / 柄图 / 服设 / 设计稿 / 手绘 / 手绘过程 / 出图 / 立绘 / 线稿 / 稿件 / 稿件展示 / 原画 / 服装设计 / 服装设计稿 / **lolita原创设计** / **原创设计** / lolita画稿 / lolita柄图 / lolita服设 / lolita画手 / lolita设计稿 / lolita服装设计 / lolita原创设计稿 / 画手 / 插画 |
+
+**L∩I 计算**：画师近 20 帖中，**同时含 L 和 I hashtag** 的帖子数。
+
+| L∩I | 判定 |
+|---|---|
+| ≥3 | ✅ STRONG — 真 lolita 画师 |
+| =2 | ✅ MEDIUM — 真画师，作品分散 |
+| =1 | 🟡 WEAK — 偶尔画 lolita 的通用画师 |
+| =0, L>0 | ❌ 可能是穿搭博主（lolita 帖但没画师 action）|
+| =0, I>0 | ❌ 通用画师（画但不画 lolita）|
+
+---
+
+## 🚫 反例：易误报的非-lolita-画师（必须能识别）
+
+| 类型 | 反信号 hashtag | 例 |
+|---|---|---|
+| **图案设计师**（textile pattern, not garment） | 图案设计 / 花型设计 / 印花 / 服装图案 / 面料图案 / 设计教程 | 图案设计师JUJU |
+| **手作/缝纫师** | 手作 / Lolita手作 / 手作服饰 / 缝纫 | 揭子讷-（"手作狂魔"）|
+| **OC/二次元 画师** | oc / 重返未来1999 / 二次元 / 同人 / 绘画 (单独, 无 lolita) | kstina, 微生隗安 |
+| **绘画教学博主**（已在 role_taxonomy 排除）| 零基础 / 笔刷 / 画世界 / procreate绘画教程 / 人体结构 | 插画师Ann/Chris |
+| **穿搭博主** | lolita / lo裙 / 穿搭 (但**无** illustrator action hashtag) | 穿 lolita 但不画 |
+
+⚠ **共性**：这些号的帖子可能含 lolita 词 OR illustrator action 词，但**不会同时含两者**。这就是 L∩I=0 的根本含义。
+
+---
+
+## 📐 历史误报案例
+
+| 案例 | 错判 | 正确 | 原因 |
+|---|---|---|---|
+| **kstina** (1.3万粉, sig含"服设") | 自动算法 = STRONG | 实际 = OC 画师 (0 lolita post) | sig 黑话足但作品无 lolita |
+| **图案设计师JUJU** (1454粉) | 自动算法 = 通过 (sig含"图案设计师") | 实际 = 瓦栏网 textile 花型师 | 图案设计 ≠ garment 画稿 |
+| **揭子讷-** (56粉, sig "服设专业\|手作狂魔") | 自动算法 = 通过 | 实际 = 手作 + cos + Lolita 多领域 | 手作 ≠ 画稿 |
+| **典娜爱画画** (43粉, sig "oc服设") | 自动算法 v1 = drop (16% lolita_ratio) | 实际 = MEDIUM 真 lolita 画师 (L∩I=2) | 看交集，不看 ratio |
+
+教训：**hashtag 交集 (L∩I) 优于 lolita_ratio 优于 signature 黑话分**。
+
+---
+
 ## 维护
 
 发现新黑话词随时加进对应等级。`douyin-monitor/illust_search_v2.jsonl` 里 sig_matches 字段记录每个候选命中了哪些词，可以反推哪些词高频。
+
+新画师筛选管线（最终）：
+1. signature 黑话扫描得粗候选
+2. 拉每个候选最近 20 帖 hashtag
+3. 计算 L∩I
+4. L∩I ≥ 2 → 加入主池；L∩I = 0 → 丢弃；L∩I = 1 → 人工 review
