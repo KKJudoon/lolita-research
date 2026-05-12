@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>梦境巡游 Dream Parade - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (22)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>梦境巡游 Dream Parade <span class="role-label role-illustrator">画师</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T18:21:00+08:00</span>
+  · 粉丝 3709 · 作品总数 11 · 来源 ai_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">自有专业设计团队+独立工厂， / 从设计、打版到生产全程把控， / 专注原创服饰，用心做好每一件作品。 / 4k粉抽👗</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAADRKEGdr5CNNAa0pFre1kUXWrycCzIX8eVjCoPYwykbk" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（16）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oIcA0fF8KIDFz0CA129gfVEbpxQo9lNADRZWbB~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=X8xeTQ7szwcN3p6%2FtsZO3LvisUQ%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">是新款！ #稿件展示 #lolita #lolita安利 #梦境巡游</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#lolita</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#梦境巡游</span></div>
+              <div class="meta">2026-04-29 · <a href="https://www.douyin.com/video/7634003354712578395" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 6373 ·
+                💬 505 ·
+                ⭐ 1141 ·
+                ↗ 793 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oYsAlvho9gJeBkAIAF2iAwCDbAeiEUc507u8AD~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=kTOUj3GLx7%2BFjmJSisn53%2FM5T4o%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">征名结束啦 。4.23“翻糖兔茶会”中选 感谢各位老婆们  新款洛丽塔裙子来啦，要被迷住了！征名中选中88#稿件展示 #lolita #lolita安利 #lolita上新</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#lolita</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#lolita上新</span></div>
+              <div class="meta">2026-04-22 · <a href="https://www.douyin.com/video/7631472626951534154" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 2538 ·
+                💬 2471 ·
+                ⭐ 269 ·
+                ↗ 201 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owHAEVCpAgAIcD9AAi5UfAtA5jzBfixiNDHs1A~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=pYPVtBeJW0XFmMHz6O888Ud8AJw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老婆们第一版样衣出来啦 #lo裙安利 #Lolita #梦境巡游 #lo裙 #不愧是lolita</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lo裙安利</span> <span class="hashtag">#Lolita</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#lo裙</span> <span class="hashtag">#不愧是lolita</span></div>
+              <div class="meta">2026-05-05 · <a href="https://www.douyin.com/video/7636329572501769203" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1861 ·
+                💬 268 ·
+                ⭐ 284 ·
+                ↗ 392 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oAGsDFDg9AArmQGPD0EIJ0BAbCcgUzeg9pfScj~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=hX9RqrHSSh6i1zHS3VQXsbpUpWI%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老婆们有别的建议都可以留言哦 #lolita #lolita洋装 #lolita安利 #梦境巡游#面料</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita</span> <span class="hashtag">#lolita洋装</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#面料</span></div>
+              <div class="meta">2026-05-01 · <a href="https://www.douyin.com/video/7634847432111437683" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 681 ·
+                💬 73 ·
+                ⭐ 81 ·
+                ↗ 56 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogSx6D8BIADkHBAAgAFECiUATED9gAFepzCbIf~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=lnvasT4cTy8d%2FdWGmT2es%2FV5ITU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老婆们有任何建议都可以提出 包括颜色版型用料等等 我们都会看到滴  #lolita #lolita安利 #梦境巡游 #原创设计 #lo裙</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#原创设计</span> <span class="hashtag">#lo裙</span></div>
+              <div class="meta">2026-04-30 · <a href="https://www.douyin.com/video/7634469049828701618" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 643 ·
+                💬 49 ·
+                ⭐ 147 ·
+                ↗ 72 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/oEn77aW3TIGABABrSEfF0HVEQdDAAjAUEAfeo3~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=ckOG1Xr7vVDDGa4Y0l6kKl0P%2FNY%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老婆们久等啦 二样进度来啦 因为在面料上有点选择困难 所以进度推迟了一些 辛苦老婆们再等等我们哦 提到的问题我们都有在努力解决 希望给大家带来满意的裙子～  #lolita设计 #……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita设计</span></div>
+              <div class="meta">2026-05-08 · <a href="https://www.douyin.com/video/7637442267716749798" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 478 ·
+                💬 75 ·
+                ⭐ 46 ·
+                ↗ 68 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oAmVI8qDAGIHfA8TkofEeLRVACMvZQzc2KfdFF~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=TXBNZRKd%2FU%2FN9VhRzRKDdki%2B7g4%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">红色款头版来了，还有一些不满意的细节要继续调整 ，一点工作花絮</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-03-21 · <a href="https://www.douyin.com/video/7619616167858585161" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 327 ·
+                💬 15 ·
+                ⭐ 9 ·
+                ↗ 20 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oMD0pAAOpDAovpecC4FEgKDUA3A9RSAIERfSDN~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=afocu%2Bv8Pxo7BSKnruzcaEJDF78%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">‧₊⋆ 𝓛𝓸𝓸𝓴𝓲𝓷𝓰 𝓾𝓹 𝓪𝓽 𝓼𝓹𝓻𝓲𝓷𝓰 𝓾𝓷𝓭𝓮𝓻 𝓽𝓱𝓮 𝓫𝓵𝓸𝓸𝓶𝓲𝓷𝓰 𝓯𝓵𝓸𝔀𝓮𝓻𝓼₊˚⟡于繁花下仰望春#这条裙子有灵魂 #lo裙安利 #lolita拍照姿势 #……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#这条裙子有灵魂</span> <span class="hashtag">#lo裙安利</span> <span class="hashtag">#lolita拍照姿势</span></div>
+              <div class="meta">2026-04-13 · <a href="https://www.douyin.com/video/7628204348975545010" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 163 ·
+                💬 14 ·
+                ⭐ 12 ·
+                ↗ 28 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oMHBG1DZFA7r0wTgA7vGAEwBFoPIQGAfATe9eE~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=OZRia28ZgSOJzIerJLqUcfFVRGQ%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">*｀^裙摆超萌*｀.^蓝粉色好喜欢！！ #吃我一波lolita安利 #lolita安利 #新款上新 #可爱裙子 #梦境巡游</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#吃我一波lolita安利</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#新款上新</span> <span class="hashtag">#可爱裙子</span> <span class="hashtag">#梦境巡游</span></div>
+              <div class="meta">2026-04-23 · <a href="https://www.douyin.com/video/7631879610955650022" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 156 ·
+                💬 39 ·
+                ⭐ 24 ·
+                ↗ 46 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/osooADvBDE1Teh0AprCtDeBCgCIApisAiAAiIg~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=O1%2B21MCV01kCYpOrq9TpGc7zP9U%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">你也会为这个裙摆着迷吧~#美美的裙子 #lolita安利 #吃我一波lolita安利 #梦境巡游 #裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#美美的裙子</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#吃我一波lolita安利</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#裙摆</span></div>
+              <div class="meta">2026-04-16 · <a href="https://www.douyin.com/video/7629287849197061811" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 154 ·
+                💬 4 ·
+                ⭐ 9 ·
+                ↗ 9 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/ogE6UeB0a9vH3iuo2E3BDgBADEAfA8O0cIzHi4~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=O3qPfSgGG7H6kDnvIrU4%2FfrKIL0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">来尝一口奶油纸杯蛋糕！ #lolita洋装 #lolita安利 #梦境巡游 #lolita</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita洋装</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#lolita</span></div>
+              <div class="meta">2026-04-27 · <a href="https://www.douyin.com/video/7633350909942470554" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 148 ·
+                💬 17 ·
+                ⭐ 10 ·
+                ↗ 11 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oUVrA7fBDE1Qed0Aosi3D6itVCRA6iiAiAAKIg~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=i039FsXp2d9GezpVA8F30UgEqWA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">薇莉尔庄园｜op模特图展示。#洛丽塔lolita #lolita #lo裙安利 #lo裙 #洋娃娃</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#洛丽塔lolita</span> <span class="hashtag">#lolita</span> <span class="hashtag">#lo裙安利</span> <span class="hashtag">#lo裙</span> <span class="hashtag">#洋娃娃</span></div>
+              <div class="meta">2026-04-08 · <a href="https://www.douyin.com/video/7626196468823591342" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 139 ·
+                💬 15 ·
+                ⭐ 14 ·
+                ↗ 20 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oUfsBAHI7GEe1tOYtAA9fgAwQA8TvwGx2XqBLE~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=hSGyshv%2FLF0qCbAYQS8xRkWs3xI%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老婆们！多种搭配图来啦！快来看看有没有你喜欢的吧~#lo裙安利 #不愧是lolita #洛丽塔lolita #梦境巡游 #新店上新</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lo裙安利</span> <span class="hashtag">#不愧是lolita</span> <span class="hashtag">#洛丽塔lolita</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#新店上新</span></div>
+              <div class="meta">2026-04-17 · <a href="https://www.douyin.com/video/7629641341756172874" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 126 ·
+                💬 10 ·
+                ⭐ 20 ·
+                ↗ 24 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oQgAHd0hBXeMiqrAiBATNEIBwgtDfGMB1QvMr5~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=meNBMT4YKhJMXkFy2JFW89Tgszw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">就这样萌萌的走下去 yc:@記瑶 #lo裙 #lolita #走拍#梦境巡游</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lo裙</span> <span class="hashtag">#lolita</span> <span class="hashtag">#走拍</span> <span class="hashtag">#梦境巡游</span></div>
+              <div class="meta">2026-04-28 · <a href="https://www.douyin.com/video/7633705500807581257" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 119 ·
+                💬 13 ·
+                ⭐ 8 ·
+                ↗ 5 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oQOyAefDDEzP9cpAVdixDz23PCAAUEQAFAADIg~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=dk2kZUW8b8gjAdCIwNRDB9qSICk%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">2号头版出来啦~老婆快来看看，后续会对袖子进行修改滴！ #lo #lolita安利 #lolita洋装 #lolitafashion  #lolita穿搭</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lo</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#lolita洋装</span> <span class="hashtag">#lolitafashion</span> <span class="hashtag">#lolita穿搭</span></div>
+              <div class="meta">2026-04-03 · <a href="https://www.douyin.com/video/7624441443755523657" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 63 ·
+                💬 6 ·
+                ⭐ 4 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/okIqDCDDpBWz2PxFEe31HAITAAIrf6Sg79Q2ro~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=zbWRqlT62un%2FmIjolzxHuwK6PVc%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512182704240E1082E2F8B3ED8998" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">新增无袖版，迎接夏天啦~ #美美的裙子 #吃我一波lolita安利 #梦境巡游 #夏天裙子 #lolita安利</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#美美的裙子</span> <span class="hashtag">#吃我一波lolita安利</span> <span class="hashtag">#梦境巡游</span> <span class="hashtag">#夏天裙子</span> <span class="hashtag">#lolita安利</span></div>
+              <div class="meta">2026-04-24 · <a href="https://www.douyin.com/video/7632294486509194226" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 61 ·
+                💬 5 ·
+                ⭐ 6 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T18:21:00+08:00 时点。</footer>
+</body></html>

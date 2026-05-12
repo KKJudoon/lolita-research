@@ -4,22 +4,17 @@
   "nickname": "初级召唤师",
   "signature": "aigc召唤师  作品为ai技术辅助\n热爱做各种小裙子 非垫图溶图\n红薯同名   禁止商用禁止搬运\n自行避⚡ 不喜5️⃣入 合作可私",
   "profile_url": "https://www.douyin.com/user/MS4wLjABAAAAJccCq1Cqc1M61W_iZrJw6uQcUr0yozRYG7kIdvf4Q53_ePGGZmiycKZHvwr9eglb",
-  "role_tag": "unknown",
-  "sig_score": 10,
-  "sig_matches": [
-    "禁止商用"
-  ],
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-i-0813_oIFAAfuDOIAJPACA20JI5fA1dgi2sCBDoEt9Ai.jpeg?from=2956013662",
+  "role_tag": "illustrator",
   "sources": [
-    "my_following"
+    "feed50_discovery"
   ],
-  "confirmed_by_user": true,
   "snapshots": [
     {
-      "ts": "2026-05-12T10:38:03+08:00",
-      "follower_count": 7977,
+      "ts": "2026-05-12T18:14:42+08:00",
+      "follower_count": 7999,
       "aweme_count": 69,
-      "total_favorited": 295035,
-      "following_count": 42
+      "total_favorited": 296115
     }
   ],
   "posts": {
@@ -27,7 +22,6 @@
       "aweme_id": "7631193960149261166",
       "desc": "如果你有一张线稿。线稿转写实效果图预览#lo裙安利 #洛丽塔 #安利一波lolita #服设 #lo裙",
       "create_time": 1776775802,
-      "duration": 0,
       "hashtags": [
         "lo裙安利",
         "洛丽塔",
@@ -36,50 +30,73 @@
         "lo裙"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7631193960149261166",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/og5gDycXAryAdzN0eFvCA4LKliIGEAinADAevB~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=f%2B3gIvhwkXDncVGs2Nwaa6oQ0WU%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/og5gDycXAryAdzN0eFvCA4LKliIGEAinADAevB~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=FYrngmWHpRpTArEVed1IhOoafPo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 74,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 75,
           "comment_count": 6,
           "share_count": 6,
           "play_count": 0,
           "collect_count": 17
         }
+      ]
+    },
+    "7638851553626423625": {
+      "aweme_id": "7638851553626423625",
+      "desc": "4款童话公主洛丽塔设计。奶黄色像融化的黄油，金蝶与珍珠缀满裙摆，每一层蕾丝都闪着细碎星光✨#lolita安利 #安利一波lolita #lolita原创设计 #lolita洋装 #……版本过低，升级后可展示全部信息",
+      "create_time": 1778558724,
+      "hashtags": [
+        "lolita安利",
+        "安利一波lolita",
+        "lolita原创设计",
+        "lolita洋装"
       ],
-      "is_lolita": true
+      "style_tags": [],
+      "is_lolita": true,
+      "post_url": "https://www.douyin.com/video/7638851553626423625",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oM1e7AiAXADMWCNMAmJip4gEBfAiiAAUHCA1VI~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=IrwKDj6xGEbJGsLAZf64qEv0dZE%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
+      "snapshots": [
+        {
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 551,
+          "comment_count": 12,
+          "share_count": 121,
+          "play_count": 0,
+          "collect_count": 94
+        }
+      ]
     },
     "7638335606078856806": {
       "aweme_id": "7638335606078856806",
       "desc": "哈哈4款灰姑娘童话风洛丽塔裙设计。依旧听歌有感~童话公主怎么能少了灰姑娘呢~ 灰姑娘的蓝裙子是影史有名的，能有十分之一的美也是可以了#lo裙 #安利一波lolita #服装设计 #……版本过低，升级后可展示全部信息",
       "create_time": 1778472120,
-      "duration": 0,
       "hashtags": [
         "lo裙",
         "安利一波lolita",
         "服装设计"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7638335606078856806",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oU0DTnPriIDgABXAvPAQiA7cjALDAIuEQaBA6~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=VJNro9oQdA5tTLAI%2BUeiKFDrIco%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oU0DTnPriIDgABXAvPAQiA7cjALDAIuEQaBA6~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=GvoOaPf%2BZThtX11wXabDypDAr9g%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 408,
-          "comment_count": 13,
-          "share_count": 44,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 515,
+          "comment_count": 16,
+          "share_count": 53,
           "play_count": 0,
-          "collect_count": 68
+          "collect_count": 84
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7637973172440897523": {
       "aweme_id": "7637973172440897523",
       "desc": "今天是4款爱丽丝童话洛丽塔设计。总有一条蜿蜒在童话镇里梦幻的河~#lolita安利 #lolita原创设计 #安利一波lolita #lo裙 #lolita aigc非实体设计哦",
       "create_time": 1778385720,
-      "duration": 0,
       "hashtags": [
         "lolita安利",
         "lolita原创设计",
@@ -88,25 +105,24 @@
         "lolita"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7637973172440897523",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEE72xQfoHAkAuDEEAf8FwAaAgI3BAmZB4fTiB~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=a3O5L0vHUz%2FUPqgPmQhuZxu1Ayk%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEE72xQfoHAkAuDEEAf8FwAaAgI3BAmZB4fTiB~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=HmBq0rh8WcAPtNUcWjsaR200oKg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 1237,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 1296,
           "comment_count": 44,
-          "share_count": 182,
+          "share_count": 192,
           "play_count": 0,
-          "collect_count": 255
+          "collect_count": 278
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7637739099956967334": {
       "aweme_id": "7637739099956967334",
       "desc": "4款紫绿渐变洛丽塔设计。aigc非实体设计哦#lolita安利 #lo裙安利 #lolita #洛丽塔 #lolita洋装",
       "create_time": 1778299711,
-      "duration": 0,
       "hashtags": [
         "lolita安利",
         "lo裙安利",
@@ -115,50 +131,48 @@
         "lolita洋装"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7637739099956967334",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oAsrTBQ4LADrAvAkITHBEn0eWaFu7frEdAq0fA~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=Pp063z0CSeIyl6DoDEAE2WvcclQ%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oAsrTBQ4LADrAvAkITHBEn0eWaFu7frEdAq0fA~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=4J3a6QDrF%2FgGpVNd5ahlcsRE0QA%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
+          "ts": "2026-05-12T18:14:42+08:00",
           "digg_count": 411,
-          "comment_count": 15,
+          "comment_count": 16,
           "share_count": 68,
           "play_count": 0,
           "collect_count": 83
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7637236505278928115": {
       "aweme_id": "7637236505278928115",
       "desc": "4款童话白雪洛丽塔裙设计有你喜欢的吗?可能童话故事里都是骗人的~｡°(°¯᷄◠¯᷅°)°｡~ 但是传递的想法是能够感受到的:）#lolita安利 #lolita原创 #lolita……版本过低，升级后可展示全部信息",
       "create_time": 1778212920,
-      "duration": 0,
       "hashtags": [
         "lolita安利",
         "lolita原创",
         "lolita"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7637236505278928115",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ok9BAkTI8QfDvEr6AgaSOfEqFBA7DAfgDt75AE~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=wG%2FNcF8PA1j0fQIToO3pfU%2F6Lu8%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ok9BAkTI8QfDvEr6AgaSOfEqFBA7DAfgDt75AE~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=P1m%2F%2F6T%2FBPDiSpgzssis%2BnxiPoc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 849,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 859,
           "comment_count": 28,
-          "share_count": 147,
+          "share_count": 149,
           "play_count": 0,
-          "collect_count": 181
+          "collect_count": 183
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7636853727358212186": {
       "aweme_id": "7636853727358212186",
       "desc": "白月光礼服裙设计。还是不能少了白色呀！aigc非实体设计哦！#洛丽塔 #lolita #服装设计 #礼服 #神仙裙子",
       "create_time": 1778126460,
-      "duration": 0,
       "hashtags": [
         "洛丽塔",
         "lolita",
@@ -167,25 +181,24 @@
         "神仙裙子"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7636853727358212186",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oEAAuIAw7x0APSDjs9iiCifAeAcBogNNTEPDnA~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=A7sZynx6DDF%2Fq1BxNCD8Fc7mr9M%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oEAAuIAw7x0APSDjs9iiCifAeAcBogNNTEPDnA~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=v70GKcKCizRZogIHmCjjYg3TRwQ%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 507,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 529,
           "comment_count": 11,
-          "share_count": 55,
+          "share_count": 58,
           "play_count": 0,
-          "collect_count": 232
+          "collect_count": 239
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7636625669959799898": {
       "aweme_id": "7636625669959799898",
       "desc": "浅冰蓝城堡少女洛丽塔设计。#洛丽塔 #lolita #lo裙 #lolita裙 #裙子 aigc非实体设计",
       "create_time": 1778040470,
-      "duration": 0,
       "hashtags": [
         "洛丽塔",
         "lolita",
@@ -194,25 +207,24 @@
         "裙子"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7636625669959799898",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owQ7Ifa7ABPrNDDABAAFIepzEfvwTTEEcA6i6A~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=E3XSH3haF4eT%2BWeX%2BZYiJZumm9M%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owQ7Ifa7ABPrNDDABAAFIepzEfvwTTEEcA6i6A~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=EcMLhE9YMYlSgfmQuGJa26wnpTY%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 476,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 477,
           "comment_count": 9,
           "share_count": 32,
           "play_count": 0,
           "collect_count": 99
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7636252695930681074": {
       "aweme_id": "7636252695930681074",
       "desc": "五一特辑/热烈的红裙~偷加了些小蘑菇哈哈，aigc非实体设计图哦#洛丽塔 #lolita #裙子 #公主裙 #服装设计",
       "create_time": 1777953630,
-      "duration": 0,
       "hashtags": [
         "洛丽塔",
         "lolita",
@@ -221,25 +233,24 @@
         "服装设计"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7636252695930681074",
-      "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/ogQDlLnmaIAtC5GfgeudA0AAIeqmU51f4PuA27~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=3cPwEszr52mzC9Q%2FKWJRHplMC60%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ogQDlLnmaIAtC5GfgeudA0AAIeqmU51f4PuA27~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=jSCXSvcCrJoNRe96gaNNxRgSl68%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 2980,
-          "comment_count": 32,
-          "share_count": 678,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 3019,
+          "comment_count": 33,
+          "share_count": 690,
           "play_count": 0,
-          "collect_count": 1344
+          "collect_count": 1360
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7635884280707825842": {
       "aweme_id": "7635884280707825842",
       "desc": "五一特辑/暗黑日常小礼裙。就算是夏日小裙子也是喜欢黑色！aigc非实体设计哦#小黑裙 #裙子 #赫本小黑裙 #服装设计 #礼服",
       "create_time": 1777867852,
-      "duration": 0,
       "hashtags": [
         "小黑裙",
         "裙子",
@@ -248,25 +259,24 @@
         "礼服"
       ],
       "style_tags": [],
+      "is_lolita": false,
       "post_url": "https://www.douyin.com/video/7635884280707825842",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/o0iAINGvg9jEu3Ae3Gf0aAibNAYBODgAAv964C~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=wmwegZkIA1F4G2OgLgMzkIl5ZNI%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/o0iAINGvg9jEu3Ae3Gf0aAibNAYBODgAAv964C~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=mPOsNvTxhkn%2FbXtf%2BdNKswZMzr4%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 8828,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 8855,
           "comment_count": 48,
-          "share_count": 1147,
+          "share_count": 1152,
           "play_count": 0,
-          "collect_count": 3431
+          "collect_count": 3441
         }
-      ],
-      "is_lolita": false
+      ]
     },
     "7635514709119275494": {
       "aweme_id": "7635514709119275494",
       "desc": "春夏小礼裙第二弹~蓝白色。日常轻礼服裙有你喜欢的吗（づ￣3￣）づ╭❤～#lolita原创安利 #礼服 #公主裙 #洛丽塔洋装推荐 #lo裙 不是实体裙哦！",
       "create_time": 1777781804,
-      "duration": 0,
       "hashtags": [
         "lolita原创安利",
         "礼服",
@@ -275,48 +285,46 @@
         "lo裙"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7635514709119275494",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owIeLN0AbEUdwrv2BAESPfiDgAACOgP8iyAAc6~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=tqML9Od1LVkW6x7rF1SrHXYEwyI%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owIeLN0AbEUdwrv2BAESPfiDgAACOgP8iyAAc6~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=cEsB%2BbOz6HXGxrp6EPrwv8ghkcc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 541,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 559,
           "comment_count": 4,
-          "share_count": 90,
+          "share_count": 95,
           "play_count": 0,
-          "collect_count": 317
+          "collect_count": 325
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7634962942479375754": {
       "aweme_id": "7634962942479375754",
       "desc": "春夏本命！牛油果绿轻洛丽塔洋装合集。青风漫入裙裾，把一整个春日的绿意都揉进裙摆里🌿一眼清新美丽✨ 偶尔也做点日常轻礼裙，aigc非实体设计哦 (记住你看到的多数都是非实体喔)#绿色……版本过低，升级后可展示全部信息",
       "create_time": 1777694700,
-      "duration": 0,
       "hashtags": [
         "绿色"
       ],
       "style_tags": [],
+      "is_lolita": false,
       "post_url": "https://www.douyin.com/video/7634962942479375754",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEhBfea0RAC7GNAIA7fIAhEa1B6LEKTpTVwUAD~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=IcdCWCvwmFTmC2qdiA6feCvVPWk%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEhBfea0RAC7GNAIA7fIAhEa1B6LEKTpTVwUAD~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=PvSXtIsKzP%2FPBPWcH8ISH2ty0tc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 2110,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 2130,
           "comment_count": 50,
-          "share_count": 417,
+          "share_count": 421,
           "play_count": 0,
-          "collect_count": 983
+          "collect_count": 998
         }
-      ],
-      "is_lolita": false
+      ]
     },
     "7634626202477038066": {
       "aweme_id": "7634626202477038066",
       "desc": "甜甜的糖果洛丽塔设计图。甜心糖果lo裙，aigc非实体设计哦！#洛丽塔 #lo裙 #lolita #洛丽塔lolita #公主裙",
       "create_time": 1777608120,
-      "duration": 0,
       "hashtags": [
         "洛丽塔",
         "lo裙",
@@ -325,25 +333,24 @@
         "公主裙"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7634626202477038066",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oQB6BFEAaJALJI0pDL7PY5etAgGvBEAIfAATfz~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=yvWgaaMrt9qVbM3%2BF2700KvpPIo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oQB6BFEAaJALJI0pDL7PY5etAgGvBEAIfAATfz~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=OokMQlds8ih8JRZUp3L8OaLKPDw%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
+          "ts": "2026-05-12T18:14:42+08:00",
           "digg_count": 353,
           "comment_count": 8,
           "share_count": 26,
           "play_count": 0,
           "collect_count": 97
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7634243424074535370": {
       "aweme_id": "7634243424074535370",
       "desc": "白月清欢无别事，我在等风也等你^O^优雅少女洛丽塔裙设计图，奶白与薄荷绿的温柔撞色~ 像揉碎的月光落在绿野上，aigc非实体设计哦！#lo裙 #洛丽塔 #lolita #洛丽塔lo……版本过低，升级后可展示全部信息",
       "create_time": 1777521720,
-      "duration": 0,
       "hashtags": [
         "lo裙",
         "洛丽塔",
@@ -351,25 +358,24 @@
         "洛丽塔lo"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7634243424074535370",
-      "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogSFGIBYEiAOIgCeBAiNARAAA3S9f9LypZzDgX~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=OpUg4N%2Bh5KtNxEmbhDFua7Zk0YI%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogSFGIBYEiAOIgCeBAiNARAAA3S9f9LypZzDgX~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=OlESyqTH02S8%2BK5hqEdeDIMDerM%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 1932,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 1948,
           "comment_count": 40,
-          "share_count": 220,
+          "share_count": 223,
           "play_count": 0,
-          "collect_count": 429
+          "collect_count": 431
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7633860958217493422": {
       "aweme_id": "7633860958217493422",
       "desc": "予独爱莲洛丽塔设计图。莲花依旧如故~ 貌美lo裙（づ￣3￣）づ╭❤～ aigc非实体设计哦~ #lolita #lo裙 #洛丽塔lolita #洛丽塔 #lolita原创",
       "create_time": 1777435320,
-      "duration": 0,
       "hashtags": [
         "lolita",
         "lo裙",
@@ -378,25 +384,24 @@
         "lolita原创"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7633860958217493422",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oINFQACDIv9NHvAxYftxhQO6pfA1JDHD8AEgAA~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=KM%2BEKJifWbFzmbQa9gKYKqiZLLE%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oINFQACDIv9NHvAxYftxhQO6pfA1JDHD8AEgAA~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=XmdAxKf9wrgGIVv6M7GP7wqL8Qo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 4272,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 4333,
           "comment_count": 170,
-          "share_count": 928,
+          "share_count": 948,
           "play_count": 0,
-          "collect_count": 946
+          "collect_count": 960
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7633513134204244403": {
       "aweme_id": "7633513134204244403",
       "desc": "千金蝴蝶结设计。月光落在蔷薇上，晕开一抹温柔的酒红🌹 珍珠肩带勾勒肩线，一字肩自带柔光滤镜 贵气少女非实体设计！#服装设计 #lolita原创 #lo裙 #lolita #洛丽塔",
       "create_time": 1777349100,
-      "duration": 0,
       "hashtags": [
         "服装设计",
         "lolita原创",
@@ -405,25 +410,24 @@
         "洛丽塔"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7633513134204244403",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oQe2fffACAIIAzAb72G20ng3vQA7HX2NrLEDO4~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=RuXEPuOgjVzJcHhmEHzTjW%2BbOYg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oQe2fffACAIIAzAb72G20ng3vQA7HX2NrLEDO4~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=h7nY4%2FlRh8Ui%2BRO40ZwEsJGxqH8%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 806,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 807,
           "comment_count": 12,
-          "share_count": 89,
+          "share_count": 93,
           "play_count": 0,
           "collect_count": 141
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7633132115987727795": {
       "aweme_id": "7633132115987727795",
       "desc": "春日的风吹来铃兰的低语~aigc非实体设计哦#lo裙 #洛丽塔 #lolita #洛丽塔lolita #服饰种草官",
       "create_time": 1777262460,
-      "duration": 0,
       "hashtags": [
         "lo裙",
         "洛丽塔",
@@ -432,25 +436,24 @@
         "服饰种草官"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7633132115987727795",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEqAZEiDg8ACxUHFfAp9AAAiIuckl7QtlveHcN~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=37mptA4hUU4nHvHWYhhqlyd%2BzB0%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEqAZEiDg8ACxUHFfAp9AAAiIuckl7QtlveHcN~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=3PIZXAmSzY2Lt5qfoMa4SLORpnw%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 554,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 556,
           "comment_count": 6,
           "share_count": 79,
           "play_count": 0,
           "collect_count": 182
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7632775126127294921": {
       "aweme_id": "7632775126127294921",
       "desc": "桂花酿~金枝洛丽塔设计。以桂花为诗，以明黄为章~ 桂花真不好搭呜呜呜#真实生活分享计划 #洛丽塔 #lo裙 #lolita原创 #lolita aigc非实体设计哦",
       "create_time": 1777176300,
-      "duration": 0,
       "hashtags": [
         "真实生活分享计划",
         "洛丽塔",
@@ -459,25 +462,24 @@
         "lolita"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7632775126127294921",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/okE20iwAiIDEgke00tPQPAiAeAUi0BNwAAMICE~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=titE%2F9kF5isiZgXntQ7KQhWGGqY%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/okE20iwAiIDEgke00tPQPAiAeAUi0BNwAAMICE~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=NG82xRsy09%2FWdFrMG5fmLf%2Bs8Sw%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 1903,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 1905,
           "comment_count": 49,
-          "share_count": 189,
+          "share_count": 192,
           "play_count": 0,
-          "collect_count": 459
+          "collect_count": 462
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7632391316274124787": {
       "aweme_id": "7632391316274124787",
       "desc": "4款不同的糖果马卡龙裙。甜甜糖果色洛丽塔#洛丽塔 #lo裙 #lolita #服装 #lo裙安利 aigc非实体设计哦！",
       "create_time": 1777089720,
-      "duration": 0,
       "hashtags": [
         "洛丽塔",
         "lo裙",
@@ -486,25 +488,24 @@
         "lo裙安利"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7632391316274124787",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/os5e7eiDYAAHwrNzAZzPsXgEBPAOiAA4vCA0uI~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=CnM5i0QVYBtqw4IGt7UmcXXyDOo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/os5e7eiDYAAHwrNzAZzPsXgEBPAOiAA4vCA0uI~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=E9uYV76jAAdeVt5wK1nGiF1hHyg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
+          "ts": "2026-05-12T18:14:42+08:00",
           "digg_count": 671,
           "comment_count": 7,
           "share_count": 86,
           "play_count": 0,
           "collect_count": 177
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7632032583577439155": {
       "aweme_id": "7632032583577439155",
       "desc": "蓝夜花瓣摆设计图。aigc非实体设计哦#lo裙 #lolita #洛丽塔 #lo裙安利 #洛丽塔lolita",
       "create_time": 1777003320,
-      "duration": 0,
       "hashtags": [
         "lo裙",
         "lolita",
@@ -513,25 +514,24 @@
         "洛丽塔lolita"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7632032583577439155",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owqb4AIAeI7ASNqvwDEAiuB0AQFiiAKpCgItbe~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=0YlAepgpFWaQkgL5JQC2NzvgnZo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c001/owqb4AIAeI7ASNqvwDEAiuB0AQFiiAKpCgItbe~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=qs0HwyR1afaFG707V%2F9ljlZklw0%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
+          "ts": "2026-05-12T18:14:42+08:00",
           "digg_count": 336,
           "comment_count": 11,
           "share_count": 62,
           "play_count": 0,
           "collect_count": 126
         }
-      ],
-      "is_lolita": true
+      ]
     },
     "7631753218515566298": {
       "aweme_id": "7631753218515566298",
       "desc": "红和白的洛丽塔设计。aigc非实体#lo裙安利 #洛丽塔lolita #lo裙 #服装设计 #洛丽塔",
       "create_time": 1776916800,
-      "duration": 0,
       "hashtags": [
         "lo裙安利",
         "洛丽塔lolita",
@@ -540,45 +540,19 @@
         "洛丽塔"
       ],
       "style_tags": [],
+      "is_lolita": true,
       "post_url": "https://www.douyin.com/video/7631753218515566298",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4iAINaPltEE09Ae3be0kAiuzAMBFDgAAM7wpC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=SklU05UnCqfzrJCH3WQNwpgCm7M%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
+      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4iAINaPltEE09Ae3be0kAiuzAMBFDgAAM7wpC~noop.jpeg?lk3s=138a59ce&x-expires=1779789600&x-signature=h4GKkK5rb85uz7vKSJgtos%2FWQUc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512181445B2C0C738A1659950A09D",
       "snapshots": [
         {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 3747,
-          "comment_count": 60,
-          "share_count": 488,
+          "ts": "2026-05-12T18:14:42+08:00",
+          "digg_count": 3774,
+          "comment_count": 61,
+          "share_count": 492,
           "play_count": 0,
-          "collect_count": 957
+          "collect_count": 964
         }
-      ],
-      "is_lolita": true
-    },
-    "7631282628205295539": {
-      "aweme_id": "7631282628205295539",
-      "desc": "浮生思归/为了这首歌做的裙子哈哈。以云纹刺绣勾勒东方意境的仙气～ 似江南烟雨中传唱千年的思念～ 开始爱听戏曲是不是有点暴露年龄了  #服设 #洛丽塔 #lo裙 #lolita原创设……版本过低，升级后可展示全部信息",
-      "create_time": 1776830520,
-      "duration": 0,
-      "hashtags": [
-        "服设",
-        "洛丽塔",
-        "lo裙",
-        "lolita原创设"
-      ],
-      "style_tags": [],
-      "post_url": "https://www.douyin.com/video/7631282628205295539",
-      "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oYEAnFpE8CAfAZDkIfEoANAgEkw1R50ZCDMA9x~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=zpFoPxiNXQ8dCQ6c5q8%2Fc4W6WSA%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104334AE52F825FA1AE62ABE00",
-      "snapshots": [
-        {
-          "ts": "2026-05-12T10:38:03+08:00",
-          "digg_count": 157,
-          "comment_count": 9,
-          "share_count": 14,
-          "play_count": 0,
-          "collect_count": 24
-        }
-      ],
-      "is_lolita": true
+      ]
     }
   },
   "lolita_post_count": 19,

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黑糖的奇妙工坊 - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (22)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>黑糖的奇妙工坊 <span class="role-label role-illustrator">画师</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T18:21:00+08:00</span>
+  · 粉丝 4530 · 作品总数 10 · 来源 ai_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">用创意编制奇妙，每一件衣服都是故事的开始❤️ / 每周五更新每个系列的故事线 / 我是设计师，目前所有实物均为AI生成 / 收稿，合作请+V   _918wqy   备注来意 / （AI只是工具，设计是我一笔一笔画的)</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAAYRz93wImn2c-f_y2Wbw2X6NPGIg7kEgpByBJuM7ft9cx3Gw-Ml8jyEsD01koonG6" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（19）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ocgAOE2ypAAbbOm1ADCFGD53FAzINQf9OAyof2~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=k64oQNYXXdmt2N1g2J6PhCs7GEk%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">答应大家都白底三视图来啦!!! 哈喽宝宝们～我是黑糖！  今天给大家带来爱丽丝的三视图～  正面、侧面、背面展示设计细节 ✨ 温馨提示：三视图为AI生成效果，喜欢的宝宝记得点赞收藏……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-15 · <a href="https://www.douyin.com/video/7628938134948588388" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1.1万 ·
+                💬 441 ·
+                ⭐ 1871 ·
+                ↗ 2691 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oM409pA7eDiiAslhAAIA1wnfCTXg4iEBATNCbl~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=CfPi%2BtCJrM2UtgEgP1essN9TNXM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">下一套打版宝宝们想先看哪套啊。爱丽丝在找料子准备送去打样衣了，下一套打版宝宝们想先看小红帽还是白雪呢？ #lolta原创设计 #lolita服装设计 #小红帽lolita #白雪姬……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolta原创设计</span> <span class="hashtag">#lolita服装设计</span> <span class="hashtag">#小红帽lolita</span> <span class="hashtag">#白雪姬</span></div>
+              <div class="meta">2026-05-01 · <a href="https://www.douyin.com/video/7634925158092433908" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1.1万 ·
+                💬 916 ·
+                ⭐ 2007 ·
+                ↗ 1571 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/o06A49AD9imGACNAP02tepgAFiEwfALBIvQtuj~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=ZQ9KzNA9domAcLPDSMFov2aulEM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">白雪公主设计稿|当沉睡的王拿起剑刃✨。哈喽宝宝们～我是黑糖！ 童话系列·白雪公主设计稿来啦！ 她不再是等待王子救援的柔弱公主，而是一个从冰棺中苏醒、手持剑刃、掌控自己命运的君王。 ……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-27 · <a href="https://www.douyin.com/video/7633394799575532003" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 5678 ·
+                💬 234 ·
+                ⭐ 1218 ·
+                ↗ 836 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oYmAAy0ItaDBICS8gqNq3Pi3iAAeDAexggWCAE~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=z4zUF2%2F%2BiciWR2rQLxG3gdGilL0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">皇室之间的战争如果理由仅仅是忄支 忌美貌那也太无趣了，下周主题是王位唯一继承人白雪。 爱丽丝版差不多了这两天就能给大家端上来了，感谢大家的喜爱和等待。 #lolita原创设计 #军……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创设计</span> <span class="hashtag">#军</span></div>
+              <div class="meta">2026-04-26 · <a href="https://www.douyin.com/video/7633024921787218082" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 4514 ·
+                💬 195 ·
+                ⭐ 713 ·
+                ↗ 1290 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogERweC0MemBGiDZ8kDBsgAANgAPAz0AvIAhiY~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=2nErVx77kSOftqSnp0ASOG3cjI0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">小红帽系列设计稿来啦！✨。哈喽宝宝们～我是黑糖！  童话系列第二弹·小红帽设计稿来啦～  这次的设计灵感来源于经典童话《小红帽》，融入了狼的元素（一定要期待我的故事线啊！！！）： ……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-20 · <a href="https://www.douyin.com/video/7630794839647492468" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 2739 ·
+                💬 94 ·
+                ⭐ 451 ·
+                ↗ 428 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c001/oE4PemAfAAgenKCfG0QNeKf6ALAHf9gQEI9eAg0~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=tzdpK7OSTSdGj5QZPksWDaIIo4k%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">发烧了。。。。原定的更新白胚得延后几天了，谢谢大家的支持与喜爱，今天先更一波三视图，谢谢陪伴我的大家，实物效果由AI生成 #lolita原创 #白雪姬lolita #少女爆君 #A……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创</span> <span class="hashtag">#白雪姬lolita</span> <span class="hashtag">#少女爆君</span> <span class="hashtag">#A</span></div>
+              <div class="meta">2026-05-09 · <a href="https://www.douyin.com/video/7637848510713476258" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 853 ·
+                💬 48 ·
+                ⭐ 96 ·
+                ↗ 124 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/o842lgnf51feEB0bDegdiaAQHVAcrCEtaENnwg~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=W0YFSj3gJMFGceWR1yNZ4ahrUw4%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">哈喽宝宝们我是黑糖，在上一条视频中有很多宝宝喜欢我的设计，也有些宝宝对我使用ai表达了疑虑，在现在ai泛滥疯狂盗窃创作者成果的时代我作为创作者很能理解大家对此的态度，我真的很高兴大……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-16 · <a href="https://www.douyin.com/video/7629314207225744511" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 623 ·
+                💬 44 ·
+                ⭐ 44 ·
+                ↗ 83 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oY08ZpADfAChAiBeA3YjdCIgzi9224cAdNiEAy~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=Pi81uuZI7%2BdRgWiKvyDnAmAjEYQ%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">下一周的主题是小红帽!现在视频已经在积极制作中啦，期待一下吧！！！ 实物效果为AI生成!设计稿下周也会一同发布的! #lollita原创设计  #爱丽丝lolita #小红帽lol……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lollita原创设计</span> <span class="hashtag">#爱丽丝lolita</span> <span class="hashtag">#小红帽lol</span></div>
+              <div class="meta">2026-04-18 · <a href="https://www.douyin.com/video/7630057143178524992" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 559 ·
+                💬 35 ·
+                ⭐ 65 ·
+                ↗ 89 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/o4IOQABA7umzA7GTBLHTeffbQgdBvIAAairCET~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=QCvREETOGhzlGDC7iLnDJa7xUJk%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">&quot;哈喽宝宝们～我是黑糖！  昨天的设计稿收到了好多宝宝的喜欢，真的超级开心！今天继续给大家展示小红帽的三视图～ 实物效果为AI生成!!!  悄悄告诉你们，故事线已经在准备中了，一定……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-21 · <a href="https://www.douyin.com/video/7631170444087041507" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 441 ·
+                💬 28 ·
+                ⭐ 87 ·
+                ↗ 104 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/o8QTEiBpAgxIMb9vBiv4fBtA3juBei4y6NOWoA~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=iU7q7WVHoBaKmvBhtpv5DQyZA2s%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">谢谢各位宝宝的参与，下一个打版的是白雪!小红帽在白雪之后也会做，爱丽丝的进度也会更新，关于之前视频爱丽丝视频大家说感觉白胚效果不如AI收腰显瘦，我找了更专业的版师协助调整和打样，但……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-05-03 · <a href="https://www.douyin.com/video/7635672311697837519" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 300 ·
+                💬 47 ·
+                ⭐ 39 ·
+                ↗ 19 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c001/oIfzwHoAAACiALgB2UBUNpI1eEAu3t9uFiNAD3~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=HOhSAwkNj3NfjHwD5A9ZiQcU%2Bi4%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">宝宝们我来晚了，收尾做得比想象中慢了一点，后片做的有点短了裙撑一穿就看不见了后面会加长，爱丽丝白胚给宝宝们看看效果，有什么意见和建议可以发到评论区我每一条都会看的! #lolita……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita</span></div>
+              <div class="meta">2026-04-28 · <a href="https://www.douyin.com/video/7633802927636257012" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 290 ·
+                💬 47 ·
+                ⭐ 16 ·
+                ↗ 27 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oABeLPIAa3AW4Q72ft71c88eXXMPBCdQMD1TP5~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=VnAyXzes2kTSRqUby%2BY84nXQhtA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">叮咚，今日份寻料奇遇记已送达，大家更喜欢什么感觉的料子呢 #lolita原创 #找面料 #爱丽丝lolita #黑糖的奇妙工坊</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创</span> <span class="hashtag">#找面料</span> <span class="hashtag">#爱丽丝lolita</span> <span class="hashtag">#黑糖的奇妙工坊</span></div>
+              <div class="meta">2026-05-05 · <a href="https://www.douyin.com/video/7636375833342697448" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 268 ·
+                💬 30 ·
+                ⭐ 9 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/ocpAA4oN3IAhjG6k14FWifCVagEtJBDjpEf9SF~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=uNq7MvRaRlmOEaCpwa2AQ7CrnvA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">爱丽丝系列第一集故事线！十万播放背后的奇幻梦境✨ 谢谢宝宝们对爱丽丝裙子的喜欢！趁着热度，今天分享完整的故事线～从深夜加班到奇幻梦境，从梦境到设计稿，每一个细节都有故事～目前正在准……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-17 · <a href="https://www.douyin.com/video/7629685552094541411" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 201 ·
+                💬 11 ·
+                ⭐ 7 ·
+                ↗ 13 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oUABAA32hjPPAgUiH4wE9JIwBAIaQi4DRAAAE~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=0ZprX41wk8UryI%2FCmgDt4pRdhIM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">给大家看看爱丽丝确定面料，工厂说排到我啦，再有个两三天爱丽丝初样就出来啦！ #lolita原创设计 #lolita #爱丽丝lolita #黑糖的奇妙工坊</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创设计</span> <span class="hashtag">#lolita</span> <span class="hashtag">#爱丽丝lolita</span> <span class="hashtag">#黑糖的奇妙工坊</span></div>
+              <div class="meta">2026-05-11 · <a href="https://www.douyin.com/video/7638601884827653795" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 186 ·
+                💬 20 ·
+                ⭐ 13 ·
+                ↗ 10 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/o4ioI1CTBAdQJf7aRIHBeETAzJZG5Lf7pa3UHB~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=vKmmku4TdTX2SjCUFcVXowwAQ38%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">稍微改了一下，再发发嘿嘿 #lolita原创 #lolita白胚 #爱丽丝lolita #黑糖的奇妙工坊</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创</span> <span class="hashtag">#lolita白胚</span> <span class="hashtag">#爱丽丝lolita</span> <span class="hashtag">#黑糖的奇妙工坊</span></div>
+              <div class="meta">2026-04-30 · <a href="https://www.douyin.com/video/7634533835526506624" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 154 ·
+                💬 21 ·
+                ⭐ 9 ·
+                ↗ 8 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/ow7UnAEAeoBRWIgPOTLeEJAfDeIgf8QJtkGcHV~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=IHI574Y70LYn8CZ%2FoatC4eiqbO4%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">爱丽丝实体进行中~ 昨天没更新不是偷懒～是在做爱丽丝的白胚！ 好久没做立裁了，听到剪刀划面料的沙沙声，突然有把梦境照进现实的感觉～ 现在因为商家材料没发全，成品效果要晚两天才能看，……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-23 · <a href="https://www.douyin.com/video/7631908821010697167" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 114 ·
+                💬 19 ·
+                ⭐ 3 ·
+                ↗ 3 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oY1eh7AveAIXZZuWDG7TxGCgJIBaLBoaeEIQYC~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=oTBPpXLZvpMF6qECr5%2FLZTdkyYo%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">哈喽宝宝们～我是黑糖！ 今天给大家分享爱丽丝主题Lolita裙子的人台图～ 穿上它就像走进了爱丽丝的奇幻梦境～ ✨ 温馨提示：人台图为AI生成效果 喜欢的宝宝记得点赞收藏，明天还有……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-14 · <a href="https://www.douyin.com/video/7628574838068969679" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 112 ·
+                💬 6 ·
+                ⭐ 6 ·
+                ↗ 15 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/osI9iNpAj03xHkz84AEQ4febi2DBugqlscAW2g~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=Hwdqnpm8VrryPH3ScHJ3wHgzyiU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">这是我们的决断。。。。 (视频效果为ai生成!!) 在打版啦期待一下吧！ #lolita原创 #白雪姬lolita #少女爆君 #AI #黑糖的奇妙工坊</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创</span> <span class="hashtag">#白雪姬lolita</span> <span class="hashtag">#少女爆君</span> <span class="hashtag">#AI</span> <span class="hashtag">#黑糖的奇妙工坊</span></div>
+              <div class="meta">2026-05-07 · <a href="https://www.douyin.com/video/7637104423831033700" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 73 ·
+                💬 10 ·
+                ⭐ 3 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/o0T1fUjUQaq2CedBIzcrIBA1F7LKAaeNNAoGBI~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=W8qAOmf09wTbHNBuCFIpDI59hTg%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=202605121821531574A2895A0F9DAE79A2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">哈喽宝宝们～我是黑糖！  小红帽故事线终于来啦！  之前的设计稿收到了好多宝宝的喜欢，真的超级开心！  这次的正片完整展示了小红帽的设计细节和它的故事线，希望大家喜欢～  后续会继……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-24 · <a href="https://www.douyin.com/video/7632282646282850019" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 55 ·
+                💬 11 ·
+                ⭐ 1 ·
+                ↗ 2 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T18:21:00+08:00 时点。</footer>
+</body></html>

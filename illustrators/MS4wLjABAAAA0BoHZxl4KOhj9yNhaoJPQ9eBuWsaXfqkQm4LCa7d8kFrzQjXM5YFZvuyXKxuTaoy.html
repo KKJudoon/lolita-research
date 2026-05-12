@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>芙洛拉的裙摆 - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (22)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>芙洛拉的裙摆 <span class="role-label role-illustrator">画师</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T18:21:00+08:00</span>
+  · 粉丝 341 · 作品总数 7 · 来源 ai_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">从0开始的Lolita小店，希望大家多多指教</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAA0BoHZxl4KOhj9yNhaoJPQ9eBuWsaXfqkQm4LCa7d8kFrzQjXM5YFZvuyXKxuTaoy" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（11）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oMBBAKv9CiX7ZAhAE0iB7Lf7Ijv0wQrAEosTbe~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=7t%2FtLThhoZPYxVVKAUotnfZ04BA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">我的初衷是能做出漂亮，得体，有质感的裙子，我希望我的裙子可以让大家感到愉快舒适，现在还处于慢慢摸索试探流量的阶段，我们会一步一步，一起打造一个让大家满意的小店 #Lolita #l……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#l</span></div>
+              <div class="meta">2026-04-25 · <a href="https://www.douyin.com/video/7632520257475152241" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 180 ·
+                💬 36 ·
+                ⭐ 6 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/ogfpsu9bAdBei2NiNCiRCEWKERZuIwC6wMBePA~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=7FjLBoUXQCbPBrl3rCXOj8fTsQc%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">来围观我们的出道冠军吧 #Lolita #lolita设计 #lolita原创设计 #原创 #芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita设计</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#原创</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-05-02 · <a href="https://www.douyin.com/video/7635299722232205477" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 171 ·
+                💬 25 ·
+                ⭐ 15 ·
+                ↗ 12 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oUsAfoDfIFA1QnJe8AE4AvDAT37Ef2c7nYXHAI~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=yADvlz4wqoLX3vmGhrwJasQ4XlQ%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">宝宝们颜色征集结束啦 #lolita设计 #lolita原创设计 #lolita #lolita原创安利 #芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita设计</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#lolita</span> <span class="hashtag">#lolita原创安利</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-05-08 · <a href="https://www.douyin.com/video/7637505248626126245" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 112 ·
+                💬 22 ·
+                ⭐ 12 ·
+                ↗ 8 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oIJFgBFtEk7QDeA09frnsIHeT7APEDT62AEgAJ~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=CpxnPKBSmD7k2WJWaYonaawiFHU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">希望是复古繁复有质感风格的设计师！创立品牌的初衷是想我的裙子能给大家带去幸福感，温柔地承托穿它的人 为了贴合品牌，第一条裙子打算做水仙和百合主题的cla系，大家有什么意见可以尽管提……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-25 · <a href="https://www.douyin.com/video/7632545881330484837" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 103 ·
+                💬 31 ·
+                ⭐ 9 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owe7qeEDyACIm6OaBUGpodgEDfAqFJAFqFATqI~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=eLlhdReHpGt2RgKZXxgtxbOhmVg%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">来决定其他颜色出生吧 #Lolita #lolita原创设计 #lolita #lolita安利 #芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#lolita</span> <span class="hashtag">#lolita安利</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-05-06 · <a href="https://www.douyin.com/video/7636593875037017977" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 80 ·
+                💬 23 ·
+                ⭐ 4 ·
+                ↗ 3 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/o0475iC9nBpDfIAUSwArA8nPEf95MMEiuNIACA~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=3Vlws%2Ft1aiYd91zCbXbZYPokAJY%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">生了生了，是大小姐！宝宝们我们的第一条裙子终于和大家见面啦 有什么建议尽管提出来吧 大家的建议会组成一套更美好的裙子呀 #Lolita #lolita原创设计 #lolita设计 ……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#lolita设计</span></div>
+              <div class="meta">2026-05-04 · <a href="https://www.douyin.com/video/7635936910367582437" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 79 ·
+                💬 10 ·
+                ⭐ 10 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/ogAmEAP0nibB1eUI05wvBitfrBbwjCE3DsCMlw~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=2HYQlliwbe90xb%2FyowP%2FpcRdqaA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">极限三选一，我们的稿图粉丝决定～ #Lolita #lolita原创设计 #原创 #设计#芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#原创</span> <span class="hashtag">#设计</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-04-28 · <a href="https://www.douyin.com/video/7633800370155023993" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 74 ·
+                💬 41 ·
+                ⭐ 8 ·
+                ↗ 8 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oA38CoiIEEwpPqeftminxznHo11q6AANBBM9By~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=lBH1MuZC%2FiS4mwR3dC6iXOq13co%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">来pick你喜欢的小裙子吧 #Lolita #lolita原创设计 #原创 #设计 #芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#原创</span> <span class="hashtag">#设计</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-04-29 · <a href="https://www.douyin.com/video/7634053652558454949" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 58 ·
+                💬 22 ·
+                ⭐ 4 ·
+                ↗ 2 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owS9Bf1YAixoITqqGA0wiCJtE8etAAFRDEEAxZ~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093940000&amp;x-signature=320e18oTPWCTaGqEzk%2BRNGZpUJs%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">终于踏上正轨啦 #Lolita #lolita原创设计 #创业 #支持原创 #芙洛拉的裙摆</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita原创设计</span> <span class="hashtag">#创业</span> <span class="hashtag">#支持原创</span> <span class="hashtag">#芙洛拉的裙摆</span></div>
+              <div class="meta">2026-04-26 · <a href="https://www.douyin.com/video/7632942980253804773" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 57 ·
+                💬 16 ·
+                ⭐ 0 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oc1ur9AjEiGm24AE4F0AvBdC9IHborAfwAHiDe~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=Rt%2BdAC3HE%2BrrCkr8PKYwAfyptMw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">和大家汇报一下进度 我们的首作开山款已经初步敲定风格了～ 忧雅温柔的田园风cla系 不知道大家会不会喜欢呢 这次依照宝宝们的意见 我们打算同款出两种长度 供大家选择～ 目前打算出三……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-27 · <a href="https://www.douyin.com/video/7633344889383726513" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 48 ·
+                💬 20 ·
+                ⭐ 5 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oci1RAeAEEAf1IDrA0Awosc7eEi2HG9BYvSuBw~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779789600&amp;x-signature=4NiR8KNRKvk4Xw1VN4K4kLxlWaw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051218271937B5E564381C8B2B7707" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">我准备开一家自己的Lolita网店，大家可以在评论区提自己的意见，我会采取可行性强的建议，等我做成了，在座的各位都是我的股东，不画饼不骗人，从评论区抽15个人送我们的第一件裙子，也……版本过低，升级后可展示全部信息</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-24 · <a href="https://www.douyin.com/video/7632224822986904037" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 20 ·
+                💬 34 ·
+                ⭐ 3 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T18:21:00+08:00 时点。</footer>
+</body></html>
