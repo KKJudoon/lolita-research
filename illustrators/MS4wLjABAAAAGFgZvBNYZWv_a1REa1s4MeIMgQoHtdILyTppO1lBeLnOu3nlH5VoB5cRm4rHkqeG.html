@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>龟龟要成为约稿大师 - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (16)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>龟龟要成为约稿大师 <span class="role-label role-illustrator">画师</span> <span class="role-label role-confirmed">关注/收藏</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T10:38:03+08:00</span>
+  · 粉丝 1.1万 · 作品总数 49 · 来源 v2_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">大部分稿件都在保密中 有进度会发在首页稿件蹲蹲群 / 暂不接约稿 / 不合作无成品新店 不合作无成品新店  / 谢谢喜欢💕  / 会删不喜欢的评论</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAAGFgZvBNYZWv_a1REa1s4MeIMgQoHtdILyTppO1lBeLnOu3nlH5VoB5cRm4rHkqeG" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"><span class="chip chip-mil">军lo 1帖</span></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（17）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oELCoiB8eAEQpIR41iiEZXBA2CXwJ4mNe0Pkkb~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=EKfTigch7gJSczBgKLXHnmI%2F%2F3g%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">大喵穷衣史 富咪勿喷 #无限暖暖 #无限暖暖嘘森林不必听</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span></div>
+              <div class="meta">2026-04-18 · <a href="https://www.douyin.com/video/7629898852854059889" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 595 ·
+                💬 16 ·
+                ⭐ 17 ·
+                ↗ 50 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/o8eyQhtAMKWVxDKBgQ8fAjYwjX6d8TJBeyo7dW~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=JWqCGN4p3aS0wFBE9G9uIHqOdo0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">免费五星恐成最大赢家！萌成啥了这个小暖暖 #无限暖暖 #无限暖暖嘘森林不必听#无限暖暖万灵的归途</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span> <span class="hashtag">#无限暖暖万灵的归途</span></div>
+              <div class="meta">2026-04-20 · <a href="https://www.douyin.com/video/7630657960440109221" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 578 ·
+                💬 13 ·
+                ⭐ 12 ·
+                ↗ 101 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owvsg3DAAITAFD3fKQfF7aZZ9fmkVqBzAEJdrE~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=1sXC445hKqYY%2Bme5r%2BjKCIJbhhw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">莓莓公主殿下👸。成衣已出㊙️ #Lolita #lolita设计 #lolita原创</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita设计</span> <span class="hashtag">#lolita原创</span></div>
+              <div class="meta">2026-04-27 · <a href="https://www.douyin.com/video/7633416638276662907" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 527 ·
+                💬 87 ·
+                ⭐ 147 ·
+                ↗ 64 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owidtAP09AKvEuuAi8DkDejEe0sfImHAA4pwEB~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=Lt6x8%2FEeVJoj1rV0L%2BNbbOvFMi4%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">草莓公主👑。成衣已出 暂㊙️#lolita原创 #lolita设计 #lolita原创设计</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita原创</span> <span class="hashtag">#lolita设计</span> <span class="hashtag">#lolita原创设计</span></div>
+              <div class="meta">2026-04-25 · <a href="https://www.douyin.com/video/7632632646083054585" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 265 ·
+                💬 23 ·
+                ⭐ 52 ·
+                ↗ 24 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/o8uATPTkRwxeBwpIA83iAvBowEeiEZan0XCUmj~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=BzKVBH1Aokwa6fR1PhCHmTGwY2c%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">2.5龙女都帅成啥了！暖公有福了… #无限暖暖</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span></div>
+              <div class="meta">2026-04-19 · <a href="https://www.douyin.com/video/7630437992620687269" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 237 ·
+                💬 6 ·
+                ⭐ 6 ·
+                ↗ 23 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oIFpBwjJiw3iLXtAlwaEeX7C9uENBEC9AfiImo~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=mtPW5N57cl5i7xUWOeWNud1kS2A%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">所有人屏住呼吸欣赏好吗？ #无限暖暖 #无限暖暖万灵的归途</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖万灵的归途</span></div>
+              <div class="meta">2026-04-28 · <a href="https://www.douyin.com/video/7633803097294397049" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 190 ·
+                💬 26 ·
+                ⭐ 0 ·
+                ↗ 7 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oEfIaLmDIQHIACuyfdemMApA2AfQnG4STAGNJ4~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=dUgL%2BXYNCiBSfq2ePG%2FhrVowqSw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">天使降落👼。成衣已出㊙️ #Lolita #lolita设计 #lolita服装设计</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita设计</span> <span class="hashtag">#lolita服装设计</span></div>
+              <div class="meta">2026-04-27 · <a href="https://www.douyin.com/video/7633316517228789425" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 153 ·
+                💬 11 ·
+                ⭐ 19 ·
+                ↗ 6 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oYfT437eeCEi24lECI3y1QAFnpAwJpgJBA92iH~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=yzBud1p10BSuj703ZH7XDooLULw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">感觉特别特别命苦… #无限暖暖 #无限暖暖万灵的归途</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖万灵的归途</span></div>
+              <div class="meta">2026-05-03 · <a href="https://www.douyin.com/video/7635537134112021617" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 146 ·
+                💬 26 ·
+                ⭐ 0 ·
+                ↗ 3 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/ooQceiBHeAEG0IhgyiiEj2CAGAdw27vg80fLNH~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=RGs63%2BxrNj2z8k%2FxfXXsIQyE5WE%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"><span class="style-tag">军lo</span></div>
+              <div class="desc">是薄暮之海的小军官哦！有宝子买过嘛hhh #lolita设计 #军lo</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#lolita设计</span> <span class="hashtag">#军lo</span></div>
+              <div class="meta">2026-04-17 · <a href="https://www.douyin.com/video/7629690826838349689" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 144 ·
+                💬 2 ·
+                ⭐ 5 ·
+                ↗ 5 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/o0AAEAdpnEoAA9LQjSBfCF84HD3EcPI2JfoG0w~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=9qHDYjjxwqZdX3S9oyg9eLhdmg0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">大家最喜欢哪个颜色的设计呢！？ #当我用颜色打开春天 #用色轮打开我的colorwalk</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#当我用颜色打开春天</span> <span class="hashtag">#用色轮打开我的colorwalk</span></div>
+              <div class="meta">2026-04-17 · <a href="https://www.douyin.com/video/7629371447396634993" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 102 ·
+                💬 9 ·
+                ⭐ 2 ·
+                ↗ 2 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oUfpIF9DATD4egFEs8FMbEAxEXAHIwC3PmAngA~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=QP8c3HcDKV6GVNmdQdsZi7sTBIc%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">翻糖木马🎠。成衣已出 暂㊙️ #Lolita #lolita安利</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita安利</span></div>
+              <div class="meta">2026-04-16 · <a href="https://www.douyin.com/video/7629365234947647985" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 88 ·
+                💬 9 ·
+                ⭐ 9 ·
+                ↗ 15 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oo6eMLNYAWP7BGjXgQxJZHx6edIBuTe8gGC4Qy~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=1PriPDHTJQBGbLkGKes8kZPeRHg%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">大喵这个黏牙～ #无限暖暖 #无限暖暖嘘森林不必听</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span></div>
+              <div class="meta">2026-04-13 · <a href="https://www.douyin.com/video/7628080377865792229" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 86 ·
+                💬 4 ·
+                ⭐ 0 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oEePmhbEb8EB400pArCI9t0FGf7L1YAnED4Bwa~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=lzVGU5UfrMKRR2eyT3mGYC45uLA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">柠檬果子露🍋 我是全世界第一喜欢暖暖笑容的人！ #无限暖暖 #无限暖暖嘘森林不必听</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span></div>
+              <div class="meta">2026-04-17 · <a href="https://www.douyin.com/video/7629580755803113841" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 82 ·
+                💬 0 ·
+                ⭐ 1 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/o4I8jG2QIAQFDeABoJ5IdTkAKED7gALTTtFLfe~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=vKXCYIxk95LVFvIglEcD6D7ITMU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">幸运曲奇🍪。成衣已出@宅喵馆  #Lolita #lolita洋装</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#Lolita</span> <span class="hashtag">#lolita洋装</span></div>
+              <div class="meta">2026-04-26 · <a href="https://www.douyin.com/video/7633008317128611057" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 80 ·
+                💬 2 ·
+                ⭐ 7 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015c000-ce/oYXqCg2aDI3dD2wnAZFCnH9FOBfMptEEEqwfA9~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=4pDEMO4dgbv0Ib1PLQ9PQC41wBo%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">大家都去冲花套好吗？好的！ #无限暖暖 #无限暖暖万灵的归途</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖万灵的归途</span></div>
+              <div class="meta">2026-05-02 · <a href="https://www.douyin.com/video/7635301068780383866" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 66 ·
+                💬 3 ·
+                ⭐ 1 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/ooDjEniBA1fEg32A2pNgA1UIPAiyz9A4BeCWlw~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093911200&amp;x-signature=gmUuVDO52S80GCn93b20kWidrZk%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">是时候使用焚诀进入2.5大版本了！ #无限暖暖 #无限暖暖嘘森林不必听</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span></div>
+              <div class="meta">2026-04-16 · <a href="https://www.douyin.com/video/7629336355609352121" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 60 ·
+                💬 0 ·
+                ⭐ 0 ·
+                ↗ 8 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owwXAA5E9ewfa1GCfwAPDQA3IAOpr5DWNAUEFE~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779760800&amp;x-signature=EQVcYHxpV0mlHaEGbZSg%2FAVUfSA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=20260512104049F019C754D6D4DC8431BE" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">暖喵要一直一直幸福下去！#无限暖暖 #无限暖暖嘘森林不必听</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#无限暖暖</span> <span class="hashtag">#无限暖暖嘘森林不必听</span></div>
+              <div class="meta">2026-04-13 · <a href="https://www.douyin.com/video/7628250389918364283" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 42 ·
+                💬 0 ·
+                ⭐ 0 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T10:38:03+08:00 时点。</footer>
+</body></html>
