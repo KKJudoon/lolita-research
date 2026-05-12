@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>桃川cx - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (39)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>桃川cx <span class="role-label role-illustrator">画师</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T14:55:49+08:00</span>
+  · 粉丝 288 · 作品总数 8 · 来源 expand_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">插画师 🐙同名</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAAJTG7njgpDnmW5i42Jrw3Jb_dZskWlKQvjnkkXOXfSjObpYOMfzK12sBuDprEcPLs" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（8）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oAhvDAVE2MtfSfGEBAAg7QAKIATngvD2iefCFI~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=xo99%2FkJojMbSad2UpbSftauJAwY%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#绘画 #二次元 #绘画过程 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-03-30 · <a href="https://www.douyin.com/video/7623050452154803554" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1757 ·
+                💬 14 ·
+                ⭐ 87 ·
+                ↗ 44 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogeAfADyWCGAGF9SpF9zQADAgIuVCzbQAA5oE9~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=6Cw46dRBatH5SXHoEquntVtpwdw%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#绘画 #二次元 #绘画过程 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-03-30 · <a href="https://www.douyin.com/video/7623050678168165219" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1056 ·
+                💬 5 ·
+                ⭐ 50 ·
+                ↗ 19 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/o0wA4LGl2DTAvQAB8fIIaRJAgASAifAlfneEJH~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=P7TdvhBFJKeuEQkN54MEXxfNJh8%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">亲戚家小孩来家里玩 #服设 #稿件展示 #oc</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#服设</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span></div>
+              <div class="meta">2026-05-10 · <a href="https://www.douyin.com/video/7637966572011913615" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 695 ·
+                💬 2 ·
+                ⭐ 25 ·
+                ↗ 35 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oA8ASCiku8BAeOw8euAYi7kEv5nAD0IAnsE79g~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=6lwUFEoOBKrCWO5eqcxIOi%2B6jpc%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">你那五年没有发朋友圈的画师朋友突然发了一条动态 #画师推荐 #稿件展示 #稿 #oc</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#画师推荐</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#稿</span> <span class="hashtag">#oc</span></div>
+              <div class="meta">2026-04-19 · <a href="https://www.douyin.com/video/7630398418347499968" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 433 ·
+                💬 8 ·
+                ⭐ 6 ·
+                ↗ 5 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/og9AAyXDcIAowAh5tngPKfAczgEetCDDpE29AF~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=A31QFveZgSsXl0mnjMeZ3kcsoFE%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#绘画 #二次元 #绘画过程 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-03-30 · <a href="https://www.douyin.com/video/7623050284285251264" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 418 ·
+                💬 10 ·
+                ⭐ 19 ·
+                ↗ 11 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4Ah8f9f9piZDDANCYBKjOioA75ygA2Ed8gAIA~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=L4mgN9Dz%2BALeeNKwzSuILvz4K0A%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#绘画 #二次元 #绘画过程 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-03-30 · <a href="https://www.douyin.com/video/7623050177742693248" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 295 ·
+                💬 7 ·
+                ⭐ 4 ·
+                ↗ 3 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oML2BAeE7GyfzeGuVAAKNQAvIADTKmDqIz7BFE~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=i2R4%2BROHXn76hC%2Bi%2FvZj1eeV9N8%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#二次元 #绘画过程 #绘画 #立绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#绘画</span> <span class="hashtag">#立绘</span></div>
+              <div class="meta">2026-04-14 · <a href="https://www.douyin.com/video/7628631243220113743" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 256 ·
+                💬 4 ·
+                ⭐ 13 ·
+                ↗ 5 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oIiyPhxcqAAPBDIAEUAwauxVgBgIuEAwKHi78~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=rRViurxIlcNv1aIwG9Q%2BKnxCPRA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=20260512150149D96BDE568B99333D62E1" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#绘画 #二次元 #绘画过程 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#二次元</span> <span class="hashtag">#绘画过程</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-03-30 · <a href="https://www.douyin.com/video/7623050577597940724" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 177 ·
+                💬 4 ·
+                ⭐ 4 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T14:55:49+08:00 时点。</footer>
+</body></html>

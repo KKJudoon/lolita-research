@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>kstina - 画师调研</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1280px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 16px; }
+  .data-ts { display: inline-block; background: #fff3cd; color: #856404; padding: 2px 10px; border-radius: 4px; font-weight: 500; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  /* module nav */
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
+  /* toolbar - identical to 款式 page */
+  .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
+  .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .toolbar-label { color: #999; font-size: 12px; }
+  .tab { background: white; border: 1px solid #d8c898; color: #5a4a2a; padding: 4px 12px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .tab:hover { background: #faf3e0; }
+  .tab.active { background: #c8a868; color: white; border-color: #c8a868; }
+  .sort { background: #fbf7e8; border: 1px solid #d8c898; color: #6a5a30; padding: 4px 10px; border-radius: 14px; font-size: 12px; cursor: pointer; transition: all 0.15s; }
+  .sort:hover { background: #f7eed5; }
+  .sort.active { background: #6a5a30; color: white; border-color: #6a5a30; }
+  .search-input { border: 1px solid #d8c898; background: white; padding: 4px 10px; border-radius: 14px; font-size: 12px; outline: none; min-width: 160px; }
+  .search-input:focus { border-color: #c5a572; }
+
+  .table-wrap { overflow-x: auto; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
+  table.research { width: 100%; border-collapse: separate; border-spacing: 0; background: white; font-size: 13px; }
+  table.research th { background: #2c2418; color: #efe9d9; padding: 9px 10px; text-align: left; font-weight: 600; font-size: 12px; position: sticky; top: 0; z-index: 5; }
+  table.research td { padding: 10px; border-top: 1px solid #f0e8d0; vertical-align: middle; background: white; }
+  table.research tr:hover td { background: #fbf7e8; }
+  table.research th.col-thumb, table.research td.col-thumb { position: sticky; left: 0; z-index: 4; }
+  table.research th.col-name, table.research td.col-name { position: sticky; left: 64px; z-index: 4; box-shadow: 1px 0 3px rgba(0,0,0,0.04); }
+  table.research thead th.col-thumb, table.research thead th.col-name { z-index: 6; }
+
+  .col-thumb { width: 64px; padding: 4px 6px; }
+  .col-thumb img { width: 50px; height: 64px; object-fit: cover; border-radius: 4px; display: block; background: #eee; }
+  .col-name { min-width: 180px; max-width: 220px; }
+  .col-name a.bare { color: #2c2418; display: block; }
+  .col-name .title { font-weight: 600; font-size: 14px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-name .brand { color: #888; font-size: 11px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .col-numeric { width: 80px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .col-style { min-width: 120px; }
+  .col-date { width: 90px; white-space: nowrap; }
+  .col-desc { min-width: 300px; max-width: 500px; }
+  .col-desc .desc-text { font-size: 12px; color: #444; line-height: 1.4; max-height: 60px; overflow: hidden; }
+  .col-desc .author { font-size: 11px; color: #666; margin-top: 3px; }
+
+  .chip { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 1px 7px; border-radius: 9px; font-size: 11px; margin-right: 3px; margin-bottom: 2px; }
+  .chip-mil { background: #d1c4e9; color: #4527a0; font-weight: 600; }
+  .role-label { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; margin-left: 4px; vertical-align: middle; }
+  .role-illustrator { background: #cfe2ff; color: #0a4791; }
+  .role-brand { background: #f8d7da; color: #842029; }
+  .role-confirmed { background: #d4edda; color: #155724; }
+
+  /* detail page card-style post grid (unchanged) */
+  .post-card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px; margin-bottom: 10px; display: flex; gap: 12px; background: #fff; }
+  .post-card img { width: 120px; height: 160px; object-fit: cover; border-radius: 4px; }
+  .post-card .body { flex: 1; }
+  .post-card .desc { font-size: 13px; color: #333; }
+  .post-card .meta { font-size: 11px; color: #666; margin: 4px 0; }
+  .post-card .stats { font-size: 12px; color: #444; margin: 4px 0; }
+  .style-tag { display: inline-block; background: #fff3cd; color: #856404; padding: 1px 5px; border-radius: 3px; margin-right: 3px; font-size: 11px; }
+  .hashtag { color: #2c5aa0; margin-right: 5px; }
+
+  @media (max-width: 720px) {
+    body { padding: 12px 8px; }
+    table.research { font-size: 11px; }
+    table.research th, table.research td { padding: 6px 8px; }
+  }
+</style>
+</head><body>
+<div class="module-nav"><a href="../index.html" class="mod">📐 款式调研 (21)</a><a href="../illustrators/index.html" class="mod active">🎨 画师调研 (39)</a><a href="../illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a><span class="mod disabled">🏷 品牌（Phase 4）</span><span class="mod disabled">👤 模特（Phase 4）</span><a href="../reports/junlo_prince_report.html" class="mod">📊 综合报告</a></div>
+<h1>kstina <span class="role-label role-illustrator">画师</span></h1>
+<div class="meta">
+  <span class="data-ts">📅 数据时点：2026-05-12T14:55:49+08:00</span>
+  · 粉丝 1.3万 · 作品总数 35 · 来源 expand_search
+</div>
+<div class="post-card" style="display:block;">
+  <div><strong>签名</strong></div>
+  <div class="desc" style="margin-top:4px;">🐦@Delta1_小鸟信箱  / 当厕所发 杂食触雷自避 花甲同名 / mhs:我丈夫怎么还活着 / 玩米哈游的和ai别关注我。毕业就是懒得理你。</div>
+  <div class="meta" style="margin-top:6px;"><a href="https://www.douyin.com/user/MS4wLjABAAAAH6b8ic3S35ltN6VeiWNw1WW5S8I5raBnYF0Stv9WzFo" target="_blank">→ 抖音主页</a></div>
+  <div class="tags" style="margin-top:6px;"></div>
+</div>
+<h2 style="font-size:16px; margin-top:20px;">近期作品（22）</h2>
+
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oglj2Og8fAE1ZQDsABe0zGCXiiACiAAQ5cAIKx~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=wa%2Bbg%2F49xxiDFcOd77vuflqgFFM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">唉。</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-04-18 · <a href="https://www.douyin.com/video/7630092203352551259" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1.0万 ·
+                💬 487 ·
+                ⭐ 818 ·
+                ↗ 2689 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/osYANBacgIA2tiAApiiYD1FE2PHAPAdqig3GI~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=e2YWPb9r2hKoHUOR4avBvD9ROWU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">老师这是真人画的吗#指绘 #oc #稿件展示 #绘画 #服设</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#指绘</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span> <span class="hashtag">#服设</span></div>
+              <div class="meta">2026-03-28 · <a href="https://www.douyin.com/video/7622169585634319270" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1216 ·
+                💬 8 ·
+                ⭐ 98 ·
+                ↗ 28 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-p-0015/oQpO9AfyC4IB2FeDAGggEOii0mXyd0DJBgAYBh~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=t0ES2jqhP4l1Mb%2BgjmsfBdMPhPE%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">#新年就用hello打招呼 #oc #稿件展示 #绘画</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#新年就用hello打招呼</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span></div>
+              <div class="meta">2026-03-25 · <a href="https://www.douyin.com/video/7620957645453219699" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 1002 ·
+                💬 34 ·
+                ⭐ 6 ·
+                ↗ 2 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oAd5CqPwiIigAFWAPbA0iAiggANBAI3EgaBAz~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=PVONJw2FXUG43hW3FhLiOLMvRa8%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">这期没有服设思路因为我懒#oc #稿件展示 #服设 #指绘 #绘画</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#服设</span> <span class="hashtag">#指绘</span> <span class="hashtag">#绘画</span></div>
+              <div class="meta">2026-05-10 · <a href="https://www.douyin.com/video/7638233655709911922" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 872 ·
+                💬 5 ·
+                ⭐ 77 ·
+                ↗ 22 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o0Dil09yEcxAC67C1ZEBfApemQAiAAOgAJt0Il~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=nAP0Sy4cPQsC26XhYbk0CfAgm%2Bc%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">尝试了新的文案方式 #稿件展示 #oc #绘画 #服设 #指绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span> <span class="hashtag">#绘画</span> <span class="hashtag">#服设</span> <span class="hashtag">#指绘</span></div>
+              <div class="meta">2026-04-11 · <a href="https://www.douyin.com/video/7627359592905811355" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 677 ·
+                💬 5 ·
+                ⭐ 36 ·
+                ↗ 10 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oQ38s0DbEFApIiEffAEEACBABlAEf7E8TDlDAt~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=0YGNlCxOiMOwWkxb0foAMStxbsk%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">行走江湖逍遥客🗡️。#oc #稿件展示 #绘画 #服设 #古风</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span> <span class="hashtag">#服设</span> <span class="hashtag">#古风</span></div>
+              <div class="meta">2026-05-07 · <a href="https://www.douyin.com/video/7636990844688091118" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 661 ·
+                💬 9 ·
+                ⭐ 54 ·
+                ↗ 5 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ocELvdPBATDDsA7IjaxIOtghISAMAEGiAqhig~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=k0E4aRbfmuhW0yy%2FR20BNRfFK%2F8%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">🦌#稿件展示 #oc #服设 #绘画 #指绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span> <span class="hashtag">#服设</span> <span class="hashtag">#绘画</span> <span class="hashtag">#指绘</span></div>
+              <div class="meta">2026-04-06 · <a href="https://www.douyin.com/video/7625583955539313646" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 515 ·
+                💬 1 ·
+                ⭐ 29 ·
+                ↗ 7 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c001/o8gAsEdXpAAB05QfADCGD3j5FAJECIf9lAYSlq~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=DbSJIPSuRAlIMyDfT8LODNz35X0%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">不老的湖水。#oc #绘画 #稿件展示 #服设 #指绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#绘画</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#服设</span> <span class="hashtag">#指绘</span></div>
+              <div class="meta">2026-04-20 · <a href="https://www.douyin.com/video/7630736905218998602" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 412 ·
+                💬 10 ·
+                ⭐ 25 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oEAAMziIEAg0zJ6PXHiCWZDMgseTqAAgBCweAx~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=U%2FqugH74lJvBxFIUKfouSX9q30c%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">最美拉拉。#gl #稿件展示 #oc #立绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#gl</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span> <span class="hashtag">#立绘</span></div>
+              <div class="meta">2026-04-08 · <a href="https://www.douyin.com/video/7626317051863393902" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 412 ·
+                💬 6 ·
+                ⭐ 17 ·
+                ↗ 6 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ocEabdUAivmitaBIAwQDgPADRIQOANLumTyAg~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=xDBfftifV5STTWolIbjP0KgjpEQ%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">阿尔忒弥斯。#稿件展示 #oc #服设 #指绘 #绘画</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span> <span class="hashtag">#服设</span> <span class="hashtag">#指绘</span> <span class="hashtag">#绘画</span></div>
+              <div class="meta">2026-04-12 · <a href="https://www.douyin.com/video/7627780083339540955" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 386 ·
+                💬 1 ·
+                ⭐ 3 ·
+                ↗ 6 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/oovYfABmtQAAJiebzsFLBACAgE70CmdIAA4ii8~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=MW4teAnapCCyG0pD7NABj57s1uU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">一分钟认识神秘学家：佩洛利司。//1min about arcanist 滴答滴，给我一些时间；朋友啊，我们在此相见。 #重返未来1999 #重返未来 #oc #绘画</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#重返未来1999</span> <span class="hashtag">#重返未来</span> <span class="hashtag">#oc</span> <span class="hashtag">#绘画</span></div>
+              <div class="meta">2024-11-13 · <a href="https://www.douyin.com/video/7436639946980511010" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 347 ·
+                💬 26 ·
+                ⭐ 18 ·
+                ↗ 2 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/oI5g0SNfAEtAh1C0eywCAJrcviIYEAisADA9vB~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=J1D6Mq1b7KxKle1wJrLKT0PrHhs%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">月儿在手中开呀花儿笑。#古风 #oc #稿件展示 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#古风</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-04-25 · <a href="https://www.douyin.com/video/7632536230215764827" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 294 ·
+                💬 2 ·
+                ⭐ 11 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oU9D4A2rAuAICAPpfYNFEzK7ECWf1AbtTgDjAT~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&amp;x-expires=2093929200&amp;x-signature=dQj6ufFIVLL7IfGJ6yKiPR5SSqU%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=true&amp;sh=323_430&amp;sc=cover&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">🐦‍⬛ #服设 #oc #稿件展示 #绘画 #指绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#服设</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span> <span class="hashtag">#指绘</span></div>
+              <div class="meta">2026-04-26 · <a href="https://www.douyin.com/video/7632912072779509682" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 220 ·
+                💬 2 ·
+                ⭐ 21 ·
+                ↗ 3 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4NYpagemEAvMAJpAIA3QAIrfFAHGCAC7Dv99F~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=gW7PK6jgPfHqUUrBI03BWtRZa3g%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">龙的圣杯。#oc #指绘 #稿件展示 #服设 #绘画</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#指绘</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#服设</span> <span class="hashtag">#绘画</span></div>
+              <div class="meta">2026-05-02 · <a href="https://www.douyin.com/video/7635151105332582857" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 201 ·
+                💬 5 ·
+                ⭐ 14 ·
+                ↗ 4 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ocAbAf6GDBHTFAiBZ9EiseILfEEQR4tA1L75RA~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=RvzU3MpauJbpE2H902OdjTrkqFM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">我心慈悲。#稿件展示 #oc #绘画 #服设 #古风</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#稿件展示</span> <span class="hashtag">#oc</span> <span class="hashtag">#绘画</span> <span class="hashtag">#服设</span> <span class="hashtag">#古风</span></div>
+              <div class="meta">2026-05-09 · <a href="https://www.douyin.com/video/7637758311131609318" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 198 ·
+                💬 1 ·
+                ⭐ 6 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oQfMfHZIAn2CAQfIXILnAuGGAaM1ACTzeXGDUM~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=fq6IuFMTFDLPDiaLcSFup6SeOMs%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">曼奇首测！感谢女神教我画画🥹…p2左侧是第一次画的首测 在女神那边激情小课一小时后得到了p1的修改🥺女神真的太会画头发了膜拜…#重返未来1999 #红弩箭 #绘画 #曼奇立德</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#重返未来1999</span> <span class="hashtag">#红弩箭</span> <span class="hashtag">#绘画</span> <span class="hashtag">#曼奇立德</span></div>
+              <div class="meta">2026-03-27 · <a href="https://www.douyin.com/video/7621882986833192539" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 162 ·
+                💬 8 ·
+                ⭐ 4 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/okgWECbS5BA366APAXi9A9pADAYgLCReItfFyi~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=%2FXkhlwuZesEWniFYAxCDCWctNOM%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">只有香如故。#oc #服设 #稿件展示 #绘画 #指绘</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#服设</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span> <span class="hashtag">#指绘</span></div>
+              <div class="meta">2026-04-30 · <a href="https://www.douyin.com/video/7634423476548186278" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 120 ·
+                💬 2 ·
+                ⭐ 6 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogOpiCg9fAEWY7DtABe0lcCP3iACiAA5KOAI86~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=VFhYl8iEjpLXhJgh97x2DwvThCI%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">🎤。#oc #企划 #稿件展示 #procreate绘画 #redvelvet</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#oc</span> <span class="hashtag">#企划</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#procreate绘画</span> <span class="hashtag">#redvelvet</span></div>
+              <div class="meta">2026-04-23 · <a href="https://www.douyin.com/video/7631875239877935347" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 111 ·
+                💬 6 ·
+                ⭐ 1 ·
+                ↗ 1 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oIVN9SiMpECAAAAfJCzFKDdEISDAthAFYgfK1A~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=snZbo3KZBu3ELKcWb5RXdsnkj48%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">狐仙大人🌸。#企划 #oc #稿件展示 #绘画 #画稿</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#企划</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#绘画</span> <span class="hashtag">#画稿</span></div>
+              <div class="meta">2026-04-01 · <a href="https://www.douyin.com/video/7623793024325693834" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 110 ·
+                💬 3 ·
+                ⭐ 2 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oYMTOA8B7Q9AeE6f7FIArhDTAgkFEBuLEAnfvT~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=jjhHNz41DWnYmc1LmqWpI67Fqqo%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">放一个置顶。主播跑单处指路。</div>
+              <div class="tags" style="margin-top:4px"></div>
+              <div class="meta">2026-03-03 · <a href="https://www.douyin.com/video/7612878073143297947" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 102 ·
+                💬 0 ·
+                ⭐ 3 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/oYA1avIAIidAgIDJ4IYPASjgBAhP5ElY91Eai~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=MylOkbU2pxX6i3hZVhlk3Vyp8LY%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">🐰的qq秀！#绘画 #oc #稿件展示 #服设 #禁止使用</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#绘画</span> <span class="hashtag">#oc</span> <span class="hashtag">#稿件展示</span> <span class="hashtag">#服设</span> <span class="hashtag">#禁止使用</span></div>
+              <div class="meta">2026-04-05 · <a href="https://www.douyin.com/video/7625198662653954790" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 93 ·
+                💬 2 ·
+                ⭐ 6 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/ogAAeZIIEBATNbaeOHLE0EC0fYss0BASGED7Au~noop.jpeg?lk3s=138a59ce&amp;x-expires=1779778800&amp;x-signature=Dh%2FNVZTmgo83M0%2B2xU6jBRp9HwA%3D&amp;from=327834062&amp;s=PackSourceEnum_PUBLISH&amp;se=false&amp;biz_tag=pcweb_cover&amp;l=2026051215033139CA14901316AF8E22B2" alt="" loading="lazy">
+            <div class="body">
+              <div class="tags"></div>
+              <div class="desc">如果看见此设定请不要收！#避雷 #oc #约稿展示</div>
+              <div class="tags" style="margin-top:4px"><span class="hashtag">#避雷</span> <span class="hashtag">#oc</span> <span class="hashtag">#约稿展示</span></div>
+              <div class="meta">2026-03-13 · <a href="https://www.douyin.com/video/7616745339592216051" target="_blank">原帖 →</a></div>
+              <div class="stats">
+                ❤ 87 ·
+                💬 3 ·
+                ⭐ 2 ·
+                ↗ 0 ·
+                ▶ 0
+              </div>
+            </div>
+          </div>
+<footer style="font-size:11px;color:#888;margin-top:30px;padding-top:10px;border-top:1px solid #ddd;">Phase 1 基线快照。每个作品 stats 是 2026-05-12T14:55:49+08:00 时点。</footer>
+</body></html>
