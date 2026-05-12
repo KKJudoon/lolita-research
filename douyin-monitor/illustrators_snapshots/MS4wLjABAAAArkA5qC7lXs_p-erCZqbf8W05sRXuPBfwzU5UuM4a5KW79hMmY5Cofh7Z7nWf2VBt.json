@@ -41,7 +41,10 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "lolita_post_count": 0,
+  "total_post_count": 1
 }

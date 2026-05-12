@@ -43,9 +43,7 @@
         "新中式",
         "侠客风Lolita"
       ],
-      "style_tags": [
-        "军lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7638570237730674383",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oIAAnICQDtfaaCTuwEfQAVAAkFqNAqEArl09GD~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=D%2FgT%2FByTU4305UYU0B2yvU%2FXyVY%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=2026051210381880F7E6CD7BDECCECDDE8",
       "snapshots": [
@@ -57,7 +55,8 @@
           "play_count": 0,
           "collect_count": 44
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7637718832030848219": {
       "aweme_id": "7637718832030848219",
@@ -82,7 +81,8 @@
           "play_count": 0,
           "collect_count": 5
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7637043766146882441": {
       "aweme_id": "7637043766146882441",
@@ -108,7 +108,8 @@
           "play_count": 0,
           "collect_count": 106
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7634431680887949475": {
       "aweme_id": "7634431680887949475",
@@ -136,7 +137,8 @@
           "play_count": 0,
           "collect_count": 411
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7630274178810424162": {
       "aweme_id": "7630274178810424162",
@@ -162,7 +164,8 @@
           "play_count": 0,
           "collect_count": 2079
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7627883317539541824": {
       "aweme_id": "7627883317539541824",
@@ -188,7 +191,8 @@
           "play_count": 0,
           "collect_count": 15
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7624802333339792307": {
       "aweme_id": "7624802333339792307",
@@ -216,7 +220,8 @@
           "play_count": 0,
           "collect_count": 598
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7622586940958034831": {
       "aweme_id": "7622586940958034831",
@@ -244,7 +249,8 @@
           "play_count": 0,
           "collect_count": 758
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7622530695190079842": {
       "aweme_id": "7622530695190079842",
@@ -270,7 +276,8 @@
           "play_count": 0,
           "collect_count": 4087
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7621834420241323099": {
       "aweme_id": "7621834420241323099",
@@ -296,7 +303,8 @@
           "play_count": 0,
           "collect_count": 86
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7620497908098942400": {
       "aweme_id": "7620497908098942400",
@@ -321,7 +329,8 @@
           "play_count": 0,
           "collect_count": 252
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7618878498275636943": {
       "aweme_id": "7618878498275636943",
@@ -347,7 +356,8 @@
           "play_count": 0,
           "collect_count": 83
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7614052707339851849": {
       "aweme_id": "7614052707339851849",
@@ -373,7 +383,8 @@
           "play_count": 0,
           "collect_count": 197
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7613318610056418880": {
       "aweme_id": "7613318610056418880",
@@ -399,7 +410,8 @@
           "play_count": 0,
           "collect_count": 174
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7612639860248319631": {
       "aweme_id": "7612639860248319631",
@@ -425,7 +437,8 @@
           "play_count": 0,
           "collect_count": 87
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7610331709598941594": {
       "aweme_id": "7610331709598941594",
@@ -451,7 +464,11 @@
           "play_count": 0,
           "collect_count": 1727
         }
-      ]
+      ],
+      "is_lolita": true
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_ce0795958646b59144d775aad44738b6.jpeg?from=2956013662",
+  "lolita_post_count": 16,
+  "total_post_count": 16
 }

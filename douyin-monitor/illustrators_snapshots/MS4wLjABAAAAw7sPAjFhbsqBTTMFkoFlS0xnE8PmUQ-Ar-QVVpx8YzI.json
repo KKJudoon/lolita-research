@@ -51,7 +51,8 @@
           "play_count": 0,
           "collect_count": 289
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7634163923802318833": {
       "aweme_id": "7634163923802318833",
@@ -81,7 +82,8 @@
           "play_count": 0,
           "collect_count": 3269
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7632664476555402225": {
       "aweme_id": "7632664476555402225",
@@ -110,7 +112,8 @@
           "play_count": 0,
           "collect_count": 1000
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7631967500021090225": {
       "aweme_id": "7631967500021090225",
@@ -126,8 +129,7 @@
       ],
       "style_tags": [
         "军lo",
-        "哥特",
-        "圣职"
+        "哥特"
       ],
       "post_url": "https://www.douyin.com/video/7631967500021090225",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/ocnAoHF6rIDc0nAAHCAwfNEopUQT92JEoAfjYC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=91qF%2BgnYgUDkzTE9jukes0tjFRg%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=2026051210435629139E2F3081392AFAC9",
@@ -140,7 +142,8 @@
           "play_count": 0,
           "collect_count": 592
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7631923336364850809": {
       "aweme_id": "7631923336364850809",
@@ -155,8 +158,7 @@
         "娃衣"
       ],
       "style_tags": [
-        "哥特",
-        "圣职"
+        "哥特"
       ],
       "post_url": "https://www.douyin.com/video/7631923336364850809",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/ocgAmDF6KEDhVhAAnfAwfIELpqIV9yTEoAdgCC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=y16%2BUwQd2ZI3c96kCaKSeyLOBoc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=2026051210435629139E2F3081392AFAC9",
@@ -169,7 +171,8 @@
           "play_count": 0,
           "collect_count": 371
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7631579850784872177": {
       "aweme_id": "7631579850784872177",
@@ -199,7 +202,8 @@
           "play_count": 0,
           "collect_count": 2528
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7626248997460741617": {
       "aweme_id": "7626248997460741617",
@@ -228,7 +232,8 @@
           "play_count": 0,
           "collect_count": 4275
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7624997482451437413": {
       "aweme_id": "7624997482451437413",
@@ -254,7 +259,10 @@
           "play_count": 0,
           "collect_count": 858
         }
-      ]
+      ],
+      "is_lolita": true
     }
-  }
+  },
+  "lolita_post_count": 8,
+  "total_post_count": 8
 }

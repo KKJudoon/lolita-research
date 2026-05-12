@@ -48,7 +48,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7618427935846446729": {
       "aweme_id": "7618427935846446729",
@@ -73,7 +74,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7613248450176499442": {
       "aweme_id": "7613248450176499442",
@@ -99,7 +101,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7609997837476091494": {
       "aweme_id": "7609997837476091494",
@@ -124,7 +127,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7595208501828905115": {
       "aweme_id": "7595208501828905115",
@@ -150,7 +154,8 @@
           "play_count": 0,
           "collect_count": 13
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7594797828800952950": {
       "aweme_id": "7594797828800952950",
@@ -176,7 +181,8 @@
           "play_count": 0,
           "collect_count": 37
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7594317658687589322": {
       "aweme_id": "7594317658687589322",
@@ -202,7 +208,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7594036059483860910": {
       "aweme_id": "7594036059483860910",
@@ -228,7 +235,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7593712656029562842": {
       "aweme_id": "7593712656029562842",
@@ -254,7 +262,11 @@
           "play_count": 0,
           "collect_count": 28
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_ae23b852815c9ac3b53a0b50c9057242.jpeg?from=2956013662",
+  "lolita_post_count": 8,
+  "total_post_count": 9
 }

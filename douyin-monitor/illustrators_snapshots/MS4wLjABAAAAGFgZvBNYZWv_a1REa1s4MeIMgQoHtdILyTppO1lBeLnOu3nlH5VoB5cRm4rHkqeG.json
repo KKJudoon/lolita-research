@@ -45,7 +45,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7635301068780383866": {
       "aweme_id": "7635301068780383866",
@@ -68,7 +69,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7633803097294397049": {
       "aweme_id": "7633803097294397049",
@@ -91,7 +93,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7633416638276662907": {
       "aweme_id": "7633416638276662907",
@@ -103,9 +106,7 @@
         "lolita设计",
         "lolita原创"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7633416638276662907",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owvsg3DAAITAFD3fKQfF7aZZ9fmkVqBzAEJdrE~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=1sXC445hKqYY%2Bme5r%2BjKCIJbhhw%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104049F019C754D6D4DC8431BE",
       "snapshots": [
@@ -117,7 +118,8 @@
           "play_count": 0,
           "collect_count": 147
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7633316517228789425": {
       "aweme_id": "7633316517228789425",
@@ -141,7 +143,8 @@
           "play_count": 0,
           "collect_count": 19
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7633008317128611057": {
       "aweme_id": "7633008317128611057",
@@ -164,7 +167,8 @@
           "play_count": 0,
           "collect_count": 7
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7632632646083054585": {
       "aweme_id": "7632632646083054585",
@@ -176,9 +180,7 @@
         "lolita设计",
         "lolita原创设计"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7632632646083054585",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/owidtAP09AKvEuuAi8DkDejEe0sfImHAA4pwEB~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=Lt6x8%2FEeVJoj1rV0L%2BNbbOvFMi4%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104049F019C754D6D4DC8431BE",
       "snapshots": [
@@ -190,7 +192,8 @@
           "play_count": 0,
           "collect_count": 52
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7630657960440109221": {
       "aweme_id": "7630657960440109221",
@@ -214,7 +217,8 @@
           "play_count": 0,
           "collect_count": 12
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7630437992620687269": {
       "aweme_id": "7630437992620687269",
@@ -236,7 +240,8 @@
           "play_count": 0,
           "collect_count": 6
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629898852854059889": {
       "aweme_id": "7629898852854059889",
@@ -259,7 +264,8 @@
           "play_count": 0,
           "collect_count": 17
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629690826838349689": {
       "aweme_id": "7629690826838349689",
@@ -284,7 +290,8 @@
           "play_count": 0,
           "collect_count": 5
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7629371447396634993": {
       "aweme_id": "7629371447396634993",
@@ -307,7 +314,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629580755803113841": {
       "aweme_id": "7629580755803113841",
@@ -330,7 +338,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629365234947647985": {
       "aweme_id": "7629365234947647985",
@@ -353,7 +362,8 @@
           "play_count": 0,
           "collect_count": 9
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7629336355609352121": {
       "aweme_id": "7629336355609352121",
@@ -376,7 +386,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7628250389918364283": {
       "aweme_id": "7628250389918364283",
@@ -399,7 +410,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7628080377865792229": {
       "aweme_id": "7628080377865792229",
@@ -422,7 +434,11 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_d1239d6416a457d964ae1549df431c2f.jpeg?from=2956013662",
+  "lolita_post_count": 6,
+  "total_post_count": 17
 }

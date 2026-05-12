@@ -53,7 +53,8 @@
           "play_count": 0,
           "collect_count": 235
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7629556918730416123": {
       "aweme_id": "7629556918730416123",
@@ -79,7 +80,8 @@
           "play_count": 0,
           "collect_count": 1523
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7620756608025737701": {
       "aweme_id": "7620756608025737701",
@@ -93,9 +95,7 @@
         "lolita原创设计",
         "lolita安利"
       ],
-      "style_tags": [
-        "军lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7620756608025737701",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oED1EoEDAqfEN2sAXplCAgsIUAFLe9AwNLCCqw~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=yA3TiEX9OY6gYlQUuy1TrsVUAmo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=202605121043235CFE21BDC17682AB1D8C",
       "snapshots": [
@@ -107,7 +107,8 @@
           "play_count": 0,
           "collect_count": 3436
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7611816941703246193": {
       "aweme_id": "7611816941703246193",
@@ -121,9 +122,7 @@
         "lolita原创设计",
         "花嫁"
       ],
-      "style_tags": [
-        "古典"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7611816941703246193",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oUepoAD3EECEAChbfAAwIpAFipiq5F6syR39om~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=pB0V933JCDtXQFnwvchHTaw0tDs%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=202605121043235CFE21BDC17682AB1D8C",
       "snapshots": [
@@ -135,7 +134,8 @@
           "play_count": 0,
           "collect_count": 1549
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7610353081474073722": {
       "aweme_id": "7610353081474073722",
@@ -161,7 +161,8 @@
           "play_count": 0,
           "collect_count": 530
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7605612203631376369": {
       "aweme_id": "7605612203631376369",
@@ -186,7 +187,10 @@
           "play_count": 0,
           "collect_count": 40
         }
-      ]
+      ],
+      "is_lolita": true
     }
-  }
+  },
+  "lolita_post_count": 6,
+  "total_post_count": 6
 }

@@ -43,7 +43,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7637756015925508678": {
       "aweme_id": "7637756015925508678",
@@ -71,7 +72,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7636285773185018835": {
       "aweme_id": "7636285773185018835",
@@ -96,7 +98,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7632926241447927721": {
       "aweme_id": "7632926241447927721",
@@ -121,7 +124,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7630737875617296767": {
       "aweme_id": "7630737875617296767",
@@ -145,7 +149,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7630346547334601983": {
       "aweme_id": "7630346547334601983",
@@ -171,7 +176,8 @@
           "play_count": 0,
           "collect_count": 9
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7629568781077206761": {
       "aweme_id": "7629568781077206761",
@@ -182,9 +188,7 @@
         "lolita原创",
         "购物清单"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7629568781077206761",
       "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813/okDAwDDcFAa34rhKA9K6ACFAfloEINAfgpaJ4E~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=DQnpb3b7gSINFOgCV1%2ButHd37GM%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104508B1575FC7B0F914FD3E92",
       "snapshots": [
@@ -196,7 +200,8 @@
           "play_count": 0,
           "collect_count": 11285
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7629364918647582931": {
       "aweme_id": "7629364918647582931",
@@ -216,7 +221,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627450396676207871": {
       "aweme_id": "7627450396676207871",
@@ -241,7 +247,10 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "lolita_post_count": 5,
+  "total_post_count": 9
 }

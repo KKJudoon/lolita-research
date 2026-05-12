@@ -44,7 +44,8 @@
           "play_count": 0,
           "collect_count": 947
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7633407224870453475": {
       "aweme_id": "7633407224870453475",
@@ -70,7 +71,8 @@
           "play_count": 0,
           "collect_count": 6
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7633367015302349283": {
       "aweme_id": "7633367015302349283",
@@ -95,7 +97,8 @@
           "play_count": 0,
           "collect_count": 33
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629334081465605839": {
       "aweme_id": "7629334081465605839",
@@ -119,7 +122,8 @@
           "play_count": 0,
           "collect_count": 326
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7626433010242820003": {
       "aweme_id": "7626433010242820003",
@@ -144,7 +148,8 @@
           "play_count": 0,
           "collect_count": 5534
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7623398237253012367": {
       "aweme_id": "7623398237253012367",
@@ -164,7 +169,8 @@
           "play_count": 0,
           "collect_count": 3237
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7611951475689786612": {
       "aweme_id": "7611951475689786612",
@@ -189,7 +195,8 @@
           "play_count": 0,
           "collect_count": 983
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7595182168247123188": {
       "aweme_id": "7595182168247123188",
@@ -214,7 +221,10 @@
           "play_count": 0,
           "collect_count": 106
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "lolita_post_count": 3,
+  "total_post_count": 8
 }

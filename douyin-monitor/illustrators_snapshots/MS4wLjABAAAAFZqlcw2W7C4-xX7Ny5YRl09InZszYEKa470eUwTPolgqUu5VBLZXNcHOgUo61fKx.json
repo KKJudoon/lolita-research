@@ -43,7 +43,8 @@
           "play_count": 0,
           "collect_count": 2385
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7636092248182295882": {
       "aweme_id": "7636092248182295882",
@@ -66,7 +67,8 @@
           "play_count": 0,
           "collect_count": 1171
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7632018840184734282": {
       "aweme_id": "7632018840184734282",
@@ -78,9 +80,7 @@
         "服设",
         "小公主苏菲亚"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7632018840184734282",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/ogiAINPfTDJEnrAedY90PAiARAJBdDgAA95tqC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=Jjsgu3dE%2FVaIgYXU9ZWXboAloGo%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104419D59735DA99ACA2390273",
       "snapshots": [
@@ -92,7 +92,8 @@
           "play_count": 0,
           "collect_count": 3079
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7631647589926050738": {
       "aweme_id": "7631647589926050738",
@@ -116,7 +117,10 @@
           "play_count": 0,
           "collect_count": 12217
         }
-      ]
+      ],
+      "is_lolita": true
     }
-  }
+  },
+  "lolita_post_count": 4,
+  "total_post_count": 4
 }

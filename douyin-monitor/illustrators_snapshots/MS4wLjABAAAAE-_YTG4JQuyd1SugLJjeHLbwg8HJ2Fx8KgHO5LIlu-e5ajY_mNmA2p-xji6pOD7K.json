@@ -47,7 +47,8 @@
           "play_count": 0,
           "collect_count": 9
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7634832173149305265": {
       "aweme_id": "7634832173149305265",
@@ -72,7 +73,8 @@
           "play_count": 0,
           "collect_count": 24
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7633174088579893881": {
       "aweme_id": "7633174088579893881",
@@ -97,7 +99,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7632604105295828145": {
       "aweme_id": "7632604105295828145",
@@ -122,7 +125,8 @@
           "play_count": 0,
           "collect_count": 26
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7632251609921184761": {
       "aweme_id": "7632251609921184761",
@@ -147,7 +151,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7630007550507998073": {
       "aweme_id": "7630007550507998073",
@@ -171,7 +176,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629654616397981425": {
       "aweme_id": "7629654616397981425",
@@ -196,7 +202,8 @@
           "play_count": 0,
           "collect_count": 18
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627411142772820409": {
       "aweme_id": "7627411142772820409",
@@ -221,7 +228,8 @@
           "play_count": 0,
           "collect_count": 21
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627069136321221241": {
       "aweme_id": "7627069136321221241",
@@ -246,7 +254,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7624815102109483249": {
       "aweme_id": "7624815102109483249",
@@ -271,7 +280,8 @@
           "play_count": 0,
           "collect_count": 533
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7624454203918405285": {
       "aweme_id": "7624454203918405285",
@@ -296,7 +306,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7622221202632041905": {
       "aweme_id": "7622221202632041905",
@@ -321,7 +332,8 @@
           "play_count": 0,
           "collect_count": 7
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7621862597906596849": {
       "aweme_id": "7621862597906596849",
@@ -346,7 +358,8 @@
           "play_count": 0,
           "collect_count": 12
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7619620424733307057": {
       "aweme_id": "7619620424733307057",
@@ -371,7 +384,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7619262251514149626": {
       "aweme_id": "7619262251514149626",
@@ -396,7 +410,8 @@
           "play_count": 0,
           "collect_count": 9
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7616663441117792113": {
       "aweme_id": "7616663441117792113",
@@ -421,7 +436,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7614067769914583729": {
       "aweme_id": "7614067769914583729",
@@ -445,7 +461,8 @@
           "play_count": 0,
           "collect_count": 49
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7611837965119818993": {
       "aweme_id": "7611837965119818993",
@@ -470,7 +487,8 @@
           "play_count": 0,
           "collect_count": 15
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7609244680140191161": {
       "aweme_id": "7609244680140191161",
@@ -494,7 +512,11 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_10309be7b90816e9089284457996b77a.jpeg?from=2956013662",
+  "lolita_post_count": 0,
+  "total_post_count": 19
 }

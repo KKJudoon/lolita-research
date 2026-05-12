@@ -45,7 +45,8 @@
           "play_count": 0,
           "collect_count": 5
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7637737615617470821": {
       "aweme_id": "7637737615617470821",
@@ -71,7 +72,8 @@
           "play_count": 0,
           "collect_count": 45321
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7636593127868777841": {
       "aweme_id": "7636593127868777841",
@@ -97,7 +99,8 @@
           "play_count": 0,
           "collect_count": 48
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7635953801871067045": {
       "aweme_id": "7635953801871067045",
@@ -123,7 +126,8 @@
           "play_count": 0,
           "collect_count": 73
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7634396066217403121": {
       "aweme_id": "7634396066217403121",
@@ -148,7 +152,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7633283082309605882": {
       "aweme_id": "7633283082309605882",
@@ -174,7 +179,8 @@
           "play_count": 0,
           "collect_count": 6
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7631926989678574309": {
       "aweme_id": "7631926989678574309",
@@ -200,7 +206,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7630336070639228581": {
       "aweme_id": "7630336070639228581",
@@ -224,7 +231,8 @@
           "play_count": 0,
           "collect_count": 7
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629210989749603237": {
       "aweme_id": "7629210989749603237",
@@ -249,7 +257,8 @@
           "play_count": 0,
           "collect_count": 10
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7628079780407808945": {
       "aweme_id": "7628079780407808945",
@@ -261,9 +270,7 @@
         "蓝纱公主梦",
         "摄影"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7628079780407808945",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oYwANiiO0EAFVWg4ABCFDEW7iAoEnIfeEAO8cE~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=1iMkAxlUl2gXhGKU6eInMPvnoLs%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104531555F930431AD324A6BDF",
       "snapshots": [
@@ -275,7 +282,8 @@
           "play_count": 0,
           "collect_count": 136
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627350974910654577": {
       "aweme_id": "7627350974910654577",
@@ -288,9 +296,7 @@
         "校园写真",
         "今日人设是童话公主"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7627350974910654577",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oMBE0D2cEBy7GokZwMiDwWIieAzuAzlfAAC0AO~tplv-dy-cropcenter:323:430.jpeg?lk3s=138a59ce&x-expires=2093911200&x-signature=YQVJwoJ5bOy%2FKuyD4JIxmLSSFX8%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=true&sh=323_430&sc=cover&biz_tag=pcweb_cover&l=20260512104531555F930431AD324A6BDF",
       "snapshots": [
@@ -302,7 +308,8 @@
           "play_count": 0,
           "collect_count": 284
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7626698062425362298": {
       "aweme_id": "7626698062425362298",
@@ -315,9 +322,7 @@
         "成人礼",
         "跟拍摄影"
       ],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7626698062425362298",
       "cover_url": "https://p9-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oofpsO9GAnD1PuiEaeFl2IAXEMAFQwEp3ZAe5A~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=ATVROBk5Ppv0OOVkm9CVyjXgiYU%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512104531555F930431AD324A6BDF",
       "snapshots": [
@@ -329,7 +334,8 @@
           "play_count": 0,
           "collect_count": 442
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7625852071892029873": {
       "aweme_id": "7625852071892029873",
@@ -355,7 +361,8 @@
           "play_count": 0,
           "collect_count": 10
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7624746968779262705": {
       "aweme_id": "7624746968779262705",
@@ -380,7 +387,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7623646159424350843": {
       "aweme_id": "7623646159424350843",
@@ -404,7 +412,8 @@
           "play_count": 0,
           "collect_count": 4
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7623269860894101882": {
       "aweme_id": "7623269860894101882",
@@ -427,7 +436,8 @@
           "play_count": 0,
           "collect_count": 6
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7622522102512876154": {
       "aweme_id": "7622522102512876154",
@@ -453,7 +463,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7620667093117779834": {
       "aweme_id": "7620667093117779834",
@@ -478,7 +489,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7619540928965189105": {
       "aweme_id": "7619540928965189105",
@@ -501,7 +513,10 @@
           "play_count": 0,
           "collect_count": 9
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "lolita_post_count": 0,
+  "total_post_count": 19
 }

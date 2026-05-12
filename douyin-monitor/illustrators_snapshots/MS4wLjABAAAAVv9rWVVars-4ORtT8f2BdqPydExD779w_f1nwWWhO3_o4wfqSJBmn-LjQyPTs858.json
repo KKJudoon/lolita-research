@@ -48,7 +48,8 @@
           "play_count": 0,
           "collect_count": 88
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7637493254736317731": {
       "aweme_id": "7637493254736317731",
@@ -74,7 +75,8 @@
           "play_count": 0,
           "collect_count": 6
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7635259295512218890": {
       "aweme_id": "7635259295512218890",
@@ -100,7 +102,8 @@
           "play_count": 0,
           "collect_count": 0
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7634875727719959823": {
       "aweme_id": "7634875727719959823",
@@ -126,7 +129,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7632665340241120575": {
       "aweme_id": "7632665340241120575",
@@ -152,7 +156,8 @@
           "play_count": 0,
           "collect_count": 5
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7632286301999418665": {
       "aweme_id": "7632286301999418665",
@@ -178,7 +183,8 @@
           "play_count": 0,
           "collect_count": 114
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7630054548454886656": {
       "aweme_id": "7630054548454886656",
@@ -198,7 +204,8 @@
           "play_count": 0,
           "collect_count": 21
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627482777293737266": {
       "aweme_id": "7627482777293737266",
@@ -224,7 +231,8 @@
           "play_count": 0,
           "collect_count": 14
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7625238097151692086": {
       "aweme_id": "7625238097151692086",
@@ -250,7 +258,8 @@
           "play_count": 0,
           "collect_count": 4
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7624862370870988068": {
       "aweme_id": "7624862370870988068",
@@ -276,7 +285,8 @@
           "play_count": 0,
           "collect_count": 48
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7624408000522548197": {
       "aweme_id": "7624408000522548197",
@@ -296,7 +306,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7622644080299756841": {
       "aweme_id": "7622644080299756841",
@@ -322,7 +333,8 @@
           "play_count": 0,
           "collect_count": 1
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7622286479598849286": {
       "aweme_id": "7622286479598849286",
@@ -348,7 +360,8 @@
           "play_count": 0,
           "collect_count": 3
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7621891832619846918": {
       "aweme_id": "7621891832619846918",
@@ -374,7 +387,8 @@
           "play_count": 0,
           "collect_count": 35
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7620041969451978027": {
       "aweme_id": "7620041969451978027",
@@ -400,7 +414,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7619682615104212267": {
       "aweme_id": "7619682615104212267",
@@ -426,7 +441,8 @@
           "play_count": 0,
           "collect_count": 57
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7619282560786435347": {
       "aweme_id": "7619282560786435347",
@@ -451,7 +467,8 @@
           "play_count": 0,
           "collect_count": 8
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7617076299697229098": {
       "aweme_id": "7617076299697229098",
@@ -477,7 +494,8 @@
           "play_count": 0,
           "collect_count": 2
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7616696682381626665": {
       "aweme_id": "7616696682381626665",
@@ -502,7 +520,8 @@
           "play_count": 0,
           "collect_count": 31
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7614860169498938651": {
       "aweme_id": "7614860169498938651",
@@ -528,7 +547,11 @@
           "play_count": 0,
           "collect_count": 10
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_083e14e0cff5a05a9812d736a0b3bb64.jpeg?from=2956013662",
+  "lolita_post_count": 0,
+  "total_post_count": 20
 }

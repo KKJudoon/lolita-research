@@ -32,9 +32,7 @@
       "create_time": 1777914454,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "哥特"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7636084430734745670",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4CBA0Mf7iDANAjAE0iB9QvxIAqpgR3uAD4CHe~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=%2FE%2BMlb8YUwaZ7FKtBo6Ly9RZ%2B9o%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -46,7 +44,8 @@
           "play_count": 0,
           "collect_count": 780
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7634770432394488703": {
       "aweme_id": "7634770432394488703",
@@ -66,7 +65,8 @@
           "play_count": 0,
           "collect_count": 140
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7632559662738746730": {
       "aweme_id": "7632559662738746730",
@@ -92,7 +92,8 @@
           "play_count": 0,
           "collect_count": 190
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7631228487626560619": {
       "aweme_id": "7631228487626560619",
@@ -100,9 +101,7 @@
       "create_time": 1776783841,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "王子lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7631228487626560619",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813/oUDD2AnAED0AILFgpLeAmk5frC69CyA5nEA8AC~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=6fWfIEn38%2BDPfVilFjB%2BTJluJDM%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -114,7 +113,8 @@
           "play_count": 0,
           "collect_count": 1716
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7629872160115578601": {
       "aweme_id": "7629872160115578601",
@@ -122,9 +122,7 @@
       "create_time": 1776468047,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "军lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7629872160115578601",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/o4OiO1gePAEgsADMABe0dDCXwiADiAAX9LAIKx~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=wYubMcuYOO36yN30CyFiS24nSjc%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -136,7 +134,8 @@
           "play_count": 0,
           "collect_count": 2146
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7627814694141924708": {
       "aweme_id": "7627814694141924708",
@@ -144,9 +143,7 @@
       "create_time": 1775989005,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "中华"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7627814694141924708",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/owOgAXfBDE7N9WpAOb5yD252bC6AZifAiAARIg~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=%2FH25kQeOwCRhUn8hR5xwZa%2BNim8%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -158,7 +155,8 @@
           "play_count": 0,
           "collect_count": 1457
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7625189139197450358": {
       "aweme_id": "7625189139197450358",
@@ -184,7 +182,8 @@
           "play_count": 0,
           "collect_count": 159
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7622307267979088228": {
       "aweme_id": "7622307267979088228",
@@ -192,9 +191,7 @@
       "create_time": 1774706707,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "军lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7622307267979088228",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oQeAcxADdiGNACDACpx49kgAeiEzPALBIH3uAU~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=QS2t8lPNDfaBIwgcC8ZFyldqTT4%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -206,7 +203,8 @@
           "play_count": 0,
           "collect_count": 6331
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7618908562818961782": {
       "aweme_id": "7618908562818961782",
@@ -214,9 +212,7 @@
       "create_time": 1773915385,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7618908562818961782",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oMCvEDEDA8fAietAyp87ANUI9AFFG9AucbCYig~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=UStTNoRbeyodIvutTGYYi2BNPIQ%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -228,7 +224,8 @@
           "play_count": 0,
           "collect_count": 439
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7608948557358361449": {
       "aweme_id": "7608948557358361449",
@@ -236,9 +233,7 @@
       "create_time": 1771596390,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "哥特"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7608948557358361449",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c001/oEfpAAkQAAA1A92AgEFymaDDQfoQ6RGEAACCYI~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=M2Vd1rtKmtNv6wIVS0MHEMHmOkU%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -250,7 +245,8 @@
           "play_count": 0,
           "collect_count": 184
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7606705766824955562": {
       "aweme_id": "7606705766824955562",
@@ -258,9 +254,7 @@
       "create_time": 1771074200,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "王子lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7606705766824955562",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oIZQyPwyfAEUHiCLABe0HWEZciEeiAAd0DAIK1~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=LlKo3e327wMgUj2j9IheJAupsnE%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -272,7 +266,8 @@
           "play_count": 0,
           "collect_count": 470
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7604830261537655635": {
       "aweme_id": "7604830261537655635",
@@ -292,7 +287,8 @@
           "play_count": 0,
           "collect_count": 442
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7603666330088600164": {
       "aweme_id": "7603666330088600164",
@@ -312,7 +308,8 @@
           "play_count": 0,
           "collect_count": 3085
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7603028044740489898": {
       "aweme_id": "7603028044740489898",
@@ -320,9 +317,7 @@
       "create_time": 1770217929,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "甜lo"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7603028044740489898",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oYnXgFB9QEfXAYaEEp2wWBDkFQfAACFACIQDA3~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=70cnSFavivb%2BoDE%2B8OHtMmNGDkk%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -334,7 +329,8 @@
           "play_count": 0,
           "collect_count": 500
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7601720155081739499": {
       "aweme_id": "7601720155081739499",
@@ -342,9 +338,7 @@
       "create_time": 1769913403,
       "duration": 0,
       "hashtags": [],
-      "style_tags": [
-        "哥特"
-      ],
+      "style_tags": [],
       "post_url": "https://www.douyin.com/video/7601720155081739499",
       "cover_url": "https://p3-pc-sign.douyinpic.com/tos-cn-i-0813c000-ce/oUI9QAJA7d6fApDSYFD4fs7PIv7B6EAg8brfEu~noop.jpeg?lk3s=138a59ce&x-expires=1779760800&x-signature=u8pPeNxbM2P%2FEv2rz0IsYpmNHvU%3D&from=327834062&s=PackSourceEnum_PUBLISH&se=false&biz_tag=pcweb_cover&l=20260512103915D3429601C3AAB52BD47F",
       "snapshots": [
@@ -356,7 +350,8 @@
           "play_count": 0,
           "collect_count": 126
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7600772504647477673": {
       "aweme_id": "7600772504647477673",
@@ -376,7 +371,8 @@
           "play_count": 0,
           "collect_count": 470
         }
-      ]
+      ],
+      "is_lolita": false
     },
     "7599317061089904298": {
       "aweme_id": "7599317061089904298",
@@ -402,7 +398,8 @@
           "play_count": 0,
           "collect_count": 686
         }
-      ]
+      ],
+      "is_lolita": true
     },
     "7598139073144020678": {
       "aweme_id": "7598139073144020678",
@@ -422,7 +419,11 @@
           "play_count": 0,
           "collect_count": 328
         }
-      ]
+      ],
+      "is_lolita": false
     }
-  }
+  },
+  "avatar": "https://p3-pc.douyinpic.com/aweme/100x100/aweme-avatar/tos-cn-avt-0015_0dbe30bb3cca1cb0650b10143081ecef.jpeg?from=2956013662",
+  "lolita_post_count": 3,
+  "total_post_count": 18
 }
