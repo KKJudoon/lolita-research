@@ -2,127 +2,284 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>缪斯之名 — QUEENSWORDS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>缪斯之名 · 军lo 调研</title>
 <style>
-:root { --bg:#f8f6f3; --card-bg:#fff; --text:#2c2c2c; --sub:#888; --accent:#b8860b; --tag-bg:#f0ebe3; --pos:#2e7d32; --neg:#c62828; }
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); padding:24px; max-width:800px; margin:0 auto; }
-a { color:var(--accent); }
-.back { display:inline-block; margin-bottom:20px; font-size:0.9rem; }
-h1 { font-size:1.8rem; margin-bottom:4px; }
-.brand-line { font-size:0.9rem; color:var(--sub); margin-bottom:16px; text-transform:uppercase; letter-spacing:0.5px; }
-.summary { font-size:1rem; line-height:1.6; margin-bottom:20px; color:#444; }
-.section { background:var(--card-bg); border-radius:12px; padding:20px; margin-bottom:16px; box-shadow:0 1px 4px rgba(0,0,0,0.05); }
-.section h2 { font-size:1.15rem; margin-bottom:12px; color:var(--accent); }
-.section h3 { font-size:0.95rem; margin:12px 0 6px; }
-.note { font-size:0.85rem; color:var(--sub); line-height:1.5; margin-top:6px; }
-.tag { display:inline-block; font-size:0.75rem; background:var(--tag-bg); padding:3px 10px; border-radius:12px; margin:2px; }
-.color-chip { display:inline-block; padding:4px 12px; border-radius:16px; background:#eee; font-size:0.85rem; margin:3px; }
-.post-card { border-left:3px solid var(--accent); padding:10px 14px; margin-bottom:12px; background:#faf8f5; border-radius:0 8px 8px 0; }
-.post-meta { font-size:0.8rem; color:var(--sub); margin-bottom:4px; }
-.post-likes { color:var(--neg); font-weight:600; margin-right:12px; }
-.post-type { background:var(--tag-bg); padding:2px 8px; border-radius:8px; }
-.post-title { font-weight:600; margin-bottom:4px; }
-.post-summary { font-size:0.88rem; line-height:1.5; color:#555; }
-.positive { color:var(--pos); }
-.negative { color:var(--neg); }
-.pos-list li,.neg-list li { font-size:0.9rem; line-height:1.6; margin:6px 0 6px 20px; }
-.pos-list li { color:#333; }
-.neg-list li { color:#333; }
-.verdict-box { margin-top:16px; padding:16px; background:#fdf6e3; border-radius:8px; font-size:0.92rem; line-height:1.7; }
-.elements { display:flex; flex-direction:column; gap:10px; margin-top:10px; }
-.element { background:#faf8f5; padding:12px; border-radius:8px; }
-.element .lineage { font-size:0.83rem; color:var(--sub); margin-top:4px; }
-blockquote { border-left:3px solid var(--accent); padding:8px 14px; margin:10px 0; font-style:italic; color:#555; }
-@media (max-width:600px) { body { padding:12px; } }
+
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", sans-serif; background: #f6f4ef; color: #1a1a1a; max-width: 1200px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #2c2c2c; padding-bottom: 8px; margin-top: 0; }
+  .meta { color: #777; font-size: 12px; margin-bottom: 24px; }
+  a { color: #5a4a2a; text-decoration: none; border-bottom: 1px dashed #c8a868; }
+  a:hover { color: #8a6a3a; }
+  a.bare { border-bottom: none; }
+
+  .back { font-size: 13px; margin-bottom: 12px; display: inline-block; }
+  .card { background: white; border-radius: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
+  .card header h2 { margin: 0; font-size: 24px; }
+  .brand-line { color: #666; font-size: 14px; margin: 4px 0; }
+  .designer-note { color: #888; font-size: 12px; font-style: italic; }
+  .verified { background: #d4f4d4; color: #2c7a2c; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .tags { margin: 8px 0; }
+  .tag { display: inline-block; background: #efe9d9; color: #5a4a2a; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-right: 4px; }
+  .summary { color: #444; line-height: 1.7; }
+  .poster-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+  .poster-grid img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+  .poster-grid img:hover { transform: scale(1.02); }
+  .poster-grid img { cursor: zoom-in; }
+  .posters-source { font-size: 12px; color: #888; padding: 4px 0 12px; line-height: 1.6; }
+  .posters-source a { color: #6a5a30; text-decoration: none; }
+  .posters-source a:hover { color: #2c2418; text-decoration: underline; }
+  .lb-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.88); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 30px 60px; }
+  .lb-overlay.open { display: flex; }
+  .lb-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 8px 32px rgba(0,0,0,0.5); border-radius: 4px; cursor: default; }
+  .lb-close, .lb-prev, .lb-next { position: absolute; background: rgba(255,255,255,0.15); color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.3); }
+  .lb-close { top: 16px; right: 16px; }
+  .lb-prev { left: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
+  .lb-counter { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 12px; font-size: 13px; }
+  details.inspiration { background: #fdfaf0; border: 1px solid #e8d8b0; border-radius: 8px; margin: 16px 0; padding: 0; }
+  details.inspiration > summary { list-style: none; cursor: pointer; padding: 14px 18px; background: #f7eed5; border-radius: 8px; user-select: none; }
+  details.inspiration > summary::-webkit-details-marker { display: none; }
+  details.inspiration > summary::before { content: "▸ "; color: #8a6a30; font-weight: bold; transition: transform 0.2s; display: inline-block; }
+  details.inspiration[open] > summary { border-radius: 8px 8px 0 0; }
+  details.inspiration[open] > summary::before { content: "▾ "; }
+  details.inspiration > summary h3 { margin: 0; font-size: 16px; }
+  .insp-count { color: #8a6a30; font-size: 12px; font-weight: normal; margin-left: 8px; }
+  .insp-body { padding: 16px 18px; }
+  .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0; grid-auto-rows: max-content; }
+  .info { background: #faf7ed; padding: 12px 16px; border-radius: 6px; }
+  .info h3 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .row { font-size: 13px; line-height: 1.8; display: flex; gap: 8px; }
+  .row .k { color: #888; min-width: 80px; }
+  .row .v { color: #222; flex: 1; word-break: break-word; }
+  .row.note { color: #777; font-style: italic; font-size: 12px; }
+  .color-chip { background: #f0e8d0; padding: 2px 8px; border-radius: 4px; margin-right: 4px; font-size: 12px; }
+  .color-dropped { background: #f8e0e0; color: #a04020; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px; text-decoration: line-through; }
+  .shops { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; grid-auto-rows: max-content; }
+  .shop-block { background: #fbf8ee; padding: 12px 16px; border-radius: 6px; border-left: 3px solid #c8a868; }
+  .shop-block h4 { margin: 0 0 8px 0; font-size: 14px; color: #5a4a2a; }
+  .hot-posts { margin-top: 24px; padding-top: 16px; border-top: 1px solid #ddd; }
+  .hot-posts h3 { font-size: 16px; color: #2a2a2a; }
+  .post { background: #fafafa; padding: 12px 16px; border-radius: 6px; margin-bottom: 8px; }
+  .post-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+  .post-type { background: #e8d8b0; color: #6a4a1a; padding: 2px 8px; border-radius: 12px; font-size: 11px; }
+  .post-meta { color: #888; font-size: 11px; }
+  .post-title { font-weight: 600; font-size: 14px; margin: 4px 0; }
+  .post-summary { color: #444; line-height: 1.7; font-size: 13px; }
+  .post-link { font-size: 11px; margin-top: 4px; }
+  .inspiration { margin-top: 24px; padding: 16px; background: #f4ecdb; border-radius: 8px; border-left: 4px solid #8a6a3a; }
+  .inspiration h3 { margin: 0 0 8px 0; }
+  .insp-badge { font-size: 12px; padding: 3px 10px; border-radius: 12px; margin-left: 8px; vertical-align: middle; font-weight: normal; }
+  .insp-badge.insp-official { background: #d4f4d4; color: #2c7a2c; }
+  .insp-badge.insp-kol { background: #fde8b0; color: #6a4a1a; }
+  .insp-badge.insp-ai { background: #fde0d0; color: #a04020; }
+  .insp-note { font-size: 12px; color: #777; margin-bottom: 10px; font-style: italic; }
+  .insp-theme { font-size: 14px; margin-bottom: 12px; padding: 8px 12px; background: white; border-radius: 4px; }
+  .quote { margin: 12px 0; padding: 10px 14px; background: white; border-left: 3px solid #c8a868; font-size: 13px; color: #444; }
+  .elements { display: grid; gap: 10px; margin: 12px 0; }
+  .el { background: white; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .el-name { font-weight: 600; color: #2a2a2a; margin-bottom: 4px; }
+  .el-src { color: #444; }
+  .el-src b { color: #888; font-weight: normal; }
+  .el-purpose { color: #555; font-size: 12px; margin-top: 4px; }
+  .el-purpose b { color: #888; font-weight: normal; }
+  .el-note { color: #666; font-size: 12px; font-style: italic; margin-top: 4px; }
+  .el-mark { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  .el-mark.official { background: #d4f4d4; color: #2c7a2c; }
+  .el-mark.ai { background: #fde0d0; color: #a04020; }
+  .thinking { margin: 12px 0; padding: 10px 14px; background: white; border-radius: 6px; font-size: 13px; line-height: 1.7; }
+  .thinking b { color: #5a4a2a; }
+  .ai-prompt { margin-top: 12px; background: white; border-radius: 6px; padding: 8px 14px; font-size: 13px; }
+  .ai-prompt summary { cursor: pointer; color: #5a4a2a; font-weight: 600; }
+  .prompt-text { margin-top: 8px; padding: 10px; background: #f6f4ef; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 12px; line-height: 1.6; user-select: all; }
+  .synthesis { margin-top: 24px; padding: 16px; background: #fff8ed; border-radius: 8px; border-left: 4px solid #c8a868; }
+  .synthesis h3 { margin: 0 0 12px 0; }
+  .kw-row { margin-bottom: 12px; }
+  .kw { background: #c8a868; color: white; padding: 3px 10px; border-radius: 14px; font-size: 12px; margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+  .syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .syn-block { padding: 12px 16px; border-radius: 6px; }
+  .syn-pos { background: #ecf5ec; }
+  .syn-pos h4 { color: #2c7a2c; margin: 0 0 8px 0; }
+  .syn-neg { background: #fdf0ec; }
+  .syn-neg h4 { color: #a04020; margin: 0 0 8px 0; }
+  .syn-block ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 13px; }
+  .verdict { margin-top: 12px; padding: 12px; background: white; border-radius: 6px; line-height: 1.7; font-size: 13px; }
+  .popularity-section { margin: 16px 0; padding: 16px 18px; background: #fffaee; border-radius: 8px; border: 1px solid #e8d8b0; }
+  .popularity-section > h3 { margin: 0 0 10px 0; font-size: 15px; color: #5a4a2a; display: flex; align-items: center; gap: 10px; }
+  .pop-label { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .pop-top { background: #b00020; color: white; }
+  .pop-high { background: #c5a572; color: white; }
+  .pop-mid { background: #efe9d9; color: #5a4a2a; }
+  .pop-low { background: #f0eee8; color: #999; }
+  .pop-none { background: #f0eee8; color: #ccc; }
+  .pop-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0; }
+  .pop-dim { background: white; padding: 8px 10px; border-radius: 6px; }
+  .pop-dim-label { font-size: 11px; color: #888; }
+  .pop-dim-value { font-size: 14px; font-weight: 600; color: #5a4a2a; margin: 2px 0; }
+  .pop-dim-desc { font-size: 10px; color: #aaa; }
+  .pop-evidence-block { margin-top: 10px; padding: 10px 12px; background: #f8f4e8; border-radius: 6px; }
+  .pop-evidence-label { font-size: 11px; color: #777; margin-bottom: 4px; }
+  .pop-evidence { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.7; color: #444; }
+  @media (max-width: 640px) { .pop-dims { grid-template-columns: repeat(2, 1fr); } }
+
+  /* mobile */
+  @media (max-width: 640px) {
+    body { padding: 12px 8px; }
+    .card { padding: 16px; }
+    .card header h2 { font-size: 20px; }
+    .poster-grid { grid-template-columns: repeat(2, 1fr); }
+    .poster-grid img { height: 240px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .shops { grid-template-columns: 1fr; }
+    .syn-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
-<a href="../index.html" class="back">← 返回卡片墙</a>
-<h1>缪斯之名</h1>
-<div class="brand-line">QUEENSWORDS</div>
-<div class="tags"><span class="tag">帝政</span> <span class="tag">cla系</span> <span class="tag">复原风</span> <span class="tag">天丝</span> <span class="tag">缎面</span> <span class="tag">高腰</span></div>
-<p class="summary">帝政风 Lolita 标杆爆款，高腰束胸 + A型裙摆，主打天丝/缎面双面料路线。被圈内视为帝政品类现象级单品。</p>
+  <a class="back" href="../index.html">← 返回所有款</a>
+  <article class="card" id="queenswords_muse_of_name">
+    <header>
+      <h2>缪斯之名 <span class="verified">✓ verified</span></h2>
+      <div class="brand-line">品牌：QUEENSWORDS</div>
+      <div class="designer-note">官号未公开设计师信息，XHS/微博均无画师署名</div>
+      <div class="tags"><span class="tag">帝政</span> <span class="tag">cla系</span> <span class="tag">复原风</span> <span class="tag">天丝</span> <span class="tag">缎面</span> <span class="tag">高腰</span></div>
+    </header>
+    <p class="summary">帝政风 Lolita 标杆爆款，高腰束胸 + A型裙摆，主打天丝/缎面双面料路线。被圈内视为帝政品类现象级单品。</p>
+    <div class="poster-grid"></div>
+    <div class="posters-source">📷 来源：<a href="https://item.taobao.com/item.htm?id=938772655299" target="_blank">淘宝商品页 ↗</a></div>
+    
+    <div class="info-grid">
+      <section class="info"><h3>上新</h3><div class="row"><span class="k">上新窗口</span><span class="v">2025-06-15 上线预约</span></div><div class="row"><span class="k">类型</span><span class="v">定金 + 分批尾款</span></div><div class="row"><span class="k">海报首发</span><span class="v">2025-06-15</span></div><div class="row note">天丝四米摆版 6.15 上线；多批次发货（至少一批尾款链接在售）；130天内发货</div></section>
+      <section class="info"><h3>价格</h3><div class="row"><span class="k">OP</span><span class="v">¥580</span></div><div class="row note">XHS 多帖确认单裙 ~¥580；评论&#x27;580这个价格祝他成功&#x27;(134赞)+&#x27;四五百&#x27;；淘宝尾款链接 ¥10-20 起（非全款）；天丝版比缎面贵（消费者困惑&#x27;贵出来的部分在哪里&#x27;48赞评论）；大全套价格未确认</div></section>
+      <section class="info"><h3>配色</h3><div class="row"><span class="color-chip">香槟粉</span> <span class="color-chip">碎冰蓝</span> <span class="color-chip">棉花糖(白)</span></div></section>
+    </div>
+    <div class="shops">
+      <div class="shop-block"><h4>淘宝</h4><div class="row"><span class="k">店铺</span><span class="v">QUEENSWORDS</span></div><div class="row"><span class="k">店铺主页</span><span class="v"><a href="https://item.taobao.com/item.htm?id=938772655299" target="_blank" rel="noopener">https://item.taobao.com/item.htm?id=938772655299</a></span></div><div class="row"><span class="k">店铺评价</span><span class="v">4.8</span></div><div class="row"><span class="k">当前标题</span><span class="v">一批尾款【缪斯之名】QUEENSWORDS帝政连衣裙天丝复古缎面飘逸</span></div><div class="row"><span class="k">挂牌价</span><span class="v">10</span></div><div class="row"><span class="k">销量</span><span class="v">3000+</span></div><div class="row"><span class="k">销量趋势</span><span class="v">持续出货中（第十批以上）</span></div><div class="row"><span class="k">销量备注</span><span class="v">淘宝显示3000+已售，但这是尾款链接（¥10-20），实际购买人数=付尾款人数。回头客874人，超5千人加购，1000+评价好评率99.5%</span></div><div class="row"><span class="k">发货地</span><span class="v">广东广州</span></div></div>
+      <div class="shop-block"><h4>微博</h4><div class="row"><span class="k">官方账号</span><span class="v">QUEENSWORDS</span></div><div class="row"><span class="k">官方主页</span><span class="v"><a href="https://weibo.com/u/7936465315" target="_blank" rel="noopener">https://weibo.com/u/7936465315</a></span></div><div class="row note">微博官号仅11条帖子，活跃度极低；视频累计播放3721；1-25发&#x27;超绝古典感小玫瑰&#x27;视频(362次观看5赞)；微博不是主营销阵地</div></div>
+      <div class="shop-block"><h4>小红书</h4><div class="row"><span class="k">品牌账号</span><span class="v">QUEENSWORDS</span></div><div class="row note">XHS 官号帖&#x27;缪斯之名天丝四米摆真的超美 6.15上线&#x27;获1131赞；&#x27;明天就来啦！三色你来喜欢哪个色&#x27;262赞。XHS 是主要营销阵地</div></div>
+    </div>
+    
+        <details class="inspiration">
+          <summary><h3 style="display:inline">设计灵感 / 元素拆解 <span class="insp-badge insp-ai">AI 分析（非官方）</span> <span class="insp-count">展开看 4 个元素 + AI 生图 prompt</span></h3></summary>
+          <div class="insp-body">
+            <div class="insp-note"></div>
+            <div class="insp-theme"><b>主题：</b>18-19世纪拿破仑帝政时期宫廷裙（Empire silhouette），复原欧洲油画中的古典优雅女性形象</div>
+            
+            <div class="elements"><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>18世纪末-19世纪初 Empire line，源自古希腊 chiton 的高腰剪裁，经法国大革命后 Josephine Bonaparte 推广成为时代标志</div><div class="el-purpose"><b>设计目的：</b>核心廓形——胸下分割线拉长身形比例，A摆产生飘逸感</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>天丝(Tencel/Lyocell)是现代环保面料，垂坠感接近真丝但更易打理；四米摆指裙摆用布量，还原帝政裙的大摆飘逸</div><div class="el-purpose"><b>设计目的：</b>面料选择——天丝的垂坠+透气是夏季帝政裙的核心卖点，但也带来透视副作用</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>缎面(Satin)是传统宫廷礼服面料，光泽感强，更接近油画中帝政裙的质感</div><div class="el-purpose"><b>设计目的：</b>面料双线策略——缎面版更厚实不透但偏重，天丝版轻盈但透视。消费者需在质感和实用性间选择</div></div><div class="el"><div class="el-name"></div><div class="el-src"><b>来源：</b>帝政裙经典领口设计，还原Regency era肖像画中展露胸部圆润线条的审美</div><div class="el-purpose"><b>设计目的：</b>领口设计——帝政裙标志性元素，缪斯之名采用的领口高度被认为适中，未过度低胸</div></div></div>
+            <div class="thinking"><b>设计思路：</b>缪斯之名走的是帝政裙&#x27;古典复原&#x27;路线——不加军事元素、不加哥特符号，纯粹还原 Empire silhouette 的优雅飘逸。天丝/缎面双线策略覆盖了夏季轻盈穿着和仪式感两个场景。品名&#x27;缪斯之名&#x27;暗示古希腊缪斯女神——帝政裙的源头正是对古典希腊/罗马服饰的浪漫化复兴。</div>
+            <details class="ai-prompt"><summary>📝 AI 生图 prompt（英文，可复制给 GPT/DALL-E）</summary><div class="prompt-text">A young woman in a flowing Regency-era Empire-line dress, high waistline just below the bust with a gentle A-line skirt falling to the floor. The dress is made of sheer Tencel fabric in champagne pink, with a four-meter-wide hem creating a dramatic draping effect. Square neckline revealing collarbone and shoulders, inspired by early 19th-century Napoleonic court paintings. Delicate lace trim at the bodice and sleeves. The silhouette evokes Josephine Bonaparte&#x27;s court dress — ethereal, romantic, and classically elegant. Soft natural lighting, oil painting atmosphere, European palace garden background.</div></details>
+          </div>
+        </details>
+        
+    <section class="hot-posts"><h3>小红书相关热门帖（5）</h3>
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">真人成片种草</span>
+        <span class="post-meta">@粥阿粥 · 2025-12-21 · ❤ 2.1万 · 💬 259</span>
+      </div>
+      <div class="post-title">缪斯之名✨特别美的帝政裙！</div>
+      <div class="post-summary">穿搭展示视频引爆帝政裙热度。标签 #cla系 #复原风 #氛围感。评论区核心争议：&#x27;一定要长得高，矮的人穿着就是孕&#x27;(813赞)；&#x27;580这个价格祝他成功&#x27;(134赞)；&#x27;真的好看但什么时候穿呢&#x27;(279赞)——日常穿着场景是最大顾虑。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6947e353000000001e034ca6" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">品牌官方上新</span>
+        <span class="post-meta">@QUEENSWORDS · 2025-06-15 · ❤ 1131 · 💬 </span>
+      </div>
+      <div class="post-title">缪斯之名天丝四米摆真的超美 6.15上线～</div>
+      <div class="post-summary">官方首发帖，展示天丝四米摆版本。评论区消费者询问天丝vs缎面区别&#x27;贵出来的部分在哪里&#x27;(48赞)；尺码到2XL；头饰本家配套。天丝/缎面双线策略在此帖首次引发讨论。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6846c74b000000002100d693" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">真人成片种草</span>
+        <span class="post-meta">@好困 每天都好困 ·  · ❤ 851 · 💬 </span>
+      </div>
+      <div class="post-title">缪斯之名 好飘逸～get到帝政裙是迟早的事！</div>
+      <div class="post-summary">高赞穿搭种草帖，强调飘逸感。帝政裙入坑型内容。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/69d260080000000021012e5a" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">工艺争议</span>
+        <span class="post-meta">@嗯呐是大脸儿 ·  · ❤ 122 · 💬 </span>
+      </div>
+      <div class="post-title">怎么没人说缪斯之名这么透啊</div>
+      <div class="post-summary">天丝版严重透视问题——&#x27;能看清胸垫&#x27;(71赞)；&#x27;早知道天丝这么透谁还加钱买&#x27;(30赞)。碎冰蓝色最严重，香槟色稍好，缎面版不透。天丝面料透气是优点但透视是致命缺陷，需加衬裙。¥550+价位未内置足够内衬被消费者批评。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6a150d1b0000000036002a3a" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    
+    <article class="post">
+      <div class="post-head">
+        <span class="post-type">媒体清单/多款横评</span>
+        <span class="post-meta">@呜咿呀哈！ ·  · ❤ 2334 · 💬 </span>
+      </div>
+      <div class="post-title">决战7月帝政之巅</div>
+      <div class="post-summary">多款帝政裙对比帖，缪斯之名作为主角之一出现，与其他帝政裙正面PK。帝政品类竞争格局的横向参考。</div>
+      <div class="post-link"><a href="https://www.xiaohongshu.com/explore/6860a147000000001001195e" target="_blank" rel="noopener">查看原帖 →</a></div>
+    </article>
+    </section>
+    
+        <section class="synthesis">
+          <h3>综合分析</h3>
+          <div class="kw-row"><span class="kw">帝政品类标杆</span> <span class="kw">天丝四米摆</span> <span class="kw">¥580中端</span> <span class="kw">显孕争议</span> <span class="kw">天丝透视翻车</span> <span class="kw">日常穿着场景存疑</span> <span class="kw">圈外破圈2.1万赞</span></div>
+          <div class="syn-grid">
+            <div class="syn-block syn-pos"><h4>正面</h4><ul><li>帝政品类现象级爆款——XHS 单帖 2.1 万赞，淘宝 3000+ 已售，定义了&#x27;帝政裙&#x27;这个搜索品类的认知</li><li>天丝四米摆版本被大量种草，飘逸感是核心卖点，多帖提到&#x27;像油画里走出来&#x27;</li><li>价位 ~¥580 处于帝政裙中端，性价比获认可——&#x27;580祝他成功&#x27;虽带调侃但134赞说明接受度OK</li><li>尺码覆盖 S-2XL，对大码友好；多帖显示微胖/丰满穿着效果反而好（&#x27;胸大穿特别美就是欧洲中世纪油画中的妇人&#x27;75赞）</li><li>品牌好评率 99.5%（1000+评价），淘宝 4.8 分，消费者满意度高</li></ul></div>
+            <div class="syn-block syn-neg"><h4>负面 / 争议</h4><ul><li>天丝版透视问题严重——碎冰蓝色可见内衣/胸垫，&#x27;550了多加层布也不是不行吧&#x27;(71赞)，需自购衬裙才能穿出门</li><li>显孕是帝政裙品类通病但缪斯之名高赞帖评论区被反复提及——&#x27;一定要长得高，矮的穿着就是孕&#x27;(813赞)，身高门槛客观存在</li><li>日常穿着场景受限——&#x27;真的好看但没有社交场合了什么时候穿呢&#x27;(279赞)，非日常款是最大心理门槛</li><li>天丝vs缎面差异不透明——消费者困惑&#x27;贵出来的部分在哪里&#x27;(48赞)，官方沟通不足</li><li>微博官号几乎不运营（11帖/视频播放3721），品牌建设薄弱，目前热度完全依赖XHS自然种草和淘宝流量</li></ul></div>
+          </div>
+          <div class="verdict">缪斯之名是2025-2026帝政裙品类的定义性爆款，¥580价位+天丝飘逸感+2.1万赞种草帖构成了强大的消费号召力。但天丝透视、显孕门槛、非日常场景三个硬伤制约了复购和口碑深度。品牌运营能力与产品热度严重不匹配（微博几乎荒废）。适合中高个子、追求仪式感/氛围感的消费者；矮个子/日常穿着需求者慎入。在帝政品类里是当之无愧的头部，但在lolita整体行业里属于单品爆款型（非品牌势能型）。</div>
+        </section>
+        
+  </article>
 
-<div class="section">
-  <h2>价格</h2>
-  <p>单裙 OP: ¥580</p><br><p>XHS 多帖确认单裙 ~¥580；评论&#x27;580这个价格祝他成功&#x27;(134赞)+&#x27;四五百&#x27;；淘宝尾款链接 ¥10-20 起（非全款）；天丝版比缎面贵（消费者困惑&#x27;贵出来的部分在哪里&#x27;48赞评论）；大全套价格未确认</p>
-</div>
-
-<div class="section">
-  <h2>发售信息</h2>
-  <p><strong>发售方式:</strong> 定金 + 分批尾款</p><p><strong>时间:</strong> 2025-06-15 上线预约</p><p class="note">天丝四米摆版 6.15 上线；多批次发货（至少一批尾款链接在售）；130天内发货</p>
-</div>
-
-<div class="section">
-  <h2>颜色</h2>
-  <span class="color-chip">香槟粉</span> <span class="color-chip">碎冰蓝</span> <span class="color-chip">棉花糖(白)</span>
-</div>
-
-<div class="section"><h2>店铺信息</h2><h3>淘宝</h3><p>店铺: QUEENSWORDS · 广东广州</p><p>销量: 3000+</p><p class="note">淘宝显示3000+已售，但这是尾款链接（¥10-20），实际购买人数=付尾款人数。回头客874人，超5千人加购，1000+评价好评率99.5%</p><h3>微博</h3><p>官号: QUEENSWORDS</p><p class="note">微博官号仅11条帖子，活跃度极低；视频累计播放3721；1-25发&#x27;超绝古典感小玫瑰&#x27;视频(362次观看5赞)；微博不是主营销阵地</p><h3>小红书</h3><p class="note">XHS 官号帖&#x27;缪斯之名天丝四米摆真的超美 6.15上线&#x27;获1131赞；&#x27;明天就来啦！三色你来喜欢哪个色&#x27;262赞。XHS 是主要营销阵地</p></div>
-<div class="section"><h2>热门帖子 (XHS)</h2>
-            <div class="post-card">
-              <div class="post-meta">
-                <span class="post-likes">❤ 2.1万</span>
-                <span class="post-type">真人成片种草</span>
-              </div>
-              <div class="post-title">缪斯之名✨特别美的帝政裙！</div>
-              <div class="post-summary">穿搭展示视频引爆帝政裙热度。标签 #cla系 #复原风 #氛围感。评论区核心争议：&#x27;一定要长得高，矮的人穿着就是孕&#x27;(813赞)；&#x27;580这个价格祝他成功&#x27;(134赞)；&#x27;真的好看但什么时候穿呢&#x27;(279赞)——日常穿着场景是最大顾虑。</div>
-            </div>
-            <div class="post-card">
-              <div class="post-meta">
-                <span class="post-likes">❤ 1131</span>
-                <span class="post-type">品牌官方上新</span>
-              </div>
-              <div class="post-title">缪斯之名天丝四米摆真的超美 6.15上线～</div>
-              <div class="post-summary">官方首发帖，展示天丝四米摆版本。评论区消费者询问天丝vs缎面区别&#x27;贵出来的部分在哪里&#x27;(48赞)；尺码到2XL；头饰本家配套。天丝/缎面双线策略在此帖首次引发讨论。</div>
-            </div>
-            <div class="post-card">
-              <div class="post-meta">
-                <span class="post-likes">❤ 851</span>
-                <span class="post-type">真人成片种草</span>
-              </div>
-              <div class="post-title">缪斯之名 好飘逸～get到帝政裙是迟早的事！</div>
-              <div class="post-summary">高赞穿搭种草帖，强调飘逸感。帝政裙入坑型内容。</div>
-            </div>
-            <div class="post-card">
-              <div class="post-meta">
-                <span class="post-likes">❤ 122</span>
-                <span class="post-type">工艺争议</span>
-              </div>
-              <div class="post-title">怎么没人说缪斯之名这么透啊</div>
-              <div class="post-summary">天丝版严重透视问题——&#x27;能看清胸垫&#x27;(71赞)；&#x27;早知道天丝这么透谁还加钱买&#x27;(30赞)。碎冰蓝色最严重，香槟色稍好，缎面版不透。天丝面料透气是优点但透视是致命缺陷，需加衬裙。¥550+价位未内置足够内衬被消费者批评。</div>
-            </div>
-            <div class="post-card">
-              <div class="post-meta">
-                <span class="post-likes">❤ 2334</span>
-                <span class="post-type">媒体清单/多款横评</span>
-              </div>
-              <div class="post-title">决战7月帝政之巅</div>
-              <div class="post-summary">多款帝政裙对比帖，缪斯之名作为主角之一出现，与其他帝政裙正面PK。帝政品类竞争格局的横向参考。</div>
-            </div></div>
-<div class="section"><h2>综合分析</h2><h3 class="positive">✓ 正面</h3><ul class="pos-list"><li>帝政品类现象级爆款——XHS 单帖 2.1 万赞，淘宝 3000+ 已售，定义了&#x27;帝政裙&#x27;这个搜索品类的认知</li><li>天丝四米摆版本被大量种草，飘逸感是核心卖点，多帖提到&#x27;像油画里走出来&#x27;</li><li>价位 ~¥580 处于帝政裙中端，性价比获认可——&#x27;580祝他成功&#x27;虽带调侃但134赞说明接受度OK</li><li>尺码覆盖 S-2XL，对大码友好；多帖显示微胖/丰满穿着效果反而好（&#x27;胸大穿特别美就是欧洲中世纪油画中的妇人&#x27;75赞）</li><li>品牌好评率 99.5%（1000+评价），淘宝 4.8 分，消费者满意度高</li></ul><h3 class="negative">✗ 负面</h3><ul class="neg-list"><li>天丝版透视问题严重——碎冰蓝色可见内衣/胸垫，&#x27;550了多加层布也不是不行吧&#x27;(71赞)，需自购衬裙才能穿出门</li><li>显孕是帝政裙品类通病但缪斯之名高赞帖评论区被反复提及——&#x27;一定要长得高，矮的穿着就是孕&#x27;(813赞)，身高门槛客观存在</li><li>日常穿着场景受限——&#x27;真的好看但没有社交场合了什么时候穿呢&#x27;(279赞)，非日常款是最大心理门槛</li><li>天丝vs缎面差异不透明——消费者困惑&#x27;贵出来的部分在哪里&#x27;(48赞)，官方沟通不足</li><li>微博官号几乎不运营（11帖/视频播放3721），品牌建设薄弱，目前热度完全依赖XHS自然种草和淘宝流量</li></ul><div class="verdict-box">缪斯之名是2025-2026帝政裙品类的定义性爆款，¥580价位+天丝飘逸感+2.1万赞种草帖构成了强大的消费号召力。但天丝透视、显孕门槛、非日常场景三个硬伤制约了复购和口碑深度。品牌运营能力与产品热度严重不匹配（微博几乎荒废）。适合中高个子、追求仪式感/氛围感的消费者；矮个子/日常穿着需求者慎入。在帝政品类里是当之无愧的头部，但在lolita整体行业里属于单品爆款型（非品牌势能型）。</div></div>
-<div class="section"><h2>设计灵感</h2><p><strong>主题:</strong> 18-19世纪拿破仑帝政时期宫廷裙（Empire silhouette），复原欧洲油画中的古典优雅女性形象</p><div class="elements"><div class="element">
-                  <strong>高腰束胸 + A型裙摆</strong>
-                  <p class="lineage">18世纪末-19世纪初 Empire line，源自古希腊 chiton 的高腰剪裁，经法国大革命后 Josephine Bonaparte 推广成为时代标志</p>
-                  <p>核心廓形——胸下分割线拉长身形比例，A摆产生飘逸感</p>
-                </div><div class="element">
-                  <strong>天丝四米摆</strong>
-                  <p class="lineage">天丝(Tencel/Lyocell)是现代环保面料，垂坠感接近真丝但更易打理；四米摆指裙摆用布量，还原帝政裙的大摆飘逸</p>
-                  <p>面料选择——天丝的垂坠+透气是夏季帝政裙的核心卖点，但也带来透视副作用</p>
-                </div><div class="element">
-                  <strong>缎面版本</strong>
-                  <p class="lineage">缎面(Satin)是传统宫廷礼服面料，光泽感强，更接近油画中帝政裙的质感</p>
-                  <p>面料双线策略——缎面版更厚实不透但偏重，天丝版轻盈但透视。消费者需在质感和实用性间选择</p>
-                </div><div class="element">
-                  <strong>低领/方领</strong>
-                  <p class="lineage">帝政裙经典领口设计，还原Regency era肖像画中展露胸部圆润线条的审美</p>
-                  <p>领口设计——帝政裙标志性元素，缪斯之名采用的领口高度被认为适中，未过度低胸</p>
-                </div></div><p class="note">缪斯之名走的是帝政裙&#x27;古典复原&#x27;路线——不加军事元素、不加哥特符号，纯粹还原 Empire silhouette 的优雅飘逸。天丝/缎面双线策略覆盖了夏季轻盈穿着和仪式感两个场景。品名&#x27;缪斯之名&#x27;暗示古希腊缪斯女神——帝政裙的源头正是对古典希腊/罗马服饰的浪漫化复兴。</p></div>
-
-<p class="note" style="margin-top:24px; text-align:center;">
-  验证时间: 2026-05-29 · Claude (cross-checked XHS 2.1万赞帖 + 淘宝商品页 + 微博官号 + XHS官号帖 + XHS负面帖)
-</p>
+  <div id="lightbox" class="lb-overlay" onclick="closeLB(event)" role="dialog" aria-hidden="true">
+    <button class="lb-close" onclick="closeLB(event)" aria-label="关闭">×</button>
+    <button class="lb-prev" onclick="navLB(event,-1)" aria-label="上一张">‹</button>
+    <button class="lb-next" onclick="navLB(event,1)" aria-label="下一张">›</button>
+    <img id="lb-img" src="" alt=""/>
+    <div class="lb-counter" id="lb-counter"></div>
+  </div>
+  <script>
+    (function() {
+      const overlay = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lb-img');
+      const counter = document.getElementById('lb-counter');
+      const imgs = Array.from(document.querySelectorAll('.poster-grid .lb-img'));
+      let cur = -1;
+      function openLB(idx) {
+        cur = idx;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeLB = function(e) {
+        if (e && e.target.id !== 'lightbox' && !e.target.classList.contains('lb-close')) return;
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+        cur = -1;
+      };
+      window.navLB = function(e, d) {
+        e.stopPropagation();
+        if (cur < 0) return;
+        cur = (cur + d + imgs.length) % imgs.length;
+        lbImg.src = imgs[cur].dataset.src;
+        counter.textContent = (cur+1) + ' / ' + imgs.length;
+      };
+      imgs.forEach((img, i) => img.addEventListener('click', () => openLB(i)));
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape') window.closeLB({target:{id:'lightbox'}});
+        else if (e.key === 'ArrowLeft') window.navLB(e, -1);
+        else if (e.key === 'ArrowRight') window.navLB(e, 1);
+      });
+    })();
+  </script>
+<div style="position:fixed;bottom:8px;right:12px;font:11px/1.4 -apple-system,Menlo,monospace;color:#666;background:rgba(255,255,255,0.9);padding:4px 10px;border:1px solid #ddd;border-radius:4px;z-index:9999;box-shadow:0 1px 3px rgba(0,0,0,0.05);"><a href="https://github.com/KKJudoon/lolita-research/commit/3a77e3bbc7ae693b424e4a5cc0e7350ce4941ba4" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v 3a77e3b</a><span style="color:#999;"> · commit 2026-05-29 · build 2026-05-29 15:20</span></div>
 </body>
 </html>
