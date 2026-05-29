@@ -178,14 +178,12 @@
     "for_image_gen_prompt": "A young woman in an elegant Empire-line dress with double-layered fabric — a soft satin inner layer showing through a sheer ivory mesh overlay. Delicate rose embroidery on the bodice, creating a candlelit romantic atmosphere. The dress features a narrow fitted chest panel with subtle gathering that creates a slimming silhouette. Silver-grey color with subtle satin sheen visible under warm lamplight. Slim and elongated figure. Warm candlelight setting, intimate evening atmosphere, vintage interior with soft golden light."
   },
   "posters": [
-    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_1.png",
-    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_2.png",
-    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_3.png",
-    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_4.png",
-    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_1.png",
-    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_2.png",
-    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_3.png",
-    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_4.png"
+    "images/RosettaSwan_灯下时刻/wb_1.jpg",
+    "images/RosettaSwan_灯下时刻/wb_2.jpg",
+    "images/RosettaSwan_灯下时刻/wb_3.jpg",
+    "images/RosettaSwan_灯下时刻/wb_4.jpg",
+    "images/RosettaSwan_灯下时刻/wb_5.jpg",
+    "images/RosettaSwan_灯下时刻/wb_6.jpg"
   ],
   "posters_source": "待抓取：微博官号帖图片 + XHS穿搭帖图片",
   "verified": true,

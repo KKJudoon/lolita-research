@@ -163,14 +163,12 @@
     "for_image_gen_prompt": "A young woman in a luxurious black and gold velvet Empire-line Lolita dress. Square neckline with puff sleeves, rich velvet fabric with golden accents. The dress has an opulent aristocratic feel, heavy fabric draping elegantly. Inspired by Eurydice from Greek mythology. Dramatic chiaroscuro lighting, dark romantic interior setting."
   },
   "posters": [
-    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_1.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_2.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_3.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_4.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_1.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_2.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_3.png",
-    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_4.png"
+    "images/yueguangjuyuan_youlidiqian/wb_1.jpg",
+    "images/yueguangjuyuan_youlidiqian/wb_2.jpg",
+    "images/yueguangjuyuan_youlidiqian/wb_3.jpg",
+    "images/yueguangjuyuan_youlidiqian/wb_4.jpg",
+    "images/yueguangjuyuan_youlidiqian/wb_5.jpg",
+    "images/yueguangjuyuan_youlidiqian/wb_6.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,

@@ -174,14 +174,12 @@
     "for_image_gen_prompt": "A young woman in a pure white Empire-line Lolita dress with pearl-embellished hem and elegant train. Sacred and ethereal aesthetic, reminiscent of an ancient Greek goddess. The dress features delicate pearl beading along the skirt, pristine white fabric, and a flowing detachable train. Cool-toned celestial atmosphere, marble temple setting with starlight."
   },
   "posters": [
-    "images/aria_zuorixingchen/xhs_十一月のAlice_1_1.png",
-    "images/aria_zuorixingchen/xhs_十一月のAlice_1_2.png",
-    "images/aria_zuorixingchen/xhs_十一月のAlice_1_3.png",
-    "images/aria_zuorixingchen/xhs_十一月のAlice_1_4.png",
-    "images/aria_zuorixingchen/xhs_水共_2_1.png",
-    "images/aria_zuorixingchen/xhs_水共_2_2.png",
-    "images/aria_zuorixingchen/xhs_水共_2_3.png",
-    "images/aria_zuorixingchen/xhs_水共_2_4.png"
+    "images/aria_zuorixingchen/wb_1.jpg",
+    "images/aria_zuorixingchen/wb_2.jpg",
+    "images/aria_zuorixingchen/wb_3.jpg",
+    "images/aria_zuorixingchen/wb_4.jpg",
+    "images/aria_zuorixingchen/wb_5.jpg",
+    "images/aria_zuorixingchen/wb_6.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,

@@ -175,14 +175,12 @@
     "for_image_gen_prompt": "A young woman in an Empire-line dress with detachable sleeves, featuring jacquard fabric with subtle floral patterns. High waistline design with A-line silhouette. Available in blue and white. The dress has a romantic court style with removable sleeve option for versatile styling. Soft natural lighting, elegant indoor setting."
   },
   "posters": [
-    "images/naipaohe_yueyinghu/xhs_徊冰_2_1.png",
-    "images/naipaohe_yueyinghu/xhs_徊冰_2_2.png",
-    "images/naipaohe_yueyinghu/xhs_徊冰_2_3.png",
-    "images/naipaohe_yueyinghu/xhs_徊冰_2_4.png",
-    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_1.png",
-    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_2.png",
-    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_3.png",
-    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_4.png"
+    "images/naipaohe_yueyinghu/wb_1.jpg",
+    "images/naipaohe_yueyinghu/wb_2.jpg",
+    "images/naipaohe_yueyinghu/wb_3.jpg",
+    "images/naipaohe_yueyinghu/wb_4.jpg",
+    "images/naipaohe_yueyinghu/wb_5.jpg",
+    "images/naipaohe_yueyinghu/wb_6.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,

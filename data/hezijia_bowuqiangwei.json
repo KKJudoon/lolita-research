@@ -166,14 +166,12 @@
     "for_image_gen_prompt": "A young woman in an oil-painting inspired Empire-line Lolita dress in soft rose and cream tones. The dress features a pullover design with high waistline, flowing A-line skirt without petticoat. Romantic misty rose garden atmosphere, painterly color palette. Natural relaxed styling suitable for daily wear. Warm golden hour lighting, garden setting."
   },
   "posters": [
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_1.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_2.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_3.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_4.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_1.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_2.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_3.png",
-    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_4.png"
+    "images/hezijia_bowuqiangwei/wb_1.jpg",
+    "images/hezijia_bowuqiangwei/wb_2.jpg",
+    "images/hezijia_bowuqiangwei/wb_3.jpg",
+    "images/hezijia_bowuqiangwei/wb_4.jpg",
+    "images/hezijia_bowuqiangwei/wb_5.jpg",
+    "images/hezijia_bowuqiangwei/wb_6.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,

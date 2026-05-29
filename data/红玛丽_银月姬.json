@@ -204,15 +204,12 @@
     "for_image_gen_prompt": "A young woman in an ethereal misty blue-silver Empire-line dress, a 15th anniversary limited edition Lolita gown. The high-waisted bodice features an ornate waist corset with crescent moon and star embroidery in silver thread. Multiple layers of delicate lace cascade like frost feathers, with silver threads woven throughout the skirt that shimmer in moonlight. A silver-stamped sash with lunar phase patterns drapes across the shoulder. The color shifts between misty blue in daylight and silver-grey under artificial light — the essence of moonlight captured in fabric. Romantic nighttime garden setting, moonlight streaming through, palace terrace background."
   },
   "posters": [
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_1.jpg",
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_2.jpg",
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_3.jpg",
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_4.jpg",
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_5.jpg",
-    "images/红玛丽_银月姬/weibo_Lolita洋装上新_6.jpg",
-    "images/红玛丽_银月姬/weibo_夜夜子CSZR_1.png",
-    "images/红玛丽_银月姬/weibo_夜夜子CSZR_2.png",
-    "images/红玛丽_银月姬/weibo_夜夜子CSZR_3.png"
+    "images/红玛丽_银月姬/wb_1.jpg",
+    "images/红玛丽_银月姬/wb_2.jpg",
+    "images/红玛丽_银月姬/wb_3.jpg",
+    "images/红玛丽_银月姬/wb_4.jpg",
+    "images/红玛丽_银月姬/wb_5.jpg",
+    "images/红玛丽_银月姬/wb_6.jpg"
   ],
   "posters_source": "待抓取：微博官号帖图片 + XHS官方帖图片",
   "verified": true,

@@ -174,10 +174,12 @@
     "for_image_gen_prompt": "A young woman in a Little Mermaid-themed Empire-line Lolita dress. The bodice features fish-scale lace patterns at the neckline and cuffs, with pearl ornaments along the waist and collar. Long ribbon bow on the shoulders (detachable), decorative brooch with waist chain. The dress has an elegant train that can be gathered up. Available in ocean blue and pure white. Dreamy underwater fairy tale aesthetic with court elegance. Soft diffused lighting, ocean-inspired backdrop."
   },
   "posters": [
-    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_1.png",
-    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_2.png",
-    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_3.png",
-    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_4.png"
+    "images/shidemeiyiye_xiaomeirenyu/wb_1.jpg",
+    "images/shidemeiyiye_xiaomeirenyu/wb_2.jpg",
+    "images/shidemeiyiye_xiaomeirenyu/wb_3.jpg",
+    "images/shidemeiyiye_xiaomeirenyu/wb_4.jpg",
+    "images/shidemeiyiye_xiaomeirenyu/wb_5.jpg",
+    "images/shidemeiyiye_xiaomeirenyu/wb_6.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页/设计师XHS帖图",
   "verified": true,
