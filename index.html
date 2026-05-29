@@ -19,6 +19,12 @@
   .report-link { color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }
   .report-link:hover { color: #c5a572; text-decoration: underline; }
 
+  .module-nav { display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }
+  .module-nav .mod { padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }
+  .module-nav .mod:hover { border-color:#f0c674; background:#fffaf0; }
+  .module-nav .mod.active { background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }
+  .module-nav .mod.disabled { color:#999; background:#f5f5f5; cursor:not-allowed; }
+
   .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }
   .toolbar-section { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
   .toolbar-label { color: #999; font-size: 12px; }
@@ -114,8 +120,16 @@
 </style>
 </head>
 <body>
+  <div class="module-nav">
+    <a href="index.html" class="mod active">📐 款式调研 (40)</a>
+    <a href="illustrators/index.html" class="mod">🎨 画师调研 (22)</a>
+    <a href="illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a>
+    <span class="mod disabled">🏷 品牌（Phase 4）</span>
+    <span class="mod disabled">👤 模特（Phase 4）</span>
+    <a href="reports/junlo_prince_report.html" class="mod">📊 综合报告</a>
+  </div>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 2026-05-29 15:20 · 共 40 款 · 点行查看详情</div>
+  <div class="meta">最后更新 2026-05-29 15:49 · 共 40 款 · 点行查看详情</div>
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
   </div>
@@ -806,6 +820,6 @@
     }
   });
 </script>
-<div style="position:fixed;bottom:8px;right:12px;font:11px/1.4 -apple-system,Menlo,monospace;color:#666;background:rgba(255,255,255,0.9);padding:4px 10px;border:1px solid #ddd;border-radius:4px;z-index:9999;box-shadow:0 1px 3px rgba(0,0,0,0.05);"><a href="https://github.com/KKJudoon/lolita-research/commit/3a77e3bbc7ae693b424e4a5cc0e7350ce4941ba4" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v 3a77e3b</a><span style="color:#999;"> · commit 2026-05-29 · build 2026-05-29 15:20</span></div>
+<div style="position:fixed;bottom:8px;right:12px;font:11px/1.4 -apple-system,Menlo,monospace;color:#666;background:rgba(255,255,255,0.9);padding:4px 10px;border:1px solid #ddd;border-radius:4px;z-index:9999;box-shadow:0 1px 3px rgba(0,0,0,0.05);"><a href="https://github.com/KKJudoon/lolita-research/commit/59fad28f3992b18859040cfdcf63b34d0718ca17" target="_blank" rel="noopener" style="color:#555;text-decoration:none;border-bottom:1px dotted #999;">v 59fad28</a><span style="color:#999;"> · commit 2026-05-29 · build 2026-05-29 15:49</span></div>
 </body>
 </html>

@@ -461,6 +461,14 @@ def styles_for_item(item):
     return matched or ["其他"]
 
 
+def _count_illustrators():
+    """Count illustrator HTML pages (excluding index.html)."""
+    illust_dir = ROOT / "illustrators"
+    if not illust_dir.is_dir():
+        return 0
+    return len([f for f in illust_dir.glob("*.html") if f.name != "index.html"])
+
+
 def write_index(items):
     # Build groups (one item can appear in multiple groups)
     groups = {}
@@ -490,6 +498,12 @@ def write_index(items):
   .reports-bar {{ margin: 12px 0 20px; padding: 14px 18px; background: linear-gradient(95deg, #f7eed5 0%, #fdfaf0 100%); border: 1px solid #e8d8b0; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }}
   .report-link {{ color: #5a4a2a; font-weight: 600; font-size: 15px; text-decoration: none; }}
   .report-link:hover {{ color: #c5a572; text-decoration: underline; }}
+
+  .module-nav {{ display:flex; gap:8px; flex-wrap:wrap; margin:4px 0 16px; padding:8px 0; border-bottom:1px solid #ddd; }}
+  .module-nav .mod {{ padding:6px 14px; background:#fff; border:1px solid #ddd; border-radius:18px; font-size:13px; color:#333; text-decoration:none; }}
+  .module-nav .mod:hover {{ border-color:#f0c674; background:#fffaf0; }}
+  .module-nav .mod.active {{ background:#f0c674; border-color:#f0c674; color:#000; font-weight:600; }}
+  .module-nav .mod.disabled {{ color:#999; background:#f5f5f5; cursor:not-allowed; }}
 
   .toolbar {{ display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 14px 0 14px; padding: 10px 14px; background: white; border: 1px solid #e8d8b0; border-radius: 8px; }}
   .toolbar-section {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }}
@@ -586,6 +600,14 @@ def write_index(items):
 </style>
 </head>
 <body>
+  <div class="module-nav">
+    <a href="index.html" class="mod active">📐 款式调研 ({len(items)})</a>
+    <a href="illustrators/index.html" class="mod">🎨 画师调研 ({_count_illustrators()})</a>
+    <a href="illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a>
+    <span class="mod disabled">🏷 品牌（Phase 4）</span>
+    <span class="mod disabled">👤 模特（Phase 4）</span>
+    <a href="reports/junlo_prince_report.html" class="mod">📊 综合报告</a>
+  </div>
   <h1>Lolita 款式调研</h1>
   <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点行查看详情</div>
   <div class="reports-bar">
@@ -951,7 +973,7 @@ def render_detail(item):
         elements_html = ""
         for el in insp.get("elements", []):
             inner = []
-            inner.append(f'<div class="el-name">{esc(el.get("element",""))}</div>')
+            inner.append(f'<div class="el-name">{esc(el.get("element", el.get("name", "")))}</div>')
             inner.append(f'<div class="el-src"><b>来源：</b>{esc(el.get("source_lineage",""))}</div>')
             if el.get("purpose"):
                 inner.append(f'<div class="el-purpose"><b>设计目的：</b>{esc(el.get("purpose",""))}</div>')
