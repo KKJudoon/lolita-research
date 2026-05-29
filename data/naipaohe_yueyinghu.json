@@ -1,0 +1,169 @@
+{
+  "id": "naipaohe_yueyinghu",
+  "name": "月影湖",
+  "brand": "奶泡匣子 MILK FOAM BOX",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "提花", "两穿", "量产", "中低价"],
+  "style_summary": "¥259量产帝政裙，两穿设计（袖子可拆）+提花面料，XHS热度极高（5596赞帖）。品牌14年老店，广西南宁发货。外观种草强但实物质感争议大，被指'像睡衣''显胖'。",
+  "release": {
+    "type": "现货量产",
+    "date_range": "2025年上市，持续补货中",
+    "poster_first_seen": null,
+    "note": "现货制，淘宝在售"
+  },
+  "price": {
+    "op": 259,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "淘宝标价¥259；XHS多帖确认价位在¥259左右；在帝政裙中属中低价位段，高于千木月光琥珀¥149但远低于缪斯之名¥580"
+  },
+  "colors": ["蓝色", "白色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "奶泡匣子 MILK FOAM BOX",
+      "list_title": "奶泡匣子 月影湖 帝政裙 lolita 提花两穿",
+      "list_price": 259,
+      "sales": "100+",
+      "sales_trend": "持续出货",
+      "sales_note": "淘宝显示100+人付款，14年老店；广西南宁发货",
+      "location": "广西南宁",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS为主要传播阵地，5596赞/4246赞/2721赞/1093赞/781赞多帖高热度种草"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "5596",
+        "comments": null,
+        "title": "两穿袖子+提花帝政裙种草",
+        "url": null,
+        "type": "种草安利",
+        "summary": "5596赞超高热度种草帖，展示月影湖的两穿设计（袖子可拆）和提花面料细节。帝政裙品类中XHS热度最高的单品帖之一。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": null,
+        "date": null,
+        "likes": "4246",
+        "comments": null,
+        "title": "三条帝政裙合集",
+        "url": null,
+        "type": "多款横评",
+        "summary": "4246赞合集帖含月影湖。评论区有'实物质感不好'(8赞)的负面反馈，提示种草图与实物存在落差。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "2721",
+        "comments": null,
+        "title": "帝政裙穿搭分享",
+        "url": null,
+        "type": "穿搭展示",
+        "summary": "2721赞帝政裙穿搭帖，月影湖出镜。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "1093",
+        "comments": null,
+        "title": "帝政裙合集种草",
+        "url": null,
+        "type": "合集种草",
+        "summary": "1093赞种草帖，月影湖在列。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "781",
+        "comments": null,
+        "title": "双色测评",
+        "url": null,
+        "type": "实穿测评",
+        "summary": "781赞双色实穿测评。评论区负面反馈集中：'显胖'(3赞)、'侧面奇怪'(2赞)、'像睡衣'。提花面料和廓形在实穿中暴露问题。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["XHS热度王", "两穿设计", "提花面料", "¥259量产", "实物翻车", "显胖争议", "14年老店"],
+    "highlights_positive": [
+      "XHS种草热度极高——5596赞+4246赞+2721赞，帝政裙品类中单品帖热度最高之一",
+      "两穿设计（袖子可拆）是差异化卖点——同价位帝政裙少有两穿功能",
+      "提花面料增加视觉质感——在¥259价位段提供了比纯色更丰富的面料表现",
+      "14年老店品牌信任度——奶泡匣子是Lolita圈老牌子，非新开杂牌",
+      "价格适中——¥259介于白菜款(¥149)和中端(¥580)之间，决策压力不大"
+    ],
+    "highlights_negative": [
+      "实物与种草图落差大——'实物质感不好'(8赞)，XHS高赞靠修图和滤镜",
+      "廓形显胖——781赞测评帖评论'显胖'(3赞)、'侧面奇怪'(2赞)，提花面料+帝政廓形叠加膨胀感",
+      "被吐槽'像睡衣'——面料/版型/颜色组合在部分人眼中缺乏正式感",
+      "销量一般——100+付款远低于同价位竞品，XHS高热度未能有效转化为购买",
+      "品牌社媒运营弱——无官方XHS/微博号，传播依赖用户自发"
+    ],
+    "verdict_short": "月影湖是帝政裙中的'种草陷阱'——XHS热度极高（5596赞），两穿设计和提花面料在图片上非常出片，但实物质感差、显胖、被指像睡衣。¥259价位不贵不贱，100+销量说明高热度没转化为高销量，消费者观望多下单少。适合看重两穿功能且对面料质感不敏感的用户；追求实穿效果的建议看实物测评再决定。种草图美丽，实物需谨慎。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "帝政风两穿设计，提花面料宫廷裙",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "两穿袖子设计",
+        "source_lineage": "袖子可拆卸，实现有袖/无袖两种穿法切换",
+        "purpose": "功能性卖点——一裙两穿增加使用场景和性价比感知",
+        "official": false
+      },
+      {
+        "name": "提花面料",
+        "source_lineage": "采用提花工艺面料替代纯色缎面/天丝",
+        "purpose": "视觉差异化——提花纹理在照片中增加质感表现，但实物可能显廉价",
+        "official": false
+      },
+      {
+        "name": "帝政高腰廓形",
+        "source_lineage": "标准Empire line高腰线+A型裙摆",
+        "purpose": "品类基础——帝政裙标准廓形",
+        "official": false
+      }
+    ],
+    "design_thinking": "月影湖的产品策略是'两穿+提花'双卖点组合拳，在¥259价位段创造差异化。两穿设计增加功能感知，提花面料增加视觉丰富度。但这两个卖点都有'照片好看实物一般'的风险——提花面料在廉价基底上容易显塑料感，两穿结构也可能影响版型完整性。",
+    "for_image_gen_prompt": "A young woman in an Empire-line dress with detachable sleeves, featuring jacquard fabric with subtle floral patterns. High waistline design with A-line silhouette. Available in blue and white. The dress has a romantic court style with removable sleeve option for versatile styling. Soft natural lighting, elegant indoor setting."
+  },
+  "posters": [],
+  "posters_source": "待抓取：淘宝详情页模特图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS多帖 + 淘宝搜索)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "奶泡匣子 月影湖",
+    "weibo_uid": null
+  }
+}

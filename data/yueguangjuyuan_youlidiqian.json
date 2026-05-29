@@ -1,0 +1,158 @@
+{
+  "id": "yueguangjuyuan_youlidiqian",
+  "name": "尤丽迪茜",
+  "brand": "月光剧院 Clair De Lune",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "丝绒", "中高端", "现货", "贵妇感"],
+  "style_summary": "¥528-588丝绒帝政裙，现货制。月光剧院品牌出品，山西运城。丝绒面料沉甸甸质感+方领泡泡袖+黑金配色。XHS热度稳定（505赞+313赞测评），被评为'穿上就有贵妇感'。在帝政裙中定位'丝绒质感派'。",
+  "release": {
+    "type": "现货",
+    "date_range": "现货在售",
+    "poster_first_seen": null,
+    "note": "淘宝两个现货链接（¥588/67人付款 + ¥548/5人付款）；现货即发"
+  },
+  "price": {
+    "op": 528,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "XHS帖标注¥528；淘宝现货链接¥548-588（可能含不同SKU/优惠）；67人付款+5人付款；在帝政裙中属中高端价位"
+  },
+  "colors": ["黑金"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=649856670889",
+      "item_id": "649856670889",
+      "shop_name": "月光剧院_ClairDeLune",
+      "list_title": "【现货 尤丽迪茜帝政】Lolita原创复古丝绒短袖方领连衣裙",
+      "list_price": 588,
+      "sales": "67",
+      "sales_trend": "现货稳定出货",
+      "sales_note": "淘宝两个链接合计约72人付款；5年老店；山西运城发货；丝绒面料",
+      "location": "山西运城",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS种草：505赞/313赞/294赞/170赞"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "斯緹",
+        "date": "2021-05-05",
+        "likes": "505",
+        "comments": null,
+        "title": "绝美Lolita推荐｜帝政 尤丽迪茜💭",
+        "url": null,
+        "type": "种草安利",
+        "summary": "505赞种草帖。明确标价¥528。评价'沉甸甸质感棒'、'穿上就有贵妇感'。客服nice。2021年帖至今仍有搜索可见度。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": null,
+        "date": null,
+        "likes": "313",
+        "comments": null,
+        "title": "尤丽迪茜帝政（测评）",
+        "url": null,
+        "type": "实穿测评",
+        "summary": "313赞测评帖。丝绒帝政实穿测评。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "294",
+        "comments": null,
+        "title": "『lolita安利 帝政风』尤丽迪茜",
+        "url": null,
+        "type": "安利推荐",
+        "summary": "294赞安利帖。帝政风推荐。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "170",
+        "comments": null,
+        "title": "尤丽迪茜帝政",
+        "url": null,
+        "type": "穿搭展示",
+        "summary": "170赞穿搭帖。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["丝绒帝政", "¥528现货", "沉甸甸质感", "贵妇感", "黑金配色", "月光剧院", "方领泡泡袖"],
+    "highlights_positive": [
+      "丝绒面料质感突出——'沉甸甸的质感棒'，在帝政裙品类中做面料差异化",
+      "现货制即买即发——不需要等定金/尾款/工期，对急需帝政裙的用户友好",
+      "贵妇感定位清晰——505赞帖评价'穿上就有贵妇感'，设计语言传达到位",
+      "品牌运营正面——客服被评价为nice，5年老店有一定信任基础",
+      "黑金配色在帝政裙中稀缺——多数帝政裙以白/粉/浅色为主，黑金配色做了差异化"
+    ],
+    "highlights_negative": [
+      "销量偏低——67人付款在帝政品类中属于小众",
+      "品牌知名度低——月光剧院在lo圈存在感弱，非主流品牌",
+      "XHS热度有限——最高505赞，且最早帖是2021年，说明近期热度不高",
+      "丝绒面料季节性强——丝绒偏秋冬，夏季穿着不适合",
+      "单色可选——目前仅黑金配色，选择有限"
+    ],
+    "verdict_short": "尤丽迪茜是帝政裙中的'丝绒小众款'——¥528丝绒面料+黑金配色+现货制，在帝政品类中走'质感>热度'路线。沉甸甸的面料手感和贵妇感定位让它在少数懂行用户中有口碑。但67人的销量和有限的XHS热度说明它没有破圈。适合追求面料质感、偏爱深色/丝绒、需要现货即发的帝政用户；追求品牌热度或浅色帝政的用户可跳过。在帝政品类中是'低调质感派'。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "尤丽迪茜(Eurydice)希腊神话主题，丝绒宫廷帝政裙",
+    "official_quote": null,
+    "kol_quote": "穿上就给我一种贵妇的感觉",
+    "elements": [
+      {
+        "name": "丝绒面料",
+        "source_lineage": "采用丝绒面料替代常见的天丝/缎面/雪纺",
+        "purpose": "质感差异化——丝绒的厚重感和光泽度在帝政裙中独特",
+        "official": false
+      },
+      {
+        "name": "方领泡泡袖",
+        "source_lineage": "方领+短袖泡泡袖设计",
+        "purpose": "宫廷元素——方领和泡泡袖增加复古贵族感",
+        "official": false
+      },
+      {
+        "name": "尤丽迪茜(Eurydice)命名",
+        "source_lineage": "希腊神话中俄耳甫斯的妻子，象征深沉之爱与冥界之美",
+        "purpose": "叙事深度——暗色帝政裙用冥界女神命名，匹配黑金的暗调美学",
+        "official": false
+      }
+    ],
+    "design_thinking": "尤丽迪茜走的是'材质驱动'路线——用丝绒面料在帝政裙品类中做差异化。黑金配色+Eurydice命名将设计推向暗调/深沉美学，与多数帝政裙的明亮圣洁风格形成反差。这种'暗黑帝政'定位虽然限制了受众，但在愿意为面料质感付费的小众用户中建立了忠诚度。",
+    "for_image_gen_prompt": "A young woman in a luxurious black and gold velvet Empire-line Lolita dress. Square neckline with puff sleeves, rich velvet fabric with golden accents. The dress has an opulent aristocratic feel, heavy fabric draping elegantly. Inspired by Eurydice from Greek mythology. Dramatic chiaroscuro lighting, dark romantic interior setting."
+  },
+  "posters": [],
+  "posters_source": "待抓取：淘宝详情页模特图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS种草帖+测评帖 + 淘宝现货链接)",
+  "raw_sources": {
+    "taobao_item_id": "649856670889",
+    "xhs_search_keyword": "月光剧院 尤丽迪茜",
+    "weibo_uid": null
+  }
+}

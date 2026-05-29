@@ -1,0 +1,177 @@
+{
+  "id": "yinheyoujikexun_meixuelingyao",
+  "name": "美学灵药",
+  "brand": "银河有迹可循 VMW",
+  "designer": "银河邮递员",
+  "designer_note": "品牌主理人XHS账号@银河邮递员，发布人台图/设计过程",
+  "style_tags": ["帝政", "cla系", "罗马柱", "Dior灵感", "高端", "丝绒", "争议", "预售"],
+  "style_summary": "帝政裙品类的'争议之王'——Dior vintage+美少女战士融合设计，罗马柱廓形+蝴蝶元素+毛边工艺。第一版¥586，复刻涨至¥700+，华丽/丝绒版更贵。11年老店但圈内争议不断：'老瓜店'标签、仿Dior质疑、胸口面料扎人、工期极长。XHS热度极高（8161赞人台图），有大量仿版/平替涌现。",
+  "release": {
+    "type": "定金 + 尾款（再贩）",
+    "date_range": "2026年5月20-31日再贩定金窗口",
+    "poster_first_seen": null,
+    "note": "多次再贩，当前2026年5月第N次开定金；常规版定金¥10，华丽款/丝绒版定金¥28；工期长，有用户反映等待数月"
+  },
+  "price": {
+    "op": 586,
+    "full_set": null,
+    "deposit_link_intent": "常规版定金¥10 / 华丽丝绒版定金¥28",
+    "currency": "CNY",
+    "note": "第一版长款¥586；复刻涨价至¥700+；华丽/丝绒版比常规贵¥110左右（即¥700-810区间）；XHS平替对比帖(2606赞)确认'价格对比美学第一版长款586，复刻涨价了应该是7百多'；仿版¥594（接近原版第一版价格）"
+  },
+  "colors": ["烫金", "灼烧", "月光白", "做旧色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=1047513243243",
+      "item_id": "1047513243243",
+      "shop_name": "银河有迹可循",
+      "list_title": "VMW【定金5.20-5.31】美学灵药 常规版复古希腊风仙女裙",
+      "list_price": 10,
+      "sales": "1000+人看过",
+      "sales_trend": "再贩定金中，持续热度",
+      "sales_note": "常规版定金¥10(1000+人看过)；华丽款/丝绒版定金¥28(1000+人看过，item_id=1048266958180)；11年老店，河南信阳发货",
+      "location": "河南信阳",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": "银河邮递员",
+      "official_url": null,
+      "designer_account": "银河邮递员",
+      "designer_url": null,
+      "note": "品牌主理人@银河邮递员 发布设计过程帖(人台图192赞)；XHS为主要传播阵地，8161赞/2606赞/1448赞/895赞/849赞多帖超高热度"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "银河邮递员",
+        "date": "2026-05-12",
+        "likes": "8161",
+        "comments": null,
+        "title": "一点人台图",
+        "url": null,
+        "type": "品牌设计展示",
+        "summary": "8161赞品牌主理人发布的人台展示图。提到蝴蝶元素和裙摆镂空设计构思。评论：'血书求拖尾单卖'、'看到店名对价格生出不好的预感'、'想到风铃'。品牌自身发帖就有超高热度，说明粉丝基础强。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "栗栗子",
+        "date": "2026-05-21",
+        "likes": "2606",
+        "comments": null,
+        "title": "美学灵药和她相差一百的平替",
+        "url": null,
+        "type": "原版vs仿版对比",
+        "summary": "2606赞原版vs仿版实物对比帖。160/96/S码实穿。价格确认：原版第一版¥586，复刻¥700+，仿版¥594。面料/褶皱/长度全方位比较。评论揭示设计争议：'银河家仿的Dior但做了改动'、'Dior→美战→银河，跟写论文似的'、'老瓜店'。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "1448",
+        "comments": null,
+        "title": "赶紧再贩吧球球了，我想结婚的时候穿",
+        "url": null,
+        "type": "催再贩",
+        "summary": "1448赞催再贩帖。用户想用美学灵药当婚礼穿搭，反映帝政裙作为婚礼/晨袍的破圈趋势。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "849",
+        "comments": null,
+        "title": "银河有迹可寻 美学灵药 两色投票",
+        "url": null,
+        "type": "选色讨论",
+        "summary": "849赞两色投票帖。烫金vs灼烧配色选择讨论热度高。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "621",
+        "comments": null,
+        "title": "美学灵药到了～🌙银河有迹可循",
+        "url": null,
+        "type": "开箱到货",
+        "summary": "621赞到货开箱帖。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["罗马柱帝政", "Dior灵感争议", "¥586→700+", "老瓜店", "仿版涌现", "XHS顶流热度", "婚礼晨袍破圈", "胸口面料扎人", "工期极长"],
+    "highlights_positive": [
+      "XHS热度帝政品类之冠——8161赞人台图+2606赞平替对比+1448赞催再贩，单品帖热度碾压所有竞品",
+      "设计辨识度极高——罗马柱廓形+蝴蝶元素+毛边工艺，Dior vintage和美少女战士的融合有独特记忆点",
+      "破圈到婚礼场景——1448赞催再贩帖明确提到'想结婚的时候穿'，帝政裙作为晨袍/婚纱的跨圈需求",
+      "品牌有11年历史——老店信任度高，不是新开杂牌",
+      "有多版本覆盖——常规版/华丽款/丝绒版/多色(烫金/灼烧/月光白/做旧色)满足不同需求",
+      "原版vs仿版对比中胜出——2606赞帖证明原版褶皱/面料/长度全面优于仿版，'全靠同行衬托'但确实更好"
+    ],
+    "highlights_negative": [
+      "设计原创性争议——圈内公开讨论'仿Dior vintage'来源，'Dior→美战→银河跟写论文似的'，品牌被标签'老瓜店'",
+      "胸口面料扎人——多帖反馈穿着不舒适，品牌回应'买华丽和丝绒不扎'暗示常规版面料问题未解决",
+      "工期极长——评论多次提到等待数月，'工期赶不上的着急去海鲜市场收二手'",
+      "价格持续上涨——第一版¥586→复刻¥700+→丝绒版¥800+，老粉有价格背刺感",
+      "仿版泛滥——¥594仿版与原版价格接近，品牌独占性被侵蚀，XHS搜索'美学灵药同款'出现大量结果",
+      "品牌口碑两极化——'老瓜店'标签+仿Dior争议+涨价+工期长，喜欢的死忠、不喜欢的极其排斥"
+    ],
+    "verdict_short": "美学灵药是帝政裙品类的'话题中心'——XHS热度碾压所有竞品(8161赞)，Dior vintage+美少女战士的融合设计在lo圈独树一帜。但'老瓜店'标签、仿Dior争议、胸口扎人、工期极长、价格涨到¥700+让它成为最有争议的帝政裙。仿版泛滥说明设计本身有吸引力，品牌复刻定金1000+人看过说明需求强劲。适合愿意为独特设计买单且能忍受争议+等待的帝政粉；追求舒适穿着或介意品牌争议的用户建议绕道。在帝政品类中是'顶流但争议'的定位。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "Dior vintage罗马柱廓形与美少女战士元素的融合帝政裙",
+    "official_quote": null,
+    "kol_quote": "Dior→美战→银河，跟写论文似的，银河的原创点是将前两者相结合",
+    "elements": [
+      {
+        "name": "罗马柱廓形",
+        "source_lineage": "灵感来自Dior vintage的罗马柱裙型，XHS用户广泛使用'罗马柱裙'指代此类设计",
+        "purpose": "核心廓形——帝政高腰线+垂坠长裙，还原古典建筑柱体的垂直美感",
+        "official": false
+      },
+      {
+        "name": "蝴蝶元素",
+        "source_lineage": "品牌主理人提到蝴蝶设计+裙摆镂空构想",
+        "purpose": "设计差异化——蝴蝶意象增加浪漫叙事",
+        "official": true
+      },
+      {
+        "name": "毛边工艺",
+        "source_lineage": "裙摆毛边(raw edge)设计，在帝政裙中属非常规处理",
+        "purpose": "质感标识——毛边在视觉上增加手工感和不规则美感，但争议性强",
+        "official": false
+      },
+      {
+        "name": "多版本面料策略",
+        "source_lineage": "常规版/华丽款/丝绒版三个面料等级，价差¥110+",
+        "purpose": "商品策略——同一设计不同面料等级覆盖¥586-800+价格带",
+        "official": true
+      }
+    ],
+    "design_thinking": "美学灵药的设计策略是'大牌设计语言的lo圈化'——将Dior vintage的罗马柱廓形和美少女战士的浪漫元素融合，再通过蝴蝶/毛边/镂空等细节做差异化处理。这种'站在巨人肩膀上'的设计路线在XHS获得了极高热度，但也天然带来原创性争议。品牌通过多版本(常规/华丽/丝绒)和多次再贩持续变现，是帝政品类中商业运营最成熟的品牌之一。",
+    "for_image_gen_prompt": "A young woman in a dramatic Empire-line dress inspired by Dior vintage Roman column silhouette. The dress features butterfly motifs, raw-edge hem details, and pleated flowing skirt. High waistline with column-like vertical draping. Available in burnished gold, scorched tones, moonlight white, and vintage finish. Luxurious court aesthetic with modern editorial styling. Dramatic lighting, classical architecture backdrop with columns."
+  },
+  "posters": [],
+  "posters_source": "待抓取：品牌XHS人台图/淘宝详情页",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS品牌帖+平替对比帖+催再贩帖 + 淘宝定金链接)",
+  "raw_sources": {
+    "taobao_item_id": "1047513243243",
+    "xhs_search_keyword": "美学灵药 银河有迹可循",
+    "weibo_uid": null
+  }
+}

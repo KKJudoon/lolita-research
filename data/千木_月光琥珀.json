@@ -1,0 +1,169 @@
+{
+  "id": "qianmu_yueguang_hupo",
+  "name": "月光琥珀",
+  "brand": "千木原创设计",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "平价", "量产", "钉珠", "宫廷", "复古"],
+  "style_summary": "白菜价帝政入门款，¥149现货量产，4000+人付款。被XHS用户称为'lo圈蜜雪冰城'。钉珠+高腰+礼服感设计，主打微胖友好和性价比。",
+  "release": {
+    "type": "现货量产",
+    "date_range": "2026年初上市，持续补货中",
+    "poster_first_seen": null,
+    "note": "现货制，非预售；多色可选；淘宝有七天无理由退货"
+  },
+  "price": {
+    "op": 149,
+    "full_set": 175,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "淘宝标价¥149（补贴后），XHS多帖确认¥159左右；大全套（裙+配件）约¥175；'淘金币抵扣完才144'(37赞)说明实际到手可更低；XHS帖标题'平价帝政只需159'(620赞)；对比帖评论'第一件的价格还需要拔草吗'(3赞)暗示价格无需犹豫"
+  },
+  "colors": ["蓝色", "香槟色", "红色", "金色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "千木原创设计",
+      "list_title": "【月光琥珀】千木原创lolita法式宫廷帝政裙复古钉珠高腰礼服长裙",
+      "list_price": 149,
+      "sales": "4000+",
+      "sales_trend": "持续出货，现货量产",
+      "sales_note": "淘宝显示4000+人付款，15年老店；湖南株洲发货",
+      "location": "湖南株洲",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "微博搜索无品牌官号相关内容；微博不是该品牌营销阵地"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS为主要传播阵地，620赞/434赞/386赞/316赞/188赞多帖种草。品牌可能没有官方XHS号，传播完全靠用户自发"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "煮啵",
+        "date": null,
+        "likes": "620",
+        "comments": 181,
+        "title": "平价帝政只需1️⃣5️⃣9️⃣🥕",
+        "url": null,
+        "type": "微胖试穿种草",
+        "summary": "大骨架棉花糖试穿帖，自报三围（肩39/胸96-98/腰86/肋骨围90/165cm）。评论181条全是尺码/大码/苹果型能否穿的询问。620赞说明微胖人群对平价帝政的强需求。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "巧克力毛巾卷",
+        "date": null,
+        "likes": "434",
+        "comments": 229,
+        "title": "有没有宝宝买这个裙子",
+        "url": null,
+        "type": "求评/选色讨论",
+        "summary": "选色讨论帖。评论关键：'淘金币抵扣完才144超值'(37赞)；'花三块多买了运费险七天无理由'(14赞)；颜色讨论(红/金/香槟)。229评论热度说明决策前信息需求强。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "386",
+        "comments": null,
+        "title": "130斤好适合穿帝政裙",
+        "url": null,
+        "type": "微胖穿搭",
+        "summary": "微胖友好验证帖。帝政裙高腰线对梨形/苹果型身材友好。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "316",
+        "comments": null,
+        "title": "海的女儿",
+        "url": null,
+        "type": "视觉种草",
+        "summary": "意境种草帖。蓝色月光琥珀被类比为'海的女儿'。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "188",
+        "comments": 103,
+        "title": "本人难道是全网第一个拿到月光琥珀的人",
+        "url": null,
+        "type": "开箱实测",
+        "summary": "真实开箱：157cm/111斤，香槟色短款M码。正面：'性价比超级高闭眼冲'、显瘦、130cm裙长不拖地、有香片。负面：胳膊肘不好抬手、略有皱。评论全是料子/透气/抗皱询问。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["白菜帝政", "¥149量产", "lo圈蜜雪冰城", "4000+付款", "微胖友好", "面料廉价感", "入门级"],
+    "highlights_positive": [
+      "帝政品类销量王——¥149现货+4000+人付款，远超同品类其他款式的销售体量",
+      "微胖/大码友好——多帖验证130斤+穿着效果好，帝政高腰线天然遮腰，评论需求极旺",
+      "七天无理由+运费险——购买风险低，对入门用户友好",
+      "多色可选（蓝/香槟/红/金）+两种裙长（130/145cm）——SKU丰富覆盖面广",
+      "被圈内视为'帝政入门首选'——'人生第一条帝政裙'出现在多帖标题，带动品类认知"
+    ],
+    "highlights_negative": [
+      "面料质感被多人吐槽——对比帖评论'月光琥珀质感很塑料'(1赞)、'布料很显廉价'；与¥580缪斯之名天丝面料差距明显",
+      "面料抗皱差——开箱帖提到'略微有皱'，评论大量询问抗皱性，¥149价位面料品质上限客观存在",
+      "胳膊肘活动受限——开箱帖提到'不好抬手'，帝政裙窄袖+高腰结构性问题",
+      "品牌无官方社媒运营——XHS/微博均无品牌官号，传播完全靠用户自发，品牌建设为零",
+      "同质化竞争压力——¥149价位段帝政裙竞品众多，千木没有独特设计语言，纯性价比竞争"
+    ],
+    "verdict_short": "月光琥珀是2026年帝政裙品类的'蜜雪冰城'——¥149白菜价+4000+销量+现货量产，定义了帝政裙的入门门槛。微胖友好+七天无理由让它成为帝政尝鲜的最低风险选择。但面料廉价感是硬伤，和¥580缪斯之名或¥689银月姬在质感上不在同一层级。适合预算有限的帝政入门者和想试水帝政风的微胖用户；追求面料质感和品牌调性的消费者会嫌不够精致。在帝政品类里是走量王，但在品牌和工艺维度上是底部。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "法式宫廷帝政风，融合复古钉珠工艺的高腰礼服裙",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "高腰帝政廓形",
+        "source_lineage": "Empire line，胸下分割线+A型长裙摆，还原19世纪初拿破仑宫廷裙基本结构",
+        "purpose": "核心廓形——高腰线显腿长、遮腰腹，对微胖友好",
+        "official": false
+      },
+      {
+        "name": "钉珠工艺",
+        "source_lineage": "淘宝标题标注'钉珠'，在帝政裙胸口/腰线处增加手工珠饰",
+        "purpose": "视觉焦点——弥补平价面料在质感上的不足，增加精致感",
+        "official": false
+      },
+      {
+        "name": "多色策略",
+        "source_lineage": "蓝/香槟/红/金四色覆盖冷暖色调全光谱",
+        "purpose": "商品策略——量产款靠SKU丰富度+多色选择覆盖更多消费者偏好",
+        "official": false
+      }
+    ],
+    "design_thinking": "月光琥珀走的是'极简帝政'路线——去掉了重工蕾丝/刺绣/天丝等高成本元素，用基础面料+钉珠+多色策略实现¥149的价格下限。设计上不追求还原度或独特性，而是追求'帝政裙长什么样'的最大公约数认知。这是典型的量产入门款思路。",
+    "for_image_gen_prompt": "A young woman in a French court-inspired Empire-line dress with beaded embellishments at the high waistline. The dress features a fitted bodice with delicate bead-work and a flowing A-line skirt in champagne gold. Simple but elegant design, affordable court style with clean lines. The silhouette is reminiscent of Napoleonic era formal wear but simplified for modern wear. Soft indoor lighting, clean studio background."
+  },
+  "posters": [],
+  "posters_source": "待抓取：淘宝详情页模特图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS多帖 + 淘宝搜索 + 对比帖评论)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "千木 月光琥珀",
+    "weibo_uid": null
+  }
+}

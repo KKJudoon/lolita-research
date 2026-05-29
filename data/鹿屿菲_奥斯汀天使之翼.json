@@ -1,0 +1,161 @@
+{
+  "id": "pearlfawn_austin_angel_wings",
+  "name": "奥斯汀·天使之翼",
+  "brand": "PearlFawn Of FiFi 鹿屿菲",
+  "designer": null,
+  "designer_note": "未公开设计师信息",
+  "style_tags": ["帝政", "宫廷风", "浮雕蕾丝", "缎面", "华丽款"],
+  "style_summary": "鹿屿菲的帝政旗舰款，主打浮雕蕾丝+缎面高端质感路线。视觉华丽但实际版型/售后争议极大——'帝政裙的权威'是种草方的评价，避雷帖则揭示版型、色差、脱珠、售后等多重问题。",
+  "release": {
+    "type": "定金 + 分批发货",
+    "date_range": "持续开定金中，至少第十批",
+    "poster_first_seen": null,
+    "note": "淘宝显示'第十批定金'，说明长期在售。但发货延迟被投诉'比说好的晚一个月'"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "deposit_link_intent": 10,
+    "currency": "CNY",
+    "note": "淘宝定金链接¥10，3000+付款。全款价未直接确认但避雷帖提到'不便宜'。XHS评论暗示价位偏高（店家被嘲'这个价格买不来高定'）"
+  },
+  "colors": ["珍珠白", "香槟色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "PearlFawn Of FiFi鹿屿菲",
+      "list_title": "【第十批定金】奥斯汀·天使之翼原创浮雕蕾丝缎面帝政裙礼服长裙",
+      "list_price": 10,
+      "sales": "3000+",
+      "sales_trend": "持续出货中（第十批定金）",
+      "sales_note": "定金链接¥10，3000+付款。但避雷帖提到发货延迟、退款困难。四川成都发货",
+      "location": "四川成都"
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "note": "微博未找到鹿屿菲品牌官号"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "note": "XHS 有消费者种草帖但未确认品牌官号"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "今天加醋喝奶茶了吗～",
+        "date": null,
+        "likes": "1186",
+        "comments": null,
+        "title": "谁懂！拍完我自己真的反复欣赏八百遍！",
+        "url": "https://www.xiaohongshu.com/explore/6853dfa4000000002001be90",
+        "type": "真人成片种草",
+        "summary": "高赞穿搭照，视觉效果极佳，是天使之翼被种草的核心帖。照片氛围感很强但未提及实物质感体验。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "是风动",
+        "date": null,
+        "likes": "324",
+        "comments": null,
+        "title": "奥斯汀天使之翼|帝政裙的权威不必多言👸🏻",
+        "url": "https://www.xiaohongshu.com/explore/6985cedc000000001b01e44d",
+        "type": "真人成片种草",
+        "summary": "穿搭展示帖。155cm有点拖地。确认店铺为鹿屿菲。颜色有珍珠白和香槟色，个人偏好香槟色更古典。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "一一子",
+        "date": null,
+        "likes": "399",
+        "comments": null,
+        "title": "天使之翼真的巨美好适合生日啊",
+        "url": "https://www.xiaohongshu.com/explore/693d729f000000001e0048ac",
+        "type": "真人成片种草",
+        "summary": "生日场景穿搭帖。天使之翼被频繁关联'生日''成人礼'场景——仪式感定位明确。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "欺雪夫诸",
+        "date": null,
+        "likes": "205",
+        "comments": null,
+        "title": "开lo店只记得一句不退不换",
+        "url": "https://www.xiaohongshu.com/explore/68fdca950000000004022937",
+        "type": "工艺争议/避雷",
+        "summary": "严重避雷帖。问题清单：①版型不是真帝政结构只是高腰裙②滑肩严重③珠子脱落+掉金粉④色差大(实物超级黄,商家承认有滤镜)⑤料子巨沉起静电⑥不戴配饰很丑⑦发货延迟一个月⑧售后态度极差不退不换阴阳怪气。另一买家补充：裙子左右不对称(一边拖地一边不拖地)。最终通过88VIP介入强退。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "古埃及掌管碳水的神",
+        "date": null,
+        "likes": "51",
+        "comments": null,
+        "title": "新店第一条赌赢胜利结算画面（天使之翼repo",
+        "url": "https://www.xiaohongshu.com/explore/68c4195a000000001b031e30",
+        "type": "真人repo",
+        "summary": "repo帖，用'赌赢'描述购买体验——暗示购买天使之翼有赌博成分（质量不稳定），但该用户觉得自己运气好。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["视觉华丽版型翻车", "不退不换争议", "珠子脱落掉粉", "色差严重", "仪式感定位", "第十批定金说明有市场", "售后态度极差"],
+    "highlights_positive": [
+      "视觉种草力极强——1186赞+399赞+324赞种草帖，图片氛围感华丽，是帝政裙中'最像魔仙女王'的款",
+      "仪式感定位精准——多帖关联生日/成人礼场景，在仪式场景裙市场有独特位置",
+      "出货量可观——第十批定金、3000+付款，说明尽管有争议仍有持续新客流入",
+      "浮雕蕾丝+缎面面料路线在帝政裙中差异化明确，不走天丝轻薄路线",
+      "双色（珍珠白+香槟色）覆盖不同场景需求（白色惊艳/香槟古典）"
+    ],
+    "highlights_negative": [
+      "版型根本性问题——'不是帝政结构只是高腰裙''卡在高腰不显腿长显胖'(10赞避雷帖)，核心卖点'帝政'名不副实",
+      "工艺翻车多发——珠子脱落、掉金粉、左右不对称(一边拖地一边不拖地)、滑肩严重、码数偏大",
+      "色差严重——'商家自己承认商品图有滤镜，实物超级黄'，图片与实物差距大",
+      "售后态度恶劣——不退不换是圈内常规但该店态度被特别点名'阴阳怪气''翻脸不认直接吞钱'，多个买家遭遇类似问题",
+      "面料沉重——'料子巨沉只是光滑还起静电'，穿着体验差；不戴配饰效果差"
+    ],
+    "verdict_short": "天使之翼是帝政裙品类中'照片巨美实物翻车'的典型代表。视觉种草力极强（XHS高赞种草帖众多），但版型/工艺/色差/售后四重翻车让它成为高风险购买。适合只看图片种草或有88VIP保底的消费者；追求性价比或怕麻烦的消费者强烈建议避开。在lolita行业里属于'靠图片卖货但口碑负债'的品牌——长期看不可持续。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "奥斯汀小说中的 Regency 时期宫廷礼服，天使/羽翼元素叠加",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "浮雕蕾丝",
+        "source_lineage": "欧洲宫廷蕾丝工艺传统，19世纪机械蕾丝革命后从贵族独享变为中产消费品",
+        "purpose": "核心装饰——浮雕蕾丝是天使之翼的视觉标签，营造华丽宫廷感",
+        "official": false
+      },
+      {
+        "name": "缎面面料",
+        "source_lineage": "Satin/缎面是传统宫廷礼服面料，光泽感和垂坠感兼具",
+        "purpose": "面料选择——走重型华丽路线（与缪斯之名的轻薄天丝路线形成对比）",
+        "official": false
+      },
+      {
+        "name": "珍珠/钉珠装饰",
+        "source_lineage": "珍珠在 Regency era 是最受欢迎的首饰，象征纯洁和贵族身份",
+        "purpose": "点缀装饰——但实际工艺不过关（脱落/掉粉问题）",
+        "official": false
+      }
+    ],
+    "design_thinking": "天使之翼试图做帝政裙中的'高端华丽线'——浮雕蕾丝+缎面+钉珠，对标简·奥斯汀笔下Regency舞会礼服。品名'奥斯汀'直接致敬Jane Austen，'天使之翼'暗示天使般的华丽羽翼感。设计野心大但工艺执行跟不上。",
+    "for_image_gen_prompt": "A young woman in an opulent Regency-era Empire-line ball gown with elaborate raised lace (relief lace) details across the bodice and skirt. The dress is made of lustrous champagne satin with pearl beading along the neckline and waist. Dramatic floor-length hem with slight train. Angel wing-like puff sleeves with lace overlay. The silhouette evokes Jane Austen's Regency ballroom — formal, regal, and richly decorated. Warm candlelight atmosphere, grand European ballroom with crystal chandeliers."
+  },
+  "posters": [],
+  "posters_source": "待抓取",
+  "verified": true,
+  "verified_at": "2026-05-29",
+  "verified_by": "Claude (cross-checked XHS种草帖+避雷帖+淘宝搜索数据)",
+  "raw_sources": {
+    "taobao_search": "奥斯汀 天使之翼 鹿屿菲",
+    "xhs_search_keyword": "奥斯汀 天使之翼 帝政"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "mmm_clara_de_wangzuo",
+  "name": "Clara的王座",
+  "brand": "MMM原创设计",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "绝版", "老款", "争议"],
+  "style_summary": "6年前帝政老款，已下架绝版。XHS高赞种草（1771赞）但评论区翻车：容易勾丝、味道大、做工争议。MMM当前主推款为月光百叶（¥218）。帝政裙圈内的'考古款'代表。",
+  "release": {
+    "type": "已绝版",
+    "date_range": "约2020年发售，现已下架",
+    "poster_first_seen": null,
+    "note": "6年前老款，淘宝已无Clara的王座链接；仅二手市场流通"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "原价不详，已绝版。当前仅二手流通。MMM品牌当前在售帝政款'月光百叶'¥218/78人付款"
+  },
+  "colors": [],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "MMM原创设计",
+      "list_title": null,
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "已下架绝版",
+      "sales_note": "Clara的王座已下架。品牌当前主推款：月光百叶¥218/78人付款。9年老店，浙江绍兴发货",
+      "location": "浙江绍兴",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS有高赞种草帖（1771赞）和避雷帖（154赞），讨论热度仍在但已无法购买新品"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "1771",
+        "comments": null,
+        "title": "Clara的王座种草",
+        "url": null,
+        "type": "种草安利",
+        "summary": "1771赞种草帖。但评论区问题集中：6年前老款、容易勾丝、味道大(4赞)。种草热度高但实物口碑分化严重。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": null,
+        "date": null,
+        "likes": "154",
+        "comments": null,
+        "title": "Clara的王座避雷",
+        "url": null,
+        "type": "避雷吐槽",
+        "summary": "154赞避雷帖。做工/面料问题被集中吐槽。6年老款品控问题在后期批次可能更突出。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["6年老款", "已绝版", "勾丝", "味道大", "种草热但实物翻车", "考古款", "MMM品牌"],
+    "highlights_positive": [
+      "帝政裙'考古经典'——6年前的帝政设计至今仍有1771赞种草帖，说明设计本身有吸引力",
+      "品牌资质老——MMM 9年老店，浙江绍兴，是帝政品类的早期参与者",
+      "帝政圈内认知度高——在多个横评帖中被提及，是帝政裙讨论中的常见参照物"
+    ],
+    "highlights_negative": [
+      "已绝版无法购买——淘宝已下架，仅二手流通，新用户无法入手",
+      "面料/做工问题突出——'容易勾丝'、'味道大'(4赞)，品控在老款中属于常见但严重的问题",
+      "避雷帖存在——154赞避雷帖说明负面口碑已形成共识",
+      "品牌当前帝政款(月光百叶¥218/78付款)表现平平——说明品牌在帝政品类没有持续迭代优势"
+    ],
+    "verdict_short": "Clara的王座是帝政裙的'考古标本'——6年前的设计至今仍有高赞种草，说明帝政廓形天然吸睛。但已绝版+勾丝+味道大的实物问题让它只能作为圈内谈资，不再是可购买选项。MMM品牌当前款月光百叶(¥218/78付款)在帝政品类中存在感弱。记录价值大于购买价值。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "早期帝政风Lolita，宫廷王座主题",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "帝政高腰廓形",
+        "source_lineage": "Empire line基础结构，作为约6年前的帝政款代表了品类早期审美",
+        "purpose": "帝政裙品类的早期形态记录",
+        "official": false
+      },
+      {
+        "name": "王座主题命名",
+        "source_lineage": "'Clara的王座'暗示宫廷/权力意象",
+        "purpose": "叙事包装——通过命名增加仪式感",
+        "official": false
+      }
+    ],
+    "design_thinking": "Clara的王座代表了帝政裙品类约6年前的审美取向。作为早期款，它在设计上更倾向于基础帝政廓形+宫廷元素的简单叠加，没有后来缪斯之名(天丝面料路线)或月光琥珀(极致性价比)的明确差异化策略。品控问题(勾丝/味道)反映了早期小批量Lo裙的普遍制造水平。",
+    "for_image_gen_prompt": "A vintage Empire-line Lolita dress with classic court design elements, throne-inspired theme. High waistline with flowing skirt, palace-style decorations. An older design piece showing early interpretation of Empire Lolita style. Warm vintage color palette. Studio lighting with antique props."
+  },
+  "posters": [],
+  "posters_source": "已绝版，无在售商品图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS种草帖+避雷帖 + 淘宝搜索确认下架)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "MMM Clara的王座",
+    "weibo_uid": null
+  }
+}

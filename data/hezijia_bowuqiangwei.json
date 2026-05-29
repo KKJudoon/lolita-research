@@ -1,0 +1,158 @@
+{
+  "id": "hezijia_bowuqiangwei",
+  "name": "薄雾蔷薇",
+  "brand": "何子家有猫了原创设计",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "油画风", "华丽", "中低价", "量产", "日常可穿"],
+  "style_summary": "¥298华丽帝政裙，油画风配色+套头设计+日常可穿，被称为'日常帝政'入门款。同品牌另有圣心百合。7年老店浙江金华，二团有新色。XHS热度高（1000赞测评），微胖友好，适合当晨袍。",
+  "release": {
+    "type": "现货/掉落补货",
+    "date_range": "多团发售，二团新色中",
+    "poster_first_seen": null,
+    "note": "现货掉落制，淘宝现货补货中；已经到二团且有新色"
+  },
+  "price": {
+    "op": 298,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "XHS帖标题'谁穿谁像小公主💰298的华丽帝政裙测评'(1000赞)确认价格¥298；淘宝现货掉落链接¥5（补贴后显示价）+100+人付款；出租市场价¥20"
+  },
+  "colors": ["粉色", "生成色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://item.taobao.com/item.htm?id=946123102586",
+      "item_id": "946123102586",
+      "shop_name": "何子家有猫了原创设计",
+      "list_title": "粉/生成 现货掉落 薄雾蔷薇原创帝政lolita连衣裙复古优雅vintage",
+      "list_price": 5,
+      "sales": "100+",
+      "sales_trend": "持续补货出货",
+      "sales_note": "淘宝显示100+人付款；¥5为掉落/补贴后价格，实际全款¥298；7年老店；浙江金华发货",
+      "location": "浙江金华",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS为主要传播阵地，1000赞/404赞/219赞/202赞多帖种草"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "1000",
+        "comments": null,
+        "title": "谁穿谁像小公主！💰298的华丽帝政裙测评",
+        "url": null,
+        "type": "实穿测评",
+        "summary": "1000赞测评帖，明确标价¥298。实穿展示华丽帝政裙效果。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "爱酱.",
+        "date": "2025-03-02",
+        "likes": "404",
+        "comments": null,
+        "title": "打破了对帝政的偏见🙊原来帝政这么好穿的吗",
+        "url": null,
+        "type": "种草安利",
+        "summary": "404赞种草帖。用户原本认为帝政显胖，实穿后发现'显得人薄薄一片'。推荐无撑穿法，认为'帝政就该拌无撑特别优雅'，也适合当晨袍。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "219",
+        "comments": null,
+        "title": "鉴定网络热门帝政裙｜薄雾蔷薇二团新色",
+        "url": null,
+        "type": "新色鉴定",
+        "summary": "219赞二团新色鉴定帖。说明品牌在持续迭代，二团增加新配色。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "202",
+        "comments": null,
+        "title": "[162/125]穿着方便套头走的油画裙双色测评",
+        "url": null,
+        "type": "双色测评",
+        "summary": "202赞双色测评帖。162cm/125斤上身测评，强调套头穿着方便+油画风格。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["¥298华丽帝政", "油画风", "日常可穿", "套头设计", "晨袍", "何子家有猫了", "二团新色", "微胖显瘦"],
+    "highlights_positive": [
+      "日常可穿度高——套头设计+无撑穿法，被评价为'日常帝政'的理想状态",
+      "¥298价位适中——在帝政裙中属中低价位，低于缪斯之名¥580但高于千木¥149，性价比突出",
+      "打破帝政显胖偏见——404赞帖实证'显得人薄薄一片'，推动帝政裙品类认知转变",
+      "油画风配色有辨识度——双色可选+油画质感在视觉上区别于纯色帝政款",
+      "品牌持续迭代——二团出新色，说明品牌在帝政品类持续投入",
+      "婚礼/晨袍跨圈——被推荐为晨袍穿搭，帝政裙破圈的另一个场景"
+    ],
+    "highlights_negative": [
+      "XHS热度中等——最高1000赞，远低于美学灵药8161赞或月影湖5596赞",
+      "品牌知名度一般——'何子家有猫了'在帝政品类中存在感不如银河有迹可循或QUEENSWORDS",
+      "配色有限——目前仅粉色和生成色两个基础色，SKU丰富度不足",
+      "缺乏设计叙事——油画风+华丽帝政的定位相对泛化，没有鲜明的主题故事"
+    ],
+    "verdict_short": "薄雾蔷薇是帝政裙中的'日常实用派'——¥298的价格+套头设计+无撑穿法+油画风配色，精准命中'想穿帝政但怕累赘/显胖'的用户痛点。404赞帖的'打破帝政偏见'实证了日常可穿性。品牌热度和知名度不高，但产品定位清晰、性价比好。适合想要第一条日常帝政裙的入门者；追求重工华丽或品牌光环的用户可能觉得不够出彩。在帝政品类中是'沉默的好产品'。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "油画风日常帝政裙，蔷薇与薄雾意境",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "油画风配色",
+        "source_lineage": "采用油画质感的色调处理，营造古典画作氛围",
+        "purpose": "视觉差异化——油画质感在帝政裙中增加艺术感",
+        "official": false
+      },
+      {
+        "name": "套头穿着设计",
+        "source_lineage": "无需后拉链/系带，直接套头穿着",
+        "purpose": "日常友好——降低穿着门槛，一个人就能穿脱",
+        "official": false
+      },
+      {
+        "name": "帝政高腰廓形",
+        "source_lineage": "标准Empire line高腰线+A型裙摆",
+        "purpose": "品类基础——帝政裙标准廓形，无撑穿着更显优雅飘逸",
+        "official": false
+      }
+    ],
+    "design_thinking": "薄雾蔷薇的设计策略是'帝政裙的日常化降级'——通过套头设计简化穿着流程，油画风配色增加视觉丰富度，¥298价位降低入门门槛。不追求重工华丽或极致面料，而是解决'帝政裙好看但不好穿'的核心痛点。这种实用主义路线在XHS上获得了稳定的正面口碑。",
+    "for_image_gen_prompt": "A young woman in an oil-painting inspired Empire-line Lolita dress in soft rose and cream tones. The dress features a pullover design with high waistline, flowing A-line skirt without petticoat. Romantic misty rose garden atmosphere, painterly color palette. Natural relaxed styling suitable for daily wear. Warm golden hour lighting, garden setting."
+  },
+  "posters": [],
+  "posters_source": "待抓取：淘宝详情页模特图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS多帖 + 淘宝搜索)",
+  "raw_sources": {
+    "taobao_item_id": "946123102586",
+    "xhs_search_keyword": "何子家有猫了 薄雾蔷薇",
+    "weibo_uid": null
+  }
+}

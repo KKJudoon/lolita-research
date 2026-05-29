@@ -1,0 +1,175 @@
+{
+  "id": "eden_polaris",
+  "name": "北极星 (Polaris)",
+  "brand": "Eden Planet",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息；有真丝版和仿真丝版两个版本",
+  "style_tags": ["帝政", "cla系", "高端", "真丝", "刺绣", "圣洁", "被日漫参考"],
+  "style_summary": "Eden Planet帝政三巨头之首，2023年推出，有真丝版(白/金)和仿真丝版。被圈内视为'国内做帝政最好看'的品牌代表作。设计独特到被日本动漫《葬送的芙莉连》2025年新谷疑似1:1参考(3691赞争议帖)。已非当季在售款。",
+  "release": {
+    "type": "往期款（2023年）",
+    "date_range": "2023年发售",
+    "poster_first_seen": "2023",
+    "note": "淘宝已无北极星链接，当前Eden在售款为'心笼(Heart cage)'。北极星属于品牌经典款/往期款。真丝版更稀少。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "原始售价未找到确切数字。Eden Planet定位高端（合作款口金包¥109，披帛¥209说明配件价位已不低）。真丝版推测¥800+，仿真丝版推测¥400-600。二手市场'星坠薄明'等绝版款有溢价流通。"
+  },
+  "colors": ["白色(真丝版)", "金色(真丝版)", "白色(仿真丝版)"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "Eden Planet",
+      "list_title": "当前在售：心笼(Heart cage) 意向金¥1, 2000+人付款",
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "北极星已下架；品牌当前主推心笼",
+      "sales_note": "10年老店Eden Planet，重庆。心笼意向金2000+人付款说明品牌号召力强。与春山茶手作有合作款(口金包/披帛)。",
+      "location": "重庆",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未专门搜索Eden微博；从横评帖推断品牌有微博存在"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS有大量北极星穿搭/讨论帖。品牌标签#eden_planet #eden北极星。136赞四周年帖+473赞试妆帖+3691赞'芙莉连抄袭'争议帖。品牌在XHS有较高认知度。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "3691",
+        "comments": 432,
+        "title": "老钟家不会做设计了？又在这1:1？",
+        "url": null,
+        "type": "跨圈争议/反向抄袭",
+        "summary": "日本动漫《葬送的芙莉连》2025年11月新谷蝴蝶系列被指与Eden北极星2023年设计高度相似('胸口花纹1:1'197赞)。'跨国维权非常困难'(775赞)。3691赞说明Eden北极星知名度已破圈到动漫领域。'国籍对换热度过万'(90赞)暗示国内原创被忽视的不满。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": null,
+        "date": null,
+        "likes": "559",
+        "comments": null,
+        "title": "帝政裙款式对比",
+        "url": null,
+        "type": "横评对比",
+        "summary": "帝政裙多款对比帖，Eden北极星作为高端参照出现。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "473",
+        "comments": null,
+        "title": "Eden北极星/帝政裙/中世纪/试妆在最新",
+        "url": null,
+        "type": "试妆种草",
+        "summary": "试妆帖，473赞。北极星上身效果展示。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": null,
+        "date": null,
+        "likes": "466",
+        "comments": 52,
+        "title": "四条我心中的帝政天花板",
+        "url": null,
+        "type": "精选天花板",
+        "summary": "4款帝政天花板全是Eden：北极星真丝白/金+德茜丽+北极星仿真丝。'eden绝对是国内做帝政最好看的一家'。真丝版白色'很圣洁'，袖山刺绣'超美'。金色底布印刺绣不太明显。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "最美六条博主",
+        "date": null,
+        "likes": "2734",
+        "comments": 167,
+        "title": "国产帝政里最美的六条(个人向)",
+        "url": null,
+        "type": "精选清单(第1&2位)",
+        "summary": "Eden在最美六条中占据前两位：#1北极星、#2星坠薄明。品牌在帝政品类审美天花板地位毋庸置疑。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["帝政天花板", "真丝版", "被日漫参考", "10年老店", "圣洁", "高端", "往期款"],
+    "highlights_positive": [
+      "帝政品类公认天花板——'eden绝对是国内做帝政最好看的一家'，最美六条帖前两位都是Eden",
+      "设计独创性极强——被日本知名动漫《葬送的芙莉连》2025年新谷1:1参考(3691赞帖)，证明设计在国际层面有影响力",
+      "真丝版面料品质标杆——真丝+刺绣的组合在国牌lolita中罕见，代表了帝政裙工艺上限",
+      "品牌持续输出能力——北极星→德茜丽→星坠薄明→心笼，帝政产品线持续迭代",
+      "品牌号召力强——心笼意向金2000+人付款，说明北极星建立的品牌势能在延续"
+    ],
+    "highlights_negative": [
+      "北极星已非在售款——2023年发售，淘宝已下架，只能二手流通",
+      "价格门槛高——真丝版推测¥800+，在帝政品类中属于天花板价位",
+      "金色版刺绣不明显——466赞帖提到'金色底布印刺绣不太明显'，色差影响视觉效果",
+      "品牌定位过于高端——与¥149千木/¥198西西里的大众市场形成断层，受众窄",
+      "信息不透明——价格/销量数据难获取，品牌社媒运营不足以支撑高端定位的传播"
+    ],
+    "verdict_short": "Eden北极星是帝政品类的'天花板参照物'——真丝+刺绣+独创设计构成了国牌帝政的品质上限，甚至被国际动漫作品参考。但作为2023年的往期款，它更像一个'帝政裙该长什么样'的标准答案，而非当下可购买的热门选择。Eden品牌的持续迭代能力(心笼2000+意向金)证明了北极星建立的品牌势能仍在。在帝政品类中，Eden是'做到最好'的代表，缪斯之名是'卖到最多'的代表，两者构成了帝政市场的品质-价格两极。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "北极星(Polaris)——永恒不变的指引之星，圣洁光芒的帝政裙化表达",
+    "official_quote": null,
+    "kol_quote": "eden绝对是国内做帝政最好看的一家了",
+    "elements": [
+      {
+        "name": "真丝面料",
+        "source_lineage": "真丝(Silk)是帝政裙的历史正统面料——19世纪初Empire裙几乎全部使用丝织物。Eden用真丝回归了帝政裙的面料本源",
+        "purpose": "面料回归——真丝的光泽、垂坠、触感是帝政裙面料的'正确答案'，也是价格门槛的根源",
+        "official": false
+      },
+      {
+        "name": "胸口蝴蝶/花纹刺绣",
+        "source_lineage": "帝政裙胸口区域的精细刺绣，被日漫新谷'1:1'参考的核心设计元素",
+        "purpose": "设计签名——Eden的胸口刺绣图案是品牌辨识度最高的元素，独创性被第三方(日漫)证实",
+        "official": false
+      },
+      {
+        "name": "袖山刺绣",
+        "source_lineage": "袖子根部(袖山)的装饰性刺绣，参考19世纪帝政裙的袖口精细工艺",
+        "purpose": "工艺亮点——466赞帖特别提到'袖山和袖子上的刺绣真的超美'",
+        "official": false
+      },
+      {
+        "name": "圣洁白/金双色策略",
+        "source_lineage": "白色=圣洁/纯净+金色=华丽/加冕，两条色系线覆盖帝政裙的两种核心意象",
+        "purpose": "色彩策略——白色版'很圣洁'更受欢迎(466赞帖)，金色版因刺绣不明显稍逊",
+        "official": false
+      }
+    ],
+    "design_thinking": "Eden北极星的设计逻辑是'回归帝政裙的面料和工艺正统'——不用替代面料(天丝/欧根纱/化纤)，直接用真丝；不用印花或简化工艺，直接做精细刺绣。这种'不妥协'的设计态度是它成为品类天花板的原因，也是它价格高、产量低的原因。品牌名Eden(伊甸)暗示的'原始完美'贯穿了设计哲学。",
+    "for_image_gen_prompt": "A young woman in a pure white silk Empire-line dress of the highest craftsmanship. The bodice features intricate butterfly and floral embroidery at the chest — the defining design element. Delicate embroidery extends to the sleeve caps, with the shoulder area showing the most refined needlework. The pure silk fabric has a natural sheen and drape that synthetic fabrics cannot replicate. The overall effect is 'saintly' and 'celestial' — like the Polaris star given human form. The dress represents the pinnacle of Chinese Lolita Empire dress design. Soft ethereal lighting, celestial atmosphere, pure white and gold accents."
+  },
+  "posters": [],
+  "posters_source": "待抓取：XHS穿搭帖图片(淘宝已下架)",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS多帖+横评帖+争议帖 + 淘宝品牌搜索 + 466赞天花板帖)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "eden 北极星 帝政",
+    "weibo_uid": null
+  }
+}

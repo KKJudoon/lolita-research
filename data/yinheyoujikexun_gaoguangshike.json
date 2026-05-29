@@ -1,0 +1,163 @@
+{
+  "id": "yinheyoujikexun_gaoguangshike",
+  "name": "高光时刻",
+  "brand": "银河有迹可循 VMW",
+  "designer": "银河邮递员",
+  "designer_note": "与美学灵药同品牌同设计师",
+  "style_tags": ["帝政", "cla系", "高端", "网纱", "华丽", "预售", "争议"],
+  "style_summary": "银河有迹可循的第二款帝政裙，¥800+高端定位，网纱版blingbling闪亮裙摆。同品牌美学灵药的升级款。XHS热度高（1810赞+890赞），但继承了品牌的'老瓜店'争议、面料扎人问题和超长工期。被复刻/抄袭。",
+  "release": {
+    "type": "定金 + 尾款",
+    "date_range": "2026年1月7日截团，尾款96折/98折档位",
+    "poster_first_seen": null,
+    "note": "品牌官号帖确认1月7日截团；有尾款折扣档位（96折/98折）"
+  },
+  "price": {
+    "op": null,
+    "full_set": 800,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "XHS三选一帖确认'网纱版全款800多'；与美学灵药(¥586-700+)同品牌但定位更高；有尾款96折/98折档位；被评为'有点小贵'"
+  },
+  "colors": [],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "银河有迹可循",
+      "list_title": null,
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "截团后制作中",
+      "sales_note": "淘宝搜索未找到高光时刻独立定金链接（可能合并在品牌通用链接中）；品牌同时在售美学灵药定金；11年老店，河南信阳",
+      "location": "河南信阳",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "未搜索到品牌官方微博"
+    },
+    "xiaohongshu": {
+      "official_account": "VMW银河有迹可循",
+      "official_url": null,
+      "designer_account": "银河邮递员",
+      "designer_url": null,
+      "note": "品牌官号@VMW银河有迹可循 发布截团帖(597赞)+尾款折扣帖(316赞/92赞)；设计师号@银河邮递员 同步发布"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "1810",
+        "comments": null,
+        "title": "高光时刻",
+        "url": null,
+        "type": "种草安利",
+        "summary": "1810赞种草帖。高光时刻单品热度帖。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "Yuki的古典日常",
+        "date": "2026-01-06",
+        "likes": "911",
+        "comments": null,
+        "title": "决赛圈五选一！",
+        "url": null,
+        "type": "多款对比",
+        "summary": "911赞五选一帖。高光时刻排第一位，被评价'有点小贵还要等工期'。评论：'版型很正就是质量不好说'(含蓄表达品牌品控争议)、'我不能接受皱成这样子'(面料抗皱差)。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "890",
+        "comments": null,
+        "title": "身披星光",
+        "url": null,
+        "type": "视觉种草",
+        "summary": "890赞视觉种草帖。网纱版闪亮效果出片。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "VMW银河有迹可循",
+        "date": "2026-01-07",
+        "likes": "597",
+        "comments": null,
+        "title": "高光时刻 | 截团倒计时⌛",
+        "url": null,
+        "type": "品牌截团",
+        "summary": "597赞品牌官方截团帖。展示'真在逃公主感'的视频，blingbling裙摆。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "215",
+        "comments": null,
+        "title": "我们活在盗版世界，跻身上流被抄了",
+        "url": null,
+        "type": "被抄袭讨论",
+        "summary": "215赞被抄袭/复刻讨论帖。高光时刻设计被其他品牌模仿，延续了银河品牌的'被抄'叙事。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["¥800+高端帝政", "网纱blingbling", "银河第二款", "被抄袭", "版型正品控差", "工期长", "在逃公主感"],
+    "highlights_positive": [
+      "XHS热度极高——1810赞+911赞+890赞+597赞，在高端帝政裙中热度领先",
+      "视觉冲击力强——网纱版blingbling闪亮裙摆，'在逃公主感'出片效果极佳",
+      "品牌有成熟运营——截团+尾款折扣档位(96折/98折)的定价策略成熟",
+      "设计被模仿说明有价值——215赞被抄帖反向证明设计吸引力",
+      "同品牌美学灵药已验证——美学灵药的市场成功降低了高光时刻的品牌信任门槛"
+    ],
+    "highlights_negative": [
+      "价格高——¥800+在帝政裙中属高端，被评'有点小贵'",
+      "品控争议——五选一帖评论'版型很正就是质量不好说'，继承了品牌面料争议",
+      "面料抗皱差——'我不能接受皱成这样子'反映网纱面料保养难度",
+      "超长工期——截团到发货等待数月，同品牌美学灵药也有同样问题",
+      "品牌争议继承——'老瓜店'标签和仿Dior争议延续到高光时刻"
+    ],
+    "verdict_short": "高光时刻是银河有迹可循的'升级押注'——在美学灵药(¥586-700+)基础上推出¥800+网纱高端款。闪亮裙摆的视觉冲击力和1810赞热度证明了高端帝政有市场。但品牌固有的品控争议、面料问题和超长工期在更高价位上更容易被放大。适合已经认可银河品牌且追求blingbling闪亮效果的帝政粉；对品牌有顾虑或追求舒适穿着的用户建议观望。在帝政品类中是'高端争议款'定位。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "闪亮星光主题高端帝政裙，网纱+blingbling工艺",
+    "official_quote": "真.在逃公主感",
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "网纱闪亮裙摆",
+        "source_lineage": "在帝政廓形基础上加入网纱面料和闪光元素，动起来blingbling",
+        "purpose": "视觉冲击——在帝政裙品类中做华丽方向的极致化",
+        "official": true
+      },
+      {
+        "name": "帝政高腰廓形",
+        "source_lineage": "延续品牌美学灵药的罗马柱帝政廓形",
+        "purpose": "品牌一致性——银河有迹可循的帝政设计语言延续",
+        "official": false
+      }
+    ],
+    "design_thinking": "高光时刻是银河有迹可循从中高端(美学灵药¥586-700+)向高端(¥800+)的品牌升级尝试。通过网纱+闪光元素增加华丽感和视觉冲击力，定位'在逃公主'场景。品牌策略是在帝政品类内做纵向价格带扩展，但品控能否匹配¥800+价位是核心挑战。",
+    "for_image_gen_prompt": "A young woman in a luxurious Empire-line dress with sparkling tulle overlay, creating a blingbling shimmering effect. High waistline with flowing sparkling skirt that catches light when moving. Runway princess aesthetic. The dress evokes a golden hour spotlight moment. Dramatic theatrical lighting, ballroom setting with crystal chandeliers."
+  },
+  "posters": [],
+  "posters_source": "待抓取：品牌XHS截团帖图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS品牌帖+五选一帖+被抄帖 + 淘宝品牌搜索)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "高光时刻 银河有迹可循",
+    "weibo_uid": null
+  }
+}

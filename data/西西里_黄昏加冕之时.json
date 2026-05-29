@@ -1,0 +1,169 @@
+{
+  "id": "xixili_huanghun_jiamian",
+  "name": "黄昏加冕之时",
+  "brand": "西西里原创设计",
+  "designer": null,
+  "designer_note": "品牌未公开设计师信息",
+  "style_tags": ["帝政", "cla系", "预售", "黑金", "高贵", "集赞营销"],
+  "style_summary": "中低价帝政预售款，¥198单裙，XHS以集赞营销为主要传播手段。黑金配色被赞'高贵'。声量较低但用户口碑正面。",
+  "release": {
+    "type": "预售/尾款制",
+    "date_range": "2026年上半年开团",
+    "poster_first_seen": null,
+    "note": "淘宝仅有尾款链接(¥0.01, 200+人付款)；预售制分批发货"
+  },
+  "price": {
+    "op": 198,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "XHS帖'积攒30西西里帝政单裙198'确认单裙¥198；对比帖(66赞)中与千木月光琥珀并列，评论'第一件的价格还需要拔草吗'(3赞)暗示价格低不用纠结；713赞帖'本来以为帝政很贵不敢尝试，但这套198r的话'进一步确认"
+  },
+  "colors": ["黑金", "其他色（从搜索结果帖'后头几张图是其他颜色'推断有多色）"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "西西里原创设计",
+      "list_title": "【尾款】黄昏加冕之时",
+      "list_price": 0.01,
+      "sales": "200+",
+      "sales_trend": "预售尾款阶段",
+      "sales_note": "淘宝仅有尾款链接¥0.01，200+人付款；12年老店，湖北武汉",
+      "location": "湖北武汉",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": null,
+      "note": "微博搜索无相关品牌内容；品牌在微博无存在感"
+    },
+    "xiaohongshu": {
+      "official_account": null,
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS声量较低，最高104赞。但有大量积攒30帖（集赞营销活动），说明品牌在做XHS运营。'人生第一条帝政裙'出现多次，定位入门级。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "104",
+        "comments": 2,
+        "title": "黄昏加冕之时 黑金很是高贵…",
+        "url": null,
+        "type": "种草",
+        "summary": "最高赞种草帖，仅'黑色果然不一样啊'一句+标签。104赞/17收/2评。评论几乎无内容。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": null,
+        "date": null,
+        "likes": "93",
+        "comments": null,
+        "title": "求帝政裙拔草/种草",
+        "url": null,
+        "type": "求评讨论",
+        "summary": "帝政裙品类横向讨论帖。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "79",
+        "comments": null,
+        "title": "西西里原创设计（积攒）",
+        "url": null,
+        "type": "集赞营销",
+        "summary": "品牌集赞活动帖，积攒30赞参与活动。此类帖在搜索结果中占比极高(至少8帖)。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "鱼鱼鱼/sleep属性大爆发/Ethereal等",
+        "date": null,
+        "likes": "66",
+        "comments": 69,
+        "title": "求种拔草（千木vs西西里对比）",
+        "url": null,
+        "type": "对比帖",
+        "summary": "千木月光琥珀vs西西里黄昏加冕之时的核心对比帖。关键评论：西西里'胸口金色部分会扎，会透'(3赞)；'配件一般'；'不显瘦看起来好胖'(2赞)；千木'质感很塑料'。多人表示两件都买了。69评论讨论热度不低。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "53",
+        "comments": null,
+        "title": "观望lo裙八年后终于下单了第一条小裙子",
+        "url": null,
+        "type": "入坑记录",
+        "summary": "lo裙观望8年终于入坑的帖子，选的黄昏加冕之时作为第一条裙子。说明该款是入门级消费者的首选之一。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["中低价帝政", "¥198预售", "集赞营销", "黑金高贵", "入门级", "声量低", "透+扎"],
+    "highlights_positive": [
+      "¥198价位在帝政裙中属于中低端，对入门者友好——多帖'人生第一条帝政裙'选此款",
+      "黑金配色获好评——'黑金很是高贵'(104赞)，差异化于千木的蓝/香槟色系",
+      "品牌运营有意识——集赞30活动在XHS制造了大量UGC，虽然单帖赞数不高但覆盖面广",
+      "12年老店有一定信誉积累——淘宝店龄长，不是新品牌",
+      "预售制控制库存风险——200+人预售尾款，稳健经营"
+    ],
+    "highlights_negative": [
+      "XHS声量明显偏低——最高仅104赞，与同品类缪斯之名(2.1万赞)和银月姬(1806赞)差距巨大",
+      "透+扎是核心工艺问题——对比帖评论'胸口金色部分会扎，会透'(3赞)，面料/配件做工有待改善",
+      "不显瘦——评论'不显瘦看起来好胖'(2赞)，帝政裙通病在此款上未被有效解决",
+      "配件一般——对比帖提到'配件一般'，¥198价位的配件品质受限",
+      "品牌社媒几乎空白——微博无内容，XHS无官号，集赞活动是唯一可见的品牌动作"
+    ],
+    "verdict_short": "黄昏加冕之时是帝政品类的'低调入门款'——¥198预售+黑金配色+12年老店构成基本面。XHS集赞营销制造了UGC但单帖热度低，说明产品力和传播力都不足以破圈。透+扎+不显瘦是工艺短板。适合预算有限、想尝鲜帝政风且偏好黑金色调的消费者。在帝政品类里属于补充型选手，不是头部也不是性价比极致(千木¥149更便宜)。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "黄昏加冕——落日余晖下的帝政加冕仪式，黑金配色呼应'黄昏'与'加冕'的双重意象",
+    "official_quote": null,
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "黑金配色",
+        "source_lineage": "黑色+金色是欧洲宫廷加冕典礼的经典配色，象征权力与庄严",
+        "purpose": "核心视觉差异——在帝政裙普遍偏蓝/粉/香槟的色系中，黑金是少数派，吸引偏好暗色系/成熟风的消费者",
+        "official": false
+      },
+      {
+        "name": "帝政高腰廓形",
+        "source_lineage": "标准Empire line高腰剪裁",
+        "purpose": "品类标准设计语言",
+        "official": false
+      },
+      {
+        "name": "金色装饰/胸口金色部分",
+        "source_lineage": "帝政裙胸口区域的金色装饰件，模拟加冕礼服的金线刺绣",
+        "purpose": "视觉焦点——但存在'会扎'的工艺缺陷，金属感配件贴身不舒适",
+        "official": false
+      }
+    ],
+    "design_thinking": "黄昏加冕之时走的是'暗色帝政'路线——与大部分帝政裙的柔美浅色不同，选择黑金配色切入'加冕/权力/庄严'主题。'黄昏'暗示落日暖金光与黑夜交汇的色调。设计意图明确但工艺落地（扎人的金色部分）未跟上。",
+    "for_image_gen_prompt": "A young woman in a dramatic black and gold Empire-line coronation dress. The high-waisted bodice features gold metallic embellishments and ornamental details at the chest, flowing into a long black A-line skirt. The color scheme evokes a sunset coronation ceremony — warm gold contrasting with deep black. Gothic elegance meets Regency era court fashion. Dramatic golden hour lighting, palace interior background with warm amber tones."
+  },
+  "posters": [],
+  "posters_source": "待抓取：淘宝详情页模特图",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS搜索 + 对比帖 + 淘宝搜索)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "西西里 黄昏加冕之时",
+    "weibo_uid": null
+  }
+}

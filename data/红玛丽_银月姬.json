@@ -1,0 +1,197 @@
+{
+  "id": "redmaria_yinyue_ji",
+  "name": "银月姬",
+  "brand": "Red Maria / 红玛丽",
+  "designer": null,
+  "designer_note": "品牌15周年纪念款，未公开具体设计师",
+  "style_tags": ["帝政", "限定", "15周年", "刺绣", "蕾丝", "月亮主题", "高端"],
+  "style_summary": "红玛丽15周年限定帝政裙，OP ¥689 / 套装 ¥998。星月刺绣+定染花边+银丝裙摆，主打'月光'概念。XHS营销力强(1806赞官方帖)，但品牌级售后争议严重(601赞避雷帖)。腰封拆卖策略引发消费者不满。",
+  "release": {
+    "type": "限时预约",
+    "date_range": "2026-02-13 ~ 2026-03-07",
+    "poster_first_seen": "2026-02-01",
+    "note": "15周年限定款，限时预约23天；微博官号2月1日首发概念帖；2月13日20:00开启预约；1000+预约(微博公布)"
+  },
+  "price": {
+    "op": 689,
+    "full_set": 998,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "微博Lolita洋装上新号确认：OP=689，套装set=998(含腰封+绶带+披帛)。XHS评论'图上这些要1k好像不是很有诚意'(86赞)、'你说什么？这玩意儿要1000？'(21赞)——消费者对套装定价¥998有明显抵触。腰封拆卖被批'败好感'(112赞)"
+  },
+  "colors": ["雾蓝银灰", "珍珠米杏"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": "Red Maria红玛丽lolita",
+      "list_title": "淘宝无银月姬单独链接（预约制/已过预约期）",
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "限时预约已结束(3.7截止)，1000+预约",
+      "sales_note": "淘宝搜索只找到红玛丽其他商品和B品掉落页面。银月姬为预约制限定款，淘宝无常驻链接。15年老店，江苏南京。",
+      "location": "江苏南京",
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": "RedMaria红玛丽",
+      "official_url": "https://weibo.com/RedMaria",
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": "2026-02-01",
+      "note": "微博官号非常活跃地推银月姬——至少6帖推广(概念文案/穿搭多样性/175cm试穿/月亮女神/高妹狂喜等)。2月1日首发雾蓝银灰概念帖；2月16日浮力合集+揪奖活动；2月23-26日持续种草。微博运营力度远超多数小品牌。"
+    },
+    "xiaohongshu": {
+      "official_account": "Red Maria红玛丽",
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS官方帖矩阵强大：1806赞(雾蓝银灰种草)+1284赞(珍珠米杏人台)+741赞(投票选色)。但品牌也有大量负面帖：601赞避雷(货不对板+不退定金)+465赞(道歉帖)+205赞(不退不换)。正负面并存是红玛丽品牌的特征。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "Red Maria红玛丽(官方)",
+        "date": "2026-02-13",
+        "likes": "1806",
+        "comments": 12,
+        "title": "这才恍然大悟：原来这就是月光",
+        "url": "https://www.xiaohongshu.com/explore/699eee20000000002603ff2c",
+        "type": "品牌官方种草",
+        "summary": "雾蓝银灰款官方种草帖。文案极具氛围感：'白天日光下是清浅的雾蓝调，夜晚灯光下银丝流转泛着清冷的银辉'。1806赞/784收/12评，评论全正面('又给我种回来了'32赞)。营销文案写作水平很高。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "Red Maria红玛丽(官方)",
+        "date": "2026-02-09",
+        "likes": "1284",
+        "comments": 46,
+        "title": "Red Maria银月姬珍珠米杏色人台展示",
+        "url": "https://www.xiaohongshu.com/explore/69895e15000000000a032d9e",
+        "type": "品牌官方人台展示",
+        "summary": "珍珠米杏色人台帖。评论暴露核心争议：'腰封明明可以做成一套固定的结果搞拆卖'(112赞)——腰封拆卖是最大败好感点；'图上这些要1k好像不是很有诚意'(86赞)；'这玩意儿要1000？'(21赞)。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "Red Maria红玛丽(官方)",
+        "date": null,
+        "likes": "741",
+        "comments": null,
+        "title": "红玛丽十五周年 银月姬 投票选色",
+        "url": null,
+        "type": "品牌互动",
+        "summary": "上市前投票选色互动帖。741赞说明消费者参与度高。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "消费者避雷",
+        "date": null,
+        "likes": "601",
+        "comments": null,
+        "title": "红玛丽货不对板拒退全款 各位避雷叭",
+        "url": null,
+        "type": "品牌级避雷",
+        "summary": "品牌级避雷帖(非银月姬具体款，但反映品牌问题)。核心问题：货不对板、透视、发货延迟、不退定金。601赞是很高的负面信号。评论中还有蝶影重重内搭的翻车案例。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "消费者追踪",
+        "date": null,
+        "likes": "465",
+        "comments": null,
+        "title": "二编：已道歉解决并返还优惠",
+        "url": null,
+        "type": "售后追踪",
+        "summary": "避雷后续帖——品牌道歉并解决。465赞说明围观者众。品牌有一定售后纠偏能力但被动。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": null,
+        "date": null,
+        "likes": "442",
+        "comments": null,
+        "title": "抢不到劳拉就换一条…",
+        "url": null,
+        "type": "替代选择",
+        "summary": "消费者抢不到其他热门款转向银月姬。说明银月姬在帝政品类中有替代价值。"
+      },
+      {
+        "rank_in_search": 7,
+        "author": null,
+        "date": null,
+        "likes": "205",
+        "comments": null,
+        "title": "开lo店只记得一句不退不换",
+        "url": null,
+        "type": "售后吐槽",
+        "summary": "针对红玛丽品牌的售后态度吐槽。205赞说明'不退不换'是消费者印象深刻的品牌标签。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["15周年限定", "OP¥689", "月光银灰", "腰封拆卖争议", "品牌售后差", "营销力强", "定价争议"],
+    "highlights_positive": [
+      "品牌15年积淀+限定款仪式感——15周年纪念定位赋予银月姬独特的收藏/情感价值，1000+预约证明品牌号召力",
+      "颜色设计独特——雾蓝银灰色号在帝政裙品类中独一无二，'月光'概念营销非常成功(1806赞种草帖)",
+      "工艺有看点——星月刺绣+定染花边+银丝裙摆+原创月亮女神腰封，设计完成度高",
+      "营销文案和种草矩阵强——XHS官方帖1806/1284/741赞三连击，微博持续推送，品牌内容产出能力在lo圈属上乘",
+      "穿搭多样性好——裙子+腰封+绶带+披帛+罩裙可组合多种搭配(微博帖展示)"
+    ],
+    "highlights_negative": [
+      "腰封拆卖引发强烈不满——'腰封明明可以做成一套固定的结果搞拆卖'(112赞)是最热门负面评论，策略性拆卖被消费者视为'割韭菜'",
+      "¥998套装定价争议——'这些要1k好像不是很有诚意'(86赞)、'这玩意儿要1000'(21赞)，消费者认为性价比不足",
+      "品牌级售后口碑极差——601赞避雷帖+205赞'不退不换'帖，红玛丽品牌的售后态度是lo圈知名负面标签",
+      "货不对板风险——避雷帖提到实物与宣传图差异大、透视问题，品牌此前有前科",
+      "预约已过期且无二次发售信息——3.7截止后银月姬能否再购入存疑，限定款的排他性也是双刃剑"
+    ],
+    "verdict_short": "银月姬是红玛丽15年品牌力的一次'毕业之作'级输出——设计、营销、概念三维度都是品牌最高水平，雾蓝银灰色号和'月光裙'概念在帝政品类中独树一帜。但¥998套装定价+腰封拆卖+品牌级售后黑历史构成了严重的消费决策障碍。本质矛盾是：营销力>>产品交付力>>售后服务力。适合品牌忠粉和被'月光'概念击中的浪漫主义消费者；对品牌不熟悉的新客来说，601赞避雷帖足以劝退。在帝政品类里属于'高争议高话题'型产品。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "月光女神——银月、星辰、蕾丝雪羽构成的夜空降临仪式",
+    "official_quote": "某个光线蓝，某个光线银，清浅缥缈的蓝调在某个光线下呈现银色的质感，原来早被写在了书中。故事已给它赋予了名字——月光。",
+    "kol_quote": null,
+    "elements": [
+      {
+        "name": "雾蓝银灰定染面料",
+        "source_lineage": "品牌定制染色，实现'白天雾蓝/夜晚银辉'的双光效果。这是银月姬最核心的设计语言",
+        "purpose": "颜色即概念——'月光裙'的名号来自这个独特色号，是传播的核心锚点",
+        "official": true
+      },
+      {
+        "name": "星月刺绣",
+        "source_lineage": "腰封上原创定制的月亮女神浮雕+绶带上烫银的月相暗纹",
+        "purpose": "图案呼应——月亮+星辰图案贯穿裙身、腰封、绶带，形成完整的'月神'叙事",
+        "official": true
+      },
+      {
+        "name": "层叠蕾丝+银丝织入",
+        "source_lineage": "多层蕾丝裙摆织入银丝，使裙摆在光线下呈现闪烁效果。官方描述'层叠的蕾丝如细碎雪羽'",
+        "purpose": "材质效果——银丝在不同光线下的反射制造了'月光流转'的视觉效果",
+        "official": true
+      },
+      {
+        "name": "腰封+绶带+披帛+罩裙 模块化搭配",
+        "source_lineage": "借鉴欧洲宫廷礼服的多配件叠穿传统——分件组合实现不同场合的穿搭变化",
+        "purpose": "商品策略——单裙到全套的价格阶梯(¥689→¥998)，但拆卖策略被消费者批评为割韭菜",
+        "official": true
+      }
+    ],
+    "design_thinking": "银月姬是红玛丽15年品牌积累的设计巅峰之作——品牌从'月光'这个核心概念出发，用定染面料、银丝织入、星月刺绣三种工艺手段实现了完整的'月神降临'叙事。设计路径：文学概念(月光)→色彩方案(雾蓝银灰)→材质工艺(银丝+定染)→图案系统(星月刺绣)→搭配系统(模块化配件)。这是帝政裙品类中少见的'概念驱动型'设计，而非纯廓形/面料驱动。",
+    "for_image_gen_prompt": "A young woman in an ethereal misty blue-silver Empire-line dress, a 15th anniversary limited edition Lolita gown. The high-waisted bodice features an ornate waist corset with crescent moon and star embroidery in silver thread. Multiple layers of delicate lace cascade like frost feathers, with silver threads woven throughout the skirt that shimmer in moonlight. A silver-stamped sash with lunar phase patterns drapes across the shoulder. The color shifts between misty blue in daylight and silver-grey under artificial light — the essence of moonlight captured in fabric. Romantic nighttime garden setting, moonlight streaming through, palace terrace background."
+  },
+  "posters": [],
+  "posters_source": "待抓取：微博官号帖图片 + XHS官方帖图片",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS官方帖+负面帖 + 微博官号6帖 + 淘宝品牌搜索 + Lolita洋装上新号价格确认)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "红玛丽 银月姬",
+    "weibo_uid": null
+  }
+}

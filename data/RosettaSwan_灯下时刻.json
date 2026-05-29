@@ -1,0 +1,169 @@
+{
+  "id": "rosettaswan_dengxia_shike",
+  "name": "灯下时刻",
+  "brand": "RosettaSwan",
+  "designer": null,
+  "designer_note": "独立设计师品牌，不走淘宝，通过XHS/微信/微博自有渠道售卖",
+  "style_tags": ["帝政", "cla系", "独立设计师", "刺绣", "缎面", "轻奢", "古董裙参考"],
+  "style_summary": "帝政品类轻奢独立设计师款，被圈内称为'帝政界的轻奢小裙子'。柔软缎面+米色网纱+玫瑰刺绣，显瘦效果极佳('116斤穿上薄薄一条人')。四周年花束限定+银灰限量面料，品牌不走淘宝。同品牌另有'婚礼之路'帝政款。",
+  "release": {
+    "type": "预售/限时返场",
+    "date_range": "一团2025下半年; 二团2026-02-14 ~ 2026-03-03",
+    "poster_first_seen": "2025-07",
+    "note": "四周年花束限定；银灰色面料限量仅剩约10件(品牌官方评论)；3色可选：银色/米白/浅金"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "未找到确切价格数字。XHS评论'现货价太贵了'(2赞)、微博帖'有点贵而且满减力度比婚礼之路小'，定位中高端（推测¥500-800区间）。有阶梯价满减机制。淘宝无店铺/链接。"
+  },
+  "colors": ["银灰色", "米白色", "浅金色"],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": null,
+      "list_title": null,
+      "list_price": null,
+      "sales": null,
+      "sales_trend": null,
+      "sales_note": "品牌不走淘宝平台，无淘宝店铺/链接。闲鱼(🐟)有二手流通。",
+      "location": null,
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": "RosettaSwan",
+      "official_url": "https://weibo.com/RosettaSwan",
+      "alt_account": null,
+      "alt_url": null,
+      "post_date": "2026-01-28",
+      "note": "微博官号活跃，发四周年花束帝政3色图（银灰/米白/浅金）；Lolita洋装上新号转发二团信息。品牌在微博有一定运营但不是主阵地。"
+    },
+    "xiaohongshu": {
+      "official_account": "RosettaSwan",
+      "official_url": null,
+      "designer_account": null,
+      "designer_url": null,
+      "note": "XHS官号发现货通知(1099赞)和二团通知(403赞)。品牌在评论区直接回复用户。XHS是主要销售和传播渠道。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": null,
+        "date": null,
+        "likes": "1737",
+        "comments": null,
+        "title": "终于把灯下时刻穿出去惹",
+        "url": null,
+        "type": "真人穿搭",
+        "summary": "高赞穿搭帖（搜索显示1737赞）。灯下时刻最高赞用户帖。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "RosettaSwan(官方)",
+        "date": null,
+        "likes": "1099",
+        "comments": 69,
+        "title": "现货通知",
+        "url": null,
+        "type": "品牌官方通知",
+        "summary": "四周年花束现货上架通知帖。评论全是吐槽XHS推送延迟('小红书怎么不等我死了才推给我'202赞)。1099赞说明品牌关注度高。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": null,
+        "date": null,
+        "likes": "516",
+        "comments": null,
+        "title": "拆掉蝴蝶结之后!",
+        "url": null,
+        "type": "穿搭改造",
+        "summary": "拆掉肩部蝴蝶结后的效果展示。蝴蝶结设计是灯下时刻争议点之一。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "服装设计师",
+        "date": null,
+        "likes": "685",
+        "comments": 74,
+        "title": "服装设计师锐评帝政裙Vol.3",
+        "url": null,
+        "type": "专业评测",
+        "summary": "服装设计师专业锐评：'裙摆太小了，轻盈面料就适合大摆'；'刺绣面料结合精美'；'袖子上蝴蝶结看不太懂'；'胸下抽褶位置太开'。专业视角认为设计精美但有结构性不足。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": null,
+        "date": null,
+        "likes": "151",
+        "comments": 43,
+        "title": "这件银色帝政还买吗",
+        "url": null,
+        "type": "求评讨论",
+        "summary": "关键评论：'116斤穿上也是一条薄薄的人'(10赞)极强显瘦效果；'130斤也能显得人一长条'；'胸前的纱有一点点扎'；'刺绣刚收到各种脱线'；'不如婚礼之路'(2赞)。正负面信息丰富。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": ["轻奢独立设计师", "不走淘宝", "显瘦神器", "刺绣精美", "微扎", "蝴蝶结争议", "银灰限量", "古董裙参考"],
+    "highlights_positive": [
+      "显瘦效果在帝政品类中最突出——'116斤薄薄一条人'(10赞)、'130斤一长条特别显瘦'多帖一致好评",
+      "设计精美度被专业人士认可——服装设计师锐评'刺绣面料结合精美'，参考古董裙设计",
+      "面料质感好——'柔软缎面罩米色网纱，缎光若隐若现'，微博帖'有质感'",
+      "品牌完整产品线——同品牌婚礼之路+灯下时刻+姗姗来迟构成帝政三件套，品牌专注度高",
+      "限量策略提升稀缺性——银灰色仅剩约10件面料，四周年花束限定"
+    ],
+    "highlights_negative": [
+      "面料微扎——多帖提到'胸前的纱有一点点扎'，Vol.3锐评也确认；需自己缝同色布包边",
+      "刺绣脱线——有评论'刺绣刚收到各种脱线'，工艺稳定性存疑",
+      "蝴蝶结设计争议——肩部蝴蝶结不固定('散开手残党会系半天')，且设计师锐评'看不太懂'",
+      "裙摆偏小——设计师专业评价'轻盈面料适合大摆但裙摆太克制'，观感不够飘逸",
+      "不走淘宝无售后保障——无淘宝平台背书，购买渠道只有XHS/微信，维权成本高；评论'她家骚操作有点多'"
+    ],
+    "verdict_short": "灯下时刻是帝政品类中的'独立设计师标杆'——不走淘宝、限量策略、古董裙参考设计、显瘦效果突出，在品质追求者中口碑极高。服装设计师认可其刺绣和面料运用。但微扎、脱线、蝴蝶结松脱等工艺细节不够稳定，不走淘宝意味着消费者承担更高的购买风险。在帝政品类中属于'小众精品'定位，与缪斯之名的'大众爆款'形成鲜明对照。适合有一定lo龄、追求独特性和质感、愿意为设计师品牌溢价的消费者。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "theme": "灯下时刻——烛光/台灯下的亲密浪漫时刻，缎面在灯光下的微光效果",
+    "official_quote": null,
+    "kol_quote": "帝政界的轻奢小裙子",
+    "elements": [
+      {
+        "name": "缎面+网纱双层结构",
+        "source_lineage": "内层柔软缎面+外层米色网纱，实现缎光若隐若现的效果。参考古董裙的多层面料叠穿传统",
+        "purpose": "核心面料语言——双层结构既有缎面质感又不会太过闪亮，'灯下'概念的视觉实现",
+        "official": false
+      },
+      {
+        "name": "玫瑰刺绣",
+        "source_lineage": "胸口/裙身玫瑰刺绣，可能参考某件古董裙(Vol.3评论提到'参考了一个古董裙')",
+        "purpose": "设计焦点——刺绣精美度是设计师最被认可的部分",
+        "official": false
+      },
+      {
+        "name": "窄版胸下剪裁(削弱显胖)",
+        "source_lineage": "帝政裙标准高腰线，但RosettaSwan采用了更窄的胸片+两侧逐渐减小的抽褶",
+        "purpose": "版型优化——针对帝政裙'显胖'通病做了结构性改良，是其显瘦效果突出的原因",
+        "official": false
+      }
+    ],
+    "design_thinking": "灯下时刻的设计路径是'古董裙→现代化简化'——从真实的19世纪帝政裙实物中提取刺绣、面料层叠、裁片结构等元素，用现代面料和工艺重新诠释。品牌名RosettaSwan(罗塞塔天鹅)暗示的优雅古典感贯穿设计。与多数lo牌的'概念驱动'不同，这是'实物参考驱动'的设计方式。",
+    "for_image_gen_prompt": "A young woman in an elegant Empire-line dress with double-layered fabric — a soft satin inner layer showing through a sheer ivory mesh overlay. Delicate rose embroidery on the bodice, creating a candlelit romantic atmosphere. The dress features a narrow fitted chest panel with subtle gathering that creates a slimming silhouette. Silver-grey color with subtle satin sheen visible under warm lamplight. Slim and elongated figure. Warm candlelight setting, intimate evening atmosphere, vintage interior with soft golden light."
+  },
+  "posters": [],
+  "posters_source": "待抓取：微博官号帖图片 + XHS穿搭帖图片",
+  "verified": true,
+  "verified_at": "2026-05-28",
+  "verified_by": "Claude (cross-checked XHS官方帖+用户帖+设计师锐评 + 微博官号+上新号 + 淘宝无店铺确认)",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "xhs_search_keyword": "RosettaSwan 灯下时刻",
+    "weibo_uid": null
+  }
+}
