@@ -4,7 +4,13 @@
   "brand": "PearlFawn Of FiFi 鹿屿菲",
   "designer": null,
   "designer_note": "未公开设计师信息",
-  "style_tags": ["帝政", "宫廷风", "浮雕蕾丝", "缎面", "华丽款"],
+  "style_tags": [
+    "帝政",
+    "宫廷风",
+    "浮雕蕾丝",
+    "缎面",
+    "华丽款"
+  ],
   "style_summary": "鹿屿菲的帝政旗舰款，主打浮雕蕾丝+缎面高端质感路线。视觉华丽但实际版型/售后争议极大——'帝政裙的权威'是种草方的评价，避雷帖则揭示版型、色差、脱珠、售后等多重问题。",
   "release": {
     "type": "定金 + 分批发货",
@@ -19,7 +25,10 @@
     "currency": "CNY",
     "note": "淘宝定金链接¥10，3000+付款。全款价未直接确认但避雷帖提到'不便宜'。XHS评论暗示价位偏高（店家被嘲'这个价格买不来高定'）"
   },
-  "colors": ["珍珠白", "香槟色"],
+  "colors": [
+    "珍珠白",
+    "香槟色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -104,7 +113,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["视觉华丽版型翻车", "不退不换争议", "珠子脱落掉粉", "色差严重", "仪式感定位", "第十批定金说明有市场", "售后态度极差"],
+    "keywords": [
+      "视觉华丽版型翻车",
+      "不退不换争议",
+      "珠子脱落掉粉",
+      "色差严重",
+      "仪式感定位",
+      "第十批定金说明有市场",
+      "售后态度极差"
+    ],
     "highlights_positive": [
       "视觉种草力极强——1186赞+399赞+324赞种草帖，图片氛围感华丽，是帝政裙中'最像魔仙女王'的款",
       "仪式感定位精准——多帖关联生日/成人礼场景，在仪式场景裙市场有独特位置",
@@ -149,7 +166,12 @@
     "design_thinking": "天使之翼试图做帝政裙中的'高端华丽线'——浮雕蕾丝+缎面+钉珠，对标简·奥斯汀笔下Regency舞会礼服。品名'奥斯汀'直接致敬Jane Austen，'天使之翼'暗示天使般的华丽羽翼感。设计野心大但工艺执行跟不上。",
     "for_image_gen_prompt": "A young woman in an opulent Regency-era Empire-line ball gown with elaborate raised lace (relief lace) details across the bodice and skirt. The dress is made of lustrous champagne satin with pearl beading along the neckline and waist. Dramatic floor-length hem with slight train. Angel wing-like puff sleeves with lace overlay. The silhouette evokes Jane Austen's Regency ballroom — formal, regal, and richly decorated. Warm candlelight atmosphere, grand European ballroom with crystal chandeliers."
   },
-  "posters": [],
+  "posters": [
+    "images/鹿屿菲_天使之翼/weibo_search_page.png",
+    "images/鹿屿菲_天使之翼/weibo_吸猫日志_1.png",
+    "images/鹿屿菲_天使之翼/weibo_吸猫日志_2.png",
+    "images/鹿屿菲_天使之翼/weibo_吸猫日志_3.png"
+  ],
   "posters_source": "待抓取",
   "verified": true,
   "verified_at": "2026-05-29",

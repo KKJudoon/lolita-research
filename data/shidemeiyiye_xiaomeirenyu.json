@@ -4,7 +4,16 @@
   "brand": "诗的每一页原创设计",
   "designer": "碎银子lolita设计",
   "designer_note": "XHS设计师号@碎银子lolita设计 发布稿子→实物对比帖(360赞)，确认为约稿合作设计师",
-  "style_tags": ["帝政", "cla系", "珍珠", "蕾丝", "拖尾", "预售", "设计师款", "中高端"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "珍珠",
+    "蕾丝",
+    "拖尾",
+    "预售",
+    "设计师款",
+    "中高端"
+  ],
   "style_summary": "小美人鱼主题帝政裙，鱼鳞形蕾丝+珍珠辅料+可拆拖尾，约¥700全套。设计师碎银子约稿出品，品牌以'从不饥饿营销'口碑著称。预售制+定金尾款模式。XHS热度中等但品牌忠诚度高。",
   "release": {
     "type": "定金 + 尾款",
@@ -19,7 +28,10 @@
     "currency": "CNY",
     "note": "XHS帖确认'全款大概700左右'；淘宝定金链接¥8（200+人付款）+尾款链接¥8（100+人付款）+展示链接¥9989；在帝政裙中属中高端价位，与缪斯之名¥580和银月姬OP¥689同级"
   },
-  "colors": ["蓝色", "白色"],
+  "colors": [
+    "蓝色",
+    "白色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -100,7 +112,16 @@
     ]
   },
   "synthesis": {
-    "keywords": ["小美人鱼主题", "¥700中高端", "碎银子设计", "鱼鳞蕾丝", "珍珠", "可拆拖尾", "从不饥饿营销", "油画日月诗同品牌"],
+    "keywords": [
+      "小美人鱼主题",
+      "¥700中高端",
+      "碎银子设计",
+      "鱼鳞蕾丝",
+      "珍珠",
+      "可拆拖尾",
+      "从不饥饿营销",
+      "油画日月诗同品牌"
+    ],
     "highlights_positive": [
       "设计独特性强——鱼鳞形蕾丝+珍珠辅料+可拆飘带/胸针/腰链/拖尾，设计语言完整且有辨识度",
       "设计师署名——碎银子lolita设计约稿，有明确设计来源，不是无名工厂款",
@@ -152,7 +173,12 @@
     "design_thinking": "小美人鱼走的是'童话主题叙事+功能性细节'路线。鱼鳞蕾丝和珍珠辅料建立了完整的海洋童话视觉语言，而可拆配件和可勾拖尾则解决了帝政裙在日常穿着中的实用性问题。这种'美丽但不累赘'的设计思路是中高端帝政裙的理想状态。设计师碎银子的约稿合作也保证了设计的原创性和完成度。",
     "for_image_gen_prompt": "A young woman in a Little Mermaid-themed Empire-line Lolita dress. The bodice features fish-scale lace patterns at the neckline and cuffs, with pearl ornaments along the waist and collar. Long ribbon bow on the shoulders (detachable), decorative brooch with waist chain. The dress has an elegant train that can be gathered up. Available in ocean blue and pure white. Dreamy underwater fairy tale aesthetic with court elegance. Soft diffused lighting, ocean-inspired backdrop."
   },
-  "posters": [],
+  "posters": [
+    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_1.png",
+    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_2.png",
+    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_3.png",
+    "images/shidemeiyiye_xiaomeirenyu/xhs_礼貌白莲从天而降_1_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页/设计师XHS帖图",
   "verified": true,
   "verified_at": "2026-05-28",

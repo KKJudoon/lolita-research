@@ -4,7 +4,14 @@
   "brand": "奶泡匣子 MILK FOAM BOX",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "提花", "两穿", "量产", "中低价"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "提花",
+    "两穿",
+    "量产",
+    "中低价"
+  ],
   "style_summary": "¥259量产帝政裙，两穿设计（袖子可拆）+提花面料，XHS热度极高（5596赞帖）。品牌14年老店，广西南宁发货。外观种草强但实物质感争议大，被指'像睡衣''显胖'。",
   "release": {
     "type": "现货量产",
@@ -19,7 +26,10 @@
     "currency": "CNY",
     "note": "淘宝标价¥259；XHS多帖确认价位在¥259左右；在帝政裙中属中低价位段，高于千木月光琥珀¥149但远低于缪斯之名¥580"
   },
-  "colors": ["蓝色", "白色"],
+  "colors": [
+    "蓝色",
+    "白色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +121,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["XHS热度王", "两穿设计", "提花面料", "¥259量产", "实物翻车", "显胖争议", "14年老店"],
+    "keywords": [
+      "XHS热度王",
+      "两穿设计",
+      "提花面料",
+      "¥259量产",
+      "实物翻车",
+      "显胖争议",
+      "14年老店"
+    ],
     "highlights_positive": [
       "XHS种草热度极高——5596赞+4246赞+2721赞，帝政裙品类中单品帖热度最高之一",
       "两穿设计（袖子可拆）是差异化卖点——同价位帝政裙少有两穿功能",
@@ -156,7 +174,16 @@
     "design_thinking": "月影湖的产品策略是'两穿+提花'双卖点组合拳，在¥259价位段创造差异化。两穿设计增加功能感知，提花面料增加视觉丰富度。但这两个卖点都有'照片好看实物一般'的风险——提花面料在廉价基底上容易显塑料感，两穿结构也可能影响版型完整性。",
     "for_image_gen_prompt": "A young woman in an Empire-line dress with detachable sleeves, featuring jacquard fabric with subtle floral patterns. High waistline design with A-line silhouette. Available in blue and white. The dress has a romantic court style with removable sleeve option for versatile styling. Soft natural lighting, elegant indoor setting."
   },
-  "posters": [],
+  "posters": [
+    "images/naipaohe_yueyinghu/xhs_徊冰_2_1.png",
+    "images/naipaohe_yueyinghu/xhs_徊冰_2_2.png",
+    "images/naipaohe_yueyinghu/xhs_徊冰_2_3.png",
+    "images/naipaohe_yueyinghu/xhs_徊冰_2_4.png",
+    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_1.png",
+    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_2.png",
+    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_3.png",
+    "images/naipaohe_yueyinghu/xhs_是豆包儿咩_1_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

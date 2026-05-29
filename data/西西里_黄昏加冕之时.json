@@ -4,7 +4,14 @@
   "brand": "西西里原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "预售", "黑金", "高贵", "集赞营销"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "预售",
+    "黑金",
+    "高贵",
+    "集赞营销"
+  ],
   "style_summary": "中低价帝政预售款，¥198单裙，XHS以集赞营销为主要传播手段。黑金配色被赞'高贵'。声量较低但用户口碑正面。",
   "release": {
     "type": "预售/尾款制",
@@ -19,7 +26,10 @@
     "currency": "CNY",
     "note": "XHS帖'积攒30西西里帝政单裙198'确认单裙¥198；对比帖(66赞)中与千木月光琥珀并列，评论'第一件的价格还需要拔草吗'(3赞)暗示价格低不用纠结；713赞帖'本来以为帝政很贵不敢尝试，但这套198r的话'进一步确认"
   },
-  "colors": ["黑金", "其他色（从搜索结果帖'后头几张图是其他颜色'推断有多色）"],
+  "colors": [
+    "黑金",
+    "其他色（从搜索结果帖'后头几张图是其他颜色'推断有多色）"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +121,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["中低价帝政", "¥198预售", "集赞营销", "黑金高贵", "入门级", "声量低", "透+扎"],
+    "keywords": [
+      "中低价帝政",
+      "¥198预售",
+      "集赞营销",
+      "黑金高贵",
+      "入门级",
+      "声量低",
+      "透+扎"
+    ],
     "highlights_positive": [
       "¥198价位在帝政裙中属于中低端，对入门者友好——多帖'人生第一条帝政裙'选此款",
       "黑金配色获好评——'黑金很是高贵'(104赞)，差异化于千木的蓝/香槟色系",
@@ -156,7 +174,16 @@
     "design_thinking": "黄昏加冕之时走的是'暗色帝政'路线——与大部分帝政裙的柔美浅色不同，选择黑金配色切入'加冕/权力/庄严'主题。'黄昏'暗示落日暖金光与黑夜交汇的色调。设计意图明确但工艺落地（扎人的金色部分）未跟上。",
     "for_image_gen_prompt": "A young woman in a dramatic black and gold Empire-line coronation dress. The high-waisted bodice features gold metallic embellishments and ornamental details at the chest, flowing into a long black A-line skirt. The color scheme evokes a sunset coronation ceremony — warm gold contrasting with deep black. Gothic elegance meets Regency era court fashion. Dramatic golden hour lighting, palace interior background with warm amber tones."
   },
-  "posters": [],
+  "posters": [
+    "images/西西里_黄昏加冕之时/weibo_noresult.png",
+    "images/西西里_黄昏加冕之时/weibo_search_page.png",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_1.jpg",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_2.jpg",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_3.jpg",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_4.jpg",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_5.jpg",
+    "images/西西里_黄昏加冕之时/weibo_特丽菲丝女王_6.jpg"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

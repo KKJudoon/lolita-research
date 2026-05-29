@@ -4,7 +4,15 @@
   "brand": "银河有迹可循 VMW",
   "designer": "银河邮递员",
   "designer_note": "与美学灵药同品牌同设计师",
-  "style_tags": ["帝政", "cla系", "高端", "网纱", "华丽", "预售", "争议"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "高端",
+    "网纱",
+    "华丽",
+    "预售",
+    "争议"
+  ],
   "style_summary": "银河有迹可循的第二款帝政裙，¥800+高端定位，网纱版blingbling闪亮裙摆。同品牌美学灵药的升级款。XHS热度高（1810赞+890赞），但继承了品牌的'老瓜店'争议、面料扎人问题和超长工期。被复刻/抄袭。",
   "release": {
     "type": "定金 + 尾款",
@@ -111,7 +119,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["¥800+高端帝政", "网纱blingbling", "银河第二款", "被抄袭", "版型正品控差", "工期长", "在逃公主感"],
+    "keywords": [
+      "¥800+高端帝政",
+      "网纱blingbling",
+      "银河第二款",
+      "被抄袭",
+      "版型正品控差",
+      "工期长",
+      "在逃公主感"
+    ],
     "highlights_positive": [
       "XHS热度极高——1810赞+911赞+890赞+597赞，在高端帝政裙中热度领先",
       "视觉冲击力强——网纱版blingbling闪亮裙摆，'在逃公主感'出片效果极佳",
@@ -150,7 +166,15 @@
     "design_thinking": "高光时刻是银河有迹可循从中高端(美学灵药¥586-700+)向高端(¥800+)的品牌升级尝试。通过网纱+闪光元素增加华丽感和视觉冲击力，定位'在逃公主'场景。品牌策略是在帝政品类内做纵向价格带扩展，但品控能否匹配¥800+价位是核心挑战。",
     "for_image_gen_prompt": "A young woman in a luxurious Empire-line dress with sparkling tulle overlay, creating a blingbling shimmering effect. High waistline with flowing sparkling skirt that catches light when moving. Runway princess aesthetic. The dress evokes a golden hour spotlight moment. Dramatic theatrical lighting, ballroom setting with crystal chandeliers."
   },
-  "posters": [],
+  "posters": [
+    "images/yinheyoujikexun_gaoguangshike/weibo_noresult.png",
+    "images/yinheyoujikexun_gaoguangshike/weibo_search_page.png",
+    "images/yinheyoujikexun_gaoguangshike/weibo_不是翼般人_1.jpg",
+    "images/yinheyoujikexun_gaoguangshike/weibo_不是翼般人_2.jpg",
+    "images/yinheyoujikexun_gaoguangshike/weibo_不是翼般人_3.jpg",
+    "images/yinheyoujikexun_gaoguangshike/weibo_努力发光_4.jpg",
+    "images/yinheyoujikexun_gaoguangshike/weibo_萍踪无迹闲散人生_5.jpg"
+  ],
   "posters_source": "待抓取：品牌XHS截团帖图",
   "verified": true,
   "verified_at": "2026-05-28",

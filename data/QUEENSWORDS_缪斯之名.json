@@ -4,7 +4,14 @@
   "brand": "QUEENSWORDS",
   "designer": null,
   "designer_note": "官号未公开设计师信息，XHS/微博均无画师署名",
-  "style_tags": ["帝政", "cla系", "复原风", "天丝", "缎面", "高腰"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "复原风",
+    "天丝",
+    "缎面",
+    "高腰"
+  ],
   "style_summary": "帝政风 Lolita 标杆爆款，高腰束胸 + A型裙摆，主打天丝/缎面双面料路线。被圈内视为帝政品类现象级单品。",
   "release": {
     "type": "定金 + 分批尾款",
@@ -19,7 +26,11 @@
     "currency": "CNY",
     "note": "XHS 多帖确认单裙 ~¥580；评论'580这个价格祝他成功'(134赞)+'四五百'；淘宝尾款链接 ¥10-20 起（非全款）；天丝版比缎面贵（消费者困惑'贵出来的部分在哪里'48赞评论）；大全套价格未确认"
   },
-  "colors": ["香槟粉", "碎冰蓝", "棉花糖(白)"],
+  "colors": [
+    "香槟粉",
+    "碎冰蓝",
+    "棉花糖(白)"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +122,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["帝政品类标杆", "天丝四米摆", "¥580中端", "显孕争议", "天丝透视翻车", "日常穿着场景存疑", "圈外破圈2.1万赞"],
+    "keywords": [
+      "帝政品类标杆",
+      "天丝四米摆",
+      "¥580中端",
+      "显孕争议",
+      "天丝透视翻车",
+      "日常穿着场景存疑",
+      "圈外破圈2.1万赞"
+    ],
     "highlights_positive": [
       "帝政品类现象级爆款——XHS 单帖 2.1 万赞，淘宝 3000+ 已售，定义了'帝政裙'这个搜索品类的认知",
       "天丝四米摆版本被大量种草，飘逸感是核心卖点，多帖提到'像油画里走出来'",
@@ -162,7 +181,27 @@
     "design_thinking": "缪斯之名走的是帝政裙'古典复原'路线——不加军事元素、不加哥特符号，纯粹还原 Empire silhouette 的优雅飘逸。天丝/缎面双线策略覆盖了夏季轻盈穿着和仪式感两个场景。品名'缪斯之名'暗示古希腊缪斯女神——帝政裙的源头正是对古典希腊/罗马服饰的浪漫化复兴。",
     "for_image_gen_prompt": "A young woman in a flowing Regency-era Empire-line dress, high waistline just below the bust with a gentle A-line skirt falling to the floor. The dress is made of sheer Tencel fabric in champagne pink, with a four-meter-wide hem creating a dramatic draping effect. Square neckline revealing collarbone and shoulders, inspired by early 19th-century Napoleonic court paintings. Delicate lace trim at the bodice and sleeves. The silhouette evokes Josephine Bonaparte's court dress — ethereal, romantic, and classically elegant. Soft natural lighting, oil painting atmosphere, European palace garden background."
   },
-  "posters": [],
+  "posters": [
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_1.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_2.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_3.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_4.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_5.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_QUEENSWORDS_3_6.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_official_三色对比_1.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_1.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_2.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_3.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_4.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_5.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_嗯呐是大脸儿_2_6.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_1.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_2.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_3.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_4.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_5.png",
+    "images/QUEENSWORDS_缪斯之名/xhs_长夜是只貂貂啊_1_6.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图 + 微博视频截帧",
   "verified": true,
   "verified_at": "2026-05-29",

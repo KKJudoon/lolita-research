@@ -4,7 +4,15 @@
   "brand": "Aria魔女圣宴",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "珍珠", "拖尾", "白色", "中端", "现货"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "珍珠",
+    "拖尾",
+    "白色",
+    "中端",
+    "现货"
+  ],
   "style_summary": "¥408现货帝政裙，纯白珍珠裙摆+拖尾设计。Aria魔女圣宴出品，广东东莞。XHS热度稳定（804赞珍珠裙摆+659赞拖尾教程），被评为'古希腊掌管神圣的神'。圣洁白色帝政+珍珠元素在帝政品类中形成清冷差异化。",
   "release": {
     "type": "现货掉落",
@@ -19,7 +27,9 @@
     "currency": "CNY",
     "note": "淘宝现货掉落¥408（补贴后价）；300+人付款；XHS三选一帖提到'魔女圣宴家的昨日星辰买拖尾版的400多'（帖中写'星辰'但淘宝为'星尘'）；另有小物配件¥18"
   },
-  "colors": ["白色"],
+  "colors": [
+    "白色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +121,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["纯白珍珠帝政", "¥408现货", "圣洁清冷", "拖尾设计", "古希腊女神", "Aria品牌", "300+付款"],
+    "keywords": [
+      "纯白珍珠帝政",
+      "¥408现货",
+      "圣洁清冷",
+      "拖尾设计",
+      "古希腊女神",
+      "Aria品牌",
+      "300+付款"
+    ],
     "highlights_positive": [
       "纯白+珍珠的圣洁美学——在帝政裙品类中独占'清冷圣洁'赛道，804赞帖定义了视觉记忆点",
       "现货制+300+销量——¥408现货无需等待，300+付款说明转化效率高",
@@ -155,7 +173,16 @@
     "design_thinking": "昨日星尘的设计策略是'做减法做差异化'——仅白色+珍珠+拖尾，不追求多色多版本，而是在'纯白圣洁帝政'这个细分赛道做到极致。这种做法牺牲了SKU覆盖度但强化了品牌记忆点。'古希腊女神'的用户自发类比说明设计语言成功传达了圣洁意象。",
     "for_image_gen_prompt": "A young woman in a pure white Empire-line Lolita dress with pearl-embellished hem and elegant train. Sacred and ethereal aesthetic, reminiscent of an ancient Greek goddess. The dress features delicate pearl beading along the skirt, pristine white fabric, and a flowing detachable train. Cool-toned celestial atmosphere, marble temple setting with starlight."
   },
-  "posters": [],
+  "posters": [
+    "images/aria_zuorixingchen/xhs_十一月のAlice_1_1.png",
+    "images/aria_zuorixingchen/xhs_十一月のAlice_1_2.png",
+    "images/aria_zuorixingchen/xhs_十一月のAlice_1_3.png",
+    "images/aria_zuorixingchen/xhs_十一月のAlice_1_4.png",
+    "images/aria_zuorixingchen/xhs_水共_2_1.png",
+    "images/aria_zuorixingchen/xhs_水共_2_2.png",
+    "images/aria_zuorixingchen/xhs_水共_2_3.png",
+    "images/aria_zuorixingchen/xhs_水共_2_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

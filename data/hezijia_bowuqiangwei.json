@@ -4,7 +4,15 @@
   "brand": "何子家有猫了原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "油画风", "华丽", "中低价", "量产", "日常可穿"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "油画风",
+    "华丽",
+    "中低价",
+    "量产",
+    "日常可穿"
+  ],
   "style_summary": "¥298华丽帝政裙，油画风配色+套头设计+日常可穿，被称为'日常帝政'入门款。同品牌另有圣心百合。7年老店浙江金华，二团有新色。XHS热度高（1000赞测评），微胖友好，适合当晨袍。",
   "release": {
     "type": "现货/掉落补货",
@@ -19,7 +27,10 @@
     "currency": "CNY",
     "note": "XHS帖标题'谁穿谁像小公主💰298的华丽帝政裙测评'(1000赞)确认价格¥298；淘宝现货掉落链接¥5（补贴后显示价）+100+人付款；出租市场价¥20"
   },
-  "colors": ["粉色", "生成色"],
+  "colors": [
+    "粉色",
+    "生成色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -100,7 +111,16 @@
     ]
   },
   "synthesis": {
-    "keywords": ["¥298华丽帝政", "油画风", "日常可穿", "套头设计", "晨袍", "何子家有猫了", "二团新色", "微胖显瘦"],
+    "keywords": [
+      "¥298华丽帝政",
+      "油画风",
+      "日常可穿",
+      "套头设计",
+      "晨袍",
+      "何子家有猫了",
+      "二团新色",
+      "微胖显瘦"
+    ],
     "highlights_positive": [
       "日常可穿度高——套头设计+无撑穿法，被评价为'日常帝政'的理想状态",
       "¥298价位适中——在帝政裙中属中低价位，低于缪斯之名¥580但高于千木¥149，性价比突出",
@@ -145,7 +165,16 @@
     "design_thinking": "薄雾蔷薇的设计策略是'帝政裙的日常化降级'——通过套头设计简化穿着流程，油画风配色增加视觉丰富度，¥298价位降低入门门槛。不追求重工华丽或极致面料，而是解决'帝政裙好看但不好穿'的核心痛点。这种实用主义路线在XHS上获得了稳定的正面口碑。",
     "for_image_gen_prompt": "A young woman in an oil-painting inspired Empire-line Lolita dress in soft rose and cream tones. The dress features a pullover design with high waistline, flowing A-line skirt without petticoat. Romantic misty rose garden atmosphere, painterly color palette. Natural relaxed styling suitable for daily wear. Warm golden hour lighting, garden setting."
   },
-  "posters": [],
+  "posters": [
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_1.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_2.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_3.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_1_4.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_1.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_2.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_3.png",
+    "images/hezijia_bowuqiangwei/xhs_咕噜咕噜噜_2_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

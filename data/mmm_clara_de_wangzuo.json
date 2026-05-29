@@ -4,7 +4,13 @@
   "brand": "MMM原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "绝版", "老款", "争议"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "绝版",
+    "老款",
+    "争议"
+  ],
   "style_summary": "6年前帝政老款，已下架绝版。XHS高赞种草（1771赞）但评论区翻车：容易勾丝、味道大、做工争议。MMM当前主推款为月光百叶（¥218）。帝政裙圈内的'考古款'代表。",
   "release": {
     "type": "已绝版",
@@ -78,7 +84,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["6年老款", "已绝版", "勾丝", "味道大", "种草热但实物翻车", "考古款", "MMM品牌"],
+    "keywords": [
+      "6年老款",
+      "已绝版",
+      "勾丝",
+      "味道大",
+      "种草热但实物翻车",
+      "考古款",
+      "MMM品牌"
+    ],
     "highlights_positive": [
       "帝政裙'考古经典'——6年前的帝政设计至今仍有1771赞种草帖，说明设计本身有吸引力",
       "品牌资质老——MMM 9年老店，浙江绍兴，是帝政品类的早期参与者",
@@ -114,7 +128,16 @@
     "design_thinking": "Clara的王座代表了帝政裙品类约6年前的审美取向。作为早期款，它在设计上更倾向于基础帝政廓形+宫廷元素的简单叠加，没有后来缪斯之名(天丝面料路线)或月光琥珀(极致性价比)的明确差异化策略。品控问题(勾丝/味道)反映了早期小批量Lo裙的普遍制造水平。",
     "for_image_gen_prompt": "A vintage Empire-line Lolita dress with classic court design elements, throne-inspired theme. High waistline with flowing skirt, palace-style decorations. An older design piece showing early interpretation of Empire Lolita style. Warm vintage color palette. Studio lighting with antique props."
   },
-  "posters": [],
+  "posters": [
+    "images/mmm_clara_de_wangzuo/xhs_奶香糯米高高_1_1.png",
+    "images/mmm_clara_de_wangzuo/xhs_奶香糯米高高_1_2.png",
+    "images/mmm_clara_de_wangzuo/xhs_奶香糯米高高_1_3.png",
+    "images/mmm_clara_de_wangzuo/xhs_奶香糯米高高_1_4.png",
+    "images/mmm_clara_de_wangzuo/xhs_柯柯suguoi_2_1.png",
+    "images/mmm_clara_de_wangzuo/xhs_柯柯suguoi_2_2.png",
+    "images/mmm_clara_de_wangzuo/xhs_柯柯suguoi_2_3.png",
+    "images/mmm_clara_de_wangzuo/xhs_柯柯suguoi_2_4.png"
+  ],
   "posters_source": "已绝版，无在售商品图",
   "verified": true,
   "verified_at": "2026-05-28",

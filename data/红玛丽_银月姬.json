@@ -4,7 +4,15 @@
   "brand": "Red Maria / 红玛丽",
   "designer": null,
   "designer_note": "品牌15周年纪念款，未公开具体设计师",
-  "style_tags": ["帝政", "限定", "15周年", "刺绣", "蕾丝", "月亮主题", "高端"],
+  "style_tags": [
+    "帝政",
+    "限定",
+    "15周年",
+    "刺绣",
+    "蕾丝",
+    "月亮主题",
+    "高端"
+  ],
   "style_summary": "红玛丽15周年限定帝政裙，OP ¥689 / 套装 ¥998。星月刺绣+定染花边+银丝裙摆，主打'月光'概念。XHS营销力强(1806赞官方帖)，但品牌级售后争议严重(601赞避雷帖)。腰封拆卖策略引发消费者不满。",
   "release": {
     "type": "限时预约",
@@ -19,7 +27,10 @@
     "currency": "CNY",
     "note": "微博Lolita洋装上新号确认：OP=689，套装set=998(含腰封+绶带+披帛)。XHS评论'图上这些要1k好像不是很有诚意'(86赞)、'你说什么？这玩意儿要1000？'(21赞)——消费者对套装定价¥998有明显抵触。腰封拆卖被批'败好感'(112赞)"
   },
-  "colors": ["雾蓝银灰", "珍珠米杏"],
+  "colors": [
+    "雾蓝银灰",
+    "珍珠米杏"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -133,7 +144,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["15周年限定", "OP¥689", "月光银灰", "腰封拆卖争议", "品牌售后差", "营销力强", "定价争议"],
+    "keywords": [
+      "15周年限定",
+      "OP¥689",
+      "月光银灰",
+      "腰封拆卖争议",
+      "品牌售后差",
+      "营销力强",
+      "定价争议"
+    ],
     "highlights_positive": [
       "品牌15年积淀+限定款仪式感——15周年纪念定位赋予银月姬独特的收藏/情感价值，1000+预约证明品牌号召力",
       "颜色设计独特——雾蓝银灰色号在帝政裙品类中独一无二，'月光'概念营销非常成功(1806赞种草帖)",
@@ -184,7 +203,17 @@
     "design_thinking": "银月姬是红玛丽15年品牌积累的设计巅峰之作——品牌从'月光'这个核心概念出发，用定染面料、银丝织入、星月刺绣三种工艺手段实现了完整的'月神降临'叙事。设计路径：文学概念(月光)→色彩方案(雾蓝银灰)→材质工艺(银丝+定染)→图案系统(星月刺绣)→搭配系统(模块化配件)。这是帝政裙品类中少见的'概念驱动型'设计，而非纯廓形/面料驱动。",
     "for_image_gen_prompt": "A young woman in an ethereal misty blue-silver Empire-line dress, a 15th anniversary limited edition Lolita gown. The high-waisted bodice features an ornate waist corset with crescent moon and star embroidery in silver thread. Multiple layers of delicate lace cascade like frost feathers, with silver threads woven throughout the skirt that shimmer in moonlight. A silver-stamped sash with lunar phase patterns drapes across the shoulder. The color shifts between misty blue in daylight and silver-grey under artificial light — the essence of moonlight captured in fabric. Romantic nighttime garden setting, moonlight streaming through, palace terrace background."
   },
-  "posters": [],
+  "posters": [
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_1.jpg",
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_2.jpg",
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_3.jpg",
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_4.jpg",
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_5.jpg",
+    "images/红玛丽_银月姬/weibo_Lolita洋装上新_6.jpg",
+    "images/红玛丽_银月姬/weibo_夜夜子CSZR_1.png",
+    "images/红玛丽_银月姬/weibo_夜夜子CSZR_2.png",
+    "images/红玛丽_银月姬/weibo_夜夜子CSZR_3.png"
+  ],
   "posters_source": "待抓取：微博官号帖图片 + XHS官方帖图片",
   "verified": true,
   "verified_at": "2026-05-28",

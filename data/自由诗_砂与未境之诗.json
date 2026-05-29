@@ -4,7 +4,13 @@
   "brand": "Lyandra Antique 自由诗原创",
   "designer": null,
   "designer_note": "未公开画师/设计师信息",
-  "style_tags": ["帝政", "宫廷风", "复原风", "轻lo", "高腰"],
+  "style_tags": [
+    "帝政",
+    "宫廷风",
+    "复原风",
+    "轻lo",
+    "高腰"
+  ],
   "style_summary": "自由诗原创帝政裙，主打宫廷复古路线。已开十团以上，是帝政品类中出货量最大的款之一。双色策略（夕雾紫+砂金黄），后增苍葭绿。面料偏轻薄，定位比缪斯之名低一档但团次更多。",
   "release": {
     "type": "定金 + 分批尾款（多团循环）",
@@ -19,7 +25,11 @@
     "currency": "CNY",
     "note": "定金¥90，尾款¥18（平台补贴后）。按定金比例推算全款约¥400-500区间。XHS评论提到'四五百'价位区间。淘宝多个链接均为定金/尾款拆分，完整全款价需进一步确认"
   },
-  "colors": ["夕雾紫", "砂金黄", "苍葭绿"],
+  "colors": [
+    "夕雾紫",
+    "砂金黄",
+    "苍葭绿"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -106,7 +116,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["十团循环开团", "夕雾紫最热", "面料轻薄廉价感", "加腰链有质变", "山寨避雷", "小个子友好争议", "出货量帝政第一"],
+    "keywords": [
+      "十团循环开团",
+      "夕雾紫最热",
+      "面料轻薄廉价感",
+      "加腰链有质变",
+      "山寨避雷",
+      "小个子友好争议",
+      "出货量帝政第一"
+    ],
     "highlights_positive": [
       "帝政品类出货量最大的款——十团以上循环开团，淘宝多链接累计销量远超同类，说明持续复购和新客流入",
       "三色策略（夕雾紫/砂金黄/苍葭绿）覆盖不同审美偏好，紫色最热证明帝政裙市场偏好柔和/神秘色调",
@@ -151,7 +169,16 @@
     "design_thinking": "砂与未境之诗走轻量化帝政路线——面料选择偏轻薄（降低成本+适合夏季），用配色（紫/金/绿）和配件（腰链）做差异化。品名'砂与未境之诗'暗示沙漠/未知边境的诗意，但实际设计更偏宫廷复古。",
     "for_image_gen_prompt": "A young woman wearing a lightweight Empire-line Regency dress in misty lavender purple (xiawu purple), high waistline just below the bust with a flowing A-line skirt. Sheer fabric with delicate draping, a decorative chain belt at the empire waist adding structure and elegance. Square neckline, soft romantic atmosphere. The dress evokes early 19th-century European court fashion with a dreamy, ethereal quality. Hair styled with small flowers. Warm golden hour lighting, garden pavilion background with wisteria vines."
   },
-  "posters": [],
+  "posters": [
+    "images/自由诗_砂与未境之诗/xhs_姗姗姗_2_1.png",
+    "images/自由诗_砂与未境之诗/xhs_姗姗姗_2_2.png",
+    "images/自由诗_砂与未境之诗/xhs_姗姗姗_2_3.png",
+    "images/自由诗_砂与未境之诗/xhs_姗姗姗_2_4.png",
+    "images/自由诗_砂与未境之诗/xhs_阿記_1_1.png",
+    "images/自由诗_砂与未境之诗/xhs_阿記_1_2.png",
+    "images/自由诗_砂与未境之诗/xhs_阿記_1_3.png",
+    "images/自由诗_砂与未境之诗/xhs_阿記_1_4.png"
+  ],
   "posters_source": "待抓取",
   "verified": true,
   "verified_at": "2026-05-29",

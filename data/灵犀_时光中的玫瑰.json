@@ -4,7 +4,14 @@
   "brand": "灵犀Lolita原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "绝版", "油画风", "泡泡袖", "复原"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "绝版",
+    "油画风",
+    "泡泡袖",
+    "复原"
+  ],
   "style_summary": "灵犀帝政经典款，¥600+价位，已绝版不再贩。巨型泡泡袖+油画风设计，被14款横评帖和最美六条帖同时收录。适合油画风/复原风穿搭，甚至被用于孕妇照。",
   "release": {
     "type": "定金+尾款（已绝版）",
@@ -19,7 +26,9 @@
     "currency": "CNY",
     "note": "XHS 722赞帖确认：'补尾款才发现它居然要六百多'。具体价格约¥600-700。价格在帝政品类中属中高端。"
   },
-  "colors": ["未确认（从图片帖推断有多色）"],
+  "colors": [
+    "未确认（从图片帖推断有多色）"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -100,7 +109,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["绝版帝政", "¥600+中高端", "油画风", "巨型泡泡袖", "横评常客", "孕妇照道具", "灵犀双款"],
+    "keywords": [
+      "绝版帝政",
+      "¥600+中高端",
+      "油画风",
+      "巨型泡泡袖",
+      "横评常客",
+      "孕妇照道具",
+      "灵犀双款"
+    ],
     "highlights_positive": [
       "横评高频出现——14款帖×2、最美六条帖×2，说明在帝政品类中有极高认知度和代表性",
       "油画风视觉效果强——'从油画里走出来'是多帖共识，巨型泡泡袖是标志性设计",
@@ -145,7 +162,14 @@
     "design_thinking": "灵犀的设计路径是'油画场景还原'——从视觉效果倒推面料和版型选择，优先保证'像油画'的整体观感，而非单一面料或工艺的极致。巨型泡泡袖是最大胆的设计决策，直接将时代背景从Empire推向了Romantic era，但恰恰是这种'不完全准确'的混搭创造了最强的视觉记忆点。",
     "for_image_gen_prompt": "A young woman in an opulent Empire-line dress with dramatically oversized puff sleeves, reminiscent of an oil painting of a noblewoman in a rose garden. The dress features rich, warm-toned fabric that captures the soft luminosity of 19th-century European court portraiture. A draped shoulder shawl adds layers. The overall effect is as if she stepped directly out of a Romantic-era oil painting. Golden afternoon light in a garden setting with roses, oil painting atmosphere with visible brushstroke-like fabric texture."
   },
-  "posters": [],
+  "posters": [
+    "images/灵犀_时光中的玫瑰/weibo_Lolita洋装上新_2.jpg",
+    "images/灵犀_时光中的玫瑰/weibo_Lolita洋装上新_3.jpg",
+    "images/灵犀_时光中的玫瑰/weibo_Lolita洋装上新_4.jpg",
+    "images/灵犀_时光中的玫瑰/weibo_Lolita洋装上新_5.jpg",
+    "images/灵犀_时光中的玫瑰/weibo_Lo娘嘀咕嘀咕_1.jpg",
+    "images/灵犀_时光中的玫瑰/weibo_孔明灯不吃辣_6.jpg"
+  ],
   "posters_source": "待抓取：XHS穿搭帖图片(绝版款，淘宝已无图)",
   "verified": true,
   "verified_at": "2026-05-28",

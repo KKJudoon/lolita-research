@@ -4,7 +4,15 @@
   "brand": "何子家有猫了原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息。与薄雾蔷薇同品牌",
-  "style_tags": ["帝政", "cla系", "微胖友好", "婚纱", "大码", "预售", "油画风"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "微胖友好",
+    "婚纱",
+    "大码",
+    "预售",
+    "油画风"
+  ],
   "style_summary": "何子家有猫了的第二款帝政力作，XHS热度极高（3139赞'穿不腻'）。微胖/大码用户核心种草款——148斤/150斤多帖实穿验证，被用作帝政款婚纱。黑色款尤其出圈。同品牌薄雾蔷薇的升级款定位。",
   "release": {
     "type": "定金 + 尾款",
@@ -19,7 +27,10 @@
     "currency": "CNY",
     "note": "淘宝尾款链接¥9（100+人付款）；全款价格未直接确认，参考同品牌薄雾蔷薇¥298，圣心百合作为升级款预估¥300-400区间；帝政裙全场景OP"
   },
-  "colors": ["黑色", "白色"],
+  "colors": [
+    "黑色",
+    "白色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +122,16 @@
     ]
   },
   "synthesis": {
-    "keywords": ["穿不腻帝政", "微胖/大码核心款", "帝政婚纱", "何子家有猫了", "3139赞", "黑色出圈", "油画风", "全场景OP"],
+    "keywords": [
+      "穿不腻帝政",
+      "微胖/大码核心款",
+      "帝政婚纱",
+      "何子家有猫了",
+      "3139赞",
+      "黑色出圈",
+      "油画风",
+      "全场景OP"
+    ],
     "highlights_positive": [
       "XHS热度极高——3139赞'穿不腻'帖在帝政裙单品帖中排名前三",
       "微胖/大码用户核心款——148斤(319赞)+150斤(221赞)双帖验证，帝政裙品类中大码实穿内容最丰富的单品",
@@ -157,7 +177,16 @@
     "design_thinking": "圣心百合延续了何子家有猫了在帝政品类的定位——日常可穿+微胖友好。相比薄雾蔷薇的油画风入门定位，圣心百合在主题叙事(圣心+百合)和场景扩展(婚纱)上做了升级。黑色款的推出填补了帝政裙品类中'非白非浅色'的空白，对大码用户尤其友好。品牌正在帝政品类建立'微胖专家'的差异化认知。",
     "for_image_gen_prompt": "A plus-size young woman in a Sacred Heart Lily themed Empire-line Lolita dress. Available in elegant black and pure white. High waistline with flowing A-line skirt, lily and sacred heart motifs. The dress is versatile enough for daily wear, formal events, and bridal use. Graceful and inclusive design. Soft romantic lighting, chapel or garden setting with lily flowers."
   },
-  "posters": [],
+  "posters": [
+    "images/hezijia_shengxinbaihe/xhs_余年（烟人的冯虚御风版）_2_1.png",
+    "images/hezijia_shengxinbaihe/xhs_余年（烟人的冯虚御风版）_2_2.png",
+    "images/hezijia_shengxinbaihe/xhs_余年（烟人的冯虚御风版）_2_3.png",
+    "images/hezijia_shengxinbaihe/xhs_余年（烟人的冯虚御风版）_2_4.png",
+    "images/hezijia_shengxinbaihe/xhs_小穗_1_1.png",
+    "images/hezijia_shengxinbaihe/xhs_小穗_1_2.png",
+    "images/hezijia_shengxinbaihe/xhs_小穗_1_3.png",
+    "images/hezijia_shengxinbaihe/xhs_小穗_1_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

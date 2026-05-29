@@ -4,7 +4,15 @@
   "brand": "爱做衣服的木木子",
   "designer": null,
   "designer_note": "品牌主理人XHS账号@爱做衣服的木木子",
-  "style_tags": ["帝政", "cla系", "日常", "爆款", "量产", "中端", "多团"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "日常",
+    "爆款",
+    "量产",
+    "中端",
+    "多团"
+  ],
   "style_summary": "帝政裙品类的绝对销量王——11团/2000+人付款/定金¥120，XHS热度6374赞。¥338全款（定110+尾228），在帝政裙中定义了'日常好穿+高性价比'的标杆。木木子品牌从1团做到11团，帝政裙品类的现象级单品。",
   "release": {
     "type": "定金 + 尾款（多团制）",
@@ -111,7 +119,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["帝政销量王", "11团2000+付款", "¥338日常帝政", "6374赞", "Silver Moon", "多团现象级", "日常好穿"],
+    "keywords": [
+      "帝政销量王",
+      "11团2000+付款",
+      "¥338日常帝政",
+      "6374赞",
+      "Silver Moon",
+      "多团现象级",
+      "日常好穿"
+    ],
     "highlights_positive": [
       "帝政裙品类绝对销量冠军——11团/2000+人付款，远超所有竞品（千木月光琥珀4000+但¥149白菜价，银月¥338中端价位能做到2000+极其罕见）",
       "XHS热度顶级——6374赞品牌帖+1079赞+911赞+727赞+559赞，品牌帖热度仅次于美学灵药8161赞",
@@ -150,7 +166,16 @@
     "design_thinking": "塞勒涅之银月的成功在于精准的市场定位——¥338价位不贵不贱，日常好穿降低穿着门槛，希腊月神主题提供足够的浪漫叙事。品牌通过多团制持续供货，既避免了预售制的长等待焦虑，又维持了品类热度。11团不衰的销量证明这个定位精准命中了帝政裙最大的消费群体。",
     "for_image_gen_prompt": "A young woman in an elegant Empire-line Lolita dress inspired by Selene, the Greek moon goddess. Silver moonlight tones, flowing silhouette suitable for daily wear. High waistline with graceful A-line skirt. The design balances romantic mythology with practical wearability. Soft moonlight illumination, dreamy garden setting."
   },
-  "posters": [],
+  "posters": [
+    "images/mumuzi_saileinie_yinyue/xhs_啵咯啵咯包_2_1.png",
+    "images/mumuzi_saileinie_yinyue/xhs_啵咯啵咯包_2_2.png",
+    "images/mumuzi_saileinie_yinyue/xhs_啵咯啵咯包_2_3.png",
+    "images/mumuzi_saileinie_yinyue/xhs_啵咯啵咯包_2_4.png",
+    "images/mumuzi_saileinie_yinyue/xhs_掠江_1_1.png",
+    "images/mumuzi_saileinie_yinyue/xhs_掠江_1_2.png",
+    "images/mumuzi_saileinie_yinyue/xhs_掠江_1_3.png",
+    "images/mumuzi_saileinie_yinyue/xhs_掠江_1_4.png"
+  ],
   "posters_source": "待抓取：品牌XHS图/淘宝详情页",
   "verified": true,
   "verified_at": "2026-05-28",

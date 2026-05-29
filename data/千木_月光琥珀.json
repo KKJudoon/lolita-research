@@ -4,7 +4,15 @@
   "brand": "千木原创设计",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "平价", "量产", "钉珠", "宫廷", "复古"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "平价",
+    "量产",
+    "钉珠",
+    "宫廷",
+    "复古"
+  ],
   "style_summary": "白菜价帝政入门款，¥149现货量产，4000+人付款。被XHS用户称为'lo圈蜜雪冰城'。钉珠+高腰+礼服感设计，主打微胖友好和性价比。",
   "release": {
     "type": "现货量产",
@@ -19,7 +27,12 @@
     "currency": "CNY",
     "note": "淘宝标价¥149（补贴后），XHS多帖确认¥159左右；大全套（裙+配件）约¥175；'淘金币抵扣完才144'(37赞)说明实际到手可更低；XHS帖标题'平价帝政只需159'(620赞)；对比帖评论'第一件的价格还需要拔草吗'(3赞)暗示价格无需犹豫"
   },
-  "colors": ["蓝色", "香槟色", "红色", "金色"],
+  "colors": [
+    "蓝色",
+    "香槟色",
+    "红色",
+    "金色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +124,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["白菜帝政", "¥149量产", "lo圈蜜雪冰城", "4000+付款", "微胖友好", "面料廉价感", "入门级"],
+    "keywords": [
+      "白菜帝政",
+      "¥149量产",
+      "lo圈蜜雪冰城",
+      "4000+付款",
+      "微胖友好",
+      "面料廉价感",
+      "入门级"
+    ],
     "highlights_positive": [
       "帝政品类销量王——¥149现货+4000+人付款，远超同品类其他款式的销售体量",
       "微胖/大码友好——多帖验证130斤+穿着效果好，帝政高腰线天然遮腰，评论需求极旺",
@@ -156,7 +177,14 @@
     "design_thinking": "月光琥珀走的是'极简帝政'路线——去掉了重工蕾丝/刺绣/天丝等高成本元素，用基础面料+钉珠+多色策略实现¥149的价格下限。设计上不追求还原度或独特性，而是追求'帝政裙长什么样'的最大公约数认知。这是典型的量产入门款思路。",
     "for_image_gen_prompt": "A young woman in a French court-inspired Empire-line dress with beaded embellishments at the high waistline. The dress features a fitted bodice with delicate bead-work and a flowing A-line skirt in champagne gold. Simple but elegant design, affordable court style with clean lines. The silhouette is reminiscent of Napoleonic era formal wear but simplified for modern wear. Soft indoor lighting, clean studio background."
   },
-  "posters": [],
+  "posters": [
+    "images/千木_月光琥珀/weibo_商輓_1.jpg",
+    "images/千木_月光琥珀/weibo_商輓_2.jpg",
+    "images/千木_月光琥珀/weibo_商輓_3.jpg",
+    "images/千木_月光琥珀/weibo_红桃芝芝莓_4.jpg",
+    "images/千木_月光琥珀/weibo_红桃芝芝莓_5.jpg",
+    "images/千木_月光琥珀/weibo_红桃芝芝莓_6.jpg"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",

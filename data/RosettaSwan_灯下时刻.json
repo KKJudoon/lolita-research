@@ -4,7 +4,15 @@
   "brand": "RosettaSwan",
   "designer": null,
   "designer_note": "独立设计师品牌，不走淘宝，通过XHS/微信/微博自有渠道售卖",
-  "style_tags": ["帝政", "cla系", "独立设计师", "刺绣", "缎面", "轻奢", "古董裙参考"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "独立设计师",
+    "刺绣",
+    "缎面",
+    "轻奢",
+    "古董裙参考"
+  ],
   "style_summary": "帝政品类轻奢独立设计师款，被圈内称为'帝政界的轻奢小裙子'。柔软缎面+米色网纱+玫瑰刺绣，显瘦效果极佳('116斤穿上薄薄一条人')。四周年花束限定+银灰限量面料，品牌不走淘宝。同品牌另有'婚礼之路'帝政款。",
   "release": {
     "type": "预售/限时返场",
@@ -19,7 +27,11 @@
     "currency": "CNY",
     "note": "未找到确切价格数字。XHS评论'现货价太贵了'(2赞)、微博帖'有点贵而且满减力度比婚礼之路小'，定位中高端（推测¥500-800区间）。有阶梯价满减机制。淘宝无店铺/链接。"
   },
-  "colors": ["银灰色", "米白色", "浅金色"],
+  "colors": [
+    "银灰色",
+    "米白色",
+    "浅金色"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +123,16 @@
     ]
   },
   "synthesis": {
-    "keywords": ["轻奢独立设计师", "不走淘宝", "显瘦神器", "刺绣精美", "微扎", "蝴蝶结争议", "银灰限量", "古董裙参考"],
+    "keywords": [
+      "轻奢独立设计师",
+      "不走淘宝",
+      "显瘦神器",
+      "刺绣精美",
+      "微扎",
+      "蝴蝶结争议",
+      "银灰限量",
+      "古董裙参考"
+    ],
     "highlights_positive": [
       "显瘦效果在帝政品类中最突出——'116斤薄薄一条人'(10赞)、'130斤一长条特别显瘦'多帖一致好评",
       "设计精美度被专业人士认可——服装设计师锐评'刺绣面料结合精美'，参考古董裙设计",
@@ -156,7 +177,16 @@
     "design_thinking": "灯下时刻的设计路径是'古董裙→现代化简化'——从真实的19世纪帝政裙实物中提取刺绣、面料层叠、裁片结构等元素，用现代面料和工艺重新诠释。品牌名RosettaSwan(罗塞塔天鹅)暗示的优雅古典感贯穿设计。与多数lo牌的'概念驱动'不同，这是'实物参考驱动'的设计方式。",
     "for_image_gen_prompt": "A young woman in an elegant Empire-line dress with double-layered fabric — a soft satin inner layer showing through a sheer ivory mesh overlay. Delicate rose embroidery on the bodice, creating a candlelit romantic atmosphere. The dress features a narrow fitted chest panel with subtle gathering that creates a slimming silhouette. Silver-grey color with subtle satin sheen visible under warm lamplight. Slim and elongated figure. Warm candlelight setting, intimate evening atmosphere, vintage interior with soft golden light."
   },
-  "posters": [],
+  "posters": [
+    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_1.png",
+    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_2.png",
+    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_3.png",
+    "images/RosettaSwan_灯下时刻/xhs_EITGIR_2_4.png",
+    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_1.png",
+    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_2.png",
+    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_3.png",
+    "images/RosettaSwan_灯下时刻/xhs_会会会晕_1_4.png"
+  ],
   "posters_source": "待抓取：微博官号帖图片 + XHS穿搭帖图片",
   "verified": true,
   "verified_at": "2026-05-28",

@@ -4,7 +4,15 @@
   "brand": "Eden Planet",
   "designer": null,
   "designer_note": "品牌未公开设计师信息；有真丝版和仿真丝版两个版本",
-  "style_tags": ["帝政", "cla系", "高端", "真丝", "刺绣", "圣洁", "被日漫参考"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "高端",
+    "真丝",
+    "刺绣",
+    "圣洁",
+    "被日漫参考"
+  ],
   "style_summary": "Eden Planet帝政三巨头之首，2023年推出，有真丝版(白/金)和仿真丝版。被圈内视为'国内做帝政最好看'的品牌代表作。设计独特到被日本动漫《葬送的芙莉连》2025年新谷疑似1:1参考(3691赞争议帖)。已非当季在售款。",
   "release": {
     "type": "往期款（2023年）",
@@ -19,7 +27,11 @@
     "currency": "CNY",
     "note": "原始售价未找到确切数字。Eden Planet定位高端（合作款口金包¥109，披帛¥209说明配件价位已不低）。真丝版推测¥800+，仿真丝版推测¥400-600。二手市场'星坠薄明'等绝版款有溢价流通。"
   },
-  "colors": ["白色(真丝版)", "金色(真丝版)", "白色(仿真丝版)"],
+  "colors": [
+    "白色(真丝版)",
+    "金色(真丝版)",
+    "白色(仿真丝版)"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -111,7 +123,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["帝政天花板", "真丝版", "被日漫参考", "10年老店", "圣洁", "高端", "往期款"],
+    "keywords": [
+      "帝政天花板",
+      "真丝版",
+      "被日漫参考",
+      "10年老店",
+      "圣洁",
+      "高端",
+      "往期款"
+    ],
     "highlights_positive": [
       "帝政品类公认天花板——'eden绝对是国内做帝政最好看的一家'，最美六条帖前两位都是Eden",
       "设计独创性极强——被日本知名动漫《葬送的芙莉连》2025年新谷1:1参考(3691赞帖)，证明设计在国际层面有影响力",
@@ -162,7 +182,16 @@
     "design_thinking": "Eden北极星的设计逻辑是'回归帝政裙的面料和工艺正统'——不用替代面料(天丝/欧根纱/化纤)，直接用真丝；不用印花或简化工艺，直接做精细刺绣。这种'不妥协'的设计态度是它成为品类天花板的原因，也是它价格高、产量低的原因。品牌名Eden(伊甸)暗示的'原始完美'贯穿了设计哲学。",
     "for_image_gen_prompt": "A young woman in a pure white silk Empire-line dress of the highest craftsmanship. The bodice features intricate butterfly and floral embroidery at the chest — the defining design element. Delicate embroidery extends to the sleeve caps, with the shoulder area showing the most refined needlework. The pure silk fabric has a natural sheen and drape that synthetic fabrics cannot replicate. The overall effect is 'saintly' and 'celestial' — like the Polaris star given human form. The dress represents the pinnacle of Chinese Lolita Empire dress design. Soft ethereal lighting, celestial atmosphere, pure white and gold accents."
   },
-  "posters": [],
+  "posters": [
+    "images/Eden_北极星/xhs_Yaaaaaa__2_1.png",
+    "images/Eden_北极星/xhs_Yaaaaaa__2_2.png",
+    "images/Eden_北极星/xhs_Yaaaaaa__2_3.png",
+    "images/Eden_北极星/xhs_Yaaaaaa__2_4.png",
+    "images/Eden_北极星/xhs_蛇总在思考_1_1.png",
+    "images/Eden_北极星/xhs_蛇总在思考_1_2.png",
+    "images/Eden_北极星/xhs_蛇总在思考_1_3.png",
+    "images/Eden_北极星/xhs_蛇总在思考_1_4.png"
+  ],
   "posters_source": "待抓取：XHS穿搭帖图片(淘宝已下架)",
   "verified": true,
   "verified_at": "2026-05-28",

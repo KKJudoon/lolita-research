@@ -4,7 +4,14 @@
   "brand": "月光剧院 Clair De Lune",
   "designer": null,
   "designer_note": "品牌未公开设计师信息",
-  "style_tags": ["帝政", "cla系", "丝绒", "中高端", "现货", "贵妇感"],
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "丝绒",
+    "中高端",
+    "现货",
+    "贵妇感"
+  ],
   "style_summary": "¥528-588丝绒帝政裙，现货制。月光剧院品牌出品，山西运城。丝绒面料沉甸甸质感+方领泡泡袖+黑金配色。XHS热度稳定（505赞+313赞测评），被评为'穿上就有贵妇感'。在帝政裙中定位'丝绒质感派'。",
   "release": {
     "type": "现货",
@@ -19,7 +26,9 @@
     "currency": "CNY",
     "note": "XHS帖标注¥528；淘宝现货链接¥548-588（可能含不同SKU/优惠）；67人付款+5人付款；在帝政裙中属中高端价位"
   },
-  "colors": ["黑金"],
+  "colors": [
+    "黑金"
+  ],
   "colors_dropped": [],
   "shops": {
     "taobao": {
@@ -100,7 +109,15 @@
     ]
   },
   "synthesis": {
-    "keywords": ["丝绒帝政", "¥528现货", "沉甸甸质感", "贵妇感", "黑金配色", "月光剧院", "方领泡泡袖"],
+    "keywords": [
+      "丝绒帝政",
+      "¥528现货",
+      "沉甸甸质感",
+      "贵妇感",
+      "黑金配色",
+      "月光剧院",
+      "方领泡泡袖"
+    ],
     "highlights_positive": [
       "丝绒面料质感突出——'沉甸甸的质感棒'，在帝政裙品类中做面料差异化",
       "现货制即买即发——不需要等定金/尾款/工期，对急需帝政裙的用户友好",
@@ -145,7 +162,16 @@
     "design_thinking": "尤丽迪茜走的是'材质驱动'路线——用丝绒面料在帝政裙品类中做差异化。黑金配色+Eurydice命名将设计推向暗调/深沉美学，与多数帝政裙的明亮圣洁风格形成反差。这种'暗黑帝政'定位虽然限制了受众，但在愿意为面料质感付费的小众用户中建立了忠诚度。",
     "for_image_gen_prompt": "A young woman in a luxurious black and gold velvet Empire-line Lolita dress. Square neckline with puff sleeves, rich velvet fabric with golden accents. The dress has an opulent aristocratic feel, heavy fabric draping elegantly. Inspired by Eurydice from Greek mythology. Dramatic chiaroscuro lighting, dark romantic interior setting."
   },
-  "posters": [],
+  "posters": [
+    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_1.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_2.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_3.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_NLKM_1_4.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_1.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_2.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_3.png",
+    "images/yueguangjuyuan_youlidiqian/xhs_斯緹_2_4.png"
+  ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
   "verified_at": "2026-05-28",
