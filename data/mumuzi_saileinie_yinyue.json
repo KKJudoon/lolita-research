@@ -167,12 +167,12 @@
     "for_image_gen_prompt": "A young woman in an elegant Empire-line Lolita dress inspired by Selene, the Greek moon goddess. Silver moonlight tones, flowing silhouette suitable for daily wear. High waistline with graceful A-line skirt. The design balances romantic mythology with practical wearability. Soft moonlight illumination, dreamy garden setting."
   },
   "posters": [
-    "images/mumuzi_saileinie_yinyue/tb_1.webp",
     "images/mumuzi_saileinie_yinyue/tb_2.webp",
-    "images/mumuzi_saileinie_yinyue/tb_3.webp",
-    "images/mumuzi_saileinie_yinyue/tb_4.webp",
+    "images/mumuzi_saileinie_yinyue/tb_6.webp",
+    "images/mumuzi_saileinie_yinyue/tb_1.webp",
     "images/mumuzi_saileinie_yinyue/tb_5.webp",
-    "images/mumuzi_saileinie_yinyue/tb_6.webp"
+    "images/mumuzi_saileinie_yinyue/tb_4.webp",
+    "images/mumuzi_saileinie_yinyue/tb_3.webp"
   ],
   "posters_source": "待抓取：品牌XHS图/淘宝详情页",
   "verified": true,

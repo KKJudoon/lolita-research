@@ -163,12 +163,12 @@
     "for_image_gen_prompt": "A young woman in an opulent Empire-line dress with dramatically oversized puff sleeves, reminiscent of an oil painting of a noblewoman in a rose garden. The dress features rich, warm-toned fabric that captures the soft luminosity of 19th-century European court portraiture. A draped shoulder shawl adds layers. The overall effect is as if she stepped directly out of a Romantic-era oil painting. Golden afternoon light in a garden setting with roses, oil painting atmosphere with visible brushstroke-like fabric texture."
   },
   "posters": [
-    "images/灵犀_时光中的玫瑰/wb_1.jpg",
-    "images/灵犀_时光中的玫瑰/wb_2.jpg",
-    "images/灵犀_时光中的玫瑰/wb_3.jpg",
     "images/灵犀_时光中的玫瑰/wb_4.jpg",
+    "images/灵犀_时光中的玫瑰/wb_6.jpg",
     "images/灵犀_时光中的玫瑰/wb_5.jpg",
-    "images/灵犀_时光中的玫瑰/wb_6.jpg"
+    "images/灵犀_时光中的玫瑰/wb_3.jpg",
+    "images/灵犀_时光中的玫瑰/wb_2.jpg",
+    "images/灵犀_时光中的玫瑰/wb_1.jpg"
   ],
   "posters_source": "待抓取：XHS穿搭帖图片(绝版款，淘宝已无图)",
   "verified": true,

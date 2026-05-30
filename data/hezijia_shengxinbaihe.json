@@ -178,12 +178,12 @@
     "for_image_gen_prompt": "A plus-size young woman in a Sacred Heart Lily themed Empire-line Lolita dress. Available in elegant black and pure white. High waistline with flowing A-line skirt, lily and sacred heart motifs. The dress is versatile enough for daily wear, formal events, and bridal use. Graceful and inclusive design. Soft romantic lighting, chapel or garden setting with lily flowers."
   },
   "posters": [
-    "images/hezijia_shengxinbaihe/wb_1.jpg",
-    "images/hezijia_shengxinbaihe/wb_2.jpg",
     "images/hezijia_shengxinbaihe/wb_3.jpg",
-    "images/hezijia_shengxinbaihe/wb_4.jpg",
+    "images/hezijia_shengxinbaihe/wb_2.jpg",
     "images/hezijia_shengxinbaihe/wb_5.jpg",
-    "images/hezijia_shengxinbaihe/wb_6.jpg"
+    "images/hezijia_shengxinbaihe/wb_4.jpg",
+    "images/hezijia_shengxinbaihe/wb_6.jpg",
+    "images/hezijia_shengxinbaihe/wb_1.jpg"
   ],
   "posters_source": "待抓取：淘宝详情页模特图",
   "verified": true,
