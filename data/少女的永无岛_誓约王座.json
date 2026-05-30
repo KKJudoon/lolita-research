@@ -21,12 +21,13 @@
   },
   "price": {
     "op": null,
-    "full_set": null,
+    "full_set": 437,
     "currency": "CNY",
     "list_price_at_research": "¥78.3（淘宝挂牌，2026-04-30）",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "note": "淘宝id=992456452032。非OP（王子装+长款腰封套装）。页面priceText数据：上衣¥99起，套装(上衣+腰封+裤子)¥437-467（预售/现货价差）。淘宝实测2026-05-29。",
     "op_note": "誓约王座是 王子装 + 长款腰封套装，无 OP 单件 SKU。",
-    "full_set_note": "整套约 ¥78.3 白菜段（淘宝挂牌价，已在 list_price_at_research）。厂原店模式下『全套』概念模糊（按件买配凑），价格优势是核心卖点。"
+    "full_set_note": "整套约 ¥78.3 白菜段（淘宝挂牌价，已在 list_price_at_research）。厂原店模式下『全套』概念模糊（按件买配凑），价格优势是核心卖点。",
+    "price_updated": "2026-05-29"
   },
   "colors": [],
   "colors_dropped": [],

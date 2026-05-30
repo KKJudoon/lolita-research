@@ -23,13 +23,14 @@
     "note": "月夜熊定位『现货 + 中端价位』，与 Vancy 梵希慢营销 / 樱洛芙截单营销 形成对比。"
   },
   "price": {
-    "op": null,
-    "full_set": null,
+    "op": 249,
+    "full_set": 587,
     "currency": "CNY",
     "list_price_at_research": "¥219",
-    "note": "**基础信息款**：仅淘宝 list 数据，未深入微博海报正文交叉验证。¥ 数字为淘宝挂牌（可能是定金/意向金/现货 多种语义，需根据 release.type 判断）。",
+    "note": "淘宝id=990032521820。OP连衣裙¥249，斗篷¥349，两件套(连衣裙+斗篷含挂饰)¥587。搜索显示'¥211优惠后'（大促价，原价¥249）。600+人付款。淘宝实测2026-05-29。",
     "op_note": "未抓 SKU 拆分；E 档 minimal entry 调研深度浅。",
-    "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。"
+    "full_set_note": "整套官方未明文标价；下一阶段需补微博海报正文 + 淘宝详情 SKU。",
+    "price_updated": "2026-05-29"
   },
   "colors": [],
   "colors_dropped": [],
