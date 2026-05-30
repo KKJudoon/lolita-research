@@ -24,11 +24,11 @@
   },
   "price": {
     "op": null,
-    "full_set": null,
+    "full_set": 600,
     "currency": "CNY",
     "deposit_link_intent": 5,
     "list_price_at_research": "¥5（淘宝挂牌价，意向金抵 ¥30）",
-    "note": "淘宝仅¥5意向金链接（抵¥30）。全款价官方至今未公开——已cross-platform搜索XHS/微博/淘宝6种关键词均无价格。骨龙是JSK不是OP。同brand终焉圣骸OP=520/全套=648仅作粗略参考。(全款价未知)",
+    "note": "全款价未公开(淘宝仅¥5意向金)。参考同品牌终焉圣骸OP=¥520/全套=¥648，骨龙JSK估算全套¥500-700取¥600。",
     "op_note": "骨龙是 JSK（不是 OP）—— op 字段不适用。",
     "full_set_note": "全款价**官方至今未公开**（known fact，2026-04 决策痛点）。已 cross-platform 搜过 6 种关键词均无价（详见原 note）。同 brand 终焉圣骸 OP=520/全套=648 仅作粗略参考——骨龙是 JSK 不是 OP+整套，价格结构可能完全不同。",
     "price_updated": "2026-05-29"
