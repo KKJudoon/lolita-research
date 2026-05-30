@@ -178,5 +178,18 @@
     "taobao_item_id": "649856670889",
     "xhs_search_keyword": "月光剧院 尤丽迪茜",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "长尾",
+    "buzz_tier": "长尾",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "丝绒小众款",
+    "evidence": [
+      "淘宝两链接合计约72付款 → 长尾(<100)",
+      "XHS 505赞，传播有限 → 长尾",
+      "月光剧院5年老店，丝绒面料有质感但品牌未出圈 → 普通",
+      "丝绒现货+黑金配色有细分受众 → 中保值"
+    ]
   }
 }

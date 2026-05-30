@@ -181,5 +181,18 @@
     "taobao_item_id": "946123102586",
     "xhs_search_keyword": "何子家有猫了 薄雾蔷薇",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "日常实用入门款",
+    "evidence": [
+      "淘宝100+付款(¥298现货) → 腰部(100-500单档)",
+      "XHS 1000赞 + 404赞'打破帝政偏见'日常穿搭帖 → 中位",
+      "何子家7年老店，日常可穿定位精准但品牌知名度不高 → 普通",
+      "现货制+套头设计+无撑穿法 → 实用导向 → 中保值"
+    ]
   }
 }

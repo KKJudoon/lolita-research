@@ -175,5 +175,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "高光时刻 银河有迹可循",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "未知",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "不流通",
+    "composite_label": "高端押注未验证",
+    "evidence": [
+      "淘宝无独立链接(可能合并在品牌通用定金中) → 销量未知",
+      "XHS 1810赞，闪亮裙摆有视觉冲击力 → 中位",
+      "银河有迹可循品牌有品控争议(面料/工期/退款) → 普通(非负面但有争议)",
+      "¥800+网纱高端款尚未大规模发货 → 不流通"
+    ]
   }
 }

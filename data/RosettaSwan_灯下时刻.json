@@ -193,5 +193,19 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "RosettaSwan 灯下时刻",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "长尾",
+    "buzz_tier": "中位",
+    "authority_tier": "知名",
+    "resale_tier": "高保值",
+    "composite_label": "小众精品高保值",
+    "evidence": [
+      "不走淘宝平台(限量策略)，无销量数据，闲鱼二手流通 → 长尾",
+      "XHS 1737赞 + 服装设计师认可刺绣和面料 → 中位传播",
+      "独立设计师标杆，古董裙参考设计，显瘦效果突出 → 知名",
+      "限量+不走淘宝+高口碑 → 二手有溢价 → 高保值",
+      "微扎/脱线/蝴蝶结松脱等工艺细节不稳定是短板"
+    ]
   }
 }

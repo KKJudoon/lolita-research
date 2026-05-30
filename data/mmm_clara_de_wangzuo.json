@@ -144,5 +144,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "MMM Clara的王座",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "已绝版",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "低保值",
+    "composite_label": "考古标本",
+    "evidence": [
+      "Clara的王座已下架(6年前款)，品牌当前月光百叶仅78付款 → 已绝版",
+      "XHS 1771赞怀旧帖仍有流量 → 中位",
+      "品牌MMM当前在帝政品类存在感弱 → 普通",
+      "勾丝+味道大等实物问题 → 低保值(绝版但品质不支撑溢价)"
+    ]
   }
 }

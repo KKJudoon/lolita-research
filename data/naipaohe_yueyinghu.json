@@ -190,5 +190,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "奶泡匣子 月影湖",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "低保值",
+    "composite_label": "种草陷阱型",
+    "evidence": [
+      "淘宝100+付款，高热度未转化为高销量 → 腰部",
+      "XHS 5596赞极高种草热度，但实物差评多 → 中位(热度高但口碑反转)",
+      "14年老店但品牌在帝政品类未建立口碑壁垒 → 普通",
+      "面料廉价/显胖/像睡衣差评 → 低保值"
+    ]
   }
 }

@@ -219,5 +219,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "红玛丽 银月姬",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "中位",
+    "authority_tier": "知名",
+    "resale_tier": "中保值",
+    "composite_label": "品牌力限定款",
+    "evidence": [
+      "预约制限定款，淘宝无常驻链接，估几百付款 → 腰部",
+      "XHS 1806赞 + 雾蓝银灰色号和'月光裙'概念独树一帜 → 中位",
+      "红玛丽15年品牌力+毕业之作级输出 → 知名",
+      "¥998套装+腰封拆卖+品牌售后黑历史 → 营销力>>交付力 → 中保值(品牌力撑住)"
+    ]
   }
 }

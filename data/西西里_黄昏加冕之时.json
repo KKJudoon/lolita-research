@@ -190,5 +190,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "西西里 黄昏加冕之时",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "冷启动",
+    "authority_tier": "普通",
+    "resale_tier": "低保值",
+    "composite_label": "低调入门补充款",
+    "evidence": [
+      "淘宝尾款200+付款(¥0.01) → 腰部(100-500单档)",
+      "XHS 104赞极低，集赞营销也未破圈 → 冷启动",
+      "12年老店但产品力和传播力都不足 → 普通",
+      "透+扎+不显瘦工艺短板 → 低保值"
+    ]
   }
 }

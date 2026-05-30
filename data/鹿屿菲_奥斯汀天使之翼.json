@@ -181,5 +181,19 @@
   "raw_sources": {
     "taobao_search": "奥斯汀 天使之翼 鹿屿菲",
     "xhs_search_keyword": "奥斯汀 天使之翼 帝政"
+  },
+  "popularity": {
+    "scale_tier": "头部",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "低保值",
+    "composite_label": "照片种草翻车款",
+    "evidence": [
+      "淘宝第十批定金3000+付款 → 头部(3k-1w单档)",
+      "XHS 1186赞 + 多篇种草帖 → 中位",
+      "照片巨美但版型/工艺/色差/售后四重翻车 → 普通(口碑负债)",
+      "避雷帖众多+发货延迟+退款困难 → 低保值",
+      "帝政品类中'靠图片卖货但口碑负债'的典型"
+    ]
   }
 }

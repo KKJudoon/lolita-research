@@ -189,5 +189,18 @@
     "taobao_item_id": null,
     "xhs_search_keyword": "诗的每一页 小美人鱼",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "长尾",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "设计师诚意小众",
+    "evidence": [
+      "淘宝定金200+付款 → 腰部(100-500单档)",
+      "XHS 360赞，传播有限 → 长尾",
+      "碎银子设计师署名+品牌口碑'从不饥饿营销' → 普通(有信任但不出圈)",
+      "同品牌油画日月诗1000+付款证明交付靠谱 → 中保值"
+    ]
   }
 }

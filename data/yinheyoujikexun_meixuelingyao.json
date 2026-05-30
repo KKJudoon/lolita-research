@@ -204,5 +204,19 @@
     "taobao_item_id": "1047513243243",
     "xhs_search_keyword": "美学灵药 银河有迹可循",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "中位",
+    "buzz_tier": "破圈",
+    "authority_tier": "知名",
+    "resale_tier": "低保值",
+    "composite_label": "话题中心争议款",
+    "evidence": [
+      "淘宝定金1000+人看过(非付款)，真实转化估几百 → 中位",
+      "XHS 8161赞碾压帝政品类所有竞品 → 破圈级传播",
+      "Dior vintage+美少女战士融合设计独树一帜，帝政品类话题中心 → 知名",
+      "'老瓜店'标签+仿Dior争议+胸口扎人+工期极长 → 争议品牌",
+      "仿版泛滥+品牌争议 → 低保值"
+    ]
   }
 }

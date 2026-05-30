@@ -193,5 +193,18 @@
     "taobao_item_id": "1048880991999",
     "xhs_search_keyword": "圣心百合 帝政 何子家有猫了",
     "weibo_uid": null
+  },
+  "popularity": {
+    "scale_tier": "腰部",
+    "buzz_tier": "中位",
+    "authority_tier": "普通",
+    "resale_tier": "中保值",
+    "composite_label": "微胖友好口碑款",
+    "evidence": [
+      "淘宝尾款100+付款 → 腰部(100-500单档)",
+      "XHS 3139赞热度不错，148斤/150斤双帖实穿验证 → 中位(主要在微胖圈传播)",
+      "何子家正在成为帝政品类的'微胖专家'品牌，但未进KOL横评 → 普通",
+      "黑色款稀缺性+婚纱场景破圈潜力 → 中保值"
+    ]
   }
 }

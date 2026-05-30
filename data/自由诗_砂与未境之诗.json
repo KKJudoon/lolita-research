@@ -184,5 +184,18 @@
   "raw_sources": {
     "taobao_search": "砂与未境之诗 自由诗",
     "xhs_search_keyword": "砂与未境之诗"
+  },
+  "popularity": {
+    "scale_tier": "现象级",
+    "buzz_tier": "中位",
+    "authority_tier": "知名",
+    "resale_tier": "低保值",
+    "composite_label": "帝政走量冠军",
+    "evidence": [
+      "多链接累计: 九团定金4000+ + 七团尾款4000+ + 十团定金2000+ + 八团尾款1000+ + 现货700+ → 远超1w真实付款 → 现象级",
+      "XHS 1942赞，传播与销量不匹配 → 中位",
+      "十团循环+多色策略成为帝政品类出货量冠军 → 知名",
+      "面料质感硬伤+走量型定位 → 低保值"
+    ]
   }
 }
