@@ -1,0 +1,358 @@
+{
+  "id": "hestia_vesta_quanli_rongyao",
+  "name": "权力与荣耀（平台亦作“权利与荣耀”）",
+  "brand": "赫斯提亚Vesta工作室",
+  "designer": "a bottle of yakult（设计图水印；授权链待核验）",
+  "designer_note": "公开设计稿图上有“a bottle of yakult”水印；赫斯提亚转稿声明只说明可转素胚、辅料和相关资料，不等同于已证明服装设计版权、图稿授权和商标/命名权完整转让。买断前必须取得画师/设计师书面授权链。",
+  "style_tags": [
+    "古典",
+    "帝政裙",
+    "宫廷风",
+    "Lolita原创设计",
+    "转稿",
+    "未量产",
+    "买断尽调",
+    "视觉爆点"
+  ],
+  "style_summary": "这不是一个已经跑通生产和销售的成熟款，而是一个在抖音先爆、随后开发失败并公开转稿的帝政裙项目。视觉稿传播力很强：抖音首图视频达到 8.7 万赞，颜色投票和背面方案也有万级互动；小红书官方阵地有 4620 赞首发图和 1057 赞选色帖，但站外自然讨论和微博讨论弱。买断价值主要在“爆过的视觉资产 + 已验证的评论需求”，不是品牌现成经营能力。",
+  "release": {
+    "date_range": "2026-04-08 设计稿首发爆发；2026-04-10 颜色/背面方案投票；2026-05-06 第三版样衣制作中；2026-07-16 正式转稿",
+    "type": "转稿 / 未正式量产 / 原意向金售后",
+    "poster_first_seen": "2026-04-08",
+    "note": "赫斯提亚Vesta工作室称经过四个月优化调整，无法呈现出和设计稿一样的美感，因此正式转稿；同时提醒开店第一天有下意向金的顾客申请售后。"
+  },
+  "price": {
+    "op": null,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "list_price_at_research": "未公开零售价；无淘宝正式商品价；公开信息停留在意向金售后与转稿。",
+    "op_note": "未量产，未见 OP 单件正式售价。",
+    "full_set_note": "未量产，未见整套正式售价。",
+    "list_price_priority_note": "本项目价格字段按已售商品优先淘宝/XHS公开价；此款属于转稿未量产例外，不能用意向金或互动热度倒推正式零售价。",
+    "full_set_status": "未知 / 未成立",
+    "note": "价格是买断谈判项，不是零售定价。建议把已失败样衣、素胚、辅料、图稿授权、账号内容授权、意向金用户处置成本分开估值；未取得版权链和版型打样结果前，不建议按成熟爆款溢价买断。",
+    "price_updated": "2026-07-18"
+  },
+  "colors": [
+    "浅蓝（高热设计稿主色）",
+    "绿色/白金/粉色等评论呼声",
+    "蓝色官方称已提前锁定"
+  ],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": null,
+      "item_id": null,
+      "shop_name": null,
+      "search_url": "https://s.taobao.com/search?q=%E8%B5%AB%E6%96%AF%E6%8F%90%E4%BA%9AVesta%20%E6%9D%83%E5%8A%9B%E4%B8%8E%E8%8D%A3%E8%80%80",
+      "list_title": null,
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "未正式开售",
+      "sales_note": "未见有效淘宝正式商品；公开状态为转稿与意向金售后，不能按销量款处理。",
+      "location": null,
+      "shop_rating": null,
+      "note": "淘宝端未形成可购买 SKU。若买断，淘宝从 0 建商品、客服、尺码和售后，而不是接一个已有转化漏斗。"
+    },
+    "weibo": {
+      "official_account": null,
+      "official_url": null,
+      "post_date": null,
+      "note": "用“赫斯提亚Vesta工作室 / 权力与荣耀 / 权利与荣耀 / 帝政裙 / 转稿 / 样衣 / a bottle of yakult”等多组关键词交叉搜索，未见可采信的微博官号发布或自然讨论；微博端热度基本缺位。"
+    },
+    "xiaohongshu": {
+      "official_account": "赫斯提亚Vesta工作室",
+      "official_url": "https://www.xiaohongshu.com/user/profile/68773d9b000000001e03b647",
+      "source_post_url": "https://www.xiaohongshu.com/explore/69d5ad810000000022028740",
+      "fit_post_url": null,
+      "illustrator_account": null,
+      "illustrator_url": null,
+      "note": "2026-07-18 抓取官方主页约 2915 粉、7708 赞藏、9 篇笔记。核心互动集中在官方首发图 4620 赞、选色帖 1057 赞；直接 note 链接可能因 xsec 失效，主页与搜索结果为更稳定入口。"
+    },
+    "douyin": {
+      "official_account": "赫斯提亚Vesta工作室",
+      "official_url": "https://www.douyin.com/user/MS4wLjABAAAAERjGheTGaZYULsljeO6SXLr_KkrCbwTr8cifivxjF6eIzp6yqk8jjNTgpn7QGy0O",
+      "search_url": "https://www.douyin.com/search/%E8%B5%AB%E6%96%AF%E6%8F%90%E4%BA%9AVesta%20%E6%9D%83%E5%8A%9B%E4%B8%8E%E8%8D%A3%E8%80%80?type=general",
+      "source_post_url": "https://www.douyin.com/video/7626191633625366363",
+      "fit_post_url": "https://www.douyin.com/note/7636663450420247667",
+      "post_date": "2026-04-08",
+      "note": "抖音是此项目的主要爆点来源。账号约 3.5 万粉、17.1 万获赞，14 个作品几乎围绕同一项目；互动从首发 8.7 万赞回落到转稿约 790 赞，说明视觉稿热度高于交付信任。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-08",
+        "likes": "4620",
+        "comments": null,
+        "title": "帝政裙 / 赫斯提亚Vesta工作室 / Lolita原创设计",
+        "url": "https://www.xiaohongshu.com/explore/69d5ad810000000022028740",
+        "type": "品牌官方设计稿首发",
+        "summary": "官方主页格子可见最高热度笔记，封面为浅蓝帝政裙设计图。该帖证明小红书官方阵地有中高热启动，但互动集中在品牌自发内容，独立买家讨论尚弱。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-10",
+        "likes": "1057",
+        "comments": 169,
+        "title": "颜色六选三，蓝色已提前锁定，再选两个颜色哦",
+        "url": "https://www.xiaohongshu.com/explore/69d8520a00000000220282c8",
+        "type": "品牌官方选色投票",
+        "summary": "评论集中在绿色、白金、粉色等配色选择，也有人要求色卡；可作为“颜色需求”证据，但不是下单转化证据。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-10",
+        "likes": "123",
+        "comments": null,
+        "title": "两种背面，大家更喜欢哪种呢？",
+        "url": "https://www.xiaohongshu.com/explore/69d84f200000000023005ac5",
+        "type": "品牌官方背面方案投票",
+        "summary": "背面方案讨论显示用户在意露背、V 领和实穿遮瑕；对买断后的版型重做有参考价值。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-07-16",
+        "likes": "11（主页格子可见）",
+        "comments": null,
+        "title": "权力与荣耀转稿",
+        "url": "https://www.xiaohongshu.com/explore/6a58b154000000000f0113d6",
+        "type": "品牌官方转稿声明",
+        "summary": "公开承认无法把样衣做出设计稿美感，并打包素胚、辅料和相关资料转让。互动明显低于首发，说明转稿消息没有形成新的自然扩散。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "灵犀Lingxi Lolita原创设计",
+        "date": "2024-05-05",
+        "likes": "225",
+        "comments": null,
+        "title": "权利与荣耀，只是我的华服与冠冕",
+        "url": "https://www.xiaohongshu.com/explore/66373c86000000001e034f5b",
+        "type": "同名/近名噪音",
+        "summary": "该帖实际是灵犀“时光中的玫瑰”帝政裙，并非赫斯提亚款。搜索“权利与荣耀”会混入其他帝政内容，说明款名独占性弱。"
+      }
+    ],
+    "weibo": [
+      {
+        "rank_in_search": 1,
+        "author": "微博搜索",
+        "date": "2026-07-18",
+        "likes": "—",
+        "comments": "—",
+        "title": "赫斯提亚Vesta工作室 / 权力与荣耀 / 权利与荣耀 多关键词搜索",
+        "url": "https://s.weibo.com/weibo?q=%E8%B5%AB%E6%96%AF%E6%8F%90%E4%BA%9AVesta%E5%B7%A5%E4%BD%9C%E5%AE%A4%20%E6%9D%83%E5%8A%9B%E4%B8%8E%E8%8D%A3%E8%80%80",
+        "type": "平台缺位说明",
+        "summary": "未检出可采信的官号、Lolita上新号或买家自然讨论；结果多为小说/泛洛丽塔/其他帝政噪音。微博热度不能作为买断支撑。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "微博搜索",
+        "date": "2026-07-18",
+        "likes": "—",
+        "comments": "—",
+        "title": "a bottle of yakult / 帝政裙 / 权力与荣耀 交叉搜索",
+        "url": "https://s.weibo.com/weibo?q=a%20bottle%20of%20yakult%20%E5%B8%9D%E6%94%BF%E8%A3%99",
+        "type": "画师/水印交叉搜索",
+        "summary": "未通过微博检出该水印与赫斯提亚款的清晰授权链。买断时不能用微博公开信息替代画师合同。"
+      }
+    ],
+    "douyin": [
+      {
+        "rank_in_search": 1,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-08",
+        "likes": "8.7万",
+        "comments": 3891,
+        "title": "帝政裙设计稿首发",
+        "url": "https://www.douyin.com/video/7626191633625366363",
+        "type": "品牌官方首发爆帖",
+        "summary": "首发即达到 8.7 万赞、约 3891 评论、1.5 万收藏、1.1 万分享。评论有“蹲样衣”“快去把这个稿拿下吧”“小个子也想穿帝政裙”等明确需求信号。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-10",
+        "likes": "3.2万",
+        "comments": 4267,
+        "title": "颜色六选三，蓝色已提前锁定",
+        "url": "https://www.douyin.com/note/7626931648895100595",
+        "type": "品牌官方选色投票",
+        "summary": "颜色投票延续了高互动，收藏约 4730、分享约 5240。说明用户愿意参与共创，但仍是设计阶段热度。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-10",
+        "likes": "3.0万",
+        "comments": 1692,
+        "title": "两种背面，大家更喜欢哪种呢？",
+        "url": "https://www.douyin.com/video/7626930436686544794",
+        "type": "品牌官方背面方案",
+        "summary": "背面方案也达到 3 万赞，评论讨论露背、背痘、V 领和日常性。买断后应优先解决“照片美但实穿焦虑”的结构问题。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-04-12",
+        "likes": "2382",
+        "comments": 570,
+        "title": "款名《权利与荣耀》/ V领方案说明",
+        "url": "https://www.douyin.com/video/7627724369159112051",
+        "type": "命名与细节说明",
+        "summary": "账号称名字跟随设计师名称《权利与荣耀》，并继续讨论 V 领与方案。此处与后续转稿图的《权力与荣耀》形成异写，需要合同里统一名称范围。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-05-06",
+        "likes": "1255",
+        "comments": 254,
+        "title": "第三版样衣制作中，店主没有跑路",
+        "url": "https://www.douyin.com/note/7636663450420247667",
+        "type": "样衣进度 / 风险预警",
+        "summary": "正文称“现有样衣太丑了，实在有点发不出手”“第三版样衣制作中”。这是最关键的生产落差证据：视觉稿爆了，但打样能力没有跑通。"
+      },
+      {
+        "rank_in_search": 6,
+        "author": "赫斯提亚Vesta工作室",
+        "date": "2026-07-16",
+        "likes": "约790",
+        "comments": 180,
+        "title": "权力与荣耀正式转稿",
+        "url": "https://www.douyin.com/note/7663070146458057370",
+        "type": "品牌官方转稿声明",
+        "summary": "声明称四个月优化调整后仍无法呈现设计稿美感，现拥有素胚、辅料、相关资料一起出手，并安排意向金顾客售后。热度较首发明显回落。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": [
+      "抖音8.7万赞",
+      "小红书官方4620赞",
+      "微博弱",
+      "未量产",
+      "转稿",
+      "样衣失败",
+      "版权链待核验",
+      "权力/权利异写"
+    ],
+    "highlights_positive": [
+      "视觉稿传播力被验证：抖音首发 8.7 万赞、3891 评论、1.5 万收藏、1.1 万分享，在新店单款内容里属于明显破圈。",
+      "小红书官方阵地不是空号：主页可见 2915 粉、7708 赞藏，首发图 4620 赞、选色帖 1057 赞，说明核心 Lo 圈用户也有初始兴趣。",
+      "评论需求具体，不只是“好看”：用户明确讨论蹲样衣、小个子能否穿、紫色/绿色/白金等配色、露背和 V 领实穿问题，可转化为后续打样 brief。",
+      "项目资料可被打包转让：转稿声明提到素胚、辅料和相关资料，对接手方节省部分前期沟通成本。",
+      "帝政裙赛道近两年有品类热度，权力/加冕/宫廷叙事和浅蓝高腰设计符合项目库里帝政款的传播语境。"
+    ],
+    "highlights_negative": [
+      "核心负面不是营销，而是开发能力：账号自己承认第三版样衣仍太丑、无法呈现设计稿美感，接手后要重做版型和工艺验证。",
+      "热度高度集中在抖音设计稿，小红书自然讨论弱、微博基本缺位；这不是三平台均衡发酵的成熟爆款。",
+      "没有正式售价、淘宝商品、销量或真实买家反馈，无法用项目现有的付款规模标准评为已验证畅销款。",
+      "设计图带有 a bottle of yakult 水印，必须单独核验画师/设计师授权；只买赫斯提亚手里的样衣和辅料不一定获得商业生产权。",
+      "款名存在“权利与荣耀/权力与荣耀”异写，且小红书已有其他帝政内容使用近似文案，命名独占性弱。",
+      "转稿帖互动从首发 8.7 万赞降至约 790 赞，说明失败信息发布后新增需求热度明显回落。"
+    ],
+    "verdict_short": "结论：值得继续谈，但不建议按成熟爆款溢价买断。合理定位是“低价拿下一个已验证视觉爆点，再由你们重新开发”的机会；买断前必须满足三件事：一是拿到画师/设计师商业授权链，二是看现有素胚/辅料/纸样是否真有复用价值，三是用你们自己的供应链重新打样并做小批量意向转化测试。若卖方要按 8.7 万赞爆款价出售，而版权和样衣问题不能闭环，应放弃。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "公开信息仅能确认平台标签“帝政裙 / Lolita原创设计 / 公主裙”、设计图、颜色/背面投票和转稿声明；以下元素拆解基于官图与评论语境，不视作官方设定。",
+    "theme": "Empire/Regency 高腰礼服 × 加冕/权力叙事 × 浅蓝宫廷视觉稿",
+    "official_quote": "经过这四个月以来的优化和调整，《权力与荣耀》我们确实无法呈现出和设计稿一样的美感。",
+    "elements": [
+      {
+        "name": "胸下高腰帝政廓形",
+        "source_lineage": "19 世纪初 Empire line / Regency gown 的胸下高腰结构；平台标签明确为“帝政裙”。",
+        "purpose": "用纵向高腰线建立古典礼服比例，同时服务小红书/抖音用户对“小个子也想穿帝政裙”的需求讨论。",
+        "official": true
+      },
+      {
+        "name": "浅蓝主色与白金呼声",
+        "source_lineage": "官方选色帖称蓝色已提前锁定，评论继续投绿色、白金、粉色等；首发视觉以浅蓝为主。",
+        "purpose": "浅蓝负责首图记忆点，白金/绿色等备选可作为后续小批量测试色，而不应一次性开太多色。",
+        "official": true
+      },
+      {
+        "name": "前幅斜向垂褶与披帛感侧摆",
+        "source_lineage": "官图可见斜向垂褶、侧边垂落布片和珍珠链；属于古典 drapery 的当代表达。",
+        "purpose": "在静态图中制造高级感和动态光影，也是样衣最容易翻车的工艺区域。",
+        "official": false,
+        "ai_inferred": true
+      },
+      {
+        "name": "方领/深 V 背面二选一",
+        "source_lineage": "官方背面方案投票展示两种背面，评论围绕露背、背痘和 V 领实穿性讨论。",
+        "purpose": "用背部设计提升礼服感，但买断方需要优先验证日常穿着安全感和内衣适配。",
+        "official": true
+      },
+      {
+        "name": "水印图稿与版权链",
+        "source_lineage": "首发图可见 a bottle of yakult 水印，转稿声明未自动覆盖画师授权。",
+        "purpose": "这不是装饰元素，而是买断风险元素：必须把设计稿、纸样、样衣、账号内容的授权边界写清楚。",
+        "official": true
+      }
+    ],
+    "design_thinking": "这条裙子的强项在“图稿一眼抓人”：浅蓝、帝政高腰、斜褶和珍珠细节在短视频封面里很容易形成公主/加冕想象。失败点也正来自这里：设计稿依赖线稿光影和理想垂坠，落到真实面料、胸线、袖笼、后背和侧摆时难度高。接手方如果只照搬图稿，很可能重复失败；更稳妥的做法是先拆成可生产的高腰版型、可控面料和 1-2 个主卖色，再用原爆帖评论做目标人群验证。",
+    "for_image_gen_prompt": "A full-length blue Regency Empire-line Lolita gown inspired by imperial court fashion, high waist just below the bust, square neckline, short puff sleeves, pearl chain accents, asymmetric draped skirt panel, delicate pale gold trim, elegant princess-like but wearable, clear front and back construction details, soft studio lighting, full dress visible, no model, no text, no watermark."
+  },
+  "posters": [
+    "images/赫斯提亚Vesta_权力与荣耀/xhs_01_design_viral.webp",
+    "images/赫斯提亚Vesta_权力与荣耀/xhs_02_color_vote.webp",
+    "images/赫斯提亚Vesta_权力与荣耀/xhs_03_color_board.webp",
+    "images/赫斯提亚Vesta_权力与荣耀/xhs_04_back_choice.webp",
+    "images/赫斯提亚Vesta_权力与荣耀/xhs_05_transfer.webp"
+  ],
+  "posters_source": "小红书官方账号主页/搜索结果中的真实图片文件下载；首图为官方设计稿图，末图为官方转稿声明。因微博无有效官图、淘宝无正式商品，本条采用小红书官方图作为图片源，并在 designer_note 标明水印授权风险。",
+  "verified": true,
+  "verified_at": "2026-07-18",
+  "verified_by": "Codex researcher + browser-harness",
+  "research_depth": "A 完整（买断尽调例外项：未量产、无正式价格/销量，以风险说明替代空字段）",
+  "raw_sources": {
+    "xiaohongshu_profile": "https://www.xiaohongshu.com/user/profile/68773d9b000000001e03b647",
+    "xiaohongshu_note_ids": [
+      "69d5ad810000000022028740",
+      "69d8520a00000000220282c8",
+      "69d84f200000000023005ac5",
+      "6a58b154000000000f0113d6"
+    ],
+    "douyin_profile": "https://www.douyin.com/user/MS4wLjABAAAAERjGheTGaZYULsljeO6SXLr_KkrCbwTr8cifivxjF6eIzp6yqk8jjNTgpn7QGy0O",
+    "douyin_posts": [
+      "7626191633625366363",
+      "7626931648895100595",
+      "7626930436686544794",
+      "7627724369159112051",
+      "7636663450420247667",
+      "7663070146458057370"
+    ],
+    "weibo_queries": [
+      "赫斯提亚Vesta工作室",
+      "赫斯提亚Vesta工作室 转稿",
+      "赫斯提亚Vesta工作室 样衣",
+      "赫斯提亚 权力与荣耀 帝政裙",
+      "赫斯提亚 权利与荣耀 帝政裙",
+      "权力与荣耀 lolita",
+      "权利与荣耀 lolita",
+      "a bottle of yakult 帝政裙"
+    ]
+  },
+  "popularity": {
+    "scale_tier": "未量产",
+    "buzz_tier": "抖音破圈 / 小红书官方中热 / 微博弱",
+    "authority_tier": "新店未验证",
+    "resale_tier": "无二级市场",
+    "composite_label": "viral 借势新品",
+    "evidence": [
+      "抖音首发设计稿 8.7 万赞、3891 评论、1.5 万收藏、1.1 万分享，确认视觉稿破圈。",
+      "小红书官方首发 4620 赞、选色帖 1057 赞，但主要集中在官号内容，独立买家/路人长帖不足。",
+      "微博多关键词未见有效讨论，三平台热度不均衡。",
+      "无淘宝正式商品、无公开零售价、无真实付款规模，不能按已售爆款排序。",
+      "2026-07-16 转稿帖约 790 赞，较首发大幅回落；失败开发信息削弱后续信任。",
+      "设计图水印和样衣失败是买断前的核心负债，热度只能作为重启测试入口。"
+    ]
+  }
+}
