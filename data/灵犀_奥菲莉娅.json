@@ -1,0 +1,302 @@
+{
+  "id": "lingxi_ophelia",
+  "name": "奥菲莉娅",
+  "brand": "灵犀Lolita原创设计",
+  "designer": null,
+  "designer_note": "品牌未公开服装设计师姓名；款名在不同平台也写作“奥菲莉亚”",
+  "style_tags": [
+    "帝政",
+    "cla系",
+    "缎面",
+    "刺绣",
+    "希腊风",
+    "披肩"
+  ],
+  "style_summary": "灵犀 2024 年推出的传统帝政改良款：胸下高腰、斜向褶裥、花包袖与单侧披肩构成希腊式垂坠轮廓，裙摆以同色大面积刺绣收尾。一团 OP ¥338，价格友好；在 5851 赞的 14 条帝政裙横评中列第 4 条，并持续出现于小红书、抖音和微博讨论。",
+  "release": {
+    "type": "全款预约 / 截团制（历史团）",
+    "date_range": "2024-06-07 19:00 开团，2024-07-07 截止",
+    "poster_first_seen": "2024-05-11",
+    "note": "品牌小红书 2024-06-06 官宣次日 19:00 上线；官方 2024-07-06 帖写明“明天截止”。本轮未确认 2026 年的当前销售或再贩状态。"
+  },
+  "price": {
+    "op": 338,
+    "full_set": null,
+    "deposit_link_intent": null,
+    "currency": "CNY",
+    "note": "品牌小红书官方评论明确“一团 338 包车马，参加活动可 -5”，买家选色帖也复核为 ¥338。微博 2025-01-29 的转发型种草帖标注香槟金 ¥398，可能是后续展示/现货价；淘宝当前商品直链触发滑块，未把该价格当作一团价覆盖。"
+  },
+  "colors": [
+    "杏白",
+    "香槟杏",
+    "珊瑚粉"
+  ],
+  "colors_dropped": [],
+  "shops": {
+    "taobao": {
+      "url": "https://www.taobao.com/list/item/Sjd3VnFPVW44bUk1U1NET0NmclU1UT09.htm",
+      "url_note": "Google 索引到的灵犀淘宝商品页；2026-07-17 浏览器访问触发滑块验证",
+      "item_id": null,
+      "shop_name": "灵犀Lingxi Lolita原创设计",
+      "search_url": "https://s.taobao.com/search?q=%E7%81%B5%E7%8A%80%20%E5%A5%A5%E8%8F%B2%E8%8E%89%E5%A8%85%20%E5%B8%9D%E6%94%BF",
+      "list_title": "【Lingxi】奥菲莉娅帝政风lolita缎面长裙希腊感缎面绣花礼服原创",
+      "list_price": null,
+      "sales": null,
+      "sales_trend": "历史款；当前在售状态待淘宝滑块后复核",
+      "sales_note": "未取得淘宝销量，不据社媒互动反推付款规模",
+      "location": null,
+      "shop_rating": null,
+      "shop_vip_rate": null
+    },
+    "weibo": {
+      "official_account": "灵犀Lolita原创设计",
+      "official_url": "https://weibo.com/u/5599880115",
+      "alt_account": "Lo娘嘀咕嘀咕",
+      "alt_url": "https://weibo.com/6074526225/Oj60FBaNe",
+      "post_date": "2024-06-15",
+      "note": "官号当前约 6.4 万粉丝、1172 条微博，但旧微博被设为仅粉丝可见；公开搜索能回溯圈内投稿与 2025 年价格型种草帖，微博有讨论但不是这款的主要信息源。"
+    },
+    "xiaohongshu": {
+      "official_account": "灵犀Lingxi Lolita原创设计",
+      "official_url": "https://www.xiaohongshu.com/user/profile/5b8696644cb5880001b00d69",
+      "source_post_url": "https://www.xiaohongshu.com/explore/663f6607000000001e03990f?xsec_token=ABhghecu25mFpYMlnCgpLSQzBBa2wrdxbMRPVKHeqPKpw%3D&xsec_source=pc_search",
+      "fit_post_url": "https://www.xiaohongshu.com/explore/668900c5000000001c025498?xsec_token=ABucT4_gxap-R_TjOgMvNZlM0Qh1Q5Wz94aWWaDVocQUs%3D&xsec_source=pc_search",
+      "designer_account": null,
+      "designer_url": null,
+      "note": "主要营销与口碑阵地。官方预告 329 赞 / 91 藏 / 65 评；长期实穿帖最高 576 赞；另进入 5851 赞的 14 款帝政横评。"
+    },
+    "douyin": {
+      "official_account": "灵犀Lingxi-lolita原创设计",
+      "official_url": null,
+      "search_url": "https://www.douyin.com/search/%E7%81%B5%E7%8A%80%20%E5%A5%A5%E8%8F%B2%E8%8E%89%E5%A8%85%20%E5%B8%9D%E6%94%BF?type=general",
+      "source_post_url": "https://www.douyin.com/note/7377727265947323682",
+      "fit_post_url": "https://www.douyin.com/note/7386178633330642191",
+      "post_date": "2024-06-07",
+      "note": "官方首发图文 290 赞；杏白自然光实穿 147 赞，明确 168cm 模特穿 S/127，官方建议同身高选 137 裙长。另有用户种草帖 80 赞。"
+    }
+  },
+  "hot_posts": {
+    "xiaohongshu": [
+      {
+        "rank_in_search": 1,
+        "author": "江清月辞",
+        "date": "2025-10-09",
+        "likes": "576",
+        "comments": 9,
+        "title": "好像油画的帝政裙🪞₊˚",
+        "url": "https://www.xiaohongshu.com/explore/68e7915a000000000503a688?xsec_token=ABkgIp1eQY8c0vR5d7O5nk1oxVlt_qa-3VjfkfOI9O2Yw%3D&xsec_source=pc_search",
+        "type": "长期实穿 / 洗后反馈",
+        "summary": "明确标注“灵犀奥菲莉娅”。评价面料轻薄垂顺、127 裙长更日常、137 更古典，披肩是增加层次的灵魂；同时指出刺绣水洗后会变皱，但仍在可接受范围。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "江清月辞",
+        "date": "2026-04-10",
+        "likes": "5851",
+        "comments": 121,
+        "title": "一口气看完14条帝政裙！",
+        "url": "https://www.xiaohongshu.com/explore/69d8e06b000000001f00083c?xsec_token=ABBRBD4WRrC_mJtisdl1AQexRV2_uJtgnwZjvGTVovZ_Q%3D&xsec_source=pc_search",
+        "type": "14 款帝政横评（第 4 条）",
+        "summary": "作者依次列出 14 条帝政裙，奥菲莉娅明确为第 4 条；与灵犀“时光中的玫瑰”一起进入同一高赞清单，说明灵犀在帝政品类有连续代表作。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "灵犀Lingxi Lolita原创设计",
+        "date": "2024-05-11",
+        "likes": "329",
+        "comments": 65,
+        "title": "夜风中低吟着古老的歌谣",
+        "url": "https://www.xiaohongshu.com/explore/663f6607000000001e03990f?xsec_token=ABhghecu25mFpYMlnCgpLSQzBBa2wrdxbMRPVKHeqPKpw%3D&xsec_source=pc_search",
+        "type": "品牌官方预告",
+        "summary": "官方说明袖型是传统帝政的抽褶花包袖，整体版型参考传统帝政后改良，并回应大码可穿。评论也集中讨论胸口放量、袖型和高腰显身形等版型问题。"
+      },
+      {
+        "rank_in_search": 4,
+        "author": "伯舟昭芙蓉",
+        "date": "2024-07-06",
+        "likes": "213",
+        "comments": 19,
+        "title": "170/118 杏白—奥菲莉娅视频版",
+        "url": "https://www.xiaohongshu.com/explore/6688f336000000000d00ca91?xsec_token=AB63Vgdbu1ELifdoEmgj8OFIQA9YSdssbNH_Xd4Z1Md-4%3D&xsec_source=pc_search",
+        "type": "大码真人实穿",
+        "summary": "170cm / 118 斤穿 L 码的杏白实穿；作者评价布料是“滑滑的料子”。与品牌“大码可以穿”的回复形成交叉验证。"
+      },
+      {
+        "rank_in_search": 5,
+        "author": "O_o",
+        "date": "2024-06-07",
+        "likes": "113",
+        "comments": 24,
+        "title": "灵犀帝政裙奥菲莉亚推荐 & 求帮忙选色",
+        "url": "https://www.xiaohongshu.com/explore/66627b86000000000e03169f?xsec_token=ABzIAhDQ0Ps79mHTdQ8uiKYWjutHXQh446ZEMMYxyblCA%3D&xsec_source=pc_search",
+        "type": "购买决策 / 配色讨论",
+        "summary": "三色选择讨论；作者与评论再次确认价格约 ¥338。用户主要纠结杏白易脏、香槟杏是否显黑和珊瑚粉的特殊感，显示配色而非价格是主要购买决策点。"
+      }
+    ],
+    "weibo": [
+      {
+        "rank_in_search": 1,
+        "author": "Lo娘嘀咕嘀咕",
+        "date": "2024-06-15",
+        "likes": "54",
+        "comments": 13,
+        "title": "灵犀家的奥菲莉娅：种草 / 拔草投稿",
+        "url": "https://weibo.com/6074526225/Oj60FBaNe",
+        "type": "圈内投稿讨论",
+        "summary": "投稿者被缎面、大面积刺绣与帝政优雅感种草，同时担心肩部珍珠装饰的视觉比例、缎面抽丝与大面积刺绣褶皱；是微博端最具体的正反意见。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "风携意",
+        "date": "2025-01-29",
+        "likes": "1",
+        "comments": 1,
+        "title": "灵犀家的奥菲莉娅帝政风 Lolita",
+        "url": "https://weibo.com/5587896179/PbO81anpg",
+        "type": "后续价格型种草",
+        "summary": "将其描述为香槟金、缎面绣花、希腊感长裙并标价 ¥398；互动很低，只作为后续价格与款式描述的辅助证据。"
+      }
+    ],
+    "douyin": [
+      {
+        "rank_in_search": 1,
+        "author": "灵犀Lingxi-lolita原创设计",
+        "date": "2024-06-07",
+        "likes": "290",
+        "comments": null,
+        "title": "奥菲莉娅：在树的哀鸣与夜的叹息中",
+        "url": "https://www.douyin.com/note/7377727265947323682",
+        "type": "品牌官方首发",
+        "summary": "以 #帝政裙、#lo裙安利、#优雅永不过时、#lolita 等标签发布，确认品牌在抖音同步运营该款。"
+      },
+      {
+        "rank_in_search": 2,
+        "author": "灵犀Lingxi-lolita原创设计",
+        "date": "2024-06-30",
+        "likes": "147",
+        "comments": null,
+        "title": "奥菲莉娅 杏白—自然光",
+        "url": "https://www.douyin.com/note/7386178633330642191",
+        "type": "品牌官方尺码实穿",
+        "summary": "168cm 模特穿 S 码 127 裙长的未改版样衣；官方注明同身高推荐 137，且最终版型以香槟杏色样衣为准。"
+      },
+      {
+        "rank_in_search": 3,
+        "author": "⁺✞ʚ压路机重度依赖ɞ✟₊*.+",
+        "date": "2024-06-22",
+        "likes": "80",
+        "comments": null,
+        "title": "又喜欢上奥菲利亚了",
+        "url": "https://www.douyin.com/note/7383175462962449714",
+        "type": "用户种草",
+        "summary": "搜索结果中直接标注 #灵犀、#帝政裙 与款名，构成抖音端的独立用户兴趣证据。"
+      }
+    ]
+  },
+  "synthesis": {
+    "keywords": [
+      "¥338 入门价",
+      "传统帝政改良",
+      "缎面同色刺绣",
+      "披肩层次",
+      "大码可穿",
+      "三平台持续讨论",
+      "销量待复核"
+    ],
+    "highlights_positive": [
+      "一团 ¥338 包车马且活动可减 5，在帝政长裙中价格门槛低，价格由品牌评论与买家帖双重确认",
+      "版型辨识度高：斜向胸褶、抽褶花包袖、单侧披肩、珍珠节点和同色刺绣形成完整的希腊 / Empire 视觉语言",
+      "有大码与真实身材证据：品牌明确称大码可穿，170cm / 118 斤 L 码与 170cm / 85 胸围 M 码实穿均可回溯",
+      "长尾传播稳定：2026 年仍进入 5851 赞的 14 款帝政清单；2025 年 576 赞实穿帖仍在持续种草",
+      "小红书、抖音、微博均有可回溯内容，且抖音官号同步尺码 / 裙长说明，不是单平台孤证"
+    ],
+    "highlights_negative": [
+      "胸口放量与胸下分割线存在争议：预告评论认为胸部局促或不够包裹，品牌仅做微调，没有彻底改变结构",
+      "缎面与刺绣维护成本：微博投稿担心抽丝和大面积刺绣褶皱，长期实穿也确认刺绣水洗后会皱",
+      "没有口袋，品牌在官方上新评论中明确答复；日常便利性较弱",
+      "裙长选择有身高门槛：168cm 穿 127 被官方判定偏短并推荐 137；矮个子反而需留意长裙拖地和比例",
+      "当前淘宝在售价、销量和再贩状态未取到；¥398 的后续帖子只能说明价格曾变化，不能当作现货实锤"
+    ],
+    "verdict_short": "奥菲莉娅是灵犀帝政线里“视觉完整、价格友好、长尾稳定”的代表：¥338 一团价把缎面、同色刺绣和披肩层次压在了入门区间，却仍能在两年后的帝政横评里被明确点名。它不是付款规模已证实的头部爆款，更像审美口碑扎实的腰部款。适合重视油画 / 希腊氛围、能接受缎面护理和胸线试穿风险的人；购买前应优先核对当前再贩状态、胸围放量与 127 / 137 裙长。"
+  },
+  "design_inspiration": {
+    "source_type": "ai_analyzed",
+    "source_note": "官方只明确说明“参考传统帝政做改良”与“传统帝政抽褶花包袖”；文学意象和古希腊服装谱系为基于款名、官图与结构的分析，不视作官方设定。",
+    "theme": "奥菲莉娅的柔和悲剧美学 × Empire / Regency 的古希腊复兴轮廓",
+    "official_quote": "这套版型是参考传统帝政做的改良，大码可以穿；袖子是参考传统帝政做的抽褶花包袖。",
+    "kol_quote": "好像油画的帝政裙。",
+    "elements": [
+      {
+        "name": "胸下高腰 + 斜向褶裥",
+        "source_lineage": "18 世纪末至 19 世纪初 Empire line；以胸下分割和纵向垂坠拉长比例，借鉴古希腊 chiton 的裹叠视觉",
+        "purpose": "建立帝政核心廓形，并用不对称胸褶弱化纯复原服的单调感",
+        "official": true
+      },
+      {
+        "name": "抽褶花包袖",
+        "source_lineage": "品牌明确称参考传统帝政袖型；袖顶抽褶与珍珠节点将小泡袖处理得更像花苞",
+        "purpose": "在轻盈廓形上增加肩部体积，并与珍珠配件形成焦点",
+        "official": true
+      },
+      {
+        "name": "单侧披肩 / 垂袖",
+        "source_lineage": "Regency 礼服常见披帛与 drapery 的当代装饰化表达",
+        "purpose": "增加动态与层次；实穿者直接称“披肩是灵魂”",
+        "official": false,
+        "ai_inferred": true
+      },
+      {
+        "name": "同色大面积刺绣",
+        "source_lineage": "以低对比纹样模拟古典礼服暗纹和油画中的柔和织物细节",
+        "purpose": "在不破坏单色垂坠感的前提下，让裙摆近看有工艺层次",
+        "official": false,
+        "ai_inferred": true
+      },
+      {
+        "name": "珍珠肩饰与胸针",
+        "source_lineage": "19 世纪肖像画常见珍珠首饰被移到肩部结构节点，兼具固定褶裥与装饰作用",
+        "purpose": "把视线集中在肩颈与高腰线上，强化古典肖像感；也是用户评价两极的细节",
+        "official": false,
+        "ai_inferred": true
+      }
+    ],
+    "design_thinking": "灵犀没有把奥菲莉娅做成繁复花嫁，而是用单色缎面、同色刺绣和少量珍珠控制信息量，再用斜褶与披肩制造光影。核心取舍是“先保留帝政垂坠，再以摄影可见的局部工艺提升价值感”；代价是胸口结构、缎面褶皱和刺绣护理会比照片更依赖真实试穿与打理。",
+    "for_image_gen_prompt": "A full-length Regency-era Empire-line gown in warm champagne ivory satin, high waist just below the bust, asymmetric draped bodice, small gathered flower-puff sleeves pinned with pearls, one long shoulder drape, and subtle tonal botanical embroidery across the lower skirt. Classical Greek revival silhouette with an Ophelia-like melancholic oil-painting mood, soft golden side light against a dark studio background, elegant and historically inspired rather than fantasy armor, clear front view of the entire dress."
+  },
+  "posters": [
+    "images/灵犀_奥菲莉娅/xhs_official_full.webp",
+    "images/灵犀_奥菲莉娅/xhs_official_silhouette.webp",
+    "images/灵犀_奥菲莉娅/xhs_official_bodice.webp",
+    "images/灵犀_奥菲莉娅/xhs_official_embroidery.webp",
+    "images/灵犀_奥菲莉娅/xhs_official_fit.webp"
+  ],
+  "posters_source": "小红书品牌官号 2024-05-11 主图 + 2024-07-06 截团实穿帖的 CDN 原图（非平台截图）",
+  "verified": true,
+  "verified_at": "2026-07-17",
+  "verified_by": "Codex（Browser Harness 19511 独立实例交叉核验：小红书品牌 / 买家帖、抖音品牌 / 用户结果、微博官号 / 圈内投稿、Google 淘宝索引）",
+  "raw_sources": {
+    "taobao_item_id": null,
+    "taobao_indexed_url": "https://www.taobao.com/list/item/Sjd3VnFPVW44bUk1U1NET0NmclU1UT09.htm",
+    "xhs_search_keyword": "灵犀 奥菲莉娅 帝政",
+    "xhs_official_note_id": "663f6607000000001e03990f",
+    "weibo_uid": "5599880115",
+    "douyin_note_ids": [
+      "7377727265947323682",
+      "7386178633330642191",
+      "7383175462962449714"
+    ]
+  },
+  "popularity": {
+    "scale_tier": "腰部（销量未取到）",
+    "buzz_tier": "圈内广传",
+    "authority_tier": "帝政代表款",
+    "resale_tier": "待观察",
+    "composite_label": "帝政稳健中间款",
+    "evidence": [
+      "淘宝付款规模与当前销量因滑块未取到，不满足头部 / 畅销款的销量证据门槛 → 规模保守判腰部",
+      "XHS 5851 赞的 14 款帝政横评明确列第 4；独立长期实穿帖 576 赞 / 140 藏 → 圈内广传",
+      "品牌预告 329 赞 / 91 藏 / 65 评，抖音官方首发 290 赞、尺码帖 147 赞 → 多平台有持续但非破圈级声量",
+      "2025 年仍有微博价格型种草、XHS 长期实穿，且有求收 / 转手内容；但缺成交价样本 → 二手保值待观察"
+    ]
+  }
+}

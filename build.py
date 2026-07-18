@@ -104,6 +104,8 @@ def _extract_status(item):
 
     if "现货" in blob:
         return ("现货", 5)
+    if "历史团" in blob or ("截止" in blob and not sales):
+        return ("历史团", 1)
     if sales_v >= 95 and "千人加购" not in sales:
         return ("已开团", 4)
     if "再贩" in blob or "再片反" in blob or "重团" in blob:
@@ -461,7 +463,7 @@ def render_summary_row(item):
       <td class="col-time">{_render_release_btn(item.get("release", {}) or {}, item.get("name",""))}</td>
       <td class="col-style">{style_chips}</td>
     </tr>
-    '''
+    '''.rstrip()
 
 
 CANONICAL_STYLES = ["甜lo", "军lo", "古典", "哥特", "王子lo", "中华", "海军", "花嫁", "茶会"]
@@ -948,7 +950,13 @@ def render_detail(item):
     ])
     xhs_html = shop_block("小红书", shops.get("xiaohongshu"), [
         ("品牌账号", "official_account"), ("品牌主页", "official_url", True),
+        ("品牌主图帖", "source_post_url", True), ("官方实穿帖", "fit_post_url", True),
         ("画师账号", "illustrator_account"), ("画师主页", "illustrator_url", True),
+    ])
+    douyin_html = shop_block("抖音", shops.get("douyin"), [
+        ("品牌账号", "official_account"), ("品牌主页", "official_url", True),
+        ("搜索页", "search_url", True), ("品牌首发帖", "source_post_url", True),
+        ("官方实穿帖", "fit_post_url", True), ("首发日期", "post_date"),
     ])
 
     posters = item.get("posters", [])
@@ -967,16 +975,31 @@ def render_detail(item):
     taobao = item.get("shops", {}).get("taobao", {})
     if "淘宝" in (item.get("posters_source") or "") and taobao.get("url"):
         poster_links.append(("淘宝商品页", taobao["url"]))
+    xhs = item.get("shops", {}).get("xiaohongshu", {})
+    if xhs.get("source_post_url"):
+        poster_links.append(("小红书 品牌主图帖", xhs["source_post_url"]))
+    if xhs.get("fit_post_url"):
+        poster_links.append(("小红书 官方实穿帖", xhs["fit_post_url"]))
     posters_source_html = ""
     if poster_links:
         link_html = " · ".join(f'<a href="{esc(u)}" target="_blank">{esc(l)} ↗</a>' for l, u in poster_links)
         posters_source_html = f'<div class="posters-source">📷 来源：{link_html}</div>'
 
-    hot_posts = item.get("hot_posts", {}).get("xiaohongshu", [])
     hot_posts_html = ""
-    if hot_posts:
-        rendered = "".join(render_hot_post(p) for p in hot_posts)
-        hot_posts_html = f'<section class="hot-posts"><h3>小红书相关热门帖（{len(hot_posts)}）</h3>{rendered}</section>'
+    hot_post_sections = []
+    for platform_key, platform_label in [
+        ("xiaohongshu", "小红书"),
+        ("weibo", "微博"),
+        ("douyin", "抖音"),
+    ]:
+        platform_posts = item.get("hot_posts", {}).get(platform_key, [])
+        if platform_posts:
+            rendered = "".join(render_hot_post(p) for p in platform_posts)
+            section_title = "小红书相关热门帖" if platform_key == "xiaohongshu" else f"{platform_label}相关帖"
+            hot_post_sections.append(
+                f'<section class="hot-posts"><h3>{section_title}（{len(platform_posts)}）</h3>{rendered}</section>'
+            )
+    hot_posts_html = "".join(hot_post_sections)
 
     insp = item.get("design_inspiration", {})
     insp_html = ""
@@ -1236,7 +1259,7 @@ def render_detail(item):
     <div class="shops">
       {taobao_html}
       {weibo_html}
-      {xhs_html}
+      {xhs_html}{douyin_html}
     </div>
     {insp_html}
     {hot_posts_html}
