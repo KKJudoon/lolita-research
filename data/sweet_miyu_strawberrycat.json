@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-24",
+  "verified_at": "2026-10-25",
   "status_label": "资料待补",
   "style_summary": "详情含有意向金/无意向金及多套装，团次未核",
   "posters": [
@@ -43,17 +43,26 @@
       "O03",
       "O04",
       "XC1",
-      "XC2"
+      "XC2",
+      "R03",
+      "T04"
     ],
     "verified_facts": [
       "商品参数标预售且显示付款后120天内发货，选项又含有意向金单jsk(现货)",
-      "店铺链接来自商品页进店入口"
+      "店铺链接来自商品页进店入口",
+      "已找到使用相同店铺图源的42Lolita商品页，厘米尺码与材质陈述单列为零售商参考。"
     ],
     "price_records": [
       {
         "amount_cny": "19",
         "basis": "unselected_minimum_not_dress_price",
         "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "198",
+        "basis": "historical_third_party_reference",
+        "usable_as_current_full_payment": false,
+        "source": "T04"
       }
     ],
     "price_comparable": false,
@@ -77,10 +86,64 @@
     "unknowns": [
       "选齐SKU的价格与意向金权益",
       "各SKU的现货/预售关系",
-      "面料与厘米尺码",
+      "原店同批次面料、洗标及厘米尺码复核（已有零售商参考）",
       "反馈是否同批次独立购买"
     ],
-    "discussion": "把正裙与头饰固定系统分别评估，明确每组内搭、BNT/KC、围裙和拖尾包含物。"
+    "discussion": "把正裙与头饰固定系统分别评估，明确每组内搭、BNT/KC、围裙和拖尾包含物。",
+    "retailer_reference": {
+      "source": "R03",
+      "name": "Strawberry Cat",
+      "brand_label": "Honeycomb Whisper",
+      "observed_at": "2026-10-25",
+      "identity_evidence": [
+        "零售页与原淘宝详情共用图号O1CN011J5LzM1kgblugdCt4、上传账号2212590974713；已目视确认同一张列车内红色套装展示照片，裁剪不同。",
+        "JSK、拖尾、围裙、内搭与BNT/KC套装结构及S/M/L/XL对应。Honeycomb Whisper未取得品牌方中英命名证明，仅保留为零售页标注。"
+      ],
+      "limitations": "以下为独立零售商提供的参考资料。相同图片只建立款式资料对应，不证明授权关系、同批次或当前淘宝SKU一致；材质尚无原店洗标复核，尺码不替代试穿。",
+      "material": "零售页主面料写Polyester（聚酯纤维）；原店洗标、里料和同批次成分尚未确认。",
+      "components": "JSK加拖尾，以及围裙、BNT、KC、内搭单件；套装按BNT/KC、有无内搭分别列出。页面写不含颈饰，模特手袋和鞋袜不自动计入。",
+      "size_headers": [
+        "尺码",
+        "弹性胸围",
+        "弹性腰围",
+        "裙长"
+      ],
+      "size_rows": [
+        [
+          "S",
+          "81–93",
+          "63–76",
+          "86"
+        ],
+        [
+          "M",
+          "85–97",
+          "67–80",
+          "87"
+        ],
+        [
+          "L",
+          "89–101",
+          "71–84",
+          "88"
+        ],
+        [
+          "XL",
+          "95–105",
+          "76–89",
+          "89"
+        ]
+      ],
+      "measurement_note": "单位：厘米。原页说明为平铺测量，可能有2–3厘米误差；弹性胸围/腰围按原表记录。当前淘宝批次是否使用同表仍待核。",
+      "offer": {
+        "currency": "USD",
+        "amount": "41.99",
+        "selection": "Printed JSK + Trailing / S",
+        "sku": "LOL-DRE-349910",
+        "fulfillment": "读取时零售页标预售30天（不含周末/假日）；原淘宝未选SKU曾显示120天，两渠道和批次不能合并。"
+      },
+      "identity_summary": "原淘宝列车内红色套装照片在零售页中出现；JSK、拖尾、围裙、BNT/KC与内搭组合相符。"
+    }
   },
   "research_sources": {
     "O03": {
@@ -102,6 +165,16 @@
       "kind": "user_post",
       "url": "https://www.xiaohongshu.com/explore/69d935440000000022024c99",
       "scope": "草莓猫猫实拍与头饰固定评论"
+    },
+    "R03": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/printed-sweet-lolita-jsk-dress-embroidered-strawberry",
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+    },
+    "T04": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/28135",
+      "scope": "2026-10-25公开图鉴实读：蜜语糖匣草莓猫猫、小高腰JSK、红色，参考198，状态未确定；非当前SKU"
     }
   },
   "popularity": {

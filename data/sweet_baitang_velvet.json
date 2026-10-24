@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-24",
+  "verified_at": "2026-10-25",
   "status_label": "SKU展示价已核",
   "style_summary": "商品1006763616986，粉色M码三个组合",
   "posters": [
@@ -44,12 +44,14 @@
     "source_refs": [
       "O05",
       "O06",
-      "T03"
+      "T03",
+      "R02"
     ],
     "verified_facts": [
       "选项列红白/粉/白及S/M/L，但不代表全组合可售",
       "已实际查看单裙与组合SKU图，见本页参考图",
-      "款名丝绒不能代替成分证明"
+      "款名丝绒不能代替成分证明",
+      "已找到使用相同店铺图源的42Lolita商品页，厘米尺码与材质陈述单列为零售商参考。"
     ],
     "price_records": [
       {
@@ -97,20 +99,75 @@
     ],
     "price_comparable": true,
     "price_comparable_scope": "仅本商品内、所核粉色M码组合的展示价可对照；不表示其他五款已有可比全款",
-    "feedback": [],
+    "feedback": [
+      {
+        "source": "R02",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "海外零售页有作者认可外观与商品图接近及质量；是个体自述，未独立核实购买与批次。"
+      },
+      {
+        "source": "R02",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "另一条评价认可质量，但称等待约两个月；同页也有发货较快的自述。不能由这些不同订单推定统一交期。"
+      }
+    ],
     "unknowns": [
       "同名985874514171与主核链接的关系",
       "成分/里料/克重",
-      "厘米尺码",
+      "原店同批次厘米尺码复核（已有零售商参考）",
       "团次/其他配色尺码状态",
       "结算优惠与实付",
-      "独立实穿反馈"
+      "国内独立实穿与同批次反馈（已有海外零售页自述）"
     ],
     "images": [
       "assets/sweet/velvet-single.jpg",
       "assets/sweet/velvet-set.jpg"
     ],
-    "discussion": "将单裙、背后蝴蝶结与头纱的包含物及交期并列展示；模特搭配物不自动计入套餐。"
+    "discussion": "将单裙、背后蝴蝶结与头纱的包含物及交期并列展示；模特搭配物不自动计入套餐。",
+    "retailer_reference": {
+      "source": "R02",
+      "name": "Velvet Sweetheart",
+      "brand_label": "Sugar Girl",
+      "observed_at": "2026-10-25",
+      "identity_evidence": [
+        "零售页使用原淘宝粉色单裙图O1CN01PwwGI01f6MKTgneKr，上传账号2661253957一致，已目视对照。",
+        "红白/粉/白、单裙/背后拖尾蝴蝶结/头纱及S/M/L结构与已核淘宝选项相符；不证明同批次。"
+      ],
+      "limitations": "以下为独立零售商提供的参考资料。相同图片只建立款式资料对应，不证明授权关系、同批次或当前淘宝SKU一致；材质尚无原店洗标复核，尺码不替代试穿。",
+      "material": "零售页写Polyester（聚酯纤维），未给比例、里料、克重；款名“丝绒”仍不构成成分证明。",
+      "components": "红白、粉、白各有单裙、加拖尾蝴蝶结、加头纱、头纱加拖尾组合；按选项区分，裙撑需另配。",
+      "size_headers": [
+        "尺码",
+        "裙长",
+        "弹性胸围"
+      ],
+      "size_rows": [
+        [
+          "S",
+          "95",
+          "80–94"
+        ],
+        [
+          "M",
+          "96",
+          "84–98"
+        ],
+        [
+          "L",
+          "97",
+          "88–102"
+        ]
+      ],
+      "measurement_note": "单位：厘米。原页说明为平铺测量，可能有2–3厘米误差；弹性胸围/腰围按原表记录。当前淘宝批次是否使用同表仍待核。",
+      "offer": {
+        "currency": "USD",
+        "amount": "46.99",
+        "selection": "Pink JSK Only / S",
+        "sku": "LOL-DRE-330704",
+        "fulfillment": "读取时零售页标预售30天，描述另列现货7–10个工作日；未逐一核所有组合库存，不能覆盖淘宝粉M的既有交期记录。"
+      },
+      "identity_summary": "原淘宝所选粉色单裙照片在零售页中出现；红白/粉/白配色及拖尾、头纱组合相符。"
+    }
   },
   "research_sources": {
     "O05": {
@@ -127,6 +184,11 @@
       "kind": "third_party_library",
       "url": "https://lolitalibrary.com/library/detail/31813",
       "scope": "第三方图鉴，更新时点未明"
+    },
+    "R02": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/doll-like-sweet-lolita-jumper-dress-bow-accents",
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
     }
   },
   "popularity": {

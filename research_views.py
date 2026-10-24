@@ -15,8 +15,8 @@ CSS = """
 """
 
 
-def shell(title, body, prefix="../"):
-    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="甜系Lolita款式、SKU价格与用户反馈，保留原始来源和待核字段。"><title>{esc(title)} · Lolita 调研</title><style>{CSS}</style></head><body><nav class="nav" aria-label="网站栏目"><a href="{prefix}index.html">全部款式</a><a class="active" href="{prefix}sweet/index.html">甜系专题</a><a href="{prefix}illustrators/index.html">画师调研</a><a href="{prefix}reports/junlo_prince_report.html">综合报告</a></nav><main>{body}<footer class="footer">资料核验日期：2026-10-24 · 选样与评论不代表整体市场；价格与发货状态以对应SKU及核验时点为限。</footer></main></body></html>'''
+def shell(title, body, prefix="../", updated="2026-10-24"):
+    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="甜系Lolita款式、SKU价格与用户反馈，保留原始来源和待核字段。"><title>{esc(title)} · Lolita 调研</title><style>{CSS}</style></head><body><nav class="nav" aria-label="网站栏目"><a href="{prefix}index.html">全部款式</a><a class="active" href="{prefix}sweet/index.html">甜系专题</a><a href="{prefix}illustrators/index.html">画师调研</a><a href="{prefix}reports/junlo_prince_report.html">综合报告</a></nav><main>{body}<footer class="footer">资料核验日期：{esc(updated)} · 选样与评论不代表整体市场；价格与发货状态以对应SKU及核验时点为限。</footer></main></body></html>'''
 
 
 KINDS = {
@@ -25,13 +25,35 @@ KINDS = {
     "secondary_purchase_post": "二手渠道自述", "brand_named_account": "品牌同名账号／主体关系待核",
     "wear_display_commercial_unknown": "穿着展示／合作关系未知",
     "promotion_purchase_unknown": "推广内容／购买关系未知",
+    "third_party_retailer": "独立零售商品页／原店批次待核",
 }
+
+
+def render_retailer_reference(reference, sources):
+    source = sources[reference["source"]]
+    body = '<section class="section" id="retailer-reference"><h2>独立零售页补充</h2>'
+    body += f'<p><a href="{esc(source["url"])}" target="_blank" rel="noopener">42Lolita · {esc(reference["name"])} ↗</a><br><span class="caption">零售页品牌标注：{esc(reference["brand_label"])} · 读取日期：{esc(reference["observed_at"])}</span></p>'
+    body += '<p class="notice">'+esc(reference["limitations"])+'</p>'
+    body += '<h3>对应依据</h3><p>'+esc(reference["identity_summary"])+'</p>'
+    body += '<details><summary>查看图源核对记录</summary><ul>'+''.join('<li>'+esc(x)+'</li>' for x in reference["identity_evidence"])+'</ul></details>'
+    body += '<p><strong>材质陈述：</strong>'+esc(reference["material"])+ '</p>'
+    body += '<p><strong>包含物与分售：</strong>'+esc(reference["components"])+ '</p>'
+    body += '<h3>零售商尺码表 · 厘米</h3><div class="table-scroll"><table><thead><tr>'
+    body += ''.join('<th scope="col">'+esc(x)+'</th>' for x in reference["size_headers"])
+    body += '</tr></thead><tbody>'
+    for row in reference["size_rows"]:
+        body += '<tr>'+''.join('<td>'+esc(x)+'</td>' for x in row)+'</tr>'
+    body += '</tbody></table></div><p class="caption">'+esc(reference["measurement_note"])+'</p>'
+    offer = reference["offer"]
+    body += f'<details><summary>查看海外零售报价记录</summary><p>{esc(offer["selection"])}：{esc(offer["currency"])} {esc(offer["amount"])}；零售SKU {esc(offer["sku"])}。</p><p>{esc(offer["fulfillment"])}</p><p class="caption">该报价仅属于上述海外零售页和所选组合，未核结算运费、税费与实付；不折算成淘宝价，也不替代下方原店交期。</p></details></section>'
+    return body
 
 
 def render_research_detail(item):
     r = item["research_record"]
     sources = item["research_sources"]
-    body = f'<a class="back" href="../sweet/index.html">← 返回甜系专题</a><header class="detail-head"><div class="eyebrow">甜系研究 · 2026.10.24</div><div class="brand">{esc(item["brand"])}</div><h1>{esc(item["name"])}</h1><p class="version">{esc(r["version"])}</p><span class="pill">{esc(item["status_label"])}</span></header>'
+    updated = item.get("verified_at", "2026-10-24")
+    body = f'<a class="back" href="../sweet/index.html">← 返回甜系专题</a><header class="detail-head"><div class="eyebrow">甜系研究 · {esc(updated.replace("-", "."))}</div><div class="brand">{esc(item["brand"])}</div><h1>{esc(item["name"])}</h1><p class="version">{esc(r["version"])}</p><span class="pill">{esc(item["status_label"])}</span></header>'
     if item.get("posters"):
         figures = []
         for path in item["posters"]:
@@ -40,6 +62,8 @@ def render_research_detail(item):
     else:
         body += '<p class="notice">本条目的对版图片仍待补齐，先保留已读来源；不以近似款配图。</p>'
     body += '<section class="section"><h2>已核到的材料</h2><ul>' + ''.join('<li>'+esc(x)+'</li>' for x in r["verified_facts"]) + '</ul></section>'
+    if r.get("retailer_reference"):
+        body += render_retailer_reference(r["retailer_reference"], sources)
     body += '<section class="section"><h2>价格与发货</h2><p>'+esc(item["price"]["note"])+'</p>'
     records = r.get("price_records", [])
     selected = [p for p in records if p["basis"] == "selected_sku_display"]
@@ -57,7 +81,8 @@ def render_research_detail(item):
     if r["feedback"]:
         for f in r["feedback"]:
             s = sources[f["source"]]
-            body += f'<article class="feedback"><div class="kind">个体自述／可见评论</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应原帖 ↗</a></article>'
+            label = "零售页评价／批次与独立性未核" if f["nature"] == "retailer_review_visible_self_report" else "个体自述／可见评论"
+            body += f'<article class="feedback"><div class="kind">{esc(label)}</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应来源 ↗</a></article>'
         body += '<p class="caption">正文与可见评论已读；未观看的视频不写成视频结论。版本、配色、体型、渠道和推广关系未全部统一。</p>'
     else:
         body += '<p class="muted">尚无与本条目具体版本对应的独立实穿材料；宣传不替代用户验收。</p>'
@@ -70,11 +95,15 @@ def render_research_detail(item):
     if item.get("image_source_url"):
         body += f'<li><a href="{esc(item["image_source_url"])}" target="_blank" rel="noopener">参考图片出处 ↗</a><small>{esc(item.get("image_note", ""))}</small></li>'
     body += '</ul></section>'
-    return shell(item["name"], body)
+    return shell(item["name"], body, updated=updated)
 
 
 def render_topic(items, sample_sources):
-    body = '<header class="hero"><div class="eyebrow">SWEET LOLITA · 2026.10.24 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>3</strong> <span>家店铺线索</span></div><div><strong>6</strong> <span>个研究条目</span></div><div><strong>17</strong> <span>篇小红书相关材料</span></div></div><p class="muted">本批为1个系列待选款、5个款式候选；17篇材料中含2篇品牌同名账号宣传，不代表17名独立买家。</p></header>'
+    updated = max(i.get("verified_at", "2026-10-24") for i in items)
+    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>3</strong> <span>家店铺线索</span></div><div><strong>6</strong> <span>个研究条目</span></div><div><strong>17</strong> <span>篇小红书相关材料</span></div></div><p class="muted">本批为1个系列待选款、5个款式候选；17篇材料中含2篇品牌同名账号宣传，不代表17名独立买家。</p></header>'
+    references = [i for i in items if i["research_record"].get("retailer_reference")]
+    if references:
+        body += '<section class="section"><h2>本次补充：公开商品资料</h2><p>以下款式已补独立零售页的材质陈述、套装说明和厘米尺码表，可从款式详情直接查看。按相同商品图及结构建立对应；原店同批次参数仍待复核，海外报价与淘宝价分开。</p><div class="link-row">'+''.join(f'<a href="../items/{esc(i["id"])}.html#retailer-reference">{esc(i["name"])} →</a>' for i in references)+'</div></section>'
     body += '<div class="controls"><label>搜索款名或品牌<input id="sweet-search" type="search" placeholder="例如：梦呓蝶、蜜语糖匣"></label><label>店铺<select id="brand-filter"><option value="">全部店铺</option>' + ''.join(f'<option>{esc(b)}</option>' for b in dict.fromkeys(i["brand"] for i in items)) + '</select></label><button id="clear-filter" type="button">清除筛选</button><span class="count" id="result-count" aria-live="polite">显示6个条目</span></div><div class="grid" id="sweet-grid">'
     for item in items:
         url = '../items/'+item['id']+'.html'
@@ -91,7 +120,7 @@ const cards=Array.from(document.querySelectorAll('.tile')), search=document.getE
 function filterCards(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(c=>{const show=(!q||c.dataset.search.toLowerCase().includes(q))&&(!brand.value||c.dataset.brand===brand.value);c.hidden=!show;if(show)count++});document.getElementById('result-count').textContent='显示'+count+'个条目';document.getElementById('empty-state').hidden=count>0}
 search.addEventListener('input',filterCards);brand.addEventListener('change',filterCards);document.getElementById('clear-filter').addEventListener('click',()=>{search.value='';brand.value='';filterCards()});
 </script>'''
-    return shell('甜系款式调研', body+script)
+    return shell('甜系款式调研', body+script, updated=updated)
 
 
 def build_topic(root, items):

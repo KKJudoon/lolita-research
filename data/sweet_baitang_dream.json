@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-24",
+  "verified_at": "2026-10-25",
   "status_label": "资料待补",
   "style_summary": "两条店铺同名商品关系未核",
   "posters": [
@@ -43,11 +43,13 @@
     "source_refs": [
       "O05",
       "T02",
-      "XD1"
+      "XD1",
+      "R01"
     ],
     "verified_facts": [
       "店铺首页直接给出两个商品链接，均卡片展示164.88元",
-      "第三方图鉴记录粉/蓝、2025-05-01，不能当当前官方版本确认"
+      "第三方图鉴记录粉/蓝、2025-05-01，不能当当前官方版本确认",
+      "已找到使用相同店铺图源的42Lolita商品页，厘米尺码与材质陈述单列为零售商参考。"
     ],
     "price_records": [
       {
@@ -76,16 +78,65 @@
         "source": "XD1",
         "nature": "opposite_comment",
         "summary": "同帖另一粉色买家自述做工可接受、穿着合适；体型条件不同。"
+      },
+      {
+        "source": "R01",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "海外零售页一条评价认可裙子，并说还要另购裙撑；仅为该渠道个体自述，不能合并成国内买家总体结论。"
       }
     ],
     "unknowns": [
       "两个同名链接关系",
       "选定SKU价格/发货",
-      "成分及厘米尺码",
+      "原店同批次成分、洗标及厘米尺码复核（已有零售商参考）",
       "反馈对应版本批次",
       "商品原页SKU与规格仍待核验"
     ],
-    "discussion": "胸口覆盖、内搭和体型条件应与正反反馈一起呈现，不能由单帖得出整款质量。"
+    "discussion": "胸口覆盖、内搭和体型条件应与正反反馈一起呈现，不能由单帖得出整款质量。",
+    "retailer_reference": {
+      "source": "R01",
+      "name": "Dreamy Butterfly",
+      "brand_label": "Sugar Girl",
+      "observed_at": "2026-10-25",
+      "identity_evidence": [
+        "与已读白糖少女店铺图片共享O1CN01M93fo61f6MHprCYWi、O1CN01mPTOmJ1f6MHoeZQ3f图号及上传账号2661253957。",
+        "公开图与既有梦呓蝶图鉴的胸前系带、肩部花边、裙摆层次及粉/蓝配色对应；当前两个淘宝链接和零售批次的关系仍待核。"
+      ],
+      "limitations": "以下为独立零售商提供的参考资料。相同图片只建立款式资料对应，不证明授权关系、同批次或当前淘宝SKU一致；材质尚无原店洗标复核，尺码不替代试穿。",
+      "material": "零售页写Polyester（聚酯纤维），未给成分百分比或独立里料成分。",
+      "components": "粉/蓝单JSK、JSK加拖尾、再加发带分组；拖尾、发带、内搭也分售。页面明确不含裙撑；搭配图不等于所选套餐。",
+      "size_headers": [
+        "尺码",
+        "裙长",
+        "弹性胸围"
+      ],
+      "size_rows": [
+        [
+          "S",
+          "84",
+          "82–94"
+        ],
+        [
+          "M",
+          "85",
+          "84–96"
+        ],
+        [
+          "L",
+          "86",
+          "86–98"
+        ]
+      ],
+      "measurement_note": "单位：厘米。原页说明为平铺测量，可能有2–3厘米误差；弹性胸围/腰围按原表记录。当前淘宝批次是否使用同表仍待核。",
+      "offer": {
+        "currency": "USD",
+        "amount": "34.99",
+        "selection": "Pink - Signle JSK Only / S",
+        "sku": "LOL-DRE-309301",
+        "fulfillment": "读取时零售页标预售45天（不含周末/假日）；仅记录该渠道文案，不当作淘宝交期。"
+      },
+      "identity_summary": "零售页与已读店铺共享商品图片；粉/蓝配色、胸前系带、肩部花边和裙摆层次相符。"
+    }
   },
   "research_sources": {
     "O05": {
@@ -102,6 +153,11 @@
       "kind": "user_post",
       "url": "https://www.xiaohongshu.com/explore/6849c1990000000012007a9c",
       "scope": "梦呓蝶做工/版型自述及同帖相反评论"
+    },
+    "R01": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/ballet-style-sweet-lolita-jsk-dress-with-large-bow-trailing",
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
     }
   },
   "popularity": {
