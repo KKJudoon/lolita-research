@@ -44,6 +44,11 @@ def render_retailer_reference(reference, sources):
     for row in reference["size_rows"]:
         body += '<tr>'+''.join('<td>'+esc(x)+'</td>' for x in row)+'</tr>'
     body += '</tbody></table></div><p class="caption">'+esc(reference["measurement_note"])+'</p>'
+    for extra in reference.get("additional_size_tables", []):
+        body += '<details><summary>'+esc(extra["title"])+'</summary><div class="table-scroll"><table><thead><tr>'
+        body += ''.join('<th scope="col">'+esc(x)+'</th>' for x in extra["headers"])
+        body += '</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+esc(x)+'</td>' for x in row)+'</tr>' for row in extra["rows"])
+        body += '</tbody></table></div></details>'
     offer = reference["offer"]
     body += f'<details><summary>查看海外零售报价记录</summary><p>{esc(offer["selection"])}：{esc(offer["currency"])} {esc(offer["amount"])}；零售SKU {esc(offer["sku"])}。</p><p>{esc(offer["fulfillment"])}</p><p class="caption">该报价仅属于上述海外零售页和所选组合，未核结算运费、税费与实付；不折算成淘宝价，也不替代下方原店交期。</p></details></section>'
     return body
@@ -81,7 +86,7 @@ def render_research_detail(item):
     if r["feedback"]:
         for f in r["feedback"]:
             s = sources[f["source"]]
-            label = "零售页评价／批次与独立性未核" if f["nature"] == "retailer_review_visible_self_report" else "个体自述／可见评论"
+            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买"}.get(f["nature"], "个体自述／可见评论")
             body += f'<article class="feedback"><div class="kind">{esc(label)}</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应来源 ↗</a></article>'
         body += '<p class="caption">正文与可见评论已读；未观看的视频不写成视频结论。版本、配色、体型、渠道和推广关系未全部统一。</p>'
     else:
@@ -98,20 +103,28 @@ def render_research_detail(item):
     return shell(item["name"], body, updated=updated)
 
 
-def render_topic(items, sample_sources):
+def render_topic(items, sample_sources, sampling=None):
+    sampling = sampling or {"read_records":18,"excluded_records":1,"brand_named_account_posts":2}
     updated = max(i.get("verified_at", "2026-10-24") for i in items)
-    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>3</strong> <span>家店铺线索</span></div><div><strong>6</strong> <span>个研究条目</span></div><div><strong>17</strong> <span>篇小红书相关材料</span></div></div><p class="muted">本批为1个系列待选款、5个款式候选；17篇材料中含2篇品牌同名账号宣传，不代表17名独立买家。</p></header>'
+    series_count = sum(i["research_record"].get("record_type") == "series" for i in items)
+    brand_count = len({i["brand"] for i in items})
+    source_count = len(sample_sources)
+    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{series_count}个系列待选款、{len(items)-series_count}个款式候选；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
+    added = max((i.get("added_at", "") for i in items), default="")
+    newest = [i for i in items if added and i.get("added_at") == added]
+    if newest:
+        body += '<section class="section"><h2>'+esc(added)+' 新增'+str(len(newest))+'款</h2><p>新增条目分别记录图片、规格、反馈和来源缺口，原店信息不齐的字段继续标注待核。</p><div class="link-row">'+''.join(f'<a href="../items/{esc(i["id"])}.html">{esc(i["name"])} →</a>' for i in newest)+'</div></section>'
     references = [i for i in items if i["research_record"].get("retailer_reference")]
     if references:
-        body += '<section class="section"><h2>本次补充：公开商品资料</h2><p>以下款式已补独立零售页的材质陈述、套装说明和厘米尺码表，可从款式详情直接查看。按相同商品图及结构建立对应；原店同批次参数仍待复核，海外报价与淘宝价分开。</p><div class="link-row">'+''.join(f'<a href="../items/{esc(i["id"])}.html#retailer-reference">{esc(i["name"])} →</a>' for i in references)+'</div></section>'
-    body += '<div class="controls"><label>搜索款名或品牌<input id="sweet-search" type="search" placeholder="例如：梦呓蝶、蜜语糖匣"></label><label>店铺<select id="brand-filter"><option value="">全部店铺</option>' + ''.join(f'<option>{esc(b)}</option>' for b in dict.fromkeys(i["brand"] for i in items)) + '</select></label><button id="clear-filter" type="button">清除筛选</button><span class="count" id="result-count" aria-live="polite">显示6个条目</span></div><div class="grid" id="sweet-grid">'
+        body += '<section class="section"><h2>公开商品资料</h2><p>以下款式已补独立零售页的材质陈述、套装说明和厘米尺码表，可从款式详情直接查看。各款分别注明来源和对应依据；原店同批次参数仍待复核，海外报价与淘宝价分开。</p><div class="link-row">'+''.join(f'<a href="../items/{esc(i["id"])}.html#retailer-reference">{esc(i["name"])} →</a>' for i in references)+'</div></section>'
+    body += '<div class="controls"><label>搜索款名或品牌<input id="sweet-search" type="search" placeholder="例如：梦呓蝶、奶油喵"></label><label>店铺<select id="brand-filter"><option value="">全部店铺</option>' + ''.join(f'<option>{esc(b)}</option>' for b in dict.fromkeys(i["brand"] for i in items)) + '</select></label><button id="clear-filter" type="button">清除筛选</button><span class="count" id="result-count" aria-live="polite">显示'+str(len(items))+'个条目</span></div><div class="grid" id="sweet-grid">'
     for item in items:
         url = '../items/'+item['id']+'.html'
         visual = f'<a class="visual" href="{url}"><img src="../{esc(item["posters"][0])}" alt="{esc(item["name"])}参考图" loading="lazy"></a>' if item.get('posters') else f'<a class="visual empty" href="{url}">对版图片待补</a>'
         body += f'<article class="tile" data-brand="{esc(item["brand"])}" data-search="{esc(item["name"]+" "+item["brand"])}">{visual}<div class="tile-body"><div class="brand">{esc(item["brand"])}</div><h2><a href="{url}">{esc(item["name"])}</a></h2><p class="version">{esc(item["research_record"]["version"])}</p><span class="pill">{esc(item["status_label"])}</span><p class="price">{esc(item["price"]["display_label"])}</p><p class="caption">{esc(item.get("image_note") or "先保留有据可查的条目，不用近似款代图")}</p><a class="open" href="{url}">看款式资料与来源 →</a></div></article>'
     body += '</div><p id="empty-state" class="empty-state" hidden>没有匹配条目，试试其他款名或清除筛选。</p>'
     body += '<section class="section"><h2>本批先讨论什么</h2><ol><li>胸口覆盖、裙长与遮蔽：把身高、尺码、内搭和裙撑条件一起展示。</li><li>外观与触感：同版同色再比较，不从亮闪图片或“丝绒”款名推断成分。</li><li>单裙与小物：包含物、固定方式及每组发货期分别列清楚。</li></ol><p class="caption">这些问题来自有限样本，不用于热销排名、复购率或新店利润判断。</p></section>'
-    body += '<section class="section"><h2>采样与来源</h2><p>累计读取18篇小红书记录，排除1篇同名误配，保留以下17篇相关材料。按品牌、款名、实穿和相反意见主动选读，非随机样本；互动数不相加成销量，视频尚未观看。店铺和品牌同名账号的经营主体、原创权属未全部核验。</p><ol class="source-list">'
+    body += f'<section class="section"><h2>采样与来源</h2><p>累计读取{sampling["read_records"]}篇小红书记录，排除{sampling["excluded_records"]}篇同名误配，保留以下{source_count}篇相关材料。按品牌、款名、实穿和相反意见主动选读，非随机样本；并非每个新增款式都有小红书覆盖。互动数不相加成销量，视频尚未观看。店铺和品牌同名账号的经营主体、原创权属未全部核验。</p><ol class="source-list">'
     for s in sample_sources:
         body += f'<li><a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])} ↗</a><small>{esc(s["kind"])}</small></li>'
     body += '</ol><details><summary>一条同名候选为何撤回？</summary><p>原“蜜语糖匣·萌兔物语OP”缺独立商品依据；实际读到的同名测评属于小花猪水手服，已排除，另补青提咩咩候选。这不证明原款一定不存在。</p><a href="https://www.xiaohongshu.com/explore/6a3d440a000000000f0178c8" target="_blank" rel="noopener">查看被排除的同名原帖 ↗</a></details></section>'
@@ -125,10 +138,13 @@ search.addEventListener('input',filterCards);brand.addEventListener('change',fil
 
 def build_topic(root, items):
     selected = [i for i in items if i.get('research_record')]
+    selected.sort(key=lambda i: (i.get('added_at', ''), i.get('verified_at', '')), reverse=True)
     if not selected:
         return
     path = root / 'data/topics/sweet_sources.json'
     sample_sources = json.loads(path.read_text()) if path.exists() else []
+    sampling_path = root / 'data/topics/sweet_sampling.json'
+    sampling = json.loads(sampling_path.read_text()) if sampling_path.exists() else None
     dest = root / 'sweet'
     dest.mkdir(exist_ok=True)
-    (dest/'index.html').write_text(render_topic(selected, sample_sources))
+    (dest/'index.html').write_text(render_topic(selected, sample_sources, sampling))

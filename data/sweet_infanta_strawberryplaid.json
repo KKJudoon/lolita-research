@@ -1,0 +1,148 @@
+{
+  "id": "sweet_infanta_strawberryplaid",
+  "name": "Strawberry Plaid 草莓格纹JSK",
+  "brand": "婴梵塔 Infanta",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-25",
+  "added_at": "2026-10-25",
+  "status_label": "零售来源候选",
+  "style_summary": "补入较简洁的草莓格纹JSK，比较单裙/搭配物边界和带明确裙长口径的尺码记录。",
+  "posters": [
+    "assets/sweet/plaid-reference.jpg"
+  ],
+  "image_note": "零售页粉色搭配图；报价样本为浅蓝S，内搭、衬裙/裙撑与胸针不含",
+  "image_source_url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
+  "release": {
+    "type": "原店销售阶段待核",
+    "note": "商品描述写处理5–7天，站内通用说明另写现货7–10天；未确认适用优先级，均不等于国际送达总时长。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "原店价待核 · 有海外参考",
+    "note": "未取得原店选定SKU人民币价格；海外报价仅见独立零售页记录，未核运费、税费和结算实付。"
+  },
+  "shops": {
+    "retail": {
+      "shop_name": "42Lolita",
+      "url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
+      "note": "公开零售来源，原店关系待核"
+    }
+  },
+  "research_record": {
+    "id": "C10",
+    "record_type": "style",
+    "brand": "婴梵塔 Infanta",
+    "name": "Strawberry Plaid 草莓格纹JSK",
+    "version": "零售页粉/浅蓝JSK；仅核浅蓝S报价，中文正式款名待核",
+    "selection_reason": "补入较简洁的草莓格纹JSK，比较单裙/搭配物边界和带明确裙长口径的尺码记录。",
+    "product_urls": [
+      "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress"
+    ],
+    "source_refs": [
+      "R06"
+    ],
+    "verified_facts": [
+      "零售页记录Infanta、粉/浅蓝、JSK单裙以及胸前可拆蝴蝶结。",
+      "页面明确单裙不含内搭、延长衬裙/裙撑和胸针。",
+      "厘米表的裙长不含裙摆底部5厘米蕾丝；不能直接与含蕾丝的其他表比较。"
+    ],
+    "price_records": [],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "R06",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "一位自述胸围接近表上限、肩窄的作者肯定棉和蕾丝，但感觉腰线比照片高；原想要的配色尺码曾缺货而改选。该订单条件不代表当前所有组合库存。"
+      },
+      {
+        "source": "R06",
+        "nature": "retailer_giveaway_self_report",
+        "summary": "另一条正面评价明确说通过店铺抽奖获得裙子，不能计为自费购买体验。两条所见评价不足以代表总体满意度。"
+      }
+    ],
+    "unknowns": [
+      "中文正式款名与原店对应商品ID",
+      "初发及再版时间、当前团次",
+      "当前所有配色尺码库存与原店价格",
+      "成分洗标及是否与原店同版尺码",
+      "其他体型实穿与负面反馈；未找到不等于不存在"
+    ],
+    "discussion": "统一是否含底部蕾丝的裙长口径，并保留胸围接近上限、肩宽与腰线位置条件；单裙价格和完整搭配成本分开。",
+    "retailer_reference": {
+      "source": "R06",
+      "name": "Strawberry Plaid",
+      "brand_label": "Infanta",
+      "observed_at": "2026-10-25",
+      "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
+      "identity_summary": "直接采样零售页Strawberry Plaid JSK；婴梵塔Infanta双语品牌关系有其他图鉴入口支持，本款中文正式名与原店批次仍待核。",
+      "identity_evidence": [
+        "零售页产品代码LOT1053，浅蓝S为LOT105306。",
+        "草莓格纹为中文描述性译名，不声称原店正式款名。"
+      ],
+      "material": "零售页写Cotton、lace（棉与蕾丝），未给成分比例、里料或原店洗标。",
+      "components": "此报价仅JSK。内搭、延长衬裙/裙撑、胸针另配；搭配图不是整套包含物。",
+      "size_headers": [
+        "尺码",
+        "名义胸围",
+        "名义腰围",
+        "裙长（不含底部蕾丝）"
+      ],
+      "size_rows": [
+        [
+          "S",
+          "84",
+          "70",
+          "88"
+        ],
+        [
+          "M",
+          "88",
+          "74",
+          "90"
+        ],
+        [
+          "L",
+          "92",
+          "78",
+          "92"
+        ],
+        [
+          "XL",
+          "96",
+          "82",
+          "94"
+        ],
+        [
+          "XXL",
+          "100",
+          "86",
+          "96"
+        ]
+      ],
+      "measurement_note": "单位厘米；裙长明确不含底部5厘米蕾丝，平铺测量可能有2–3厘米误差。页面另写后背可伸约6厘米，未直接加到表内胸围或当作人体尺寸建议。",
+      "offer": {
+        "currency": "USD",
+        "amount": "48.99",
+        "selection": "S / light blue",
+        "sku": "LOT105306",
+        "fulfillment": "商品描述写处理5–7天，站内通用说明另写现货7–10天；未确认适用优先级，均不等于国际送达总时长。"
+      }
+    }
+  },
+  "research_sources": {
+    "R06": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "主动选样，不用零售Bought计数、评价分数或小红书互动推销量和质量。"
+    ]
+  }
+}

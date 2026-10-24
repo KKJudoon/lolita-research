@@ -1,0 +1,165 @@
+{
+  "id": "sweet_infanta_creammeow",
+  "name": "奶油喵JSK",
+  "brand": "婴梵塔 Infanta",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-25",
+  "added_at": "2026-10-25",
+  "status_label": "零售来源候选",
+  "style_summary": "补入棉缎猫柄JSK，并保留拉链、裙长及瑕疵提示作为穿着体验对照。",
+  "posters": [
+    "assets/sweet/cream-reference.jpg"
+  ],
+  "image_note": "零售页粉色单裙展示图；原店当前团次仍待核",
+  "image_source_url": "https://42lolita.com/products/sweet-lolita-jsk-cat-print",
+  "release": {
+    "type": "原店销售阶段待核",
+    "note": "页首和处理时间标预售50天（不含周末/假日），同页又写正裙现货、小物预售；文案有冲突，不能据此承诺统一交期。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "原店价待核 · 有海外参考",
+    "note": "未取得原店选定SKU人民币价格；海外报价仅见独立零售页记录，未核运费、税费和结算实付。"
+  },
+  "shops": {
+    "retail": {
+      "shop_name": "42Lolita",
+      "url": "https://42lolita.com/products/sweet-lolita-jsk-cat-print",
+      "note": "公开零售来源，原店关系待核"
+    }
+  },
+  "research_record": {
+    "id": "C08",
+    "record_type": "style",
+    "brand": "婴梵塔 Infanta",
+    "name": "奶油喵JSK",
+    "version": "零售页粉色单JSK/S；图鉴及古早实穿不合并为同批次",
+    "selection_reason": "补入棉缎猫柄JSK，并保留拉链、裙长及瑕疵提示作为穿着体验对照。",
+    "product_urls": [
+      "https://42lolita.com/products/sweet-lolita-jsk-cat-print"
+    ],
+    "source_refs": [
+      "R04",
+      "T05",
+      "XI1",
+      "XI2"
+    ],
+    "verified_facts": [
+      "公开零售页实读：猫与甜点印花、菱格底、蝴蝶结；后背抽褶与侧拉链由页面描述。",
+      "零售页明确提示可能有断线、褶皱等小瑕疵，并称折价出售；不推定全部批次存在相同缺陷。",
+      "Lo研社条目记录奶油喵JSK及婴梵塔Infanta，日期标2025-09-01；古早用户材料更早，不用图鉴日期直接认定初贩。"
+    ],
+    "price_records": [],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "R04",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "一条零售页评价肯定印花、蕾丝和面料，但估计裙长比尺码表短约2英寸，需换裙撑或加衬裙；是买家估计，未独立测量。"
+      },
+      {
+        "source": "XI1",
+        "nature": "mixed_wear_self_report",
+        "summary": "双色穿着作者喜欢两色的古早感，自述未熨烫有皱；同时说侧拉链难拉、独自穿着不便。未给具体尺码和体型，推广关系未核。"
+      },
+      {
+        "source": "XI2",
+        "nature": "older_garment_self_report",
+        "summary": "作者自述新收到古早裙、三个蝴蝶结可拆，蕾丝偏绿并猜测旧化；边夹是否原配未知。旧衣状态不能归为现行批次缺陷。"
+      }
+    ],
+    "unknowns": [
+      "原店商品ID、现行团次与图鉴/古早版本关系",
+      "原店价格、洗标与厘米尺码复核",
+      "瑕疵折价对应哪些颜色尺码及真实库存",
+      "裙长实测及是否包含底部蕾丝",
+      "用户购买与推广关系、拉链难拉的原因"
+    ],
+    "discussion": "将可拆装饰、侧拉链可及性和裙长实测一起讨论：可爱外观与单人穿脱是否兼顾？旧衣反馈与新批次需分开验证。",
+    "retailer_reference": {
+      "source": "R04",
+      "name": "Cream Meow",
+      "brand_label": "Infanta",
+      "observed_at": "2026-10-25",
+      "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
+      "identity_summary": "零售页Cream Meow与奶油喵图鉴的名称、Infanta品牌及猫/甜点/菱格元素相符；两篇用户正文同名，具体团次待核。",
+      "identity_evidence": [
+        "图鉴23594同时出现中文奶油喵JSK与婴梵塔Infanta品牌名。",
+        "2025-09双色实穿与2025-02古早裙自述不是同一订单，不能用于确认零售页当前批次。"
+      ],
+      "material": "零售页写JSK为Cotton sateen（棉缎）；未核原店洗标及纤维比例。",
+      "components": "单JSK、KC、边夹组和徽章分选，图片中的内搭及其他搭配物不自动计入单裙。",
+      "size_headers": [
+        "尺码",
+        "胸围",
+        "弹性腰围",
+        "裙长"
+      ],
+      "size_rows": [
+        [
+          "S",
+          "86",
+          "68–72",
+          "85"
+        ],
+        [
+          "M",
+          "90",
+          "72–76",
+          "86"
+        ],
+        [
+          "L",
+          "94",
+          "76–80",
+          "87"
+        ],
+        [
+          "XL",
+          "98",
+          "80–84",
+          "88"
+        ]
+      ],
+      "measurement_note": "厘米表按零售弹窗逐项记录；胸围列没有标为弹性范围。页面说明平铺测量可能有2–3厘米误差。用户有裙长较表短的自述，尚无统一实测。",
+      "offer": {
+        "currency": "USD",
+        "amount": "65.99",
+        "selection": "Pink JSK Only / S",
+        "sku": "LOL-DRE-325301",
+        "fulfillment": "页首和处理时间标预售50天（不含周末/假日），同页又写正裙现货、小物预售；文案有冲突，不能据此承诺统一交期。"
+      }
+    }
+  },
+  "research_sources": {
+    "R04": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/sweet-lolita-jsk-cat-print",
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+    },
+    "T05": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/23594",
+      "scope": "奶油喵JSK、婴梵塔Infanta、风格及日期字段；图鉴日期不能直接作初贩时间"
+    },
+    "XI1": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/68c4245d000000001d01a366",
+      "scope": "2025-09-12正文及可见评论已读；古早/当前版本及推广关系未全核"
+    },
+    "XI2": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/67aca26a000000002a0038a4",
+      "scope": "2025-02-19正文及可见评论已读；古早/当前版本及推广关系未全核"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "主动选样，不用零售Bought计数、评价分数或小红书互动推销量和质量。"
+    ]
+  }
+}

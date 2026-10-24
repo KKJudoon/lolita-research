@@ -1,0 +1,212 @@
+{
+  "id": "sweet_strawberrywitch_nerry",
+  "name": "Nerry 刺绣OP",
+  "brand": "Strawberry Witch",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-25",
+  "added_at": "2026-10-25",
+  "status_label": "零售来源候选",
+  "style_summary": "补入纯色刺绣OP，和满版甜柄JSK比较装饰密度、袖长与裙长选择。",
+  "posters": [
+    "assets/sweet/nerry-reference.jpg"
+  ],
+  "image_note": "零售页紫色短袖搭配图；所核报价为浅绿长袖长款/S，图片不代表报价配色，鞋包头饰另计",
+  "image_source_url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
+  "release": {
+    "type": "原店销售阶段待核",
+    "note": "页面处理时间写7–10天（不含周末/假日），不是国际运输总时长，也未逐项核所有版本库存。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "原店价待核 · 有海外参考",
+    "note": "未取得原店选定SKU人民币价格；海外报价仅见独立零售页记录，未核运费、税费和结算实付。"
+  },
+  "shops": {
+    "retail": {
+      "shop_name": "42Lolita",
+      "url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
+      "note": "公开零售来源，原店关系待核"
+    }
+  },
+  "research_record": {
+    "id": "C09",
+    "record_type": "style",
+    "brand": "Strawberry Witch",
+    "name": "Nerry 刺绣OP",
+    "version": "Nerry OP多袖长/裙长；报价样本为浅绿长袖长款/S",
+    "selection_reason": "补入纯色刺绣OP，和满版甜柄JSK比较装饰密度、袖长与裙长选择。",
+    "product_urls": [
+      "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors"
+    ],
+    "source_refs": [
+      "R05"
+    ],
+    "verified_facts": [
+      "公开零售页可读：胸前花卉刺绣、蕾丝领、腰部蝴蝶结及层叠裙摆。",
+      "同页提供长袖/短袖、长款/短款，厘米表分为两表；不能混成一张通用裙长表。",
+      "品牌与英文款名采用零售页标注，中文正式款名和原店入口未确认。"
+    ],
+    "price_records": [],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "R05",
+        "nature": "retailer_review_visible_self_report",
+        "summary": "当前可见评价中有作者肯定柔软、舒适及细节；另一条较早公开评价形容面料偏厚重且暖。评价未统一袖长/裙长及体型，不能推成夏季适用结论。"
+      }
+    ],
+    "unknowns": [
+      "中文正式款名、品牌原店入口与当前团次",
+      "各袖长/裙长配色的可售组合",
+      "原店成分、里料和克重",
+      "对版的独立国内实穿、身高与季节条件",
+      "配图紫短袖与报价浅绿长袖的版本差异"
+    ],
+    "discussion": "把长短袖、长短裙和面料厚重感分开比较，先确认测量口径与穿着季节，再讨论纯色刺绣是否适合更日常的场景。",
+    "retailer_reference": {
+      "source": "R05",
+      "name": "Nerry",
+      "brand_label": "Strawberry Witch",
+      "observed_at": "2026-10-25",
+      "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
+      "identity_summary": "本候选直接以零售页Nerry OP为研究对象；英文品牌与款名按该页记录，未用近似中文名认定原店。",
+      "identity_evidence": [
+        "商品页代码LOL-DRE-2012，含长短袖与长短裙选项。",
+        "采用同一商品页图片；紫短袖配图与浅绿长袖报价分开注明。"
+      ],
+      "material": "零售页写Cotton jacquard（棉提花）、里料cotton；未核原店成分百分比、洗标与克重。",
+      "components": "页面报价为一件OP加两个蝴蝶结；不同袖长、裙长及配色分别选。头饰、包鞋和裙撑不自动包含。",
+      "size_headers": [
+        "尺码",
+        "肩宽",
+        "胸围",
+        "腰围",
+        "长款裙长"
+      ],
+      "size_rows": [
+        [
+          "XS",
+          "36",
+          "82",
+          "70",
+          "100"
+        ],
+        [
+          "S",
+          "37",
+          "88",
+          "75",
+          "100"
+        ],
+        [
+          "M",
+          "38",
+          "94",
+          "80",
+          "105"
+        ],
+        [
+          "L",
+          "39",
+          "100",
+          "85",
+          "105"
+        ],
+        [
+          "XL",
+          "40",
+          "105",
+          "90",
+          "110"
+        ],
+        [
+          "2XL",
+          "41",
+          "110",
+          "95",
+          "110"
+        ]
+      ],
+      "measurement_note": "此主表为长款、单位厘米；短款另表见下。XS仅在尺码表出现，当前主选项未见XS，不代表可售。原页称平铺测量可能有2–3厘米误差。",
+      "offer": {
+        "currency": "USD",
+        "amount": "58.99",
+        "selection": "S / light green long-sleeved long dress",
+        "sku": "LOL-DRE-201214",
+        "fulfillment": "页面处理时间写7–10天（不含周末/假日），不是国际运输总时长，也未逐项核所有版本库存。"
+      },
+      "additional_size_tables": [
+        {
+          "title": "查看短款尺码表（厘米，不能与长款混用）",
+          "headers": [
+            "尺码",
+            "肩宽",
+            "胸围",
+            "腰围",
+            "短款裙长"
+          ],
+          "rows": [
+            [
+              "XS",
+              "36",
+              "82",
+              "70",
+              "85"
+            ],
+            [
+              "S",
+              "37",
+              "88",
+              "75",
+              "90"
+            ],
+            [
+              "M",
+              "38",
+              "94",
+              "80",
+              "95"
+            ],
+            [
+              "L",
+              "39",
+              "100",
+              "85",
+              "100"
+            ],
+            [
+              "XL",
+              "40",
+              "105",
+              "90",
+              "100"
+            ],
+            [
+              "2XL",
+              "41",
+              "110",
+              "95",
+              "100"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "research_sources": {
+    "R05": {
+      "kind": "third_party_retailer",
+      "url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "主动选样，不用零售Bought计数、评价分数或小红书互动推销量和质量。"
+    ]
+  }
+}
