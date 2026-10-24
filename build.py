@@ -985,6 +985,8 @@ def render_detail(item):
 
     posters = item.get("posters", [])
     poster_html = "".join(f'<img src="../{esc(p)}" loading="lazy" class="lb-img" data-src="../{esc(p)}"/>' for p in posters)
+    if not posters and item.get("media_checked_at"):
+        poster_html = '<div class="row note">本款配图待核，保留款式资料。</div>'
     poster_links = []
     weibo = item.get("shops", {}).get("weibo", {})
     if weibo.get("upgrade_post_url"):
@@ -1008,6 +1010,8 @@ def render_detail(item):
     if poster_links:
         link_html = " · ".join(f'<a href="{esc(u)}" target="_blank">{esc(l)} ↗</a>' for l, u in poster_links)
         posters_source_html = f'<div class="posters-source">📷 来源：{link_html}</div>'
+    if item.get("media_checked_at") and item.get("posters_source"):
+        posters_source_html += f'<div class="posters-source">资料图核查 {esc(item["media_checked_at"])}：{esc(item["posters_source"])}</div>'
 
     hot_posts_html = ""
     hot_post_sections = []

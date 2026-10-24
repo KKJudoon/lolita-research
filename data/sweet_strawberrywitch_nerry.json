@@ -1,15 +1,17 @@
 {
   "id": "sweet_strawberrywitch_nerry",
-  "name": "Nerry 刺绣OP",
-  "brand": "Strawberry Witch",
+  "name": "少女奈莉SP刺绣OP（Nerry）",
+  "brand": "草莓巫女 Strawberry Witch",
   "style_tags": [
-    "甜系"
+    "甜系",
+    "古典系",
+    "田园风"
   ],
   "verified": false,
   "verified_at": "2026-10-25",
   "added_at": "2026-10-25",
-  "status_label": "零售来源候选",
-  "style_summary": "补入纯色刺绣OP，和满版甜柄JSK比较装饰密度、袖长与裙长选择。",
+  "status_label": "中文款名与原图表已补",
+  "style_summary": "少女奈莉SP刺绣OP对照；长/短袖、长/短裙四组合，区别于2026年2.0",
   "posters": [
     "assets/sweet/nerry-reference.jpg"
   ],
@@ -29,25 +31,37 @@
       "shop_name": "42Lolita",
       "url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
       "note": "公开零售来源，原店关系待核"
+    },
+    "weibo": {
+      "official_account": "草莓巫女洋装原创设计",
+      "official_url": "https://weibo.com/u/6381218617",
+      "note": "同名品牌账号自述店名可读；商品ID、现行经营主体仍未核。"
     }
   },
   "research_record": {
     "id": "C09",
     "record_type": "style",
-    "brand": "Strawberry Witch",
-    "name": "Nerry 刺绣OP",
-    "version": "Nerry OP多袖长/裙长；报价样本为浅绿长袖长款/S",
+    "brand": "草莓巫女 Strawberry Witch",
+    "name": "少女奈莉SP刺绣OP（Nerry）",
+    "version": "少女奈莉SP刺绣OP对照；长/短袖、长/短裙四组合，区别于2026年2.0",
     "selection_reason": "补入纯色刺绣OP，和满版甜柄JSK比较装饰密度、袖长与裙长选择。",
     "product_urls": [
       "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors"
     ],
     "source_refs": [
-      "R05"
+      "R05",
+      "T08",
+      "O11",
+      "T10",
+      "XL1"
     ],
     "verified_facts": [
       "公开零售页可读：胸前花卉刺绣、蕾丝领、腰部蝴蝶结及层叠裙摆。",
       "同页提供长袖/短袖、长款/短款，厘米表分为两表；不能混成一张通用裙长表。",
-      "品牌与英文款名采用零售页标注，中文正式款名和原店入口未确认。"
+      "品牌与英文款名采用零售页标注，中文正式款名和原店入口未确认。",
+      "Lo研社具名少女奈莉SP OP，所附图写“NELLY OP / 少女奈莉刺绣款”；与零售Nerry的结构、配色、XS–XL长短表一致，中文对应采用此名称（T08）。",
+      "品牌账号自述淘宝店名草莓巫女Lolita洋装，2026年另有少女奈莉2.0，不能混成同版（O11）。",
+      "图鉴转载表只列XS–XL；零售页另外列2XL，额外尺码不改写进原表。"
     ],
     "price_records": [],
     "price_comparable": false,
@@ -56,14 +70,18 @@
         "source": "R05",
         "nature": "retailer_review_visible_self_report",
         "summary": "当前可见评价中有作者肯定柔软、舒适及细节；另一条较早公开评价形容面料偏厚重且暖。评价未统一袖长/裙长及体型，不能推成夏季适用结论。"
+      },
+      {
+        "source": "XL1",
+        "nature": "promotion_purchase_unknown",
+        "summary": "新增小红书正文仅笼统称实惠、适合日常；没有版本、尺码、体型或实购证据，4条已加载评论为dd，不能补成SP同版性能或独立口碑。"
       }
     ],
     "unknowns": [
-      "中文正式款名、品牌原店入口与当前团次",
-      "各袖长/裙长配色的可售组合",
-      "原店成分、里料和克重",
-      "对版的独立国内实穿、身高与季节条件",
-      "配图紫短袖与报价浅绿长袖的版本差异"
+      "原店当前商品ID及所选组合是否为相同SP批次",
+      "原店现售的袖长/裙长/颜色/尺码组合与价格",
+      "成分百分比、里料/克重和实物洗标，不能只凭提花棉名称定透气性",
+      "国内SP同版的独立实穿、体型和季节条件；新笔记未锁版本"
     ],
     "discussion": "把长短袖、长短裙和面料厚重感分开比较，先确认测量口径与穿着季节，再讨论纯色刺绣是否适合更日常的场景。",
     "retailer_reference": {
@@ -194,13 +212,173 @@
           ]
         }
       ]
-    }
+    },
+    "documented_references": [
+      {
+        "title": "少女奈莉SP：中文名、版型与原图表",
+        "source": "T08",
+        "observed_at": "2026-10-25",
+        "scope": "图鉴具名转载资料；与海外零售页对照，仍未取得原店当前SP商品页。",
+        "points": [
+          "具名款式为少女奈莉SP OP，英文原图写NELLY OP；零售商拼作Nerry。系列还分普通OP/JSK、SP OP/JSK及2.0，避免串版。",
+          "图列若草、淡紫、粉色、生成四色，以及长袖长款、长袖短款、短袖长款、短袖短款四种组合；列出不等于当前全组合有货。",
+          "图鉴主料写提花棉，与零售商Cotton jacquard相符；原图不含2XL。"
+        ],
+        "tables": [
+          {
+            "title": "NELLY OP原图 · 厘米",
+            "headers": [
+              "尺码",
+              "肩宽",
+              "胸围",
+              "腰围",
+              "短款裙长",
+              "长款裙长"
+            ],
+            "rows": [
+              [
+                "XS",
+                "36",
+                "82",
+                "70",
+                "85",
+                "100"
+              ],
+              [
+                "S",
+                "37",
+                "88",
+                "75",
+                "90",
+                "100"
+              ],
+              [
+                "M",
+                "38",
+                "94",
+                "80",
+                "95",
+                "105"
+              ],
+              [
+                "L",
+                "39",
+                "100",
+                "85",
+                "100",
+                "105"
+              ],
+              [
+                "XL",
+                "40",
+                "105",
+                "90",
+                "100",
+                "110"
+              ]
+            ],
+            "note": "原图标注平铺、手工误差约2厘米；2XL仅见零售商表，XS仅在图表不保证可选。"
+          }
+        ],
+        "images": [
+          "assets/sweet/nelly-original-spec.jpg"
+        ]
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "documented",
+        "summary": "少女奈莉SP刺绣OP/NELLY与Nerry已对照，区别于2026年2.0。",
+        "sources": [
+          "T08",
+          "O11"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "中文店名、品牌账号及聚合入口已补；原店商品ID仍未核。",
+        "sources": [
+          "O11",
+          "T10"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "海外58.99美元含OP+两蝴蝶结；268元仅图鉴/聚合未选SKU参考。",
+        "sources": [
+          "R05",
+          "T08",
+          "T10"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "图鉴与零售的提花棉陈述相符；百分比/克重/现行洗标未知。",
+        "sources": [
+          "T08",
+          "R05"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "documented",
+        "summary": "原图XS–XL分长短两表；2XL仅见零售，尺码出现不等于可选。",
+        "sources": [
+          "T08",
+          "R05"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "7–10天为海外处理期，非到货承诺；2.0品牌公告不代替旧SP状态。",
+        "sources": [
+          "R05",
+          "O11"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "海外反馈有案；新小红书仅笼统评价，未证明SP/实购/体型。",
+        "sources": [
+          "R05",
+          "XL1"
+        ]
+      }
+    ],
+    "supplement_summary": "补草莓巫女/少女奈莉SP中文对应、原图长短表及新笔记的适用限制。",
+    "audit_at": "2026-10-25"
   },
   "research_sources": {
     "R05": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
       "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+    },
+    "T08": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/29273",
+      "scope": "少女奈莉SP OP具名条目、提花棉陈述及NELLY OP尺码/四种袖长裙长组合图；268元为历史参考。"
+    },
+    "O11": {
+      "kind": "brand_profile",
+      "url": "https://www.sina.cn/media/6381218617",
+      "scope": "草莓巫女洋装原创设计账号自述淘宝店名；2026年2.0发布与旧SP分开，未当旧款当前交期。"
+    },
+    "T10": {
+      "kind": "third_party_aggregator",
+      "url": "https://tao.hooos.com/goods_MoBz2OpUKtX0XPkowoTVVVHQtA-jdZqqnCXYPXMMDMFQ.html",
+      "scope": "聚合页具名少女奈莉刺绣OP、草莓巫女店名；素材上传者55084630与零售页一致，268元未选SKU。"
+    },
+    "XL1": {
+      "kind": "promotion_purchase_unknown",
+      "url": "https://www.xiaohongshu.com/explore/69a4fe5f000000001a03530a",
+      "scope": "10月25日实读正文/4条已加载dd评论；仅笼统称实惠、适合日常，未写SP/尺码/实购关系，不当同版测评。"
     }
   },
   "popularity": {

@@ -1,6 +1,6 @@
 {
   "id": "sweet_infanta_strawberryplaid",
-  "name": "Strawberry Plaid 草莓格纹JSK",
+  "name": "草莓拼格JSK（Strawberry Plaid）",
   "brand": "婴梵塔 Infanta",
   "style_tags": [
     "甜系"
@@ -8,8 +8,8 @@
   "verified": false,
   "verified_at": "2026-10-25",
   "added_at": "2026-10-25",
-  "status_label": "零售来源候选",
-  "style_summary": "补入较简洁的草莓格纹JSK，比较单裙/搭配物边界和带明确裙长口径的尺码记录。",
+  "status_label": "中文对应已补 · 原店批次待核",
+  "style_summary": "草莓拼格中文对应已有图片对照；粉/浅蓝JSK，原店现行批次未核",
   "posters": [
     "assets/sweet/plaid-reference.jpg"
   ],
@@ -29,25 +29,35 @@
       "shop_name": "42Lolita",
       "url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
       "note": "公开零售来源，原店关系待核"
+    },
+    "taobao": {
+      "shop_name": "Infanta婴梵塔Lolita洋装工作室",
+      "url": "https://shop33035817.taobao.com/",
+      "note": "店铺ID来自品牌账号自述；商品详情与当前批次尚未回读。"
     }
   },
   "research_record": {
     "id": "C10",
     "record_type": "style",
     "brand": "婴梵塔 Infanta",
-    "name": "Strawberry Plaid 草莓格纹JSK",
-    "version": "零售页粉/浅蓝JSK；仅核浅蓝S报价，中文正式款名待核",
+    "name": "草莓拼格JSK（Strawberry Plaid）",
+    "version": "草莓拼格中文对应已有图片对照；粉/浅蓝JSK，原店现行批次未核",
     "selection_reason": "补入较简洁的草莓格纹JSK，比较单裙/搭配物边界和带明确裙长口径的尺码记录。",
     "product_urls": [
       "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress"
     ],
     "source_refs": [
-      "R06"
+      "R06",
+      "O08",
+      "T09"
     ],
     "verified_facts": [
       "零售页记录Infanta、粉/浅蓝、JSK单裙以及胸前可拆蝴蝶结。",
       "页面明确单裙不含内搭、延长衬裙/裙撑和胸针。",
-      "厘米表的裙长不含裙摆底部5厘米蕾丝；不能直接与含蕾丝的其他表比较。"
+      "厘米表的裙长不含裙摆底部5厘米蕾丝；不能直接与含蕾丝的其他表比较。",
+      "什么值得买具名草莓拼格的粉色图片，与本条纵向拼条、波点/格纹/草莓组合及胸前可拆蝴蝶结相符，作为中文名称对照（T09）。",
+      "第三方S码条目写提线竹节棉与裙长88厘米；未说明是否含底部蕾丝，不能消除与零售表的测量边界差异。",
+      "已排除“小田园格子草莓 / Gingham Strawberry Cotton JSK”：其大块格纹、白色横向围兜与本条拼条图不同，未搬用199元、2020年及旧衣口碑。"
     ],
     "price_records": [],
     "price_comparable": false,
@@ -64,11 +74,11 @@
       }
     ],
     "unknowns": [
-      "中文正式款名与原店对应商品ID",
-      "初发及再版时间、当前团次",
-      "当前所有配色尺码库存与原店价格",
-      "成分洗标及是否与原店同版尺码",
-      "其他体型实穿与负面反馈；未找到不等于不存在"
+      "原店正式商品ID与现行草莓拼格团次",
+      "初发/再版的可靠时间，图片上传日期不等于发售时间",
+      "当前颜色尺码库存及原店SKU全款",
+      "原店成分洗标、里料与同版厘米表；S裙长88厘米是否含花边未统一",
+      "其他体型及相反意见；已排除另一款格子草莓的实穿，不将其算本款样本"
     ],
     "discussion": "统一是否含底部蕾丝的裙长口径，并保留胸围接近上限、肩宽与腰线位置条件；单裙价格和完整搭配成本分开。",
     "retailer_reference": {
@@ -130,13 +140,100 @@
         "sku": "LOT105306",
         "fulfillment": "商品描述写处理5–7天，站内通用说明另写现货7–10天；未确认适用优先级，均不等于国际送达总时长。"
       }
-    }
+    },
+    "documented_references": [
+      {
+        "title": "中文名称与相近款排除",
+        "source": "T09",
+        "observed_at": "2026-10-25",
+        "scope": "第三方具名图片支持中文名称对应；原店当前标题、SKU和洗标未读到。",
+        "points": [
+          "草莓拼格粉色条目具有纵向草莓/格纹/波点拼条、可拆胸结，与本条参考图一致。第三方写提线竹节棉，页面本次暂无报价，不沿用类目页的198元起。",
+          "小田园格子草莓是另一件大块格纹配白色围兜的裙子。其历史价、年份、蕾丝变化及独立穿搭博文均已排除，不给本条补成分/口碑。"
+        ],
+        "tables": [],
+        "images": []
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "partial",
+        "summary": "草莓拼格图片支持中文对应；已排除不同的小田园格子草莓。",
+        "sources": [
+          "T09"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "品牌自述店铺已补，草莓拼格商品ID与当前团次缺证据。",
+        "sources": [
+          "O08"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "海外浅蓝/S 48.99美元只含JSK；聚合当前暂无报价。",
+        "sources": [
+          "R06",
+          "T09"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "海外Cotton与聚合提线竹节棉各自标注；不等于百分比洗标。",
+        "sources": [
+          "R06",
+          "T09"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "partial",
+        "summary": "零售S–XXL裙长排除5厘米底蕾丝；聚合88厘米边界未写，未强行统一。",
+        "sources": [
+          "R06",
+          "T09"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "海外5–7天与通用7–10天是处理期文案；当前原店库存未知。",
+        "sources": [
+          "R06"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "两条海外评价含赠奖和历史改色条件；没有搬用另一款旧衣反馈。",
+        "sources": [
+          "R06"
+        ]
+      }
+    ],
+    "supplement_summary": "补草莓拼格中文图片对照、材质陈述和另一相似格子款的排除依据。",
+    "audit_at": "2026-10-25"
   },
   "research_sources": {
     "R06": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
       "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+    },
+    "O08": {
+      "kind": "brand_profile",
+      "url": "https://www.sina.cn/media/2574075700",
+      "scope": "婴梵塔账号主页自述淘宝店shop33035817；主页可读，店铺本轮跳登录页后受浏览器策略限制。"
+    },
+    "T09": {
+      "kind": "third_party_aggregator",
+      "url": "https://wiki.smzdm.com/p/g8yezwe/",
+      "scope": "什么值得买草莓拼格条目，粉色具名图片与本条纵向拼条/草莓格纹相符；提线竹节棉、S裙长88厘米仅属第三方陈述，页面暂无报价。"
     }
   },
   "popularity": {

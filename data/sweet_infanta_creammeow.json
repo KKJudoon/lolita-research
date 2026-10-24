@@ -8,7 +8,7 @@
   "verified": false,
   "verified_at": "2026-10-25",
   "added_at": "2026-10-25",
-  "status_label": "零售来源候选",
+  "status_label": "品牌入口已补 · 版本须区分",
   "style_summary": "补入棉缎猫柄JSK，并保留拉链、裙长及瑕疵提示作为穿着体验对照。",
   "posters": [
     "assets/sweet/cream-reference.jpg"
@@ -29,6 +29,11 @@
       "shop_name": "42Lolita",
       "url": "https://42lolita.com/products/sweet-lolita-jsk-cat-print",
       "note": "公开零售来源，原店关系待核"
+    },
+    "taobao": {
+      "shop_name": "Infanta婴梵塔Lolita洋装工作室",
+      "url": "https://shop33035817.taobao.com/",
+      "note": "店铺ID来自品牌账号自述；商品详情与当前批次尚未回读。"
     }
   },
   "research_record": {
@@ -45,12 +50,17 @@
       "R04",
       "T05",
       "XI1",
-      "XI2"
+      "XI2",
+      "O08",
+      "O09",
+      "O10"
     ],
     "verified_facts": [
       "公开零售页实读：猫与甜点印花、菱格底、蝴蝶结；后背抽褶与侧拉链由页面描述。",
       "零售页明确提示可能有断线、褶皱等小瑕疵，并称折价出售；不推定全部批次存在相同缺陷。",
-      "Lo研社条目记录奶油喵JSK及婴梵塔Infanta，日期标2025-09-01；古早用户材料更早，不用图鉴日期直接认定初贩。"
+      "Lo研社条目记录奶油喵JSK及婴梵塔Infanta，日期标2025-09-01；古早用户材料更早，不用图鉴日期直接认定初贩。",
+      "品牌账号自述淘宝店shop33035817，原店入口已补；经营主体与商品ID未据主页直接认定（O08）。",
+      "品牌2025年10月25日分别提到奶油喵JSK与即将上架的背带款；2026年9月28日另有白菜款，图片胸部/腰部装饰不同，不作当前零售款现货证明（O09/O10）。"
     ],
     "price_records": [],
     "price_comparable": false,
@@ -72,11 +82,11 @@
       }
     ],
     "unknowns": [
-      "原店商品ID、现行团次与图鉴/古早版本关系",
-      "原店价格、洗标与厘米尺码复核",
-      "瑕疵折价对应哪些颜色尺码及真实库存",
-      "裙长实测及是否包含底部蕾丝",
-      "用户购买与推广关系、拉链难拉的原因"
+      "当前零售JSK对应的原店商品ID、2013/2025/白菜款的具体批次映射",
+      "原店当前价格、面料百分比、里料及洗标",
+      "原店同版厘米表和裙长测量边界；个体称偏短仍未实测",
+      "当前哪些SKU为瑕疵折扣/现货，零售页50天预售与正裙现货文案冲突",
+      "实穿来源是否自费/合作及拉链困难的原因，不能据个例归因"
     ],
     "discussion": "将可拆装饰、侧拉链可及性和裙长实测一起讨论：可爱外观与单人穿脱是否兼顾？旧衣反馈与新批次需分开验证。",
     "retailer_reference": {
@@ -132,7 +142,86 @@
         "sku": "LOL-DRE-325301",
         "fulfillment": "页首和处理时间标预售50天（不含周末/假日），同页又写正裙现货、小物预售；文案有冲突，不能据此承诺统一交期。"
       }
-    }
+    },
+    "documented_references": [
+      {
+        "title": "品牌入口与版本边界",
+        "source": "O09",
+        "observed_at": "2026-10-25",
+        "scope": "品牌原文可读，但不能据历史上架帖确认当前零售SKU或库存。",
+        "points": [
+          "2025年10月25日的具名JSK人台图显示菱格猫咪甜品柄和蝴蝶结结构；同文另说背带款将少量上架，两个款型分开。",
+          "2026年9月28日品牌另发“白菜款现货”，实读图片的胸部和腰部装饰与本条参考JSK有差别。因此该历史现货标签不覆盖本条所有版本。"
+        ],
+        "tables": [],
+        "images": []
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "partial",
+        "summary": "奶油喵JSK、背带款、白菜款已区分；旧版与现售团次映射仍缺。",
+        "sources": [
+          "O09",
+          "O10",
+          "T05"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "品牌自述店铺33035817已补，未核本款商品ID。",
+        "sources": [
+          "O08"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "海外粉JSK/S 65.99美元记录在案；原店价及瑕疵适用SKU未知。",
+        "sources": [
+          "R04"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "海外写Cotton sateen；百分比、里料及现行洗标未知。",
+        "sources": [
+          "R04"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "partial",
+        "summary": "零售表S–XL可读；实际裙长边界与个体偏短自述尚未统一。",
+        "sources": [
+          "R04"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "海外50天预售与正文现货冲突；白菜款历史现货不能覆盖本款。",
+        "sources": [
+          "R04",
+          "O10"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "双色拉链困难、古早衣与零售长度自述保留各自批次条件。",
+        "sources": [
+          "XI1",
+          "XI2",
+          "R04"
+        ]
+      }
+    ],
+    "supplement_summary": "补品牌店铺入口、2025年JSK原帖和2026年白菜款的版本区分。",
+    "audit_at": "2026-10-25"
   },
   "research_sources": {
     "R04": {
@@ -154,6 +243,21 @@
       "kind": "user_post",
       "url": "https://www.xiaohongshu.com/explore/67aca26a000000002a0038a4",
       "scope": "2025-02-19正文及可见评论已读；古早/当前版本及推广关系未全核"
+    },
+    "O08": {
+      "kind": "brand_profile",
+      "url": "https://www.sina.cn/media/2574075700",
+      "scope": "婴梵塔账号主页自述淘宝店shop33035817；主页可读，店铺本轮跳登录页后受浏览器策略限制。"
+    },
+    "O09": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5225586626924235.html",
+      "scope": "婴梵塔2025-10-25具名奶油喵JSK人台图；正文把JSK与另行上架的背带款区分。"
+    },
+    "O10": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5348167700713050.html",
+      "scope": "婴梵塔2026-09-28“奶油喵白菜款现货”及图片；外观与本条零售JSK不同，不移用其库存。"
     }
   },
   "popularity": {

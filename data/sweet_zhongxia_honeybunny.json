@@ -1,26 +1,28 @@
 {
   "id": "sweet_zhongxia_honeybunny",
-  "name": "蜜糖邦尼合作系列",
+  "name": "蜜糖邦尼片裁JSK",
   "brand": "仲夏物语",
   "style_tags": [
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-24",
-  "status_label": "资料待补",
-  "style_summary": "具体OP/JSK尚待选定",
-  "posters": [],
-  "image_note": "",
-  "image_source_url": "",
+  "verified_at": "2026-10-25",
+  "status_label": "具体款已选 · 图鉴规格",
+  "style_summary": "三丽鸥合作款·片裁JSK；粉色／薄荷色，当前淘宝SKU未锁定",
+  "posters": [
+    "assets/sweet/honey-reference.jpg"
+  ],
+  "image_note": "Lo研社片裁JSK正背面参考图，含粉/薄荷两色；非当前SKU库存证明",
+  "image_source_url": "https://lolitalibrary.com/library/detail/39143",
   "release": {
     "type": "销售阶段待核",
-    "note": "品牌公告预约窗已过；当前销售与发货状态仍待核，不将系列等同一款。",
+    "note": "品牌预约公告为9月28日至10月19日，10月19日另发“今晚截”；当前是否重开、现货及发货期未核。",
     "date_range": "2026-09-28 ~ 2026-10-19"
   },
   "price": {
     "currency": "CNY",
-    "display_label": "价格待核",
-    "note": "品牌微博公告给出预约窗口，但没有与具体单裙对应的价目；不采用AI列出的未核价格。"
+    "display_label": "图鉴参考 ¥499 · 当前SKU待核",
+    "note": "图鉴列片裁JSK参考价499元，未核原店当前单裙SKU；不当结算实付或含小物套价。"
   },
   "shops": {
     "weibo": {
@@ -28,35 +30,175 @@
       "official_url": "https://weibo.com/u/5902942009",
       "current_post_url": "https://m.weibo.cn/detail/5347050310076919",
       "note": "微博原文已读；目标裙装商品页及具体版本仍待补。"
+    },
+    "taobao": {
+      "shop_name": "仲夏物语原创设计",
+      "url": "https://shop160036401.taobao.com/",
+      "note": "入口来自图鉴所列品牌资料；本轮未读到原店详情，不等于已核当前商品。"
     }
   },
   "research_record": {
     "id": "C01",
     "brand": "仲夏物语",
-    "name": "蜜糖邦尼合作系列",
-    "version": "具体OP/JSK尚待选定",
+    "name": "蜜糖邦尼片裁JSK",
+    "version": "三丽鸥合作款·片裁JSK；粉色／薄荷色，当前淘宝SKU未锁定",
     "product_urls": [],
     "source_refs": [
       "O01",
-      "O02"
+      "O02",
+      "T06",
+      "O07"
     ],
     "verified_facts": [
       "品牌微博公告预约时间为2026.9.28—2026.10.19",
       "公告同时涉及蜜糖邦尼与美乐蒂，不能等同某条OP",
-      "10月10日面料变更通知限大衣"
+      "10月10日面料变更通知限大衣",
+      "已将研究对象从整个合作系列落实到片裁JSK，图鉴同时列粉/薄荷两色（T06）。",
+      "所附产品图列出裙装面料、棉布里料及XS–XL尺码；没有成分百分比（T06）。",
+      "品牌10月19日截单公告与此前预约截止日一致；不证明当前可购（O07）。"
     ],
-    "price_records": [],
+    "price_records": [
+      {
+        "basis": "historical_third_party_reference",
+        "amount_cny": 499,
+        "source": "T06"
+      }
+    ],
     "price_comparable": false,
     "feedback": [],
     "unknowns": [
-      "具体单款与版本",
-      "商品ID及SKU价格组成",
-      "厘米尺码与裙装面料",
-      "当前销售与发货阶段",
-      "对应实穿反馈"
+      "原店商品ID、选定配色尺码及SKU包含物",
+      "当前淘宝全款、优惠与实付；图鉴499元仅参考",
+      "现行批次的成分百分比、克重及洗标",
+      "当前是否重开/有现货、各SKU发货承诺",
+      "与片裁JSK对应的独立实穿、体型和活动条件"
     ],
-    "discussion": "先把系列拆成单件裙装与外套，再讨论造型，避免把外套面料赋给整套。",
-    "record_type": "series"
+    "discussion": "片裁波浪外层与条纹内层如何在坐下、抬手时保持层次？先按具体款和裙撑条件观察，不把系列大衣材料套给裙装。",
+    "record_type": "style",
+    "documented_references": [
+      {
+        "title": "片裁JSK产品信息图",
+        "source": "T06",
+        "observed_at": "2026-10-25",
+        "scope": "图鉴转载的具名产品图，适用粉色/薄荷色；没有原店当前批次回读或洗标实物。",
+        "points": [
+          "面料标注平纹仿棉、条纹面料、毛绒面料；成分列聚酯纤维、黏胶纤维、氨纶，未给各部位比例。仿棉不等于棉。",
+          "里料标注棉布、成分棉；未标百分比。尺码字段保留“后裙长”“后上身长”，不改成总衣长。"
+        ],
+        "tables": [
+          {
+            "title": "片裁JSK · 厘米",
+            "headers": [
+              "尺码",
+              "后裙长",
+              "后上身长",
+              "胸围",
+              "腰围"
+            ],
+            "rows": [
+              [
+                "XS",
+                "86",
+                "34",
+                "82–86",
+                "62–66"
+              ],
+              [
+                "S",
+                "88",
+                "35",
+                "86–90",
+                "66–70"
+              ],
+              [
+                "M",
+                "90",
+                "36",
+                "90–94",
+                "70–74"
+              ],
+              [
+                "L",
+                "92",
+                "37",
+                "94–98",
+                "74–78"
+              ],
+              [
+                "XL",
+                "94",
+                "38",
+                "98–102",
+                "78–82"
+              ]
+            ],
+            "note": "原图说明测量误差1–2厘米，并建议按净胸腰围留约4厘米；这是来源建议，不是本研究的试穿保证。"
+          }
+        ],
+        "images": [
+          "assets/sweet/honey-spec.jpg"
+        ]
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "documented",
+        "summary": "已选片裁JSK，具名粉/薄荷两色；系列不再代替单款。",
+        "sources": [
+          "T06"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "品牌账号及目录店铺入口在案；原店商品ID、SKU仍缺。",
+        "sources": [
+          "O01",
+          "T06"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "499元为图鉴参考；当前单裙/配件组合和结算价未核。",
+        "sources": [
+          "T06"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "转载产品图有纤维名称和棉布里料，无百分比、克重或现行洗标。",
+        "sources": [
+          "T06"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "documented",
+        "summary": "粉/薄荷片裁图列XS–XL、后裙长/后上身长/胸腰围。",
+        "sources": [
+          "T06"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "品牌10月19日公告截单；当前重开、库存和发货承诺未知。",
+        "sources": [
+          "O07"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "unresolved",
+        "summary": "未取得片裁JSK同版、具备体型和购买条件的独立实穿。",
+        "sources": []
+      }
+    ],
+    "supplement_summary": "从系列落实到片裁JSK，补正背图、面料/里料、XS–XL表及品牌截单公告。",
+    "audit_at": "2026-10-25"
   },
   "research_sources": {
     "O01": {
@@ -68,6 +210,16 @@
       "kind": "brand_weibo",
       "url": "https://m.weibo.cn/detail/5352486128321443",
       "scope": "大衣面料更换通知，范围限外套"
+    },
+    "T06": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/39143",
+      "scope": "片裁JSK图鉴及所附产品信息图，粉/薄荷两色；转载资料，不证明当前淘宝SKU。"
+    },
+    "O07": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5355672124273063.html",
+      "scope": "仲夏物语账号2026-10-19截单正文；新浪可读页，认证主体显示杭州载艺科技有限公司。"
     }
   },
   "popularity": {

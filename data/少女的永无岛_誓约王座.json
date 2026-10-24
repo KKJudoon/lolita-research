@@ -63,7 +63,7 @@
         "date": "2026-04-07",
         "likes": "547（搜索列表）",
         "title": "希腊风又添一员猛将……",
-        "url": "https://www.xiaohongshu.com/explore/69d46514000000001f0014ed?xsec_token=ABOoYkRzcqX8sGZd1jJP4Sciip-SyZc8MPcbm3XOIOwMA=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/69d46514000000001f0014ed",
         "type": "设计师本人 / 系列主题定调",
         "summary": "官号自发，标题『希腊风又添一员猛将』+ hashtag #希腊风 #神女 + 文案『赫拉王冠』—— 揭示誓约系列的设计灵感是希腊神话女神 / 神女主题。评论以基础问询为主（哪家、怎么卖、假发、头饰），互动深度浅。"
       },
@@ -73,7 +73,7 @@
         "date": "2025-04-18",
         "likes": "114（搜索列表）",
         "title": "甜蜜之约和少女的永无岛，这两家店怎么选",
-        "url": "https://www.xiaohongshu.com/explore/68019f4a000000001c015134?xsec_token=AB99_7nSHOWY3L3cImF_dL9xylFRwDZODkveXXP_dxFZk=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/68019f4a000000001c015134",
         "type": "工艺争议 / 品牌避雷",
         "summary": "圈内对比帖，揭露『甜蜜之约和少女的永无岛 好多裙子都一样』+ 评论高密度确认『他们家是厂原』『避雷少女 态度好差』『卖厂原的，还有设计师的礼物也是』—— 这是品牌级风险信号：少女的永无岛 = 厂原店模式（圈内 quality-flags 类别）。"
       },
@@ -83,7 +83,7 @@
         "date": "未抓正文",
         "likes": "263",
         "title": "⚔️ 剑锋所向，誓约所指⚔️",
-        "url": "https://www.xiaohongshu.com/explore/69661fb3000000001a028f38?xsec_token=AB0JL63VxeCJWGEKm_lKEwB3KOXCj-TvaR3FW2U8j2j-o=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/69661fb3000000001a028f38",
         "type": "真人成片种草",
         "summary": "title-only。263 likes 路人种草帖，用『剑锋所向，誓约所指』叙事强化『誓约』主题——给该款提供战士/骑士女神的角色叙事接口。"
       },
@@ -93,7 +93,7 @@
         "date": "未抓正文",
         "likes": "215",
         "title": "白茶对我笑！白茶对我笑！",
-        "url": "https://www.xiaohongshu.com/explore/699982700000000015038d18?xsec_token=ABtbe2SlD00azwH6-OnJMcrUllD_NRDTGqpR-aCyTxGoU=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/699982700000000015038d18",
         "type": "热度锚点",
         "summary": "title-only。215 likes，标题『白茶对我笑』可能是该款颜色/风格关联到白茶语鹿其他款，反映誓约系列在跨品牌讨论中的曝光。"
       }
@@ -150,17 +150,8 @@
     "design_thinking": "誓约王座主打希腊女神主题（赫拉王冠 / 希腊风 hashtag），用长款腰封 + 纯白王子装 silhouette 营造神女气场。设计 IP 清晰是优点，但品牌方厂原店模式让该设计的『独立原创性』打折扣（圈内反复确认）。",
     "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a Greek-goddess-themed prince-style (王子系) lolita ensemble, themed 'Pledge of the Throne' (誓约王座). Outfit: a long-sleeve crisp pure-white high-collar blouse with subtle Peter-Pan collar; layered with high-waist black or deep navy slim trousers (or knee-length trouser-skirt). Signature element: an EXTRA-LONG SASH-WAIST belt (长款腰封) in metallic gold/cream silk, wrapping around the waist multiple times in a Grecian chiton-binding manner, with the long ends draping down the side of the leg, evoking the columnar/draped silhouette of ancient Greek peplos/chiton. Headpiece: a delicate gold laurel-leaf or filigree crown (the 'Hera Crown' explicitly named by the brand) sitting low on the brow. Optional: a long sword or scepter held in one hand reinforcing the 'oath of throne' narrative. Pose: standing tall in regal stance, slight head tilt, gaze straight or upward, channeling Greek goddess Hera authority. Background: marble columns of a Greek temple courtyard at dusk, soft golden hour rim-lighting on the laurel crown and sash silk, warm cream-and-gold palette. Mood: solemn, regal, neo-classical Greek-goddess fashion fused with Lolita prince-style silhouette."
   },
-  "posters": [
-    "images/少女的永无岛_誓约王座/weibo_brand_1.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_2.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_3.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_4.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_5.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_6.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_7.jpg",
-    "images/少女的永无岛_誓约王座/weibo_brand_8.jpg"
-  ],
-  "posters_source": "微博少女的永无岛官号 timeline 图（非『誓约王座』专属，含品牌多款混合，作为 brand 视觉参考；该款专属海报待补）。",
+  "posters": [],
+  "posters_source": "本款专属配图尚待核验；原材料为品牌多款混合图，暂不展示。",
   "popularity": {
     "scale_tier": "中位",
     "buzz_tier": "未深查",
@@ -180,5 +171,19 @@
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
-  }
+  },
+  "historical_missing_posters": {
+    "paths": [
+      "images/少女的永无岛_誓约王座/weibo_brand_1.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_2.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_3.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_4.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_5.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_6.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_7.jpg",
+      "images/少女的永无岛_誓约王座/weibo_brand_8.jpg"
+    ],
+    "source_note": "微博少女的永无岛官号 timeline 图（非『誓约王座』专属，含品牌多款混合，作为 brand 视觉参考；该款专属海报待补）。"
+  },
+  "media_checked_at": "2026-10-25"
 }

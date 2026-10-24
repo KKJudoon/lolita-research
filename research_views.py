@@ -26,7 +26,40 @@ KINDS = {
     "wear_display_commercial_unknown": "穿着展示／合作关系未知",
     "promotion_purchase_unknown": "推广内容／购买关系未知",
     "third_party_retailer": "独立零售商品页／原店批次待核",
+    "brand_profile": "品牌账号自述／商品与经营主体另核",
+    "third_party_aggregator": "第三方商品资料／原店现行版另核",
 }
+
+
+AUDIT_LABELS = {"documented": "有记录", "partial": "部分有据", "unresolved": "仍缺证据"}
+
+
+def render_audit_rows(item):
+    rows = item["research_record"].get("verification_audit", [])
+    sources = item["research_sources"]
+    body = '<div class="table-scroll"><table><thead><tr><th scope="col">核查项</th><th scope="col">状态</th><th scope="col">结果与适用范围</th></tr></thead><tbody>'
+    for row in rows:
+        links = ' '.join(f'<a href="{esc(sources[sid]["url"])}" target="_blank" rel="noopener">{esc(sid)} ↗</a>' for sid in row["sources"])
+        body += f'<tr><th scope="row">{esc(row["field"])}</th><td>{esc(AUDIT_LABELS[row["status"]])}</td><td>{esc(row["summary"])}<small>{links}</small></td></tr>'
+    return body+'</tbody></table></div>'
+
+
+def render_documented_reference(reference, sources):
+    source = sources[reference["source"]]
+    body = '<section class="section"><h2>'+esc(reference["title"])+'</h2>'
+    body += f'<p><a href="{esc(source["url"])}" target="_blank" rel="noopener">对应资料 · {esc(reference["source"])} ↗</a> <span class="caption">核读：{esc(reference["observed_at"])}</span></p>'
+    body += '<p class="notice">'+esc(reference["scope"])+'</p><ul>'+''.join('<li>'+esc(x)+'</li>' for x in reference["points"])+'</ul>'
+    for table in reference.get("tables", []):
+        body += '<h3>'+esc(table["title"])+'</h3><div class="table-scroll"><table><thead><tr>'
+        body += ''.join('<th scope="col">'+esc(h)+'</th>' for h in table["headers"])
+        body += '</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+esc(c)+'</td>' for c in row)+'</tr>' for row in table["rows"])
+        body += '</tbody></table></div><p class="caption">'+esc(table["note"])+'</p>'
+    if reference.get("images"):
+        body += '<details><summary>查看所读资料图</summary><div class="gallery">'
+        for path in reference["images"]:
+            body += f'<figure><a href="../{esc(path)}" target="_blank" rel="noopener"><img src="../{esc(path)}" loading="lazy" alt="{esc(reference["title"])}资料图"></a><figcaption>保留来源原文供核对；历史条件和适用版本见本节说明。</figcaption></figure>'
+        body += '</div></details>'
+    return body+'</section>'
 
 
 def render_retailer_reference(reference, sources):
@@ -67,6 +100,14 @@ def render_research_detail(item):
     else:
         body += '<p class="notice">本条目的对版图片仍待补齐，先保留已读来源；不以近似款配图。</p>'
     body += '<section class="section"><h2>已核到的材料</h2><ul>' + ''.join('<li>'+esc(x)+'</li>' for x in r["verified_facts"]) + '</ul></section>'
+    if r.get("verification_audit"):
+        body += '<section class="section" id="verification-audit"><h2>本轮补充与逐项核查</h2><p>'+esc(r["supplement_summary"])+'</p><p class="caption">“有记录”表示取得对应资料，不等于原店现行批次或实物已全部确认；日期：'+esc(r["audit_at"])+'。</p>'
+        body += render_audit_rows(item)
+        for attempt in r.get("verification_attempts", []):
+            body += '<p class="caption">'+esc(attempt)+'</p>'
+        body += '<a href="../sweet/review.html">看九款核查总表与设计比较 →</a></section>'
+    for reference in r.get("documented_references", []):
+        body += render_documented_reference(reference, sources)
     if r.get("retailer_reference"):
         body += render_retailer_reference(r["retailer_reference"], sources)
     body += '<section class="section"><h2>价格与发货</h2><p>'+esc(item["price"]["note"])+'</p>'
@@ -86,7 +127,7 @@ def render_research_detail(item):
     if r["feedback"]:
         for f in r["feedback"]:
             s = sources[f["source"]]
-            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买"}.get(f["nature"], "个体自述／可见评论")
+            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买", "promotion_purchase_unknown":"推广或笼统评价／实购与版本未知"}.get(f["nature"], "个体自述／可见评论")
             body += f'<article class="feedback"><div class="kind">{esc(label)}</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应来源 ↗</a></article>'
         body += '<p class="caption">正文与可见评论已读；未观看的视频不写成视频结论。版本、配色、体型、渠道和推广关系未全部统一。</p>'
     else:
@@ -103,13 +144,38 @@ def render_research_detail(item):
     return shell(item["name"], body, updated=updated)
 
 
+def render_review(items, review):
+    by_id = {i["research_record"]["id"]:i for i in items}
+    body = '<a class="back" href="index.html">← 返回甜系专题</a><header class="hero"><div class="eyebrow">'+esc(review["updated_at"])+ ' 补充核验</div><h1>'+esc(review["title"])+'</h1><p>'+esc(review["scope"])+'</p></header>'
+    body += '<section class="section"><h2>这轮补到哪里</h2><p>蜜糖邦尼已落实到片裁JSK；草莓猫猫增加原店历史价目及两张厘米表。其余款式分别补分版、名称、入口或图像依据，尚缺原店证据的字段继续保留。</p><div class="link-row">'
+    body += ''.join(f'<a href="#audit-{esc(cid)}">{esc(cid)} {esc(i["name"])} ↓</a>' for cid,i in sorted(by_id.items()))+'</div></section>'
+    for cid,item in sorted(by_id.items()):
+        r=item["research_record"]
+        body += f'<section class="section" id="audit-{esc(cid)}"><div class="brand">{esc(item["brand"])}</div><h2>{esc(cid)} · {esc(item["name"])}</h2><p>{esc(r["supplement_summary"])}</p>'
+        body += render_audit_rows(item)
+        body += f'<p><a href="../items/{esc(item["id"])}.html#verification-audit">看资料图、完整表格和原始来源 →</a></p></section>'
+    body += '<section class="section" id="design-comparison"><h2>从九款资料得到的设计讨论</h2><p class="notice">以下是有出处的样本比较与待验证方向，不是销量排名、普遍质量判断或已经确定的产品开发方案。</p>'
+    for theme in review["themes"]:
+        body += '<h3>'+esc(theme["title"])+'</h3><p>'+esc(theme["finding"])+'</p><p class="caption">对应材料：'
+        body += ' · '.join(f'<a href="../items/{esc(by_id[cid]["id"])}.html">{esc(cid)} {esc(by_id[cid]["name"])}</a>' for cid in theme["records"])
+        body += '</p><p><strong>验证方向：</strong>'+esc(theme["next"])+'</p>'
+    body += '</section><section class="section"><h2>已排除的混用</h2><ul>'
+    for rejected in review["rejected_matches"]:
+        body += '<li>'+esc(rejected["record"]+' · '+rejected["name"]+'：'+rejected["reason"])+f' <a href="{esc(rejected["url"])}" target="_blank" rel="noopener">对照来源 ↗</a></li>'
+    body += '</ul></section><section class="section"><h2>本次核查的限制</h2><ul>'+''.join('<li>'+esc(x)+'</li>' for x in review["limits"])+'</ul><p>未核事项仍留在各款“还需核验”中；没有用其他配色、近似款或AI无源答案补成已确认事实。</p></section>'
+    return shell(review["title"], body, updated=review["updated_at"])
+
+
 def render_topic(items, sample_sources, sampling=None):
     sampling = sampling or {"read_records":18,"excluded_records":1,"brand_named_account_posts":2}
     updated = max(i.get("verified_at", "2026-10-24") for i in items)
     series_count = sum(i["research_record"].get("record_type") == "series" for i in items)
     brand_count = len({i["brand"] for i in items})
     source_count = len(sample_sources)
-    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{series_count}个系列待选款、{len(items)-series_count}个款式候选；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
+    record_summary = f'{series_count}个系列待选款、{len(items)-series_count}个款式候选' if series_count else f'{len(items)}个具体款式候选'
+    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{record_summary}；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
+    if all(i["research_record"].get("verification_audit") for i in items):
+        body += '<section class="section"><h2>本轮补充：九款逐项核查</h2><p>已补片裁JSK具体款、原店历史价目/权益、转载厘米表、中文名称与品牌入口；蓝波点、青提咩咩等缺少原店证据的字段逐项列明。</p><p><a href="review.html">打开九款核查总表与设计比较 →</a></p><p class="caption">包含版本、入口、价格/包含物、面料、厘米表、交期与反馈共63项；有记录不等于所有字段已确认。</p></section>'
     added = max((i.get("added_at", "") for i in items), default="")
     newest = [i for i in items if added and i.get("added_at") == added]
     if newest:
@@ -148,3 +214,6 @@ def build_topic(root, items):
     dest = root / 'sweet'
     dest.mkdir(exist_ok=True)
     (dest/'index.html').write_text(render_topic(selected, sample_sources, sampling))
+    review_path = root/'data/topics/sweet_review.json'
+    if review_path.exists():
+        (dest/'review.html').write_text(render_review(selected, json.loads(review_path.read_text())))

@@ -6,8 +6,8 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-24",
-  "status_label": "资料待补",
+  "verified_at": "2026-10-25",
+  "status_label": "已分版 · 蓝波点规格待核",
   "style_summary": "2.0华丽JSK·蓝波点；按用户正文选定研究目标，官方同版待核",
   "posters": [],
   "image_note": "",
@@ -18,8 +18,8 @@
   },
   "price": {
     "currency": "CNY",
-    "display_label": "官方价格待核",
-    "note": "本目标是2.0华丽JSK蓝波点。转售或其他配色报价不能当官方同版本价格。"
+    "display_label": "图鉴参考 ¥689 · 蓝波点SKU待核",
+    "note": "华丽JSK图鉴参考689元；普通2.0 JSK另列499元、SP另列799元，不混为同一版报价。蓝波点当前SKU价未核。"
   },
   "shops": {
     "weibo": {
@@ -38,13 +38,22 @@
     "source_refs": [
       "XA1",
       "XA2",
-      "XA3"
+      "XA3",
+      "T07"
     ],
     "verified_facts": [
       "XA1正文明确具体版本及蓝波点配色",
-      "XA2为红白款，XA3为二手渠道自述，均不能与蓝波点混成同版本质量结论"
+      "XA2为红白款，XA3为二手渠道自述，均不能与蓝波点混成同版本质量结论",
+      "同系列图鉴分普通JSK、华丽JSK及SP，研究目标保留华丽JSK蓝波点，不能拿普通款499元替代（T07及其系列页）。",
+      "本轮读到的华丽款产品信息图明确为薄荷色；其他配色的材料和尺码不据此认定一致。"
     ],
-    "price_records": [],
+    "price_records": [
+      {
+        "basis": "historical_third_party_reference",
+        "amount_cny": 689,
+        "source": "T07"
+      }
+    ],
     "price_comparable": false,
     "feedback": [
       {
@@ -59,12 +68,138 @@
       }
     ],
     "unknowns": [
-      "官方同版本商品链接",
-      "当前官方SKU价格与销售阶段",
-      "面料厘米尺码",
-      "不同配色的材料是否相同"
+      "蓝波点华丽JSK同版本原店商品ID和完整图片",
+      "蓝波点当前SKU全款、包含物与销售/发货阶段",
+      "蓝波点同批次面料、里料、厘米表与洗标",
+      "不同配色是否同料同版；薄荷色袖口表的异常数值待原店复核"
     ],
-    "discussion": "把视觉反光与触感分开测评，同版同色比较后再讨论材料。"
+    "discussion": "把视觉反光与触感分开测评，同版同色比较后再讨论材料。",
+    "documented_references": [
+      {
+        "title": "其他配色对照：薄荷色华丽JSK",
+        "source": "T07",
+        "observed_at": "2026-10-25",
+        "scope": "仅作同系列分版对照，未补成蓝波点的已确认规格；主图仍不以薄荷色替代蓝波点。",
+        "points": [
+          "薄荷色图列横纹缎感面料、亮丝条子、钻石雪纺，成分聚酯纤维；里料棉布、成分棉，无百分比。",
+          "图中有含可调肩带的后裙长/后上身长及袖口数据。L、XL泡泡袖上口分别写34、35厘米，与前序差距明显，保留原值待核，不自行改成24、25。"
+        ],
+        "tables": [
+          {
+            "title": "薄荷色参考表 · 厘米",
+            "headers": [
+              "尺码",
+              "后裙长（含肩带）",
+              "后上身长（含肩带）",
+              "胸围",
+              "腰围"
+            ],
+            "rows": [
+              [
+                "XS",
+                "93–95",
+                "35–37",
+                "81",
+                "65"
+              ],
+              [
+                "S",
+                "95–97",
+                "36–38",
+                "85",
+                "69"
+              ],
+              [
+                "M",
+                "97–99",
+                "37–39",
+                "89",
+                "73"
+              ],
+              [
+                "L",
+                "99–101",
+                "38–40",
+                "93",
+                "77"
+              ],
+              [
+                "XL",
+                "101–103",
+                "39–41",
+                "97",
+                "81"
+              ]
+            ],
+            "note": "仅为薄荷色转载表，原图说明误差1–2厘米；不据此判断蓝波点合身或库存。"
+          }
+        ],
+        "images": [
+          "assets/sweet/angel-mint-spec.jpg"
+        ]
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "partial",
+        "summary": "目标蓝波点华丽JSK来自用户正文；图鉴普通/华丽/SP已分开。",
+        "sources": [
+          "XA1",
+          "T07"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "unresolved",
+        "summary": "同版原店商品ID尚未找到。",
+        "sources": []
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "华丽图鉴参考689元，不能拿普通款499元或SP价替代。",
+        "sources": [
+          "T07"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "查到薄荷色信息图；蓝波点是否同料没有证据。",
+        "sources": [
+          "T07"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "partial",
+        "summary": "仅补薄荷色对照表；蓝波点同版表及袖口异常值待核。",
+        "sources": [
+          "T07"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "图鉴尾款窗口是历史记录，不能当当前开团/出货状态。",
+        "sources": [
+          "T07"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "蓝波点、红白与二手来源分别保留，不把异色触感合并。",
+        "sources": [
+          "XA1",
+          "XA2",
+          "XA3"
+        ]
+      }
+    ],
+    "supplement_summary": "分清普通/华丽/SP，补薄荷色对照图与参数边界，保留蓝波点待核。",
+    "audit_at": "2026-10-25"
   },
   "research_sources": {
     "XA1": {
@@ -81,6 +216,11 @@
       "kind": "secondary_purchase_post",
       "url": "https://www.xiaohongshu.com/explore/6ada0257000000002502071b",
       "scope": "作者自述在二手渠道取得，不能归因官方首发货"
+    },
+    "T07": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/24754",
+      "scope": "华丽JSK独立条目；689元为图鉴参考，所附材质/尺码图明确写薄荷色，不能移用至蓝波点。"
     }
   },
   "popularity": {

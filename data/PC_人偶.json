@@ -72,7 +72,7 @@
         "date": "2025-11-07",
         "likes": "3273（搜索列表）",
         "title": "人偶~",
-        "url": "https://www.xiaohongshu.com/explore/690deb8f000000000301075d?xsec_token=ABvTZxLpO9S7vuXT2-i4Coq3ucIQZ9RKPgs0tQaYGpk6k=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/690deb8f000000000301075d",
         "type": "设计师本人 / 官号上新主帖",
         "summary": "PC 官号自发上新，hashtag 定 #王子系 #衬衫 #背带裤 #王子装。评论密集求粉色短裤变体 + 询问蝴蝶结结构（『胸口蝴蝶结能做口水巾替换吗』『后面大蝴蝶结好萌』），反映该款配件互动性强、用户期待 SKU 拓展。"
       },
@@ -82,7 +82,7 @@
         "date": "2026-04-03",
         "likes": "443（搜索列表）",
         "title": "好完美的人偶服",
-        "url": "https://www.xiaohongshu.com/explore/69cf92ae000000001b020f4f?xsec_token=ABhOUXoY3QMz1k8sk7N8CSKwI6Xc3GXc_9KWDlsrGKyk8=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/69cf92ae000000001b020f4f",
         "type": "真人成片种草 / IP 联想",
         "summary": "路人晒上身，明确联想到日漫『双子星公主 法音』（小法法）—— hashtag #双子星公主 #法音 #神秘星球孪生公主，把该款关联到童年动画 IP。评论『p3 背影完全原作』『二十年前的人偶商演了』强化 IP 还原度。给该款提供了独立设计 IP 之外的『二次元 cosplay 友好』叙事。"
       },
@@ -92,7 +92,7 @@
         "date": "未抓正文",
         "likes": "275",
         "title": "人偶",
-        "url": "https://www.xiaohongshu.com/explore/6704e1ce000000002a031095?xsec_token=ABT0QdW7wMlw64CUzgkBltec-mLjP6yknV0JDmAbkrU_s=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/6704e1ce000000002a031095",
         "type": "设计师本人 / 早期上新预告",
         "summary": "title-only。官号最早一批上新帖（id 6704e1ce 时间戳约 2024 年），275 likes——说明该款上新节奏长（2024 年起步 + 2025-11 主推 + 2026-04 路人种草），是 PC 长寿款而非短期 viral。"
       },
@@ -102,7 +102,7 @@
         "date": "未抓正文",
         "likes": "22",
         "title": "人偶~白月光版~",
-        "url": "https://www.xiaohongshu.com/explore/68b503f4000000001d03a0c4?xsec_token=ABIUZOZJnE8zI-nmX_b48FvtuDXWqQjYpOM8LCNYhh5HA=&xsec_source=pc_user",
+        "url": "https://www.xiaohongshu.com/explore/68b503f4000000001d03a0c4",
         "type": "设计师本人 / SKU 变体",
         "summary": "title-only。『白月光版』变体，证明该款有官方多色/多版本节奏（不只主款），但 22 likes 显示变体热度远低于主款。"
       }
@@ -166,18 +166,14 @@
     "for_image_gen_prompt": "Full-body portrait of a young Eastern Asian woman in a doll-like prince-style (王子系) lolita outfit themed 'Doll' (人偶). Outfit: a crisp white short-sleeve high-collar Peter-Pan-collar blouse with subtle ruffles; layered with high-waist black short trousers (above-knee, slightly puffed at hem) held by a pair of suspenders/back straps in matching black. Signature element: an oversized doll-pink (or pastel cream) silk satin bow at the chest collar (large, doll-replaceable detachable design), AND another oversized matching bow at the lower back (positioned at the suspender X-cross point). Knee-high white over-knee socks with subtle lace cuff, mary-jane shoes. Optional: a small black bowler-hat or beret tilted on one side. Pose: standing slightly leaning forward, hands holding the suspenders or near the chest bow, looking shyly upward — channeling the 'living doll' aesthetic. Face: light makeup, doe eyes, soft blush, evoking the Japanese magical-girl anime 'Twin Princess' (双子星公主, fa-yin character / Princess Fine) — the viral XHS reference is 'p3 背影完全原作'. Background: pastel cream-and-rose interior with vintage doll-house elements (lace curtains, porcelain dolls on shelves, soft window light). Lighting: warm soft front-light, slight glow on bow silk. Overall mood: tender, doll-like, prince-style cute (王子装), with subtle nostalgic 2000s magical-girl-anime cosplay reference."
   },
   "posters": [
-    "images/PC_人偶/weibo_official_1.jpg",
-    "images/PC_人偶/weibo_official_10.jpg",
-    "images/PC_人偶/weibo_official_2.jpg",
-    "images/PC_人偶/weibo_official_3.jpg",
-    "images/PC_人偶/weibo_official_4.jpg",
-    "images/PC_人偶/weibo_official_5.jpg",
-    "images/PC_人偶/weibo_official_6.jpg",
-    "images/PC_人偶/weibo_official_7.jpg",
-    "images/PC_人偶/weibo_official_8.jpg",
-    "images/PC_人偶/weibo_official_9.jpg"
+    "images/PC_人偶/tb_1.webp",
+    "images/PC_人偶/tb_2.webp",
+    "images/PC_人偶/tb_3.webp",
+    "images/PC_人偶/tb_4.webp",
+    "images/PC_人偶/tb_5.webp",
+    "images/PC_人偶/tb_6.jpg"
   ],
-  "posters_source": "微博 PC 原创设计官号自发『人偶~白月光版~』+『穿越2024人偶』2 个 post 抓图（官号 image ID 前缀 005FOi7Rgy）。",
+  "posters_source": "既有淘宝归档图6张，本轮核看首图；当前配色/团次与SKU包含物未重新核验。",
   "popularity": {
     "scale_tier": "头部",
     "buzz_tier": "中位",
@@ -197,5 +193,21 @@
   "research_depth": "基础（淘宝 list only）",
   "raw_sources": {
     "taobao_search_snapshot": "/tmp/junlo_top.json + /tmp/wangzi_top.json + /tmp/baojun_top.json (m87, 2026-04-30)"
-  }
+  },
+  "historical_missing_posters": {
+    "paths": [
+      "images/PC_人偶/weibo_official_1.jpg",
+      "images/PC_人偶/weibo_official_10.jpg",
+      "images/PC_人偶/weibo_official_2.jpg",
+      "images/PC_人偶/weibo_official_3.jpg",
+      "images/PC_人偶/weibo_official_4.jpg",
+      "images/PC_人偶/weibo_official_5.jpg",
+      "images/PC_人偶/weibo_official_6.jpg",
+      "images/PC_人偶/weibo_official_7.jpg",
+      "images/PC_人偶/weibo_official_8.jpg",
+      "images/PC_人偶/weibo_official_9.jpg"
+    ],
+    "source_note": "微博 PC 原创设计官号自发『人偶~白月光版~』+『穿越2024人偶』2 个 post 抓图（官号 image ID 前缀 005FOi7Rgy）。"
+  },
+  "media_checked_at": "2026-10-25"
 }
