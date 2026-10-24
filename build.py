@@ -10,6 +10,7 @@ import html
 import datetime
 import re
 import subprocess
+from research_views import render_research_detail, build_topic
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -95,6 +96,8 @@ def _parse_research_ts(date_str):
 
 def _extract_status(item):
     """Return (label, priority). priority 高的在前；加购未上架=0 永远在最后。"""
+    if item.get("research_record"):
+        return (item.get("status_label", "资料待补"), 1)
     sales = (item.get("shops", {}).get("taobao", {}) or {}).get("sales", "") or ""
     sales_v = _parse_sales_value(sales)
     rel = item.get("release", {}) or {}
@@ -242,6 +245,8 @@ def _extract_main_prices(price):
     """整套 + OP + JSK 主价（不展示定金/配饰）；fallback 到 estimate / breakdown / list."""
     if not price:
         return "—"
+    if price.get("display_label"):
+        return price["display_label"]
     parts = []
     fs = price.get("full_set") or price.get("set_3pc_total")
     if fs:
@@ -466,7 +471,7 @@ def render_summary_row(item):
     '''.rstrip()
 
 
-CANONICAL_STYLES = ["甜lo", "军lo", "古典", "哥特", "王子lo", "中华", "海军", "花嫁", "茶会"]
+CANONICAL_STYLES = ["甜系", "军lo", "古典", "哥特", "王子lo", "中华", "海军", "花嫁", "茶会"]
 
 
 def styles_for_item(item):
@@ -486,7 +491,11 @@ def _count_illustrators():
     """Count illustrator HTML pages (excluding index.html)."""
     illust_dir = ROOT / "illustrators"
     if not illust_dir.is_dir():
-        return 0
+        # A sparse checkout still has the complete tracked tree metadata.
+        paths = subprocess.check_output(
+            ["git", "ls-tree", "-r", "--name-only", "HEAD", "illustrators"], cwd=ROOT
+        ).decode().splitlines()
+        return sum(p.count("/") == 1 and p.endswith(".html") and not p.endswith("/index.html") for p in paths)
     return len([f for f in illust_dir.glob("*.html") if f.name != "index.html"])
 
 
@@ -505,6 +514,17 @@ def write_index(items):
     )
 
     rows_html = "\n".join(render_summary_row(it) for it in items)
+    sweet_items = [it for it in items if it.get("research_record")]
+    sweet_nav = f'<a href="sweet/index.html" class="mod">🍓 甜系专题 ({len(sweet_items)})</a>' if sweet_items else ""
+    sweet_banner = ""
+    if sweet_items:
+        names = " · ".join(esc(it["name"]) for it in sweet_items)
+        sweet_banner = (f'<section style="margin:18px 0;padding:20px 24px;background:#f8e9ec;border:1px solid #dfbec6;border-radius:10px;">'
+                        f'<div style="font-size:12px;color:#97616e">2026-10-24 新增 · 3家店铺线索</div>'
+                        f'<h2 style="margin:6px 0;font-size:22px">甜系专题 · {len(sweet_items)}个研究条目</h2>'
+                        f'<p style="margin:8px 0;color:#795d61;font-size:13px">{names}</p>'
+                        f'<a href="sweet/index.html" style="font-weight:600;color:#774452">查看新款式、SKU与正反反馈 →</a>'
+                        f'<p style="font-size:12px;color:#8a7074;margin-bottom:0">含1个系列待选款；各条目的版本、价格口径与待核项分别展示。</p></section>')
 
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     doc = f'''<!DOCTYPE html>
@@ -623,6 +643,7 @@ def write_index(items):
 <body>
   <div class="module-nav">
     <a href="index.html" class="mod active">📐 款式调研 ({len(items)})</a>
+    {sweet_nav}
     <a href="illustrators/index.html" class="mod">🎨 画师调研 ({_count_illustrators()})</a>
     <a href="illustrators/military_research/index.html" class="mod">⭐ 军lo 稿件</a>
     <span class="mod disabled">🏷 品牌（Phase 4）</span>
@@ -630,7 +651,8 @@ def write_index(items):
     <a href="reports/junlo_prince_report.html" class="mod">📊 综合报告</a>
   </div>
   <h1>Lolita 款式调研</h1>
-  <div class="meta">最后更新 {now} · 共 {len(items)} 款 · 点行查看详情</div>
+  <div class="meta">最后更新 {now} · 共 {len(items)} 条 · 点行查看详情</div>
+  {sweet_banner}
   <div class="reports-bar">
     <a href="reports/junlo_prince_report.html" class="report-link">📊 中国军lo王子系市场进入研究报告 (2026 Q2)</a>
   </div>
@@ -889,6 +911,8 @@ def write_index(items):
 
 # ---------------------------------------------------------------- detail page
 def render_detail(item):
+    if item.get("research_record"):
+        return _inject_version(render_research_detail(item))
     iid = item.get("id", "")
     name = esc(item["name"])
     brand = esc(item.get("brand", ""))
@@ -1329,6 +1353,7 @@ def main():
         (ITEMS_DIR / f"{iid}.html").write_text(render_detail(it))
 
     write_index(items)
+    build_topic(ROOT, items)
     print(f"wrote index.html + {len(items)} item page(s) to items/")
 
 

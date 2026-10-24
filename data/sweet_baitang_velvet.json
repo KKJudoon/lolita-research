@@ -1,0 +1,138 @@
+{
+  "id": "sweet_baitang_velvet",
+  "name": "丝绒甜心JSK",
+  "brand": "白糖少女",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "SKU展示价已核",
+  "style_summary": "商品1006763616986，粉色M码三个组合",
+  "posters": [
+    "assets/sweet/velvet-single.jpg",
+    "assets/sweet/velvet-set.jpg"
+  ],
+  "image_note": "淘宝所选粉色SKU参考图；包含物以选项文字为准",
+  "image_source_url": "https://item.taobao.com/item.htm?id=1006763616986",
+  "release": {
+    "type": "分SKU交期",
+    "note": "2026-10-24粉色M码：单裙24小时内发货；加蝴蝶结／再加头纱为预售15天内发货。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "单裙展示 ¥219.88 · 粉M",
+    "note": "粉色M码单裙219.88元；加背后蝴蝶结260.88元；再加头纱293.88元。单裙页面写24小时内发货，另两组写预售15天内发货。均为2026-10-24选定SKU展示价，未核结算实付。"
+  },
+  "shops": {
+    "taobao": {
+      "shop_name": "白糖少女",
+      "url": "https://shop433073985.taobao.com/shop/view_shop.htm",
+      "related_item_url": "https://item.taobao.com/item.htm?id=1006763616986",
+      "note": "店铺自己的商品卡已读；经营主体与原创权属未认证。"
+    }
+  },
+  "research_record": {
+    "id": "C04",
+    "brand": "白糖少女",
+    "name": "丝绒甜心JSK",
+    "version": "商品1006763616986，粉色M码三个组合",
+    "product_urls": [
+      "https://item.taobao.com/item.htm?id=1006763616986",
+      "https://item.taobao.com/item.htm?id=985874514171"
+    ],
+    "source_refs": [
+      "O05",
+      "O06",
+      "T03"
+    ],
+    "verified_facts": [
+      "选项列红白/粉/白及S/M/L，但不代表全组合可售",
+      "已实际查看单裙与组合SKU图，见素材目录",
+      "款名丝绒不能代替成分证明"
+    ],
+    "price_records": [
+      {
+        "amount_cny": "219.88",
+        "basis": "selected_sku_display",
+        "sku_id": "6165235202997",
+        "selection": [
+          "粉色jsk吊带裙",
+          "M"
+        ],
+        "shipping_text": "24小时内发货，预计后天送达",
+        "observed_at": "2026-10-24T08:18:24.944467+00:00",
+        "stable_reads": 3,
+        "url": "https://item.taobao.com/item.htm?id=1006763616986&skuId=6165235202997",
+        "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "260.88",
+        "basis": "selected_sku_display",
+        "sku_id": "6165235906006",
+        "selection": [
+          "粉色jsk吊带裙+背后蝴蝶结",
+          "M"
+        ],
+        "shipping_text": "预售，15天内发货",
+        "observed_at": "2026-10-24T08:18:29.812076+00:00",
+        "stable_reads": 3,
+        "url": "https://item.taobao.com/item.htm?id=1006763616986&skuId=6165235906006",
+        "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "293.88",
+        "basis": "selected_sku_display",
+        "sku_id": "6165235906024",
+        "selection": [
+          "粉色jsk吊带裙+背后蝴蝶结+头纱",
+          "M"
+        ],
+        "shipping_text": "预售，15天内发货",
+        "observed_at": "2026-10-24T08:18:34.806572+00:00",
+        "stable_reads": 3,
+        "url": "https://item.taobao.com/item.htm?id=1006763616986&skuId=6165235906024",
+        "usable_as_current_full_payment": false
+      }
+    ],
+    "price_comparable": true,
+    "price_comparable_scope": "仅本商品内、所核粉色M码组合的展示价可对照；不表示其他五款已有可比全款",
+    "feedback": [],
+    "unknowns": [
+      "同名985874514171与主核链接的关系",
+      "成分/里料/克重",
+      "厘米尺码",
+      "团次/其他配色尺码状态",
+      "结算优惠与实付",
+      "独立实穿反馈"
+    ],
+    "images": [
+      "assets/sweet/velvet-single.jpg",
+      "assets/sweet/velvet-set.jpg"
+    ],
+    "discussion": "将单裙、背后蝴蝶结与头纱的包含物及交期并列展示；模特搭配物不自动计入套餐。"
+  },
+  "research_sources": {
+    "O05": {
+      "kind": "storefront",
+      "url": "https://shop433073985.taobao.com/shop/view_shop.htm",
+      "scope": "白糖少女首页及四条商品卡实际读取"
+    },
+    "O06": {
+      "kind": "store_product",
+      "url": "https://item.taobao.com/item.htm?id=1006763616986",
+      "scope": "粉色M码三个组合选齐，URL/选项/价格/交期三次稳定读数"
+    },
+    "T03": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/31813",
+      "scope": "第三方图鉴，更新时点未明"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}

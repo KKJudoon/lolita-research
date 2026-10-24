@@ -1,0 +1,92 @@
+{
+  "id": "sweet_zhongxia_strawberryangel_2_blue",
+  "name": "草莓天使",
+  "brand": "仲夏物语",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "资料待补",
+  "style_summary": "2.0华丽JSK·蓝波点；按用户正文选定研究目标，官方同版待核",
+  "posters": [],
+  "image_note": "",
+  "image_source_url": "",
+  "release": {
+    "type": "销售阶段待核",
+    "note": "阶段按具体商品、版本及SKU核对，不由用户评论推定。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "官方价格待核",
+    "note": "本目标是2.0华丽JSK蓝波点。转售或其他配色报价不能当官方同版本价格。"
+  },
+  "shops": {
+    "weibo": {
+      "official_account": "仲夏物语lolita原创设计",
+      "official_url": "https://weibo.com/u/5902942009",
+      "current_post_url": "https://m.weibo.cn/detail/5347050310076919",
+      "note": "微博原文已读；目标裙装商品页及具体版本仍待补。"
+    }
+  },
+  "research_record": {
+    "id": "C02",
+    "brand": "仲夏物语",
+    "name": "草莓天使",
+    "version": "2.0华丽JSK·蓝波点；按用户正文选定研究目标，官方同版待核",
+    "product_urls": [],
+    "source_refs": [
+      "XA1",
+      "XA2",
+      "XA3"
+    ],
+    "verified_facts": [
+      "XA1正文明确具体版本及蓝波点配色",
+      "XA2为红白款，XA3为二手渠道自述，均不能与蓝波点混成同版本质量结论"
+    ],
+    "price_records": [],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "XA1",
+        "nature": "positive_self_report",
+        "summary": "作者喜欢亮闪的玻璃糖纸观感，未观看视频。"
+      },
+      {
+        "source": "XA2",
+        "nature": "mixed_different_color",
+        "summary": "红白款作者同时肯定上身效果、抱怨触感和褶量；不是相同配色对照。"
+      }
+    ],
+    "unknowns": [
+      "官方同版本商品链接",
+      "当前官方SKU价格与销售阶段",
+      "面料厘米尺码",
+      "不同配色的材料是否相同"
+    ],
+    "discussion": "把视觉反光与触感分开测评，同版同色比较后再讨论材料。"
+  },
+  "research_sources": {
+    "XA1": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/6aa3e96f00000000120360cf",
+      "scope": "明确草莓天使2.0华丽JSK蓝波点，正文已读，视频未看"
+    },
+    "XA2": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/69feb9c2000000003601af5b",
+      "scope": "红白款自述，版本条件不同"
+    },
+    "XA3": {
+      "kind": "secondary_purchase_post",
+      "url": "https://www.xiaohongshu.com/explore/6ada0257000000002502071b",
+      "scope": "作者自述在二手渠道取得，不能归因官方首发货"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "sweet_miyu_strawberrycat",
+  "name": "草莓猫猫JSK",
+  "brand": "蜜语糖匣",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "资料待补",
+  "style_summary": "详情含有意向金/无意向金及多套装，团次未核",
+  "posters": [
+    "assets/sweet/cat-reference.jpg"
+  ],
+  "image_note": "淘宝商品页展示图；图源角色和对应团次待核",
+  "image_source_url": "https://pcdetail.taobao.com/NkZncHEzNE1uTitQbFRjRGNMWEZCQT09.html",
+  "release": {
+    "type": "销售阶段待核",
+    "note": "阶段按具体商品、版本及SKU核对，不由用户评论推定。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "单裙价格待核",
+    "note": "商品页默认19元未选SKU，不能当单裙全款。有/无意向金、单裙/套装/小物需逐项核对。"
+  },
+  "shops": {
+    "taobao": {
+      "shop_name": "蜜语糖匣原创设计",
+      "url": "https://shop407861687.taobao.com/category.htm",
+      "note": "店铺入口来自草莓猫猫商品页；青提咩咩对应商品ID仍待核。",
+      "related_item_url": "https://pcdetail.taobao.com/NkZncHEzNE1uTitQbFRjRGNMWEZCQT09.html"
+    }
+  },
+  "research_record": {
+    "id": "C05",
+    "brand": "蜜语糖匣",
+    "name": "草莓猫猫JSK",
+    "version": "详情含有意向金/无意向金及多套装，团次未核",
+    "product_urls": [
+      "https://pcdetail.taobao.com/NkZncHEzNE1uTitQbFRjRGNMWEZCQT09.html"
+    ],
+    "source_refs": [
+      "O03",
+      "O04",
+      "XC1",
+      "XC2"
+    ],
+    "verified_facts": [
+      "商品参数标预售且显示付款后120天内发货，选项又含有意向金单jsk(现货)",
+      "店铺链接来自商品页进店入口"
+    ],
+    "price_records": [
+      {
+        "amount_cny": "19",
+        "basis": "unselected_minimum_not_dress_price",
+        "usable_as_current_full_payment": false
+      }
+    ],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "O03",
+        "nature": "mixed_visible_buyer_review",
+        "summary": "可见评价有BNT太软、另一条提线头，也有正裙/内搭与客服肯定。"
+      },
+      {
+        "source": "XC1",
+        "nature": "positive_wear_self_report",
+        "summary": "作者S码自述面料硬挺，日常搭配较小裙撑；不是材质检测。"
+      },
+      {
+        "source": "XC2",
+        "nature": "headwear_stability_discussion",
+        "summary": "评论讨论头饰偏软/易掉，作者说明夹子、绑带与整形；独立买家及批次未核。"
+      }
+    ],
+    "unknowns": [
+      "选齐SKU的价格与意向金权益",
+      "各SKU的现货/预售关系",
+      "面料与厘米尺码",
+      "反馈是否同批次独立购买"
+    ],
+    "discussion": "把正裙与头饰固定系统分别评估，明确每组内搭、BNT/KC、围裙和拖尾包含物。"
+  },
+  "research_sources": {
+    "O03": {
+      "kind": "store_product",
+      "url": "https://pcdetail.taobao.com/NkZncHEzNE1uTitQbFRjRGNMWEZCQT09.html",
+      "scope": "草莓猫猫商品页及SKU列表已读，未选齐SKU"
+    },
+    "O04": {
+      "kind": "storefront",
+      "url": "https://shop407861687.taobao.com/category.htm",
+      "scope": "从草莓猫猫详情的进店链接取得，未另核资质"
+    },
+    "XC1": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/69cba5d2000000001b0014b4",
+      "scope": "草莓猫猫S码自述与可见评论"
+    },
+    "XC2": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/69d935440000000022024c99",
+      "scope": "草莓猫猫实拍与头饰固定评论"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}

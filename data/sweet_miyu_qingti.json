@@ -1,0 +1,119 @@
+{
+  "id": "sweet_miyu_qingti",
+  "name": "青提咩咩",
+  "brand": "蜜语糖匣",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "资料待补",
+  "style_summary": "品牌同名账号及用户帖对应，淘宝商品ID尚未核",
+  "posters": [
+    "assets/sweet/qingti-cover.jpg"
+  ],
+  "image_note": "品牌同名账号笔记封面；视频未观看",
+  "image_source_url": "https://www.xiaohongshu.com/explore/6a5342b500000000070242d9",
+  "release": {
+    "type": "销售阶段待核",
+    "note": "阶段按具体商品、版本及SKU核对，不由用户评论推定。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "官方价格待核",
+    "note": "推广标题148和评论“214吧好像是”都没有完成SKU、权益和时间核对，不作为当前官方全款。"
+  },
+  "shops": {
+    "taobao": {
+      "shop_name": "蜜语糖匣原创设计",
+      "url": "https://shop407861687.taobao.com/category.htm",
+      "note": "店铺入口来自草莓猫猫商品页；青提咩咩对应商品ID仍待核。"
+    }
+  },
+  "research_record": {
+    "id": "C07",
+    "brand": "蜜语糖匣",
+    "name": "青提咩咩",
+    "version": "品牌同名账号及用户帖对应，淘宝商品ID尚未核",
+    "product_urls": [],
+    "source_refs": [
+      "XQ1",
+      "XQ2",
+      "XQ3",
+      "XQ4",
+      "XQ5"
+    ],
+    "verified_facts": [
+      "品牌同名账号展示与9/8补尾款标题实际可读",
+      "推广标题提供青提/小羊/花苞线索，未观看视频，不扩写图像细节",
+      "推广正文把包包另列小羊古力"
+    ],
+    "price_records": [
+      {
+        "amount_cny": "148",
+        "basis": "promotion_title_sku_unknown",
+        "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "214",
+        "basis": "uncertain_visible_comment",
+        "usable_as_current_full_payment": false
+      }
+    ],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "XQ3",
+        "nature": "mixed_unboxing_self_report",
+        "summary": "自述背带口少量线头，同时肯定蝴蝶结充棉和胸针。"
+      },
+      {
+        "source": "XQ4",
+        "nature": "height_condition_self_report",
+        "summary": "167/104展示作者在评论回应其身高有走光风险，建议南瓜裤；未补体重单位。"
+      }
+    ],
+    "unknowns": [
+      "淘宝店/商品ID与同名账号的交叉对应",
+      "款型/团次及完整图",
+      "当前官方SKU全款/意向金权益",
+      "成分与厘米尺码",
+      "视频画面",
+      "商业合作关系"
+    ],
+    "discussion": "先补不同身高、裙撑和内搭条件的裙长与遮蔽信息，再讨论花苞廓形适用场景。"
+  },
+  "research_sources": {
+    "XQ1": {
+      "kind": "brand_named_account",
+      "url": "https://www.xiaohongshu.com/explore/6a5342b500000000070242d9",
+      "scope": "同名账号展示，经营主体及与淘宝店关系未交叉核验；视频未看"
+    },
+    "XQ2": {
+      "kind": "brand_named_account",
+      "url": "https://www.xiaohongshu.com/explore/6aa02512000000000b00cddb",
+      "scope": "9/8补尾款标题及评论；不证明当前窗口；视频未看"
+    },
+    "XQ3": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/6aa2b2d2000000002502e954",
+      "scope": "开箱正文的线头/胸针自述；视频未看"
+    },
+    "XQ4": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6a58c8ff00000000060126bf",
+      "scope": "167/104标题与作者评论，视频未看"
+    },
+    "XQ5": {
+      "kind": "promotion_purchase_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6a452b31000000001101b591",
+      "scope": "148推广标题与包包另属小羊古力的正文，视频未看"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}

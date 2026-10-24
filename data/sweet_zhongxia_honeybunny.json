@@ -1,0 +1,78 @@
+{
+  "id": "sweet_zhongxia_honeybunny",
+  "name": "蜜糖邦尼合作系列",
+  "brand": "仲夏物语",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "资料待补",
+  "style_summary": "具体OP/JSK尚待选定",
+  "posters": [],
+  "image_note": "",
+  "image_source_url": "",
+  "release": {
+    "type": "销售阶段待核",
+    "note": "品牌公告预约窗已过；当前销售与发货状态仍待核，不将系列等同一款。",
+    "date_range": "2026-09-28 ~ 2026-10-19"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "价格待核",
+    "note": "品牌微博公告给出预约窗口，但没有与具体单裙对应的价目；不采用AI列出的未核价格。"
+  },
+  "shops": {
+    "weibo": {
+      "official_account": "仲夏物语lolita原创设计",
+      "official_url": "https://weibo.com/u/5902942009",
+      "current_post_url": "https://m.weibo.cn/detail/5347050310076919",
+      "note": "微博原文已读；目标裙装商品页及具体版本仍待补。"
+    }
+  },
+  "research_record": {
+    "id": "C01",
+    "brand": "仲夏物语",
+    "name": "蜜糖邦尼合作系列",
+    "version": "具体OP/JSK尚待选定",
+    "product_urls": [],
+    "source_refs": [
+      "O01",
+      "O02"
+    ],
+    "verified_facts": [
+      "品牌微博公告预约时间为2026.9.28—2026.10.19",
+      "公告同时涉及蜜糖邦尼与美乐蒂，不能等同某条OP",
+      "10月10日面料变更通知限大衣"
+    ],
+    "price_records": [],
+    "price_comparable": false,
+    "feedback": [],
+    "unknowns": [
+      "具体单款与版本",
+      "商品ID及SKU价格组成",
+      "厘米尺码与裙装面料",
+      "当前销售与发货阶段",
+      "对应实穿反馈"
+    ],
+    "discussion": "先把系列拆成单件裙装与外套，再讨论造型，避免把外套面料赋给整套。"
+  },
+  "research_sources": {
+    "O01": {
+      "kind": "brand_weibo",
+      "url": "https://m.weibo.cn/detail/5347050310076919",
+      "scope": "品牌预约公告正文已读；不是具体单裙价目"
+    },
+    "O02": {
+      "kind": "brand_weibo",
+      "url": "https://m.weibo.cn/detail/5352486128321443",
+      "scope": "大衣面料更换通知，范围限外套"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}

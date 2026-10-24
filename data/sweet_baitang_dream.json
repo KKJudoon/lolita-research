@@ -1,0 +1,113 @@
+{
+  "id": "sweet_baitang_dream",
+  "name": "梦呓蝶JSK",
+  "brand": "白糖少女",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-24",
+  "status_label": "资料待补",
+  "style_summary": "两条店铺同名商品关系未核",
+  "posters": [
+    "assets/sweet/dream-reference.jpg"
+  ],
+  "image_note": "第三方图鉴参考图；与当前商品链接的版本关系待核",
+  "image_source_url": "https://lolitalibrary.com/library/detail/20600",
+  "release": {
+    "type": "销售阶段待核",
+    "note": "阶段按具体商品、版本及SKU核对，不由用户评论推定。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "卡片 ¥164.88 · SKU待核",
+    "note": "164.88元是店铺两条同名商品卡展示，未选齐SKU；149.88元是第三方历史图鉴参考，不能合并成当前官方价。"
+  },
+  "shops": {
+    "taobao": {
+      "shop_name": "白糖少女",
+      "url": "https://shop433073985.taobao.com/shop/view_shop.htm",
+      "related_item_url": "https://item.taobao.com/item.htm?id=920646271107",
+      "note": "店铺自己的商品卡已读；经营主体与原创权属未认证。"
+    }
+  },
+  "research_record": {
+    "id": "C03",
+    "brand": "白糖少女",
+    "name": "梦呓蝶JSK",
+    "version": "两条店铺同名商品关系未核",
+    "product_urls": [
+      "https://item.taobao.com/item.htm?id=920646271107",
+      "https://item.taobao.com/item.htm?id=929529109198"
+    ],
+    "source_refs": [
+      "O05",
+      "T02",
+      "XD1"
+    ],
+    "verified_facts": [
+      "店铺首页直接给出两个商品链接，均卡片展示164.88元",
+      "第三方图鉴记录粉/蓝、2025-05-01，不能当当前官方版本确认"
+    ],
+    "price_records": [
+      {
+        "amount_cny": "164.88",
+        "basis": "store_card_unselected",
+        "item_ids": [
+          "920646271107",
+          "929529109198"
+        ],
+        "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "149.88",
+        "basis": "historical_third_party_reference",
+        "usable_as_current_full_payment": false
+      }
+    ],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "XD1",
+        "nature": "negative_self_report",
+        "summary": "正文作者自述花边、线头、蝴蝶结及胸口版型不合预期，也认可拍照效果。"
+      },
+      {
+        "source": "XD1",
+        "nature": "opposite_comment",
+        "summary": "同帖另一粉色买家自述做工可接受、穿着合适；体型条件不同。"
+      }
+    ],
+    "unknowns": [
+      "两个同名链接关系",
+      "选定SKU价格/发货",
+      "成分及厘米尺码",
+      "反馈对应版本批次",
+      "当前详情滑块未解除"
+    ],
+    "discussion": "胸口覆盖、内搭和体型条件应与正反反馈一起呈现，不能由单帖得出整款质量。"
+  },
+  "research_sources": {
+    "O05": {
+      "kind": "storefront",
+      "url": "https://shop433073985.taobao.com/shop/view_shop.htm",
+      "scope": "白糖少女首页及四条商品卡实际读取"
+    },
+    "T02": {
+      "kind": "third_party_library",
+      "url": "https://lolitalibrary.com/library/detail/20600",
+      "scope": "历史图鉴参考，不代表当前SKU"
+    },
+    "XD1": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/6849c1990000000012007a9c",
+      "scope": "梦呓蝶做工/版型自述及同帖相反评论"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "本批主动选样，不用于热销排名；互动和商品卡指标不跨来源相加。"
+    ]
+  }
+}
