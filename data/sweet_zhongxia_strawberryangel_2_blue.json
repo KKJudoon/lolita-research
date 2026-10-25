@@ -7,11 +7,14 @@
   ],
   "verified": false,
   "verified_at": "2026-10-25",
-  "status_label": "已分版 · 蓝波点规格待核",
-  "style_summary": "2.0华丽JSK·蓝波点；按用户正文选定研究目标，官方同版待核",
-  "posters": [],
-  "image_note": "",
-  "image_source_url": "",
+  "status_label": "蓝波点配图已补 · 同色规格待核",
+  "style_summary": "2.0华丽JSK·蓝波点；具名品牌及门店展示已读，当前SKU待核",
+  "posters": [
+    "assets/sweet/angel-blue-reference.jpg",
+    "assets/sweet/angel-blue-detail.jpg"
+  ],
+  "image_note": "品牌同名账号具名蓝波点华丽JSK展示；正文标XS、身高160，非实物测量或独立买家反馈",
+  "image_source_url": "https://www.xiaohongshu.com/explore/6954d2c7000000001e029d33",
   "release": {
     "type": "销售阶段待核",
     "note": "阶段按具体商品、版本及SKU核对，不由用户评论推定。"
@@ -33,19 +36,24 @@
     "id": "C02",
     "brand": "仲夏物语",
     "name": "草莓天使",
-    "version": "2.0华丽JSK·蓝波点；按用户正文选定研究目标，官方同版待核",
+    "version": "2.0华丽JSK·蓝波点；具名品牌及门店展示已读，当前SKU待核",
     "product_urls": [],
     "source_refs": [
       "XA1",
       "XA2",
       "XA3",
-      "T07"
+      "T07",
+      "XA4",
+      "XA5",
+      "XA6",
+      "XA7"
     ],
     "verified_facts": [
-      "XA1正文明确具体版本及蓝波点配色",
+      "XA1明确2.0华丽JSK蓝波点；新读品牌同名账号具名华丽JSK蓝波点，门店同名账号另明确2.0华丽JSK蓝波点（XA4/XA5）。",
       "XA2为红白款，XA3为二手渠道自述，均不能与蓝波点混成同版本质量结论",
       "同系列图鉴分普通JSK、华丽JSK及SP，研究目标保留华丽JSK蓝波点，不能拿普通款499元替代（T07及其系列页）。",
-      "本轮读到的华丽款产品信息图明确为薄荷色；其他配色的材料和尺码不据此认定一致。"
+      "本轮读到的华丽款产品信息图明确为薄荷色；其他配色的材料和尺码不据此认定一致。",
+      "XA4前两张具名展示图已目视核对：蓝白波点、条纹褶边、多层蕾丝与蝴蝶结可见；搭配衬衫、帽子、手袖、包和伞不自动计入单裙。"
     ],
     "price_records": [
       {
@@ -65,16 +73,41 @@
         "source": "XA2",
         "nature": "mixed_different_color",
         "summary": "红白款作者同时肯定上身效果、抱怨触感和褶量；不是相同配色对照。"
+      },
+      {
+        "source": "XA7",
+        "nature": "arrival_version_unconfirmed",
+        "summary": "作者称蓝波点到家、喜欢清透配色；没有尺码、身围、批次或实购证明，不作质量与合身结论。"
+      },
+      {
+        "source": "XA6",
+        "nature": "adjacent_version_unconfirmed",
+        "summary": "相邻2.0蓝色JSK笔记未锁华丽/蓝波点版本。可见内衬不满与作者不同意见，另有对白色塑料感的评论；仅作核查线索，不转用为本色本版性能反馈。"
       }
     ],
     "unknowns": [
-      "蓝波点华丽JSK同版本原店商品ID和完整图片",
+      "蓝波点华丽JSK同版本原店商品ID、当前团次和完整产品信息图",
       "蓝波点当前SKU全款、包含物与销售/发货阶段",
       "蓝波点同批次面料、里料、厘米表与洗标",
-      "不同配色是否同料同版；薄荷色袖口表的异常数值待原店复核"
+      "不同配色是否同料同版；薄荷色袖口表的异常数值待原店复核",
+      "同版同色独立实穿的尺码、净身围、裙撑及商业关系；模特身高160/XS不等于合身建议"
     ],
     "discussion": "把视觉反光与触感分开测评，同版同色比较后再讨论材料。",
     "documented_references": [
+      {
+        "title": "蓝波点具名展示与版本边界",
+        "source": "XA4",
+        "observed_at": "2026-10-25",
+        "scope": "品牌同名账号展示图，搭配物分售情况未核；不是原店当前SKU、厘米尺码或独立实穿验收。",
+        "points": [
+          "正文注明华丽JSK、蓝波点、XS与身高160；门店同名账号另明确2.0华丽JSK蓝波点（XA5）。",
+          "两张已读图片支持蓝白波点、条纹褶边、多层蕾丝与蝴蝶结的视觉对应。拍摄、打光与后期未知，不从照片判断成分、克重或准确色差。",
+          "相邻笔记只写2.0蓝色JSK（XA6）；有人不满内衬、作者回应觉得尚可，另一评论说白色塑料感强。版本与评论主体不清，作为进一步核查线索，不归因本目标。",
+          "蓝波点到家帖（XA7）仅评价颜色清透，未补尺码、身体条件或材质证据。"
+        ],
+        "tables": [],
+        "images": []
+      },
       {
         "title": "其他配色对照：薄荷色华丽JSK",
         "source": "T07",
@@ -142,11 +175,12 @@
     "verification_audit": [
       {
         "field": "款式与版本",
-        "status": "partial",
-        "summary": "目标蓝波点华丽JSK来自用户正文；图鉴普通/华丽/SP已分开。",
+        "status": "documented",
+        "summary": "已补具名蓝波点华丽JSK品牌/门店展示及两张读图；当前团次、商品ID另核。",
         "sources": [
           "XA1",
-          "T07"
+          "XA4",
+          "XA5"
         ]
       },
       {
@@ -190,15 +224,18 @@
       {
         "field": "穿着反馈",
         "status": "partial",
-        "summary": "蓝波点、红白与二手来源分别保留，不把异色触感合并。",
+        "summary": "新增蓝波点到家颜色评价；2.0蓝色JSK内衬争议未锁同版。XS/160为品牌展示条件，非独立实穿。",
         "sources": [
           "XA1",
           "XA2",
-          "XA3"
+          "XA3",
+          "XA4",
+          "XA6",
+          "XA7"
         ]
       }
     ],
-    "supplement_summary": "分清普通/华丽/SP，补薄荷色对照图与参数边界，保留蓝波点待核。",
+    "supplement_summary": "补蓝波点具名品牌/门店展示及两张配图；拆开邻近版本的内衬评论，同色规格和当前SKU仍待核。",
     "audit_at": "2026-10-25"
   },
   "research_sources": {
@@ -221,6 +258,26 @@
       "kind": "third_party_library",
       "url": "https://lolitalibrary.com/library/detail/24754",
       "scope": "华丽JSK独立条目；689元为图鉴参考，所附材质/尺码图明确写薄荷色，不能移用至蓝波点。"
+    },
+    "XA4": {
+      "kind": "brand_named_account",
+      "url": "https://www.xiaohongshu.com/explore/6954d2c7000000001e029d33",
+      "scope": "品牌同名账号具名“草莓天使 华丽jsk蓝波点xs 身高160”；6图中的前2张已目视核对并留存，不证明经营主体、当前SKU或模特自费购买。"
+    },
+    "XA5": {
+      "kind": "brand_named_store",
+      "url": "https://www.xiaohongshu.com/explore/6a1854b3000000003502efb1",
+      "scope": "仲夏物语马鞍山金鹰店同名账号标题明确2.0华丽JSK蓝波点；正文是店铺宣传，无厘米表/同色成分/现行SKU价。"
+    },
+    "XA6": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/6a0dce470000000035032e16",
+      "scope": "仅题名2.0蓝色JSK，未明确华丽版/蓝波点；正文及5条可见评论已读，未观看可能的视频。内衬争议不转为蓝波点华丽版缺陷结论。"
+    },
+    "XA7": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/69f1c57c0000000023006a3f",
+      "scope": "蓝波点到家自述，正文只评清透配色，2条评论；未给版号、尺码、体型或实购凭证。"
     }
   },
   "popularity": {

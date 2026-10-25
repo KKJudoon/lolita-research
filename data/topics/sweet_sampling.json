@@ -1,7 +1,19 @@
 {
-  "read_records": 21,
-  "excluded_records": 1,
-  "brand_named_account_posts": 2,
+  "read_records": 28,
+  "excluded_records": 2,
+  "brand_named_account_posts": 4,
   "videos_watched": false,
-  "notes": "20篇相关材料含2篇原品牌同名账号宣传；新增少女奈莉笔记未锁SP/实购。青提咩咩5篇选读任务420秒超时，不计新已读。未观看视频。"
+  "updated_at": "2026-10-25T09:31+08:00",
+  "latest_summary": "蓝波点补品牌与门店具名展示、两张配图；青提咩咩补平铺/具名静态图及集赞关系。本轮更新既有2款，未新增款式。",
+  "notes": "26篇相关材料含4篇品牌/门店同名账号宣传；本轮另有2篇明示集赞/互赞。新增2.0蓝色JSK未锁华丽/蓝波点，单列为相邻版本。无具名且无可验图像的品牌展示未纳入；不等于26名独立买家。",
+  "excluded_details": [
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a3d440a000000000f0178c8",
+      "reason": "旧同名误配，实际属于小花猪水手服"
+    },
+    {
+      "url": "https://www.xiaohongshu.com/explore/6a6998760000000010028136",
+      "reason": "正文不具名，无可验图像/视频，不能认定为青提咩咩"
+    }
+  ]
 }

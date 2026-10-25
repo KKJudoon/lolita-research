@@ -5,7 +5,7 @@
   "limits": [
     "原店当前商品页读取受限，部分款式仍缺当期SKU、库存及发货证据。",
     "本次AI检索没有提供可用的新原始资料；实际采用的图鉴、品牌原帖、商品图与笔记分别列在详情。",
-    "青提咩咩本次未获得可验收的新正文，不增加已读篇数；新增少女奈莉笔记版本/实购关系未知。",
+    "累计28条笔记已读、26条相关、2条未纳入；新增两条青提咩咩为明示集赞/互赞，不能当独立实穿；品牌/门店宣传和相邻版本分列。",
     "实物洗标、克重、实际穿着和未观看的视频仍缺直接核验。"
   ],
   "themes": [
@@ -51,6 +51,15 @@
         "C07"
       ],
       "next": "比较同一天同尺码的完整搭配成本时，单列正裙、内搭、头饰、意向金处理和运费；海外USD与原店CNY保留各自渠道。"
+    },
+    {
+      "title": "先区分集赞互动与实穿证据",
+      "finding": "新读青提咩咩两帖明示集赞/互赞，已加载评论多为dd/互点。蓝波点具名品牌/门店展示有助对版，但不是独立买家口碑。互动数量无法替代同版、身体条件和购买关系。",
+      "records": [
+        "C02",
+        "C07"
+      ],
+      "next": "采样时另列宣传、集赞参与、二手、实购未知与可核实穿；记录评论实际信息量，不按点赞数给款式排质量或成交热度。"
     }
   ],
   "rejected_matches": [
@@ -65,6 +74,12 @@
       "name": "少女奈莉2.0",
       "reason": "品牌2026年新版本；不自动覆盖旧SP刺绣OP材质、尺码和交期。",
       "url": "https://www.sina.cn/media/6381218617"
+    },
+    {
+      "record": "C07",
+      "name": "无裙撑无内搭展示（未能对版）",
+      "reason": "正文无款名、没有可验静态图且视频未看，不补成青提咩咩无裙撑证明。",
+      "url": "https://www.xiaohongshu.com/explore/6a6998760000000010028136"
     }
   ],
   "asset_files": [
@@ -75,6 +90,11 @@
     "assets/sweet/velvet-spec.jpg",
     "assets/sweet/cat-official-size.jpg",
     "assets/sweet/cat-official-price.jpg",
-    "assets/sweet/nelly-original-spec.jpg"
-  ]
+    "assets/sweet/nelly-original-spec.jpg",
+    "assets/sweet/angel-blue-reference.jpg",
+    "assets/sweet/angel-blue-detail.jpg",
+    "assets/sweet/qingti-flatlay.jpg",
+    "assets/sweet/qingti-named-display.jpg"
+  ],
+  "latest_summary": "蓝波点补品牌与门店具名展示、两张配图；青提咩咩补平铺/具名静态图及集赞关系。本轮更新既有2款，未新增款式。 已有片裁JSK、草莓猫猫历史价目/厘米表等材料继续保留；同色规格和当前SKU缺口没有用相邻款填满。"
 }

@@ -28,6 +28,8 @@ KINDS = {
     "third_party_retailer": "独立零售商品页／原店批次待核",
     "brand_profile": "品牌账号自述／商品与经营主体另核",
     "third_party_aggregator": "第三方商品资料／原店现行版另核",
+    "brand_named_store": "门店同名账号／主体与直营关系待核",
+    "incentivized_post": "集赞参与笔记／激励与购买关系待核",
 }
 
 
@@ -127,7 +129,7 @@ def render_research_detail(item):
     if r["feedback"]:
         for f in r["feedback"]:
             s = sources[f["source"]]
-            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买", "promotion_purchase_unknown":"推广或笼统评价／实购与版本未知"}.get(f["nature"], "个体自述／可见评论")
+            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买", "promotion_purchase_unknown":"推广或笼统评价／实购与版本未知", "incentivized_content_not_wear_review":"集赞参与／不作独立实穿证据", "adjacent_version_unconfirmed":"相邻版本评论／不归因本目标", "arrival_version_unconfirmed":"到家自述／版本与身体条件未核"}.get(f["nature"], "个体自述／可见评论")
             body += f'<article class="feedback"><div class="kind">{esc(label)}</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应来源 ↗</a></article>'
         body += '<p class="caption">正文与可见评论已读；未观看的视频不写成视频结论。版本、配色、体型、渠道和推广关系未全部统一。</p>'
     else:
@@ -147,7 +149,7 @@ def render_research_detail(item):
 def render_review(items, review):
     by_id = {i["research_record"]["id"]:i for i in items}
     body = '<a class="back" href="index.html">← 返回甜系专题</a><header class="hero"><div class="eyebrow">'+esc(review["updated_at"])+ ' 补充核验</div><h1>'+esc(review["title"])+'</h1><p>'+esc(review["scope"])+'</p></header>'
-    body += '<section class="section"><h2>这轮补到哪里</h2><p>蜜糖邦尼已落实到片裁JSK；草莓猫猫增加原店历史价目及两张厘米表。其余款式分别补分版、名称、入口或图像依据，尚缺原店证据的字段继续保留。</p><div class="link-row">'
+    body += '<section class="section"><h2>这轮补到哪里</h2><p>'+esc(review.get("latest_summary", "蜜糖邦尼已落实到片裁JSK；草莓猫猫增加原店历史价目及两张厘米表。其余款式分别补分版、名称、入口或图像依据，尚缺原店证据的字段继续保留。"))+'</p><div class="link-row">'
     body += ''.join(f'<a href="#audit-{esc(cid)}">{esc(cid)} {esc(i["name"])} ↓</a>' for cid,i in sorted(by_id.items()))+'</div></section>'
     for cid,item in sorted(by_id.items()):
         r=item["research_record"]
@@ -173,7 +175,9 @@ def render_topic(items, sample_sources, sampling=None):
     brand_count = len({i["brand"] for i in items})
     source_count = len(sample_sources)
     record_summary = f'{series_count}个系列待选款、{len(items)-series_count}个款式候选' if series_count else f'{len(items)}个具体款式候选'
-    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{record_summary}；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
+    body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{record_summary}；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌或门店同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
+    if sampling.get("latest_summary"):
+        body += '<section class="section"><h2>最新补充 · '+esc(sampling["updated_at"])+ '</h2><p>'+esc(sampling["latest_summary"])+ '</p><p><a href="../items/sweet_zhongxia_strawberryangel_2_blue.html">蓝波点具名展示 →</a> · <a href="../items/sweet_miyu_qingti.html">青提咩咩补充 →</a></p></section>'
     if all(i["research_record"].get("verification_audit") for i in items):
         body += '<section class="section"><h2>本轮补充：九款逐项核查</h2><p>已补片裁JSK具体款、原店历史价目/权益、转载厘米表、中文名称与品牌入口；蓝波点、青提咩咩等缺少原店证据的字段逐项列明。</p><p><a href="review.html">打开九款核查总表与设计比较 →</a></p><p class="caption">包含版本、入口、价格/包含物、面料、厘米表、交期与反馈共63项；有记录不等于所有字段已确认。</p></section>'
     added = max((i.get("added_at", "") for i in items), default="")
@@ -190,7 +194,7 @@ def render_topic(items, sample_sources, sampling=None):
         body += f'<article class="tile" data-brand="{esc(item["brand"])}" data-search="{esc(item["name"]+" "+item["brand"])}">{visual}<div class="tile-body"><div class="brand">{esc(item["brand"])}</div><h2><a href="{url}">{esc(item["name"])}</a></h2><p class="version">{esc(item["research_record"]["version"])}</p><span class="pill">{esc(item["status_label"])}</span><p class="price">{esc(item["price"]["display_label"])}</p><p class="caption">{esc(item.get("image_note") or "先保留有据可查的条目，不用近似款代图")}</p><a class="open" href="{url}">看款式资料与来源 →</a></div></article>'
     body += '</div><p id="empty-state" class="empty-state" hidden>没有匹配条目，试试其他款名或清除筛选。</p>'
     body += '<section class="section"><h2>本批先讨论什么</h2><ol><li>胸口覆盖、裙长与遮蔽：把身高、尺码、内搭和裙撑条件一起展示。</li><li>外观与触感：同版同色再比较，不从亮闪图片或“丝绒”款名推断成分。</li><li>单裙与小物：包含物、固定方式及每组发货期分别列清楚。</li></ol><p class="caption">这些问题来自有限样本，不用于热销排名、复购率或新店利润判断。</p></section>'
-    body += f'<section class="section"><h2>采样与来源</h2><p>累计读取{sampling["read_records"]}篇小红书记录，排除{sampling["excluded_records"]}篇同名误配，保留以下{source_count}篇相关材料。按品牌、款名、实穿和相反意见主动选读，非随机样本；并非每个新增款式都有小红书覆盖。互动数不相加成销量，视频尚未观看。店铺和品牌同名账号的经营主体、原创权属未全部核验。</p><ol class="source-list">'
+    body += f'<section class="section"><h2>采样与来源</h2><p>累计读取{sampling["read_records"]}篇小红书记录，{sampling["excluded_records"]}篇因误配或未能识别目标而未纳入，保留以下{source_count}篇相关材料。按品牌、款名、实穿和相反意见主动选读，非随机样本；并非每个新增款式都有小红书覆盖。互动数不相加成销量，视频尚未观看。店铺和品牌同名账号的经营主体、原创权属未全部核验。</p><p class="caption">{esc(sampling.get("notes", ""))}</p><ol class="source-list">'
     for s in sample_sources:
         body += f'<li><a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])} ↗</a><small>{esc(s["kind"])}</small></li>'
     body += '</ol><details><summary>一条同名候选为何撤回？</summary><p>原“蜜语糖匣·萌兔物语OP”缺独立商品依据；实际读到的同名测评属于小花猪水手服，已排除，另补青提咩咩候选。这不证明原款一定不存在。</p><a href="https://www.xiaohongshu.com/explore/6a3d440a000000000f0178c8" target="_blank" rel="noopener">查看被排除的同名原帖 ↗</a></details></section>'
