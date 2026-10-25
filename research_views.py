@@ -33,7 +33,7 @@ KINDS = {
 }
 
 
-AUDIT_LABELS = {"documented": "有记录", "partial": "部分有据", "unresolved": "仍缺证据"}
+AUDIT_LABELS = {"documented": "有记录", "partial": "部分有据", "unresolved": "未找到可核资料"}
 
 
 def render_audit_rows(item):
@@ -129,12 +129,17 @@ def render_research_detail(item):
     if r["feedback"]:
         for f in r["feedback"]:
             s = sources[f["source"]]
-            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买", "promotion_purchase_unknown":"推广或笼统评价／实购与版本未知", "incentivized_content_not_wear_review":"集赞参与／不作独立实穿证据", "adjacent_version_unconfirmed":"相邻版本评论／不归因本目标", "arrival_version_unconfirmed":"到家自述／版本与身体条件未核"}.get(f["nature"], "个体自述／可见评论")
+            label = {"retailer_review_visible_self_report":"零售页评价／批次与独立性未核", "retailer_giveaway_self_report":"零售页赠奖自述／非自费购买", "promotion_purchase_unknown":"推广或笼统评价／实购与版本未知", "incentivized_content_not_wear_review":"集赞参与／不作独立实穿证据", "adjacent_version_unconfirmed":"相邻版本评论／不归因本目标", "arrival_version_unconfirmed":"到家自述／版本与身体条件未核", "wear_self_report_unverified_purchase":"实穿自述／批次与购买关系未核"}.get(f["nature"], "个体自述／可见评论")
             body += f'<article class="feedback"><div class="kind">{esc(label)}</div><p>{esc(f["summary"])}</p><a href="{esc(s["url"])}" target="_blank" rel="noopener">查看对应来源 ↗</a></article>'
         body += '<p class="caption">正文与可见评论已读；未观看的视频不写成视频结论。版本、配色、体型、渠道和推广关系未全部统一。</p>'
     else:
         body += '<p class="muted">尚无与本条目具体版本对应的独立实穿材料；宣传不替代用户验收。</p>'
-    body += '</section><section class="section"><h2>还需核验</h2><ul>' + ''.join('<li>'+esc(x)+'</li>' for x in r["unknowns"]) + '</ul></section>'
+    body += '</section><section class="section"><h2>未找到与尚未核验</h2><p class="caption">按当前材料保留缺口；“未找到”不表示信息或款式不存在，取得新资料后再更新。</p>'
+    gaps = r.get("search_gaps", {})
+    if gaps:
+        body += '<p class="caption">最近查找：'+esc(gaps["checked_at"])+'。范围：'+esc(gaps["scope"])+ '。</p>'
+    missing = set(gaps.get("not_found_indexes", []))
+    body += '<ul>'+''.join('<li><strong>'+('未找到' if n in missing else '尚未核验')+'：</strong>'+esc(x)+'</li>' for n,x in enumerate(r["unknowns"]))+'</ul></section>'
     body += '<section class="section"><h2>设计讨论问题</h2><p class="question">'+esc(r["discussion"])+'</p><p class="caption">这是后续验证问题，不代表已确定的产品定位、定价或质量结论。</p></section>'
     body += '<section class="section"><h2>原始来源</h2><ul class="sources">'
     for sid in r["source_refs"]:
@@ -198,6 +203,9 @@ def render_topic(items, sample_sources, sampling=None):
     for s in sample_sources:
         body += f'<li><a href="{esc(s["url"])}" target="_blank" rel="noopener">{esc(s["title"])} ↗</a><small>{esc(s["kind"])}</small></li>'
     body += '</ol><details><summary>一条同名候选为何撤回？</summary><p>原“蜜语糖匣·萌兔物语OP”缺独立商品依据；实际读到的同名测评属于小花猪水手服，已排除，另补青提咩咩候选。这不证明原款一定不存在。</p><a href="https://www.xiaohongshu.com/explore/6a3d440a000000000f0178c8" target="_blank" rel="noopener">查看被排除的同名原帖 ↗</a></details></section>'
+    excluded = [s for s in sampling.get("excluded_details", []) if "6a3d440a000000000f0178c8" not in s["url"]]
+    if excluded:
+        body += '<section class="section"><details><summary>其他已读但未纳入的笔记</summary><ul>'+''.join('<li>'+esc(s["reason"])+ ' <a href="'+esc(s["url"])+ '" target="_blank" rel="noopener">对应来源 ↗</a></li>' for s in excluded)+'</ul></details></section>'
     script = '''<script>
 const cards=Array.from(document.querySelectorAll('.tile')), search=document.getElementById('sweet-search'), brand=document.getElementById('brand-filter');
 function filterCards(){const q=search.value.trim().toLowerCase();let count=0;cards.forEach(c=>{const show=(!q||c.dataset.search.toLowerCase().includes(q))&&(!brand.value||c.dataset.brand===brand.value);c.hidden=!show;if(show)count++});document.getElementById('result-count').textContent='显示'+count+'个条目';document.getElementById('empty-state').hidden=count>0}

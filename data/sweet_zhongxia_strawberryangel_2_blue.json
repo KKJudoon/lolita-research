@@ -7,7 +7,7 @@
   ],
   "verified": false,
   "verified_at": "2026-10-25",
-  "status_label": "蓝波点配图已补 · 同色规格待核",
+  "status_label": "配图已补 · 同色规格未找到",
   "style_summary": "2.0华丽JSK·蓝波点；具名品牌及门店展示已读，当前SKU待核",
   "posters": [
     "assets/sweet/angel-blue-reference.jpg",
@@ -46,14 +46,17 @@
       "XA4",
       "XA5",
       "XA6",
-      "XA7"
+      "XA7",
+      "XA8",
+      "XA9"
     ],
     "verified_facts": [
       "XA1明确2.0华丽JSK蓝波点；新读品牌同名账号具名华丽JSK蓝波点，门店同名账号另明确2.0华丽JSK蓝波点（XA4/XA5）。",
       "XA2为红白款，XA3为二手渠道自述，均不能与蓝波点混成同版本质量结论",
       "同系列图鉴分普通JSK、华丽JSK及SP，研究目标保留华丽JSK蓝波点，不能拿普通款499元替代（T07及其系列页）。",
       "本轮读到的华丽款产品信息图明确为薄荷色；其他配色的材料和尺码不据此认定一致。",
-      "XA4前两张具名展示图已目视核对：蓝白波点、条纹褶边、多层蕾丝与蝴蝶结可见；搭配衬衫、帽子、手袖、包和伞不自动计入单裙。"
+      "XA4前两张具名展示图已目视核对：蓝白波点、条纹褶边、多层蕾丝与蝴蝶结可见；搭配衬衫、帽子、手袖、包和伞不自动计入单裙。",
+      "新增蓝波点repo两张静态图，胸前装饰、腰部蝴蝶结与层次结构提供视觉对应；图片不证明当前团次、纤维或尺码。"
     ],
     "price_records": [
       {
@@ -83,6 +86,16 @@
         "source": "XA6",
         "nature": "adjacent_version_unconfirmed",
         "summary": "相邻2.0蓝色JSK笔记未锁华丽/蓝波点版本。可见内衬不满与作者不同意见，另有对白色塑料感的评论；仅作核查线索，不转用为本色本版性能反馈。"
+      },
+      {
+        "source": "XA8",
+        "nature": "wear_self_report_unverified_purchase",
+        "summary": "作者喜欢蓝波点配色，称单穿可能略扎、需要较强裙撑展开裙摆，并展示蓝/白衬衫和领结搭配。仅为该作者感受，缺尺码、身体条件与批次。"
+      },
+      {
+        "source": "XA9",
+        "nature": "wear_self_report_unverified_purchase",
+        "summary": "作者标题自述160斤；正文说黑紫L、蓝白波点XL，黑紫裙长适合自己，XL体感更舒适宽松。配色与尺码同时变化，未给身高数值/净身围；不能据此推荐160斤统一穿XL。"
       }
     ],
     "unknowns": [
@@ -107,6 +120,22 @@
         ],
         "tables": [],
         "images": []
+      },
+      {
+        "title": "蓝波点实穿自述与条件",
+        "source": "XA8",
+        "observed_at": "2026-10-25",
+        "scope": "个人笔记静态图及正文；购买与合作关系、尺码和批次未全部核实，不作为官方规格或普遍性能结论。",
+        "points": [
+          "两张已目视图片为搭配照与上身局部，支持该帖蓝波点外观对应，不按照片测量厘米数。",
+          "作者称单穿可能略扎、需要较强裙撑，并讨论蓝/白衬衫和领结搭配；触感、展开效果是个体自述。",
+          "另一帖（XA9）自述160斤、黑紫L和蓝白波点XL；尺码与配色同时变化，不能单独归因版型或材料差异。"
+        ],
+        "tables": [],
+        "images": [
+          "assets/sweet/angel-blue-wear-1.jpg",
+          "assets/sweet/angel-blue-wear-2.jpg"
+        ]
       },
       {
         "title": "其他配色对照：薄荷色华丽JSK",
@@ -224,19 +253,30 @@
       {
         "field": "穿着反馈",
         "status": "partial",
-        "summary": "新增蓝波点到家颜色评价；2.0蓝色JSK内衬争议未锁同版。XS/160为品牌展示条件，非独立实穿。",
+        "summary": "新增单穿略扎/裙撑自述及160斤作者黑紫L、蓝白XL条件；身高、净身围、批次和购买关系仍未齐。",
         "sources": [
           "XA1",
           "XA2",
           "XA3",
           "XA4",
           "XA6",
-          "XA7"
+          "XA7",
+          "XA8",
+          "XA9"
         ]
       }
     ],
-    "supplement_summary": "补蓝波点具名品牌/门店展示及两张配图；拆开邻近版本的内衬评论，同色规格和当前SKU仍待核。",
-    "audit_at": "2026-10-25"
+    "supplement_summary": "新增两条蓝波点实穿自述和两张静态图；原店ID、同色规格及当前SKU按本轮结果标未找到。",
+    "audit_at": "2026-10-25",
+    "search_gaps": {
+      "checked_at": "2026-10-25T10:56+08:00",
+      "scope": "已读品牌/门店具名展示、图鉴与可读公开商品线索、小红书正文及可见评论",
+      "not_found_indexes": [
+        0,
+        1,
+        2
+      ]
+    }
   },
   "research_sources": {
     "XA1": {
@@ -278,6 +318,16 @@
       "kind": "user_post",
       "url": "https://www.xiaohongshu.com/explore/69f1c57c0000000023006a3f",
       "scope": "蓝波点到家自述，正文只评清透配色，2条评论；未给版号、尺码、体型或实购凭证。"
+    },
+    "XA8": {
+      "kind": "user_post",
+      "url": "https://www.xiaohongshu.com/explore/6a2556dd000000001603ec99",
+      "scope": "蓝波点repo正文与前2张可读静态图已核；单穿略扎、裙撑及搭配是作者自述，无净身围、尺码、团次或实购证明；评论未加载不当零条。"
+    },
+    "XA9": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6a4da1df0000000021021daa",
+      "scope": "标题自述160斤，正文明确黑紫L、蓝白波点XL及宽松感；未给身高数值/净身围/批次/自费证据，未观看视频。"
     }
   },
   "popularity": {
