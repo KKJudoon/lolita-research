@@ -118,8 +118,15 @@ def render_research_detail(item):
     if selected:
         body += '<div class="table-scroll"><table><thead><tr><th>选定组合</th><th>页面展示价</th><th>发货文案</th><th>商品原页</th></tr></thead><tbody>'
         for p in selected:
-            body += f'<tr><td>{esc(" / ".join(p["selection"]))}<small>SKU {esc(p["sku_id"])}</small></td><td>¥{esc(p["amount_cny"])}</td><td>{esc(p["shipping_text"])}</td><td><a href="{esc(p["url"])}" target="_blank" rel="noopener">对应SKU ↗</a></td></tr>'
-        body += '</tbody></table></div><p class="caption">2026-10-24 16:18：选齐颜色组合与M码后记录；未核结算优惠及实付。</p>'
+            identity = ('SKU '+str(p['sku_id'])) if p.get('sku_id') else ('商品 '+str(p.get('item_id', '')))
+            observed = p.get('observed_date') or str(p.get('observed_at', ''))[:10]
+            date_zone = '（UTC）' if p.get('observed_at') and not p.get('observed_date') else ''
+            metadata = esc(identity + (' · 观察日期 '+observed+date_zone if observed else ''))
+            evidence = ' · '.join(f'<a href="../{esc(path)}" target="_blank" rel="noopener">规格截图{n}</a>' for n,path in enumerate(p.get('evidence_images', []), 1))
+            evidence_html = '<small>' + evidence + '</small>' if evidence else ''
+            stock = '<small>'+esc(p['stock_text'])+'</small>' if p.get('stock_text') else ''
+            body += f'<tr><td>{esc(" / ".join(p["selection"]))}<small>{metadata}</small>{evidence_html}</td><td>¥{esc(p["amount_cny"])}{stock}</td><td>{esc(p["shipping_text"])}</td><td><a href="{esc(p["url"])}" target="_blank" rel="noopener">商品来源 ↗</a></td></tr>'
+        body += '</tbody></table></div><p class="caption">每行保留各自观察日期；选齐颜色／套餐及尺码后的展示价，未核结算优惠和实付。不同商品链接分列，不合并版本或销量。</p>'
     elif records:
         labels = {"store_card_unselected":"未选SKU的店铺卡片价", "historical_third_party_reference":"历史图鉴参考", "unselected_minimum_not_dress_price":"未选SKU最低展示，不能当单裙价", "promotion_title_sku_unknown":"推广标题线索，SKU与权益未核", "uncertain_visible_comment":"不确定的评论报价，不能当官方价"}
         body += '<ul>' + ''.join(f'<li>¥{esc(p["amount_cny"])}：{esc(labels.get(p["basis"], p["basis"]))}</li>' for p in records) + '</ul>'

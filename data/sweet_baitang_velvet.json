@@ -6,9 +6,9 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-25",
+  "verified_at": "2026-10-27",
   "status_label": "SKU展示价已核",
-  "style_summary": "商品1006763616986，粉色M码三个组合",
+  "style_summary": "两条同名链接分别核对粉M两组，链接关系待核",
   "posters": [
     "assets/sweet/velvet-single.jpg",
     "assets/sweet/velvet-set.jpg"
@@ -22,7 +22,7 @@
   "price": {
     "currency": "CNY",
     "display_label": "单裙展示 ¥219.88 · 粉M",
-    "note": "粉色M码单裙219.88元；加背后蝴蝶结260.88元；再加头纱293.88元。单裙页面写24小时内发货，另两组写预售15天内发货。均为2026-10-24选定SKU展示价，未核结算实付。"
+    "note": "2026-10-27官方App分别读取1006763616986与985874514171：粉色M单裙219.88元、加背后蝴蝶结260.88元，均显示有货，两个商品ID分列且关系未核。10月24日第三组加头纱293.88元及当时两套装预售15天保留为历史记录；本轮未重读第三组。当前App商品页承诺24小时，未取得逐SKU最新交期；均未核结算优惠/实付。"
   },
   "shops": {
     "taobao": {
@@ -45,14 +45,18 @@
       "O05",
       "O06",
       "T03",
-      "R02"
+      "R02",
+      "A27V",
+      "A27V2"
     ],
     "verified_facts": [
       "选项列红白/粉/白及S/M/L，但不代表全组合可售",
       "已实际查看单裙与组合SKU图，见本页参考图",
       "款名丝绒不能代替成分证明",
       "已找到使用相同店铺图源的42Lolita商品页，厘米尺码与材质陈述单列为零售商参考。",
-      "图鉴所附尺码图已逐行核读，S/M/L裙长与胸围范围与先前零售页相同；不把转载图视为当前淘宝批次确认（T03）。"
+      "图鉴所附尺码图已逐行核读，S/M/L裙长与胸围范围与先前零售页相同；不把转载图视为当前淘宝批次确认（T03）。",
+      "2026-10-27官方App实际选齐粉色M单裙与加背后蝴蝶结组合，展示219.88/260.88元且有货；9项参数另有页面证据。",
+      "2026-10-27另一同名链接985874514171也在官方App选齐粉M单裙与加背后蝴蝶结组合：219.88/260.88元，均有货；与1006763616986的链接关系仍未核。"
     ],
     "price_records": [
       {
@@ -96,10 +100,94 @@
         "stable_reads": 3,
         "url": "https://item.taobao.com/item.htm?id=1006763616986&skuId=6165235906024",
         "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "219.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "1006763616986",
+        "selection": [
+          "粉色jsk吊带裙",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T13:58:06.775032+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=1006763616986",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/velvet-sku1-1.jpg",
+          "assets/taobao-app-20261027/velvet-sku1-2.jpg"
+        ]
+      },
+      {
+        "amount_cny": "260.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "1006763616986",
+        "selection": [
+          "粉色jsk吊带裙+背后蝴蝶结",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T13:58:32.671954+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=1006763616986",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/velvet-sku2-1.jpg",
+          "assets/taobao-app-20261027/velvet-sku2-2.jpg"
+        ]
+      },
+      {
+        "amount_cny": "219.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "985874514171",
+        "selection": [
+          "粉色jsk吊带裙",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:30:49.551742+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=985874514171",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/velvet-b-sku1-1.jpg",
+          "assets/taobao-app-20261027/velvet-b-sku1-2.jpg"
+        ]
+      },
+      {
+        "amount_cny": "260.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "985874514171",
+        "selection": [
+          "粉色jsk吊带裙+背后蝴蝶结",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:31:17.836180+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=985874514171",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/velvet-b-sku2-1.jpg",
+          "assets/taobao-app-20261027/velvet-b-sku2-2.jpg"
+        ]
       }
     ],
     "price_comparable": true,
-    "price_comparable_scope": "仅本商品内、所核粉色M码组合的展示价可对照；不表示其他五款已有可比全款",
+    "price_comparable_scope": "只对照各商品链接内已选粉色M的展示价；两条同名链接继续分列，不合并版本、批次、库存或销量。",
     "feedback": [
       {
         "source": "R02",
@@ -233,9 +321,11 @@
       {
         "field": "价格与包含物",
         "status": "documented",
-        "summary": "10月24日粉M单裙219.88、加背结260.88、再加头纱293.88；未结算。",
+        "summary": "10月27日两条同名链接分别核对粉M单裙219.88、加背结260.88；第三组293.88为10月24日历史展示，未结算。",
         "sources": [
-          "O06"
+          "O06",
+          "A27V",
+          "A27V2"
         ]
       },
       {
@@ -258,9 +348,10 @@
       {
         "field": "销售与交期",
         "status": "documented",
-        "summary": "10月24日所选粉M单裙24小时、两套装15天，仅限当时SKU。",
+        "summary": "10月27日两组粉M有货，商品页承诺24小时；逐SKU当前交期未重核，10月24日24小时/15天记录保留日期。",
         "sources": [
-          "O06"
+          "O06",
+          "A27V"
         ]
       },
       {
@@ -272,8 +363,8 @@
         ]
       }
     ],
-    "supplement_summary": "补原图厘米表，保留原店三组已选SKU记录；不推断丝绒纤维。",
-    "audit_at": "2026-10-25"
+    "supplement_summary": "10月27日官方App分别读取1006763616986与985874514171，两条链接各选齐粉M单裙219.88、加背后蝴蝶结260.88，均有货；链接关系未核且分列。三件套293.88及15天交期保留10月24日历史日期，未当作本轮承诺。",
+    "audit_at": "2026-10-27"
   },
   "research_sources": {
     "O05": {
@@ -295,6 +386,16 @@
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/doll-like-sweet-lolita-jumper-dress-bow-accents",
       "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+    },
+    "A27V": {
+      "kind": "store_product",
+      "url": "https://item.taobao.com/item.htm?id=1006763616986",
+      "scope": "2026-10-27官方App两组完整粉M规格、展示价及有货文案；商品页24小时发货只作为页面文案，不覆盖10月24日历史逐SKU交期。"
+    },
+    "A27V2": {
+      "kind": "store_product",
+      "url": "https://item.taobao.com/item.htm?id=985874514171",
+      "scope": "2026-10-27经Researcher MCP在官方App读取985874514171，两组完整粉M：单裙219.88、加背后蝴蝶结260.88，均有货；没有合并主链接的批次、库存、销量和历史交期。"
     }
   },
   "popularity": {

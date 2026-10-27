@@ -6,8 +6,8 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-25",
-  "status_label": "转载尺码图已补 · SKU待核",
+  "verified_at": "2026-10-27",
+  "status_label": "两组粉M展示价已核",
   "style_summary": "两条店铺同名商品关系未核",
   "posters": [
     "assets/sweet/dream-reference.jpg"
@@ -20,8 +20,8 @@
   },
   "price": {
     "currency": "CNY",
-    "display_label": "卡片 ¥164.88 · SKU待核",
-    "note": "164.88元是店铺两条同名商品卡展示，未选齐SKU；149.88元是第三方历史图鉴参考，不能合并成当前官方价。"
+    "display_label": "粉M单裙 ¥164.88 · 三件组合 ¥238.88",
+    "note": "2026-10-27官方App分别读取商品920646271107、929529109198：粉色M单裙164.88元，粉色M单裙+粉色拖尾+粉色发带238.88元，均显示有货。两条链接关系未核，继续分列；149.88元保留为第三方历史图鉴参考。未核结算优惠或实付。"
   },
   "shops": {
     "taobao": {
@@ -44,13 +44,16 @@
       "O05",
       "T02",
       "XD1",
-      "R01"
+      "R01",
+      "A27A",
+      "A27B"
     ],
     "verified_facts": [
       "店铺首页直接给出两个商品链接，均卡片展示164.88元",
       "第三方图鉴记录粉/蓝、2025-05-01，不能当当前官方版本确认",
       "已找到使用相同店铺图源的42Lolita商品页，厘米尺码与材质陈述单列为零售商参考。",
-      "图鉴所附尺码图已逐行核读，S/M/L裙长与胸围范围与先前零售页相同；不把转载图视为当前淘宝批次确认（T02）。"
+      "图鉴所附尺码图已逐行核读，S/M/L裙长与胸围范围与先前零售页相同；不把转载图视为当前淘宝批次确认（T02）。",
+      "2026-10-27两条原店链接在官方App分别选齐粉色M单裙与加粉色拖尾/发带组合：164.88/238.88元，均显示有货；规格证据按商品ID分列。"
     ],
     "price_records": [
       {
@@ -66,9 +69,89 @@
         "amount_cny": "149.88",
         "basis": "historical_third_party_reference",
         "usable_as_current_full_payment": false
+      },
+      {
+        "amount_cny": "164.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "920646271107",
+        "selection": [
+          "粉色jsk吊带裙",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:01:30.294337+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=920646271107",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/dream-a-sku1-1.jpg"
+        ]
+      },
+      {
+        "amount_cny": "238.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "920646271107",
+        "selection": [
+          "粉色jsk吊带裙+粉色拖尾+粉色发带",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:01:46.558261+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=920646271107",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/dream-a-sku2-1.jpg"
+        ]
+      },
+      {
+        "amount_cny": "164.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "929529109198",
+        "selection": [
+          "粉色jsk吊带裙",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:07:08.628993+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=929529109198",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/dream-b-sku1-1.jpg"
+        ]
+      },
+      {
+        "amount_cny": "238.88",
+        "basis": "selected_sku_display",
+        "sku_id": null,
+        "item_id": "929529109198",
+        "selection": [
+          "粉色jsk吊带裙+粉色拖尾+粉色发带",
+          "M"
+        ],
+        "stock_text": "有货",
+        "shipping_text": "本轮规格面板未展示交期；商品页承诺24小时内发货，未作逐SKU履约核验",
+        "observed_at": "2026-10-27T14:07:28.318784+00:00",
+        "stable_reads": 1,
+        "url": "https://item.taobao.com/item.htm?id=929529109198",
+        "usable_as_current_full_payment": false,
+        "channel": "official_taobao_app",
+        "evidence_images": [
+          "assets/taobao-app-20261027/dream-b-sku2-1.jpg"
+        ]
       }
     ],
-    "price_comparable": false,
+    "price_comparable": true,
     "feedback": [
       {
         "source": "XD1",
@@ -88,10 +171,10 @@
     ],
     "unknowns": [
       "两个同名链接关系",
-      "选定SKU价格/发货",
+      "已选组合的最新逐SKU交期、其他颜色尺码价格及结算实付",
       "原店现行团次的成分、洗标及是否沿用图鉴/零售厘米表",
       "反馈对应版本批次",
-      "商品原页SKU与规格仍待核验"
+      "其他颜色尺码的完整SKU、数字SKU ID及当前团次映射"
     ],
     "discussion": "胸口覆盖、内搭和体型条件应与正反反馈一起呈现，不能由单帖得出整款质量。",
     "retailer_reference": {
@@ -193,18 +276,20 @@
       {
         "field": "商品与店铺入口",
         "status": "documented",
-        "summary": "店铺433073985及920646271107/929529109198来自店铺卡。",
+        "summary": "两条既有原店商品链接已在10月27日App分别打开并读取；关系仍待核。",
         "sources": [
-          "O05"
+          "O05",
+          "A27A",
+          "A27B"
         ]
       },
       {
         "field": "价格与包含物",
-        "status": "partial",
-        "summary": "164.88是店铺卡未选SKU；海外JSK/拖尾/头饰分售另列。",
+        "status": "documented",
+        "summary": "10月27日两条链接分别选齐粉M单裙164.88、加粉色拖尾和发带238.88，均有货；未结算。",
         "sources": [
-          "O05",
-          "R01"
+          "A27A",
+          "A27B"
         ]
       },
       {
@@ -227,8 +312,10 @@
       {
         "field": "销售与交期",
         "status": "partial",
-        "summary": "45天预购仅为海外渠道记录；原店所选SKU交期未知。",
+        "summary": "App商品页承诺24小时内发货；规格面板未逐SKU展示交期，海外45天记录另列。",
         "sources": [
+          "A27A",
+          "A27B",
           "R01"
         ]
       },
@@ -242,8 +329,9 @@
         ]
       }
     ],
-    "supplement_summary": "补图鉴原图尺码依据，并核对与零售厘米表一致；两个ID继续分开。",
-    "audit_at": "2026-10-25"
+    "supplement_summary": "10月27日官方App补读两条原店链接，各自选齐两组粉色M：单裙164.88、加粉色拖尾与发带238.88，均有货；链接9/8选项及裙型标注存在差异，关系仍未核。原图厘米表保留转载边界。",
+    "audit_at": "2026-10-27",
+    "price_comparable_scope": "只对照各自商品链接内本轮已选的两组粉色M展示价，不合并两条链接的版本、批次、库存或销量。"
   },
   "research_sources": {
     "O05": {
@@ -265,6 +353,16 @@
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/ballet-style-sweet-lolita-jsk-dress-with-large-bow-trailing",
       "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+    },
+    "A27A": {
+      "kind": "store_product",
+      "url": "https://item.taobao.com/item.htm?id=920646271107",
+      "scope": "2026-10-27官方App实际读取，两组粉色M完整规格及有货文案。9个颜色选项；商品页裙型显示蓬蓬裙。这些标签差异不直接证明实物版本不同，未合并批次和销量。"
+    },
+    "A27B": {
+      "kind": "store_product",
+      "url": "https://item.taobao.com/item.htm?id=929529109198",
+      "scope": "2026-10-27官方App实际读取，两组粉色M完整规格及有货文案。8个颜色选项；商品页裙型显示A字裙。这些标签差异不直接证明实物版本不同，未合并批次和销量。"
     }
   },
   "popularity": {
