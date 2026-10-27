@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-25",
+  "verified_at": "2026-10-27",
   "status_label": "具体款已选 · 图鉴规格",
   "style_summary": "三丽鸥合作款·片裁JSK；粉色／薄荷色，当前淘宝SKU未锁定",
   "posters": [
@@ -21,8 +21,8 @@
   },
   "price": {
     "currency": "CNY",
-    "display_label": "图鉴参考 ¥499 · 当前SKU待核",
-    "note": "图鉴列片裁JSK参考价499元，未核原店当前单裙SKU；不当结算实付或含小物套价。"
+    "display_label": "品牌历史预约 ¥499 · 当前SKU待核",
+    "note": "品牌2026年9月23日原图列蜜糖邦尼片裁JSK预约价499元，与图鉴参考价一致；属于历史预约报价，当前SKU包含物、优惠、实付及库存仍未核。"
   },
   "shops": {
     "weibo": {
@@ -47,7 +47,8 @@
       "O01",
       "O02",
       "T06",
-      "O07"
+      "O07",
+      "O08"
     ],
     "verified_facts": [
       "品牌微博公告预约时间为2026.9.28—2026.10.19",
@@ -55,20 +56,33 @@
       "10月10日面料变更通知限大衣",
       "已将研究对象从整个合作系列落实到片裁JSK，图鉴同时列粉/薄荷两色（T06）。",
       "所附产品图列出裙装面料、棉布里料及XS–XL尺码；没有成分百分比（T06）。",
-      "品牌10月19日截单公告与此前预约截止日一致；不证明当前可购（O07）。"
+      "品牌10月19日截单公告与此前预约截止日一致；不证明当前可购（O07）。",
+      "品牌9月23日系列原图具名蜜糖邦尼片裁JSK，预约价499元；仅补足历史品牌报价，当前SKU继续待核（O08）。"
     ],
     "price_records": [
       {
         "basis": "historical_third_party_reference",
         "amount_cny": 499,
         "source": "T06"
+      },
+      {
+        "basis": "historical_brand_reservation",
+        "amount_cny": 499,
+        "currency": "CNY",
+        "source": "O08",
+        "published_at": "2026-09-23",
+        "observed_date": "2026-10-27",
+        "includes": "原图未明确配件包含物；非当前SKU全价或实付",
+        "evidence_images": [
+          "assets/sweet/honey-brand-reservation-20260923.jpg"
+        ]
       }
     ],
     "price_comparable": false,
     "feedback": [],
     "unknowns": [
       "原店商品ID、选定配色尺码及SKU包含物",
-      "当前淘宝全款、优惠与实付；图鉴499元仅参考",
+      "当前淘宝全款、优惠与实付；品牌历史预约499元不当作现价",
       "现行批次的成分百分比、克重及洗标",
       "当前是否重开/有现货、各SKU发货承诺",
       "与片裁JSK对应的独立实穿、体型和活动条件"
@@ -76,6 +90,19 @@
     "discussion": "片裁波浪外层与条纹内层如何在坐下、抬手时保持层次？先按具体款和裙撑条件观察，不把系列大衣材料套给裙装。",
     "record_type": "style",
     "documented_references": [
+      {
+        "title": "品牌历史预约报价原图",
+        "source": "O08",
+        "observed_at": "2026-10-27",
+        "scope": "品牌2026年9月23日系列长图中的片裁JSK区域；按相邻标签定位，粉/薄荷两色同列。裁图保留款名与报价，完整来源在链接。",
+        "points": [
+          "原图具名片裁JSK，预约价499元；与图鉴499元参考值一致。",
+          "同帖七张独立厘米表标题均为美乐蒂，不套用于蜜糖邦尼。现行SKU、配件包含物、实付与库存仍缺。"
+        ],
+        "images": [
+          "assets/sweet/honey-brand-reservation-20260923.jpg"
+        ]
+      },
       {
         "title": "片裁JSK产品信息图",
         "source": "T06",
@@ -161,8 +188,9 @@
       {
         "field": "价格与包含物",
         "status": "partial",
-        "summary": "499元为图鉴参考；当前单裙/配件组合和结算价未核。",
+        "summary": "品牌9月23日原图列片裁JSK预约价499元，与图鉴一致；当前SKU包含物、优惠与实付仍未核。",
         "sources": [
+          "O08",
           "T06"
         ]
       },
@@ -197,8 +225,8 @@
         "sources": []
       }
     ],
-    "supplement_summary": "从系列落实到片裁JSK，补正背图、面料/里料、XS–XL表及品牌截单公告。",
-    "audit_at": "2026-10-25"
+    "supplement_summary": "补到品牌9月23日原图，具名片裁JSK历史预约价499元；已有粉/薄荷图鉴规格与10月19日截单公告，当前SKU和独立实穿仍缺。",
+    "audit_at": "2026-10-27"
   },
   "research_sources": {
     "O01": {
@@ -220,6 +248,11 @@
       "kind": "brand_weibo",
       "url": "https://www.sina.cn/news/detail/5355672124273063.html",
       "scope": "仲夏物语账号2026-10-19截单正文；新浪可读页，认证主体显示杭州载艺科技有限公司。"
+    },
+    "O08": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5346325552173667.html",
+      "scope": "仲夏物语品牌2026年9月23日系列公告及原图：明确蜜糖邦尼片裁JSK预约价499元；不证明当前SKU、包含物或可购状态。"
     }
   },
   "popularity": {
