@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-27",
+  "verified_at": "2026-10-28",
   "status_label": "具体款已选 · 图鉴规格",
   "style_summary": "三丽鸥合作款·片裁JSK；粉色／薄荷色，当前淘宝SKU未锁定",
   "posters": [
@@ -48,7 +48,10 @@
       "O02",
       "T06",
       "O07",
-      "O08"
+      "O08",
+      "XH28F",
+      "XH28W1",
+      "XH28W2"
     ],
     "verified_facts": [
       "品牌微博公告预约时间为2026.9.28—2026.10.19",
@@ -57,7 +60,8 @@
       "已将研究对象从整个合作系列落实到片裁JSK，图鉴同时列粉/薄荷两色（T06）。",
       "所附产品图列出裙装面料、棉布里料及XS–XL尺码；没有成分百分比（T06）。",
       "品牌10月19日截单公告与此前预约截止日一致；不证明当前可购（O07）。",
-      "品牌9月23日系列原图具名蜜糖邦尼片裁JSK，预约价499元；仅补足历史品牌报价，当前SKU继续待核（O08）。"
+      "品牌9月23日系列原图具名蜜糖邦尼片裁JSK，预约价499元；仅补足历史品牌报价，当前SKU继续待核（O08）。",
+      "品牌同名账号具名平铺帖把片裁JSK与拼布OP并陈，正文感谢-KIKILLUA-返图；静态图支持粉色波点多瓣弧边外层、棕色条纹下层与双兔装饰的视觉对应（XH28F）。"
     ],
     "price_records": [
       {
@@ -79,7 +83,18 @@
       }
     ],
     "price_comparable": false,
-    "feedback": [],
+    "feedback": [
+      {
+        "source": "XH28W1",
+        "nature": "wear_display_conditions_missing",
+        "summary": "作者正文称阳光下的蜜糖邦尼片裁可爱；5条已加载评论主要问手袖、袜子和帽子。没有体型、尺码、购买关系，视频未看，不作独立实穿验收。"
+      },
+      {
+        "source": "XH28W2",
+        "nature": "wear_display_conditions_missing",
+        "summary": "具名片裁与内搭组合展示；评论提到没有拍粉色片裁、另拍其他款。正文未给身体尺码或实购条件，视频未看，不能补为合身或活动性能证据。"
+      }
+    ],
     "unknowns": [
       "原店商品ID、选定配色尺码及SKU包含物",
       "当前淘宝全款、优惠与实付；品牌历史预约499元不当作现价",
@@ -90,6 +105,20 @@
     "discussion": "片裁波浪外层与条纹内层如何在坐下、抬手时保持层次？先按具体款和裙撑条件观察，不把系列大衣材料套给裙装。",
     "record_type": "style",
     "documented_references": [
+      {
+        "title": "具名片裁与拼布OP静态对版",
+        "source": "XH28F",
+        "observed_at": "2026-10-28",
+        "scope": "品牌同名账号发布的搭配展示，署名-KIKILLUA-返图；不是尺码、成分、当前库存或独立买家验收。",
+        "points": [
+          "4张图已目视：第1张并列两种裙型，第4张突出粉色片裁；拼布OP的印花与版型不搬给片裁。",
+          "片裁可见粉色波点多瓣弧边外层、棕色条纹下层、胸前兔形装饰和褶饰肩带；不由照片推断材质、克重、可拆性或SKU包含物。"
+        ],
+        "images": [
+          "assets/sweet/honey-brand-flatlay-20261028.jpg",
+          "assets/sweet/honey-brand-detail-20261028.jpg"
+        ]
+      },
       {
         "title": "品牌历史预约报价原图",
         "source": "O08",
@@ -171,9 +200,10 @@
       {
         "field": "款式与版本",
         "status": "documented",
-        "summary": "已选片裁JSK，具名粉/薄荷两色；系列不再代替单款。",
+        "summary": "图鉴粉/薄荷片裁及具名品牌同名账号粉色平铺已对照；当前批次和SKU仍未核。",
         "sources": [
-          "T06"
+          "T06",
+          "XH28F"
         ]
       },
       {
@@ -221,12 +251,18 @@
       {
         "field": "穿着反馈",
         "status": "unresolved",
-        "summary": "未取得片裁JSK同版、具备体型和购买条件的独立实穿。",
-        "sources": []
+        "summary": "新增两篇具名穿搭正文仍缺体型、尺码与购买条件；没有取得符合条件的独立实穿。",
+        "sources": [
+          "XH28W1",
+          "XH28W2"
+        ]
       }
     ],
-    "supplement_summary": "补到品牌9月23日原图，具名片裁JSK历史预约价499元；已有粉/薄荷图鉴规格与10月19日截单公告，当前SKU和独立实穿仍缺。",
-    "audit_at": "2026-10-27"
+    "supplement_summary": "新增品牌同名账号具名片裁平铺与近景，排除同帖拼布OP混用；两篇穿搭正文未补齐身体尺码和购买条件，独立实穿继续未找到。",
+    "audit_at": "2026-10-28",
+    "verification_attempts": [
+      "10月28日按蜜糖邦尼/片裁首屏20候选，逐篇读取品牌平铺和2篇穿搭正文；后两篇无身体尺码且视频未看，独立实穿项继续未找到。"
+    ]
   },
   "research_sources": {
     "O01": {
@@ -253,6 +289,21 @@
       "kind": "brand_weibo",
       "url": "https://www.sina.cn/news/detail/5346325552173667.html",
       "scope": "仲夏物语品牌2026年9月23日系列公告及原图：明确蜜糖邦尼片裁JSK预约价499元；不证明当前SKU、包含物或可购状态。"
+    },
+    "XH28F": {
+      "kind": "brand_named_account",
+      "url": "https://www.xiaohongshu.com/explore/6ab4e398000000001301b759",
+      "scope": "品牌同名账号具名片裁/拼布OP平铺，署名返图-KIKILLUA-；4张静态图已目视，保存第1/4张。经营主体、图像权属和当前SKU未另核。"
+    },
+    "XH28W1": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6ab48de9000000001802ee2d",
+      "scope": "正文具名蜜糖邦尼片裁；评论仅搭配咨询，缺体型、尺码、购买关系，未观看视频，不作独立实穿。"
+    },
+    "XH28W2": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6ab26ed5000000003303e590",
+      "scope": "片裁与衬衣/开衫组合展示正文及5条评论已读；未给身体尺码和购买关系，视频未看。"
     }
   },
   "popularity": {
