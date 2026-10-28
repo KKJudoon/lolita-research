@@ -1,0 +1,190 @@
+{
+  "id": "sweet_alicegirl_dollbed",
+  "name": "玩偶床蓝粉华丽JSK",
+  "brand": "Alicegirl 原创工作室",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-28",
+  "added_at": "2026-10-28",
+  "status_label": "有源观察款 · 当前SKU待核",
+  "style_summary": "加入印花华丽JSK及拖尾连接件的品牌变更公告，讨论装饰固定、拆装与大货兑现。",
+  "posters": [
+    "assets/sweet/dollbed-bluepink-front-20261028.jpg",
+    "assets/sweet/dollbed-bluepink-detail-20261028.jpg"
+  ],
+  "image_note": "品牌9月11日蓝粉华丽JSK挂拍，含另售衬衫与搭配物；照片早于10月20日工艺公告。",
+  "image_source_url": "https://www.sina.cn/news/detail/5341996161433837.html",
+  "release": {
+    "type": "历史预约与工艺公告",
+    "note": "小红书历史帖标9月18日截定；品牌10月20日公告大货连接方式将调整，未核尾款、实际出货或当前库存。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "历史公告 ¥388 · 当前SKU待核",
+    "note": "品牌同名账号历史帖明确华丽JSK388元，包含后背大蝴蝶结拖尾；衬衫+接袖198元另列。不是当前选色选码报价、结算实付或出货验收。"
+  },
+  "shops": {},
+  "research_record": {
+    "id": "C11",
+    "record_type": "style",
+    "brand": "Alicegirl 原创工作室",
+    "name": "玩偶床蓝粉华丽JSK",
+    "version": "蓝粉色华丽JSK；古早JSK和OP另版，9月挂拍与10月工艺公告分期",
+    "selection_reason": "加入印花华丽JSK及拖尾连接件的品牌变更公告，讨论装饰固定、拆装与大货兑现。",
+    "product_urls": [
+      "https://www.sina.cn/news/detail/5341996161433837.html",
+      "https://www.xiaohongshu.com/explore/6a87e1f400000000270290ca"
+    ],
+    "source_refs": [
+      "DA1",
+      "DA2",
+      "DA0",
+      "XD1",
+      "XD2"
+    ],
+    "verified_facts": [
+      "品牌具名蓝粉华丽JSK挂拍可见蓝色菱格胸片、粉色印花裙摆、多层蕾丝及蝴蝶结；搭配衬衫不自动包含。",
+      "品牌同名历史帖把华丽JSK与古早JSK/OP区分，列388元并明确含后背大蝴蝶结拖尾；衬衫+接袖198元另列。",
+      "10月20日品牌公告称，正式大货拖尾蝴蝶结将取消别针，改用纽扣与扣袢，图案/面料/配色保持原样；这是变更声明，不是出货或耐用性验收。"
+    ],
+    "price_records": [
+      {
+        "basis": "historical_brand_announcement",
+        "amount_cny": 388,
+        "source": "XD1",
+        "published_date_visible": "08-21",
+        "note": "历史华丽JSK公告价含后背大蝴蝶结拖尾；非当前选定SKU/实付。"
+      }
+    ],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "XD2",
+        "nature": "promotion_purchase_unknown",
+        "summary": "“双型上身测评”正文仅标签，3条已加载评论为种草及尺码提问，没有可用尺码回答；视频未看，不能据标题认定穿法、合身或独立实购。"
+      }
+    ],
+    "unknowns": [
+      "同版当前淘宝商品ID、选色选码SKU、结算和库存",
+      "面料纤维百分比、里料与洗护标签；公告称面料不变不能替代成分",
+      "同版厘米表、弹性与裙长测量边界",
+      "纽扣/扣袢大货是否实际落实、耐用性和背后独自拆装",
+      "同版独立实穿的身体、尺码、内搭/裙撑、批次和购买关系；当前视频未看"
+    ],
+    "discussion": "固定件从别针改为纽扣/扣袢后，如何同时验证装饰承重、反复拆装、背后可及性和不伤面料？和C05草莓猫猫售后自述仅作跨案例问题比较，不推断品牌之间的因果关系。",
+    "documented_references": [
+      {
+        "title": "拖尾蝴蝶结连接方式变更公告",
+        "source": "DA2",
+        "observed_at": "2026-10-28",
+        "scope": "2026-10-20品牌声明；9月挂拍在先，现行实物、订单和大货是否执行仍待核。",
+        "points": [
+          "公告和说明图把原别针固定与拟用纽扣/扣袢并列，涉及拖尾蝴蝶结与裙体的连接。",
+          "品牌称固定更稳、拆装更方便；没有实物同负重、反复拆装或单人背后操作测试，不写成已证实改进。"
+        ],
+        "images": [
+          "assets/sweet/dollbed-attachment-notice-20261028.jpg"
+        ]
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "documented",
+        "summary": "品牌具名蓝粉华丽JSK挂拍与工艺公告可读；古早JSK/OP不混版。",
+        "sources": [
+          "DA1",
+          "DA2"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "品牌发布入口可读，未取得当前同款淘宝商品ID与SKU。",
+        "sources": [
+          "DA0",
+          "XD1"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "documented",
+        "summary": "历史品牌同名帖388元含后背大蝴蝶结拖尾；198元衬衫+接袖另列，现价未核。",
+        "sources": [
+          "XD1"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "unresolved",
+        "summary": "只有“面料不变”公告，未找到成分百分比、里料或洗标。",
+        "sources": [
+          "DA2"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "unresolved",
+        "summary": "所读挂拍/公告和测评正文未取得同版厘米表。",
+        "sources": [
+          "DA1",
+          "XD2"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "历史截定9/18及10/20大货变更公告可读；尾款、实发和库存未核。",
+        "sources": [
+          "XD1",
+          "DA2"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "读到测评标签和尺码提问；视频未看，无身体/尺码条件可用。",
+        "sources": [
+          "XD2"
+        ]
+      }
+    ],
+    "audit_at": "2026-10-28",
+    "supplement_summary": "新增蓝粉华丽JSK品牌挂拍、388元含拖尾历史公告及别针改纽扣/扣袢声明；现行SKU、洗标、厘米表和改动落实未核。"
+  },
+  "research_sources": {
+    "DA1": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5341996161433837.html",
+      "scope": "Alicegirl品牌9月11日具名蓝粉华丽JSK挂拍，9图已目视；图像不能证明10月公告的大货改动已交付。"
+    },
+    "DA2": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5356190545478722.html",
+      "scope": "Alicegirl品牌2026-10-20工艺公告正文与前后结构说明图已读：拖尾蝴蝶结别针改纽扣/扣袢；落实与耐用性待实测。"
+    },
+    "DA0": {
+      "kind": "brand_profile",
+      "url": "https://www.sina.cn/media/6372985568",
+      "scope": "具名品牌发布入口；不由主页认定当前商品ID、法律主体或所有小红书账号归属。"
+    },
+    "XD1": {
+      "kind": "brand_named_account",
+      "url": "https://www.xiaohongshu.com/explore/6a87e1f400000000270290ca",
+      "scope": "Alice girl原创工作室同名账号华丽JSK帖正文与5条可见评论已读；388元含后背大蝴蝶结拖尾，198元衬衫+接袖另列，历史截定9/18。"
+    },
+    "XD2": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6a8ea1a5000000002a03d7c7",
+      "scope": "双型测评标题正文只有标签，3条评论没有尺码回答；视频未观看，不把“多穿法”或合身当已核性能。"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "主动选样，互动与宣传不作销量、质量或独立买家数。"
+    ]
+  }
+}

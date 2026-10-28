@@ -107,7 +107,7 @@ def render_research_detail(item):
         body += render_audit_rows(item)
         for attempt in r.get("verification_attempts", []):
             body += '<p class="caption">'+esc(attempt)+'</p>'
-        body += '<a href="../sweet/review.html">看九款核查总表与设计比较 →</a></section>'
+        body += '<a href="../sweet/review.html">看款式核查总表与设计比较 →</a></section>'
     for reference in r.get("documented_references", []):
         body += render_documented_reference(reference, sources)
     if r.get("retailer_reference"):
@@ -128,7 +128,7 @@ def render_research_detail(item):
             body += f'<tr><td>{esc(" / ".join(p["selection"]))}<small>{metadata}</small>{evidence_html}</td><td>¥{esc(p["amount_cny"])}{stock}</td><td>{esc(p["shipping_text"])}</td><td><a href="{esc(p["url"])}" target="_blank" rel="noopener">商品来源 ↗</a></td></tr>'
         body += '</tbody></table></div><p class="caption">每行保留各自观察日期；选齐颜色／套餐及尺码后的展示价，未核结算优惠和实付。不同商品链接分列，不合并版本或销量。</p>'
     elif records:
-        labels = {"store_card_unselected":"未选SKU的店铺卡片价", "historical_third_party_reference":"历史图鉴参考", "unselected_minimum_not_dress_price":"未选SKU最低展示，不能当单裙价", "promotion_title_sku_unknown":"推广标题线索，SKU与权益未核", "uncertain_visible_comment":"不确定的评论报价，不能当官方价"}
+        labels = {"store_card_unselected":"未选SKU的店铺卡片价", "historical_third_party_reference":"历史第三方资料参考", "historical_brand_announcement":"品牌历史公告价，当前SKU另核", "unselected_minimum_not_dress_price":"未选SKU最低展示，不能当单裙价", "promotion_title_sku_unknown":"推广标题线索，SKU与权益未核", "uncertain_visible_comment":"不确定的评论报价，不能当官方价"}
         body += '<ul>' + ''.join(f'<li>¥{esc(p["amount_cny"])}：{esc(labels.get(p["basis"], p["basis"]))}</li>' for p in records) + '</ul>'
     else:
         body += '<p class="muted">尚无与此研究目标对应的官方SKU报价。</p>'
@@ -168,7 +168,7 @@ def render_review(items, review):
         body += f'<section class="section" id="audit-{esc(cid)}"><div class="brand">{esc(item["brand"])}</div><h2>{esc(cid)} · {esc(item["name"])}</h2><p>{esc(r["supplement_summary"])}</p>'
         body += render_audit_rows(item)
         body += f'<p><a href="../items/{esc(item["id"])}.html#verification-audit">看资料图、完整表格和原始来源 →</a></p></section>'
-    body += '<section class="section" id="design-comparison"><h2>从九款资料得到的设计讨论</h2><p class="notice">以下是有出处的样本比较与待验证方向，不是销量排名、普遍质量判断或已经确定的产品开发方案。</p>'
+    body += '<section class="section" id="design-comparison"><h2>从款式资料得到的设计讨论</h2><p class="notice">以下是有出处的样本比较与待验证方向，不是销量排名、普遍质量判断或已经确定的产品开发方案。</p>'
     for theme in review["themes"]:
         body += '<h3>'+esc(theme["title"])+'</h3><p>'+esc(theme["finding"])+'</p><p class="caption">对应材料：'
         body += ' · '.join(f'<a href="../items/{esc(by_id[cid]["id"])}.html">{esc(cid)} {esc(by_id[cid]["name"])}</a>' for cid in theme["records"])
@@ -189,9 +189,10 @@ def render_topic(items, sample_sources, sampling=None):
     record_summary = f'{series_count}个系列待选款、{len(items)-series_count}个款式候选' if series_count else f'{len(items)}个具体款式候选'
     body = f'<header class="hero"><div class="eyebrow">SWEET LOLITA · {esc(updated.replace("-", "."))} 更新</div><h1>甜系款式调研</h1><p>从具体款式、配件和穿着反馈出发，记录已经读到的材料，也保留版本、价格与规格的缺口。点击款式可看SKU、正反反馈和原始来源。</p><div class="stats"><div><strong>{brand_count}</strong> <span>个品牌／店铺线索</span></div><div><strong>{len(items)}</strong> <span>个研究条目</span></div><div><strong>{source_count}</strong> <span>篇小红书相关材料</span></div></div><p class="muted">现有{record_summary}；{source_count}篇材料中含{sampling["brand_named_account_posts"]}篇品牌或门店同名账号宣传，不代表{source_count}名独立买家。各款的渠道与版本覆盖见详情。</p></header>'
     if sampling.get("latest_summary"):
-        body += '<section class="section"><h2>最新补充 · '+esc(sampling["updated_at"])+ '</h2><p>'+esc(sampling["latest_summary"])+ '</p><p><a href="../items/sweet_zhongxia_strawberryangel_2_blue.html">蓝波点具名展示 →</a> · <a href="../items/sweet_miyu_qingti.html">青提咩咩补充 →</a></p></section>'
+        body += '<section class="section"><h2>最新补充 · '+esc(sampling["updated_at"])+ '</h2><p>'+esc(sampling["latest_summary"])+ '</p><p><a href="review.html">看补证结果与设计比较 →</a></p></section>'
     if all(i["research_record"].get("verification_audit") for i in items):
-        body += '<section class="section"><h2>本轮补充：九款逐项核查</h2><p>已补片裁JSK具体款、原店历史价目/权益、转载厘米表、中文名称与品牌入口；蓝波点、青提咩咩等缺少原店证据的字段逐项列明。</p><p><a href="review.html">打开九款核查总表与设计比较 →</a></p><p class="caption">包含版本、入口、价格/包含物、面料、厘米表、交期与反馈共63项；有记录不等于所有字段已确认。</p></section>'
+        audit_count = sum(len(i["research_record"]["verification_audit"]) for i in items)
+        body += f'<section class="section"><h2>款式逐项核查</h2><p>{len(items)}款分别记录版本、入口、价格/包含物、面料、厘米表、交期与反馈；扩样后继续保留旧款缺口，历史公告和当前SKU分开。</p><p><a href="review.html">打开款式核查总表与设计比较 →</a></p><p class="caption">共{audit_count}项核查记录；有记录不等于所有字段已确认。</p></section>'
     added = max((i.get("added_at", "") for i in items), default="")
     newest = [i for i in items if added and i.get("added_at") == added]
     if newest:

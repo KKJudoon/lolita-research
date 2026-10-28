@@ -1,0 +1,196 @@
+{
+  "id": "sweet_sheep_rabbitsouffle",
+  "name": "兔芙蕾之梦JSK",
+  "brand": "绵羊裁缝铺",
+  "style_tags": [
+    "甜系"
+  ],
+  "verified": false,
+  "verified_at": "2026-10-28",
+  "added_at": "2026-10-28",
+  "status_label": "有源观察款 · 当前SKU待核",
+  "style_summary": "增加兔耳斗篷、接袖与层叠JSK的搭配观察，记录完整搭配成本和宣传激励。",
+  "posters": [
+    "assets/sweet/rabbit-souffle-cape-20261028.jpg",
+    "assets/sweet/rabbit-souffle-pink-20261028.jpg"
+  ],
+  "image_note": "品牌开定展示的粉色搭配；兔耳斗篷、内搭、接袖及其他道具不自动含在单JSK中。",
+  "image_source_url": "https://www.sina.cn/news/detail/5355002831044711.html",
+  "release": {
+    "type": "历史开定公告",
+    "note": "品牌10月17日公告10月18日13时开定；展示活动图及宣传帖列10月18日至11月18日。不是当前库存、下单或交期确认。"
+  },
+  "price": {
+    "currency": "CNY",
+    "display_label": "第三方历史 ¥378 · 原店SKU待核",
+    "note": "上新汇总号10月21日历史文案列JSK378元、衬衫158元、接袖58元、斗篷118/138元；斗篷差价规格未说明。分售参考，不相加为官方套装或当前实付。"
+  },
+  "shops": {},
+  "research_record": {
+    "id": "C12",
+    "record_type": "style",
+    "brand": "绵羊裁缝铺",
+    "name": "兔芙蕾之梦JSK",
+    "version": "品牌粉色展示JSK；兔耳斗篷、波板糖衬衫及接袖分列，蓝色视频未看",
+    "selection_reason": "增加兔耳斗篷、接袖与层叠JSK的搭配观察，记录完整搭配成本和宣传激励。",
+    "product_urls": [
+      "https://www.sina.cn/news/detail/5355002831044711.html"
+    ],
+    "source_refs": [
+      "RS1",
+      "RS2",
+      "RS3",
+      "XR1",
+      "XR2"
+    ],
+    "verified_facts": [
+      "品牌公告将兔芙蕾之梦与波板糖接袖衬衫分别列名，品牌开定展示有粉色JSK、兔耳小斗篷和层叠花边；搭配与包含物分开。",
+      "品牌预览正文提光泽丝带和定制蕾丝，属于品牌描述，不由光泽推断纤维、克重或原创权属已核。",
+      "品牌开定活动图含发布安利、保留一周并领取颈饰的规则；另有宣传账号抽鞋活动，宣传激励与用户穿着反馈分开记录。"
+    ],
+    "price_records": [
+      {
+        "basis": "historical_third_party_reference",
+        "amount_cny": 378,
+        "source": "RS3",
+        "published_date_visible": "2026-10-21",
+        "note": "上新汇总JSK历史参考；非原店同色同码SKU或套装实付。"
+      }
+    ],
+    "price_comparable": false,
+    "feedback": [
+      {
+        "source": "XR1",
+        "nature": "promotion_purchase_unknown",
+        "summary": "双色测评正文只有穿搭标签；5条可见评论中有一条称里衬纯棉、外层混纺且不易皱。没有可核洗标、比例、净围或订单，视频未看，不升级为官方材质或抗皱结论。"
+      },
+      {
+        "source": "XR2",
+        "nature": "promotion_purchase_unknown",
+        "summary": "宣传账号明示点赞、正向评论及关注抽鞋活动，评论也讨论安利保留一周。与裁缝铺主体关系未核，不当作独立实穿或品牌成交热度。"
+      }
+    ],
+    "unknowns": [
+      "原店商品ID、粉色JSK同码SKU、包含物、现价与交期",
+      "品牌洗标、外层混纺的具体比例、里料和克重；评论成分说法未核",
+      "同版厘米表、弹性与裙长测量边界；人台S样衣紧不作人体推荐",
+      "斗篷118/138差价对应规格，衬衫/接袖和赠品适用条件",
+      "同版独立实穿的身体尺码、内搭/裙撑、穿着时长与购买关系；双色视频未看"
+    ],
+    "discussion": "兔耳斗篷和接袖能否增加搭配跨度，同时保证抬手、背包和温度调节？比较单JSK与完整搭配成本时应分别列斗篷、衬衫、接袖和活动权益，先核材质与尺寸再谈季节适用。",
+    "documented_references": [
+      {
+        "title": "兔耳斗篷搭配与安利活动分开看",
+        "source": "RS1",
+        "observed_at": "2026-10-28",
+        "scope": "品牌历史开定展示；其中一张为安利换颈饰活动图，不是买家评价或当前可领取承诺。",
+        "points": [
+          "照片可见小斗篷兔耳、颈前结饰和层叠JSK的组合；接袖衬衫另列，不由整套照片推断单裙所含。",
+          "活动图说明购买裙子后发布至少3张裙图的安利，保留一周以上且不可编辑，再联系客服；颈饰在尾款期间拍0.01元链接发出。不是无条件赠送，也未核当前履约。另一个宣传帖抽鞋，不合并权益或算独立口碑。"
+        ],
+        "images": [
+          "assets/sweet/rabbit-souffle-cape-detail-20261028.jpg",
+          "assets/sweet/rabbit-souffle-promotion-20261028.jpg"
+        ]
+      }
+    ],
+    "verification_audit": [
+      {
+        "field": "款式与版本",
+        "status": "documented",
+        "summary": "品牌具名兔芙蕾之梦与粉色JSK展示可读；斗篷/衬衫另列，蓝色视频未看。",
+        "sources": [
+          "RS1",
+          "RS2"
+        ]
+      },
+      {
+        "field": "商品与店铺入口",
+        "status": "partial",
+        "summary": "品牌正文指向绵羊裁缝铺，未取得同款商品ID和选定SKU。",
+        "sources": [
+          "RS1"
+        ]
+      },
+      {
+        "field": "价格与包含物",
+        "status": "partial",
+        "summary": "第三方历史JSK378，斗篷/衬衫/接袖分列；官方SKU及斗篷差价规格待核。",
+        "sources": [
+          "RS3"
+        ]
+      },
+      {
+        "field": "面料与里料",
+        "status": "partial",
+        "summary": "仅品牌丝带/蕾丝描述及评论混纺/纯棉说法，缺比例、洗标与批次核对。",
+        "sources": [
+          "RS2",
+          "XR1"
+        ]
+      },
+      {
+        "field": "厘米尺码",
+        "status": "unresolved",
+        "summary": "未取得同版厘米表；预览S人台偏紧不能换作人体尺码推荐。",
+        "sources": [
+          "RS2",
+          "XR1"
+        ]
+      },
+      {
+        "field": "销售与交期",
+        "status": "partial",
+        "summary": "品牌历史10/18 13时开定，活动图列至11/18；当前接单、库存和实发日期未核。",
+        "sources": [
+          "RS1",
+          "XR2"
+        ]
+      },
+      {
+        "field": "穿着反馈",
+        "status": "partial",
+        "summary": "读到双色测评文字/评论及抽奖宣传，视频未看，独立实穿条件仍缺。",
+        "sources": [
+          "XR1",
+          "XR2"
+        ]
+      }
+    ],
+    "audit_at": "2026-10-28",
+    "supplement_summary": "新增粉色兔芙蕾之梦JSK、兔耳斗篷及接袖分售观察；378元仅第三方历史参考，安利赠颈饰/抽鞋宣传分开，成分与厘米表待核。"
+  },
+  "research_sources": {
+    "RS1": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5355002831044711.html",
+      "scope": "绵羊裁缝铺2026-10-17开定公告，9张静态图已目视；兔芙蕾之梦与波板糖接袖衬衫分别列名，部分图片是安利活动。"
+    },
+    "RS2": {
+      "kind": "brand_weibo",
+      "url": "https://www.sina.cn/news/detail/5345666295662694.html",
+      "scope": "品牌2026-09-21预览正文提小斗篷、兔耳/尾巴、光泽丝带及定制蕾丝；6图未目视，S样衣人台紧不作人体选码。"
+    },
+    "RS3": {
+      "kind": "third_party_aggregator",
+      "url": "https://www.sina.cn/news/detail/5356588660955078.html",
+      "scope": "Lolita洋装上新2026-10-21历史汇总分列JSK378/衬衫158/接袖58/斗篷118或138；第三方宣传参考，未选SKU。"
+    },
+    "XR1": {
+      "kind": "wear_display_commercial_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6ad4bbe40000000027016abd",
+      "scope": "双色测评正文与5条可见评论已读，视频未看；一条评论称外层混纺、里衬纯棉，作者身份、成分/洗标和同批次均未核。"
+    },
+    "XR2": {
+      "kind": "promotion_purchase_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6ad1daa90000000014039989",
+      "scope": "绵羊泡芙Lolita宣传帖@裁缝铺，明示点赞/正向评论/关注抽鞋活动；与品牌主体关系未核，5条评论已读，9图未目视，不作独立实穿。"
+    }
+  },
+  "popularity": {
+    "composite_label": "未评级",
+    "evidence": [
+      "主动选样，互动与宣传不作销量、质量或独立买家数。"
+    ]
+  }
+}
