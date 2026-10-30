@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-28",
+  "verified_at": "2026-10-30",
   "status_label": "原店历史价目与尺码已补",
   "style_summary": "详情含有意向金/无意向金及多套装，团次未核",
   "posters": [
@@ -105,7 +105,7 @@
       "source": "R03",
       "name": "Strawberry Cat",
       "brand_label": "Honeycomb Whisper",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "identity_evidence": [
         "零售页与原淘宝详情共用图号O1CN011J5LzM1kgblugdCt4、上传账号2212590974713；已目视确认同一张列车内红色套装展示照片，裁剪不同。",
         "JSK、拖尾、围裙、内搭与BNT/KC套装结构及S/M/L/XL对应。Honeycomb Whisper未取得品牌方中英命名证明，仅保留为零售页标注。"
@@ -151,9 +151,19 @@
         "amount": "41.99",
         "selection": "Printed JSK + Trailing / S",
         "sku": "LOL-DRE-349910",
-        "fulfillment": "读取时零售页标预售30天（不含周末/假日）；原淘宝未选SKU曾显示120天，两渠道和批次不能合并。"
+        "fulfillment": "预售30天（不含周末/假日）；原淘宝未选SKU历史120天另列，不合并渠道或批次。"
       },
-      "identity_summary": "原淘宝列车内红色套装照片在零售页中出现；JSK、拖尾、围裙、BNT/KC与内搭组合相符。"
+      "identity_summary": "原淘宝列车内红色套装照片在零售页中出现；JSK、拖尾、围裙、BNT/KC与内搭组合相符。",
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "41.99",
+          "selection": "Printed JSK + Trailing / S",
+          "sku": "LOL-DRE-349910",
+          "fulfillment": "读取时零售页标预售30天（不含周末/假日）；原淘宝未选SKU曾显示120天，两渠道和批次不能合并。"
+        }
+      ]
     },
     "documented_references": [
       {
@@ -245,6 +255,39 @@
           "assets/sweet/cat-official-size.jpg",
           "assets/sweet/cat-official-price.jpg"
         ]
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R03",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "零售商说明侧拉链、背部抽褶/系带，明确不含颈饰。工艺痕迹说明仅为商家售卖提示，不用来否定用户售后自述。",
+          "公开商品数据标记1/36个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "预售30天（不含周末/假日）；原淘宝未选SKU历史120天另列，不合并渠道或批次。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "Printed JSK + Trailing / S",
+                "41.99",
+                "LOL-DRE-349910",
+                "47454146396334",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
+        ]
       }
     ],
     "verification_audit": [
@@ -311,8 +354,25 @@
         ]
       }
     ],
-    "supplement_summary": "新增具名售后沟通：布料/刺绣肯定与蝴蝶结、拖尾别针、版型疑问并列，披露30元补偿；不把好评、补偿或改善承诺升级为质量结论。",
-    "audit_at": "2026-10-28"
+    "supplement_summary": "补核10月28日已存零售规格：Printed JSK + Trailing / S，USD 41.99；零售商说明侧拉链、背部抽褶/系带，明确不含颈饰。工艺痕迹说明仅为商家售卖提示，不用来否定用户售后自述。 原店批次、实付及独立实穿缺口保留。",
+    "audit_at": "2026-10-30",
+    "retailer_observations": [
+      {
+        "source": "R03",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "Printed JSK + Trailing / S",
+        "variant_id": "47454146396334",
+        "sku": "LOL-DRE-349910",
+        "currency": "USD",
+        "amount": "41.99",
+        "available": true,
+        "available_variants": 1,
+        "total_variants": 36,
+        "inventory_quantity": null,
+        "fulfillment": "预售30天（不含周末/假日）；原淘宝未选SKU历史120天另列，不合并渠道或批次。"
+      }
+    ]
   },
   "research_sources": {
     "O03": {
@@ -338,7 +398,7 @@
     "R03": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/printed-sweet-lolita-jsk-dress-embroidered-strawberry",
-      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "T04": {
       "kind": "third_party_library",

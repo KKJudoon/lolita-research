@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-28",
+  "verified_at": "2026-10-30",
   "added_at": "2026-10-25",
   "status_label": "品牌入口已补 · 版本须区分",
   "style_summary": "补入棉缎猫柄JSK，并保留拉链、裙长及瑕疵提示作为穿着体验对照。",
@@ -102,7 +102,7 @@
       "source": "R04",
       "name": "Cream Meow",
       "brand_label": "Infanta",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
       "identity_summary": "零售页Cream Meow与奶油喵图鉴的名称、Infanta品牌及猫/甜点/菱格元素相符；两篇用户正文同名，具体团次待核。",
       "identity_evidence": [
@@ -149,8 +149,18 @@
         "amount": "65.99",
         "selection": "Pink JSK Only / S",
         "sku": "LOL-DRE-325301",
-        "fulfillment": "页首和处理时间标预售50天（不含周末/假日），同页又写正裙现货、小物预售；文案有冲突，不能据此承诺统一交期。"
-      }
+        "fulfillment": "同页仍写正裙现货/小物预售，又写50天预售，冲突未解；available不能据此选定交期。"
+      },
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "65.99",
+          "selection": "Pink JSK Only / S",
+          "sku": "LOL-DRE-325301",
+          "fulfillment": "页首和处理时间标预售50天（不含周末/假日），同页又写正裙现货、小物预售；文案有冲突，不能据此承诺统一交期。"
+        }
+      ]
     },
     "documented_references": [
       {
@@ -177,6 +187,39 @@
         "images": [
           "assets/sweet/cream-simple-front-20261028.jpg",
           "assets/sweet/cream-simple-back-20261028.jpg"
+        ]
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R04",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "商家主动披露断线、皱褶等瑕疵及折价，请谨慎购买；这是该零售商品文案，不将瑕疵归给所有奶油喵或品牌日常简化版。",
+          "公开商品数据标记19/40个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "同页仍写正裙现货/小物预售，又写50天预售，冲突未解；available不能据此选定交期。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "Pink JSK Only / S",
+                "65.99",
+                "LOL-DRE-325301",
+                "46870963126446",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
         ]
       }
     ],
@@ -227,7 +270,7 @@
       {
         "field": "销售与交期",
         "status": "partial",
-        "summary": "日常款历史“现货”与旧零售款分开；原零售50天预售/正裙现货冲突未解。",
+        "summary": "10月28日零售仍有正裙现货/50天预售冲突，另明示断线与皱褶折价；不覆盖简化版或原店当前库存。",
         "sources": [
           "R04",
           "O10",
@@ -246,14 +289,31 @@
         ]
       }
     ],
-    "supplement_summary": "补S码有条件实穿自述，并将品牌“一片式日常款”正背面独立列出；旧版、简化版和当前零售SKU的规格与库存不混用。",
-    "audit_at": "2026-10-28"
+    "supplement_summary": "补核10月28日已存零售规格：Pink JSK Only / S，USD 65.99；商家主动披露断线、皱褶等瑕疵及折价，请谨慎购买；这是该零售商品文案，不将瑕疵归给所有奶油喵或品牌日常简化版。 原店批次、实付及独立实穿缺口保留。",
+    "audit_at": "2026-10-30",
+    "retailer_observations": [
+      {
+        "source": "R04",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "Pink JSK Only / S",
+        "variant_id": "46870963126446",
+        "sku": "LOL-DRE-325301",
+        "currency": "USD",
+        "amount": "65.99",
+        "available": true,
+        "available_variants": 19,
+        "total_variants": 40,
+        "inventory_quantity": null,
+        "fulfillment": "同页仍写正裙现货/小物预售，又写50天预售，冲突未解；available不能据此选定交期。"
+      }
+    ]
   },
   "research_sources": {
     "R04": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/sweet-lolita-jsk-cat-print",
-      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "T05": {
       "kind": "third_party_library",

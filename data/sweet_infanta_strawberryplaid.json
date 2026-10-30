@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-25",
+  "verified_at": "2026-10-30",
   "added_at": "2026-10-25",
   "status_label": "中文对应已补 · 原店批次待核",
   "style_summary": "草莓拼格中文对应已有图片对照；粉/浅蓝JSK，原店现行批次未核",
@@ -77,7 +77,7 @@
       "原店正式商品ID与现行草莓拼格团次",
       "初发/再版的可靠时间，图片上传日期不等于发售时间",
       "当前颜色尺码库存及原店SKU全款",
-      "原店成分洗标、里料与同版厘米表；S裙长88厘米是否含花边未统一",
+      "原店成分洗标、里料纤维与同版厘米表；已见零售内层图，但第三方S裙长88厘米量法仍未统一",
       "其他体型及相反意见；已排除另一款格子草莓的实穿，不将其算本款样本"
     ],
     "discussion": "统一是否含底部蕾丝的裙长口径，并保留胸围接近上限、肩宽与腰线位置条件；单裙价格和完整搭配成本分开。",
@@ -85,7 +85,7 @@
       "source": "R06",
       "name": "Strawberry Plaid",
       "brand_label": "Infanta",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
       "identity_summary": "直接采样零售页Strawberry Plaid JSK；婴梵塔Infanta双语品牌关系有其他图鉴入口支持，本款中文正式名与原店批次仍待核。",
       "identity_evidence": [
@@ -138,8 +138,18 @@
         "amount": "48.99",
         "selection": "S / light blue",
         "sku": "LOT105306",
-        "fulfillment": "商品描述写处理5–7天，站内通用说明另写现货7–10天；未确认适用优先级，均不等于国际送达总时长。"
-      }
+        "fulfillment": "描述处理5–7天，通用现货说明7–10天；未确认优先级，不作原店库存/送达承诺。"
+      },
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "48.99",
+          "selection": "S / light blue",
+          "sku": "LOT105306",
+          "fulfillment": "商品描述写处理5–7天，站内通用说明另写现货7–10天；未确认适用优先级，均不等于国际送达总时长。"
+        }
+      ]
     },
     "documented_references": [
       {
@@ -153,6 +163,52 @@
         ],
         "tables": [],
         "images": []
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R06",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "商家尺码表S–XXL裙长排除底部5厘米蕾丝，手量误差2–3厘米；后背可伸6厘米的正文不直接加到人体净围或表中。",
+          "公开商品数据标记2/10个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "描述处理5–7天，通用现货说明7–10天；未确认优先级，不作原店库存/送达承诺。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "S / light blue",
+                "48.99",
+                "LOT105306",
+                "41456229122222",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
+        ]
+      },
+      {
+        "title": "草莓拼格里侧结构图片",
+        "source": "R06",
+        "observed_at": "2026-10-30",
+        "scope": "10月28日已下载、10月30日逐图核读的零售图库照片；不是原店当前实物验收或洗标。",
+        "points": [
+          "掀开印花外层的照片可见浅色内层及其下缘，补充“有内层结构”的图像依据；不能从颜色/外观认定内层纤维、厚度或透气性。",
+          "对应零售表裙长排除5厘米底蕾丝；照片不能补出第三方88厘米记录的量法，也不能给旧/新团次强行统一。"
+        ],
+        "images": [
+          "assets/sweet/strawberryplaid-lining-20261030.jpg"
+        ]
       }
     ],
     "verification_audit": [
@@ -184,7 +240,7 @@
       {
         "field": "面料与里料",
         "status": "partial",
-        "summary": "海外Cotton与聚合提线竹节棉各自标注；不等于百分比洗标。",
+        "summary": "补零售掀裙照片，可见浅色内层；棉/蕾丝是商家陈述，里料纤维、比例与原店洗标仍未核。",
         "sources": [
           "R06",
           "T09"
@@ -216,14 +272,31 @@
         ]
       }
     ],
-    "supplement_summary": "补草莓拼格中文图片对照、材质陈述和另一相似格子款的排除依据。",
-    "audit_at": "2026-10-25"
+    "supplement_summary": "补核10月28日已存零售规格：S / light blue，USD 48.99；商家尺码表S–XXL裙长排除底部5厘米蕾丝，手量误差2–3厘米；后背可伸6厘米的正文不直接加到人体净围或表中。 原店批次、实付及独立实穿缺口保留。 补掀裙里侧照片，确认图片可见内层，未猜测里料纤维。",
+    "audit_at": "2026-10-30",
+    "retailer_observations": [
+      {
+        "source": "R06",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "S / light blue",
+        "variant_id": "41456229122222",
+        "sku": "LOT105306",
+        "currency": "USD",
+        "amount": "48.99",
+        "available": true,
+        "available_variants": 2,
+        "total_variants": 10,
+        "inventory_quantity": null,
+        "fulfillment": "描述处理5–7天，通用现货说明7–10天；未确认优先级，不作原店库存/送达承诺。"
+      }
+    ]
   },
   "research_sources": {
     "R06": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/infanta-sweet-strawberry-plaid-lolita-jsk-dress",
-      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "O08": {
       "kind": "brand_profile",

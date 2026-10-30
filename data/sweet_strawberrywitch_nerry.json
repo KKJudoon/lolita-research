@@ -8,7 +8,7 @@
     "田园风"
   ],
   "verified": false,
-  "verified_at": "2026-10-28",
+  "verified_at": "2026-10-30",
   "added_at": "2026-10-25",
   "status_label": "中文款名与原图表已补",
   "style_summary": "少女奈莉SP刺绣OP对照；长/短袖、长/短裙四组合，区别于2026年2.0",
@@ -95,7 +95,7 @@
       "source": "R05",
       "name": "Nerry",
       "brand_label": "Strawberry Witch",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "limitations": "本条以公开零售页为采样入口，尚未核原店当前商品ID、授权关系和洗标。图鉴与用户自述分别保留；零售规格不等于原店同批次确认，美元报价不折算为淘宝价。",
       "identity_summary": "本候选直接以零售页Nerry OP为研究对象；英文品牌与款名按该页记录，未用近似中文名认定原店。",
       "identity_evidence": [
@@ -161,7 +161,7 @@
         "amount": "58.99",
         "selection": "S / light green long-sleeved long dress",
         "sku": "LOL-DRE-201214",
-        "fulfillment": "页面处理时间写7–10天（不含周末/假日），不是国际运输总时长，也未逐项核所有版本库存。"
+        "fulfillment": "处理7–10天（不含周末/假日），不是国际送达总时长。"
       },
       "additional_size_tables": [
         {
@@ -217,6 +217,16 @@
               "100"
             ]
           ]
+        }
+      ],
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "58.99",
+          "selection": "S / light green long-sleeved long dress",
+          "sku": "LOL-DRE-201214",
+          "fulfillment": "页面处理时间写7–10天（不含周末/假日），不是国际运输总时长，也未逐项核所有版本库存。"
         }
       ]
     },
@@ -290,6 +300,39 @@
         "images": [
           "assets/sweet/nelly-original-spec.jpg"
         ]
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R05",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "零售商注明OP加两个蝴蝶结；品牌模特175厘米/55公斤/S，仅商业模特参考，非独立买家实穿。",
+          "公开商品数据标记40/50个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "处理7–10天（不含周末/假日），不是国际送达总时长。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "S / light green long-sleeved long dress",
+                "58.99",
+                "LOL-DRE-201214",
+                "44598840262830",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
+        ]
       }
     ],
     "verification_audit": [
@@ -351,7 +394,7 @@
       {
         "field": "穿着反馈",
         "status": "partial",
-        "summary": "补大码版掉色自述作相邻版本线索；旧SP仍缺同版身体/洗护条件，不能把个例跨版归因。",
+        "summary": "补175cm/55kg/S商业模特条件，单列而不算独立买家；大码版自述不归因SP。",
         "sources": [
           "R05",
           "XL1",
@@ -359,14 +402,31 @@
         ]
       }
     ],
-    "supplement_summary": "补少女奈莉大码版掉色自述并明确跨版边界；未把相邻版本个例并入旧SP质量结论，旧SP规格与实穿缺口继续保留。",
-    "audit_at": "2026-10-28"
+    "supplement_summary": "补核10月28日已存零售规格：S / light green long-sleeved long dress，USD 58.99；零售商注明OP加两个蝴蝶结；品牌模特175厘米/55公斤/S，仅商业模特参考，非独立买家实穿。 原店批次、实付及独立实穿缺口保留。",
+    "audit_at": "2026-10-30",
+    "retailer_observations": [
+      {
+        "source": "R05",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "S / light green long-sleeved long dress",
+        "variant_id": "44598840262830",
+        "sku": "LOL-DRE-201214",
+        "currency": "USD",
+        "amount": "58.99",
+        "available": true,
+        "available_variants": 40,
+        "total_variants": 50,
+        "inventory_quantity": null,
+        "fulfillment": "处理7–10天（不含周末/假日），不是国际送达总时长。"
+      }
+    ]
   },
   "research_sources": {
     "R05": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/sweet-lolita-embroidered-op-dress-multicolors",
-      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认"
+      "scope": "2026-10-25公开商品页/尺码和可见评价实读；海外零售来源，不作为原店价格或洗标确认；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "T08": {
       "kind": "third_party_library",

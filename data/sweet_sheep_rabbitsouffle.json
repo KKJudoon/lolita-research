@@ -6,7 +6,7 @@
     "甜系"
   ],
   "verified": false,
-  "verified_at": "2026-10-28",
+  "verified_at": "2026-10-30",
   "added_at": "2026-10-28",
   "status_label": "有源观察款 · 当前SKU待核",
   "style_summary": "增加兔耳斗篷、接袖与层叠JSK的搭配观察，记录完整搭配成本和宣传激励。",
@@ -41,7 +41,8 @@
       "RS2",
       "RS3",
       "XR1",
-      "XR2"
+      "XR2",
+      "XR3"
     ],
     "verified_facts": [
       "品牌公告将兔芙蕾之梦与波板糖接袖衬衫分别列名，品牌开定展示有粉色JSK、兔耳小斗篷和层叠花边；搭配与包含物分开。",
@@ -68,6 +69,11 @@
         "source": "XR2",
         "nature": "promotion_purchase_unknown",
         "summary": "宣传账号明示点赞、正向评论及关注抽鞋活动，评论也讨论安利保留一周。与裁缝铺主体关系未核，不当作独立实穿或品牌成交热度。"
+      },
+      {
+        "source": "XR3",
+        "nature": "promotion_purchase_unknown",
+        "summary": "标题说不集赞，但5张静态图主要为品牌展示及安利赠颈饰规则，可见评论有互藏互动；不由标题认定独立性。没有斗篷实穿、尺码表或118/138差价规格说明。"
       }
     ],
     "unknowns": [
@@ -150,15 +156,16 @@
       {
         "field": "穿着反馈",
         "status": "partial",
-        "summary": "读到双色测评文字/评论及抽奖宣传，视频未看，独立实穿条件仍缺。",
+        "summary": "补“不集赞”标题的品牌图/活动与互藏评论，未取得独立实穿条件；不凭标题判独立性。",
         "sources": [
           "XR1",
-          "XR2"
+          "XR2",
+          "XR3"
         ]
       }
     ],
-    "audit_at": "2026-10-28",
-    "supplement_summary": "新增粉色兔芙蕾之梦JSK、兔耳斗篷及接袖分售观察；378元仅第三方历史参考，安利赠颈饰/抽鞋宣传分开，成分与厘米表待核。"
+    "audit_at": "2026-10-30",
+    "supplement_summary": "将已存斗篷笔记完成归档：品牌图/活动图与互藏评论另列，不当独立实穿或差价依据；本轮定向公开检索仍未补出可对版厘米表。"
   },
   "research_sources": {
     "RS1": {
@@ -185,6 +192,11 @@
       "kind": "promotion_purchase_unknown",
       "url": "https://www.xiaohongshu.com/explore/6ad1daa90000000014039989",
       "scope": "绵羊泡芙Lolita宣传帖@裁缝铺，明示点赞/正向评论/关注抽鞋活动；与品牌主体关系未核，5条评论已读，9图未目视，不作独立实穿。"
+    },
+    "XR3": {
+      "kind": "promotion_purchase_unknown",
+      "url": "https://www.xiaohongshu.com/explore/6adc6ba8000000002a038035",
+      "scope": "10月28日已读并目视5图，10月30日正式入库；为品牌图/赠颈饰活动及互藏评论，不据标题“不集赞”判独立实穿。"
     }
   },
   "popularity": {

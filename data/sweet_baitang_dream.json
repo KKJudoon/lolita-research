@@ -205,7 +205,7 @@
       "source": "R01",
       "name": "Dreamy Butterfly",
       "brand_label": "Sugar Girl",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "identity_evidence": [
         "与已读白糖少女店铺图片共享O1CN01M93fo61f6MHprCYWi、O1CN01mPTOmJ1f6MHoeZQ3f图号及上传账号2661253957。",
         "公开图与既有梦呓蝶图鉴的胸前系带、肩部花边、裙摆层次及粉/蓝配色对应；当前两个淘宝链接和零售批次的关系仍待核。"
@@ -239,11 +239,21 @@
       "offer": {
         "currency": "USD",
         "amount": "34.99",
-        "selection": "Pink - Signle JSK Only / S",
-        "sku": "LOL-DRE-309301",
-        "fulfillment": "读取时零售页标预售45天（不含周末/假日）；仅记录该渠道文案，不当作淘宝交期。"
+        "selection": "Pink - Signle JSK Only / M",
+        "sku": "LOL-DRE-309302",
+        "fulfillment": "预售45天（不含周末/假日），仅该渠道文案，不作淘宝交期。"
       },
-      "identity_summary": "零售页与已读店铺共享商品图片；粉/蓝配色、胸前系带、肩部花边和裙摆层次相符。"
+      "identity_summary": "零售页与已读店铺共享商品图片；粉/蓝配色、胸前系带、肩部花边和裙摆层次相符。",
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "34.99",
+          "selection": "Pink - Signle JSK Only / S",
+          "sku": "LOL-DRE-309301",
+          "fulfillment": "读取时零售页标预售45天（不含周末/假日）；仅记录该渠道文案，不当作淘宝交期。"
+        }
+      ]
     },
     "documented_references": [
       {
@@ -285,6 +295,39 @@
         ],
         "images": [
           "assets/sweet/dream-spec.jpg"
+        ]
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R01",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "零售商说明后背抽褶/系带、无拉链套头穿，不含裙撑，建议35厘米裙撑；属于商家搭配建议，未经穿着验收。",
+          "公开商品数据标记18/36个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "预售45天（不含周末/假日），仅该渠道文案，不作淘宝交期。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "Pink - Signle JSK Only / M",
+                "34.99",
+                "LOL-DRE-309302",
+                "46511248769198",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
         ]
       }
     ],
@@ -355,9 +398,26 @@
         ]
       }
     ],
-    "supplement_summary": "按低量续采只新读一款一组：10月30日梦呓蝶920646271107粉M单裙164.88元、有货，无验证；套装、另一链接和其他颜色尺码不重复访问，保留原观察日期。",
+    "supplement_summary": "补核10月28日已存零售规格：Pink - Signle JSK Only / M，USD 34.99；零售商说明后背抽褶/系带、无拉链套头穿，不含裙撑，建议35厘米裙撑；属于商家搭配建议，未经穿着验收。 原店批次、实付及独立实穿缺口保留。",
     "audit_at": "2026-10-30",
-    "price_comparable_scope": "10月30日只复核920646271107粉M单裙；两链接及两组组合的10月27日数据继续分列，不称所有组合均为当日现价。"
+    "price_comparable_scope": "10月30日只复核920646271107粉M单裙；两链接及两组组合的10月27日数据继续分列，不称所有组合均为当日现价。",
+    "retailer_observations": [
+      {
+        "source": "R01",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "Pink - Signle JSK Only / M",
+        "variant_id": "46511248769198",
+        "sku": "LOL-DRE-309302",
+        "currency": "USD",
+        "amount": "34.99",
+        "available": true,
+        "available_variants": 18,
+        "total_variants": 36,
+        "inventory_quantity": null,
+        "fulfillment": "预售45天（不含周末/假日），仅该渠道文案，不作淘宝交期。"
+      }
+    ]
   },
   "research_sources": {
     "O05": {
@@ -378,7 +438,7 @@
     "R01": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/ballet-style-sweet-lolita-jsk-dress-with-large-bow-trailing",
-      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "A27A": {
       "kind": "store_product",

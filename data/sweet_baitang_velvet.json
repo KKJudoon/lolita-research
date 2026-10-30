@@ -241,7 +241,7 @@
       "source": "R02",
       "name": "Velvet Sweetheart",
       "brand_label": "Sugar Girl",
-      "observed_at": "2026-10-25",
+      "observed_at": "2026-10-28",
       "identity_evidence": [
         "零售页使用原淘宝粉色单裙图O1CN01PwwGI01f6MKTgneKr，上传账号2661253957一致，已目视对照。",
         "红白/粉/白、单裙/背后拖尾蝴蝶结/头纱及S/M/L结构与已核淘宝选项相符；不证明同批次。"
@@ -275,11 +275,21 @@
       "offer": {
         "currency": "USD",
         "amount": "46.99",
-        "selection": "Pink JSK Only / S",
-        "sku": "LOL-DRE-330704",
-        "fulfillment": "读取时零售页标预售30天，描述另列现货7–10个工作日；未逐一核所有组合库存，不能覆盖淘宝粉M的既有交期记录。"
+        "selection": "Pink JSK Only / M",
+        "sku": "LOL-DRE-330705",
+        "fulfillment": "正文分现货7–10个工作日、预售30天；未逐项确认选定组合适用分支，不覆盖原淘宝交期。"
       },
-      "identity_summary": "原淘宝所选粉色单裙照片在零售页中出现；红白/粉/白配色及拖尾、头纱组合相符。"
+      "identity_summary": "原淘宝所选粉色单裙照片在零售页中出现；红白/粉/白配色及拖尾、头纱组合相符。",
+      "previous_offers": [
+        {
+          "observed_at": "2026-10-25",
+          "currency": "USD",
+          "amount": "46.99",
+          "selection": "Pink JSK Only / S",
+          "sku": "LOL-DRE-330704",
+          "fulfillment": "读取时零售页标预售30天，描述另列现货7–10个工作日；未逐一核所有组合库存，不能覆盖淘宝粉M的既有交期记录。"
+        }
+      ]
     },
     "documented_references": [
       {
@@ -321,6 +331,39 @@
         ],
         "images": [
           "assets/sweet/velvet-spec.jpg"
+        ]
+      },
+      {
+        "title": "10月28日零售规格与可售状态存档",
+        "source": "R02",
+        "observed_at": "2026-10-30",
+        "scope": "复用10月28日已保存公开HTML及product.js，本日没有再次请求零售页。字段属于该零售渠道和旧观察日，不作为今天原店SKU、实付、库存数量或同批次确认。",
+        "points": [
+          "零售商说明肩带可调、背部抽褶、无拉链及腰结可拆，建议45厘米裙撑；不把建议裙撑长度当实测合身条件。",
+          "公开商品数据标记13/36个组合available=true，其中下表一组可售；这是可售选项数，不是库存件数。",
+          "正文分现货7–10个工作日、预售30天；未逐项确认选定组合适用分支，不覆盖原淘宝交期。"
+        ],
+        "tables": [
+          {
+            "title": "所选零售规格 · 2026-10-28",
+            "headers": [
+              "完整选项",
+              "USD展示价",
+              "零售SKU",
+              "variant ID",
+              "available"
+            ],
+            "rows": [
+              [
+                "Pink JSK Only / M",
+                "46.99",
+                "LOL-DRE-330705",
+                "47068030206126",
+                "true"
+              ]
+            ],
+            "note": "未进行加入购物车、结算或订单验证；美元报价不折算为淘宝人民币价，available不保证当前仍可购买。"
+          }
         ]
       }
     ],
@@ -389,8 +432,25 @@
         ]
       }
     ],
-    "supplement_summary": "将10月30日恢复检查已取得的粉M单裙219.88元、有货正式写回，未重复访问丝绒甜心；其他链接、配件组合与交期仍保留各自历史观察日期。",
-    "audit_at": "2026-10-30"
+    "supplement_summary": "补核10月28日已存零售规格：Pink JSK Only / M，USD 46.99；零售商说明肩带可调、背部抽褶、无拉链及腰结可拆，建议45厘米裙撑；不把建议裙撑长度当实测合身条件。 原店批次、实付及独立实穿缺口保留。",
+    "audit_at": "2026-10-30",
+    "retailer_observations": [
+      {
+        "source": "R02",
+        "observed_at": "2026-10-28",
+        "reviewed_at": "2026-10-30",
+        "selection": "Pink JSK Only / M",
+        "variant_id": "47068030206126",
+        "sku": "LOL-DRE-330705",
+        "currency": "USD",
+        "amount": "46.99",
+        "available": true,
+        "available_variants": 13,
+        "total_variants": 36,
+        "inventory_quantity": null,
+        "fulfillment": "正文分现货7–10个工作日、预售30天；未逐项确认选定组合适用分支，不覆盖原淘宝交期。"
+      }
+    ]
   },
   "research_sources": {
     "O05": {
@@ -411,7 +471,7 @@
     "R02": {
       "kind": "third_party_retailer",
       "url": "https://42lolita.com/products/doll-like-sweet-lolita-jumper-dress-bow-accents",
-      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核"
+      "scope": "2026-10-25公开商品页、套装选项和尺码弹窗实读；同图对应，原店同批次参数未核；补核10月28日已保存HTML/公开product.js，10月30日正式整理入库；库存字段仅是该零售发布状态，不称今天现货。"
     },
     "A27V": {
       "kind": "store_product",
